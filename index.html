@@ -199,8 +199,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- 注意：請將 action 網址中的 YOUR_FORMSPREE_ID 替換為您的實際 ID -->
-                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mredpgez" method="POST">
+                <!-- 使用 Web3Forms 免費信件服務 -->
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="fdd610df-9f38-4956-950c-a92d51f485e2">
+                    <input type="hidden" name="subject" value="來自 Kineticlinks 官網的新聯絡信件">
+                    <input type="hidden" name="from_name" value="Kineticlinks 官網系統">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <div class="form-group">
                         <input type="text" id="name" name="Name" required placeholder=" ">
                         <label for="name">姓名 / 公司名稱</label>
