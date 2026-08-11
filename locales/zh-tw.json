@@ -1,0 +1,105 @@
+{
+  "seo": {
+    "title": "Kineticlinks | Empowering Your Digital Infrastructure",
+    "description": "Kineticlinks - 專業 IT 服務供應商，提供全球 CDN 加速、高效能 VPS、IDC 機房建置與公有雲架構解決方案。",
+    "keywords": "Kineticlinks, CDN, VPS, IDC, 公有雲, IT 基礎架構, 網路加速, 虛擬主機, 混合雲, SSL憑證"
+  },
+  "nav": {
+    "home": "首頁",
+    "services": "服務項目",
+    "platforms": "平台產品",
+    "about": "關於我們",
+    "contact": "聯絡我們"
+  },
+  "hero": {
+    "badge": "Next-Gen IT Infrastructure",
+    "title1": "引領未來的",
+    "title2": "數位基礎建設",
+    "desc": "我們提供頂級的 CDN 內容傳遞、VPS 虛擬主機、IDC 建置與混合雲解決方案，為您的企業打造 99.99% 高可用性的數位基石。",
+    "btn_primary": "探索服務",
+    "btn_secondary": "專人諮詢"
+  },
+  "services": {
+    "title1": "我們的",
+    "title2": "核心服務",
+    "desc": "全方位的 IT 架構解決方案，滿足各階段企業的發展需求",
+    "cdn": {
+      "title": "CDN 內容傳遞網路",
+      "desc": "全球邊緣節點佈局，提供極致的靜動態內容加速與強大的 DDoS 防護能力，確保您的服務無遠弗屆。",
+      "f1": "全球 100+ 節點",
+      "f2": "智慧路由加速",
+      "f3": "T 級抗 D 防護"
+    },
+    "vps": {
+      "title": "VPS 虛擬專屬主機",
+      "desc": "基於 NVMe SSD 與頂級 CPU 的高效能運算資源，支援彈性擴充，提供最高性價比的主機服務。",
+      "f1": "極致 I/O 效能",
+      "f2": "專屬獨立資源",
+      "f3": "自動備份快照"
+    },
+    "idc": {
+      "title": "IDC 機房建置",
+      "desc": "從硬體採購、網路架構規劃到機房佈署，提供一站式客製化解決方案，打造企業級安全數據中心。",
+      "f1": "客製化架構設計",
+      "f2": "BGP 雙線路佈署",
+      "f3": "24/7 駐點監控"
+    },
+    "cloud": {
+      "title": "公有雲架構解決方案",
+      "desc": "深度整合 AWS、GCP、Azure 等主流公有雲服務，提供雲端搬遷、混合雲架構設計與成本最佳化顧問。",
+      "f1": "多雲混合架構",
+      "f2": "無縫雲端搬遷",
+      "f3": "資安與合規性"
+    }
+  },
+  "platforms": {
+    "title1": "旗下",
+    "title2": "平台產品",
+    "desc": "專為開發者與企業打造的自動化工具與檢測平台",
+    "ssl": {
+      "title": "SSL 憑證自動化平台",
+      "desc": "一站式 SSL 憑證購買與管理平台。支援 DNS 自動驗證，簽發後可自動推播至多個主流 CDN 節點。",
+      "f1": "整合 GoDaddy 等主流 DNS",
+      "f2": "自動推播至多品牌 CDN",
+      "f3": "全自動化驗證與簽發流程"
+    },
+    "speedtest": {
+      "title": "全球三網測速平台",
+      "desc": "專為亞太區及中國三網（電信、聯通、移動）打造的連線品質檢測工具。提供免費測速與進階 API 服務。",
+      "f1": "中國三網連線品質測試",
+      "f2": "提供免費且即時的節點檢測",
+      "f3": "支援商業版 API 輕鬆串接"
+    }
+  },
+  "about": {
+    "title1": "以技術為本的",
+    "title2": "專業 IT 團隊",
+    "desc": "Kineticlinks 成立以來，致力於為各行各業提供最穩定、高效的基礎架構服務。我們的專家團隊擁有豐富的實戰經驗，能快速響應您的需求，成為您企業數位轉型路上最可靠的後盾。",
+    "stat1": "SLA 服務保證",
+    "stat2": "全天候技術支援",
+    "stat3": "企業客戶信賴",
+    "stat4": "最低網路延遲",
+    "code_support": "Always online"
+  },
+  "contact": {
+    "title1": "準備好升級您的",
+    "title2": "基礎架構了嗎？",
+    "desc": "填寫表單或透過以下方式聯繫我們，我們的架構師將盡快與您聯繫。",
+    "form": {
+      "name": "姓名 / 公司名稱",
+      "email": "電子郵件",
+      "service_default": "請選擇您感興趣的服務",
+      "service_cdn": "CDN 內容傳遞網路",
+      "service_vps": "VPS 虛擬主機",
+      "service_idc": "IDC 機房建置",
+      "service_cloud": "公有雲架構解決方案",
+      "service_other": "其他",
+      "message": "您的需求說明",
+      "submit": "發送訊息"
+    }
+  },
+  "footer": {
+    "brand_desc": "Building the digital infrastructure of tomorrow.",
+    "rights": "&copy; 2026 Kineticlinks. All rights reserved."
+  }
+}

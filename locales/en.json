@@ -1,0 +1,105 @@
+{
+  "seo": {
+    "title": "Kineticlinks | Empowering Your Digital Infrastructure",
+    "description": "Kineticlinks - Professional IT service provider offering global CDN acceleration, high-performance VPS, IDC building, and public cloud architecture solutions.",
+    "keywords": "Kineticlinks, CDN, VPS, IDC, Public Cloud, IT Infrastructure, Network Acceleration, Web Hosting, Hybrid Cloud, SSL Certificate"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "platforms": "Platforms",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Next-Gen IT Infrastructure",
+    "title1": "Leading the Future of",
+    "title2": "Digital Infrastructure",
+    "desc": "We provide top-tier CDN, VPS hosting, IDC construction, and hybrid cloud solutions, building a 99.99% high-availability digital foundation for your business.",
+    "btn_primary": "Explore Services",
+    "btn_secondary": "Consult an Expert"
+  },
+  "services": {
+    "title1": "Our",
+    "title2": "Core Services",
+    "desc": "Comprehensive IT architecture solutions meeting the developmental needs of enterprises at all stages.",
+    "cdn": {
+      "title": "Content Delivery Network (CDN)",
+      "desc": "Global edge node deployment delivering extreme static and dynamic content acceleration with powerful DDoS protection.",
+      "f1": "100+ Global Nodes",
+      "f2": "Smart Routing Acceleration",
+      "f3": "Terabit Anti-DDoS Protection"
+    },
+    "vps": {
+      "title": "Virtual Private Server (VPS)",
+      "desc": "High-performance computing resources based on NVMe SSD and top-tier CPUs, supporting elastic scaling for maximum ROI.",
+      "f1": "Extreme I/O Performance",
+      "f2": "Dedicated Resources",
+      "f3": "Automated Backups & Snapshots"
+    },
+    "idc": {
+      "title": "IDC Construction",
+      "desc": "From hardware procurement and network architecture planning to data center deployment, offering one-stop custom solutions.",
+      "f1": "Custom Architecture Design",
+      "f2": "BGP Dual-line Deployment",
+      "f3": "24/7 On-site Monitoring"
+    },
+    "cloud": {
+      "title": "Public Cloud Solutions",
+      "desc": "Deep integration with major public clouds like AWS, GCP, and Azure, providing cloud migration, hybrid design, and cost optimization.",
+      "f1": "Multi-cloud Hybrid Architecture",
+      "f2": "Seamless Cloud Migration",
+      "f3": "Security and Compliance"
+    }
+  },
+  "platforms": {
+    "title1": "Our",
+    "title2": "Platform Products",
+    "desc": "Automated tools and testing platforms designed specifically for developers and enterprises.",
+    "ssl": {
+      "title": "Automated SSL Platform",
+      "desc": "A one-stop platform for purchasing and managing SSL certificates. Supports automatic DNS validation and CDN deployment.",
+      "f1": "Integration with GoDaddy & major DNS",
+      "f2": "Auto-push to multi-brand CDNs",
+      "f3": "Fully automated validation & issuance"
+    },
+    "speedtest": {
+      "title": "Global 3-Network Speed Test",
+      "desc": "Connection quality testing tool designed for the Asia-Pacific region and China's 3 major networks. Offers free testing and API services.",
+      "f1": "China 3-Network Connection Test",
+      "f2": "Free & Real-time Node Testing",
+      "f3": "Commercial API Integration"
+    }
+  },
+  "about": {
+    "title1": "Technology-Driven",
+    "title2": "Professional IT Team",
+    "desc": "Since its establishment, Kineticlinks has been committed to providing the most stable and efficient infrastructure services for all industries. Our team of experts has rich practical experience and can respond quickly to your needs.",
+    "stat1": "SLA Service Guarantee",
+    "stat2": "24/7 Technical Support",
+    "stat3": "Trusted by Enterprises",
+    "stat4": "Lowest Network Latency",
+    "code_support": "Always online"
+  },
+  "contact": {
+    "title1": "Ready to Upgrade Your",
+    "title2": "Infrastructure?",
+    "desc": "Fill out the form or contact us through the following methods, and our architects will get back to you as soon as possible.",
+    "form": {
+      "name": "Name / Company",
+      "email": "Email Address",
+      "service_default": "Select a Service of Interest",
+      "service_cdn": "Content Delivery Network (CDN)",
+      "service_vps": "Virtual Private Server (VPS)",
+      "service_idc": "IDC Construction",
+      "service_cloud": "Public Cloud Solutions",
+      "service_other": "Other",
+      "message": "Your Requirements",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "brand_desc": "Building the digital infrastructure of tomorrow.",
+    "rights": "&copy; 2026 Kineticlinks. All rights reserved."
+  }
+}

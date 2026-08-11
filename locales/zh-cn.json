@@ -1,0 +1,105 @@
+{
+  "seo": {
+    "title": "Kineticlinks | Empowering Your Digital Infrastructure",
+    "description": "Kineticlinks - 专业 IT 服务供应商，提供全球 CDN 加速、高性能 VPS、IDC 机房建置与公有云架构解决方案。",
+    "keywords": "Kineticlinks, CDN, VPS, IDC, 公有云, IT 基础架构, 网络加速, 虚拟主机, 混合云, SSL证书"
+  },
+  "nav": {
+    "home": "首页",
+    "services": "服务项目",
+    "platforms": "平台产品",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "badge": "Next-Gen IT Infrastructure",
+    "title1": "引领未来的",
+    "title2": "数字基础建设",
+    "desc": "我们提供顶级的 CDN 内容分发、VPS 虚拟主机、IDC 建置与混合云解决方案，为您企业打造 99.99% 高可用性的数字基石。",
+    "btn_primary": "探索服务",
+    "btn_secondary": "专人咨询"
+  },
+  "services": {
+    "title1": "我们的",
+    "title2": "核心服务",
+    "desc": "全方位的 IT 架构解决方案，满足各阶段企业的发展需求",
+    "cdn": {
+      "title": "CDN 内容分发网络",
+      "desc": "全球边缘节点布局，提供极致的静动态内容加速与强大的 DDoS 防护能力，确保您的服务无远弗届。",
+      "f1": "全球 100+ 节点",
+      "f2": "智能路由加速",
+      "f3": "T 级抗 D 防护"
+    },
+    "vps": {
+      "title": "VPS 虚拟专属主机",
+      "desc": "基于 NVMe SSD 与顶级 CPU 的高性能运算资源，支持弹性扩充，提供最高性价比的主机服务。",
+      "f1": "极致 I/O 性能",
+      "f2": "专属独立资源",
+      "f3": "自动备份快照"
+    },
+    "idc": {
+      "title": "IDC 机房建置",
+      "desc": "从硬件采购、网络架构规划到机房部署，提供一站式定制化解决方案，打造企业级安全数据中心。",
+      "f1": "定制化架构设计",
+      "f2": "BGP 双线路部署",
+      "f3": "24/7 驻点监控"
+    },
+    "cloud": {
+      "title": "公有云架构解决方案",
+      "desc": "深度整合 AWS、GCP、Azure 等主流公有云服务，提供云端搬迁、混合云架构设计与成本优化顾问。",
+      "f1": "多云混合架构",
+      "f2": "无缝云端搬迁",
+      "f3": "信息安全与合规性"
+    }
+  },
+  "platforms": {
+    "title1": "旗下",
+    "title2": "平台产品",
+    "desc": "专为开发者与企业打造的自动化工具与检测平台",
+    "ssl": {
+      "title": "SSL 证书自动化平台",
+      "desc": "一站式 SSL 证书购买与管理平台。支持 DNS 自动验证，签发后可自动推送到多个主流 CDN 节点。",
+      "f1": "整合 GoDaddy 等主流 DNS",
+      "f2": "自动推送至多品牌 CDN",
+      "f3": "全自动化验证与签发流程"
+    },
+    "speedtest": {
+      "title": "全球三网测速平台",
+      "desc": "专为亚太区及中国三网（电信、联通、移动）打造的连线质量检测工具。提供免费测速与进阶 API 服务。",
+      "f1": "中国三网连线质量测试",
+      "f2": "提供免费且即时的节点检测",
+      "f3": "支持商业版 API 轻松串接"
+    }
+  },
+  "about": {
+    "title1": "以技术为本的",
+    "title2": "专业 IT 团队",
+    "desc": "Kineticlinks 成立以来，致力于为各行各业提供最稳定、高效的基础架构服务。我们的专家团队拥有丰富的实战经验，能快速响应您的需求，成为您企业数字化转型路上最可靠的后盾。",
+    "stat1": "SLA 服务保证",
+    "stat2": "全天候技术支持",
+    "stat3": "企业客户信赖",
+    "stat4": "最低网络延迟",
+    "code_support": "Always online"
+  },
+  "contact": {
+    "title1": "准备好升级您的",
+    "title2": "基础架构了吗？",
+    "desc": "填写表单或通过以下方式联系我们，我们的架构师将尽快与您联系。",
+    "form": {
+      "name": "姓名 / 公司名称",
+      "email": "电子邮件",
+      "service_default": "请选择您感兴趣的服务",
+      "service_cdn": "CDN 内容分发网络",
+      "service_vps": "VPS 虚拟主机",
+      "service_idc": "IDC 机房建置",
+      "service_cloud": "公有云架构解决方案",
+      "service_other": "其他",
+      "message": "您的需求说明",
+      "submit": "发送信息"
+    }
+  },
+  "footer": {
+    "brand_desc": "Building the digital infrastructure of tomorrow.",
+    "rights": "&copy; 2026 Kineticlinks. All rights reserved."
+  }
+}
