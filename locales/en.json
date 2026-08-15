@@ -351,6 +351,134 @@
       "button": "Book a Consultation"
     }
   },
+  "ssl_page": {
+    "platform_url": "https://app.kineticlinks.net/login",
+    "seo": {
+      "title": "SSL Certificate Automation Platform | DNS Auto-Validation & Multi-CDN Push - Kineticlinks",
+      "description": "Kineticlinks' SSL automation platform supports automatic DNS validation and pushes issued certificates directly to multiple CDN brands, cutting the manual work of certificate management and renewal.",
+      "keywords": "SSL certificate automation, SSL certificate management, automatic certificate renewal, DV SSL, CDN SSL certificate, SSL API"
+    },
+    "hero": {
+      "badge": "SSL Certificate Automation Platform",
+      "title": "SSL Certificate Automation Platform",
+      "subtitle": "One-stop certificate issuance, validation, and deployment — no more manual certificate juggling",
+      "desc": "The Kineticlinks SSL automation platform integrates with major DNS providers to fully automate domain validation, and pushes issued certificates directly to multiple CDN brands, so engineering and ops teams never have to manually upload certificates or track expiration dates again.",
+      "cta_primary": "Go to the Platform",
+      "cta_secondary": "View Other Platforms"
+    },
+    "overview": {
+      "title": "What Is an SSL Certificate Automation Platform?",
+      "p1": "An SSL certificate is required to enable HTTPS on a website, but the traditional request, validation, and renewal process is often manual: creating DNS validation records by hand, downloading certificate files, and uploading them one by one to servers or CDNs. Certificates typically need reissuing every few months, and a single oversight can leave a site showing a security warning after expiration.",
+      "p2": "The Kineticlinks SSL automation platform ties the whole process into a single interface. It integrates with the APIs of major DNS providers like GoDaddy to complete domain ownership validation automatically, removing the need to manually add TXT or CNAME records. Once a certificate is issued, it can also be pushed automatically to multiple CDN brands, connecting certificate deployment directly to your CDN acceleration setup.",
+      "p3": "The platform also provides expiration reminders and automatic renewal, reducing the risk of a certificate lapsing due to human oversight — especially useful for teams managing many domains or frequently switching certificates between CDN providers."
+    },
+    "use_cases": {
+      "title": "Use Cases",
+      "desc": "Whether you manage a single domain or a large number of subdomains, the platform simplifies certificate operations",
+      "item1": { "title": "Multi-Domain & Subdomain Management", "desc": "Centrally track certificate issuance and renewal status across many domains and subdomains without missing one." },
+      "item2": { "title": "Cross-CDN Deployment", "desc": "Push the same certificate to multiple CDN brand nodes at once through a single platform." },
+      "item3": { "title": "E-commerce & Campaign Sites", "desc": "Quickly issue certificates for short-lived campaign pages or rapidly expanding storefront domains." },
+      "item4": { "title": "Dev & Ops Teams", "desc": "Free engineering time from certificate busywork so it can focus on core product development." }
+    },
+    "differentiators": {
+      "title": "Why Choose the Kineticlinks SSL Automation Platform",
+      "desc": "Compared to manually requesting each certificate and uploading it to servers one at a time",
+      "item1": { "title": "Automatic DNS Validation", "desc": "Integrates with major DNS provider APIs to skip manual validation records and cut issuance time significantly." },
+      "item2": { "title": "Multi-Brand CDN Auto-Push", "desc": "Certificates sync directly to multiple CDN nodes after issuance, with no repeated downloading and uploading." },
+      "item3": { "title": "Expiration Alerts & Auto-Renewal", "desc": "The system proactively tracks certificate validity, lowering the risk of a security warning from a lapsed certificate." },
+      "item4": { "title": "Native Integration With CDN Service", "desc": "Part of the same Kineticlinks product line, so pairing with our CDN service requires no extra integration work." }
+    },
+    "customers": {
+      "title": "Who It's For",
+      "desc": "The following types of teams commonly rely on the SSL automation platform",
+      "item1": { "title": "Hosting Providers & Agencies", "desc": "Web hosts or digital agencies managing certificates across multiple client domains at once." },
+      "item2": { "title": "E-commerce Operations Teams", "desc": "Brands running multiple storefronts or campaign pages that need certificates issued and deployed quickly." },
+      "item3": { "title": "SaaS & Platform Providers", "desc": "Services that need to auto-issue certificates for a large number of custom domains, such as customer subdomains." },
+      "item4": { "title": "IT & Operations Departments", "desc": "Internal teams that want to standardize certificate management and reduce manual-process risk." }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What domain permissions do I need to use this platform?",
+      "a1": "You need DNS management access to the domain — the platform creates validation records automatically through its integrated DNS provider APIs. If your DNS provider isn't yet supported, manual validation is also available.",
+      "q2": "Will the platform notify me before a certificate expires?",
+      "a2": "Yes. The platform sends proactive reminders before expiration, and you can enable automatic renewal to reduce the risk of a lapsed certificate causing a security warning.",
+      "q3": "Can issued certificates be used on hosting or CDNs outside of Kineticlinks?",
+      "a3": "Yes. The platform issues standard SSL certificates that can be downloaded and used on any server or CDN that supports SSL — they aren't locked to Kineticlinks services.",
+      "q4": "Which DNS providers support automatic validation?",
+      "a4": "We currently integrate with major DNS providers including GoDaddy, and are continuing to expand support. If your provider isn't yet supported, reach out and we'll evaluate adding it.",
+      "q5": "Is the platform free to use?",
+      "a5": "Plans and pricing depend on your certificate volume and feature needs — contact our team and we'll walk you through the options that fit your use case."
+    },
+    "cta": {
+      "title": "Ready to Simplify Your Certificate Management?",
+      "desc": "Sign up for the Kineticlinks SSL automation platform, or contact us to learn more about integration details.",
+      "button": "Go to the Platform"
+    }
+  },
+  "speedtest_page": {
+    "platform_url": "https://speedtest.kineticlinks.net/",
+    "seo": {
+      "title": "Global 3-Network Speed Test Platform | China Telecom, Unicom, Mobile Testing - Kineticlinks",
+      "description": "Kineticlinks' speed test platform is built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time testing and a commercial API for connection quality monitoring.",
+      "keywords": "speed test platform, China 3-network speed test, Telecom Unicom Mobile testing, cross-border network testing, network speed API, Asia-Pacific connection quality"
+    },
+    "hero": {
+      "badge": "Global 3-Network Speed Test",
+      "title": "Global 3-Network Speed Test Platform",
+      "subtitle": "Real-time visibility into connection quality across China's three major carriers and Asia-Pacific",
+      "desc": "The Kineticlinks speed test platform is purpose-built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time node testing plus a commercial API for enterprises to integrate into their own monitoring systems and track real-world cross-border user experience.",
+      "cta_primary": "Run a Free Test",
+      "cta_secondary": "View Other Platforms"
+    },
+    "overview": {
+      "title": "What Is a 3-Network Speed Test Platform?",
+      "p1": "China's network landscape is operated by three separate carriers — Telecom, Unicom, and Mobile — each running its own network with inconsistent interconnection quality between them. As a result, the same server can show very different speed and latency depending on which carrier a user is on. Without carrier-specific test data, it's difficult for a business serving cross-border users to accurately assess or improve the connection quality users actually experience.",
+      "p2": "Kineticlinks addresses this by deploying test nodes across China's three major carriers plus other Asia-Pacific regions, letting you test a server's speed, latency, and packet loss separately for Telecom, Unicom, and Mobile users — replacing the old approach of estimating from a single node or an overseas facility.",
+      "p3": "Beyond the free real-time web-based test, the platform also offers a commercial API so enterprises can pull test results into their own monitoring dashboards or alerting systems and track connection quality trends for specific nodes or routes over time."
+    },
+    "use_cases": {
+      "title": "Use Cases",
+      "desc": "Useful whether you're evaluating a new facility location or monitoring an existing service",
+      "item1": { "title": "Cross-Border Service Quality Assessment", "desc": "Sites or apps serving users in China that need to verify real-world performance across all three carriers." },
+      "item2": { "title": "Facility & CDN Node Site Selection", "desc": "Test candidate locations against each carrier's network before committing to a new facility or CDN node." },
+      "item3": { "title": "Monitoring & Alerting Integration", "desc": "Feed test data into an existing monitoring system via API and set thresholds for anomaly alerts." },
+      "item4": { "title": "Sales & Marketing Material", "desc": "Use real test data to back up connection-quality claims in sales conversations or marketing." }
+    },
+    "differentiators": {
+      "title": "Why Choose the Kineticlinks Speed Test Platform",
+      "desc": "Compared to generic speed test tools limited to one region or unable to separate carrier-specific results",
+      "item1": { "title": "Carrier-Specific Results", "desc": "Reports Telecom, Unicom, and Mobile results separately instead of one blended average." },
+      "item2": { "title": "Free and Commercial Tiers", "desc": "Individuals can test for free, while businesses can integrate systematically through the paid API." },
+      "item3": { "title": "Broad Asia-Pacific Coverage", "desc": "Testing isn't limited to China's three carriers — it also covers connection quality across other major Asia-Pacific markets." },
+      "item4": { "title": "Cross-Validated With Our CDN", "desc": "Part of the same Kineticlinks product line, so it can directly validate the real-world performance of our own CDN service." }
+    },
+    "customers": {
+      "title": "Who It's For",
+      "desc": "The following types of teams commonly rely on the 3-network speed test platform",
+      "item1": { "title": "Cross-Border E-commerce & Content Platforms", "desc": "Site operators serving users in China or Asia-Pacific who need ongoing connection quality monitoring." },
+      "item2": { "title": "Network Engineering & Ops Teams", "desc": "Technical staff evaluating facility site selection or diagnosing cross-border connection issues." },
+      "item3": { "title": "CDN & Hosting Providers", "desc": "Peers who need real test data to validate and back up their own service quality claims." },
+      "item4": { "title": "Game & Real-Time App Developers", "desc": "Teams highly sensitive to latency that need to assess target-market connection quality in advance." }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Are there limits on the free speed test?",
+      "a1": "The free tier offers real-time web-based testing, suited for individual, infrequent checks. If you need scheduled automated tests or high query volume, consider the commercial API plan.",
+      "q2": "Can the commercial API integrate with our own monitoring system?",
+      "a2": "Yes. The commercial API is designed to plug directly into your existing monitoring dashboard or alerting system, making it easy to track connection quality trends for specific nodes over time.",
+      "q3": "Does testing only cover China's three carriers?",
+      "a3": "The platform's core focus is China's Telecom, Unicom, and Mobile networks, but it also covers connection quality testing across other major Asia-Pacific markets — it isn't limited to China.",
+      "q4": "Can I test a specific server or domain?",
+      "a4": "Yes. You can enter the server address or domain you want to test and get real measured connection data against all three major carriers.",
+      "q5": "How often is the test data updated?",
+      "a5": "Results are measured in real time — every test returns the current actual connection status. Scheduled calls through the API let you set your own testing frequency."
+    },
+    "cta": {
+      "title": "Want to Know How Your Service Really Performs on China's Three Networks?",
+      "desc": "Run a free test now, or contact our team to learn about the commercial API integration options.",
+      "button": "Go to the Speed Test Platform"
+    }
+  },
   "footer": {
     "brand_desc": "Building the digital infrastructure of tomorrow.",
     "rights": "&copy; 2026 Kineticlinks. All rights reserved."

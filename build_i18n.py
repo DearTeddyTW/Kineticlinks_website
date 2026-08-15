@@ -17,6 +17,8 @@ PAGES = [
     {'template': 'src/service.html', 'slug': 'vps', 'content_key': 'vps_page'},
     {'template': 'src/service.html', 'slug': 'idc', 'content_key': 'idc_page'},
     {'template': 'src/service.html', 'slug': 'cloud', 'content_key': 'cloud_page'},
+    {'template': 'src/platform.html', 'slug': 'ssl', 'content_key': 'ssl_page'},
+    {'template': 'src/platform.html', 'slug': 'speedtest', 'content_key': 'speedtest_page'},
 ]
 
 

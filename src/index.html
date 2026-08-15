@@ -200,7 +200,7 @@
             </div>
             <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
                 <!-- SSL Platform Card -->
-                <a href="https://app.kineticlinks.net/login" target="_blank" class="service-card glass-panel interactive" style="display: block;">
+                <a href="{{ lang_path }}ssl/" class="service-card glass-panel interactive" style="display: block;">
                     <div class="icon-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
@@ -214,9 +214,10 @@
                         <li>{{ platforms.ssl.f2 }}</li>
                         <li>{{ platforms.ssl.f3 }}</li>
                     </ul>
+                    <span class="card-link">{{ services.learn_more }} →</span>
                 </a>
                 <!-- Speedtest Platform Card -->
-                <a href="https://speedtest.kineticlinks.net/" target="_blank" class="service-card glass-panel interactive" style="display: block;">
+                <a href="{{ lang_path }}speedtest/" class="service-card glass-panel interactive" style="display: block;">
                     <div class="icon-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
@@ -229,6 +230,7 @@
                         <li>{{ platforms.speedtest.f2 }}</li>
                         <li>{{ platforms.speedtest.f3 }}</li>
                     </ul>
+                    <span class="card-link">{{ services.learn_more }} →</span>
                 </a>
             </div>
         </div>
