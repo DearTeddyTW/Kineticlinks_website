@@ -9,6 +9,12 @@ LANGS = [
     {'file': 'zh-cn.json', 'lang_code': 'zh-CN', 'lang_path': '/zh-cn/', 'current_lang_name': '简体中文'},
 ]
 
+# Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
+# listed on the blog index. content_key is looked up in the locale JSON.
+ARTICLES = [
+    {'slug': 'ssl-certificate-validity-200-days', 'content_key': 'article_ssl_validity'},
+]
+
 # slug: '' means the language's home page. content_key is looked up in the
 # locale JSON and flattened under the "page.*" namespace for service.html.
 PAGES = [
@@ -19,6 +25,14 @@ PAGES = [
     {'template': 'src/service.html', 'slug': 'cloud', 'content_key': 'cloud_page'},
     {'template': 'src/platform.html', 'slug': 'ssl', 'content_key': 'ssl_page'},
     {'template': 'src/platform.html', 'slug': 'speedtest', 'content_key': 'speedtest_page'},
+    {'template': 'src/blog.html', 'slug': 'blog', 'content_key': None},
+] + [
+    {
+        'template': 'src/article.html',
+        'slug': f"blog/{article['slug']}",
+        'content_key': article['content_key'],
+    }
+    for article in ARTICLES
 ]
 
 
@@ -31,6 +45,26 @@ def flatten_dict(d, parent_key='', sep='.'):
         else:
             items.append((new_key, v))
     return dict(items)
+
+
+def build_article_list(translations, lang_path):
+    """Render the blog index cards from ARTICLES, in listed order."""
+    cards = []
+    for article in ARTICLES:
+        content = translations.get(article['content_key'], {})
+        url = f"{lang_path}blog/{article['slug']}/"
+        cards.append(f"""<a href="{url}" class="article-card">
+                    <div class="article-card-meta">
+                        <span class="article-card-tag">{content.get('category', '')}</span>
+                        <time datetime="{content.get('date', '')}">{content.get('date_display', '')}</time>
+                        <span>·</span>
+                        <span>{content.get('reading_time', '')}</span>
+                    </div>
+                    <h2>{content.get('title', '')}</h2>
+                    <p>{content.get('excerpt', '')}</p>
+                    <span class="card-link">{translations.get('blog', {}).get('read_more', '')} →</span>
+                </a>""")
+    return '\n                '.join(cards)
 
 
 def render(template, flat_translations):
@@ -71,6 +105,7 @@ def build():
         base_flat['lang_code'] = lang['lang_code']
         base_flat['lang_path'] = lang['lang_path']
         base_flat['current_lang_name'] = lang['current_lang_name']
+        base_flat['article_list'] = build_article_list(translations, lang['lang_path'])
 
         for page in PAGES:
             flat = dict(base_flat)
@@ -93,11 +128,18 @@ def build():
 
             print(f"Generated {out_path}")
 
+            if page['slug'] == '':
+                priority = '1.0'
+            elif page['slug'].startswith('blog'):
+                priority = '0.7'
+            else:
+                priority = '0.8'
+
             alternates = page_urls[page['slug']]
             sitemap_urls.append({
                 'loc': alternates[lang['lang_code']],
                 'alternates': alternates,
-                'priority': '1.0' if page['slug'] == '' else '0.8',
+                'priority': priority,
             })
 
     build_sitemap(sitemap_urls)

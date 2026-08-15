@@ -8,8 +8,10 @@
     "home": "Home",
     "services": "Services",
     "platforms": "Platforms",
+    "blog": "Blog",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "Open menu"
   },
   "hero": {
     "badge": "Next-Gen IT Infrastructure",
@@ -122,26 +124,62 @@
     "use_cases": {
       "title": "Use Cases",
       "desc": "From content-heavy sites to highly interactive applications, a CDN delivers measurable performance gains",
-      "item1": { "title": "E-commerce & Retail", "desc": "Cut product page and checkout load times to lower bounce rates and improve conversion." },
-      "item2": { "title": "Video & Streaming Media", "desc": "Edge caching for large files and video streams reduces buffering for a smoother viewing experience." },
-      "item3": { "title": "Gaming & Real-time Apps", "desc": "Nearby edge nodes reduce connection latency, improving responsiveness for multiplayer and real-time services." },
-      "item4": { "title": "Corporate Sites & APIs", "desc": "Deliver consistent access speed to global offices and customers while filtering malicious traffic and DDoS attacks." }
+      "item1": {
+        "title": "E-commerce & Retail",
+        "desc": "Cut product page and checkout load times to lower bounce rates and improve conversion."
+      },
+      "item2": {
+        "title": "Video & Streaming Media",
+        "desc": "Edge caching for large files and video streams reduces buffering for a smoother viewing experience."
+      },
+      "item3": {
+        "title": "Gaming & Real-time Apps",
+        "desc": "Nearby edge nodes reduce connection latency, improving responsiveness for multiplayer and real-time services."
+      },
+      "item4": {
+        "title": "Corporate Sites & APIs",
+        "desc": "Deliver consistent access speed to global offices and customers while filtering malicious traffic and DDoS attacks."
+      }
     },
     "differentiators": {
       "title": "Why Choose Kineticlinks CDN",
       "desc": "Compared to self-hosted caching servers or single-region acceleration plans",
-      "item1": { "title": "Asia-Pacific-Focused Edge Coverage", "desc": "Denser node coverage around Taiwan, Hong Kong, and mainland China reduces cross-border latency at a scale that's difficult to replicate in-house." },
-      "item2": { "title": "Flexible, Usage-Based Plans", "desc": "Scale your plan to actual traffic without a large upfront investment in hardware and bandwidth." },
-      "item3": { "title": "Integrated SSL Automation", "desc": "Certificates issued through our SSL platform push directly to CDN nodes, removing manual upload and renewal tracking." },
-      "item4": { "title": "24/7 Dedicated Engineering Support", "desc": "A team that knows network architecture monitors and responds around the clock, not just an automated ticketing system." }
+      "item1": {
+        "title": "Asia-Pacific-Focused Edge Coverage",
+        "desc": "Denser node coverage around Taiwan, Hong Kong, and mainland China reduces cross-border latency at a scale that's difficult to replicate in-house."
+      },
+      "item2": {
+        "title": "Flexible, Usage-Based Plans",
+        "desc": "Scale your plan to actual traffic without a large upfront investment in hardware and bandwidth."
+      },
+      "item3": {
+        "title": "Integrated SSL Automation",
+        "desc": "Certificates issued through our SSL platform push directly to CDN nodes, removing manual upload and renewal tracking."
+      },
+      "item4": {
+        "title": "24/7 Dedicated Engineering Support",
+        "desc": "A team that knows network architecture monitors and responds around the clock, not just an automated ticketing system."
+      }
     },
     "customers": {
       "title": "Who It's For",
       "desc": "Industries that already rely on CDN acceleration as part of their infrastructure",
-      "item1": { "title": "Cross-Border E-commerce", "desc": "Storefronts serving Taiwan, mainland China, and Southeast Asia that need stable, fast cross-border access." },
-      "item2": { "title": "Media & Content Platforms", "desc": "News sites, blogs, and content communities handling heavy image and video traffic." },
-      "item3": { "title": "SaaS & Software Providers", "desc": "Teams that need consistent, low-latency service for customers spread across regions." },
-      "item4": { "title": "Game Developers & Publishers", "desc": "Online games and esports platforms where latency is business-critical." }
+      "item1": {
+        "title": "Cross-Border E-commerce",
+        "desc": "Storefronts serving Taiwan, mainland China, and Southeast Asia that need stable, fast cross-border access."
+      },
+      "item2": {
+        "title": "Media & Content Platforms",
+        "desc": "News sites, blogs, and content communities handling heavy image and video traffic."
+      },
+      "item3": {
+        "title": "SaaS & Software Providers",
+        "desc": "Teams that need consistent, low-latency service for customers spread across regions."
+      },
+      "item4": {
+        "title": "Game Developers & Publishers",
+        "desc": "Online games and esports platforms where latency is business-critical."
+      }
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -185,26 +223,62 @@
     "use_cases": {
       "title": "Use Cases",
       "desc": "From personal projects to enterprise workloads, VPS delivers the right amount of compute flexibility",
-      "item1": { "title": "Website & App Hosting", "desc": "Deploy WordPress, e-commerce platforms, or custom-built web apps with dedicated resources and stable performance." },
-      "item2": { "title": "Game Server Hosting", "desc": "Low-latency networking with dedicated compute, well suited for multiplayer game servers." },
-      "item3": { "title": "Dev & Test Environments", "desc": "Spin up and tear down isolated environments quickly for development, testing, and CI/CD workflows." },
-      "item4": { "title": "Databases & Backend Services", "desc": "High IOPS from NVMe SSD is a strong fit for database-heavy read/write workloads." }
+      "item1": {
+        "title": "Website & App Hosting",
+        "desc": "Deploy WordPress, e-commerce platforms, or custom-built web apps with dedicated resources and stable performance."
+      },
+      "item2": {
+        "title": "Game Server Hosting",
+        "desc": "Low-latency networking with dedicated compute, well suited for multiplayer game servers."
+      },
+      "item3": {
+        "title": "Dev & Test Environments",
+        "desc": "Spin up and tear down isolated environments quickly for development, testing, and CI/CD workflows."
+      },
+      "item4": {
+        "title": "Databases & Backend Services",
+        "desc": "High IOPS from NVMe SSD is a strong fit for database-heavy read/write workloads."
+      }
     },
     "differentiators": {
       "title": "Why Choose Kineticlinks VPS",
       "desc": "Compared to shared hosting or plans that skip high-speed storage",
-      "item1": { "title": "All-NVMe SSD Storage Lineup", "desc": "Unlike plans still running on traditional SATA SSD, every tier gets a meaningful boost to disk I/O and database response time." },
-      "item2": { "title": "Dedicated Resources, No Overselling", "desc": "CPU and memory are allocated independently per instance, avoiding the resource contention common on shared hosting." },
-      "item3": { "title": "Live Scaling, No Migration Downtime", "desc": "Adjust specs online as your business grows, without the redeployment hassle of traditional host upgrades." },
-      "item4": { "title": "Local Technical Support", "desc": "An engineering team familiar with Taiwan and Asia-Pacific network conditions, with real-time support in Chinese." }
+      "item1": {
+        "title": "All-NVMe SSD Storage Lineup",
+        "desc": "Unlike plans still running on traditional SATA SSD, every tier gets a meaningful boost to disk I/O and database response time."
+      },
+      "item2": {
+        "title": "Dedicated Resources, No Overselling",
+        "desc": "CPU and memory are allocated independently per instance, avoiding the resource contention common on shared hosting."
+      },
+      "item3": {
+        "title": "Live Scaling, No Migration Downtime",
+        "desc": "Adjust specs online as your business grows, without the redeployment hassle of traditional host upgrades."
+      },
+      "item4": {
+        "title": "Local Technical Support",
+        "desc": "An engineering team familiar with Taiwan and Asia-Pacific network conditions, with real-time support in Chinese."
+      }
     },
     "customers": {
       "title": "Who It's For",
       "desc": "The following types of users get the most out of VPS hosting",
-      "item1": { "title": "Startups & SMBs", "desc": "Teams that need an elastically scalable hosting environment while keeping early-stage infrastructure costs in check." },
-      "item2": { "title": "Independent Developers", "desc": "Technical users who need full system access to deploy and manage their own applications." },
-      "item3": { "title": "Game Studios", "desc": "Hosting private or small-scale multiplayer servers with real latency and stability requirements." },
-      "item4": { "title": "Digital Agencies", "desc": "Web and marketing agencies that need separate, dedicated hosting environments per client project." }
+      "item1": {
+        "title": "Startups & SMBs",
+        "desc": "Teams that need an elastically scalable hosting environment while keeping early-stage infrastructure costs in check."
+      },
+      "item2": {
+        "title": "Independent Developers",
+        "desc": "Technical users who need full system access to deploy and manage their own applications."
+      },
+      "item3": {
+        "title": "Game Studios",
+        "desc": "Hosting private or small-scale multiplayer servers with real latency and stability requirements."
+      },
+      "item4": {
+        "title": "Digital Agencies",
+        "desc": "Web and marketing agencies that need separate, dedicated hosting environments per client project."
+      }
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -248,26 +322,62 @@
     "use_cases": {
       "title": "Use Cases",
       "desc": "When your organization needs a customized facility or has regulatory requirements, IDC buildout delivers a complete solution",
-      "item1": { "title": "Financial & Telecom Compliance", "desc": "Industries that must meet specific data residency and security audit requirements can satisfy compliance through a custom-built facility." },
-      "item2": { "title": "Expanding Existing Facilities", "desc": "When current facility capacity or equipment is aging, network architecture and hardware need to be replanned and refreshed." },
-      "item3": { "title": "Large-Scale System Migrations", "desc": "Moving core systems from an existing facility or public cloud into a dedicated data center." },
-      "item4": { "title": "High-Availability Critical Systems", "desc": "Core business systems with very low downtime tolerance that need dual-line networking and redundancy to reduce single points of failure." }
+      "item1": {
+        "title": "Financial & Telecom Compliance",
+        "desc": "Industries that must meet specific data residency and security audit requirements can satisfy compliance through a custom-built facility."
+      },
+      "item2": {
+        "title": "Expanding Existing Facilities",
+        "desc": "When current facility capacity or equipment is aging, network architecture and hardware need to be replanned and refreshed."
+      },
+      "item3": {
+        "title": "Large-Scale System Migrations",
+        "desc": "Moving core systems from an existing facility or public cloud into a dedicated data center."
+      },
+      "item4": {
+        "title": "High-Availability Critical Systems",
+        "desc": "Core business systems with very low downtime tolerance that need dual-line networking and redundancy to reduce single points of failure."
+      }
     },
     "differentiators": {
       "title": "Why Choose Kineticlinks for IDC Buildout",
       "desc": "Compared to colocation providers that only offer standard rack rental without custom planning capability",
-      "item1": { "title": "End-to-End Planning and Execution", "desc": "One team coordinates network design, hardware procurement, and facility deployment, cutting the coordination overhead of multiple vendors." },
-      "item2": { "title": "BGP Dual-Line Architecture Design", "desc": "Multi-line network architecture sized to your business, reducing the service disruption risk of a single line failing." },
-      "item3": { "title": "24/7 On-Site Personnel", "desc": "Not just remote monitoring — physical on-site staff respond in real time to facility issues." },
-      "item4": { "title": "Built-In Expansion Planning", "desc": "Future growth is factored into the buildout from day one, avoiding the need to re-plan shortly after launch." }
+      "item1": {
+        "title": "End-to-End Planning and Execution",
+        "desc": "One team coordinates network design, hardware procurement, and facility deployment, cutting the coordination overhead of multiple vendors."
+      },
+      "item2": {
+        "title": "BGP Dual-Line Architecture Design",
+        "desc": "Multi-line network architecture sized to your business, reducing the service disruption risk of a single line failing."
+      },
+      "item3": {
+        "title": "24/7 On-Site Personnel",
+        "desc": "Not just remote monitoring — physical on-site staff respond in real time to facility issues."
+      },
+      "item4": {
+        "title": "Built-In Expansion Planning",
+        "desc": "Future growth is factored into the buildout from day one, avoiding the need to re-plan shortly after launch."
+      }
     },
     "customers": {
       "title": "Who It's For",
       "desc": "The following types of organizations most often need custom IDC buildout",
-      "item1": { "title": "Financial & Payment Services", "desc": "Industries with strict data security and regulatory compliance requirements." },
-      "item2": { "title": "Telecom & Network Operators", "desc": "Businesses that need high-bandwidth, multi-line network architecture to support core operations." },
-      "item3": { "title": "Enterprise IT Departments", "desc": "Organizations planning to bring core systems back from public cloud or outsourced facilities into a self-managed data center." },
-      "item4": { "title": "Government & Public Sector Projects", "desc": "Projects with explicit requirements for physical facility security and audit records." }
+      "item1": {
+        "title": "Financial & Payment Services",
+        "desc": "Industries with strict data security and regulatory compliance requirements."
+      },
+      "item2": {
+        "title": "Telecom & Network Operators",
+        "desc": "Businesses that need high-bandwidth, multi-line network architecture to support core operations."
+      },
+      "item3": {
+        "title": "Enterprise IT Departments",
+        "desc": "Organizations planning to bring core systems back from public cloud or outsourced facilities into a self-managed data center."
+      },
+      "item4": {
+        "title": "Government & Public Sector Projects",
+        "desc": "Projects with explicit requirements for physical facility security and audit records."
+      }
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -311,26 +421,62 @@
     "use_cases": {
       "title": "Use Cases",
       "desc": "Whether it's your first move to the cloud or optimizing an existing environment, expert consulting reduces risk",
-      "item1": { "title": "Migrating from On-Premises", "desc": "Organizations planning to move systems from an existing self-managed facility to the public cloud, requiring full assessment and migration planning." },
-      "item2": { "title": "Hybrid Cloud Architecture Design", "desc": "Some systems must stay on-premises for regulatory or performance reasons and need to integrate with public cloud resources." },
-      "item3": { "title": "Multi-Cloud Redundancy & DR", "desc": "Designing cross-provider redundancy for critical systems to reduce the operational risk of a single vendor's outage." },
-      "item4": { "title": "Runaway Cloud Cost Optimization", "desc": "Cloud bills keep climbing without systematic review, requiring an expert team to audit resource efficiency." }
+      "item1": {
+        "title": "Migrating from On-Premises",
+        "desc": "Organizations planning to move systems from an existing self-managed facility to the public cloud, requiring full assessment and migration planning."
+      },
+      "item2": {
+        "title": "Hybrid Cloud Architecture Design",
+        "desc": "Some systems must stay on-premises for regulatory or performance reasons and need to integrate with public cloud resources."
+      },
+      "item3": {
+        "title": "Multi-Cloud Redundancy & DR",
+        "desc": "Designing cross-provider redundancy for critical systems to reduce the operational risk of a single vendor's outage."
+      },
+      "item4": {
+        "title": "Runaway Cloud Cost Optimization",
+        "desc": "Cloud bills keep climbing without systematic review, requiring an expert team to audit resource efficiency."
+      }
     },
     "differentiators": {
       "title": "Why Choose Kineticlinks Cloud Consulting",
       "desc": "Compared to providers that only operate a single cloud platform without real architecture planning capability",
-      "item1": { "title": "Real Multi-Cloud Integration Experience", "desc": "Hands-on architecture and integration experience across AWS, GCP, and Azure lets us recommend the right platform mix for your needs, not just push a single vendor's stack." },
-      "item2": { "title": "Hybrid Cloud Paired With IDC Services", "desc": "We also offer IDC facility buildout, so we can design a hybrid architecture that genuinely integrates your own facility with public cloud." },
-      "item3": { "title": "Phased Migration to Reduce Risk", "desc": "Migration order is planned around system dependencies to avoid the long downtime and data risk of a one-shot cutover." },
-      "item4": { "title": "Ongoing Cost Optimization", "desc": "We keep reviewing resource usage after migration instead of stopping once the one-time project wraps up." }
+      "item1": {
+        "title": "Real Multi-Cloud Integration Experience",
+        "desc": "Hands-on architecture and integration experience across AWS, GCP, and Azure lets us recommend the right platform mix for your needs, not just push a single vendor's stack."
+      },
+      "item2": {
+        "title": "Hybrid Cloud Paired With IDC Services",
+        "desc": "We also offer IDC facility buildout, so we can design a hybrid architecture that genuinely integrates your own facility with public cloud."
+      },
+      "item3": {
+        "title": "Phased Migration to Reduce Risk",
+        "desc": "Migration order is planned around system dependencies to avoid the long downtime and data risk of a one-shot cutover."
+      },
+      "item4": {
+        "title": "Ongoing Cost Optimization",
+        "desc": "We keep reviewing resource usage after migration instead of stopping once the one-time project wraps up."
+      }
     },
     "customers": {
       "title": "Who It's For",
       "desc": "The following types of organizations most often need public cloud architecture consulting",
-      "item1": { "title": "Traditional Enterprises Planning Cloud Transformation", "desc": "Organizations still running on self-managed facilities that want to evaluate the feasibility and benefits of moving to the cloud." },
-      "item2": { "title": "Organizations Already on Multi-Cloud or Hybrid Cloud", "desc": "Teams already using more than one cloud service that need unified architecture planning and cost management." },
-      "item3": { "title": "Fast-Growing Startups", "desc": "Companies scaling quickly that need an elastically scalable, cost-controlled cloud architecture." },
-      "item4": { "title": "Compliance- and Sovereignty-Sensitive Industries", "desc": "Organizations, such as those in finance or healthcare, that must plan data residency and access controls around regulatory requirements." }
+      "item1": {
+        "title": "Traditional Enterprises Planning Cloud Transformation",
+        "desc": "Organizations still running on self-managed facilities that want to evaluate the feasibility and benefits of moving to the cloud."
+      },
+      "item2": {
+        "title": "Organizations Already on Multi-Cloud or Hybrid Cloud",
+        "desc": "Teams already using more than one cloud service that need unified architecture planning and cost management."
+      },
+      "item3": {
+        "title": "Fast-Growing Startups",
+        "desc": "Companies scaling quickly that need an elastically scalable, cost-controlled cloud architecture."
+      },
+      "item4": {
+        "title": "Compliance- and Sovereignty-Sensitive Industries",
+        "desc": "Organizations, such as those in finance or healthcare, that must plan data residency and access controls around regulatory requirements."
+      }
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -375,26 +521,62 @@
     "use_cases": {
       "title": "Use Cases",
       "desc": "Whether you manage a single domain or a large number of subdomains, the platform simplifies certificate operations",
-      "item1": { "title": "Multi-Domain & Subdomain Management", "desc": "Centrally track certificate issuance and renewal status across many domains and subdomains without missing one." },
-      "item2": { "title": "Cross-CDN Deployment", "desc": "Push the same certificate to multiple CDN brand nodes at once through a single platform." },
-      "item3": { "title": "E-commerce & Campaign Sites", "desc": "Quickly issue certificates for short-lived campaign pages or rapidly expanding storefront domains." },
-      "item4": { "title": "Dev & Ops Teams", "desc": "Free engineering time from certificate busywork so it can focus on core product development." }
+      "item1": {
+        "title": "Multi-Domain & Subdomain Management",
+        "desc": "Centrally track certificate issuance and renewal status across many domains and subdomains without missing one."
+      },
+      "item2": {
+        "title": "Cross-CDN Deployment",
+        "desc": "Push the same certificate to multiple CDN brand nodes at once through a single platform."
+      },
+      "item3": {
+        "title": "E-commerce & Campaign Sites",
+        "desc": "Quickly issue certificates for short-lived campaign pages or rapidly expanding storefront domains."
+      },
+      "item4": {
+        "title": "Dev & Ops Teams",
+        "desc": "Free engineering time from certificate busywork so it can focus on core product development."
+      }
     },
     "differentiators": {
       "title": "Why Choose the Kineticlinks SSL Automation Platform",
       "desc": "Compared to manually requesting each certificate and uploading it to servers one at a time",
-      "item1": { "title": "Automatic DNS Validation", "desc": "Integrates with major DNS provider APIs to skip manual validation records and cut issuance time significantly." },
-      "item2": { "title": "Multi-Brand CDN Auto-Push", "desc": "Certificates sync directly to multiple CDN nodes after issuance, with no repeated downloading and uploading." },
-      "item3": { "title": "Expiration Alerts & Auto-Renewal", "desc": "The system proactively tracks certificate validity, lowering the risk of a security warning from a lapsed certificate." },
-      "item4": { "title": "Native Integration With CDN Service", "desc": "Part of the same Kineticlinks product line, so pairing with our CDN service requires no extra integration work." }
+      "item1": {
+        "title": "Automatic DNS Validation",
+        "desc": "Integrates with major DNS provider APIs to skip manual validation records and cut issuance time significantly."
+      },
+      "item2": {
+        "title": "Multi-Brand CDN Auto-Push",
+        "desc": "Certificates sync directly to multiple CDN nodes after issuance, with no repeated downloading and uploading."
+      },
+      "item3": {
+        "title": "Expiration Alerts & Auto-Renewal",
+        "desc": "The system proactively tracks certificate validity, lowering the risk of a security warning from a lapsed certificate."
+      },
+      "item4": {
+        "title": "Native Integration With CDN Service",
+        "desc": "Part of the same Kineticlinks product line, so pairing with our CDN service requires no extra integration work."
+      }
     },
     "customers": {
       "title": "Who It's For",
       "desc": "The following types of teams commonly rely on the SSL automation platform",
-      "item1": { "title": "Hosting Providers & Agencies", "desc": "Web hosts or digital agencies managing certificates across multiple client domains at once." },
-      "item2": { "title": "E-commerce Operations Teams", "desc": "Brands running multiple storefronts or campaign pages that need certificates issued and deployed quickly." },
-      "item3": { "title": "SaaS & Platform Providers", "desc": "Services that need to auto-issue certificates for a large number of custom domains, such as customer subdomains." },
-      "item4": { "title": "IT & Operations Departments", "desc": "Internal teams that want to standardize certificate management and reduce manual-process risk." }
+      "item1": {
+        "title": "Hosting Providers & Agencies",
+        "desc": "Web hosts or digital agencies managing certificates across multiple client domains at once."
+      },
+      "item2": {
+        "title": "E-commerce Operations Teams",
+        "desc": "Brands running multiple storefronts or campaign pages that need certificates issued and deployed quickly."
+      },
+      "item3": {
+        "title": "SaaS & Platform Providers",
+        "desc": "Services that need to auto-issue certificates for a large number of custom domains, such as customer subdomains."
+      },
+      "item4": {
+        "title": "IT & Operations Departments",
+        "desc": "Internal teams that want to standardize certificate management and reduce manual-process risk."
+      }
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -439,26 +621,62 @@
     "use_cases": {
       "title": "Use Cases",
       "desc": "Useful whether you're evaluating a new facility location or monitoring an existing service",
-      "item1": { "title": "Cross-Border Service Quality Assessment", "desc": "Sites or apps serving users in China that need to verify real-world performance across all three carriers." },
-      "item2": { "title": "Facility & CDN Node Site Selection", "desc": "Test candidate locations against each carrier's network before committing to a new facility or CDN node." },
-      "item3": { "title": "Monitoring & Alerting Integration", "desc": "Feed test data into an existing monitoring system via API and set thresholds for anomaly alerts." },
-      "item4": { "title": "Sales & Marketing Material", "desc": "Use real test data to back up connection-quality claims in sales conversations or marketing." }
+      "item1": {
+        "title": "Cross-Border Service Quality Assessment",
+        "desc": "Sites or apps serving users in China that need to verify real-world performance across all three carriers."
+      },
+      "item2": {
+        "title": "Facility & CDN Node Site Selection",
+        "desc": "Test candidate locations against each carrier's network before committing to a new facility or CDN node."
+      },
+      "item3": {
+        "title": "Monitoring & Alerting Integration",
+        "desc": "Feed test data into an existing monitoring system via API and set thresholds for anomaly alerts."
+      },
+      "item4": {
+        "title": "Sales & Marketing Material",
+        "desc": "Use real test data to back up connection-quality claims in sales conversations or marketing."
+      }
     },
     "differentiators": {
       "title": "Why Choose the Kineticlinks Speed Test Platform",
       "desc": "Compared to generic speed test tools limited to one region or unable to separate carrier-specific results",
-      "item1": { "title": "Carrier-Specific Results", "desc": "Reports Telecom, Unicom, and Mobile results separately instead of one blended average." },
-      "item2": { "title": "Free and Commercial Tiers", "desc": "Individuals can test for free, while businesses can integrate systematically through the paid API." },
-      "item3": { "title": "Broad Asia-Pacific Coverage", "desc": "Testing isn't limited to China's three carriers — it also covers connection quality across other major Asia-Pacific markets." },
-      "item4": { "title": "Cross-Validated With Our CDN", "desc": "Part of the same Kineticlinks product line, so it can directly validate the real-world performance of our own CDN service." }
+      "item1": {
+        "title": "Carrier-Specific Results",
+        "desc": "Reports Telecom, Unicom, and Mobile results separately instead of one blended average."
+      },
+      "item2": {
+        "title": "Free and Commercial Tiers",
+        "desc": "Individuals can test for free, while businesses can integrate systematically through the paid API."
+      },
+      "item3": {
+        "title": "Broad Asia-Pacific Coverage",
+        "desc": "Testing isn't limited to China's three carriers — it also covers connection quality across other major Asia-Pacific markets."
+      },
+      "item4": {
+        "title": "Cross-Validated With Our CDN",
+        "desc": "Part of the same Kineticlinks product line, so it can directly validate the real-world performance of our own CDN service."
+      }
     },
     "customers": {
       "title": "Who It's For",
       "desc": "The following types of teams commonly rely on the 3-network speed test platform",
-      "item1": { "title": "Cross-Border E-commerce & Content Platforms", "desc": "Site operators serving users in China or Asia-Pacific who need ongoing connection quality monitoring." },
-      "item2": { "title": "Network Engineering & Ops Teams", "desc": "Technical staff evaluating facility site selection or diagnosing cross-border connection issues." },
-      "item3": { "title": "CDN & Hosting Providers", "desc": "Peers who need real test data to validate and back up their own service quality claims." },
-      "item4": { "title": "Game & Real-Time App Developers", "desc": "Teams highly sensitive to latency that need to assess target-market connection quality in advance." }
+      "item1": {
+        "title": "Cross-Border E-commerce & Content Platforms",
+        "desc": "Site operators serving users in China or Asia-Pacific who need ongoing connection quality monitoring."
+      },
+      "item2": {
+        "title": "Network Engineering & Ops Teams",
+        "desc": "Technical staff evaluating facility site selection or diagnosing cross-border connection issues."
+      },
+      "item3": {
+        "title": "CDN & Hosting Providers",
+        "desc": "Peers who need real test data to validate and back up their own service quality claims."
+      },
+      "item4": {
+        "title": "Game & Real-Time App Developers",
+        "desc": "Teams highly sensitive to latency that need to assess target-market connection quality in advance."
+      }
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -477,6 +695,116 @@
       "title": "Want to Know How Your Service Really Performs on China's Three Networks?",
       "desc": "Run a free test now, or contact our team to learn about the commercial API integration options.",
       "button": "Go to the Speed Test Platform"
+    }
+  },
+  "blog": {
+    "badge": "Blog",
+    "title": "Technical Blog",
+    "subtitle": "Infrastructure notes from the front line",
+    "desc": "Practical experience and industry developments across CDN, VPS, data center buildout, cloud architecture, and certificate management — written for teams making real technology decisions.",
+    "read_more": "Read the full article",
+    "back": "Back to all articles",
+    "seo": {
+      "title": "Technical Blog | CDN, VPS & Cloud Architecture Notes - Kineticlinks",
+      "description": "The Kineticlinks engineering team shares practical experience and industry trends on CDN acceleration, VPS selection, IDC buildout, cloud migration, and SSL certificate automation.",
+      "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
+    }
+  },
+  "article_ssl_validity": {
+    "date": "2026-08-15",
+    "date_display": "August 15, 2026",
+    "category": "Certificate Management",
+    "reading_time": "8 min read",
+    "short_title": "SSL Certificate Lifetimes Drop to 200 Days",
+    "title": "SSL Certificate Lifetimes Are Now 200 Days — and 47 by 2029. What Should Your Team Do?",
+    "excerpt": "As of March 15, 2026, the maximum lifetime for a publicly trusted TLS certificate dropped from 398 days to 200, with two further reductions scheduled for 2027 and 2029. Here's the timeline, the reasoning behind it, and why manual renewal won't survive the next phase.",
+    "lead": "As of March 15, 2026, the maximum lifetime for a publicly trusted TLS/SSL certificate has dropped from 398 days to 200. This isn't one certificate authority adjusting its policy — it's an industry-wide requirement ratified by the CA/Browser Forum, with two more reductions already scheduled. For teams still managing certificates by hand, the operational burden is set to multiply over the next three years.",
+    "seo": {
+      "title": "SSL Certificate Lifetime Cut to 200 Days | 2026 Schedule & Response Guide - Kineticlinks",
+      "description": "The CA/Browser Forum has scheduled phased reductions to TLS certificate lifetimes: 200 days in 2026, 100 days in 2027, and 47 days in 2029. Full timeline, real-world impact, and how to automate your response.",
+      "keywords": "SSL certificate lifetime, certificate validity reduction, 200 day certificates, 47 day certificates, SC-081, ACME protocol, automatic certificate renewal, SSL certificate management"
+    },
+    "s1": {
+      "title": "What Changed",
+      "p1": "The CA/Browser Forum is the industry body of certificate authorities and browser vendors that sets the shared rules for publicly trusted certificates. In April 2025 it ratified Ballot SC-081v3, which established a phased schedule for shortening TLS certificate lifetimes.",
+      "p2": "What makes this significant is that it isn't a commercial decision by any single certificate authority — it's a requirement every publicly trusted CA must follow. In other words, the timeline applies regardless of who you currently buy certificates from, including free services such as Let's Encrypt.",
+      "p3": "Worth noting: alongside certificate lifetimes, the reuse period for domain control validation (DCV) is shrinking too. That means it isn't only certificates that need reissuing more often — domain ownership itself must be revalidated more frequently, dropping to 10 days by 2029."
+    },
+    "timeline": {
+      "caption": "The phased reduction schedule set by Ballot SC-081v3. We are currently in the 200-day phase.",
+      "col1": "Effective date",
+      "col2": "Max lifetime",
+      "col3": "What it means",
+      "r1c1": "Before March 15, 2026",
+      "r1c2": "398 days",
+      "r1c3": "Old rule — roughly one renewal a year",
+      "r2c1": "March 15, 2026",
+      "r2c2": "200 days",
+      "r2c3": "Current rule — about twice a year",
+      "r3c1": "March 15, 2027",
+      "r3c2": "100 days",
+      "r3c3": "Roughly four renewals a year",
+      "r4c1": "March 15, 2029",
+      "r4c2": "47 days",
+      "r4c3": "Roughly eight renewals a year"
+    },
+    "s2": {
+      "title": "Why Shorten Certificate Lifetimes?",
+      "intro": "Shorter lifetimes clearly mean more work for operations teams, but there are several concrete security arguments behind the change:",
+      "r1_title": "Shrinking the window for key compromise",
+      "r1_desc": "When a private key leaks or a certificate is misused, how long an attacker can exploit it depends directly on the certificate's remaining lifetime. Going from 398 days to 47 compresses the worst-case exposure window to roughly one-eighth of what it was.",
+      "r2_title": "Reducing reliance on revocation",
+      "r2_desc": "In theory a compromised certificate can be revoked via CRL or OCSP, but in practice these mechanisms are not fully reliable — some browsers soft-fail when the check doesn't complete, and network conditions can cause timeouts. Short-lived certificates simply expire, with no dependency on revocation working correctly.",
+      "r3_title": "Forcing automation and crypto-agility",
+      "r3_desc": "Frequent renewal pushes the whole industry toward automated workflows. This isn't only about the current rules — it's preparation for the eventual migration to post-quantum cryptography, when the industry will need to be able to rotate certificates and algorithms quickly."
+    },
+    "s3": {
+      "title": "What This Actually Costs You",
+      "p1": "The impact on operational workload multiplies at each phase. Under the old rules a certificate was renewed roughly once a year. In the 200-day phase that becomes about twice a year; the 100-day phase in 2027 makes it four times; and the 47-day phase in 2029 pushes it to roughly eight times a year.",
+      "p2": "Then multiply that by how many domains you manage. For an organization handling 20 domains and subdomains, the old rules meant about 20 certificate operations a year. In the 47-day phase, that becomes roughly 160 a year — which, done manually, is a certificate task every couple of days.",
+      "callout": "In practice, certificate authorities typically issue slightly under the cap (for example 199 days against the 200-day limit) to leave a safety margin. It's also worth not waiting until the final day: starting the renewal when roughly a third of the lifetime remains leaves enough room to handle a failed validation or other surprises.",
+      "p3": "The bigger risk is human error. Certificate management is a classic low-frequency, high-consequence task: it needs no attention at all, right up until a renewal is missed — at which point the site throws browser security warnings, API calls start failing, and payment integrations can break. Multiplying the frequency by eight multiplies the opportunities to get it wrong."
+    },
+    "s4": {
+      "title": "Why Manual Processes Won't Hold",
+      "p1": "A full manual renewal usually involves: logging into the CA portal to submit the request, adding a TXT or CNAME record in DNS for validation, waiting for validation to pass, downloading the certificate files, uploading them to every server or CDN node one at a time, reloading the service configuration, and finally confirming the new certificate is actually being served. When everything goes smoothly, that's roughly 20 to 40 minutes.",
+      "p2": "Multiply that by domain count and renewal frequency and the cost adds up quickly. Worse, this work resists any fixed rhythm — every certificate has its own expiry date scattered across the year, so someone has to keep tracking them. Once a team manages a few dozen domains, simply knowing which certificate expires when becomes a list that needs maintaining in its own right."
+    },
+    "s5": {
+      "title": "How to Respond: Three Layers of Automation",
+      "intro": "The direction is clear — take the human out of the loop. But automation isn't a single step; it's three layers you can adopt progressively:",
+      "l1_title": "Layer one: automated issuance and renewal",
+      "l1_desc": "The ACME protocol (Automatic Certificate Management Environment) lets a server talk directly to a certificate authority to request, validate, and renew automatically. Let's Encrypt with Certbot is the most common pairing, and most hosting control panels now ship something equivalent. This layer solves where the certificate comes from.",
+      "l2_title": "Layer two: automated domain validation",
+      "l2_desc": "Among ACME's validation methods, HTTP validation requires exposing a specific path publicly, which isn't always convenient; DNS validation requires adding TXT records dynamically. Creating those records automatically through your DNS provider's API removes the manual login step entirely and makes wildcard certificate automation possible. Given that the DCV reuse period is shrinking too, this layer only grows in importance.",
+      "l3_title": "Layer three: automated deployment",
+      "l3_desc": "Obtaining the certificate is only half the job. The genuinely time-consuming part is deployment — pushing the same certificate to multiple servers, multiple CDN nodes, sometimes across different CDN vendors. Without automation here, the time saved in the first two layers gets eaten at the deployment stage. Ideally, a newly issued certificate propagates to every node that needs it and its status is verified automatically."
+    },
+    "s6": {
+      "title": "Three Things to Do Now",
+      "intro": "If your team hasn't audited its exposure to this change yet, start with these three steps:",
+      "c1_title": "Inventory your certificates",
+      "c1_desc": "List every certificate in use, including the domain, issuing CA, expiry date, where it's deployed (which servers, which CDNs), and who currently owns renewal. Building this list alone tends to surface a few forgotten certificates.",
+      "c2_title": "Separate what can be automated from what can't",
+      "c2_desc": "Most modern environments can adopt ACME, but some legacy systems, air-gapped networks, or specialized hardware may not support it directly. Flagging these exceptions early is what lets you estimate the extra handling cost — or decide whether the architecture itself should change.",
+      "c3_title": "Set up expiry monitoring and alerts",
+      "c3_desc": "Even with automation in place, you still need independent monitoring to confirm renewals actually succeeded. Alerting ahead of expiry is the last line of defense against an automated pipeline failing silently."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "The direction of travel is settled and the dates are known. The 200-day phase might still be survivable with manual effort, but the 100-day phase in 2027 and the 47-day phase in 2029 effectively rule manual management out. Rather than waiting until the workload has already doubled, it's worth using the remaining runway to get automation in place.",
+      "p2": "If you're evaluating certificate automation, or want to understand how to automate deployment as well as issuance, our technical team is happy to talk through your specific setup."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "CA/Browser Forum — Ballot SC081v3: Introduce Schedule of Reducing Validity and Data Reuse Periods",
+      "s2": "DigiCert — TLS Certificate Lifetimes Will Officially Reduce to 47 Days",
+      "s3": "Sectigo — Certificate Expiration Risk: 200 Day Validity Starts March 15"
+    },
+    "cta": {
+      "title": "Stop Relying on Calendar Reminders",
+      "desc": "The Kineticlinks SSL automation platform combines automatic DNS validation with multi-brand CDN deployment — issuance, validation, and rollout in one pass.",
+      "button": "Explore the SSL Platform"
     }
   },
   "footer": {

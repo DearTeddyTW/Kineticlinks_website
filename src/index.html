@@ -62,10 +62,11 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">Kinetic<span>links</span></a>
-            <div class="nav-links">
+            <div class="nav-links" id="primary-nav">
                 <a href="#home">{{ nav.home }}</a>
                 <a href="#services">{{ nav.services }}</a>
                 <a href="#platforms">{{ nav.platforms }}</a>
+                <a href="{{ lang_path }}blog/">{{ nav.blog }}</a>
                 <a href="#about">{{ nav.about }}</a>
                 <a href="#contact" class="btn btn-outline">{{ nav.contact }}</a>
                 
@@ -79,11 +80,12 @@
                     </div>
                 </div>
             </div>
-            <div class="mobile-menu-btn">
+            <button class="mobile-menu-btn" type="button" aria-label="{{ nav.menu }}"
+                aria-expanded="false" aria-controls="primary-nav">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -344,6 +346,7 @@
                     <a href="{{ lang_path }}vps/">{{ services.vps.title }}</a>
                     <a href="{{ lang_path }}idc/">{{ services.idc.title }}</a>
                     <a href="{{ lang_path }}cloud/">{{ services.cloud.title }}</a>
+                    <a href="{{ lang_path }}blog/">{{ nav.blog }}</a>
                     <a href="#contact">{{ nav.contact }}</a>
                 </div>
             </div>

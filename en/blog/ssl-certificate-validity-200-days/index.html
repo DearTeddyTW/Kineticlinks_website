@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>SSL Certificate Lifetime Cut to 200 Days | 2026 Schedule & Response Guide - Kineticlinks</title>
+    <meta name="title" content="SSL Certificate Lifetime Cut to 200 Days | 2026 Schedule & Response Guide - Kineticlinks">
+    <meta name="description" content="The CA/Browser Forum has scheduled phased reductions to TLS certificate lifetimes: 200 days in 2026, 100 days in 2027, and 47 days in 2029. Full timeline, real-world impact, and how to automate your response.">
+    <meta name="keywords" content="SSL certificate lifetime, certificate validity reduction, 200 day certificates, 47 day certificates, SC-081, ACME protocol, automatic certificate renewal, SSL certificate management">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/ssl-certificate-validity-200-days/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/ssl-certificate-validity-200-days/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/ssl-certificate-validity-200-days/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/">
+    <meta property="og:title" content="SSL Certificate Lifetime Cut to 200 Days | 2026 Schedule & Response Guide - Kineticlinks">
+    <meta property="og:description" content="The CA/Browser Forum has scheduled phased reductions to TLS certificate lifetimes: 200 days in 2026, 100 days in 2027, and 47 days in 2029. Full timeline, real-world impact, and how to automate your response.">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-08-15">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/">
+    <meta property="twitter:title" content="SSL Certificate Lifetime Cut to 200 Days | 2026 Schedule & Response Guide - Kineticlinks">
+    <meta property="twitter:description" content="The CA/Browser Forum has scheduled phased reductions to TLS certificate lifetimes: 200 days in 2026, 100 days in 2027, and 47 days in 2029. Full timeline, real-world impact, and how to automate your response.">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "SSL Certificate Lifetimes Are Now 200 Days — and 47 by 2029. What Should Your Team Do?",
+      "description": "The CA/Browser Forum has scheduled phased reductions to TLS certificate lifetimes: 200 days in 2026, 100 days in 2027, and 47 days in 2029. Full timeline, real-world impact, and how to automate your response.",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-08-15",
+      "dateModified": "2026-08-15",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kineticlinks.net/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.kineticlinks.net/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SSL Certificate Lifetimes Are Now 200 Days — and 47 by 2029. What Should Your Team Do?",
+          "item": "https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/en/#home">Home</a>
+                <a href="/en/#services">Services</a>
+                <a href="/en/#platforms">Platforms</a>
+                <a href="/en/blog/">Blog</a>
+                <a href="/en/#about">About</a>
+                <a href="/en/#contact" class="btn btn-outline">Contact</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">English ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/ssl-certificate-validity-200-days/">繁體中文</a>
+                        <a href="/en/blog/ssl-certificate-validity-200-days/">English</a>
+                        <a href="/zh-cn/blog/ssl-certificate-validity-200-days/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="Open menu"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/en/">Home</a>
+            <span>/</span>
+            <a href="/en/blog/">Blog</a>
+            <span>/</span>
+            <span class="current">SSL Certificate Lifetimes Drop to 200 Days</span>
+        </div>
+    </div>
+
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">Certificate Management</div>
+                <h1>SSL Certificate Lifetimes Are Now 200 Days — and 47 by 2029. What Should Your Team Do?</h1>
+                <div class="article-meta">
+                    <time datetime="2026-08-15">August 15, 2026</time>
+                    <span class="dot">·</span>
+                    <span>8 min read</span>
+                </div>
+                <p class="article-lead">As of March 15, 2026, the maximum lifetime for a publicly trusted TLS/SSL certificate has dropped from 398 days to 200. This isn't one certificate authority adjusting its policy — it's an industry-wide requirement ratified by the CA/Browser Forum, with two more reductions already scheduled. For teams still managing certificates by hand, the operational burden is set to multiply over the next three years.</p>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>What Changed</h2>
+                <p>The CA/Browser Forum is the industry body of certificate authorities and browser vendors that sets the shared rules for publicly trusted certificates. In April 2025 it ratified Ballot SC-081v3, which established a phased schedule for shortening TLS certificate lifetimes.</p>
+                <p>What makes this significant is that it isn't a commercial decision by any single certificate authority — it's a requirement every publicly trusted CA must follow. In other words, the timeline applies regardless of who you currently buy certificates from, including free services such as Let's Encrypt.</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Effective date</th>
+                                    <th>Max lifetime</th>
+                                    <th>What it means</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Before March 15, 2026</td>
+                                    <td class="num">398 days</td>
+                                    <td>Old rule — roughly one renewal a year</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>March 15, 2026</td>
+                                    <td class="num">200 days</td>
+                                    <td>Current rule — about twice a year</td>
+                                </tr>
+                                <tr>
+                                    <td>March 15, 2027</td>
+                                    <td class="num">100 days</td>
+                                    <td>Roughly four renewals a year</td>
+                                </tr>
+                                <tr>
+                                    <td>March 15, 2029</td>
+                                    <td class="num">47 days</td>
+                                    <td>Roughly eight renewals a year</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>The phased reduction schedule set by Ballot SC-081v3. We are currently in the 200-day phase.</figcaption>
+                </figure>
+
+                <p>Worth noting: alongside certificate lifetimes, the reuse period for domain control validation (DCV) is shrinking too. That means it isn't only certificates that need reissuing more often — domain ownership itself must be revalidated more frequently, dropping to 10 days by 2029.</p>
+
+                <!-- Why -->
+                <h2>Why Shorten Certificate Lifetimes?</h2>
+                <p>Shorter lifetimes clearly mean more work for operations teams, but there are several concrete security arguments behind the change:</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>Shrinking the window for key compromise</strong>
+                        <span>When a private key leaks or a certificate is misused, how long an attacker can exploit it depends directly on the certificate's remaining lifetime. Going from 398 days to 47 compresses the worst-case exposure window to roughly one-eighth of what it was.</span>
+                    </li>
+                    <li>
+                        <strong>Reducing reliance on revocation</strong>
+                        <span>In theory a compromised certificate can be revoked via CRL or OCSP, but in practice these mechanisms are not fully reliable — some browsers soft-fail when the check doesn't complete, and network conditions can cause timeouts. Short-lived certificates simply expire, with no dependency on revocation working correctly.</span>
+                    </li>
+                    <li>
+                        <strong>Forcing automation and crypto-agility</strong>
+                        <span>Frequent renewal pushes the whole industry toward automated workflows. This isn't only about the current rules — it's preparation for the eventual migration to post-quantum cryptography, when the industry will need to be able to rotate certificates and algorithms quickly.</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>What This Actually Costs You</h2>
+                <p>The impact on operational workload multiplies at each phase. Under the old rules a certificate was renewed roughly once a year. In the 200-day phase that becomes about twice a year; the 100-day phase in 2027 makes it four times; and the 47-day phase in 2029 pushes it to roughly eight times a year.</p>
+                <p>Then multiply that by how many domains you manage. For an organization handling 20 domains and subdomains, the old rules meant about 20 certificate operations a year. In the 47-day phase, that becomes roughly 160 a year — which, done manually, is a certificate task every couple of days.</p>
+
+                <aside class="callout">
+                    <p>In practice, certificate authorities typically issue slightly under the cap (for example 199 days against the 200-day limit) to leave a safety margin. It's also worth not waiting until the final day: starting the renewal when roughly a third of the lifetime remains leaves enough room to handle a failed validation or other surprises.</p>
+                </aside>
+
+                <p>The bigger risk is human error. Certificate management is a classic low-frequency, high-consequence task: it needs no attention at all, right up until a renewal is missed — at which point the site throws browser security warnings, API calls start failing, and payment integrations can break. Multiplying the frequency by eight multiplies the opportunities to get it wrong.</p>
+
+                <!-- Why manual fails -->
+                <h2>Why Manual Processes Won't Hold</h2>
+                <p>A full manual renewal usually involves: logging into the CA portal to submit the request, adding a TXT or CNAME record in DNS for validation, waiting for validation to pass, downloading the certificate files, uploading them to every server or CDN node one at a time, reloading the service configuration, and finally confirming the new certificate is actually being served. When everything goes smoothly, that's roughly 20 to 40 minutes.</p>
+                <p>Multiply that by domain count and renewal frequency and the cost adds up quickly. Worse, this work resists any fixed rhythm — every certificate has its own expiry date scattered across the year, so someone has to keep tracking them. Once a team manages a few dozen domains, simply knowing which certificate expires when becomes a list that needs maintaining in its own right.</p>
+
+                <!-- How to respond -->
+                <h2>How to Respond: Three Layers of Automation</h2>
+                <p>The direction is clear — take the human out of the loop. But automation isn't a single step; it's three layers you can adopt progressively:</p>
+
+                <h3>Layer one: automated issuance and renewal</h3>
+                <p>The ACME protocol (Automatic Certificate Management Environment) lets a server talk directly to a certificate authority to request, validate, and renew automatically. Let's Encrypt with Certbot is the most common pairing, and most hosting control panels now ship something equivalent. This layer solves where the certificate comes from.</p>
+
+                <h3>Layer two: automated domain validation</h3>
+                <p>Among ACME's validation methods, HTTP validation requires exposing a specific path publicly, which isn't always convenient; DNS validation requires adding TXT records dynamically. Creating those records automatically through your DNS provider's API removes the manual login step entirely and makes wildcard certificate automation possible. Given that the DCV reuse period is shrinking too, this layer only grows in importance.</p>
+
+                <h3>Layer three: automated deployment</h3>
+                <p>Obtaining the certificate is only half the job. The genuinely time-consuming part is deployment — pushing the same certificate to multiple servers, multiple CDN nodes, sometimes across different CDN vendors. Without automation here, the time saved in the first two layers gets eaten at the deployment stage. Ideally, a newly issued certificate propagates to every node that needs it and its status is verified automatically.</p>
+
+                <!-- Checklist -->
+                <h2>Three Things to Do Now</h2>
+                <p>If your team hasn't audited its exposure to this change yet, start with these three steps:</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>Inventory your certificates</strong>
+                        <span>List every certificate in use, including the domain, issuing CA, expiry date, where it's deployed (which servers, which CDNs), and who currently owns renewal. Building this list alone tends to surface a few forgotten certificates.</span>
+                    </li>
+                    <li>
+                        <strong>Separate what can be automated from what can't</strong>
+                        <span>Most modern environments can adopt ACME, but some legacy systems, air-gapped networks, or specialized hardware may not support it directly. Flagging these exceptions early is what lets you estimate the extra handling cost — or decide whether the architecture itself should change.</span>
+                    </li>
+                    <li>
+                        <strong>Set up expiry monitoring and alerts</strong>
+                        <span>Even with automation in place, you still need independent monitoring to confirm renewals actually succeeded. Alerting ahead of expiry is the last line of defense against an automated pipeline failing silently.</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>In Summary</h2>
+                <p>The direction of travel is settled and the dates are known. The 200-day phase might still be survivable with manual effort, but the 100-day phase in 2027 and the 47-day phase in 2029 effectively rule manual management out. Rather than waiting until the workload has already doubled, it's worth using the remaining runway to get automation in place.</p>
+                <p>If you're evaluating certificate automation, or want to understand how to automate deployment as well as issuance, our technical team is happy to talk through your specific setup.</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>Sources</h3>
+                    <ul>
+                        <li><a href="https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/" target="_blank" rel="noopener">CA/Browser Forum — Ballot SC081v3: Introduce Schedule of Reducing Validity and Data Reuse Periods</a></li>
+                        <li><a href="https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days" target="_blank" rel="noopener">DigiCert — TLS Certificate Lifetimes Will Officially Reduce to 47 Days</a></li>
+                        <li><a href="https://www.sectigo.com/blog/200-day-ssl-certificate-expiration-risk" target="_blank" rel="noopener">Sectigo — Certificate Expiration Risk: 200 Day Validity Starts March 15</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>Stop Relying on Calendar Reminders</h2>
+                <p>The Kineticlinks SSL automation platform combines automatic DNS validation with multi-brand CDN deployment — issuance, validation, and rollout in one pass.</p>
+                <div class="hero-actions">
+                    <a href="/en/ssl/" class="btn btn-primary">Explore the SSL Platform</a>
+                    <a href="/en/blog/" class="btn btn-secondary">Back to all articles</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/en/cdn/">Content Delivery Network (CDN)</a>
+                    <a href="/en/vps/">Virtual Private Server (VPS)</a>
+                    <a href="/en/idc/">IDC Construction</a>
+                    <a href="/en/cloud/">Public Cloud Solutions</a>
+                    <a href="/en/blog/">Blog</a>
+                    <a href="/en/#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js" defer></script>
+</body>
+
+</html>

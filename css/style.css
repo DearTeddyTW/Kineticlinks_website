@@ -107,6 +107,7 @@ ul {
     border: none;
     font-family: var(--font-sans);
     font-size: 1rem;
+    white-space: nowrap;
 }
 
 .btn-primary {
@@ -198,6 +199,18 @@ ul {
     font-weight: 500;
     color: var(--text-secondary);
     position: relative;
+    white-space: nowrap;
+}
+
+/* Tighten spacing before the nav runs out of room */
+@media (max-width: 1100px) {
+    .nav-links {
+        gap: 1.4rem;
+    }
+
+    .lang-switcher {
+        margin-left: 0.5rem;
+    }
 }
 
 .nav-links a:not(.btn):hover {
@@ -224,6 +237,9 @@ ul {
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .mobile-menu-btn span {
@@ -231,6 +247,20 @@ ul {
     height: 2px;
     background-color: var(--text-primary);
     transition: var(--transition-smooth);
+    display: block;
+}
+
+/* Hamburger morphs into a close icon while the menu is open */
+.mobile-menu-btn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* ==========================================================================
@@ -666,15 +696,66 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+/* The nav runs out of room before the general mobile breakpoint, so it
+   collapses into the hamburger menu earlier. */
+@media (max-width: 900px) {
     .nav-links {
         display: none;
     }
-    
+
+    /* Opened by the hamburger button (see main.js) */
+    .nav-links.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.5rem 2rem 1.5rem;
+        background: rgba(7, 11, 20, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid var(--glass-border);
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-links.active a:not(.btn) {
+        padding: 0.9rem 0;
+        font-size: 1rem;
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    /* The underline hover effect doesn't suit stacked links */
+    .nav-links.active a:not(.btn)::after {
+        display: none;
+    }
+
+    .nav-links.active .btn-outline {
+        margin-top: 1rem;
+    }
+
     .mobile-menu-btn {
         display: flex;
     }
-    
+
+    .lang-switcher {
+        margin: 0.5rem 0 0;
+        display: block;
+        text-align: center;
+    }
+
+    .lang-dropdown {
+        position: relative;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -873,6 +954,350 @@ footer {
     }
 }
 
+/* ==========================================================================
+   Blog Index
+   ========================================================================== */
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.article-card {
+    display: block;
+    padding: 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    transition: var(--transition-smooth);
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    background: var(--glass-hover);
+    border-color: rgba(0, 242, 254, 0.3);
+}
+
+.article-card-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.article-card-meta > * {
+    white-space: nowrap;
+}
+
+.article-card-tag {
+    color: var(--accent-blue);
+    border: 1px solid rgba(0, 242, 254, 0.25);
+    background: rgba(0, 242, 254, 0.08);
+    border-radius: 20px;
+    padding: 0.15rem 0.7rem;
+    font-weight: 600;
+}
+
+.article-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
+}
+
+.article-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Article
+   ========================================================================== */
+.article {
+    padding: 2rem 0 4rem;
+}
+
+.article-container {
+    max-width: 780px;
+}
+
+.article-header {
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.article-header h1 {
+    font-size: clamp(1.9rem, 4.5vw, 2.75rem);
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.6rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.article-meta > * {
+    white-space: nowrap;
+}
+
+.article-meta .dot {
+    color: var(--accent-blue);
+}
+
+.article-lead {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    border-left: 3px solid var(--accent-blue);
+    padding-left: 1.25rem;
+}
+
+/* Article body typography */
+.article-body {
+    font-size: 1.0625rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+.article-body h2 {
+    font-size: 1.6rem;
+    color: var(--text-primary);
+    margin: 3rem 0 1.25rem;
+    line-height: 1.35;
+}
+
+.article-body h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin: 2.25rem 0 0.75rem;
+}
+
+.article-body p {
+    margin-bottom: 1.4rem;
+}
+
+.article-body strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Ordered lists inside articles */
+.reason-list,
+.check-list {
+    list-style: none;
+    counter-reset: item;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 1.75rem 0 2rem;
+    padding: 0;
+}
+
+.reason-list li,
+.check-list li {
+    counter-increment: item;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.reason-list li::before,
+.check-list li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(0, 242, 254, 0.1);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    color: var(--accent-blue);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.reason-list strong,
+.check-list strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.reason-list span,
+.check-list span {
+    display: block;
+    font-size: 0.98rem;
+}
+
+/* Data table */
+.data-table-wrap {
+    margin: 2rem 0;
+}
+
+.data-table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.data-table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    text-align: left;
+    padding: 0.9rem 1.25rem;
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 0.95rem;
+}
+
+.data-table thead th {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table td.num {
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.data-table tr.is-current {
+    background: rgba(0, 242, 254, 0.06);
+}
+
+.data-table tr.is-current td.num {
+    color: var(--accent-blue);
+    font-weight: 700;
+}
+
+.data-table-wrap figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+/* Callout */
+.callout {
+    background: rgba(0, 242, 254, 0.06);
+    border-left: 3px solid var(--accent-blue);
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem 1.75rem;
+    margin: 2rem 0;
+}
+
+.callout p {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+/* Sources */
+.article-sources {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.article-sources h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.article-sources ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.article-sources a {
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+}
+
+.article-sources a:hover {
+    border-bottom-color: var(--accent-blue);
+}
+
+/* Article CTA */
+.article-cta {
+    margin-top: 3.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    background: rgba(0, 242, 254, 0.04);
+}
+
+.article-cta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.article-cta p {
+    color: var(--text-secondary);
+    margin-bottom: 1.75rem;
+}
+
+.article-cta .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .article-card {
+        padding: 1.5rem;
+    }
+
+    .article-body {
+        font-size: 1rem;
+    }
+
+    .article-body h2 {
+        font-size: 1.35rem;
+        margin-top: 2.25rem;
+    }
+
+    .article-cta {
+        padding: 2rem 1.5rem;
+    }
+
+    .reason-list li,
+    .check-list li {
+        padding-left: 2.6rem;
+    }
+}
+
 /* Language Switcher */
 .lang-switcher {
     position: relative;
@@ -889,6 +1314,7 @@ footer {
     font-family: inherit;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 .lang-btn:hover {
     border-color: var(--primary-color);
@@ -927,17 +1353,5 @@ footer {
     display: block;
 }
 
-@media (max-width: 768px) {
-    .lang-switcher {
-        margin: 10px 0;
-        display: block;
-        text-align: center;
-    }
-    .lang-dropdown {
-        position: relative;
-        box-shadow: none;
-        border: none;
-        background: transparent;
-        margin-top: 5px;
-    }
-}
+/* Mobile lang-switcher styles live with the nav collapse rules above,
+   which now trigger at 900px. */
