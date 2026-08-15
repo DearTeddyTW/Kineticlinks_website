@@ -245,19 +245,19 @@
                     <p>{{ about.desc }}</p>
                     <div class="stats-grid">
                         <div class="stat-item glass-panel">
-                            <h4 class="text-gradient">99.99%</h4>
+                            <h3 class="text-gradient">99.99%</h3>
                             <p>{{ about.stat1 }}</p>
                         </div>
                         <div class="stat-item glass-panel">
-                            <h4 class="text-gradient">24/7</h4>
+                            <h3 class="text-gradient">24/7</h3>
                             <p>{{ about.stat2 }}</p>
                         </div>
                         <div class="stat-item glass-panel">
-                            <h4 class="text-gradient">500+</h4>
+                            <h3 class="text-gradient">500+</h3>
                             <p>{{ about.stat3 }}</p>
                         </div>
                         <div class="stat-item glass-panel">
-                            <h4 class="text-gradient">3ms</h4>
+                            <h3 class="text-gradient">3ms</h3>
                             <p>{{ about.stat4 }}</p>
                         </div>
                     </div>
@@ -312,7 +312,7 @@
                         <label for="email">{{ contact.form.email }}</label>
                     </div>
                     <div class="form-group">
-                        <select id="service" name="Service" required>
+                        <select id="service" name="Service" required aria-label="{{ contact.form.service_default }}">
                             <option value="" disabled selected>{{ contact.form.service_default }}</option>
                             <option value="cdn">{{ contact.form.service_cdn }}</option>
                             <option value="vps">{{ contact.form.service_vps }}</option>
