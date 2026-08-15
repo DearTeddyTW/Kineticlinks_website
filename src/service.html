@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="{{ lang_code }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>{{ page.seo.title }}</title>
+    <meta name="title" content="{{ page.seo.title }}">
+    <meta name="description" content="{{ page.seo.description }}">
+    <meta name="keywords" content="{{ page.seo.keywords }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net{{ lang_path }}{{ service_slug_path }}">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/{{ service_slug_path }}" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/{{ service_slug_path }}" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/{{ service_slug_path }}" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/{{ service_slug_path }}" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kineticlinks.net{{ lang_path }}{{ service_slug_path }}">
+    <meta property="og:title" content="{{ page.seo.title }}">
+    <meta property="og:description" content="{{ page.seo.description }}">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net{{ lang_path }}{{ service_slug_path }}">
+    <meta property="twitter:title" content="{{ page.seo.title }}">
+    <meta property="twitter:description" content="{{ page.seo.description }}">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.png">
+
+    <!-- Structured Data (JSON-LD): Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "{{ page.hero.title }}",
+      "name": "{{ page.seo.title }}",
+      "description": "{{ page.seo.description }}",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "areaServed": ["TW", "CN", "HK", "Asia"],
+      "url": "https://www.kineticlinks.net{{ lang_path }}{{ service_slug_path }}"
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "{{ nav.home }}",
+          "item": "https://www.kineticlinks.net{{ lang_path }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ nav.services }}",
+          "item": "https://www.kineticlinks.net{{ lang_path }}#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ page.hero.title }}",
+          "item": "https://www.kineticlinks.net{{ lang_path }}{{ service_slug_path }}"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "{{ page.faq.q1 }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ page.faq.a1 }}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{{ page.faq.q2 }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ page.faq.a2 }}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{{ page.faq.q3 }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ page.faq.a3 }}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{{ page.faq.q4 }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ page.faq.a4 }}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{{ page.faq.q5 }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ page.faq.a5 }}" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ lang_path }}" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links">
+                <a href="{{ lang_path }}#home">{{ nav.home }}</a>
+                <a href="{{ lang_path }}#services">{{ nav.services }}</a>
+                <a href="{{ lang_path }}#platforms">{{ nav.platforms }}</a>
+                <a href="{{ lang_path }}#about">{{ nav.about }}</a>
+                <a href="{{ lang_path }}#contact" class="btn btn-outline">{{ nav.contact }}</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">{{ current_lang_name }} ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/{{ service_slug_path }}">繁體中文</a>
+                        <a href="/en/{{ service_slug_path }}">English</a>
+                        <a href="/zh-cn/{{ service_slug_path }}">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="{{ lang_path }}">{{ nav.home }}</a>
+            <span>/</span>
+            <a href="{{ lang_path }}#services">{{ nav.services }}</a>
+            <span>/</span>
+            <span class="current">{{ page.hero.title }}</span>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content glass-panel">
+                <div class="badge">{{ page.hero.badge }}</div>
+                <h1>{{ page.hero.title }}</h1>
+                <p class="page-hero-subtitle">{{ page.hero.subtitle }}</p>
+                <p>{{ page.hero.desc }}</p>
+                <div class="hero-actions">
+                    <a href="{{ lang_path }}#contact" class="btn btn-primary">{{ page.hero.cta_primary }}</a>
+                    <a href="{{ lang_path }}#services" class="btn btn-secondary">{{ page.hero.cta_secondary }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section prose-section">
+        <div class="container">
+            <div class="section-header" style="text-align:left; margin-bottom: 2rem;">
+                <h2>{{ page.overview.title }}</h2>
+            </div>
+            <div class="prose glass-panel">
+                <p>{{ page.overview.p1 }}</p>
+                <p>{{ page.overview.p2 }}</p>
+                <p>{{ page.overview.p3 }}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>{{ page.use_cases.title }}</h2>
+                <p>{{ page.use_cases.desc }}</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.use_cases.item1.title }}</h3>
+                    <p>{{ page.use_cases.item1.desc }}</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.use_cases.item2.title }}</h3>
+                    <p>{{ page.use_cases.item2.desc }}</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.use_cases.item3.title }}</h3>
+                    <p>{{ page.use_cases.item3.desc }}</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.use_cases.item4.title }}</h3>
+                    <p>{{ page.use_cases.item4.desc }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators -->
+    <section class="section" style="background-color: var(--bg-darker);">
+        <div class="container">
+            <div class="section-header">
+                <h2>{{ page.differentiators.title }}</h2>
+                <p>{{ page.differentiators.desc }}</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.differentiators.item1.title }}</h3>
+                    <p>{{ page.differentiators.item1.desc }}</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.differentiators.item2.title }}</h3>
+                    <p>{{ page.differentiators.item2.desc }}</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.differentiators.item3.title }}</h3>
+                    <p>{{ page.differentiators.item3.desc }}</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.differentiators.item4.title }}</h3>
+                    <p>{{ page.differentiators.item4.desc }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Types -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>{{ page.customers.title }}</h2>
+                <p>{{ page.customers.desc }}</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.customers.item1.title }}</h3>
+                    <p>{{ page.customers.item1.desc }}</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.customers.item2.title }}</h3>
+                    <p>{{ page.customers.item2.desc }}</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.customers.item3.title }}</h3>
+                    <p>{{ page.customers.item3.desc }}</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>{{ page.customers.item4.title }}</h3>
+                    <p>{{ page.customers.item4.desc }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" style="background-color: var(--bg-darker);">
+        <div class="container">
+            <div class="section-header">
+                <h2>{{ page.faq.title }}</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item glass-panel">
+                    <summary>{{ page.faq.q1 }}</summary>
+                    <p>{{ page.faq.a1 }}</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>{{ page.faq.q2 }}</summary>
+                    <p>{{ page.faq.a2 }}</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>{{ page.faq.q3 }}</summary>
+                    <p>{{ page.faq.a3 }}</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>{{ page.faq.q4 }}</summary>
+                    <p>{{ page.faq.a4 }}</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>{{ page.faq.q5 }}</summary>
+                    <p>{{ page.faq.a5 }}</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section cta-banner-section">
+        <div class="container">
+            <div class="cta-banner glass-panel">
+                <h2>{{ page.cta.title }}</h2>
+                <p>{{ page.cta.desc }}</p>
+                <a href="{{ lang_path }}#contact" class="btn btn-primary">{{ page.cta.button }}</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>{{ footer.brand_desc }}</p>
+                </div>
+                <div class="footer-links">
+                    <a href="{{ lang_path }}cdn/">{{ services.cdn.title }}</a>
+                    <a href="{{ lang_path }}vps/">{{ services.vps.title }}</a>
+                    <a href="{{ lang_path }}idc/">{{ services.idc.title }}</a>
+                    <a href="{{ lang_path }}cloud/">{{ services.cloud.title }}</a>
+                    <a href="{{ lang_path }}#contact">{{ nav.contact }}</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>{{ footer.rights }}</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -694,6 +694,185 @@ footer {
     }
 }
 
+/* ==========================================================================
+   Service Card Link
+   ========================================================================== */
+.card-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Breadcrumb
+   ========================================================================== */
+.breadcrumb-bar {
+    padding: 6.5rem 0 0;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.breadcrumb a {
+    color: var(--text-secondary);
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-blue);
+}
+
+.breadcrumb .current {
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Sub-page Hero
+   ========================================================================== */
+.page-hero {
+    padding: 2rem 0 1rem;
+}
+
+.page-hero-content {
+    max-width: 800px;
+    padding: 3rem;
+}
+
+.page-hero-content h1 {
+    font-size: 2.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.page-hero-subtitle {
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem !important;
+}
+
+.page-hero-content > p:not(.page-hero-subtitle) {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   Prose Section (service overview copy)
+   ========================================================================== */
+.prose {
+    padding: 2.5rem;
+}
+
+.prose p {
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+.prose p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    padding: 1.5rem 2rem;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    color: var(--accent-blue);
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
+
+.faq-item[open] summary::after {
+    content: '−';
+}
+
+.faq-item p {
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   CTA Banner
+   ========================================================================== */
+.cta-banner-section {
+    padding-top: 0;
+}
+
+.cta-banner {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(0, 242, 254, 0.05);
+}
+
+.cta-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-banner p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .page-hero-content {
+        padding: 2rem;
+    }
+
+    .page-hero-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .prose {
+        padding: 1.5rem;
+    }
+
+    .faq-item {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
 /* Language Switcher */
 .lang-switcher {
     position: relative;

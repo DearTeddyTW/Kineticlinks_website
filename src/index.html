@@ -129,6 +129,7 @@
                         <li>{{ services.cdn.f2 }}</li>
                         <li>{{ services.cdn.f3 }}</li>
                     </ul>
+                    <a href="{{ lang_path }}cdn/" class="card-link">{{ services.learn_more }} →</a>
                 </div>
                 <!-- VPS Card -->
                 <div class="service-card glass-panel interactive">
@@ -147,6 +148,7 @@
                         <li>{{ services.vps.f2 }}</li>
                         <li>{{ services.vps.f3 }}</li>
                     </ul>
+                    <a href="{{ lang_path }}vps/" class="card-link">{{ services.learn_more }} →</a>
                 </div>
                 <!-- IDC Card -->
                 <div class="service-card glass-panel interactive">
@@ -166,6 +168,7 @@
                         <li>{{ services.idc.f2 }}</li>
                         <li>{{ services.idc.f3 }}</li>
                     </ul>
+                    <a href="{{ lang_path }}idc/" class="card-link">{{ services.learn_more }} →</a>
                 </div>
                 <!-- Cloud Card -->
                 <div class="service-card glass-panel interactive">
@@ -182,6 +185,7 @@
                         <li>{{ services.cloud.f2 }}</li>
                         <li>{{ services.cloud.f3 }}</li>
                     </ul>
+                    <a href="{{ lang_path }}cloud/" class="card-link">{{ services.learn_more }} →</a>
                 </div>
             </div>
         </div>
@@ -334,10 +338,10 @@
                     <p>{{ footer.brand_desc }}</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#home">{{ nav.home }}</a>
-                    <a href="#services">{{ nav.services }}</a>
-                    <a href="#platforms">{{ nav.platforms }}</a>
-                    <a href="#about">{{ nav.about }}</a>
+                    <a href="{{ lang_path }}cdn/">{{ services.cdn.title }}</a>
+                    <a href="{{ lang_path }}vps/">{{ services.vps.title }}</a>
+                    <a href="{{ lang_path }}idc/">{{ services.idc.title }}</a>
+                    <a href="{{ lang_path }}cloud/">{{ services.cloud.title }}</a>
                     <a href="#contact">{{ nav.contact }}</a>
                 </div>
             </div>

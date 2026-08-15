@@ -50,7 +50,8 @@
       "f1": "Multi-cloud Hybrid Architecture",
       "f2": "Seamless Cloud Migration",
       "f3": "Security and Compliance"
-    }
+    },
+    "learn_more": "Learn More"
   },
   "platforms": {
     "title1": "Our",
@@ -96,6 +97,258 @@
       "service_other": "Other",
       "message": "Your Requirements",
       "submit": "Send Message"
+    }
+  },
+  "cdn_page": {
+    "seo": {
+      "title": "CDN Content Delivery Network Services | Global Acceleration & DDoS Protection - Kineticlinks",
+      "description": "Kineticlinks CDN delivers 100+ global edge nodes, intelligent routing, and terabit-scale DDoS protection for e-commerce, streaming, and gaming. Get a custom CDN quote today.",
+      "keywords": "CDN acceleration, content delivery network, DDoS protection, website acceleration, edge nodes, CDN provider Asia"
+    },
+    "hero": {
+      "badge": "Content Delivery Network",
+      "title": "CDN Content Delivery Network",
+      "subtitle": "Global edge acceleration for a faster, more resilient web presence",
+      "desc": "Kineticlinks CDN combines over 100 edge nodes worldwide with intelligent routing to cache static and dynamic content closer to your users, cutting latency and boosting load times. Built-in terabit-scale DDoS protection keeps your service stable through traffic spikes and malicious attacks alike.",
+      "cta_primary": "Request an Acceleration Quote",
+      "cta_secondary": "View Other Services"
+    },
+    "overview": {
+      "title": "What Is a CDN?",
+      "p1": "A CDN (Content Delivery Network) is a network of edge servers distributed across multiple regions. When a user visits your site, the CDN routes the request to the node physically closest to them instead of forcing every request back to a single origin server, shortening the data path, reducing latency, and easing the load on your origin infrastructure.",
+      "p2": "Kineticlinks operates over 100 edge nodes across Asia-Pacific, North America, and Europe, using intelligent routing to continuously measure latency and congestion at each node and automatically select the fastest path. Whether your users are in Taiwan, mainland China, Southeast Asia, or Western markets, they get access speeds close to a local server.",
+      "p3": "Beyond acceleration, a CDN is also your first line of defense against distributed denial-of-service (DDoS) attacks. Kineticlinks provides terabit-scale scrubbing capacity that filters malicious traffic at the edge before it ever reaches your origin server, keeping your business running without interruption."
+    },
+    "use_cases": {
+      "title": "Use Cases",
+      "desc": "From content-heavy sites to highly interactive applications, a CDN delivers measurable performance gains",
+      "item1": { "title": "E-commerce & Retail", "desc": "Cut product page and checkout load times to lower bounce rates and improve conversion." },
+      "item2": { "title": "Video & Streaming Media", "desc": "Edge caching for large files and video streams reduces buffering for a smoother viewing experience." },
+      "item3": { "title": "Gaming & Real-time Apps", "desc": "Nearby edge nodes reduce connection latency, improving responsiveness for multiplayer and real-time services." },
+      "item4": { "title": "Corporate Sites & APIs", "desc": "Deliver consistent access speed to global offices and customers while filtering malicious traffic and DDoS attacks." }
+    },
+    "differentiators": {
+      "title": "Why Choose Kineticlinks CDN",
+      "desc": "Compared to self-hosted caching servers or single-region acceleration plans",
+      "item1": { "title": "Asia-Pacific-Focused Edge Coverage", "desc": "Denser node coverage around Taiwan, Hong Kong, and mainland China reduces cross-border latency at a scale that's difficult to replicate in-house." },
+      "item2": { "title": "Flexible, Usage-Based Plans", "desc": "Scale your plan to actual traffic without a large upfront investment in hardware and bandwidth." },
+      "item3": { "title": "Integrated SSL Automation", "desc": "Certificates issued through our SSL platform push directly to CDN nodes, removing manual upload and renewal tracking." },
+      "item4": { "title": "24/7 Dedicated Engineering Support", "desc": "A team that knows network architecture monitors and responds around the clock, not just an automated ticketing system." }
+    },
+    "customers": {
+      "title": "Who It's For",
+      "desc": "Industries that already rely on CDN acceleration as part of their infrastructure",
+      "item1": { "title": "Cross-Border E-commerce", "desc": "Storefronts serving Taiwan, mainland China, and Southeast Asia that need stable, fast cross-border access." },
+      "item2": { "title": "Media & Content Platforms", "desc": "News sites, blogs, and content communities handling heavy image and video traffic." },
+      "item3": { "title": "SaaS & Software Providers", "desc": "Teams that need consistent, low-latency service for customers spread across regions." },
+      "item4": { "title": "Game Developers & Publishers", "desc": "Online games and esports platforms where latency is business-critical." }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Is a CDN worth it for a small website?",
+      "a1": "Yes. CDN benefits aren't limited to large sites — even a small or mid-sized site with visitors overseas or in other regions will see a noticeable improvement in load time and user experience.",
+      "q2": "Is CDN setup complicated? Do I need to change hosts or code?",
+      "a2": "No hosting change is required. In most cases you only need to update your domain's DNS to route traffic to the CDN — your origin server and codebase stay untouched, and setup is usually completed within a business day.",
+      "q3": "Does the CDN also protect against DDoS attacks?",
+      "a3": "Yes. Kineticlinks CDN includes terabit-scale scrubbing that filters malicious traffic at the edge before it reaches your origin server, with no impact on legitimate visitors.",
+      "q4": "Which regions does the CDN cover?",
+      "a4": "We currently operate nodes across Asia-Pacific (including Taiwan, Hong Kong, and areas around mainland China), North America, and Europe, with coverage expanding based on customer needs and a particular focus on access quality in the Taiwan and China markets.",
+      "q5": "How do I know which CDN plan I need?",
+      "a5": "Share your current traffic volume, where your visitors are located, and your content type with us, and our architects will recommend a node configuration and pricing plan that fits."
+    },
+    "cta": {
+      "title": "Ready to Accelerate Your Service?",
+      "desc": "Fill out our requirements form and our architects will design the right CDN plan for you.",
+      "button": "Talk to Us"
+    }
+  },
+  "vps_page": {
+    "seo": {
+      "title": "VPS Hosting | High-Performance NVMe SSD Servers - Kineticlinks",
+      "description": "Kineticlinks VPS runs on NVMe SSD storage and top-tier CPUs with elastic scaling, dedicated resources, and automated snapshots — built for websites, game servers, and app deployment.",
+      "keywords": "VPS hosting, virtual private server, NVMe SSD VPS, cloud server, dedicated VPS, VPS Taiwan"
+    },
+    "hero": {
+      "badge": "Virtual Private Server",
+      "title": "VPS Hosting",
+      "subtitle": "Dedicated resources and top-tier performance for stable, scalable applications",
+      "desc": "Kineticlinks VPS runs on NVMe SSD storage and top-tier CPUs, giving every instance a fully dedicated allocation of CPU, memory, and network bandwidth unaffected by other tenants. Scale up or down as needed, with automated backups and snapshots built in for performance and data safety alike.",
+      "cta_primary": "Request a Hosting Quote",
+      "cta_secondary": "View Other Services"
+    },
+    "overview": {
+      "title": "What Is a VPS?",
+      "p1": "A VPS (Virtual Private Server) uses virtualization to divide a single physical server into multiple independent virtual environments. Unlike shared hosting, a VPS gives each user a dedicated allocation of CPU cores, memory, and storage, delivering near-bare-metal performance with full system control — at a fraction of the cost of standing up your own physical server.",
+      "p2": "Kineticlinks VPS instances run entirely on NVMe SSD storage, far outperforming traditional SATA SSD and HDD in read/write speed, paired with modern high-clock-speed CPUs to cut response times for database queries, page rendering, and application workloads. Every plan supports online scaling of CPU, memory, and disk space to match traffic growth without downtime.",
+      "p3": "To minimize data loss risk, every VPS instance includes scheduled automatic backups and snapshots, preserving multiple recovery points so you can restore quickly after an incident — letting your team focus on building the product instead of routine infrastructure upkeep."
+    },
+    "use_cases": {
+      "title": "Use Cases",
+      "desc": "From personal projects to enterprise workloads, VPS delivers the right amount of compute flexibility",
+      "item1": { "title": "Website & App Hosting", "desc": "Deploy WordPress, e-commerce platforms, or custom-built web apps with dedicated resources and stable performance." },
+      "item2": { "title": "Game Server Hosting", "desc": "Low-latency networking with dedicated compute, well suited for multiplayer game servers." },
+      "item3": { "title": "Dev & Test Environments", "desc": "Spin up and tear down isolated environments quickly for development, testing, and CI/CD workflows." },
+      "item4": { "title": "Databases & Backend Services", "desc": "High IOPS from NVMe SSD is a strong fit for database-heavy read/write workloads." }
+    },
+    "differentiators": {
+      "title": "Why Choose Kineticlinks VPS",
+      "desc": "Compared to shared hosting or plans that skip high-speed storage",
+      "item1": { "title": "All-NVMe SSD Storage Lineup", "desc": "Unlike plans still running on traditional SATA SSD, every tier gets a meaningful boost to disk I/O and database response time." },
+      "item2": { "title": "Dedicated Resources, No Overselling", "desc": "CPU and memory are allocated independently per instance, avoiding the resource contention common on shared hosting." },
+      "item3": { "title": "Live Scaling, No Migration Downtime", "desc": "Adjust specs online as your business grows, without the redeployment hassle of traditional host upgrades." },
+      "item4": { "title": "Local Technical Support", "desc": "An engineering team familiar with Taiwan and Asia-Pacific network conditions, with real-time support in Chinese." }
+    },
+    "customers": {
+      "title": "Who It's For",
+      "desc": "The following types of users get the most out of VPS hosting",
+      "item1": { "title": "Startups & SMBs", "desc": "Teams that need an elastically scalable hosting environment while keeping early-stage infrastructure costs in check." },
+      "item2": { "title": "Independent Developers", "desc": "Technical users who need full system access to deploy and manage their own applications." },
+      "item3": { "title": "Game Studios", "desc": "Hosting private or small-scale multiplayer servers with real latency and stability requirements." },
+      "item4": { "title": "Digital Agencies", "desc": "Web and marketing agencies that need separate, dedicated hosting environments per client project." }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What's the difference between a VPS and shared hosting?",
+      "a1": "Shared hosting means multiple users draw from the same pool of hardware resources, so you can be affected by other sites' traffic. A VPS uses virtualization to give each user a dedicated allocation of CPU, memory, and storage — more stable performance and full system-level control.",
+      "q2": "Can I upgrade my VPS specs later?",
+      "a2": "Yes. As your business grows and needs more compute, you can adjust CPU, memory, and disk capacity online, and in most cases the upgrade completes without downtime or redeployment.",
+      "q3": "How is data safety handled on a VPS?",
+      "a3": "Every VPS instance includes scheduled automatic backups and snapshots, preserving multiple historical recovery points so you can restore quickly if something goes wrong, minimizing operational disruption.",
+      "q4": "Is VPS a good fit for running a database?",
+      "a4": "Very much so. Kineticlinks VPS runs entirely on NVMe SSD, which delivers the high IOPS and low latency that database query and write performance depend on.",
+      "q5": "Can you help me set things up if I'm not familiar with server management?",
+      "a5": "Yes. Our technical team can help with initial environment setup and walkthroughs, and we can also scope a custom managed-service arrangement if you need ongoing operational support."
+    },
+    "cta": {
+      "title": "Ready to Upgrade Your Hosting?",
+      "desc": "Tell us your performance needs and budget, and we'll design the right VPS plan for you.",
+      "button": "Talk to Us"
+    }
+  },
+  "idc_page": {
+    "seo": {
+      "title": "IDC Data Center Buildout Services | Custom Facility Planning - Kineticlinks",
+      "description": "Kineticlinks delivers end-to-end IDC data center buildout — hardware procurement, network architecture, deployment, and 24/7 on-site monitoring for enterprise-grade secure facilities.",
+      "keywords": "IDC data center, data center buildout, colocation services, BGP dual-line network, enterprise data center, data center Taiwan"
+    },
+    "hero": {
+      "badge": "IDC Data Center Buildout",
+      "title": "IDC Data Center Buildout",
+      "subtitle": "From planning to deployment, building enterprise-grade secure data centers",
+      "desc": "Kineticlinks provides end-to-end consulting and execution for IDC data center buildout — covering hardware procurement, network architecture planning, BGP dual-line deployment, and physical facility rollout, backed by 24/7 on-site monitoring — helping enterprises stand up a dedicated data center that matches their scale and security requirements.",
+      "cta_primary": "Book a Buildout Consultation",
+      "cta_secondary": "View Other Services"
+    },
+    "overview": {
+      "title": "What Is IDC Data Center Buildout?",
+      "p1": "IDC (Internet Data Center) buildout means planning and constructing a dedicated facility environment — with complete power, cooling, fire suppression, networking, and physical security infrastructure — for a company's own or outsourced server equipment. Compared to simply renting standard cabinet space in an existing facility or public cloud, a custom IDC buildout can be planned around a company's specific regulatory, data sovereignty, and performance requirements.",
+      "p2": "Kineticlinks buildout projects start with upfront network architecture planning and BGP dual-line bandwidth design, helping clients evaluate the best facility location and power specification, then coordinating hardware procurement and rack cabling to ensure the overall architecture is highly available and ready for future expansion.",
+      "p3": "Once the facility is live, we continue providing 24/7 on-site monitoring and operational support, tracking power, temperature, humidity, and network status in real time, with standardized incident response procedures so your core systems run in a stable, well-controlled physical environment."
+    },
+    "use_cases": {
+      "title": "Use Cases",
+      "desc": "When your organization needs a customized facility or has regulatory requirements, IDC buildout delivers a complete solution",
+      "item1": { "title": "Financial & Telecom Compliance", "desc": "Industries that must meet specific data residency and security audit requirements can satisfy compliance through a custom-built facility." },
+      "item2": { "title": "Expanding Existing Facilities", "desc": "When current facility capacity or equipment is aging, network architecture and hardware need to be replanned and refreshed." },
+      "item3": { "title": "Large-Scale System Migrations", "desc": "Moving core systems from an existing facility or public cloud into a dedicated data center." },
+      "item4": { "title": "High-Availability Critical Systems", "desc": "Core business systems with very low downtime tolerance that need dual-line networking and redundancy to reduce single points of failure." }
+    },
+    "differentiators": {
+      "title": "Why Choose Kineticlinks for IDC Buildout",
+      "desc": "Compared to colocation providers that only offer standard rack rental without custom planning capability",
+      "item1": { "title": "End-to-End Planning and Execution", "desc": "One team coordinates network design, hardware procurement, and facility deployment, cutting the coordination overhead of multiple vendors." },
+      "item2": { "title": "BGP Dual-Line Architecture Design", "desc": "Multi-line network architecture sized to your business, reducing the service disruption risk of a single line failing." },
+      "item3": { "title": "24/7 On-Site Personnel", "desc": "Not just remote monitoring — physical on-site staff respond in real time to facility issues." },
+      "item4": { "title": "Built-In Expansion Planning", "desc": "Future growth is factored into the buildout from day one, avoiding the need to re-plan shortly after launch." }
+    },
+    "customers": {
+      "title": "Who It's For",
+      "desc": "The following types of organizations most often need custom IDC buildout",
+      "item1": { "title": "Financial & Payment Services", "desc": "Industries with strict data security and regulatory compliance requirements." },
+      "item2": { "title": "Telecom & Network Operators", "desc": "Businesses that need high-bandwidth, multi-line network architecture to support core operations." },
+      "item3": { "title": "Enterprise IT Departments", "desc": "Organizations planning to bring core systems back from public cloud or outsourced facilities into a self-managed data center." },
+      "item4": { "title": "Government & Public Sector Projects", "desc": "Projects with explicit requirements for physical facility security and audit records." }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How is IDC buildout different from renting public cloud servers?",
+      "a1": "Public cloud offers standardized, quickly deployed compute suited to elastic workloads. IDC buildout, by contrast, plans a physical facility tailored to your organization, giving you far more precise control over data residency, hardware specification, and regulatory detail — a better fit for organizations with specific compliance or performance requirements.",
+      "q2": "How long does it typically take to build an IDC facility?",
+      "a2": "Timelines vary with scale and complexity. From network architecture planning and equipment procurement through on-site construction, a typical project runs from several weeks to a few months, and we provide a concrete schedule during the initial assessment phase.",
+      "q3": "Who handles operations after the facility is built?",
+      "a3": "Kineticlinks provides 24/7 on-site monitoring and operational support covering power, temperature, humidity, and network status in real time, and we can scope a custom managed-service arrangement based on your needs.",
+      "q4": "Can I engage you for just part of the buildout, like network architecture planning only?",
+      "a4": "Yes. Our services are modular — depending on your existing in-house capability and needs, you can have Kineticlinks handle network architecture, hardware procurement, or the full buildout process, in whole or in part.",
+      "q5": "What size of organization is IDC buildout suited for?",
+      "a5": "We plan everything from mid-sized facility expansions to large enterprise core data centers. We'll propose a plan based on your actual business scale, budget, and regulatory needs — this isn't limited to organizations of a particular size."
+    },
+    "cta": {
+      "title": "Ready to Plan Your Dedicated Facility?",
+      "desc": "Talk to our infrastructure consultants about your buildout requirements and get a custom plan.",
+      "button": "Book a Consultation"
+    }
+  },
+  "cloud_page": {
+    "seo": {
+      "title": "Public Cloud Architecture Solutions | Hybrid Cloud & Migration Consulting - Kineticlinks",
+      "description": "Kineticlinks delivers AWS, GCP, and Azure architecture planning, hybrid cloud design, seamless migration, and cost optimization consulting to help enterprises complete cloud transformation securely.",
+      "keywords": "public cloud architecture, hybrid cloud, cloud migration, AWS consulting, GCP consulting, Azure consulting, cloud cost optimization"
+    },
+    "hero": {
+      "badge": "Public Cloud Architecture",
+      "title": "Public Cloud Architecture Solutions",
+      "subtitle": "Deep integration with major public clouds for a secure, cost-effective architecture",
+      "desc": "Kineticlinks integrates deeply with AWS, GCP, Azure, and other leading public clouds, offering end-to-end consulting from architecture design and hybrid cloud planning through seamless migration and ongoing cost optimization — helping enterprises complete cloud transformation securely while staying compliant.",
+      "cta_primary": "Book a Cloud Architecture Consultation",
+      "cta_secondary": "View Other Services"
+    },
+    "overview": {
+      "title": "What Is a Public Cloud Architecture Solution?",
+      "p1": "A public cloud architecture solution means designing a system architecture that uses the compute, storage, and networking resources of providers like AWS, GCP, and Azure to match your business needs. Compared to building your own facility, public cloud offers rapid deployment, elastic scaling, and pay-as-you-go pricing — but without careful architecture planning, it can just as easily lead to idle resources, runaway costs, or security misconfigurations.",
+      "p2": "Kineticlinks' cloud consultants bring hands-on multi-cloud integration experience, helping you evaluate whether a single-cloud, multi-cloud, or hybrid cloud approach fits your situation, and designing for high availability, disaster recovery, and data sovereignty requirements — while also setting up foundational security controls like security groups, identity permissions, and network segmentation.",
+      "p3": "For migration projects, we plan a phased migration strategy based on system dependencies to minimize downtime and business risk. After migration, we continue to provide usage analysis and cost optimization recommendations, helping you avoid unnecessary cloud spend and keep budget focused on the resources that actually drive business growth."
+    },
+    "use_cases": {
+      "title": "Use Cases",
+      "desc": "Whether it's your first move to the cloud or optimizing an existing environment, expert consulting reduces risk",
+      "item1": { "title": "Migrating from On-Premises", "desc": "Organizations planning to move systems from an existing self-managed facility to the public cloud, requiring full assessment and migration planning." },
+      "item2": { "title": "Hybrid Cloud Architecture Design", "desc": "Some systems must stay on-premises for regulatory or performance reasons and need to integrate with public cloud resources." },
+      "item3": { "title": "Multi-Cloud Redundancy & DR", "desc": "Designing cross-provider redundancy for critical systems to reduce the operational risk of a single vendor's outage." },
+      "item4": { "title": "Runaway Cloud Cost Optimization", "desc": "Cloud bills keep climbing without systematic review, requiring an expert team to audit resource efficiency." }
+    },
+    "differentiators": {
+      "title": "Why Choose Kineticlinks Cloud Consulting",
+      "desc": "Compared to providers that only operate a single cloud platform without real architecture planning capability",
+      "item1": { "title": "Real Multi-Cloud Integration Experience", "desc": "Hands-on architecture and integration experience across AWS, GCP, and Azure lets us recommend the right platform mix for your needs, not just push a single vendor's stack." },
+      "item2": { "title": "Hybrid Cloud Paired With IDC Services", "desc": "We also offer IDC facility buildout, so we can design a hybrid architecture that genuinely integrates your own facility with public cloud." },
+      "item3": { "title": "Phased Migration to Reduce Risk", "desc": "Migration order is planned around system dependencies to avoid the long downtime and data risk of a one-shot cutover." },
+      "item4": { "title": "Ongoing Cost Optimization", "desc": "We keep reviewing resource usage after migration instead of stopping once the one-time project wraps up." }
+    },
+    "customers": {
+      "title": "Who It's For",
+      "desc": "The following types of organizations most often need public cloud architecture consulting",
+      "item1": { "title": "Traditional Enterprises Planning Cloud Transformation", "desc": "Organizations still running on self-managed facilities that want to evaluate the feasibility and benefits of moving to the cloud." },
+      "item2": { "title": "Organizations Already on Multi-Cloud or Hybrid Cloud", "desc": "Teams already using more than one cloud service that need unified architecture planning and cost management." },
+      "item3": { "title": "Fast-Growing Startups", "desc": "Companies scaling quickly that need an elastically scalable, cost-controlled cloud architecture." },
+      "item4": { "title": "Compliance- and Sovereignty-Sensitive Industries", "desc": "Organizations, such as those in finance or healthcare, that must plan data residency and access controls around regulatory requirements." }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "I have zero cloud experience — can you plan this from scratch?",
+      "a1": "Yes. We start by understanding your current architecture and business needs, then provide full consulting and hands-on support from initial cloud service selection through architecture design and ongoing operations.",
+      "q2": "Will a cloud migration cause service downtime?",
+      "a2": "We plan a phased migration strategy based on system dependencies and test and validate everything before the official cutover, minimizing downtime — critical systems can also run in parallel during the transition to ensure a smooth handoff.",
+      "q3": "When does hybrid cloud make more sense than going fully public cloud?",
+      "a3": "If your organization has regulatory requirements to keep data on-premises, hasn't finished depreciating existing hardware investments, or has systems that are extremely latency-sensitive, a hybrid architecture lets public cloud and your own facility complement each other.",
+      "q4": "Can you help optimize an existing cloud bill?",
+      "a4": "Yes. We audit current resource usage to identify idle resources, oversized instances, or opportunities like reserved instances that reduce cost, and provide concrete optimization recommendations.",
+      "q5": "Is cloud architecture consulting a one-time project or an ongoing engagement?",
+      "a5": "Both models are available. You can opt for a single architecture-planning-and-migration project, or an ongoing consulting arrangement where we continue monitoring architecture health and cost efficiency."
+    },
+    "cta": {
+      "title": "Ready to Plan Your Cloud Architecture?",
+      "desc": "Talk to our cloud consultants about your cloud goals and get a custom architecture recommendation.",
+      "button": "Book a Consultation"
     }
   },
   "footer": {

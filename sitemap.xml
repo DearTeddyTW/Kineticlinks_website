@@ -1,9 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.kineticlinks.net/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/" />
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/cdn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/cdn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/cdn/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/cdn/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/cdn/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/vps/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/vps/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/vps/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/vps/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/vps/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/idc/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/idc/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/idc/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/idc/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/idc/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/cloud/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/cloud/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/cloud/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/cloud/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/cloud/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/en/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/en/cdn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/cdn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/cdn/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/cdn/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/cdn/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/en/vps/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/vps/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/vps/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/vps/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/vps/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/en/idc/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/idc/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/idc/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/idc/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/idc/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/en/cloud/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/cloud/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/cloud/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/cloud/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/cloud/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/zh-cn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/zh-cn/cdn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/cdn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/cdn/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/cdn/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/cdn/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/zh-cn/vps/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/vps/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/vps/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/vps/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/vps/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/zh-cn/idc/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/idc/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/idc/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/idc/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/idc/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/zh-cn/cloud/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/cloud/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/cloud/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/cloud/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/cloud/" />
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
