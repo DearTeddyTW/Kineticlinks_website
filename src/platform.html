@@ -280,6 +280,33 @@
         </div>
     </section>
 
+    <!-- Related Pages (contextual internal links) -->
+    <section class="section related-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>{{ page.related.title }}</h2>
+                <p>{{ page.related.desc }}</p>
+            </div>
+            <div class="related-grid">
+                <a href="{{ lang_path }}{{ page.related.l1_slug }}" class="related-card glass-panel">
+                    <span class="related-kicker">{{ page.related.l1_kicker }}</span>
+                    <h3>{{ page.related.l1_title }}</h3>
+                    <p>{{ page.related.l1_desc }}</p>
+                </a>
+                <a href="{{ lang_path }}{{ page.related.l2_slug }}" class="related-card glass-panel">
+                    <span class="related-kicker">{{ page.related.l2_kicker }}</span>
+                    <h3>{{ page.related.l2_title }}</h3>
+                    <p>{{ page.related.l2_desc }}</p>
+                </a>
+                <a href="{{ lang_path }}{{ page.related.l3_slug }}" class="related-card glass-panel">
+                    <span class="related-kicker">{{ page.related.l3_kicker }}</span>
+                    <h3>{{ page.related.l3_title }}</h3>
+                    <p>{{ page.related.l3_desc }}</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ -->
     <section class="section faq-section" style="background-color: var(--bg-darker);">
         <div class="container">

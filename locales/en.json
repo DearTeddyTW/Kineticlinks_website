@@ -198,6 +198,22 @@
       "title": "Ready to Accelerate Your Service?",
       "desc": "Fill out our requirements form and our architects will design the right CDN plan for you.",
       "button": "Talk to Us"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "ssl/",
+      "l1_kicker": "Platform",
+      "l1_title": "SSL Certificate Automation",
+      "l1_desc": "Issued certificates push automatically to CDN nodes, removing manual upload and renewal tracking.",
+      "l2_slug": "speedtest/",
+      "l2_kicker": "Platform",
+      "l2_title": "Global 3-Network Speed Test",
+      "l2_desc": "Verify real connection quality across China Telecom, Unicom, and Mobile with measured data.",
+      "l3_slug": "cloud/",
+      "l3_kicker": "Service",
+      "l3_title": "Public Cloud Architecture",
+      "l3_desc": "Multi-cloud and hybrid planning that bridges on-premises and public cloud resources."
     }
   },
   "vps_page": {
@@ -297,6 +313,22 @@
       "title": "Ready to Upgrade Your Hosting?",
       "desc": "Tell us your performance needs and budget, and we'll design the right VPS plan for you.",
       "button": "Talk to Us"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "idc/",
+      "l1_kicker": "Service",
+      "l1_title": "IDC Data Center Buildout",
+      "l1_desc": "When scale demands a dedicated physical environment, evaluate a purpose-built facility.",
+      "l2_slug": "cloud/",
+      "l2_kicker": "Service",
+      "l2_title": "Public Cloud Architecture",
+      "l2_desc": "Multi-cloud and hybrid planning that bridges on-premises and public cloud resources.",
+      "l3_slug": "cdn/",
+      "l3_kicker": "Service",
+      "l3_title": "CDN Content Delivery Network",
+      "l3_desc": "Global edge acceleration and terabit DDoS protection that pairs with this service."
     }
   },
   "idc_page": {
@@ -396,6 +428,22 @@
       "title": "Ready to Plan Your Dedicated Facility?",
       "desc": "Talk to our infrastructure consultants about your buildout requirements and get a custom plan.",
       "button": "Book a Consultation"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "cloud/",
+      "l1_kicker": "Service",
+      "l1_title": "Public Cloud Architecture",
+      "l1_desc": "Multi-cloud and hybrid planning that bridges on-premises and public cloud resources.",
+      "l2_slug": "vps/",
+      "l2_kicker": "Service",
+      "l2_title": "VPS Hosting",
+      "l2_desc": "High-performance NVMe SSD compute, well suited to an initial or transitional deployment.",
+      "l3_slug": "cdn/",
+      "l3_kicker": "Service",
+      "l3_title": "CDN Content Delivery Network",
+      "l3_desc": "Global edge acceleration and terabit DDoS protection that pairs with this service."
     }
   },
   "cloud_page": {
@@ -495,6 +543,22 @@
       "title": "Ready to Plan Your Cloud Architecture?",
       "desc": "Talk to our cloud consultants about your cloud goals and get a custom architecture recommendation.",
       "button": "Book a Consultation"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "idc/",
+      "l1_kicker": "Service",
+      "l1_title": "IDC Data Center Buildout",
+      "l1_desc": "When scale demands a dedicated physical environment, evaluate a purpose-built facility.",
+      "l2_slug": "vps/",
+      "l2_kicker": "Service",
+      "l2_title": "VPS Hosting",
+      "l2_desc": "High-performance NVMe SSD compute, well suited to an initial or transitional deployment.",
+      "l3_slug": "ssl/",
+      "l3_kicker": "Platform",
+      "l3_title": "SSL Certificate Automation",
+      "l3_desc": "Issued certificates push automatically to CDN nodes, removing manual upload and renewal tracking."
     }
   },
   "ssl_page": {
@@ -595,6 +659,22 @@
       "title": "Ready to Simplify Your Certificate Management?",
       "desc": "Sign up for the Kineticlinks SSL automation platform, or contact us to learn more about integration details.",
       "button": "Go to the Platform"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/ssl-certificate-validity-200-days/",
+      "l1_kicker": "Article",
+      "l1_title": "SSL Lifetimes Cut to 200 Days",
+      "l1_desc": "Down to 47 days by 2029 — the schedule, and why manual renewal will not hold.",
+      "l2_slug": "cdn/",
+      "l2_kicker": "Service",
+      "l2_title": "CDN Content Delivery Network",
+      "l2_desc": "Global edge acceleration and terabit DDoS protection that pairs with this service.",
+      "l3_slug": "vps/",
+      "l3_kicker": "Service",
+      "l3_title": "VPS Hosting",
+      "l3_desc": "High-performance NVMe SSD compute, well suited to an initial or transitional deployment."
     }
   },
   "speedtest_page": {
@@ -695,6 +775,22 @@
       "title": "Want to Know How Your Service Really Performs on China's Three Networks?",
       "desc": "Run a free test now, or contact our team to learn about the commercial API integration options.",
       "button": "Go to the Speed Test Platform"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "cdn/",
+      "l1_kicker": "Service",
+      "l1_title": "CDN Content Delivery Network",
+      "l1_desc": "Global edge acceleration and terabit DDoS protection that pairs with this service.",
+      "l2_slug": "idc/",
+      "l2_kicker": "Service",
+      "l2_title": "IDC Data Center Buildout",
+      "l2_desc": "When scale demands a dedicated physical environment, evaluate a purpose-built facility.",
+      "l3_slug": "cloud/",
+      "l3_kicker": "Service",
+      "l3_title": "Public Cloud Architecture",
+      "l3_desc": "Multi-cloud and hybrid planning that bridges on-premises and public cloud resources."
     }
   },
   "blog": {

@@ -1,7 +1,11 @@
+import datetime
 import json
 import os
+import subprocess
 
 BASE_URL = "https://www.kineticlinks.net"
+
+TODAY = datetime.date.today().isoformat()
 
 LANGS = [
     {'file': 'zh-tw.json', 'lang_code': 'zh-TW', 'lang_path': '/', 'current_lang_name': '繁體中文'},
@@ -67,6 +71,30 @@ def build_article_list(translations, lang_path):
     return '\n                '.join(cards)
 
 
+def git_last_modified(path):
+    """Date of the last commit that changed this file, or None if unknown."""
+    try:
+        r = subprocess.run(['git', 'log', '-1', '--format=%cs', '--', path],
+                           capture_output=True, text=True, timeout=10)
+        return r.stdout.strip() or None
+    except Exception:
+        return None
+
+
+def resolve_lastmod(out_path, new_html):
+    """Report when this page's content actually changed, not when it was built.
+
+    If this build produces different HTML, the page changed today. Otherwise
+    keep the date of the commit that last touched it, so unchanged pages don't
+    keep claiming to be fresh on every rebuild.
+    """
+    if os.path.exists(out_path):
+        with open(out_path, 'r', encoding='utf-8') as f:
+            if f.read() == new_html:
+                return git_last_modified(out_path) or TODAY
+    return TODAY
+
+
 def render(template, flat_translations):
     out_html = template
     # Replace longer keys first so e.g. "page.faq.q1" doesn't get clobbered
@@ -123,10 +151,13 @@ def build():
             out_dir = os.path.dirname(out_path)
             if out_dir:
                 os.makedirs(out_dir, exist_ok=True)
+
+            lastmod = resolve_lastmod(out_path, out_html)
+
             with open(out_path, 'w', encoding='utf-8') as f:
                 f.write(out_html)
 
-            print(f"Generated {out_path}")
+            print(f"Generated {out_path}  (lastmod {lastmod})")
 
             if page['slug'] == '':
                 priority = '1.0'
@@ -140,6 +171,7 @@ def build():
                 'loc': alternates[lang['lang_code']],
                 'alternates': alternates,
                 'priority': priority,
+                'lastmod': lastmod,
             })
 
     build_sitemap(sitemap_urls)
@@ -157,7 +189,7 @@ def build_sitemap(urls):
             lines.append(f'    <xhtml:link rel="alternate" hreflang="{hreflang}" href="{href}" />')
         default_href = entry['alternates']['zh-TW']
         lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{default_href}" />')
-        lines.append('    <lastmod>2026-08-15</lastmod>')
+        lines.append(f"    <lastmod>{entry['lastmod']}</lastmod>")
         lines.append('    <changefreq>monthly</changefreq>')
         lines.append(f"    <priority>{entry['priority']}</priority>")
         lines.append('  </url>')
