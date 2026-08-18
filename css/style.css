@@ -1341,6 +1341,24 @@ footer {
     border-bottom-color: var(--accent-blue);
 }
 
+/* Related links at the end of an article */
+.article-related {
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.article-related h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.article-related-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+}
+
 /* Article CTA */
 .article-cta {
     margin-top: 3.5rem;

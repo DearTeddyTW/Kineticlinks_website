@@ -173,36 +173,36 @@
                         <table class="data-table">
                             <thead>
                                 <tr>
-                                    <th>{{ page.timeline.col1 }}</th>
-                                    <th>{{ page.timeline.col2 }}</th>
-                                    <th>{{ page.timeline.col3 }}</th>
+                                    <th>{{ page.table.col1 }}</th>
+                                    <th>{{ page.table.col2 }}</th>
+                                    <th>{{ page.table.col3 }}</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>{{ page.timeline.r1c1 }}</td>
-                                    <td class="num">{{ page.timeline.r1c2 }}</td>
-                                    <td>{{ page.timeline.r1c3 }}</td>
+                                <tr class="{{ page.table.r1_class }}">
+                                    <td>{{ page.table.r1c1 }}</td>
+                                    <td class="num">{{ page.table.r1c2 }}</td>
+                                    <td>{{ page.table.r1c3 }}</td>
                                 </tr>
-                                <tr class="is-current">
-                                    <td>{{ page.timeline.r2c1 }}</td>
-                                    <td class="num">{{ page.timeline.r2c2 }}</td>
-                                    <td>{{ page.timeline.r2c3 }}</td>
+                                <tr class="{{ page.table.r2_class }}">
+                                    <td>{{ page.table.r2c1 }}</td>
+                                    <td class="num">{{ page.table.r2c2 }}</td>
+                                    <td>{{ page.table.r2c3 }}</td>
                                 </tr>
-                                <tr>
-                                    <td>{{ page.timeline.r3c1 }}</td>
-                                    <td class="num">{{ page.timeline.r3c2 }}</td>
-                                    <td>{{ page.timeline.r3c3 }}</td>
+                                <tr class="{{ page.table.r3_class }}">
+                                    <td>{{ page.table.r3c1 }}</td>
+                                    <td class="num">{{ page.table.r3c2 }}</td>
+                                    <td>{{ page.table.r3c3 }}</td>
                                 </tr>
-                                <tr>
-                                    <td>{{ page.timeline.r4c1 }}</td>
-                                    <td class="num">{{ page.timeline.r4c2 }}</td>
-                                    <td>{{ page.timeline.r4c3 }}</td>
+                                <tr class="{{ page.table.r4_class }}">
+                                    <td>{{ page.table.r4c1 }}</td>
+                                    <td class="num">{{ page.table.r4c2 }}</td>
+                                    <td>{{ page.table.r4c3 }}</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <figcaption>{{ page.timeline.caption }}</figcaption>
+                    <figcaption>{{ page.table.caption }}</figcaption>
                 </figure>
 
                 <p>{{ page.s1.p3 }}</p>
@@ -288,12 +288,35 @@
                 </div>
             </div>
 
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>{{ page.related.title }}</h2>
+                <p class="article-related-desc">{{ page.related.desc }}</p>
+                <div class="related-grid">
+                    <a href="{{ lang_path }}{{ page.related.l1_slug }}" class="related-card glass-panel">
+                        <span class="related-kicker">{{ page.related.l1_kicker }}</span>
+                        <h3>{{ page.related.l1_title }}</h3>
+                        <p>{{ page.related.l1_desc }}</p>
+                    </a>
+                    <a href="{{ lang_path }}{{ page.related.l2_slug }}" class="related-card glass-panel">
+                        <span class="related-kicker">{{ page.related.l2_kicker }}</span>
+                        <h3>{{ page.related.l2_title }}</h3>
+                        <p>{{ page.related.l2_desc }}</p>
+                    </a>
+                    <a href="{{ lang_path }}{{ page.related.l3_slug }}" class="related-card glass-panel">
+                        <span class="related-kicker">{{ page.related.l3_kicker }}</span>
+                        <h3>{{ page.related.l3_title }}</h3>
+                        <p>{{ page.related.l3_desc }}</p>
+                    </a>
+                </div>
+            </aside>
+
             <!-- Article CTA -->
             <aside class="article-cta glass-panel">
                 <h2>{{ page.cta.title }}</h2>
                 <p>{{ page.cta.desc }}</p>
                 <div class="hero-actions">
-                    <a href="{{ lang_path }}ssl/" class="btn btn-primary">{{ page.cta.button }}</a>
+                    <a href="{{ lang_path }}{{ page.cta.href }}" class="btn btn-primary">{{ page.cta.button }}</a>
                     <a href="{{ lang_path }}blog/" class="btn btn-secondary">{{ blog.back }}</a>
                 </div>
             </aside>
