@@ -806,6 +806,124 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_china_latency": {
+    "date": "2026-08-19",
+    "date_display": "August 19, 2026",
+    "category": "Network Architecture",
+    "reading_time": "10 min read",
+    "short_title": "Why Connections to China Are Slow",
+    "title": "Why Are Connections to China So Slow? It Isn't Just the Firewall",
+    "excerpt": "Most people blame the Great Firewall first. In practice, latency and packet loss usually come from three structural factors unrelated to censorship: inter-carrier bottlenecks, concentrated international gateways, and return-path route quality.",
+    "lead": "\"Our site won't load in China.\" \"Customers there say it's slow.\" Almost every team doing cross-border business hits this, and the firewall is usually the first suspect. It exists and it does have effects — but attributing everything to it tends to make you miss the parts you can actually fix. In practice, most latency and packet loss comes down to three purely structural network problems.",
+    "seo": {
+      "title": "Why Connections to China Are Slow | Inter-Carrier, Gateways & CN2 Routes - Kineticlinks",
+      "description": "A technical breakdown of why network access to China is slow: inter-carrier interconnection bottlenecks, international gateways concentrated in Beijing/Shanghai/Guangzhou, the difference between 163 and CN2 GIA return routes, and what can be improved.",
+      "keywords": "China network latency, slow connection to China, CN2 GIA, 163 backbone, return route, China interconnection, cross-border network optimization, China CDN"
+    },
+    "s1": {
+      "title": "Break \"Slow\" Apart First",
+      "p1": "\"Slow\" isn't one problem — it's a label covering several distinct ones. High latency, packet loss, slow only in the evening, specific services unreachable: these four symptoms have entirely different causes and entirely different fixes. Discussing them as one thing produces the unactionable conclusion that \"Chinese networks are just like that.\"",
+      "p2": "Before optimising anything, establish which one you actually have. The table below maps four common symptoms to their causes and how to identify them. Most teams discover they have more than one at once.",
+      "p3": "Worth stating up front: of these four, only the last is directly related to content filtering. The first three are purely questions of network capacity and routing — and they're what the rest of this article unpacks, because they're also the ones you have a realistic chance of improving."
+    },
+    "table": {
+      "caption": "Four common symptoms, their causes, and how to identify them. Most teams have more than one.",
+      "col1": "Symptom",
+      "col2": "Usual cause",
+      "col3": "How to identify it",
+      "r1c1": "High but stable latency",
+      "r1c2": "Physical distance and route detours",
+      "r1c3": "Run traceroute; check hop count and path",
+      "r1_class": "",
+      "r2c1": "Fine by day, slow at night",
+      "r2c2": "Congested interconnect or international gateway",
+      "r2c3": "Test at off-peak and evening peak, then compare",
+      "r2_class": "is-current",
+      "r3c1": "Latency OK but noticeable packet loss",
+      "r3c2": "Poor return-path route quality",
+      "r3c3": "Test outbound and return paths separately",
+      "r3_class": "",
+      "r4c1": "A specific domain won't load at all",
+      "r4c2": "Domain- or IP-level access restriction",
+      "r4c3": "Test the same host via a different domain or IP",
+      "r4_class": ""
+    },
+    "s2": {
+      "title": "The Three Real Structural Causes",
+      "intro": "None of the following relates to content filtering. They're consequences of network capacity and commercial settlement — and they account for most cross-border connection problems:",
+      "r1_title": "Bottlenecks between the three carriers",
+      "r1_desc": "China Telecom, Unicom, and Mobile each run independent networks and must exchange traffic at national or provincial interconnection points. Those points have finite bandwidth, and when traffic surges — evening peak, a popular video platform ramping up — they saturate and cross-network access slows immediately. This is why the same server can feel fine to a Telecom user and slow to a Unicom one. The problem isn't your server; it's the segment in between.",
+      "r2_title": "Highly concentrated international gateways",
+      "r2_desc": "On China Telecom's ChinaNet backbone, the country's international traffic ultimately funnels through three gateways: Beijing, Shanghai, and Guangzhou. Whether a user sits in Chengdu or Shenyang, outbound international traffic detours through one of those three. That structural concentration makes the international egress a natural peak-hour bottleneck — and not one you can solve by buying more bandwidth on your own side.",
+      "r3_title": "Return-path route quality",
+      "r3_desc": "Traffic from China to overseas (the outbound leg) and from overseas back into China (the return leg) may take entirely different paths, and return quality is usually what determines what users actually feel. Different route tiers behave very differently at peak, which the next section covers in detail."
+    },
+    "s3": {
+      "title": "Route Tiers: 163, CN2 GT, and CN2 GIA",
+      "p1": "Any discussion of cross-border quality into China runs into China Telecom's route tiers. The traditional one is the <strong>163 backbone</strong>, whose route nodes typically begin with 202.97. It carries the overwhelming majority of international traffic, which is exactly why it congests hardest at evening peak — showing up as latency spikes and pronounced packet loss.",
+      "p2": "<strong>CN2</strong> (ChinaNet Next Carrying Network) is China Telecom's later-generation carrying network, with nodes beginning 59.43. It comes in two forms. <strong>CN2 GT</strong> routes the international leg over CN2 but returns to 163 for the domestic leg, so the international link improves while the domestic segment can still congest. <strong>CN2 GIA</strong> keeps both outbound and return legs entirely on CN2 without dropping back to 163, with the fewest hops, the highest QoS priority, and deliberately lighter loading.",
+      "callout": "Here's an easy way to misdiagnose this: outbound and return paths are frequently asymmetric. Latency you measure from Taiwan or overseas is the outbound leg — but what users in China experience depends on the return leg. Drawing conclusions from a one-directional test often produces a verdict opposite to what users report, which is why testing both directions separately matters.",
+      "p3": "Practically, this means that when comparing facilities or CDN providers, \"is there a CN2 GIA return path?\" often determines the real experience for users in China more than raw bandwidth does. It's also the kind of thing that doesn't appear on a spec sheet, so it's worth asking about directly."
+    },
+    "s4": {
+      "title": "So How Much Is the Firewall?",
+      "p1": "Content filtering exists and does cause connection problems, but it operates differently from the three factors above: it tends to make specific targets unreachable or unstable rather than making everything uniformly slower. If your own service isn't within scope of any restriction, the slowness users report is still most likely one of the three structural causes.",
+      "p2": "Put another way: if your site \"loads but is slow\" in China, that's usually a capacity and routing problem and architecture changes can improve it. If it \"won't load at all, on any network,\" that's when it's worth investigating access restrictions. Separating those two cases first is what stops you spending effort in the wrong place."
+    },
+    "s5": {
+      "title": "Three Practical Directions for Improvement",
+      "intro": "Against the structural problems above, there are three layers you can work on:",
+      "l1_title": "1. Move content closer to users",
+      "l1_desc": "The most direct approach is caching static content at edge nodes nearer to users in China, reducing how much traffic has to cross the international gateways at all. Nodes in Hong Kong and around China help somewhat; genuinely landing content on nodes inside the mainland requires completing ICP filing — a regulatory process that takes time and paperwork, so it's worth assessing early.",
+      "l2_title": "2. Choose the right return route",
+      "l2_desc": "When selecting a facility or CDN provider, ask specifically which return route is used rather than comparing bandwidth figures alone. At the same monthly cost, the difference between a CN2 GIA return path and an ordinary 163 one at evening peak is often more noticeable than doubling your bandwidth.",
+      "l3_title": "3. Reduce the number of round trips",
+      "l3_desc": "Once per-round-trip latency can't be reduced further, reduce how many round trips you need. Enabling HTTP/2 or HTTP/3 to multiplex connections, consolidating and trimming resource requests, and preloading critical assets — these front-end optimisations have amplified benefit in high-latency conditions, far more than they do on a low-latency network."
+    },
+    "s6": {
+      "title": "Three Things to Do When Diagnosing",
+      "intro": "Before raising the issue with a provider or evaluating a fix, gather these three things — your judgement will be considerably more accurate:",
+      "c1_title": "Test across time windows, not once",
+      "c1_desc": "Cover at least off-peak and evening peak. A large gap between them points strongly at interconnect or gateway congestion rather than your server's performance.",
+      "c2_title": "Test all three carriers separately",
+      "c2_desc": "Telecom, Unicom, and Mobile results often differ substantially. Concluding from one carrier alone easily misreads a single-network issue as universal, or misses one entirely.",
+      "c3_title": "Separate outbound from return",
+      "c3_desc": "Test from your side toward China and from China toward your server. As noted above, the paths are frequently asymmetric, and one-directional testing yields misleading conclusions."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "Slow access from China is rarely down to a single cause, and the firewall usually isn't the dominant one. Capacity limits at inter-carrier interconnection points, international egress concentrated in Beijing, Shanghai, and Guangzhou, and differences in return-route tier together explain most of the latency and packet loss seen in practice — and all three can be improved through architectural choices. That's the value of separating the causes properly.",
+      "p2": "If you want to see how your service currently performs across China's three carriers, our speed test platform gives you per-carrier measured data, so you can decide which direction to tackle first."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "iThome — 中國電信 CN2 骨幹介紹，面向大陸的虛擬主機空間不可不知道",
+      "s2": "Tencent Cloud Developer — 163 backbone / CN2 GT / CN2 GIA: what they mean and how they differ",
+      "s3": "GitHub: china-net/Internationally-connected — status of China's international network interconnection"
+    },
+    "cta": {
+      "href": "speedtest/",
+      "title": "Want to Know How Fast Your Service Really Is in China?",
+      "desc": "Use our speed test platform for per-carrier measured data across Telecom, Unicom, and Mobile, and see where the problem actually sits.",
+      "button": "Go to the Speed Test Platform"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "speedtest/",
+      "l1_kicker": "Platform",
+      "l1_title": "Global 3-Network Speed Test",
+      "l1_desc": "Measure Telecom, Unicom, and Mobile connection quality separately.",
+      "l2_slug": "cdn/",
+      "l2_kicker": "Service",
+      "l2_title": "CDN Content Delivery Network",
+      "l2_desc": "Cache content nearer users to cut traffic crossing the international gateways.",
+      "l3_slug": "cloud/",
+      "l3_kicker": "Service",
+      "l3_title": "Public Cloud Architecture",
+      "l3_desc": "Cross-border architecture planning that bridges resources inside and outside."
+    }
+  },
   "article_ssl_validity": {
     "date": "2026-08-15",
     "date_display": "August 15, 2026",
