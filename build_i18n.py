@@ -54,10 +54,10 @@ def flatten_dict(d, parent_key='', sep='.'):
     return dict(items)
 
 
-def build_article_list(translations, lang_path):
+def build_article_list(translations, lang_path, limit=None):
     """Render the blog index cards from ARTICLES, in listed order."""
     cards = []
-    for article in ARTICLES:
+    for article in (ARTICLES[:limit] if limit else ARTICLES):
         content = translations.get(article['content_key'], {})
         url = f"{lang_path}blog/{article['slug']}/"
         cards.append(f"""<a href="{url}" class="article-card">
@@ -96,6 +96,29 @@ def resolve_lastmod(out_path, new_html):
             if f.read() == new_html:
                 return git_last_modified(out_path) or TODAY
     return TODAY
+
+
+def build_homepage_articles(translations, lang_path, limit=3):
+    """Newest few article cards for the homepage."""
+    return build_article_list(translations, lang_path, limit=limit)
+
+
+def build_blog_itemlist(translations, lang_path):
+    """ItemList structured data describing the articles on the blog index."""
+    items = []
+    for i, article in enumerate(ARTICLES, start=1):
+        content = translations.get(article['content_key'], {})
+        items.append({
+            "@type": "ListItem",
+            "position": i,
+            "url": f"{BASE_URL}{lang_path}blog/{article['slug']}/",
+            "name": content.get('title', ''),
+        })
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": items,
+    }, ensure_ascii=False, indent=2)
 
 
 def render(template, flat_translations):
@@ -137,6 +160,8 @@ def build():
         base_flat['lang_path'] = lang['lang_path']
         base_flat['current_lang_name'] = lang['current_lang_name']
         base_flat['article_list'] = build_article_list(translations, lang['lang_path'])
+        base_flat['homepage_articles'] = build_homepage_articles(translations, lang['lang_path'])
+        base_flat['blog_itemlist'] = build_blog_itemlist(translations, lang['lang_path'])
 
         for page in PAGES:
             flat = dict(base_flat)

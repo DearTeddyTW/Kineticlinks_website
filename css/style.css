@@ -1463,3 +1463,15 @@ footer {
 
 /* Mobile lang-switcher styles live with the nav collapse rules above,
    which now trigger at 900px. */
+
+/* ==========================================================================
+   Homepage: latest articles
+   ========================================================================== */
+.latest-section .article-list {
+    max-width: 900px;
+}
+
+.latest-more {
+    text-align: center;
+    margin-top: 2.5rem;
+}

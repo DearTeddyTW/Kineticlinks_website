@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Kineticlinks | Empowering Your Digital Infrastructure",
-    "description": "Kineticlinks - 專業 IT 服務供應商，提供全球 CDN 加速、高效能 VPS、IDC 機房建置與公有雲架構解決方案。",
+    "title": "CDN 加速、VPS 主機、IDC 機房建置｜Kineticlinks",
+    "description": "Kineticlinks 提供全球 CDN 加速、NVMe SSD 高效能 VPS、IDC 機房建置與公有雲架構解決方案，並自營 SSL 憑證自動化與三網測速平台。專為台灣與跨境企業打造的 IT 基礎架構服務。",
     "keywords": "Kineticlinks, CDN, VPS, IDC, 公有雲, IT 基礎架構, 網路加速, 虛擬主機, 混合雲, SSL憑證"
   },
   "nav": {
@@ -1281,5 +1281,25 @@
   "footer": {
     "brand_desc": "Building the digital infrastructure of tomorrow.",
     "rights": "&copy; 2026 Kineticlinks. All rights reserved."
+  },
+  "home_faq": {
+    "title": "關於 Kineticlinks 的常見問題",
+    "desc": "如果以下沒有回答到您的疑問，歡迎直接與我們聯繫",
+    "q1": "Kineticlinks 提供哪些服務？",
+    "a1": "我們提供四項核心服務：CDN 內容傳遞網路、VPS 虛擬專屬主機、IDC 機房建置，以及公有雲架構解決方案。另外自營兩個平台產品：SSL 憑證自動化平台與全球三網測速平台。",
+    "q2": "服務範圍涵蓋哪些地區？",
+    "a2": "以台灣與亞太區為主，CDN 節點同時涵蓋北美與歐洲。針對台灣、香港與中國周邊的節點密度特別加強，適合有跨境訪客需求的企業。",
+    "q3": "我不確定該選 VPS 還是自建機房，可以先諮詢嗎？",
+    "a3": "可以。多數客戶在初期都不確定該用哪一種架構。您可以提供目前的流量規模、應用類型與預算，我們的架構師會協助評估，不需要先決定是否合作。",
+    "q4": "導入服務需要多久時間？",
+    "a4": "依服務類型差異很大。CDN 通常一個工作天內可完成 DNS 切換；VPS 可即時開通；IDC 機房建置則依規模從數週到數個月不等，我們會在評估階段提供具體時程。",
+    "q5": "有提供中文技術支援嗎？",
+    "a5": "有。我們的工程團隊提供 24/7 中文技術支援，熟悉台灣與亞太的網路環境，不是僅有自動化工單系統。"
+  },
+  "latest": {
+    "title1": "最新",
+    "title2": "技術文章",
+    "desc": "來自第一線的基礎架構實務筆記",
+    "view_all": "查看全部文章"
   }
 }

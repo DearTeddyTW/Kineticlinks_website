@@ -46,6 +46,42 @@
     }
     </script>
 
+    <!-- Structured Data (JSON-LD): WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Kineticlinks",
+      "url": "https://www.kineticlinks.net{{ lang_path }}",
+      "inLanguage": "{{ lang_code }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): FAQPage (mirrors the visible FAQ below) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "{{ home_faq.q1 }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ home_faq.a1 }}" } },
+        { "@type": "Question", "name": "{{ home_faq.q2 }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ home_faq.a2 }}" } },
+        { "@type": "Question", "name": "{{ home_faq.q3 }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ home_faq.a3 }}" } },
+        { "@type": "Question", "name": "{{ home_faq.q4 }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ home_faq.a4 }}" } },
+        { "@type": "Question", "name": "{{ home_faq.q5 }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ home_faq.a5 }}" } }
+      ]
+    }
+    </script>
+
     <!-- Self-hosted fonts (no external font CDN) -->
     <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -274,6 +310,54 @@
 };</code></pre>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section class="section latest-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>{{ latest.title1 }}<span class="text-gradient">{{ latest.title2 }}</span></h2>
+                <p>{{ latest.desc }}</p>
+            </div>
+            <div class="article-list">
+                {{ homepage_articles }}
+            </div>
+            <div class="latest-more">
+                <a href="{{ lang_path }}blog/" class="btn btn-secondary">{{ latest.view_all }}</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Homepage FAQ -->
+    <section class="section faq-section" style="background-color: var(--bg-darker);">
+        <div class="container">
+            <div class="section-header">
+                <h2>{{ home_faq.title }}</h2>
+                <p>{{ home_faq.desc }}</p>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item glass-panel">
+                    <summary>{{ home_faq.q1 }}</summary>
+                    <p>{{ home_faq.a1 }}</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>{{ home_faq.q2 }}</summary>
+                    <p>{{ home_faq.a2 }}</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>{{ home_faq.q3 }}</summary>
+                    <p>{{ home_faq.a3 }}</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>{{ home_faq.q4 }}</summary>
+                    <p>{{ home_faq.a4 }}</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>{{ home_faq.q5 }}</summary>
+                    <p>{{ home_faq.a5 }}</p>
+                </details>
             </div>
         </div>
     </section>

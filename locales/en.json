@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Kineticlinks | Empowering Your Digital Infrastructure",
-    "description": "Kineticlinks - Professional IT service provider offering global CDN acceleration, high-performance VPS, IDC building, and public cloud architecture solutions.",
+    "title": "CDN, VPS Hosting & IDC Data Center Services | Kineticlinks",
+    "description": "Kineticlinks delivers global CDN acceleration, high-performance NVMe SSD VPS, IDC data center buildout, and public cloud architecture, plus our own SSL automation and 3-network speed test platforms.",
     "keywords": "Kineticlinks, CDN, VPS, IDC, Public Cloud, IT Infrastructure, Network Acceleration, Web Hosting, Hybrid Cloud, SSL Certificate"
   },
   "nav": {
@@ -1281,5 +1281,25 @@
   "footer": {
     "brand_desc": "Building the digital infrastructure of tomorrow.",
     "rights": "&copy; 2026 Kineticlinks. All rights reserved."
+  },
+  "home_faq": {
+    "title": "Frequently Asked Questions About Kineticlinks",
+    "desc": "If your question isn't answered here, get in touch directly",
+    "q1": "What services does Kineticlinks provide?",
+    "a1": "Four core services: CDN content delivery, VPS hosting, IDC data center buildout, and public cloud architecture solutions. We also operate two platforms of our own: an SSL certificate automation platform and a global 3-network speed test platform.",
+    "q2": "Which regions do you cover?",
+    "a2": "Primarily Taiwan and Asia-Pacific, with CDN nodes also across North America and Europe. Node density is deliberately strongest around Taiwan, Hong Kong, and mainland China, which suits businesses with cross-border visitors.",
+    "q3": "I'm not sure whether I need a VPS or my own facility. Can I consult first?",
+    "a3": "Yes. Most clients are unsure at the outset. Share your current traffic volume, application type, and budget, and our architects will help you assess the options — no commitment required.",
+    "q4": "How long does onboarding take?",
+    "a4": "It varies considerably by service. CDN is usually a DNS change completed within a business day; VPS can be provisioned immediately; IDC buildout runs from several weeks to a few months depending on scale, with a concrete schedule provided during assessment.",
+    "q5": "Do you offer Chinese-language technical support?",
+    "a5": "Yes. Our engineering team provides 24/7 support in Chinese and knows the Taiwan and Asia-Pacific network environment first-hand — not just an automated ticketing system."
+  },
+  "latest": {
+    "title1": "Latest ",
+    "title2": "Articles",
+    "desc": "Infrastructure notes from the front line",
+    "view_all": "View all articles"
   }
 }

@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Kineticlinks | Empowering Your Digital Infrastructure",
-    "description": "Kineticlinks - 专业 IT 服务供应商，提供全球 CDN 加速、高性能 VPS、IDC 机房建置与公有云架构解决方案。",
+    "title": "CDN 加速、VPS 主机、IDC 机房建置｜Kineticlinks",
+    "description": "Kineticlinks 提供全球 CDN 加速、NVMe SSD 高性能 VPS、IDC 机房建置与公有云架构解决方案，并自营 SSL 证书自动化与三网测速平台。专为跨境企业打造的 IT 基础架构服务。",
     "keywords": "Kineticlinks, CDN, VPS, IDC, 公有云, IT 基础架构, 网络加速, 虚拟主机, 混合云, SSL证书"
   },
   "nav": {
@@ -1281,5 +1281,25 @@
   "footer": {
     "brand_desc": "Building the digital infrastructure of tomorrow.",
     "rights": "&copy; 2026 Kineticlinks. All rights reserved."
+  },
+  "home_faq": {
+    "title": "关于 Kineticlinks 的常见问题",
+    "desc": "如果以下没有回答到您的疑问，欢迎直接与我们联系",
+    "q1": "Kineticlinks 提供哪些服务？",
+    "a1": "我们提供四项核心服务：CDN 内容分发网络、VPS 虚拟专属主机、IDC 机房建置，以及公有云架构解决方案。另外自营两个平台产品：SSL 证书自动化平台与全球三网测速平台。",
+    "q2": "服务范围涵盖哪些地区？",
+    "a2": "以亚太区为主，CDN 节点同时涵盖北美与欧洲。针对中国大陆周边、台湾与香港的节点密度特别加强，适合有跨境访客需求的企业。",
+    "q3": "我不确定该选 VPS 还是自建机房，可以先咨询吗？",
+    "a3": "可以。多数客户在初期都不确定该用哪一种架构。您可以提供目前的流量规模、应用类型与预算，我们的架构师会协助评估，不需要先决定是否合作。",
+    "q4": "接入服务需要多久时间？",
+    "a4": "依服务类型差异很大。CDN 通常一个工作日内可完成 DNS 切换；VPS 可即时开通；IDC 机房建置则依规模从数周到数月不等，我们会在评估阶段提供具体时程。",
+    "q5": "有提供中文技术支持吗？",
+    "a5": "有。我们的工程团队提供 24/7 中文技术支持，熟悉亚太的网络环境，不是仅有自动化工单系统。"
+  },
+  "latest": {
+    "title1": "最新",
+    "title2": "技术文章",
+    "desc": "来自一线的基础架构实务笔记",
+    "view_all": "查看全部文章"
   }
 }
