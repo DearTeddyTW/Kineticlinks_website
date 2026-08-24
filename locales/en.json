@@ -103,7 +103,7 @@
   },
   "cdn_page": {
     "seo": {
-      "title": "CDN Content Delivery Network Services | Global Acceleration & DDoS Protection - Kineticlinks",
+      "title": "CDN Services | Global Acceleration & DDoS Protection",
       "description": "Kineticlinks CDN delivers 100+ global edge nodes, intelligent routing, and terabit-scale DDoS protection for e-commerce, streaming, and gaming. Get a custom CDN quote today.",
       "keywords": "CDN acceleration, content delivery network, DDoS protection, website acceleration, edge nodes, CDN provider Asia"
     },
@@ -333,7 +333,7 @@
   },
   "idc_page": {
     "seo": {
-      "title": "IDC Data Center Buildout Services | Custom Facility Planning - Kineticlinks",
+      "title": "IDC Data Center Buildout | Custom Facility Planning",
       "description": "Kineticlinks delivers end-to-end IDC data center buildout — hardware procurement, network architecture, deployment, and 24/7 on-site monitoring for enterprise-grade secure facilities.",
       "keywords": "IDC data center, data center buildout, colocation services, BGP dual-line network, enterprise data center, data center Taiwan"
     },
@@ -448,7 +448,7 @@
   },
   "cloud_page": {
     "seo": {
-      "title": "Public Cloud Architecture Solutions | Hybrid Cloud & Migration Consulting - Kineticlinks",
+      "title": "Public Cloud Architecture | Hybrid Cloud & Migration",
       "description": "Kineticlinks delivers AWS, GCP, and Azure architecture planning, hybrid cloud design, seamless migration, and cost optimization consulting to help enterprises complete cloud transformation securely.",
       "keywords": "public cloud architecture, hybrid cloud, cloud migration, AWS consulting, GCP consulting, Azure consulting, cloud cost optimization"
     },
@@ -564,7 +564,7 @@
   "ssl_page": {
     "platform_url": "https://app.kineticlinks.net/login",
     "seo": {
-      "title": "SSL Certificate Automation Platform | DNS Auto-Validation & Multi-CDN Push - Kineticlinks",
+      "title": "SSL Certificate Automation | DNS Validation & CDN Push",
       "description": "Kineticlinks' SSL automation platform supports automatic DNS validation and pushes issued certificates directly to multiple CDN brands, cutting the manual work of certificate management and renewal.",
       "keywords": "SSL certificate automation, SSL certificate management, automatic certificate renewal, DV SSL, CDN SSL certificate, SSL API"
     },
@@ -680,7 +680,7 @@
   "speedtest_page": {
     "platform_url": "https://speedtest.kineticlinks.net/",
     "seo": {
-      "title": "Global 3-Network Speed Test Platform | China Telecom, Unicom, Mobile Testing - Kineticlinks",
+      "title": "China 3-Network Speed Test | Telecom, Unicom, Mobile",
       "description": "Kineticlinks' speed test platform is built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time testing and a commercial API for connection quality monitoring.",
       "keywords": "speed test platform, China 3-network speed test, Telecom Unicom Mobile testing, cross-border network testing, network speed API, Asia-Pacific connection quality"
     },
@@ -816,7 +816,7 @@
     "excerpt": "Most people blame the Great Firewall first. In practice, latency and packet loss usually come from three structural factors unrelated to censorship: inter-carrier bottlenecks, concentrated international gateways, and return-path route quality.",
     "lead": "\"Our site won't load in China.\" \"Customers there say it's slow.\" Almost every team doing cross-border business hits this, and the firewall is usually the first suspect. It exists and it does have effects — but attributing everything to it tends to make you miss the parts you can actually fix. In practice, most latency and packet loss comes down to three purely structural network problems.",
     "seo": {
-      "title": "Why Connections to China Are Slow | Inter-Carrier, Gateways & CN2 Routes - Kineticlinks",
+      "title": "Why Connections to China Are Slow | Routes & Gateways",
       "description": "A technical breakdown of why network access to China is slow: inter-carrier interconnection bottlenecks, international gateways concentrated in Beijing/Shanghai/Guangzhou, the difference between 163 and CN2 GIA return routes, and what can be improved.",
       "keywords": "China network latency, slow connection to China, CN2 GIA, 163 backbone, return route, China interconnection, cross-border network optimization, China CDN"
     },
@@ -934,7 +934,7 @@
     "excerpt": "As of March 15, 2026, the maximum lifetime for a publicly trusted TLS certificate dropped from 398 days to 200, with two further reductions scheduled for 2027 and 2029. Here's the timeline, the reasoning behind it, and why manual renewal won't survive the next phase.",
     "lead": "As of March 15, 2026, the maximum lifetime for a publicly trusted TLS/SSL certificate has dropped from 398 days to 200. This isn't one certificate authority adjusting its policy — it's an industry-wide requirement ratified by the CA/Browser Forum, with two more reductions already scheduled. For teams still managing certificates by hand, the operational burden is set to multiply over the next three years.",
     "seo": {
-      "title": "SSL Certificate Lifetime Cut to 200 Days | 2026 Schedule & Response Guide - Kineticlinks",
+      "title": "SSL Lifetimes Cut to 200 Days | 2026 Schedule & Guide",
       "description": "The CA/Browser Forum has scheduled phased reductions to TLS certificate lifetimes: 200 days in 2026, 100 days in 2027, and 47 days in 2029. Full timeline, real-world impact, and how to automate your response.",
       "keywords": "SSL certificate lifetime, certificate validity reduction, 200 day certificates, 47 day certificates, SC-081, ACME protocol, automatic certificate renewal, SSL certificate management"
     },
@@ -1170,7 +1170,7 @@
     "excerpt": "IDC, colocation, and rack rental get used interchangeably, but their responsibility boundaries differ sharply. Here's what an IDC actually is, how to read Uptime Tier ratings, and when a facility beats public cloud.",
     "lead": "IDC (Internet Data Center) is often used loosely to mean any kind of facility service, but rack rental, colocation, and full buildout carry very different responsibility boundaries. Getting that wrong before signing is how disputes about \"whose job was that?\" begin. This article separates the definitions, the rating standard, and the situations each suits.",
     "seo": {
-      "title": "What Is an IDC? Colocation vs Rack Rental, Tier Ratings Explained - Kineticlinks",
+      "title": "What Is an IDC? Colocation vs Rack Rental & Tiers",
       "description": "A full explanation of what an IDC is, how colocation differs from rack rental, the Uptime Institute Tier I-IV classification, and how to decide between a facility and public cloud.",
       "keywords": "what is an IDC, IDC data center, colocation, rack rental, Tier III data center, data center tiers, choosing a data center"
     },
