@@ -164,7 +164,7 @@
                     <span>{{ page.reading_time }}</span>
                 </div>
                 <p class="article-lead">{{ page.lead }}</p>
-            </header>
+{{ affiliate_disclosure }}            </header>
 
             <div class="article-body">
 
@@ -287,9 +287,9 @@
                 <div class="article-sources">
                     <h3>{{ page.sources.title }}</h3>
                     <ul>
-                        <li><a href="https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/" target="_blank" rel="noopener">{{ page.sources.s1 }}</a></li>
-                        <li><a href="https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days" target="_blank" rel="noopener">{{ page.sources.s2 }}</a></li>
-                        <li><a href="https://www.sectigo.com/blog/200-day-ssl-certificate-expiration-risk" target="_blank" rel="noopener">{{ page.sources.s3 }}</a></li>
+                        <li><a href="{{ page.sources.u1 }}" target="_blank" rel="noopener">{{ page.sources.s1 }}</a></li>
+                        <li><a href="{{ page.sources.u2 }}" target="_blank" rel="noopener">{{ page.sources.s2 }}</a></li>
+                        <li><a href="{{ page.sources.u3 }}" target="_blank" rel="noopener">{{ page.sources.s3 }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -322,7 +322,7 @@
                 <h2>{{ page.cta.title }}</h2>
                 <p>{{ page.cta.desc }}</p>
                 <div class="hero-actions">
-                    <a href="{{ lang_path }}{{ page.cta.href }}" class="btn btn-primary">{{ page.cta.button }}</a>
+                    <a href="{{ cta_href_full }}"{{ cta_attrs }} class="btn btn-primary">{{ page.cta.button }}</a>
                     <a href="{{ lang_path }}blog/" class="btn btn-secondary">{{ blog.back }}</a>
                 </div>
             </aside>

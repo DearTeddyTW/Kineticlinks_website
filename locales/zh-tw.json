@@ -806,6 +806,128 @@
       "keywords": "IT 技術文章, CDN 教學, VPS 選購指南, 雲端搬遷, SSL 憑證管理, 基礎架構"
     }
   },
+  "article_domain_guide": {
+    "date": "2026-08-24",
+    "date_display": "2026 年 8 月 24 日",
+    "category": "網域管理",
+    "reading_time": "約 9 分鐘",
+    "short_title": "網域選購與管理",
+    "title": "網域不是買斷：續約價、轉移鎖定與到期贖回的完整指南",
+    "excerpt": "多數人把註冊網域當成「買一個名字」，但它其實是租約。真正會出事的地方幾乎都不在第一年的價格，而在續約價、轉移鎖定規則，以及到期後動輒數千元的贖回費。",
+    "lead": "註冊網域看起來是整個架站流程裡最單純的一步——挑個名字、刷卡、結束。但網域是「租」不是「買」，而且租約條款藏在你不會去讀的地方。實務上最常見的三種踩雷，全都不在第一年：續約時價格翻好幾倍、想換註冊商卻被鎖住不能轉、以及忘記續約後要花數千元才能救回來。",
+    "disclosure": "",
+    "seo": {
+      "title": "網域註冊完整指南｜續約價、轉移鎖定與贖回費 - Kineticlinks",
+      "description": "網域是租不是買。完整說明網域生命週期四階段、TLD 選擇考量、註冊商該看什麼、ICANN 60 天轉移鎖定的實際規則，以及必做的三項保護設定。",
+      "keywords": "網域註冊, 網域續約價, 網域轉移, ICANN 轉移鎖定, 贖回期, WHOIS 隱私, TLD 選擇, 網域管理"
+    },
+    "s1": {
+      "title": "網域是租的，不是買的",
+      "p1": "註冊網域取得的是一段期間的「專屬使用權」，通常一到十年，而不是永久所有權。只要持續續約，實務上可以一直用下去；但只要斷一次，網域就會走進一段有明確時程的回收流程，而且每往後一階段，救回來的代價就高一級。",
+      "p2": "多數人不知道這個流程長什麼樣子，直到網站某天突然打不開才發現。下表是標準的四個階段——請特別注意第三階段的費用，那是絕大多數人踩雷的地方。",
+      "p3": "要強調的是：進入寬限期時，網站通常「已經停止解析」了。也就是說當你發現網站掛掉才開始處理，時鐘早就在跑了。這也是為什麼自動續約與到期監控必須事先設好，而不是等出事再說。"
+    },
+    "table": {
+      "caption": "網域到期後的回收流程。實際天數各註冊商與 TLD 略有差異，但階段結構一致。",
+      "col1": "階段",
+      "col2": "大致期間",
+      "col3": "這時候會發生什麼",
+      "r1c1": "有效期",
+      "r1c2": "1–10 年",
+      "r1c3": "正常使用，可續約、可轉移註冊商",
+      "r1_class": "",
+      "r2c1": "寬限期 Grace",
+      "r2c2": "到期後約 30 天",
+      "r2c3": "網站通常已停止解析，但仍可用原價續約",
+      "r2_class": "",
+      "r3c1": "贖回期 Redemption",
+      "r3c2": "再約 30 天",
+      "r3c3": "需額外付贖回費，常見 80–100 美元以上",
+      "r3_class": "is-current",
+      "r4c1": "待刪除 Pending Delete",
+      "r4c2": "約 5 天",
+      "r4c3": "無法再救回，之後開放任何人註冊",
+      "r4_class": ""
+    },
+    "s2": {
+      "title": "選 TLD 的三個考量",
+      "intro": "TLD 就是網域最後那一段（.com、.tw、.io⋯⋯）。挑選時真正該衡量的是這三件事：",
+      "r1_title": "目標市場與信任感",
+      "r1_desc": "`.com` 仍是全球認知度最高、最不需要解釋的選擇。若主要客群在台灣、且希望強調在地身分，`.tw` 或 `.com.tw` 有加分效果。反過來說，冷門的新 gTLD 雖然好記，但部分使用者與企業採購流程對它們的信任度仍偏低，這在 B2B 情境要特別考慮。",
+      "r2_title": "續約價，而不是首年價",
+      "r2_desc": "許多新 gTLD 用極低的首年價吸引註冊，續約價卻是首年的好幾倍，且沒有上限保證。挑 TLD 時請直接查它的**標準續約價**，然後乘以你預計持有的年數——這才是真實成本。",
+      "r3_title": "註冊資格與限制",
+      "r3_desc": "部分 TLD 有資格限制（例如需要當地登記實體、特定產業身分），也有些 TLD 的爭議處理或轉移規則較特殊。冷門 TLD 還有一個少被提及的風險：若該 TLD 的營運方經營不善，長期穩定性不如主流選擇。"
+    },
+    "s3": {
+      "title": "註冊商該看什麼",
+      "p1": "註冊商之間的差異，八成不在首年價格，而在那些你簽約當下不會注意、但之後每年都會遇到的條件。第一個是**續約價格**：促銷價通常只適用第一年，第二年起恢復標準價，兩者差距可能非常大。",
+      "p2": "第二個是 **WHOIS 隱私保護是否免費**。網域註冊資訊預設是公開的，包含姓名、地址、電話與信箱；隱私保護服務會用代理資訊遮蔽這些欄位。有些註冊商免費提供、終身有效，有些則按年收費——後者長期累積下來相當可觀。",
+      "callout": "把「十年總成本」算出來再比較，是最能避免踩雷的方法：首年促銷價 + 標準續約價 × 9 年 + 隱私保護費用（如需另計）。用這個數字去比，往往會發現首年最便宜的方案，總成本反而最高。",
+      "p3": "第三個是**附加條件**：轉出是否收費、是否強迫綁定該註冊商的 DNS、有沒有提供 DNS 管理 API。最後一項對需要自動化的團隊特別重要——如果你打算用 ACME 搭配 DNS 驗證自動簽發 SSL 憑證，註冊商有沒有開放 API 會直接決定這件事能不能自動化。"
+    },
+    "s4": {
+      "title": "轉移鎖定：實際規則與正在變動的部分",
+      "p1": "想把網域換到另一家註冊商時，會遇到 ICANN 的轉移鎖定規則。目前有三種情境會觸發 60 天不得轉移：**新註冊後 60 天內**、**上次轉移完成後 60 天內**、以及**變更註冊人聯絡資料後 60 天內**（最後這項多數註冊商允許事先選擇不套用）。此外，轉出授權碼（EPP code）依規定須在五個日曆天內釋出給你。",
+      "p2": "這裡有個多數文章沒講清楚的地方：這條規則**正在變動，但還沒落地**。ICANN 的 GNSO 理事會已在 2024 年底通過改革建議，方向是把 60 天縮短為 30 天（720 小時），但仍需董事會核准與各註冊商實作，實施時程至今未定案。換句話說，「已經取消了」和「就是固定 60 天」兩種說法目前都不精確——實務上多數註冊商仍在執行 60 天，真正要轉移前請直接向該註冊商確認現行規則。"
+    },
+    "s5": {
+      "title": "三個必做的保護設定",
+      "intro": "註冊完網域後，這三項設定花不到十分鐘，卻能擋掉絕大多數的災難：",
+      "l1_title": "一、開啟註冊商鎖定（Registrar Lock）",
+      "l1_desc": "這會在網域上加註 `clientTransferProhibited` 狀態，阻止未經授權的轉出。這是防範網域劫持最基本也最有效的一道防線，預設多半已開啟，但值得自己確認一次。真正要轉移時再手動解除即可。",
+      "l2_title": "二、自動續約，並確認付款方式有效",
+      "l2_desc": "只開自動續約還不夠——最常見的失敗是信用卡過期而沒人注意到，續約扣款失敗，然後網域就這樣到期了。建議把付款方式的到期日也納入日曆提醒，並確認續約通知信會寄到有人在看的信箱。",
+      "l3_title": "三、WHOIS 隱私與獨立的管理信箱",
+      "l3_desc": "開啟隱私保護避免聯絡資訊被公開蒐集。另外，網域的管理信箱**不要用這個網域底下的信箱**——一旦網域出問題導致郵件停擺，你會連重設密碼的驗證信都收不到，形成死結。用另一個獨立網域或免費信箱服務作為管理聯絡點。"
+    },
+    "s6": {
+      "title": "註冊前該確認的三件事",
+      "intro": "下單之前，把這三項問清楚或查清楚：",
+      "c1_title": "標準續約價是多少",
+      "c1_desc": "不是首年促銷價。直接找該 TLD 的標準續約價，乘上你預計持有的年數。",
+      "c2_title": "轉出政策與授權碼取得方式",
+      "c2_desc": "轉出是否收費、授權碼在後台哪裡拿、是否需要客服人工處理。這決定了你日後有沒有辦法離開。",
+      "c3_title": "DNS 管理與 API 支援",
+      "c3_desc": "能不能自行設定完整的 DNS 記錄、有沒有開放 API。若你要做憑證自動化或 CDN 串接，這項是硬需求。"
+    },
+    "s7": {
+      "title": "小結",
+      "p1": "網域本身很便宜，但它是整個線上服務的根——網站、郵件、憑證驗證全都依附在它上面。真正的成本與風險不在註冊當下的那筆費用，而在續約價、轉移彈性，以及你有沒有把自動續約與鎖定設好。花十分鐘做完那三項設定，比事後花數千元走贖回流程划算得多。",
+      "p2": "如果您的網域已經串接 CDN 或需要頻繁簽發憑證，DNS 的 API 支援會直接影響能不能自動化。這部分可以參考我們的 SSL 憑證自動化平台，它整合主流 DNS 服務商完成自動驗證與多節點推播。"
+    },
+    "sources": {
+      "title": "參考資料",
+      "s1": "ICANN — 5 Things Every Domain Name Registrant Should Know About the Transfer Policy",
+      "s2": "ICANN — FAQs for Registrants: Transferring Your Domain Name",
+      "s3": "Domain Incite — ICANN to kill off 60-day domain transfer lock",
+      "u1": "https://www.icann.org/resources/pages/about-transfer-policy-2017-10-10-en",
+      "u2": "https://www.icann.org/resources/pages/name-holder-faqs-2017-10-10-en",
+      "u3": "https://domainincite.com/30891-icann-to-kill-off-60-day-domain-transfer-lock"
+    },
+    "cta": {
+      "href": "https://www.namecheap.com/",
+      "title": "準備註冊或轉移網域？",
+      "desc": "Namecheap 提供免費終身 WHOIS 隱私保護與完整的 DNS 管理 API，是自動化需求下常見的選擇。",
+      "button": "前往 Namecheap"
+    },
+    "related": {
+      "title": "延伸閱讀與相關服務",
+      "desc": "這些內容與本頁主題直接相關，可一併參考",
+      "l1_slug": "ssl/",
+      "l1_kicker": "平台產品",
+      "l1_title": "SSL 憑證自動化平台",
+      "l1_desc": "整合 DNS 自動驗證，網域設定好之後可全自動簽發與推播憑證。",
+      "l2_slug": "blog/ssl-certificate-validity-200-days/",
+      "l2_kicker": "技術文章",
+      "l2_title": "SSL 憑證效期縮短至 200 天",
+      "l2_desc": "憑證續簽頻率翻倍，DNS 的 API 支援因此更重要。",
+      "l3_slug": "cdn/",
+      "l3_kicker": "核心服務",
+      "l3_title": "CDN 內容傳遞網路",
+      "l3_desc": "網域指向 CDN 節點後的加速與 DDoS 防護。"
+    }
+  },
   "article_china_latency": {
     "date": "2026-08-19",
     "date_display": "2026 年 8 月 19 日",
@@ -899,7 +1021,10 @@
       "title": "參考資料",
       "s1": "iThome — 中國電信 CN2 骨幹介紹，面向大陸的虛擬主機空間不可不知道",
       "s2": "騰訊雲開發者社區 — 163 骨幹網 / CN2 GT / CN2 GIA 線路的含義與區別",
-      "s3": "GitHub: china-net/Internationally-connected — 中國的國際網路互聯狀態介紹"
+      "s3": "GitHub: china-net/Internationally-connected — 中國的國際網路互聯狀態介紹",
+      "u1": "https://www.ithome.com.tw/pr/142378",
+      "u2": "https://cloud.tencent.com/developer/article/1606871",
+      "u3": "https://github.com/china-net/Internationally-connected"
     },
     "cta": {
       "href": "speedtest/",
@@ -1015,9 +1140,12 @@
     },
     "sources": {
       "title": "參考資料",
-      "s1": "CA/Browser Forum — Ballot SC081v3: Introduce Schedule of Reducing Validity and Data Reuse Periods",
-      "s2": "DigiCert — TLS Certificate Lifetimes Will Officially Reduce to 47 Days",
-      "s3": "Sectigo — Certificate Expiration Risk: 200 Day Validity Starts March 15"
+      "s1": "DigiCert — TLS Certificate Lifetimes Will Officially Reduce to 47 Days",
+      "s2": "Sectigo — 47-Day SSL Certificate Lifespan Approved: It's Time to Automate",
+      "s3": "GlobalSign — A Complete 47-day SSL/TLS Certificate Validity Q&A",
+      "u1": "https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days",
+      "u2": "https://www.sectigo.com/47-day-ssl",
+      "u3": "https://www.globalsign.com/en/blog/navigating-the-47-day-ssl-tls-certificate-validity-era"
     },
     "cta": {
       "href": "ssl/",
@@ -1133,9 +1261,12 @@
     },
     "sources": {
       "title": "參考資料",
-      "s1": "Uptime Institute — Tier Classification System",
-      "s2": "ScalaHosting — How to Select the CPU and RAM for Your Web Hosting VPS",
-      "s3": "軟體玩家 — 虛擬主機怎麼挑？主機商不會告訴你的事"
+      "s1": "ScalaHosting — How to Select the CPU and RAM for Your Web Hosting VPS",
+      "s2": "軟體玩家 — 虛擬主機怎麼挑？主機商不會告訴你的事",
+      "s3": "戰國策集團 — VPS 主機推薦：台灣 VPS 品牌費用比較",
+      "u1": "https://www.scalahosting.com/blog/how-to-select-the-cpu-and-ram-for-your-web-hosting-vps/",
+      "u2": "https://pcrookie.com/how_to_choose_web_hosting/",
+      "u3": "https://www.nss.com.tw/vps-hosting-taiwan-2025"
     },
     "cta": {
       "href": "vps/",
@@ -1253,7 +1384,10 @@
       "title": "參考資料",
       "s1": "Uptime Institute — Tier Classification System",
       "s2": "CoreSite — Breaking Down Data Center Tier Level Classifications",
-      "s3": "遠傳企業服務 — IDC是什麼？企業如何評估是否需要IDC機房及挑選關鍵"
+      "s3": "Wikipedia — Data center tiers",
+      "u1": "https://uptimeinstitute.com/tiers",
+      "u2": "https://www.coresite.com/blog/breaking-down-data-center-tiers-classifications",
+      "u3": "https://en.wikipedia.org/wiki/Data_center_tiers"
     },
     "cta": {
       "href": "idc/",

@@ -1475,3 +1475,17 @@ footer {
     text-align: center;
     margin-top: 2.5rem;
 }
+
+/* ==========================================================================
+   Affiliate disclosure
+   ========================================================================== */
+.affiliate-note {
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.2rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}

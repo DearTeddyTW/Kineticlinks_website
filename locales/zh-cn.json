@@ -806,6 +806,128 @@
       "keywords": "IT 技术文章, CDN 教程, VPS 选购指南, 云端迁移, SSL 证书管理, 基础架构"
     }
   },
+  "article_domain_guide": {
+    "date": "2026-08-24",
+    "date_display": "2026 年 8 月 24 日",
+    "category": "域名管理",
+    "reading_time": "约 9 分钟",
+    "short_title": "域名选购与管理",
+    "title": "域名不是买断：续费价、转移锁定与到期赎回的完整指南",
+    "excerpt": "多数人把注册域名当成「买一个名字」，但它其实是租约。真正会出事的地方几乎都不在第一年的价格，而在续费价、转移锁定规则，以及到期后动辄数百美元的赎回费。",
+    "lead": "注册域名看起来是整个建站流程里最单纯的一步——挑个名字、付款、结束。但域名是「租」不是「买」，而且租约条款藏在你不会去读的地方。实务上最常见的三种踩雷，全都不在第一年：续费时价格翻好几倍、想换注册商却被锁住不能转、以及忘记续费后要花数百美元才能救回来。",
+    "disclosure": "",
+    "seo": {
+      "title": "域名注册完整指南｜续费价、转移锁定与赎回费 - Kineticlinks",
+      "description": "域名是租不是买。完整说明域名生命周期四阶段、TLD 选择考量、注册商该看什么、ICANN 60 天转移锁定的实际规则，以及必做的三项保护设置。",
+      "keywords": "域名注册, 域名续费价, 域名转移, ICANN 转移锁定, 赎回期, WHOIS 隐私, TLD 选择, 域名管理"
+    },
+    "s1": {
+      "title": "域名是租的，不是买的",
+      "p1": "注册域名取得的是一段期间的「专属使用权」，通常一到十年，而不是永久所有权。只要持续续费，实务上可以一直用下去；但只要断一次，域名就会走进一段有明确时程的回收流程，而且每往后一阶段，救回来的代价就高一级。",
+      "p2": "多数人不知道这个流程长什么样子，直到网站某天突然打不开才发现。下表是标准的四个阶段——请特别注意第三阶段的费用，那是绝大多数人踩雷的地方。",
+      "p3": "要强调的是：进入宽限期时，网站通常「已经停止解析」了。也就是说当你发现网站挂掉才开始处理，时钟早就在跑了。这也是为什么自动续费与到期监控必须事先设好，而不是等出事再说。"
+    },
+    "table": {
+      "caption": "域名到期后的回收流程。实际天数各注册商与 TLD 略有差异，但阶段结构一致。",
+      "col1": "阶段",
+      "col2": "大致期间",
+      "col3": "这时候会发生什么",
+      "r1c1": "有效期",
+      "r1c2": "1–10 年",
+      "r1c3": "正常使用，可续费、可转移注册商",
+      "r1_class": "",
+      "r2c1": "宽限期 Grace",
+      "r2c2": "到期后约 30 天",
+      "r2c3": "网站通常已停止解析，但仍可用原价续费",
+      "r2_class": "",
+      "r3c1": "赎回期 Redemption",
+      "r3c2": "再约 30 天",
+      "r3c3": "需额外付赎回费，常见 80–100 美元以上",
+      "r3_class": "is-current",
+      "r4c1": "待删除 Pending Delete",
+      "r4c2": "约 5 天",
+      "r4c3": "无法再救回，之后开放任何人注册",
+      "r4_class": ""
+    },
+    "s2": {
+      "title": "选 TLD 的三个考量",
+      "intro": "TLD 就是域名最后那一段（.com、.cn、.io⋯⋯）。挑选时真正该衡量的是这三件事：",
+      "r1_title": "目标市场与信任感",
+      "r1_desc": "`.com` 仍是全球认知度最高、最不需要解释的选择。若主要客群在特定地区、且希望强调本地身分，国家顶级域名有加分效果。反过来说，冷门的新 gTLD 虽然好记，但部分用户与企业采购流程对它们的信任度仍偏低，这在 B2B 场景要特别考虑。",
+      "r2_title": "续费价，而不是首年价",
+      "r2_desc": "许多新 gTLD 用极低的首年价吸引注册，续费价却是首年的好几倍，且没有上限保证。挑 TLD 时请直接查它的**标准续费价**，然后乘以你预计持有的年数——这才是真实成本。",
+      "r3_title": "注册资格与限制",
+      "r3_desc": "部分 TLD 有资格限制（例如需要本地登记实体、特定行业身分），也有些 TLD 的争议处理或转移规则较特殊。冷门 TLD 还有一个少被提及的风险：若该 TLD 的运营方经营不善，长期稳定性不如主流选择。"
+    },
+    "s3": {
+      "title": "注册商该看什么",
+      "p1": "注册商之间的差异，八成不在首年价格，而在那些你签约当下不会注意、但之后每年都会遇到的条件。第一个是**续费价格**：促销价通常只适用第一年，第二年起恢复标准价，两者差距可能非常大。",
+      "p2": "第二个是 **WHOIS 隐私保护是否免费**。域名注册信息默认是公开的，包含姓名、地址、电话与邮箱；隐私保护服务会用代理信息遮蔽这些字段。有些注册商免费提供、终身有效，有些则按年收费——后者长期累积下来相当可观。",
+      "callout": "把「十年总成本」算出来再比较，是最能避免踩雷的方法：首年促销价 + 标准续费价 × 9 年 + 隐私保护费用（如需另计）。用这个数字去比，往往会发现首年最便宜的方案，总成本反而最高。",
+      "p3": "第三个是**附加条件**：转出是否收费、是否强制绑定该注册商的 DNS、有没有提供 DNS 管理 API。最后一项对需要自动化的团队特别重要——如果你打算用 ACME 搭配 DNS 验证自动签发 SSL 证书，注册商有没有开放 API 会直接决定这件事能不能自动化。"
+    },
+    "s4": {
+      "title": "转移锁定：实际规则与正在变动的部分",
+      "p1": "想把域名换到另一家注册商时，会遇到 ICANN 的转移锁定规则。目前有三种情境会触发 60 天不得转移：**新注册后 60 天内**、**上次转移完成后 60 天内**、以及**变更注册人联系资料后 60 天内**（最后这项多数注册商允许事先选择不套用）。此外，转出授权码（EPP code）依规定须在五个日历天内释出给你。",
+      "p2": "这里有个多数文章没讲清楚的地方：这条规则**正在变动，但还没落地**。ICANN 的 GNSO 理事会已在 2024 年底通过改革建议，方向是把 60 天缩短为 30 天（720 小时），但仍需董事会核准与各注册商实作，实施时程至今未定案。换句话说，「已经取消了」和「就是固定 60 天」两种说法目前都不精确——实务上多数注册商仍在执行 60 天，真正要转移前请直接向该注册商确认现行规则。"
+    },
+    "s5": {
+      "title": "三个必做的保护设置",
+      "intro": "注册完域名后，这三项设置花不到十分钟，却能挡掉绝大多数的灾难：",
+      "l1_title": "一、开启注册商锁定（Registrar Lock）",
+      "l1_desc": "这会在域名上加注 `clientTransferProhibited` 状态，阻止未经授权的转出。这是防范域名劫持最基本也最有效的一道防线，默认多半已开启，但值得自己确认一次。真正要转移时再手动解除即可。",
+      "l2_title": "二、自动续费，并确认付款方式有效",
+      "l2_desc": "只开自动续费还不够——最常见的失败是信用卡过期而没人注意到，续费扣款失败，然后域名就这样到期了。建议把付款方式的到期日也纳入日历提醒，并确认续费通知信会寄到有人在看的邮箱。",
+      "l3_title": "三、WHOIS 隐私与独立的管理邮箱",
+      "l3_desc": "开启隐私保护避免联系信息被公开搜集。另外，域名的管理邮箱**不要用这个域名底下的邮箱**——一旦域名出问题导致邮件停摆，你会连重置密码的验证信都收不到，形成死结。用另一个独立域名或免费邮箱服务作为管理联系点。"
+    },
+    "s6": {
+      "title": "注册前该确认的三件事",
+      "intro": "下单之前，把这三项问清楚或查清楚：",
+      "c1_title": "标准续费价是多少",
+      "c1_desc": "不是首年促销价。直接找该 TLD 的标准续费价，乘上你预计持有的年数。",
+      "c2_title": "转出政策与授权码取得方式",
+      "c2_desc": "转出是否收费、授权码在后台哪里拿、是否需要客服人工处理。这决定了你日后有没有办法离开。",
+      "c3_title": "DNS 管理与 API 支持",
+      "c3_desc": "能不能自行设置完整的 DNS 记录、有没有开放 API。若你要做证书自动化或 CDN 串接，这项是硬需求。"
+    },
+    "s7": {
+      "title": "小结",
+      "p1": "域名本身很便宜，但它是整个线上服务的根——网站、邮件、证书验证全都依附在它上面。真正的成本与风险不在注册当下的那笔费用，而在续费价、转移弹性，以及你有没有把自动续费与锁定设好。花十分钟做完那三项设置，比事后花数百美元走赎回流程划算得多。",
+      "p2": "如果您的域名已经串接 CDN 或需要频繁签发证书，DNS 的 API 支持会直接影响能不能自动化。这部分可以参考我们的 SSL 证书自动化平台，它整合主流 DNS 服务商完成自动验证与多节点推送。"
+    },
+    "sources": {
+      "title": "参考资料",
+      "s1": "ICANN — 5 Things Every Domain Name Registrant Should Know About the Transfer Policy",
+      "s2": "ICANN — FAQs for Registrants: Transferring Your Domain Name",
+      "s3": "Domain Incite — ICANN to kill off 60-day domain transfer lock",
+      "u1": "https://www.icann.org/resources/pages/about-transfer-policy-2017-10-10-en",
+      "u2": "https://www.icann.org/resources/pages/name-holder-faqs-2017-10-10-en",
+      "u3": "https://domainincite.com/30891-icann-to-kill-off-60-day-domain-transfer-lock"
+    },
+    "cta": {
+      "href": "https://www.namecheap.com/",
+      "title": "准备注册或转移域名？",
+      "desc": "Namecheap 提供免费终身 WHOIS 隐私保护与完整的 DNS 管理 API，是自动化需求下常见的选择。",
+      "button": "前往 Namecheap"
+    },
+    "related": {
+      "title": "延伸阅读与相关服务",
+      "desc": "这些内容与本页主题直接相关，可一并参考",
+      "l1_slug": "ssl/",
+      "l1_kicker": "平台产品",
+      "l1_title": "SSL 证书自动化平台",
+      "l1_desc": "整合 DNS 自动验证，域名设置好之后可全自动签发与推送证书。",
+      "l2_slug": "blog/ssl-certificate-validity-200-days/",
+      "l2_kicker": "技术文章",
+      "l2_title": "SSL 证书有效期缩短至 200 天",
+      "l2_desc": "证书续签频率翻倍，DNS 的 API 支持因此更重要。",
+      "l3_slug": "cdn/",
+      "l3_kicker": "核心服务",
+      "l3_title": "CDN 内容分发网络",
+      "l3_desc": "域名指向 CDN 节点后的加速与 DDoS 防护。"
+    }
+  },
   "article_china_latency": {
     "date": "2026-08-19",
     "date_display": "2026 年 8 月 19 日",
@@ -899,7 +1021,10 @@
       "title": "参考资料",
       "s1": "iThome — 中国电信 CN2 骨干介绍，面向大陆的虚拟主机空间不可不知道",
       "s2": "腾讯云开发者社区 — 163 骨干网 / CN2 GT / CN2 GIA 线路的含义与区别",
-      "s3": "GitHub: china-net/Internationally-connected — 中国的国际网络互联状态介绍"
+      "s3": "GitHub: china-net/Internationally-connected — 中国的国际网络互联状态介绍",
+      "u1": "https://www.ithome.com.tw/pr/142378",
+      "u2": "https://cloud.tencent.com/developer/article/1606871",
+      "u3": "https://github.com/china-net/Internationally-connected"
     },
     "cta": {
       "href": "speedtest/",
@@ -1015,9 +1140,12 @@
     },
     "sources": {
       "title": "参考资料",
-      "s1": "CA/Browser Forum — Ballot SC081v3: Introduce Schedule of Reducing Validity and Data Reuse Periods",
-      "s2": "DigiCert — TLS Certificate Lifetimes Will Officially Reduce to 47 Days",
-      "s3": "Sectigo — Certificate Expiration Risk: 200 Day Validity Starts March 15"
+      "s1": "DigiCert — TLS Certificate Lifetimes Will Officially Reduce to 47 Days",
+      "s2": "Sectigo — 47-Day SSL Certificate Lifespan Approved: It's Time to Automate",
+      "s3": "GlobalSign — A Complete 47-day SSL/TLS Certificate Validity Q&A",
+      "u1": "https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days",
+      "u2": "https://www.sectigo.com/47-day-ssl",
+      "u3": "https://www.globalsign.com/en/blog/navigating-the-47-day-ssl-tls-certificate-validity-era"
     },
     "cta": {
       "href": "ssl/",
@@ -1133,9 +1261,12 @@
     },
     "sources": {
       "title": "参考资料",
-      "s1": "Uptime Institute — Tier Classification System",
-      "s2": "ScalaHosting — How to Select the CPU and RAM for Your Web Hosting VPS",
-      "s3": "软件玩家 — 虚拟主机怎么挑？主机商不会告诉你的事"
+      "s1": "ScalaHosting — How to Select the CPU and RAM for Your Web Hosting VPS",
+      "s2": "软件玩家 — 虚拟主机怎么挑？主机商不会告诉你的事",
+      "s3": "战国策集团 — VPS 主机推荐：台湾 VPS 品牌费用比较",
+      "u1": "https://www.scalahosting.com/blog/how-to-select-the-cpu-and-ram-for-your-web-hosting-vps/",
+      "u2": "https://pcrookie.com/how_to_choose_web_hosting/",
+      "u3": "https://www.nss.com.tw/vps-hosting-taiwan-2025"
     },
     "cta": {
       "href": "vps/",
@@ -1253,7 +1384,10 @@
       "title": "参考资料",
       "s1": "Uptime Institute — Tier Classification System",
       "s2": "CoreSite — Breaking Down Data Center Tier Level Classifications",
-      "s3": "远传企业服务 — IDC是什么？企业如何评估是否需要IDC机房及挑选关键"
+      "s3": "Wikipedia — Data center tiers",
+      "u1": "https://uptimeinstitute.com/tiers",
+      "u2": "https://www.coresite.com/blog/breaking-down-data-center-tiers-classifications",
+      "u3": "https://en.wikipedia.org/wiki/Data_center_tiers"
     },
     "cta": {
       "href": "idc/",

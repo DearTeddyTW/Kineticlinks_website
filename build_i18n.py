@@ -16,6 +16,7 @@ LANGS = [
 # Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
 # listed on the blog index. content_key is looked up in the locale JSON.
 ARTICLES = [
+    {'slug': 'domain-name-guide', 'content_key': 'article_domain_guide'},
     {'slug': 'china-network-latency', 'content_key': 'article_china_latency'},
     {'slug': 'vps-buying-guide', 'content_key': 'article_vps_guide'},
     {'slug': 'idc-explained', 'content_key': 'article_idc_explained'},
@@ -172,6 +173,21 @@ def build():
             if page['content_key']:
                 page_content = translations.get(page['content_key'], {})
                 flat.update(flatten_dict(page_content, parent_key='page'))
+
+                # 聯盟連結必須標 rel="sponsored"，否則 Google 視為未揭露的付費連結
+                cta_href = (page_content.get('cta') or {}).get('href', '')
+                if cta_href.startswith('http'):
+                    flat['cta_href_full'] = cta_href
+                    flat['cta_attrs'] = ' target="_blank" rel="sponsored noopener"'
+                else:
+                    flat['cta_href_full'] = f"{lang['lang_path']}{cta_href}"
+                    flat['cta_attrs'] = ''
+
+                disclosure = (page_content.get('disclosure') or '').strip()
+                flat['affiliate_disclosure'] = (
+                    f'                <aside class="affiliate-note">{disclosure}</aside>\n'
+                    if disclosure else ''
+                )
 
             out_html = render(templates[page['template']], flat)
 
