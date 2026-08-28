@@ -16,6 +16,7 @@ LANGS = [
 # Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
 # listed on the blog index. content_key is looked up in the locale JSON.
 ARTICLES = [
+    {'slug': 'domain-transfer-guide', 'content_key': 'article_domain_transfer'},
     {'slug': 'domain-name-guide', 'content_key': 'article_domain_guide'},
     {'slug': 'china-network-latency', 'content_key': 'article_china_latency'},
     {'slug': 'vps-buying-guide', 'content_key': 'article_vps_guide'},
