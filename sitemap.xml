@@ -82,6 +82,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.kineticlinks.net/blog/certificate-expiry-monitoring/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/certificate-expiry-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/certificate-expiry-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/certificate-expiry-monitoring/" />
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.kineticlinks.net/blog/domain-transfer-guide/</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/domain-transfer-guide/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/domain-transfer-guide/" />
@@ -137,7 +147,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/ssl-certificate-validity-200-days/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/ssl-certificate-validity-200-days/" />
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -222,6 +232,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/certificate-expiry-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/certificate-expiry-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/certificate-expiry-monitoring/" />
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.kineticlinks.net/en/blog/domain-transfer-guide/</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/domain-transfer-guide/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/domain-transfer-guide/" />
@@ -277,7 +297,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/ssl-certificate-validity-200-days/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/ssl-certificate-validity-200-days/" />
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -362,6 +382,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.kineticlinks.net/zh-cn/blog/certificate-expiry-monitoring/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/certificate-expiry-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/certificate-expiry-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/certificate-expiry-monitoring/" />
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.kineticlinks.net/zh-cn/blog/domain-transfer-guide/</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/domain-transfer-guide/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/domain-transfer-guide/" />
@@ -417,7 +447,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/ssl-certificate-validity-200-days/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/ssl-certificate-validity-200-days/" />
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

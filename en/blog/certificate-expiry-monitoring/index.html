@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Certificate Expiry Monitoring | Why Auto-Renewal Still Breaks</title>
+    <meta name="title" content="Certificate Expiry Monitoring | Why Auto-Renewal Still Breaks">
+    <meta name="description" content="A successful renewal doesn't mean your site is fine. What four kinds of monitoring catch and miss, three ways renewal succeeds but still breaks, tiered alert thresholds, and the only check that proves users are unaffected.">
+    <meta name="keywords" content="certificate expiry monitoring, SSL certificate monitoring, certificate alerts, auto-renewal failure, certificate deployment, TLS monitoring">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/certificate-expiry-monitoring/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/certificate-expiry-monitoring/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/certificate-expiry-monitoring/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/">
+    <meta property="og:title" content="Certificate Expiry Monitoring | Why Auto-Renewal Still Breaks">
+    <meta property="og:description" content="A successful renewal doesn't mean your site is fine. What four kinds of monitoring catch and miss, three ways renewal succeeds but still breaks, tiered alert thresholds, and the only check that proves users are unaffected.">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-08-28">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/">
+    <meta property="twitter:title" content="Certificate Expiry Monitoring | Why Auto-Renewal Still Breaks">
+    <meta property="twitter:description" content="A successful renewal doesn't mean your site is fine. What four kinds of monitoring catch and miss, three ways renewal succeeds but still breaks, tiered alert thresholds, and the only check that proves users are unaffected.">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Certificate Monitoring: A Successful Renewal Doesn't Mean Users Got the New Certificate",
+      "description": "A successful renewal doesn't mean your site is fine. What four kinds of monitoring catch and miss, three ways renewal succeeds but still breaks, tiered alert thresholds, and the only check that proves users are unaffected.",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-08-28",
+      "dateModified": "2026-08-28",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kineticlinks.net/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.kineticlinks.net/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Certificate Monitoring: A Successful Renewal Doesn't Mean Users Got the New Certificate",
+          "item": "https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/en/#home">Home</a>
+                <a href="/en/#services">Services</a>
+                <a href="/en/#platforms">Platforms</a>
+                <a href="/en/blog/">Blog</a>
+                <a href="/en/#about">About</a>
+                <a href="/en/#contact" class="btn btn-outline">Contact</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">English ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/certificate-expiry-monitoring/">繁體中文</a>
+                        <a href="/en/blog/certificate-expiry-monitoring/">English</a>
+                        <a href="/zh-cn/blog/certificate-expiry-monitoring/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="Open menu"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/en/">Home</a>
+            <span>/</span>
+            <a href="/en/blog/">Blog</a>
+            <span>/</span>
+            <span class="current">Certificate Expiry Monitoring</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">Certificate Management</div>
+                <h1>Certificate Monitoring: A Successful Renewal Doesn't Mean Users Got the New Certificate</h1>
+                <div class="article-meta">
+                    <time datetime="2026-08-28">August 28, 2026</time>
+                    <span class="dot">·</span>
+                    <span>8 min read</span>
+                </div>
+                <p class="article-lead">Once ACME automation is in place, most people stop thinking about certificates. Certificate incidents don't disappear though — they change shape: the renewal log says success, the CA portal shows issued, and users still get a browser warning. The reason is that **a successful renewal and a certificate actually being served are two independent things**, and most monitoring only watches the first.</p>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>"Renewal Succeeded" and "Everything's Fine" Are Different Claims</h2>
+                <p>A full certificate update has four stages: request from the CA, complete domain validation, deploy the new certificate to every TLS endpoint, and confirm users actually receive it. ACME tooling handles **the first two**; the third depends on your configuration; and almost nothing does the fourth for you automatically.</p>
+                <p>That's where the gap opens. A renewal log reading `success` means the certificate was obtained, not that it's being served. Deployment and reload still sit in between, and a failure at either never shows up in the renewal log.</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Approach</th>
+                                    <th>Catches</th>
+                                    <th>Misses</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>Calendar reminders / expiry list</td>
+                                    <td class="num">When action is due</td>
+                                    <td>Whether renewal succeeded or deployed</td>
+                                </tr>
+                                <tr class="">
+                                    <td>ACME renewal logs</td>
+                                    <td class="num">Whether a certificate was issued</td>
+                                    <td>Whether the new certificate is served</td>
+                                </tr>
+                                <tr class="">
+                                    <td>Local check of the certificate file</td>
+                                    <td class="num">What's on that particular machine</td>
+                                    <td>CDN nodes, load balancers, other endpoints</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>External connection check</td>
+                                    <td class="num">What users actually receive</td>
+                                    <td>(the only approach that proves nothing is wrong)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>What four monitoring approaches cover. Only the last proves users are unaffected.</figcaption>
+                </figure>
+
+                <p>The table below lays out four common monitoring approaches. The important column is the third — what each one **misses** is exactly where incidents happen.</p>
+
+                <!-- Why -->
+                <h2>Three Ways Renewal Succeeds and Things Still Break</h2>
+                <p>All three are real situations where the renewal log said success and users still saw warnings:</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>The new certificate didn't reach every endpoint</strong>
+                        <span>If traffic passes through a CDN, load balancer, or several backends, the certificate has to update everywhere TLS terminates. Updating the origin while CDN nodes still serve the old certificate is the most common version. Because only some nodes are affected, reports come in as "some people say it's broken, others say it's fine" — which makes diagnosis harder.</span>
+                    </li>
+                    <li>
+                        <strong>Certificate and private key don't match</strong>
+                        <span>The certificate is replaced but the private key isn't updated in step (or vice versa), and the service refuses to load it. This usually errors on reload — but if nobody is watching logs, the error gets swallowed and the service keeps running on the old certificate held in memory until it expires.</span>
+                    </li>
+                    <li>
+                        <strong>The file updated but the service never reloaded</strong>
+                        <span>This is the most insidious one. The certificate file on disk is new, a local check looks fine, but Nginx, Apache, or the application is still using the old certificate loaded into memory at startup. Everything looks correct from the server; connect from outside and you get a certificate about to expire.</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>What to Monitor, and When to Alert</h2>
+                <p>Those three situations point to one principle: **monitoring has to originate outside your network, against the address users actually reach**. A check from inside the facility or on the same machine cannot prove that every layer on the public path received the new certificate.</p>
+                <p>What you check shouldn't be limited to the expiry date either. Cover at minimum: expiry time, whether the chain is complete (a missing intermediate fails on some clients), whether the served certificate matches the expected domain, and — if you run multiple nodes — whether every node serves the same certificate.</p>
+
+                <aside class="callout">
+                    <p>Don't set a single alert threshold. In practice, alert at 60, 30, 14, 7, and 1 day before expiry. The first says "start paying attention"; the last says "handle this now". A single threshold either fires so early it gets dismissed as noise, or so late there's no time to diagnose a failure — and short-lived certificates already compress that diagnostic window.</p>
+                </aside>
+
+                <p>Also confirm where alerts land. Mail to an unwatched inbox, or a red dot on a dashboard nobody opens, is equivalent to no alerting at all. Route it into a channel the team actually reads, and name someone responsible.</p>
+
+                <!-- Why manual fails -->
+                <h2>Shorter Lifetimes Move This From Optional to Required</h2>
+                <p>When certificates lasted 398 days, you handled this once a year, and imperfect monitoring carried limited risk. Lifetimes dropped to 200 days in March 2026, fall to 100 days in 2027, and to 47 days in 2029 — roughly eight renewals a year at that point.</p>
+                <p>Every renewal is another chance to fail. Going from once a year to eight times a year means **the same failure rate produces eight times as many incidents**. That's why monitoring stops being a nice-to-have in the short-lifetime era and becomes automation's necessary counterpart: automation makes the frequency survivable, and monitoring is what confirms those automated updates actually took effect.</p>
+
+                <!-- How to respond -->
+                <h2>Three Layers of Implementation</h2>
+                <p>From the basics up, this can be built in stages:</p>
+
+                <h3>1. Scheduled external connection checks</h3>
+                <p>The basic version is a scheduled job that opens a TLS connection to each public domain, reads the certificate actually served, and compares the expiry date. On the command line, `openssl s_client -connect <domain>:443 -servername <domain>` shows exactly what the server returns. Wrap that in a schedule with threshold alerting and you've already prevented most incidents.</p>
+
+                <h3>2. Cover every TLS endpoint</h3>
+                <p>List everywhere TLS terminates — origin, each CDN node, load balancers, API domains, mail servers. Checking only the main domain misses the rest. If your CDN has multiple nodes, ideally run checks from several regions, since node certificate updates don't always propagate in step.</p>
+
+                <h3>3. Fold deployment verification into the automation</h3>
+                <p>The fuller approach makes verification part of the renewal flow itself: after issuing and deploying, automatically confirm from outside that the new certificate is being served, and treat a failed confirmation as a failure of the whole flow. Only then does "renewal succeeded" actually mean "users have the new certificate" rather than "the file downloaded".</p>
+
+                <!-- Checklist -->
+                <h2>Three Things to Establish First</h2>
+                <p>Before configuring anything, take stock of these:</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>Enumerate every TLS endpoint</strong>
+                        <span>Main domain, subdomains, API, mail, and each CDN or load balancer node. Endpoints missing from the list won't be monitored, and they'll show users warnings just the same.</span>
+                    </li>
+                    <li>
+                        <strong>Confirm checks run from outside</strong>
+                        <span>The monitoring host must sit outside your network, taking the path users take. Internal checks skip the CDN and external load balancers — precisely the layer most often missed.</span>
+                    </li>
+                    <li>
+                        <strong>Confirm someone sees the alerts</strong>
+                        <span>Name the channel and the owner. Once thresholds are set, fire a test alert and confirm delivery — plenty of monitoring setups discover on incident day that the notification path broke long ago.</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>In Summary</h2>
+                <p>Certificate automation solves "renewing is tedious". Monitoring solves "did the renewal actually take effect". Both need to exist — automation without monitoring hands a high-frequency process entirely to a mechanism nobody checks, and shrinking lifetimes are pushing that frequency toward eight times a year.</p>
+                <p>There's a single question that tells you whether your monitoring is sufficient: **does it check the certificate file, or what users actually receive?** If it's the former, it catches none of the three situations described above.</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>Sources</h3>
+                    <ul>
+                        <li><a href="https://kb.wisc.edu/122433" target="_blank" rel="noopener">University of Wisconsin KB — SSL/TLS Certificates: Certificate Management Best Practices</a></li>
+                        <li><a href="https://blog.kodu.cloud/ssl-certificate-renewal-mistakes/" target="_blank" rel="noopener">Kodu Cloud — 7 SSL Certificate Renewal Mistakes to Avoid</a></li>
+                        <li><a href="https://uptimerobot.com/ssl-monitoring/" target="_blank" rel="noopener">UptimeRobot — SSL Monitoring</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>Related Services & Reading</h2>
+                <p class="article-related-desc">These pages connect directly to the topic above</p>
+                <div class="related-grid">
+                    <a href="/en/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>SSL Lifetimes Cut to 200 Days</h3>
+                        <p>Why renewals reach eight a year by 2029 — the reason monitoring now matters.</p>
+                    </a>
+                    <a href="/en/ssl/" class="related-card glass-panel">
+                        <span class="related-kicker">Platform</span>
+                        <h3>SSL Certificate Automation</h3>
+                        <p>DNS validation and multi-CDN push, from issuance through deployment.</p>
+                    </a>
+                    <a href="/en/cdn/" class="related-card glass-panel">
+                        <span class="related-kicker">Service</span>
+                        <h3>CDN Content Delivery Network</h3>
+                        <p>On multi-node architectures the certificate must update everywhere TLS terminates.</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>Issue and Deploy in One Flow</h2>
+                <p>The Kineticlinks SSL automation platform pushes certificates to CDN nodes on issuance, removing the "renewed but not deployed" gap.</p>
+                <div class="hero-actions">
+                    <a href="/en/ssl/" class="btn btn-primary">Explore the SSL Platform</a>
+                    <a href="/en/blog/" class="btn btn-secondary">Back to all articles</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/en/cdn/">Content Delivery Network (CDN)</a>
+                    <a href="/en/vps/">Virtual Private Server (VPS)</a>
+                    <a href="/en/idc/">IDC Construction</a>
+                    <a href="/en/cloud/">Public Cloud Solutions</a>
+                    <a href="/en/blog/">Blog</a>
+                    <a href="/en/#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js" defer></script>
+</body>
+
+</html>
