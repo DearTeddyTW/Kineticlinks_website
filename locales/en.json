@@ -815,7 +815,7 @@
     "title": "You Don't Buy a Domain, You Rent It: Renewals, Transfer Locks, and Redemption Fees",
     "excerpt": "Most people treat registering a domain as buying a name. It's a lease — and the things that actually go wrong are never in year one: renewal pricing, transfer locks, and redemption fees running past $80.",
     "lead": "Registering a domain looks like the simplest step in standing up a site — pick a name, pay, done. But a domain is rented, not bought, and the lease terms sit where you'll never read them. The three common ways people get burned all happen later: the renewal price multiplies, you find you can't move registrars, or you miss a renewal and it costs real money to get back.",
-    "disclosure": "",
+    "disclosure": "This article contains affiliate links. If you register through a link here, Kineticlinks may earn a referral commission at no additional cost to you. This does not affect the technical content or recommendations — the caveats raised above, including renewal pricing and transfer-out policy, apply to every registrar equally.",
     "seo": {
       "title": "Domain Registration Guide | Renewals, Transfer Locks & Fees",
       "description": "A domain is rented, not bought. The four stages of the expiry lifecycle, how to pick a TLD, what actually differs between registrars, ICANN's 60-day transfer lock, and three protective settings.",
@@ -906,7 +906,7 @@
       "u3": "https://domainincite.com/30891-icann-to-kill-off-60-day-domain-transfer-lock"
     },
     "cta": {
-      "href": "https://www.namecheap.com/",
+      "href": "https://namecheap.pxf.io/zzD7Be",
       "title": "Registering or Transferring a Domain?",
       "desc": "Namecheap includes free lifetime WHOIS privacy and a full DNS management API, which makes it a common pick where automation matters.",
       "button": "Go to Namecheap"
