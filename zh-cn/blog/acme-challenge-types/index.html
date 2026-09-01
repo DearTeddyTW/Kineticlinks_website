@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>ACME 验证方式怎么选｜HTTP-01、DNS-01 与通配符证书 - Kineticlinks</title>
+    <meta name="title" content="ACME 验证方式怎么选｜HTTP-01、DNS-01 与通配符证书 - Kineticlinks">
+    <meta name="description" content="证书自动化卡关多半是验证方式选错。完整说明 HTTP-01、DNS-01、TLS-ALPN-01 的运作原理与限制、为何通配符证书只能用 DNS-01，以及 CDN 架构下的实际考量。">
+    <meta name="keywords" content="ACME 验证, HTTP-01, DNS-01, TLS-ALPN-01, 通配符证书, Certbot, 证书自动续签, Let's Encrypt">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/acme-challenge-types/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/acme-challenge-types/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/acme-challenge-types/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/">
+    <meta property="og:title" content="ACME 验证方式怎么选｜HTTP-01、DNS-01 与通配符证书 - Kineticlinks">
+    <meta property="og:description" content="证书自动化卡关多半是验证方式选错。完整说明 HTTP-01、DNS-01、TLS-ALPN-01 的运作原理与限制、为何通配符证书只能用 DNS-01，以及 CDN 架构下的实际考量。">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-09-01">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/">
+    <meta property="twitter:title" content="ACME 验证方式怎么选｜HTTP-01、DNS-01 与通配符证书 - Kineticlinks">
+    <meta property="twitter:description" content="证书自动化卡关多半是验证方式选错。完整说明 HTTP-01、DNS-01、TLS-ALPN-01 的运作原理与限制、为何通配符证书只能用 DNS-01，以及 CDN 架构下的实际考量。">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "证书自动化真正的卡关点：三种 ACME 验证方式该怎么选",
+      "description": "证书自动化卡关多半是验证方式选错。完整说明 HTTP-01、DNS-01、TLS-ALPN-01 的运作原理与限制、为何通配符证书只能用 DNS-01，以及 CDN 架构下的实际考量。",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-09-01",
+      "dateModified": "2026-09-01",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.kineticlinks.net/zh-cn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "技术文章",
+          "item": "https://www.kineticlinks.net/zh-cn/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "证书自动化真正的卡关点：三种 ACME 验证方式该怎么选",
+          "item": "https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/zh-cn/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/zh-cn/#home">首页</a>
+                <a href="/zh-cn/#services">服务项目</a>
+                <a href="/zh-cn/#platforms">平台产品</a>
+                <a href="/zh-cn/blog/">技术文章</a>
+                <a href="/zh-cn/#about">关于我们</a>
+                <a href="/zh-cn/#contact" class="btn btn-outline">联系我们</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">简体中文 ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/acme-challenge-types/">繁體中文</a>
+                        <a href="/en/blog/acme-challenge-types/">English</a>
+                        <a href="/zh-cn/blog/acme-challenge-types/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="打开菜单"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/zh-cn/">首页</a>
+            <span>/</span>
+            <a href="/zh-cn/blog/">技术文章</a>
+            <span>/</span>
+            <span class="current">ACME 验证方式怎么选</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">证书管理</div>
+                <h1>证书自动化真正的卡关点：三种 ACME 验证方式该怎么选</h1>
+                <div class="article-meta">
+                    <time datetime="2026-09-01">2026 年 9 月 1 日</time>
+                    <span class="dot">·</span>
+                    <span>约 9 分钟</span>
+                </div>
+                <p class="article-lead">「装个 Certbot 就好了」是证书自动化最常见的误解。工具本身不难装，真正会卡住的是**验证方式（challenge）选错**——而且问题往往不是在安装当下暴露，是在你把服务放到 CDN 后面、或第一次要申请通配符证书时才爆出来。这三种验证方式各有硬性限制，选之前必须先知道。</p>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>卡关的不是工具，是验证方式</h2>
+                <p>ACME 协议要求你证明「这个域名确实由你控制」，才会签发证书。证明的方式就是 challenge，目前主要有三种，分别要求你在不同的地方放上指定内容：网站的特定路径、DNS 的 TXT 记录，或 TLS 握手过程。</p>
+                <p>多数教程会直接给一行 Certbot 命令，默认用 HTTP-01。在单机、直接对外的架构上这确实能跑。但只要架构复杂一点——前面加了 CDN、后面有多台服务器、或需要通配符证书——HTTP-01 就会开始出问题，而错误信息通常不会直接告诉你「你该换一种验证方式」。</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>验证方式</th>
+                                    <th>运作原理</th>
+                                    <th>限制</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>HTTP-01</td>
+                                    <td class="num">在网站特定路径放文件供 CA 读取</td>
+                                    <td>需开放 80 端口；CDN 或多节点易失败；不支持通配符</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>DNS-01</td>
+                                    <td class="num">在域名下建立指定的 TXT 记录</td>
+                                    <td>唯一支持通配符；需 DNS API 权限与传播等待</td>
+                                </tr>
+                                <tr class="">
+                                    <td>TLS-ALPN-01</td>
+                                    <td class="num">TLS 握手时返回特制证书</td>
+                                    <td>需直接掌控 443 端口；CDN 前置时不适用；不支持通配符</td>
+                                </tr>
+                                <tr class="">
+                                    <td>DNS-PERSIST-01</td>
+                                    <td class="num">一次建立常设授权记录，之后免重复更新</td>
+                                    <td>IETF 草案阶段，生产可用性请以官方公告为准</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>三种 ACME 验证方式的运作原理与硬性限制。第四行是尚未进入生产的新方式。</figcaption>
+                </figure>
+
+                <p>下表把三种验证方式的原理与限制列清楚。第三栏才是选择的依据。</p>
+
+                <!-- Why -->
+                <h2>HTTP-01 会失败的三种情境</h2>
+                <p>HTTP-01 要求 CA 能从公开网络读到你服务器上的特定文件。以下三种架构会让这个前提不成立：</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>服务在 CDN 后面</strong>
+                        <span>CA 连过来时会先碰到 CDN 节点，而验证文件放在源站。除非 CDN 配置了对 `/.well-known/acme-challenge/` 路径的回源穿透，否则 CA 读到的是 CDN 的缓存或 404。这是跨境团队最常遇到的状况，因为跨境服务几乎都会挂 CDN。</span>
+                    </li>
+                    <li>
+                        <strong>后端有多台服务器</strong>
+                        <span>负载均衡器会把 CA 的请求随机分到某一台，但验证文件只写在发起申请的那台上。命中率是 1/N，而且每次重试都可能落到不同机器。这种失败特别恼人，因为它是间歇性的——有时候会过，有时候不会。</span>
+                    </li>
+                    <li>
+                        <strong>80 端口不对外开放</strong>
+                        <span>基于安全策略关闭 80 端口、或服务本来就只在内网提供的环境，HTTP-01 完全无法运作。这也包含只想对特定来源开放的 API 域名。</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>DNS-01 的代价</h2>
+                <p>DNS-01 解决了上面所有问题——它不需要 CA 连到你的服务器，只要能查到 DNS 记录就好。所以无论你在 CDN 后面、有几台机器、开不开 80 端口，都不影响。这也是为什么多节点架构几乎都会走 DNS-01。</p>
+                <p>但它有自己的成本。每次签发都要在 DNS 新增一笔 TXT 记录，代表自动化流程必须持有 **DNS 服务商的 API 凭证**。这些凭证要分发到会执行续签的每一台机器或 CI 环境，而 DNS 权限是高风险的——拿到它等同于能改你的域名指向。</p>
+
+                <aside class="callout">
+                    <p>另一个实务痛点是传播延迟。TXT 记录写入后不会立刻在所有 DNS 服务器上可见，自动化流程必须等待，而等多久没有标准答案。等太短会验证失败，等太长则拉长整个流程。这在证书有效期缩短、续签次数变多之后，累积起来相当可观。</p>
+                </aside>
+
+                <p>值得注意的是，Let's Encrypt 在 2026 年 2 月提出了 **DNS-PERSIST-01**，改用一笔绑定特定 ACME 账户的**常设授权记录**，签发时不必再反复更新 DNS。这正好针对上述两个痛点。不过它目前仍是 IETF 草案，官方公告的生产上线时程为 2026 年第二季，实际是否已可用请以 Let's Encrypt 官方信息为准——同时要注意，授权变成常设之后，保护 ACME 账户密钥的重要性也随之提高。</p>
+
+                <!-- Why manual fails -->
+                <h2>通配符证书的硬限制</h2>
+                <p>如果你需要 `*.example.com` 这种通配符证书，选择题直接结束：**只有 DNS-01 可以**。HTTP-01 与 TLS-ALPN-01 都无法签发通配符证书，这不是配置问题，是协议层面的限制。</p>
+                <p>这件事值得提早知道，因为它会反过来决定你的 DNS 供应商选择。如果你的域名注册商或 DNS 服务不提供 API，就无法自动化 DNS-01，也就拿不到自动续签的通配符证书——只能每次手动加 TXT 记录。在有效期已缩短到 200 天、未来将降至 47 天的情况下，手动处理不是可行的长期方案。</p>
+
+                <!-- How to respond -->
+                <h2>三个实作决策</h2>
+                <p>实务上，选择可以收敛成三个问题：</p>
+
+                <h3>一、你的架构前面有没有 CDN 或负载均衡？</h3>
+                <p>有的话直接排除 HTTP-01 与 TLS-ALPN-01，走 DNS-01。硬要用 HTTP-01 也不是不行（配置 CDN 对验证路径穿透回源），但那等于多维护一条特例规则，而且 CDN 配置变动时容易被无意间破坏。</p>
+
+                <h3>二、你需不需要通配符证书？</h3>
+                <p>需要就只能 DNS-01，没有其他选项。如果子域名数量固定且不多，也可以考虑用 SAN 证书列举所有域名来避开通配符——但每新增一个子域名就要重新签发，这个取舍要依实际变动频率决定。</p>
+
+                <h3>三、你的 DNS 供应商有没有 API？</h3>
+                <p>这是走 DNS-01 的前提。挑选注册商或 DNS 服务时，API 支持应该是必要条件而非加分项。同时要规划凭证的存放方式——不要把 DNS API 密钥直接写在每台服务器的配置文件里，那会让证书自动化本身变成安全弱点。</p>
+
+                <!-- Checklist -->
+                <h2>开始前该确认的三件事</h2>
+                <p>在动手配置自动化之前，先把这三项确认清楚：</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>列出所有需要证书的域名与子域名</strong>
+                        <span>这决定你需不需要通配符，也就决定了验证方式。事后才发现要加通配符，等于整套流程重做。</span>
+                    </li>
+                    <li>
+                        <strong>确认 DNS 供应商的 API 能力与权限粒度</strong>
+                        <span>除了有没有 API，也要看能不能发行「只能改特定域名 TXT 记录」的受限令牌。全权限密钥分发在多台机器上，风险太高。</span>
+                    </li>
+                    <li>
+                        <strong>确认验证与部署是分开的两件事</strong>
+                        <span>拿到证书只是第一步。证书还要送到每一个终止 TLS 的位置并生效，这部分 ACME 工具通常不管。动手前先想清楚部署那一段谁负责。</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>小结</h2>
+                <p>证书自动化的难点从来不是安装 Certbot，而是在你的实际架构下选对验证方式。判断逻辑其实很短：**前面有 CDN 或需要通配符，就是 DNS-01**；而走 DNS-01 就必须先确保 DNS 供应商有 API，并妥善管理那把密钥。</p>
+                <p>如果你不想自己处理 DNS API 密钥的分发与多节点部署，我们的 SSL 证书自动化平台把验证与推送整合在同一个流程里——DNS 验证由平台完成，签发后直接推送到各 CDN 节点，省掉自行维护证书分发的环节。</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>参考资料</h3>
+                    <ul>
+                        <li><a href="https://letsencrypt.org/docs/challenge-types/" target="_blank" rel="noopener">Let's Encrypt — Challenge Types</a></li>
+                        <li><a href="https://letsencrypt.org/2026/02/18/dns-persist-01" target="_blank" rel="noopener">Let's Encrypt — DNS-PERSIST-01: A New Model for DNS-based Challenge Validation</a></li>
+                        <li><a href="https://www.ietf.org/archive/id/draft-ietf-acme-dns-persist-00.html" target="_blank" rel="noopener">IETF — ACME Persistent DNS Challenge (Internet-Draft)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>延伸阅读与相关服务</h2>
+                <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
+                <div class="related-grid">
+                    <a href="/zh-cn/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
+                        <span class="related-kicker">技术文章</span>
+                        <h3>证书到期监控</h3>
+                        <p>自动化跑起来之后，怎么确认它真的生效了。</p>
+                    </a>
+                    <a href="/zh-cn/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
+                        <span class="related-kicker">技术文章</span>
+                        <h3>SSL 证书有效期缩短至 200 天</h3>
+                        <p>为什么手动处理证书已经不是可行的长期方案。</p>
+                    </a>
+                    <a href="/zh-cn/ssl/" class="related-card glass-panel">
+                        <span class="related-kicker">平台产品</span>
+                        <h3>SSL 证书自动化平台</h3>
+                        <p>DNS 自动验证与多节点推送，不需自行分发 API 密钥。</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>不想自己管 DNS API 密钥与多节点部署？</h2>
+                <p>Kineticlinks SSL 证书自动化平台整合 DNS 验证与多品牌 CDN 推送，从验证到部署一次完成。</p>
+                <div class="hero-actions">
+                    <a href="/zh-cn/ssl/" class="btn btn-primary">了解 SSL 自动化平台</a>
+                    <a href="/zh-cn/blog/" class="btn btn-secondary">返回文章列表</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/zh-cn/cdn/">CDN 内容分发网络</a>
+                    <a href="/zh-cn/vps/">VPS 虚拟专属主机</a>
+                    <a href="/zh-cn/idc/">IDC 机房建置</a>
+                    <a href="/zh-cn/cloud/">公有云架构解决方案</a>
+                    <a href="/zh-cn/blog/">技术文章</a>
+                    <a href="/zh-cn/#contact">联系我们</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js" defer></script>
+</body>
+
+</html>

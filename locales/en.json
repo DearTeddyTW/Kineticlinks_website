@@ -806,6 +806,128 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_acme_challenges": {
+    "date": "2026-09-01",
+    "date_display": "September 1, 2026",
+    "category": "Certificate Management",
+    "reading_time": "9 min read",
+    "short_title": "Choosing an ACME Challenge",
+    "title": "Where Certificate Automation Actually Breaks: Choosing an ACME Challenge Type",
+    "excerpt": "People assume installing Certbot means automation is done. What actually blocks them is picking the wrong challenge type — HTTP-01 fails behind a CDN, and wildcard certificates can't use it at all.",
+    "disclosure": "",
+    "lead": "\"Just install Certbot\" is the most common misconception about certificate automation. The tooling isn't the hard part. What actually blocks people is **choosing the wrong challenge type** — and the problem usually doesn't surface at install time. It surfaces when you put the service behind a CDN, or the first time you request a wildcard certificate. Each of the three challenge types has hard constraints worth knowing before you commit.",
+    "seo": {
+      "title": "Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards",
+      "description": "Certificate automation usually stalls on the challenge type. How HTTP-01, DNS-01, and TLS-ALPN-01 work and where each fails, why wildcards require DNS-01, and what a CDN changes.",
+      "keywords": "ACME challenge, HTTP-01, DNS-01, TLS-ALPN-01, wildcard certificate, Certbot, automatic certificate renewal, Let's Encrypt"
+    },
+    "s1": {
+      "title": "The Blocker Is the Challenge Type, Not the Tool",
+      "p1": "The ACME protocol requires you to prove you control a domain before it issues a certificate. That proof is the challenge, and there are three main types, each asking you to place specified content somewhere different: a path on your website, a DNS TXT record, or the TLS handshake itself.",
+      "p2": "Most tutorials hand you a single Certbot command, which defaults to HTTP-01. On a single machine facing the internet directly, that works. But add any architectural complexity — a CDN in front, several backends, or a need for wildcards — and HTTP-01 starts failing, usually without an error that says \"you should be using a different challenge type\".",
+      "p3": "The table below sets out how each works and what constrains it. The third column is what should drive the decision."
+    },
+    "table": {
+      "caption": "How the three ACME challenge types work and their hard constraints. The fourth row is a newer type not yet in production.",
+      "col1": "Challenge",
+      "col2": "How it works",
+      "col3": "Constraints",
+      "r1c1": "HTTP-01",
+      "r1c2": "Serve a file at a specific path for the CA to fetch",
+      "r1c3": "Needs port 80 open; fails behind CDNs and multi-node setups; no wildcards",
+      "r1_class": "",
+      "r2c1": "DNS-01",
+      "r2c2": "Publish a specified TXT record under the domain",
+      "r2c3": "Only option for wildcards; needs DNS API access and propagation waits",
+      "r2_class": "is-current",
+      "r3c1": "TLS-ALPN-01",
+      "r3c2": "Serve a special certificate during the TLS handshake",
+      "r3c3": "Needs direct control of port 443; unusable behind a CDN; no wildcards",
+      "r3_class": "",
+      "r4c1": "DNS-PERSIST-01",
+      "r4c2": "One standing authorisation record, no repeated updates",
+      "r4c3": "IETF draft; check Let's Encrypt for current production availability",
+      "r4_class": ""
+    },
+    "s2": {
+      "title": "Three Situations Where HTTP-01 Fails",
+      "intro": "HTTP-01 requires the CA to read a specific file from your server over the public internet. These three architectures break that assumption:",
+      "r1_title": "The service sits behind a CDN",
+      "r1_desc": "The CA's request hits a CDN node first, while the validation file lives on the origin. Unless the CDN is configured to pass `/.well-known/acme-challenge/` through to the origin, the CA gets a cached response or a 404. This is the most common case for teams in Taiwan and Hong Kong, since cross-border services almost always front with a CDN.",
+      "r2_title": "There are multiple backend servers",
+      "r2_desc": "The load balancer routes the CA's request to one machine at random, but the validation file only exists on whichever machine initiated the request. That's a 1-in-N hit rate, and each retry may land somewhere different. This failure is particularly irritating because it's intermittent — sometimes it passes, sometimes it doesn't.",
+      "r3_title": "Port 80 isn't publicly open",
+      "r3_desc": "Where security policy closes port 80, or the service is only offered internally, HTTP-01 simply cannot work. That includes API domains you only want reachable from specific sources."
+    },
+    "s3": {
+      "title": "What DNS-01 Costs You",
+      "p1": "DNS-01 solves all of the above — it never needs the CA to reach your server, only to resolve a DNS record. So it doesn't matter whether you're behind a CDN, how many machines you run, or whether port 80 is open. That's why multi-node architectures almost always end up on DNS-01.",
+      "p2": "It carries its own cost, though. Every issuance requires adding a TXT record, meaning your automation must hold **DNS provider API credentials**. Those credentials have to reach every machine or CI environment that performs renewals — and DNS access is high-risk, since holding it means being able to repoint your domain.",
+      "callout": "The other practical pain is propagation delay. A TXT record isn't instantly visible on every DNS server, so automation has to wait, and there's no standard answer for how long. Too short and validation fails; too long and every issuance drags. As lifetimes shorten and renewals multiply, that accumulated waiting becomes significant.",
+      "p3": "Worth noting: in February 2026 Let's Encrypt proposed **DNS-PERSIST-01**, which replaces the repeated updates with a single standing authorisation record bound to a specific ACME account — aimed squarely at both pain points above. It remains an IETF draft; the announced production target was Q2 2026, so check Let's Encrypt's own announcements for current availability. Note too that once authorisation is persistent, protecting the ACME account key matters correspondingly more."
+    },
+    "s4": {
+      "title": "The Hard Constraint on Wildcards",
+      "p1": "If you need a wildcard like `*.example.com`, the decision is already made: **only DNS-01 can issue one**. Neither HTTP-01 nor TLS-ALPN-01 can produce wildcard certificates. This isn't a configuration issue; it's a protocol-level constraint.",
+      "p2": "It's worth knowing early, because it works backwards into your choice of DNS provider. If your registrar or DNS service offers no API, you can't automate DNS-01, which means no automatically-renewed wildcard — you'd be adding TXT records by hand every time. With lifetimes already at 200 days and heading to 47, manual handling isn't a viable long-term plan."
+    },
+    "s5": {
+      "title": "Three Implementation Decisions",
+      "intro": "In practice the choice reduces to three questions:",
+      "l1_title": "1. Is there a CDN or load balancer in front?",
+      "l1_desc": "If so, rule out HTTP-01 and TLS-ALPN-01 and use DNS-01. You can force HTTP-01 to work by configuring the CDN to pass the validation path through to origin, but that's an extra special-case rule to maintain, and it's easily broken by unrelated CDN changes.",
+      "l2_title": "2. Do you need wildcard certificates?",
+      "l2_desc": "If yes, DNS-01 is the only option. If your subdomains are few and stable, a SAN certificate listing them all avoids wildcards — but every new subdomain then requires reissuing, so weigh that against how often they change.",
+      "l3_title": "3. Does your DNS provider expose an API?",
+      "l3_desc": "This is the prerequisite for DNS-01. When choosing a registrar or DNS service, treat API support as a requirement rather than a bonus. Plan credential storage too — putting DNS API keys directly in config files on every server turns your certificate automation into a security weakness."
+    },
+    "s6": {
+      "title": "Three Things to Establish First",
+      "intro": "Before configuring anything, settle these:",
+      "c1_title": "List every domain and subdomain needing a certificate",
+      "c1_desc": "This determines whether you need wildcards, which determines the challenge type. Discovering the wildcard requirement afterwards means rebuilding the whole flow.",
+      "c2_title": "Check your DNS provider's API and permission granularity",
+      "c2_desc": "Beyond whether an API exists, check whether it can issue scoped tokens limited to TXT records on specific domains. Full-access keys distributed across machines carry too much risk.",
+      "c3_title": "Recognise that validation and deployment are separate",
+      "c3_desc": "Obtaining the certificate is step one. It still has to reach every TLS-terminating endpoint and take effect, which ACME tooling generally doesn't handle. Decide who owns that half before you start."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "The hard part of certificate automation was never installing Certbot; it's picking the right challenge for your actual architecture. The logic is short: **a CDN in front or a wildcard requirement means DNS-01** — and committing to DNS-01 means first confirming your DNS provider has an API, then managing that key carefully.",
+      "p2": "If you'd rather not handle DNS API key distribution and multi-node deployment yourself, our SSL automation platform combines validation and delivery in one flow: the platform performs DNS validation and pushes issued certificates straight to CDN nodes."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "Let's Encrypt — Challenge Types",
+      "u1": "https://letsencrypt.org/docs/challenge-types/",
+      "s2": "Let's Encrypt — DNS-PERSIST-01: A New Model for DNS-based Challenge Validation",
+      "u2": "https://letsencrypt.org/2026/02/18/dns-persist-01",
+      "s3": "IETF — ACME Persistent DNS Challenge (Internet-Draft)",
+      "u3": "https://www.ietf.org/archive/id/draft-ietf-acme-dns-persist-00.html"
+    },
+    "cta": {
+      "href": "ssl/",
+      "title": "Rather Not Manage DNS API Keys and Multi-Node Deployment?",
+      "desc": "The Kineticlinks SSL automation platform combines DNS validation with multi-brand CDN push — validation through deployment in one flow.",
+      "button": "Explore the SSL Platform"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/certificate-expiry-monitoring/",
+      "l1_kicker": "Article",
+      "l1_title": "Certificate Expiry Monitoring",
+      "l1_desc": "Once automation runs, how you confirm it actually took effect.",
+      "l2_slug": "blog/ssl-certificate-validity-200-days/",
+      "l2_kicker": "Article",
+      "l2_title": "SSL Lifetimes Cut to 200 Days",
+      "l2_desc": "Why handling certificates by hand stopped being viable.",
+      "l3_slug": "ssl/",
+      "l3_kicker": "Platform",
+      "l3_title": "SSL Certificate Automation",
+      "l3_desc": "DNS validation and multi-node push without distributing API keys yourself."
+    }
+  },
   "article_cert_monitoring": {
     "date": "2026-08-28",
     "date_display": "August 28, 2026",
@@ -922,10 +1044,10 @@
       "l2_kicker": "Platform",
       "l2_title": "SSL Certificate Automation",
       "l2_desc": "DNS validation and multi-CDN push, from issuance through deployment.",
-      "l3_slug": "cdn/",
-      "l3_kicker": "Service",
-      "l3_title": "CDN Content Delivery Network",
-      "l3_desc": "On multi-node architectures the certificate must update everywhere TLS terminates."
+      "l3_slug": "blog/acme-challenge-types/",
+      "l3_kicker": "Article",
+      "l3_title": "Choosing an ACME Challenge",
+      "l3_desc": "The first decision before automating: HTTP-01, DNS-01, or TLS-ALPN-01."
     }
   },
   "article_domain_transfer": {

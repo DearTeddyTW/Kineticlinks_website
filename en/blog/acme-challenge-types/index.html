@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards</title>
+    <meta name="title" content="Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards">
+    <meta name="description" content="Certificate automation usually stalls on the challenge type. How HTTP-01, DNS-01, and TLS-ALPN-01 work and where each fails, why wildcards require DNS-01, and what a CDN changes.">
+    <meta name="keywords" content="ACME challenge, HTTP-01, DNS-01, TLS-ALPN-01, wildcard certificate, Certbot, automatic certificate renewal, Let's Encrypt">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/en/blog/acme-challenge-types/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/acme-challenge-types/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/acme-challenge-types/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/acme-challenge-types/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/en/blog/acme-challenge-types/">
+    <meta property="og:title" content="Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards">
+    <meta property="og:description" content="Certificate automation usually stalls on the challenge type. How HTTP-01, DNS-01, and TLS-ALPN-01 work and where each fails, why wildcards require DNS-01, and what a CDN changes.">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-09-01">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/en/blog/acme-challenge-types/">
+    <meta property="twitter:title" content="Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards">
+    <meta property="twitter:description" content="Certificate automation usually stalls on the challenge type. How HTTP-01, DNS-01, and TLS-ALPN-01 work and where each fails, why wildcards require DNS-01, and what a CDN changes.">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Where Certificate Automation Actually Breaks: Choosing an ACME Challenge Type",
+      "description": "Certificate automation usually stalls on the challenge type. How HTTP-01, DNS-01, and TLS-ALPN-01 work and where each fails, why wildcards require DNS-01, and what a CDN changes.",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-09-01",
+      "dateModified": "2026-09-01",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/en/blog/acme-challenge-types/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kineticlinks.net/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.kineticlinks.net/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Where Certificate Automation Actually Breaks: Choosing an ACME Challenge Type",
+          "item": "https://www.kineticlinks.net/en/blog/acme-challenge-types/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/en/#home">Home</a>
+                <a href="/en/#services">Services</a>
+                <a href="/en/#platforms">Platforms</a>
+                <a href="/en/blog/">Blog</a>
+                <a href="/en/#about">About</a>
+                <a href="/en/#contact" class="btn btn-outline">Contact</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">English ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/acme-challenge-types/">繁體中文</a>
+                        <a href="/en/blog/acme-challenge-types/">English</a>
+                        <a href="/zh-cn/blog/acme-challenge-types/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="Open menu"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/en/">Home</a>
+            <span>/</span>
+            <a href="/en/blog/">Blog</a>
+            <span>/</span>
+            <span class="current">Choosing an ACME Challenge</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">Certificate Management</div>
+                <h1>Where Certificate Automation Actually Breaks: Choosing an ACME Challenge Type</h1>
+                <div class="article-meta">
+                    <time datetime="2026-09-01">September 1, 2026</time>
+                    <span class="dot">·</span>
+                    <span>9 min read</span>
+                </div>
+                <p class="article-lead">"Just install Certbot" is the most common misconception about certificate automation. The tooling isn't the hard part. What actually blocks people is **choosing the wrong challenge type** — and the problem usually doesn't surface at install time. It surfaces when you put the service behind a CDN, or the first time you request a wildcard certificate. Each of the three challenge types has hard constraints worth knowing before you commit.</p>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>The Blocker Is the Challenge Type, Not the Tool</h2>
+                <p>The ACME protocol requires you to prove you control a domain before it issues a certificate. That proof is the challenge, and there are three main types, each asking you to place specified content somewhere different: a path on your website, a DNS TXT record, or the TLS handshake itself.</p>
+                <p>Most tutorials hand you a single Certbot command, which defaults to HTTP-01. On a single machine facing the internet directly, that works. But add any architectural complexity — a CDN in front, several backends, or a need for wildcards — and HTTP-01 starts failing, usually without an error that says "you should be using a different challenge type".</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Challenge</th>
+                                    <th>How it works</th>
+                                    <th>Constraints</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>HTTP-01</td>
+                                    <td class="num">Serve a file at a specific path for the CA to fetch</td>
+                                    <td>Needs port 80 open; fails behind CDNs and multi-node setups; no wildcards</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>DNS-01</td>
+                                    <td class="num">Publish a specified TXT record under the domain</td>
+                                    <td>Only option for wildcards; needs DNS API access and propagation waits</td>
+                                </tr>
+                                <tr class="">
+                                    <td>TLS-ALPN-01</td>
+                                    <td class="num">Serve a special certificate during the TLS handshake</td>
+                                    <td>Needs direct control of port 443; unusable behind a CDN; no wildcards</td>
+                                </tr>
+                                <tr class="">
+                                    <td>DNS-PERSIST-01</td>
+                                    <td class="num">One standing authorisation record, no repeated updates</td>
+                                    <td>IETF draft; check Let's Encrypt for current production availability</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>How the three ACME challenge types work and their hard constraints. The fourth row is a newer type not yet in production.</figcaption>
+                </figure>
+
+                <p>The table below sets out how each works and what constrains it. The third column is what should drive the decision.</p>
+
+                <!-- Why -->
+                <h2>Three Situations Where HTTP-01 Fails</h2>
+                <p>HTTP-01 requires the CA to read a specific file from your server over the public internet. These three architectures break that assumption:</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>The service sits behind a CDN</strong>
+                        <span>The CA's request hits a CDN node first, while the validation file lives on the origin. Unless the CDN is configured to pass `/.well-known/acme-challenge/` through to the origin, the CA gets a cached response or a 404. This is the most common case for teams in Taiwan and Hong Kong, since cross-border services almost always front with a CDN.</span>
+                    </li>
+                    <li>
+                        <strong>There are multiple backend servers</strong>
+                        <span>The load balancer routes the CA's request to one machine at random, but the validation file only exists on whichever machine initiated the request. That's a 1-in-N hit rate, and each retry may land somewhere different. This failure is particularly irritating because it's intermittent — sometimes it passes, sometimes it doesn't.</span>
+                    </li>
+                    <li>
+                        <strong>Port 80 isn't publicly open</strong>
+                        <span>Where security policy closes port 80, or the service is only offered internally, HTTP-01 simply cannot work. That includes API domains you only want reachable from specific sources.</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>What DNS-01 Costs You</h2>
+                <p>DNS-01 solves all of the above — it never needs the CA to reach your server, only to resolve a DNS record. So it doesn't matter whether you're behind a CDN, how many machines you run, or whether port 80 is open. That's why multi-node architectures almost always end up on DNS-01.</p>
+                <p>It carries its own cost, though. Every issuance requires adding a TXT record, meaning your automation must hold **DNS provider API credentials**. Those credentials have to reach every machine or CI environment that performs renewals — and DNS access is high-risk, since holding it means being able to repoint your domain.</p>
+
+                <aside class="callout">
+                    <p>The other practical pain is propagation delay. A TXT record isn't instantly visible on every DNS server, so automation has to wait, and there's no standard answer for how long. Too short and validation fails; too long and every issuance drags. As lifetimes shorten and renewals multiply, that accumulated waiting becomes significant.</p>
+                </aside>
+
+                <p>Worth noting: in February 2026 Let's Encrypt proposed **DNS-PERSIST-01**, which replaces the repeated updates with a single standing authorisation record bound to a specific ACME account — aimed squarely at both pain points above. It remains an IETF draft; the announced production target was Q2 2026, so check Let's Encrypt's own announcements for current availability. Note too that once authorisation is persistent, protecting the ACME account key matters correspondingly more.</p>
+
+                <!-- Why manual fails -->
+                <h2>The Hard Constraint on Wildcards</h2>
+                <p>If you need a wildcard like `*.example.com`, the decision is already made: **only DNS-01 can issue one**. Neither HTTP-01 nor TLS-ALPN-01 can produce wildcard certificates. This isn't a configuration issue; it's a protocol-level constraint.</p>
+                <p>It's worth knowing early, because it works backwards into your choice of DNS provider. If your registrar or DNS service offers no API, you can't automate DNS-01, which means no automatically-renewed wildcard — you'd be adding TXT records by hand every time. With lifetimes already at 200 days and heading to 47, manual handling isn't a viable long-term plan.</p>
+
+                <!-- How to respond -->
+                <h2>Three Implementation Decisions</h2>
+                <p>In practice the choice reduces to three questions:</p>
+
+                <h3>1. Is there a CDN or load balancer in front?</h3>
+                <p>If so, rule out HTTP-01 and TLS-ALPN-01 and use DNS-01. You can force HTTP-01 to work by configuring the CDN to pass the validation path through to origin, but that's an extra special-case rule to maintain, and it's easily broken by unrelated CDN changes.</p>
+
+                <h3>2. Do you need wildcard certificates?</h3>
+                <p>If yes, DNS-01 is the only option. If your subdomains are few and stable, a SAN certificate listing them all avoids wildcards — but every new subdomain then requires reissuing, so weigh that against how often they change.</p>
+
+                <h3>3. Does your DNS provider expose an API?</h3>
+                <p>This is the prerequisite for DNS-01. When choosing a registrar or DNS service, treat API support as a requirement rather than a bonus. Plan credential storage too — putting DNS API keys directly in config files on every server turns your certificate automation into a security weakness.</p>
+
+                <!-- Checklist -->
+                <h2>Three Things to Establish First</h2>
+                <p>Before configuring anything, settle these:</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>List every domain and subdomain needing a certificate</strong>
+                        <span>This determines whether you need wildcards, which determines the challenge type. Discovering the wildcard requirement afterwards means rebuilding the whole flow.</span>
+                    </li>
+                    <li>
+                        <strong>Check your DNS provider's API and permission granularity</strong>
+                        <span>Beyond whether an API exists, check whether it can issue scoped tokens limited to TXT records on specific domains. Full-access keys distributed across machines carry too much risk.</span>
+                    </li>
+                    <li>
+                        <strong>Recognise that validation and deployment are separate</strong>
+                        <span>Obtaining the certificate is step one. It still has to reach every TLS-terminating endpoint and take effect, which ACME tooling generally doesn't handle. Decide who owns that half before you start.</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>In Summary</h2>
+                <p>The hard part of certificate automation was never installing Certbot; it's picking the right challenge for your actual architecture. The logic is short: **a CDN in front or a wildcard requirement means DNS-01** — and committing to DNS-01 means first confirming your DNS provider has an API, then managing that key carefully.</p>
+                <p>If you'd rather not handle DNS API key distribution and multi-node deployment yourself, our SSL automation platform combines validation and delivery in one flow: the platform performs DNS validation and pushes issued certificates straight to CDN nodes.</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>Sources</h3>
+                    <ul>
+                        <li><a href="https://letsencrypt.org/docs/challenge-types/" target="_blank" rel="noopener">Let's Encrypt — Challenge Types</a></li>
+                        <li><a href="https://letsencrypt.org/2026/02/18/dns-persist-01" target="_blank" rel="noopener">Let's Encrypt — DNS-PERSIST-01: A New Model for DNS-based Challenge Validation</a></li>
+                        <li><a href="https://www.ietf.org/archive/id/draft-ietf-acme-dns-persist-00.html" target="_blank" rel="noopener">IETF — ACME Persistent DNS Challenge (Internet-Draft)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>Related Services & Reading</h2>
+                <p class="article-related-desc">These pages connect directly to the topic above</p>
+                <div class="related-grid">
+                    <a href="/en/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>Certificate Expiry Monitoring</h3>
+                        <p>Once automation runs, how you confirm it actually took effect.</p>
+                    </a>
+                    <a href="/en/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>SSL Lifetimes Cut to 200 Days</h3>
+                        <p>Why handling certificates by hand stopped being viable.</p>
+                    </a>
+                    <a href="/en/ssl/" class="related-card glass-panel">
+                        <span class="related-kicker">Platform</span>
+                        <h3>SSL Certificate Automation</h3>
+                        <p>DNS validation and multi-node push without distributing API keys yourself.</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>Rather Not Manage DNS API Keys and Multi-Node Deployment?</h2>
+                <p>The Kineticlinks SSL automation platform combines DNS validation with multi-brand CDN push — validation through deployment in one flow.</p>
+                <div class="hero-actions">
+                    <a href="/en/ssl/" class="btn btn-primary">Explore the SSL Platform</a>
+                    <a href="/en/blog/" class="btn btn-secondary">Back to all articles</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/en/cdn/">Content Delivery Network (CDN)</a>
+                    <a href="/en/vps/">Virtual Private Server (VPS)</a>
+                    <a href="/en/idc/">IDC Construction</a>
+                    <a href="/en/cloud/">Public Cloud Solutions</a>
+                    <a href="/en/blog/">Blog</a>
+                    <a href="/en/#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js" defer></script>
+</body>
+
+</html>
