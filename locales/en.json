@@ -806,6 +806,128 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_domain_hijacking": {
+    "date": "2026-09-06",
+    "date_display": "September 6, 2026",
+    "category": "Domain Management",
+    "reading_time": "9 min read",
+    "short_title": "Domain Hijacking Defence",
+    "title": "Your Transfer Lock Won't Stop a Hijack: What Domain Security Settings Actually Cover",
+    "excerpt": "Most people enable transfer lock and feel protected. But that lock lives inside your registrar account — and an attacker who takes the account simply switches it off.",
+    "disclosure": "",
+    "lead": "In almost every domain hijacking case, the victim had transfer lock enabled. The problem is where that lock sits: **it's a setting inside your registrar account, and the account is what's being attacked**. Once someone is in, turning the lock off is one click. This covers what four common protections actually cover, and why some widely-recommended measures don't defend against account-level compromise at all.",
+    "seo": {
+      "title": "Domain Hijacking Defence | Why Transfer Lock Isn't Enough",
+      "description": "Transfer lock lives inside the registrar account and falls with it. What transfer lock, 2FA, DNSSEC and registry lock each cover, the early warning signs of a hijack, and how fast you must act.",
+      "keywords": "domain hijacking, transfer lock, registry lock, DNSSEC, domain security, stolen domain, clientTransferProhibited, two-factor authentication"
+    },
+    "s1": {
+      "title": "There Are Two Locks, and Most People Only Have the Outer One",
+      "p1": "Domain transfer locking exists at two levels with confusingly similar names and very different strength. The toggle in a normal registrar dashboard is **clientTransferProhibited**, set and removed by the registrar. The other is a **registry lock**, enforced by the registry that runs the top-level domain.",
+      "p2": "The difference is who can remove it. The first can be removed from inside your account; the second cannot. An attacker holding your registrar credentials can switch off clientTransferProhibited themselves, whereas lifting a registry lock requires registrar staff to request it from the registry and pass out-of-band verification — in practice often a phone call with a passphrase.",
+      "p3": "The table lays out four common measures. The third column is the point — what each one **fails to stop** is where the breach actually happens."
+    },
+    "table": {
+      "caption": "What four domain protections cover. Only registry lock survives a compromised account.",
+      "col1": "Measure",
+      "col2": "Stops",
+      "col3": "Doesn't stop",
+      "r1c1": "Transfer lock (registrar level)",
+      "r1c2": "Unauthorised transfer requests",
+      "r1c3": "Removal by whoever holds the account",
+      "r1_class": "",
+      "r2c1": "Two-factor authentication",
+      "r2c2": "Direct login from a leaked password",
+      "r2c3": "Social engineering against support staff",
+      "r2_class": "",
+      "r3c1": "DNSSEC",
+      "r3c2": "Tampering with DNS responses in transit",
+      "r3c3": "Account-level changes (no help at all)",
+      "r3_class": "",
+      "r4c1": "Registry lock",
+      "r4c2": "Changes even when the account is breached",
+      "r4c3": "(manual unlock; usually enterprise registrars only)",
+      "r4_class": "is-current"
+    },
+    "s2": {
+      "title": "Three Early Signs People Miss",
+      "intro": "A hijack is rarely instantaneous — there's usually an interval where it can be stopped. Three signals worth verifying immediately:",
+      "r1_title": "Password reset emails you didn't request",
+      "r1_desc": "A reset notification from your registrar that you didn't trigger means someone is attempting to take the account. The email alone doesn't mean they've succeeded, but it's the earliest signal. Check at the same time whether the account's contact address has been changed — attackers often swap the email first, after which no further notifications reach you.",
+      "r2_title": "Contact details or nameservers changed",
+      "r2_desc": "WHOIS contact data or nameserver settings changing without your action is clear evidence of compromise. Nameserver changes are especially dangerous, since they redirect traffic while the domain remains registered to you — which is why people often assume \"the domain is still mine, so it must be fine\".",
+      "r3_title": "Auth codes or transfer notices you didn't initiate",
+      "r3_desc": "A notification that an EPP auth code was issued, or a transfer confirmation you didn't request, means a transfer is already in motion. Timing is critical here — if the losing registrar takes no action, the transfer auto-approves after five days, and those five days are your window to stop it."
+    },
+    "s3": {
+      "title": "Why Registrar-Level Protection Isn't Enough",
+      "p1": "Those three signs share a property: **they all occur after the attacker is already inside the account**. And once the account is lost, every setting within it is changeable — transfer lock, contact address, nameservers, all of it. That's why \"I have the lock enabled\" isn't a security guarantee.",
+      "p2": "Two-factor authentication genuinely raises the bar and belongs on every domain. But it defends against leaked passwords, not social engineering — an attacker impersonating the registrant to support staff bypasses people, not systems. In hijacks of corporate domains, that path is far from rare.",
+      "callout": "If it does happen, speed decides the outcome. Practical experience puts most successful recoveries within 24 to 48 hours, with odds falling the longer it takes. So on discovering something wrong, the order is: contact your registrar's abuse or security team immediately and ask them to lock the domain, while preserving evidence (WHOIS history, screenshots, timeline, proof of ownership) — rather than trying to change settings back yourself first. If it has already been transferred out, contact the gaining registrar too, and consider ICANN's Transfer Dispute Resolution Policy.",
+      "p3": "As for registry lock, it's the only measure that survives account compromise — at the cost of flexibility. Unlocking is a manual process taking hours to a business day, which suits domains that rarely change but absolutely cannot fail. **Note that this service is typically offered by enterprise or corporate registrars; most consumer registrars don't provide it**, so confirm availability before relying on it."
+    },
+    "s4": {
+      "title": "What DNSSEC Is Commonly Mistaken For",
+      "p1": "DNSSEC appears on nearly every domain security checklist, but the problem it solves isn't hijacking. Its purpose is to let resolvers verify that a DNS response genuinely came from the domain's authoritative servers and wasn't altered in transit — it defends against cache poisoning and man-in-the-middle tampering.",
+      "p2": "But if an attacker logs into your registrar account and openly changes the NS records, those new records get signed correctly too. **DNSSEC raises no alarm, because from the protocol's perspective that was a legitimate change made by the domain owner**. So enable DNSSEC, but don't count it as part of your anti-hijacking defence — they address different threats."
+    },
+    "s5": {
+      "title": "Three Layers of Defence",
+      "intro": "By cost and effectiveness, build in this order:",
+      "l1_title": "1. Treat the registrar account as critical",
+      "l1_desc": "This is the most basic and most effective layer, because it's the actual attack surface. Enable two-factor authentication, use a unique password, and **make sure the account's contact address isn't hosted on the domain itself** — otherwise a problem with the domain leaves you unable to receive the verification email, a deadlock.",
+      "l2_title": "2. Enable every available lock, and re-check regularly",
+      "l2_desc": "Transfer lock doesn't stop account compromise, but it does stop unauthorised transfer requests, and it costs nothing. The key is **re-checking** — locks get \"temporarily\" removed during a migration and never restored. Put it on a quarterly checklist.",
+      "l3_title": "3. Evaluate registry lock for critical domains",
+      "l3_desc": "If losing a domain would halt operations, registry lock is worth evaluating. It makes routine changes cumbersome, which is precisely the point. If this matters to you, confirm your registrar offers it before committing."
+    },
+    "s6": {
+      "title": "Three Things to Check Right Now",
+      "intro": "No tooling required — a registrar login is enough:",
+      "c1_title": "Whether domain status includes clientTransferProhibited",
+      "c1_desc": "Visible in the Domain Status field of a WHOIS lookup. Its absence means transfer lock is off, and anyone obtaining an auth code can initiate a transfer.",
+      "c2_title": "Whether the account email is independent of this domain",
+      "c2_desc": "If the registrar account uses `admin@your-domain`, and that domain is what you're protecting, you have a circular dependency. Moving to an independent address costs nothing and matters enormously.",
+      "c3_title": "Whether two-factor authentication is on",
+      "c3_desc": "Check **both** the registrar account and the email account it's tied to. Protecting the registrar while leaving the mailbox on a password alone leaves a password-reset bypass wide open."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "The real weak point in domain security isn't the domain — it's **the account that manages it**. Transfer lock and DNSSEC each have value, but neither defends against account takeover, and account takeover is the actual route in the overwhelming majority of hijacks.",
+      "p2": "So the priority is: protect the registrar account as you would any critical credential (2FA, independent email, unique password), then consider the rest. If you're evaluating registrars, support for these options is worth comparing — our domain registration guide covers the other criteria worth weighing."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "Wikipedia — Registrar-Lock",
+      "u1": "https://en.wikipedia.org/wiki/Registrar-Lock",
+      "s2": "NameSilo — Inside a Domain Hijack Attempt",
+      "u2": "https://www.namesilo.com/blog/en/domain-security/inside-a-domain-hijack-attempt-how-attackers-exploit-registrar-gaps-and-how-to-stop-them",
+      "s3": "ICANN — Transfer Policy",
+      "u3": "https://www.icann.org/resources/pages/about-transfer-policy-2017-10-10-en"
+    },
+    "cta": {
+      "href": "blog/domain-name-guide/",
+      "title": "What Else Should You Compare in a Registrar?",
+      "desc": "Beyond security options, renewal pricing, transfer policy and DNS management all shape long-term cost. Our registration guide works through each.",
+      "button": "Read the Domain Guide"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/domain-name-guide/",
+      "l1_kicker": "Article",
+      "l1_title": "You Don't Buy a Domain",
+      "l1_desc": "Renewal pricing, transfer locks and the redemption period.",
+      "l2_slug": "blog/domain-transfer-guide/",
+      "l2_kicker": "Article",
+      "l2_title": "Domain Transfers Explained",
+      "l2_desc": "Auth codes, five-day auto-approval, and why transfers don't cause downtime.",
+      "l3_slug": "ssl/",
+      "l3_kicker": "Platform",
+      "l3_title": "SSL Certificate Automation",
+      "l3_desc": "DNS control is also a prerequisite for automating certificates."
+    }
+  },
   "article_quality_monitoring": {
     "date": "2026-09-06",
     "date_display": "September 6, 2026",

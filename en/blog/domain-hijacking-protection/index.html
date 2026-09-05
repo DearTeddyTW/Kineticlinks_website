@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Domain Hijacking Defence | Why Transfer Lock Isn't Enough</title>
+    <meta name="title" content="Domain Hijacking Defence | Why Transfer Lock Isn't Enough">
+    <meta name="description" content="Transfer lock lives inside the registrar account and falls with it. What transfer lock, 2FA, DNSSEC and registry lock each cover, the early warning signs of a hijack, and how fast you must act.">
+    <meta name="keywords" content="domain hijacking, transfer lock, registry lock, DNSSEC, domain security, stolen domain, clientTransferProhibited, two-factor authentication">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/en/blog/domain-hijacking-protection/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/domain-hijacking-protection/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/domain-hijacking-protection/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/domain-hijacking-protection/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/domain-hijacking-protection/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/en/blog/domain-hijacking-protection/">
+    <meta property="og:title" content="Domain Hijacking Defence | Why Transfer Lock Isn't Enough">
+    <meta property="og:description" content="Transfer lock lives inside the registrar account and falls with it. What transfer lock, 2FA, DNSSEC and registry lock each cover, the early warning signs of a hijack, and how fast you must act.">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-09-06">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/en/blog/domain-hijacking-protection/">
+    <meta property="twitter:title" content="Domain Hijacking Defence | Why Transfer Lock Isn't Enough">
+    <meta property="twitter:description" content="Transfer lock lives inside the registrar account and falls with it. What transfer lock, 2FA, DNSSEC and registry lock each cover, the early warning signs of a hijack, and how fast you must act.">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Your Transfer Lock Won't Stop a Hijack: What Domain Security Settings Actually Cover",
+      "description": "Transfer lock lives inside the registrar account and falls with it. What transfer lock, 2FA, DNSSEC and registry lock each cover, the early warning signs of a hijack, and how fast you must act.",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-09-06",
+      "dateModified": "2026-09-06",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/en/blog/domain-hijacking-protection/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kineticlinks.net/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.kineticlinks.net/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Your Transfer Lock Won't Stop a Hijack: What Domain Security Settings Actually Cover",
+          "item": "https://www.kineticlinks.net/en/blog/domain-hijacking-protection/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/en/#home">Home</a>
+                <a href="/en/#services">Services</a>
+                <a href="/en/#platforms">Platforms</a>
+                <a href="/en/blog/">Blog</a>
+                <a href="/en/#about">About</a>
+                <a href="/en/#contact" class="btn btn-outline">Contact</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">English ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/domain-hijacking-protection/">繁體中文</a>
+                        <a href="/en/blog/domain-hijacking-protection/">English</a>
+                        <a href="/zh-cn/blog/domain-hijacking-protection/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="Open menu"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/en/">Home</a>
+            <span>/</span>
+            <a href="/en/blog/">Blog</a>
+            <span>/</span>
+            <span class="current">Domain Hijacking Defence</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">Domain Management</div>
+                <h1>Your Transfer Lock Won't Stop a Hijack: What Domain Security Settings Actually Cover</h1>
+                <div class="article-meta">
+                    <time datetime="2026-09-06">September 6, 2026</time>
+                    <span class="dot">·</span>
+                    <span>9 min read</span>
+                </div>
+                <p class="article-lead">In almost every domain hijacking case, the victim had transfer lock enabled. The problem is where that lock sits: **it's a setting inside your registrar account, and the account is what's being attacked**. Once someone is in, turning the lock off is one click. This covers what four common protections actually cover, and why some widely-recommended measures don't defend against account-level compromise at all.</p>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>There Are Two Locks, and Most People Only Have the Outer One</h2>
+                <p>Domain transfer locking exists at two levels with confusingly similar names and very different strength. The toggle in a normal registrar dashboard is **clientTransferProhibited**, set and removed by the registrar. The other is a **registry lock**, enforced by the registry that runs the top-level domain.</p>
+                <p>The difference is who can remove it. The first can be removed from inside your account; the second cannot. An attacker holding your registrar credentials can switch off clientTransferProhibited themselves, whereas lifting a registry lock requires registrar staff to request it from the registry and pass out-of-band verification — in practice often a phone call with a passphrase.</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Measure</th>
+                                    <th>Stops</th>
+                                    <th>Doesn't stop</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>Transfer lock (registrar level)</td>
+                                    <td class="num">Unauthorised transfer requests</td>
+                                    <td>Removal by whoever holds the account</td>
+                                </tr>
+                                <tr class="">
+                                    <td>Two-factor authentication</td>
+                                    <td class="num">Direct login from a leaked password</td>
+                                    <td>Social engineering against support staff</td>
+                                </tr>
+                                <tr class="">
+                                    <td>DNSSEC</td>
+                                    <td class="num">Tampering with DNS responses in transit</td>
+                                    <td>Account-level changes (no help at all)</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>Registry lock</td>
+                                    <td class="num">Changes even when the account is breached</td>
+                                    <td>(manual unlock; usually enterprise registrars only)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>What four domain protections cover. Only registry lock survives a compromised account.</figcaption>
+                </figure>
+
+                <p>The table lays out four common measures. The third column is the point — what each one **fails to stop** is where the breach actually happens.</p>
+
+                <!-- Why -->
+                <h2>Three Early Signs People Miss</h2>
+                <p>A hijack is rarely instantaneous — there's usually an interval where it can be stopped. Three signals worth verifying immediately:</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>Password reset emails you didn't request</strong>
+                        <span>A reset notification from your registrar that you didn't trigger means someone is attempting to take the account. The email alone doesn't mean they've succeeded, but it's the earliest signal. Check at the same time whether the account's contact address has been changed — attackers often swap the email first, after which no further notifications reach you.</span>
+                    </li>
+                    <li>
+                        <strong>Contact details or nameservers changed</strong>
+                        <span>WHOIS contact data or nameserver settings changing without your action is clear evidence of compromise. Nameserver changes are especially dangerous, since they redirect traffic while the domain remains registered to you — which is why people often assume "the domain is still mine, so it must be fine".</span>
+                    </li>
+                    <li>
+                        <strong>Auth codes or transfer notices you didn't initiate</strong>
+                        <span>A notification that an EPP auth code was issued, or a transfer confirmation you didn't request, means a transfer is already in motion. Timing is critical here — if the losing registrar takes no action, the transfer auto-approves after five days, and those five days are your window to stop it.</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>Why Registrar-Level Protection Isn't Enough</h2>
+                <p>Those three signs share a property: **they all occur after the attacker is already inside the account**. And once the account is lost, every setting within it is changeable — transfer lock, contact address, nameservers, all of it. That's why "I have the lock enabled" isn't a security guarantee.</p>
+                <p>Two-factor authentication genuinely raises the bar and belongs on every domain. But it defends against leaked passwords, not social engineering — an attacker impersonating the registrant to support staff bypasses people, not systems. In hijacks of corporate domains, that path is far from rare.</p>
+
+                <aside class="callout">
+                    <p>If it does happen, speed decides the outcome. Practical experience puts most successful recoveries within 24 to 48 hours, with odds falling the longer it takes. So on discovering something wrong, the order is: contact your registrar's abuse or security team immediately and ask them to lock the domain, while preserving evidence (WHOIS history, screenshots, timeline, proof of ownership) — rather than trying to change settings back yourself first. If it has already been transferred out, contact the gaining registrar too, and consider ICANN's Transfer Dispute Resolution Policy.</p>
+                </aside>
+
+                <p>As for registry lock, it's the only measure that survives account compromise — at the cost of flexibility. Unlocking is a manual process taking hours to a business day, which suits domains that rarely change but absolutely cannot fail. **Note that this service is typically offered by enterprise or corporate registrars; most consumer registrars don't provide it**, so confirm availability before relying on it.</p>
+
+                <!-- Why manual fails -->
+                <h2>What DNSSEC Is Commonly Mistaken For</h2>
+                <p>DNSSEC appears on nearly every domain security checklist, but the problem it solves isn't hijacking. Its purpose is to let resolvers verify that a DNS response genuinely came from the domain's authoritative servers and wasn't altered in transit — it defends against cache poisoning and man-in-the-middle tampering.</p>
+                <p>But if an attacker logs into your registrar account and openly changes the NS records, those new records get signed correctly too. **DNSSEC raises no alarm, because from the protocol's perspective that was a legitimate change made by the domain owner**. So enable DNSSEC, but don't count it as part of your anti-hijacking defence — they address different threats.</p>
+
+                <!-- How to respond -->
+                <h2>Three Layers of Defence</h2>
+                <p>By cost and effectiveness, build in this order:</p>
+
+                <h3>1. Treat the registrar account as critical</h3>
+                <p>This is the most basic and most effective layer, because it's the actual attack surface. Enable two-factor authentication, use a unique password, and **make sure the account's contact address isn't hosted on the domain itself** — otherwise a problem with the domain leaves you unable to receive the verification email, a deadlock.</p>
+
+                <h3>2. Enable every available lock, and re-check regularly</h3>
+                <p>Transfer lock doesn't stop account compromise, but it does stop unauthorised transfer requests, and it costs nothing. The key is **re-checking** — locks get "temporarily" removed during a migration and never restored. Put it on a quarterly checklist.</p>
+
+                <h3>3. Evaluate registry lock for critical domains</h3>
+                <p>If losing a domain would halt operations, registry lock is worth evaluating. It makes routine changes cumbersome, which is precisely the point. If this matters to you, confirm your registrar offers it before committing.</p>
+
+                <!-- Checklist -->
+                <h2>Three Things to Check Right Now</h2>
+                <p>No tooling required — a registrar login is enough:</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>Whether domain status includes clientTransferProhibited</strong>
+                        <span>Visible in the Domain Status field of a WHOIS lookup. Its absence means transfer lock is off, and anyone obtaining an auth code can initiate a transfer.</span>
+                    </li>
+                    <li>
+                        <strong>Whether the account email is independent of this domain</strong>
+                        <span>If the registrar account uses `admin@your-domain`, and that domain is what you're protecting, you have a circular dependency. Moving to an independent address costs nothing and matters enormously.</span>
+                    </li>
+                    <li>
+                        <strong>Whether two-factor authentication is on</strong>
+                        <span>Check **both** the registrar account and the email account it's tied to. Protecting the registrar while leaving the mailbox on a password alone leaves a password-reset bypass wide open.</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>In Summary</h2>
+                <p>The real weak point in domain security isn't the domain — it's **the account that manages it**. Transfer lock and DNSSEC each have value, but neither defends against account takeover, and account takeover is the actual route in the overwhelming majority of hijacks.</p>
+                <p>So the priority is: protect the registrar account as you would any critical credential (2FA, independent email, unique password), then consider the rest. If you're evaluating registrars, support for these options is worth comparing — our domain registration guide covers the other criteria worth weighing.</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>Sources</h3>
+                    <ul>
+                        <li><a href="https://en.wikipedia.org/wiki/Registrar-Lock" target="_blank" rel="noopener">Wikipedia — Registrar-Lock</a></li>
+                        <li><a href="https://www.namesilo.com/blog/en/domain-security/inside-a-domain-hijack-attempt-how-attackers-exploit-registrar-gaps-and-how-to-stop-them" target="_blank" rel="noopener">NameSilo — Inside a Domain Hijack Attempt</a></li>
+                        <li><a href="https://www.icann.org/resources/pages/about-transfer-policy-2017-10-10-en" target="_blank" rel="noopener">ICANN — Transfer Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>Related Services & Reading</h2>
+                <p class="article-related-desc">These pages connect directly to the topic above</p>
+                <div class="related-grid">
+                    <a href="/en/blog/domain-name-guide/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>You Don't Buy a Domain</h3>
+                        <p>Renewal pricing, transfer locks and the redemption period.</p>
+                    </a>
+                    <a href="/en/blog/domain-transfer-guide/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>Domain Transfers Explained</h3>
+                        <p>Auth codes, five-day auto-approval, and why transfers don't cause downtime.</p>
+                    </a>
+                    <a href="/en/ssl/" class="related-card glass-panel">
+                        <span class="related-kicker">Platform</span>
+                        <h3>SSL Certificate Automation</h3>
+                        <p>DNS control is also a prerequisite for automating certificates.</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>What Else Should You Compare in a Registrar?</h2>
+                <p>Beyond security options, renewal pricing, transfer policy and DNS management all shape long-term cost. Our registration guide works through each.</p>
+                <div class="hero-actions">
+                    <a href="/en/blog/domain-name-guide/" class="btn btn-primary">Read the Domain Guide</a>
+                    <a href="/en/blog/" class="btn btn-secondary">Back to all articles</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/en/cdn/">Content Delivery Network (CDN)</a>
+                    <a href="/en/vps/">Virtual Private Server (VPS)</a>
+                    <a href="/en/idc/">IDC Construction</a>
+                    <a href="/en/cloud/">Public Cloud Solutions</a>
+                    <a href="/en/ssl/">Automated SSL Platform</a>
+                    <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/blog/">Blog</a>
+                    <a href="/en/#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js" defer></script>
+</body>
+
+</html>
