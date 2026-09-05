@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>DNS 记录类型与 TTL 完整说明｜改了为何没生效 - Kineticlinks</title>
+    <meta name="title" content="DNS 记录类型与 TTL 完整说明｜改了为何没生效 - Kineticlinks">
+    <meta name="description" content="A、AAAA、CNAME、MX、TXT、NS 六种记录的用途与常见错误。说明 TTL 为何要在变更前调低、根域名不能用 CNAME 的原因，以及 ALIAS／CNAME 平坦化的替代方案。">
+    <meta name="keywords" content="DNS 记录, A 记录, CNAME, MX, TXT, NS, TTL, DNS 生效时间, 根域名 CNAME, ALIAS">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/zh-cn/blog/dns-record-types/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/dns-record-types/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/dns-record-types/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/dns-record-types/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/dns-record-types/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/zh-cn/blog/dns-record-types/">
+    <meta property="og:title" content="DNS 记录类型与 TTL 完整说明｜改了为何没生效 - Kineticlinks">
+    <meta property="og:description" content="A、AAAA、CNAME、MX、TXT、NS 六种记录的用途与常见错误。说明 TTL 为何要在变更前调低、根域名不能用 CNAME 的原因，以及 ALIAS／CNAME 平坦化的替代方案。">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-09-06">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/zh-cn/blog/dns-record-types/">
+    <meta property="twitter:title" content="DNS 记录类型与 TTL 完整说明｜改了为何没生效 - Kineticlinks">
+    <meta property="twitter:description" content="A、AAAA、CNAME、MX、TXT、NS 六种记录的用途与常见错误。说明 TTL 为何要在变更前调低、根域名不能用 CNAME 的原因，以及 ALIAS／CNAME 平坦化的替代方案。">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "改了 DNS 为什么没生效：记录类型、TTL 与根域名的硬限制",
+      "description": "A、AAAA、CNAME、MX、TXT、NS 六种记录的用途与常见错误。说明 TTL 为何要在变更前调低、根域名不能用 CNAME 的原因，以及 ALIAS／CNAME 平坦化的替代方案。",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-09-06",
+      "dateModified": "2026-09-06",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/zh-cn/blog/dns-record-types/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.kineticlinks.net/zh-cn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "技术文章",
+          "item": "https://www.kineticlinks.net/zh-cn/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "改了 DNS 为什么没生效：记录类型、TTL 与根域名的硬限制",
+          "item": "https://www.kineticlinks.net/zh-cn/blog/dns-record-types/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/zh-cn/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/zh-cn/#home">首页</a>
+                <a href="/zh-cn/#services">服务项目</a>
+                <a href="/zh-cn/#platforms">平台产品</a>
+                <a href="/zh-cn/blog/">技术文章</a>
+                <a href="/zh-cn/#about">关于我们</a>
+                <a href="/zh-cn/#contact" class="btn btn-outline">联系我们</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">简体中文 ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/dns-record-types/">繁體中文</a>
+                        <a href="/en/blog/dns-record-types/">English</a>
+                        <a href="/zh-cn/blog/dns-record-types/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="打开菜单"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/zh-cn/">首页</a>
+            <span>/</span>
+            <a href="/zh-cn/blog/">技术文章</a>
+            <span>/</span>
+            <span class="current">DNS 记录类型</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">域名管理</div>
+                <h1>改了 DNS 为什么没生效：记录类型、TTL 与根域名的硬限制</h1>
+                <div class="article-meta">
+                    <time datetime="2026-09-06">2026 年 9 月 6 日</time>
+                    <span class="dot">·</span>
+                    <span>约 9 分钟</span>
+                </div>
+                <p class="article-lead">「DNS 改了但还没生效，应该还在传播吧？」这句话有一半是对的，但它掩盖了真正的原因。DNS 没有一个叫做「传播」的机制——**变更之所以要等，是因为旧记录还在各地的缓存里，而缓存多久由你自己设定的 TTL 决定**。这代表一件反直觉的事：想让变更快点生效，动作要在变更**之前**做。这篇说明六种常用记录的用途、TTL 的正确用法，以及根域名那个绕不过去的限制。</p>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>六种你会实际用到的记录</h2>
+                <p>DNS 记录类型有数十种，但日常运维会碰到的大约就这六种。它们各自回答一个不同的问题：这个名称指向哪个 IP、这个名称是不是另一个名称的别名、这个域名的邮件该送去哪、以及谁有权回答这个域名的查询。</p>
+                <p>搞混类型是最常见的错误来源，而且症状往往不直观——例如把应该用 CNAME 的地方写成 A 记录，设置当下完全正常，直到对方换 IP 才突然坏掉，而那可能是几个月后的事。</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>记录类型</th>
+                                    <th>用途</th>
+                                    <th>常见错误</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>A</td>
+                                    <td class="num">把名称指向 IPv4 地址</td>
+                                    <td>对方 IP 会变时仍写死 A 记录</td>
+                                </tr>
+                                <tr class="">
+                                    <td>AAAA</td>
+                                    <td class="num">把名称指向 IPv6 地址</td>
+                                    <td>只设 A 没设 AAAA，IPv6 用户走不到</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>CNAME</td>
+                                    <td class="num">让名称成为另一个名称的别名</td>
+                                    <td>设在根域名——协议不允许</td>
+                                </tr>
+                                <tr class="">
+                                    <td>MX</td>
+                                    <td class="num">指定收信服务器与优先顺序</td>
+                                    <td>填 IP 而非主机名；优先值理解颠倒</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TXT</td>
+                                    <td class="num">存放验证字符串（SPF、DKIM、ACME）</td>
+                                    <td>多笔 SPF 并存导致验证失败</td>
+                                </tr>
+                                <tr>
+                                    <td>NS</td>
+                                    <td class="num">指定谁有权回答此域名的查询</td>
+                                    <td>在注册商与 DNS 商两边各改一次，互相冲突</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>六种常用 DNS 记录的用途与常见错误。CNAME 那行的限制是协议层面的，无法绕过。</figcaption>
+                </figure>
+
+                <p>下表列出六种记录与各自最常见的踩雷点。第三栏值得特别看。</p>
+
+                <!-- Why -->
+                <h2>为什么根域名不能用 CNAME</h2>
+                <p>这是最常被卡住的限制，而且它不是配置问题，是协议规定：</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>CNAME 不能与其他记录共存</strong>
+                        <span>DNS 规范要求：一个名称上如果有 CNAME，就不能同时有任何其他类型的记录。这个规则本身很单纯，问题出在它跟根域名的必要条件冲突。</span>
+                    </li>
+                    <li>
+                        <strong>根域名必然带有 SOA 与 NS 记录</strong>
+                        <span>每个域名的根（例如 `example.com` 本身）一定要有 SOA 与 NS 记录，这是域名能被解析的前提。既然根域名必定已有这两种记录，依前一条规则，就不可能再放 CNAME——两者无法并存。</span>
+                    </li>
+                    <li>
+                        <strong>所以想让根域名指向一个名称，要用替代方案</strong>
+                        <span>多数 DNS 服务商提供 ALIAS、ANAME 或「CNAME 平坦化」之类的功能：对外看起来是 A 记录，但服务商在背后自动解析目标名称并返回其当下的 IP。效果接近 CNAME，但符合协议。要注意这**不是标准功能**，各家名称与行为不同，换服务商时要重新确认。</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>TTL：要在变更之前调整</h2>
+                <p>TTL（Time To Live）是你告诉全世界的解析器「这笔记录可以缓存多久」。设 3600 就是一小时，在那一小时内，已经查过的解析器不会再来问你——它会直接用缓存的旧答案。</p>
+                <p>所以当你改了记录却发现没生效，原因通常不是「传播需要时间」，而是**旧记录的 TTL 还没到期**。而关键在于：此刻调低 TTL 已经来不及了，因为解析器手上那份旧缓存，带的是它取得时的旧 TTL 值。</p>
+
+                <aside class="callout">
+                    <p>正确做法是把 TTL 当成需要预先规划的东西。预计要迁移的话，**在变更前至少一个旧 TTL 周期**先把 TTL 调低（例如从 3600 降到 300），等旧缓存全数过期、大家都拿到短 TTL 的版本之后，再执行真正的变更——这时候生效时间就只剩五分钟。迁完稳定了再调回长 TTL，减少不必要的查询。</p>
+                </aside>
+
+                <p>日常运维上，变动不频繁的记录（如 MX、NS）可以设较长的 TTL；可能需要临时切换的记录（如指向源站的 A 记录）则值得维持较短的值。这是稳定性与应变速度之间的取舍，没有单一正确答案。</p>
+
+                <!-- Why manual fails -->
+                <h2>TXT 记录的两个实务陷阱</h2>
+                <p>TXT 是最杂的一种记录，因为它被拿来塞各种验证信息：域名所有权验证、SPF、DKIM、DMARC，以及证书自动化用的 ACME DNS-01 挑战值。内容格式各自不同，全部混在同一个名称底下。</p>
+                <p>第一个陷阱是 **SPF 只能有一笔**。如果为了新增一个发信服务而多加一笔 SPF 记录，结果不是「两笔都生效」，而是验证直接失败——正确做法是把所有来源合并进同一笔。第二个陷阱是**证书验证用的 TXT 需要频繁变动**，如果您的 DNS 服务商没有 API，就无法自动化，而在证书有效期缩短之后，这会变成每年多次的手动作业。</p>
+
+                <!-- How to respond -->
+                <h2>三个实务判断</h2>
+                <p>配置前先想清楚这三件事：</p>
+
+                <h3>一、目标的 IP 会不会变？</h3>
+                <p>会变就用 CNAME 指向对方的主机名，让对方自己管理 IP；不会变才写 A 记录。指向 CDN、云负载均衡这类服务时尤其如此——它们的 IP 本来就会浮动，写死 A 记录等于埋了一颗不知何时会爆的雷。</p>
+
+                <h3>二、这笔记录多久会动一次？</h3>
+                <p>这决定 TTL。几乎不动的设长一点（3600 以上），可能需要紧急切换的设短一点（300 左右）。重点是**在你需要它短之前就先设短**，而不是出事当下才调。</p>
+
+                <h3>三、谁是这个域名的权威？</h3>
+                <p>NS 记录决定由谁回答查询。常见的混乱是：在注册商改了一次 NS，又在 DNS 服务商的界面改了一次，结果两边不一致。实际生效的是注册局那一份，也就是您在注册商设定的那一份——这一点在转移域名或更换 DNS 服务商时特别容易出错。</p>
+
+                <!-- Checklist -->
+                <h2>变更前该确认的三件事</h2>
+                <p>动手改之前，这三项可以省下很多排查时间：</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>确认目前的 TTL 是多少</strong>
+                        <span>这决定变更后最长要等多久。如果是 86400（一天），而您没有预先调低，那就得有等一整天的心理准备——这时候反复刷新浏览器不会有帮助。</span>
+                    </li>
+                    <li>
+                        <strong>确认要改的是哪一层</strong>
+                        <span>注册商、DNS 托管商、CDN 都可能有一个「DNS 设置」的界面。先确认 NS 指向谁，那一家的设置才是生效的；在没有权威的那一边改，改再多次也不会有反应。</span>
+                    </li>
+                    <li>
+                        <strong>改完用权威服务器直接查证</strong>
+                        <span>用 `dig @权威服务器 名称 记录类型` 直接向权威服务器查询，可以跳过所有缓存，立刻确认记录本身是否正确。若权威回答是对的、其他地方还是旧的，那就纯粹是等 TTL 的问题。</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>小结</h2>
+                <p>DNS 变更的等待时间不是玄学，是您自己设定的 TTL。理解这一点之后，迁移的正确顺序就变得清楚：**先调低 TTL，等一个旧周期，再执行变更**。事后才调 TTL 对当下这次变更没有帮助。</p>
+                <p>另一个值得记住的是根域名不能用 CNAME——这是协议层面的限制，各家提供的 ALIAS 或平坦化功能只是各自的变通做法，不是标准。选择 DNS 服务商时，这项功能以及是否提供 API（证书自动化的前提）都值得一并确认。</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>参考资料</h3>
+                    <ul>
+                        <li><a href="https://www.rfc-editor.org/rfc/rfc1034" target="_blank" rel="noopener">IETF RFC 1034 — Domain Names: Concepts and Facilities</a></li>
+                        <li><a href="https://www.rfc-editor.org/rfc/rfc2181" target="_blank" rel="noopener">IETF RFC 2181 — Clarifications to the DNS Specification</a></li>
+                        <li><a href="https://www.rfc-editor.org/rfc/rfc7208" target="_blank" rel="noopener">IETF RFC 7208 — Sender Policy Framework (SPF)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>延伸阅读与相关服务</h2>
+                <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
+                <div class="related-grid">
+                    <a href="/zh-cn/blog/domain-name-guide/" class="related-card glass-panel">
+                        <span class="related-kicker">技术文章</span>
+                        <h3>域名不是买断</h3>
+                        <p>续约价、转移锁定与到期赎回的完整指南。</p>
+                    </a>
+                    <a href="/zh-cn/blog/acme-challenge-types/" class="related-card glass-panel">
+                        <span class="related-kicker">技术文章</span>
+                        <h3>ACME 验证方式怎么选</h3>
+                        <p>为什么 DNS API 是证书自动化的前提条件。</p>
+                    </a>
+                    <a href="/zh-cn/blog/domain-hijacking-protection/" class="related-card glass-panel">
+                        <span class="related-kicker">技术文章</span>
+                        <h3>域名劫持防护</h3>
+                        <p>NS 记录被改动是劫持最明确的征兆之一。</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>DNS 管理能力该怎么纳入注册商比较？</h2>
+                <p>API 支持、ALIAS 功能与 DNS 托管质量都会影响后续运维成本。我们在域名注册指南里逐项说明该看什么。</p>
+                <div class="hero-actions">
+                    <a href="/zh-cn/blog/domain-name-guide/" class="btn btn-primary">阅读域名注册指南</a>
+                    <a href="/zh-cn/blog/" class="btn btn-secondary">返回文章列表</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/zh-cn/cdn/">CDN 内容分发网络</a>
+                    <a href="/zh-cn/vps/">VPS 虚拟专属主机</a>
+                    <a href="/zh-cn/idc/">IDC 机房建置</a>
+                    <a href="/zh-cn/cloud/">公有云架构解决方案</a>
+                    <a href="/zh-cn/ssl/">SSL 证书自动化平台</a>
+                    <a href="/zh-cn/speedtest/">全球三网测速平台</a>
+                    <a href="/zh-cn/blog/">技术文章</a>
+                    <a href="/zh-cn/#contact">联系我们</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js" defer></script>
+</body>
+
+</html>

@@ -806,6 +806,136 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_dns_records": {
+    "date": "2026-09-06",
+    "date_display": "September 6, 2026",
+    "category": "Domain Management",
+    "reading_time": "9 min read",
+    "short_title": "DNS Records and TTL",
+    "title": "Why Your DNS Change Hasn't Taken Effect: Record Types, TTL and the Apex Limit",
+    "excerpt": "\"Still propagating\" is the usual explanation, but usually propagation isn't the issue — TTL wasn't lowered first, and lowering it only helps if done beforehand. Also, apex domains can't use CNAME. That one is protocol-level.",
+    "disclosure": "",
+    "lead": "\"The DNS change hasn't taken yet — still propagating, right?\" Half true, and it hides the actual cause. There is no mechanism in DNS called propagation. **Changes take time because the old record is still cached, and how long it stays cached is set by your own TTL.** Which means something counterintuitive: to make a change take effect quickly, you act *before* making it. This covers six record types, how TTL should actually be used, and the apex limitation you cannot design around.",
+    "seo": {
+      "title": "DNS Record Types and TTL | Why Changes Don't Take Effect",
+      "description": "A, AAAA, CNAME, MX, TXT and NS records — what each does and how each goes wrong. Why TTL must be lowered before a change, why apex domains can't use CNAME, and what ALIAS/flattening does instead.",
+      "keywords": "DNS records, A record, CNAME, MX, TXT, NS, TTL, DNS propagation, apex CNAME, ALIAS record"
+    },
+    "s1": {
+      "title": "The Six Records You'll Actually Use",
+      "p1": "There are dozens of DNS record types; day-to-day operations involve about six. Each answers a different question: which IP does this name point to, is this name an alias for another, where should mail for this domain go, and who is authoritative for answering queries about it.",
+      "p2": "Confusing the types is the most common source of error, and the symptoms are rarely obvious — writing an A record where a CNAME belonged works perfectly until the other end changes IP, which might be months later.",
+      "p3": "The table lists all six with the mistake each most often invites. The third column is the one to read."
+    },
+    "table": {
+      "caption": "Six common DNS records and their typical failure modes. The CNAME constraint is protocol-level and cannot be worked around.",
+      "col1": "Type",
+      "col2": "Purpose",
+      "col3": "Common mistake",
+      "r1c1": "A",
+      "r1c2": "Points a name at an IPv4 address",
+      "r1c3": "Hard-coding an A record when the target IP moves",
+      "r1_class": "",
+      "r2c1": "AAAA",
+      "r2c2": "Points a name at an IPv6 address",
+      "r2c3": "Setting only A, leaving IPv6 users unable to reach you",
+      "r2_class": "",
+      "r3c1": "CNAME",
+      "r3c2": "Makes a name an alias for another name",
+      "r3c3": "Placing one at the apex — the protocol forbids it",
+      "r3_class": "is-current",
+      "r4c1": "MX",
+      "r4c2": "Names mail servers and their priority",
+      "r4c3": "Entering an IP instead of a hostname; inverting priority",
+      "r4_class": "",
+      "r5c1": "TXT",
+      "r5c2": "Holds verification strings (SPF, DKIM, ACME)",
+      "r5c3": "Multiple SPF records, which breaks validation",
+      "r5_class": "",
+      "r6c1": "NS",
+      "r6c2": "Names who is authoritative for the domain",
+      "r6c3": "Editing NS at both registrar and DNS host, conflicting",
+      "r6_class": ""
+    },
+    "s2": {
+      "title": "Why the Apex Can't Use CNAME",
+      "intro": "This is the constraint people hit most often, and it isn't a configuration problem — it's specified behaviour:",
+      "r1_title": "A CNAME cannot coexist with other records",
+      "r1_desc": "The DNS specification requires that if a name has a CNAME, it can have no other record type at that same name. The rule itself is simple; the trouble is how it collides with what an apex domain necessarily contains.",
+      "r2_title": "An apex necessarily has SOA and NS records",
+      "r2_desc": "Every domain's apex (`example.com` itself) must carry SOA and NS records — that's what makes it resolvable at all. Since the apex always has those, the previous rule means a CNAME can never be added there. The two cannot coexist.",
+      "r3_title": "So pointing an apex at a name requires an alternative",
+      "r3_desc": "Most DNS providers offer ALIAS, ANAME, or \"CNAME flattening\": externally it looks like an A record, but the provider resolves the target name behind the scenes and returns its current IP. The effect approximates CNAME while staying compliant. Note this is **not a standardised feature** — names and behaviour differ per provider, so re-verify when switching."
+    },
+    "s3": {
+      "title": "TTL: Adjust It Before the Change",
+      "p1": "TTL (Time To Live) is how you tell every resolver in the world how long this record may be cached. Set 3600 and for the next hour, any resolver that already asked won't ask again — it serves the cached answer.",
+      "p2": "So when a change doesn't appear to take effect, the cause usually isn't \"propagation takes time\", it's that **the old record's TTL hasn't expired**. And crucially: lowering TTL now is too late, because the copy resolvers are holding carries the TTL that was in effect when they fetched it.",
+      "callout": "Treat TTL as something to plan ahead. If a migration is coming, lower the TTL **at least one old TTL period before** the change (say 3600 down to 300). Once the old caches have expired and everyone holds the short-TTL version, make the actual change — and it now takes effect in five minutes. Raise the TTL again once things are stable, to avoid unnecessary query load.",
+      "p3": "Operationally, records that rarely change (MX, NS) can carry longer TTLs, while records you may need to switch in a hurry (an A record pointing at origin) are worth keeping short. It's a trade-off between stability and agility, with no single right answer."
+    },
+    "s4": {
+      "title": "Two Practical Traps in TXT Records",
+      "p1": "TXT is the messiest type, because it's where all kinds of verification data ends up: domain ownership proofs, SPF, DKIM, DMARC, and the ACME DNS-01 challenge values used in certificate automation. Different formats, all sharing one name.",
+      "p2": "The first trap is that **SPF must be a single record**. Adding a second SPF entry for a new mail service doesn't mean both apply — validation simply fails. All sources belong merged into one record. The second is that **certificate validation TXT records change frequently**, so without a DNS provider API you can't automate it — and as certificate lifetimes shorten, that becomes manual work several times a year."
+    },
+    "s5": {
+      "title": "Three Practical Judgements",
+      "intro": "Settle these before configuring anything:",
+      "l1_title": "1. Will the target's IP change?",
+      "l1_desc": "If it will, use a CNAME pointing at the provider's hostname and let them manage the IP; only use an A record when it won't. This matters most for CDNs and cloud load balancers, whose IPs are expected to move — hard-coding an A record there plants a fault that detonates at an unpredictable time.",
+      "l2_title": "2. How often will this record change?",
+      "l2_desc": "That sets the TTL. Rarely-touched records take a longer value (3600+); anything you may need to switch urgently takes a shorter one (around 300). The point is **setting it short before you need it short**, not during the incident.",
+      "l3_title": "3. Who is authoritative for this domain?",
+      "l3_desc": "NS records decide who answers queries. A common mess: NS edited once at the registrar and again in the DNS provider's panel, leaving the two inconsistent. What takes effect is the registry's copy — the one set at your registrar. This bites hardest when transferring a domain or switching DNS providers."
+    },
+    "s6": {
+      "title": "Three Things to Check Before Changing Anything",
+      "intro": "These three save considerable debugging time:",
+      "c1_title": "Check the current TTL",
+      "c1_desc": "It sets your maximum wait. If it's 86400 (a day) and you didn't lower it in advance, prepare to wait a day — repeatedly refreshing the browser won't help.",
+      "c2_title": "Confirm which layer you're editing",
+      "c2_desc": "Registrar, DNS host and CDN may each present a \"DNS settings\" panel. Check where NS points first; only that provider's settings take effect. Editing at a non-authoritative provider produces no result no matter how many times you try.",
+      "c3_title": "Verify against the authoritative server",
+      "c3_desc": "`dig @authoritative-server name TYPE` queries the authoritative server directly, bypassing every cache, and confirms immediately whether the record itself is right. If the authoritative answer is correct but elsewhere is stale, you're simply waiting on TTL."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "Waiting for a DNS change isn't mysterious — the wait is the TTL you set. Once that's clear, the correct migration order follows: **lower the TTL, wait one old period, then make the change.** Adjusting TTL afterwards does nothing for the change you're making now.",
+      "p2": "The other thing worth retaining is that an apex can't take a CNAME. That's protocol-level; the ALIAS and flattening features providers offer are their own workarounds, not a standard. When choosing a DNS provider, both that feature and API availability — the prerequisite for certificate automation — are worth confirming."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "IETF RFC 1034 — Domain Names: Concepts and Facilities",
+      "u1": "https://www.rfc-editor.org/rfc/rfc1034",
+      "s2": "IETF RFC 2181 — Clarifications to the DNS Specification",
+      "u2": "https://www.rfc-editor.org/rfc/rfc2181",
+      "s3": "IETF RFC 7208 — Sender Policy Framework (SPF)",
+      "u3": "https://www.rfc-editor.org/rfc/rfc7208"
+    },
+    "cta": {
+      "href": "blog/domain-name-guide/",
+      "title": "How Should DNS Capability Factor Into Choosing a Registrar?",
+      "desc": "API support, ALIAS functionality and DNS hosting quality all shape ongoing operational cost. Our registration guide works through what to look for.",
+      "button": "Read the Domain Guide"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/domain-name-guide/",
+      "l1_kicker": "Article",
+      "l1_title": "You Don't Buy a Domain",
+      "l1_desc": "Renewal pricing, transfer locks and the redemption period.",
+      "l2_slug": "blog/acme-challenge-types/",
+      "l2_kicker": "Article",
+      "l2_title": "Choosing an ACME Challenge",
+      "l2_desc": "Why a DNS API is the prerequisite for certificate automation.",
+      "l3_slug": "blog/domain-hijacking-protection/",
+      "l3_kicker": "Article",
+      "l3_title": "Domain Hijacking Defence",
+      "l3_desc": "Altered NS records are among the clearest signs of a hijack."
+    }
+  },
   "article_domain_hijacking": {
     "date": "2026-09-06",
     "date_display": "September 6, 2026",

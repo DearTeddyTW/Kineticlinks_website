@@ -16,6 +16,7 @@ LANGS = [
 # Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
 # listed on the blog index. content_key is looked up in the locale JSON.
 ARTICLES = [
+    {'slug': 'dns-record-types', 'content_key': 'article_dns_records'},
     {'slug': 'domain-hijacking-protection', 'content_key': 'article_domain_hijacking'},
     {'slug': 'connection-quality-monitoring', 'content_key': 'article_quality_monitoring'},
     {'slug': 'reading-speed-test-results', 'content_key': 'article_reading_speedtest'},
@@ -188,6 +189,24 @@ def build():
                 else:
                     flat['cta_href_full'] = f"{lang['lang_path']}{cta_href}"
                     flat['cta_attrs'] = ''
+
+                # 表格列數依內容而定：模板固定四列，其餘由此產生，
+                # 否則多寫的列會被靜默丟棄。
+                extra = []
+                table = page_content.get('table') or {}
+                n = 5
+                while f'r{n}c1' in table:
+                    cls = table.get(f'r{n}_class', '')
+                    cls = f' class="{cls}"' if cls else ''
+                    extra.append(
+                        f'                                <tr{cls}>\n'
+                        f'                                    <td>{table[f"r{n}c1"]}</td>\n'
+                        f'                                    <td class="num">{table[f"r{n}c2"]}</td>\n'
+                        f'                                    <td>{table[f"r{n}c3"]}</td>\n'
+                        f'                                </tr>'
+                    )
+                    n += 1
+                flat['table_extra_rows'] = ('\n' + '\n'.join(extra)) if extra else ''
 
                 disclosure = (page_content.get('disclosure') or '').strip()
                 flat['affiliate_disclosure'] = (
