@@ -806,6 +806,133 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_icp_filing": {
+    "date": "2026-09-07",
+    "date_display": "September 7, 2026",
+    "category": "China Networking",
+    "reading_time": "10 min read",
+    "short_title": "ICP Filing Explained",
+    "title": "ICP Filing Explained: Who Needs It, How Long It Takes, and Why Buying a Filed Domain Doesn't Work",
+    "excerpt": "Filing takes weeks, so \"pre-filed domains\" are sold. But regulations require cancelling and re-filing whenever the subject changes — done properly, what you bought is worth nothing.",
+    "disclosure": "",
+    "lead": "\"The site needs to launch in China, but filing takes weeks\" is the first obstacle most cross-border projects hit. Hence a market in \"pre-filed domains\". The arithmetic doesn't work, though: **regulations require that a change of filing subject means cancelling the existing filing and submitting a new application**. Done properly, a purchased filing evaporates on transfer. Here are the actual rules, including when no filing is needed at all.",
+    "seo": {
+      "title": "ICP Filing Explained | Requirements, Timelines & Pre-Filed Domains",
+      "description": "Who needs ICP filing, how long review takes, and the separate public security filing deadline. Why buying a pre-filed domain has no value under correct procedure, and the conditions under which overseas nodes need no filing.",
+      "keywords": "ICP filing, ICP beian, pre-filed domain, commercial ICP licence, public security filing, Hong Kong server, mainland CDN node"
+    },
+    "s1": {
+      "title": "What Filing Actually Governs",
+      "p1": "ICP filing doesn't attach to a domain. It attaches to **the entity operating a site and the network resources that site uses**. The test is simple: does your service use servers or network nodes inside mainland China? If yes, filing is required; if no, it isn't.",
+      "p2": "So \"does this domain have a filing\" is the wrong question. A filing records a relationship — which entity, using which resources, running which site — and the domain is one field within it. That's also why filings can't be traded like domains: they record a subject, not an asset.",
+      "p3": "The table covers common scenarios. The third row is the one most often overlooked."
+    },
+    "table": {
+      "caption": "Common deployment scenarios and filing requirements. The third row is the trigger people miss.",
+      "col1": "Deployment",
+      "col2": "Filing required?",
+      "col3": "Notes",
+      "r1c1": "Site hosted on mainland servers",
+      "r1c2": "Yes",
+      "r1c3": "The baseline case",
+      "r1_class": "",
+      "r2c1": "Entirely on Hong Kong or overseas nodes",
+      "r2c2": "Generally no",
+      "r2c3": "Provided no mainland nodes are used at all",
+      "r2_class": "",
+      "r3c1": "Overseas hosting with mainland CDN nodes",
+      "r3c2": "Yes",
+      "r3c3": "Any mainland node triggers it; often missed",
+      "r3_class": "is-current",
+      "r4c1": "Providing paid information services",
+      "r4c2": "Filing plus a commercial ICP licence",
+      "r4c3": "Requires a valid filing number first",
+      "r4_class": "",
+      "r5c1": "Site already live inside the mainland",
+      "r5c2": "Public security filing within 30 days",
+      "r5c3": "A separate process from ICP filing",
+      "r5_class": ""
+    },
+    "s2": {
+      "title": "Why Buying a Filed Domain Doesn't Work",
+      "intro": "\"Buy an already-filed domain and skip the wait\" sounds reasonable. Three rules remove the point of it under correct procedure:",
+      "r1_title": "A different subject requires cancellation and re-application",
+      "r1_desc": "Every major cloud provider's filing documentation states it plainly: where a change of subject involves a different enterprise registration number, the original filing **must be cancelled and a new application submitted**. So the moment a buyer processes the subject change correctly, the filing is gone — what they bought is worth nothing, and not a single day of waiting was saved.",
+      "r2_title": "Domain real-name data must match the filing subject",
+      "r2_desc": "Registry rules require the domain's real-name verification to match the filing subject. Changing subject means redoing that verification, and the two must agree. That check is what stops \"filing stays with the original entity while someone else runs the site\" from holding up over time.",
+      "r3_title": "Verification consequences land on the operator",
+      "r3_desc": "Authorities periodically verify filing records and cancel those that don't match. The real problem is that timing is unpredictable — fine today, offline after next month's check. And the consequences fall on whoever is actually running the site, not on the entity that supplied the filing."
+    },
+    "s3": {
+      "title": "How Long It Actually Takes",
+      "p1": "Filing is quicker than most people assume, which is partly why the incentive to detour is weaker than it looks. There are two stages: provider pre-review, then administration review.",
+      "p2": "Per timelines published by major cloud providers, pre-review runs about 1–2 business days and administration review 1–20 business days, varying by province. In most cases the total lands inside three weeks, and often faster.",
+      "callout": "What deserves planning isn't how to skip filing, but **scheduling it into the project while launching on overseas nodes in the meantime**. While filing is in progress the site can already serve traffic through Hong Kong or other overseas nodes — no dead time waiting, and no exposure to having a filing cancelled. Switching over or running both once it comes through is entirely compliant.",
+      "p3": "Filing also isn't a one-off. Within 30 days of a site going live, a separate public security filing is required. If paid information services are involved, a commercial ICP licence is needed too — and that can only be applied for once a valid filing number exists. Schedule all of it, or the later stages become the bottleneck."
+    },
+    "s4": {
+      "title": "The Compliant No-Filing Route, and Its Boundary",
+      "p1": "A service deployed **entirely on Hong Kong or other overseas nodes**, using no mainland servers or CDN nodes, generally requires no ICP filing. Plenty of cross-border operations run exactly this way, fully compliantly.",
+      "p2": "But the boundary matters: **connecting any mainland server or CDN node triggers the requirement**. This is the most commonly missed point, because people assume \"hosted overseas means no filing needed\" and then cross the line unintentionally by enabling mainland CDN nodes for speed. When evaluating acceleration options, this is the first thing to confirm.",
+      "p3": "That boundary also shapes the technical choice. Overseas nodes mean dealing with cross-border latency and time-of-day degradation — a separate set of engineering problems, but ones architecture can address, rather than a compliance exposure."
+    },
+    "s5": {
+      "title": "Three Levels of Assessment",
+      "intro": "In practice, answer these in order:",
+      "l1_title": "1. Will your service use mainland nodes?",
+      "l1_desc": "This is the only dividing line. If yes, filing is required — including when the only mainland involvement is enabling CDN nodes for speed. If no, an overseas deployment needs no filing.",
+      "l2_title": "2. If filing is needed, can the timeline fit the project?",
+      "l2_desc": "Most cases complete within three weeks. The right move is scheduling it and launching on overseas nodes during the wait, rather than looking for a way around it.",
+      "l3_title": "3. Does your service involve paid information services?",
+      "l3_desc": "If so, a commercial ICP licence is needed beyond the filing, and it can only be applied for once a valid filing number exists. Budget that time separately rather than discovering it when you're ready to charge."
+    },
+    "s6": {
+      "title": "Three Things to Confirm When Evaluating Options",
+      "intro": "Before choosing hosting or acceleration, establish these:",
+      "c1_title": "Whether the plan includes mainland nodes",
+      "c1_desc": "This determines whether filing applies. Some acceleration plans enable mainland nodes by default, so ask before signing — otherwise the requirement is triggered without your knowing.",
+      "c2_title": "Subject eligibility and province",
+      "c2_desc": "The filing subject must be an eligible entity or individual, and review is handled by the administration of its province, with requirements and timelines varying. Province can't be altered through the change process — moving provinces means reapplying.",
+      "c3_title": "That downstream steps are scheduled too",
+      "c3_desc": "ICP filing is only the first step. The public security filing within 30 days of launch, and the commercial licence for paid services, both belong in the plan."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "The rule isn't complicated: **mainland nodes mean filing; a purely overseas deployment doesn't**. \"Pre-filed domains\" fail because regulations require a subject change to be cancelled and re-filed — follow the rules and the purchase is void on transfer; don't follow them and you carry the risk of cancellation at verification, borne by whoever operates the site.",
+      "p2": "The practical approach is to schedule the filing while launching through Hong Kong or other overseas nodes. If what you need is cross-border connection quality rather than mainland deployment, our CDN and overseas node options can improve latency without triggering the filing requirement."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "Alibaba Cloud — ICP Filing Application Overview",
+      "u1": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/user-guide/icp-filing-application-overview",
+      "s2": "Alibaba Cloud — Changing ICP Filing Records",
+      "u2": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/change-the-record",
+      "s3": "Huawei Cloud — ICP Filing vs Commercial ICP Licence",
+      "u3": "https://support.huaweicloud.com/tg-icp/icp_05_0078.html"
+    },
+    "cta": {
+      "href": "cdn/",
+      "title": "Cross-Border Acceleration Without Triggering Filing",
+      "desc": "For deployments running entirely on overseas nodes, Kineticlinks CDN improves cross-border latency and stability without connecting mainland nodes.",
+      "button": "Explore CDN Services"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/china-network-latency/",
+      "l1_kicker": "Article",
+      "l1_title": "Why China Connections Are Slow",
+      "l1_desc": "The latency causes and time-of-day degradation overseas nodes face.",
+      "l2_slug": "cdn/",
+      "l2_kicker": "Service",
+      "l2_title": "CDN Content Delivery Network",
+      "l2_desc": "Overseas node acceleration, deployable without mainland nodes.",
+      "l3_slug": "blog/reading-speed-test-results/",
+      "l3_kicker": "Article",
+      "l3_title": "Reading Speed Test Results",
+      "l3_desc": "Judge cross-border options on loss and latency, not bandwidth."
+    }
+  },
   "article_dns_records": {
     "date": "2026-09-06",
     "date_display": "September 6, 2026",

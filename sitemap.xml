@@ -77,7 +77,17 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/" />
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/blog/icp-filing-explained/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/icp-filing-explained/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-filing-explained/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-filing-explained/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-filing-explained/" />
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -277,7 +287,17 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/" />
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/en/blog/icp-filing-explained/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/icp-filing-explained/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-filing-explained/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-filing-explained/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-filing-explained/" />
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -477,7 +497,17 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/" />
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/zh-cn/blog/icp-filing-explained/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/icp-filing-explained/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-filing-explained/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-filing-explained/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-filing-explained/" />
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
