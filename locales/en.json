@@ -811,14 +811,14 @@
     "date_display": "September 7, 2026",
     "category": "China Networking",
     "reading_time": "10 min read",
-    "short_title": "ICP Filing Explained",
-    "title": "ICP Filing Explained: Who Needs It, How Long It Takes, and Why Buying a Filed Domain Doesn't Work",
-    "excerpt": "Filing takes weeks, so \"pre-filed domains\" are sold. But regulations require cancelling and re-filing whenever the subject changes — done properly, what you bought is worth nothing.",
+    "short_title": "ICP Filing & Filed Domains",
+    "title": "ICP Filing and Pre-Filed Domains: Rules, Timelines and Real Risk",
+    "excerpt": "Filing takes weeks, so a market in pre-filed domains exists. Here are the actual rules, what the subject-change regulation says, how verification really works, and when no filing is needed at all.",
     "disclosure": "",
     "lead": "\"The site needs to launch in China, but filing takes weeks\" is the first obstacle most cross-border projects hit. Hence a market in \"pre-filed domains\". The arithmetic doesn't work, though: **regulations require that a change of filing subject means cancelling the existing filing and submitting a new application**. Done properly, a purchased filing evaporates on transfer. Here are the actual rules, including when no filing is needed at all.",
     "seo": {
-      "title": "ICP Filing Explained | Requirements, Timelines & Pre-Filed Domains",
-      "description": "Who needs ICP filing, how long review takes, and the separate public security filing deadline. Why buying a pre-filed domain has no value under correct procedure, and the conditions under which overseas nodes need no filing.",
+      "title": "ICP Filing Explained | Rules, Timelines and Pre-Filed Domains",
+      "description": "Who needs ICP filing, review timelines, and the separate public security deadline. What the subject-change rule requires, how verification actually operates, and the conditions under which overseas nodes need no filing.",
       "keywords": "ICP filing, ICP beian, pre-filed domain, commercial ICP licence, public security filing, Hong Kong server, mainland CDN node"
     },
     "s1": {
@@ -854,14 +854,14 @@
       "r5_class": ""
     },
     "s2": {
-      "title": "Why Buying a Filed Domain Doesn't Work",
-      "intro": "\"Buy an already-filed domain and skip the wait\" sounds reasonable. Three rules remove the point of it under correct procedure:",
-      "r1_title": "A different subject requires cancellation and re-application",
-      "r1_desc": "Every major cloud provider's filing documentation states it plainly: where a change of subject involves a different enterprise registration number, the original filing **must be cancelled and a new application submitted**. So the moment a buyer processes the subject change correctly, the filing is gone — what they bought is worth nothing, and not a single day of waiting was saved.",
+      "title": "How Pre-Filed Domain Transactions Actually Work",
+      "intro": "There's a gap between how these transactions operate and what the regulations require. Three mechanics:",
+      "r1_title": "By regulation, a different subject requires cancellation and re-application",
+      "r1_desc": "Every major cloud provider's filing documentation states it plainly: where a change of subject involves a different enterprise registration number, the original filing **must be cancelled and a new application submitted**. So a buyer who processes the subject change as specified no longer has that filing. Most transactions don't take that route — the filing stays under the original subject.",
       "r2_title": "Domain real-name data must match the filing subject",
-      "r2_desc": "Registry rules require the domain's real-name verification to match the filing subject. Changing subject means redoing that verification, and the two must agree. That check is what stops \"filing stays with the original entity while someone else runs the site\" from holding up over time.",
-      "r3_title": "Verification consequences land on the operator",
-      "r3_desc": "Authorities periodically verify filing records and cancel those that don't match. The real problem is that timing is unpredictable — fine today, offline after next month's check. And the consequences fall on whoever is actually running the site, not on the entity that supplied the filing."
+      "r2_desc": "Registry rules require the domain's real-name verification to match the filing subject. That check is the binding between subject and domain, and it's part of what a transaction has to account for.",
+      "r3_title": "Verification is periodic, not continuous",
+      "r3_desc": "Authorities verify filing records periodically and cancel those that don't match. But verification runs on a cycle and samples rather than covering everything in real time — which is why many filings persist for long periods in practice. What matters is the nature of the risk: it's probabilistic, its timing is unpredictable, and when it does occur, the site going offline is borne by whoever operates it."
     },
     "s3": {
       "title": "How Long It Actually Takes",
@@ -898,7 +898,7 @@
     },
     "s7": {
       "title": "In Summary",
-      "p1": "The rule isn't complicated: **mainland nodes mean filing; a purely overseas deployment doesn't**. \"Pre-filed domains\" fail because regulations require a subject change to be cancelled and re-filed — follow the rules and the purchase is void on transfer; don't follow them and you carry the risk of cancellation at verification, borne by whoever operates the site.",
+      "p1": "The filing rule itself isn't complicated: **mainland nodes mean filing; a purely overseas deployment doesn't**. The market in pre-filed domains exists because of a gap between what the regulation requires — cancel and re-file — and what buyers want, which is to skip the wait. Understanding what that gap is, and who carries the risk, matters more than a simple verdict either way.",
       "p2": "The practical approach is to schedule the filing while launching through Hong Kong or other overseas nodes. If what you need is cross-border connection quality rather than mainland deployment, our CDN and overseas node options can improve latency without triggering the filing requirement."
     },
     "sources": {
