@@ -106,3 +106,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// 語言切換：改用點擊開合。原本是純 CSS :hover，觸控裝置上沒有 hover，
+// 手機與平板完全打不開這個選單。
+document.querySelectorAll('.lang-switcher').forEach(sw => {
+    const btn = sw.querySelector('.lang-btn');
+    if (!btn) return;
+
+    btn.setAttribute('aria-haspopup', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+
+    const close = () => {
+        sw.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+    };
+
+    btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const open = sw.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+    });
+
+    // 點到選單以外的地方就收起來
+    document.addEventListener('click', e => {
+        if (!sw.contains(e.target)) close();
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') close();
+    });
+});

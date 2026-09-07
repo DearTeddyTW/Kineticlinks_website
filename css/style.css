@@ -413,8 +413,17 @@ ul {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* min() 讓欄寬下限跟著容器縮：純 minmax(280px,1fr) 在比 280px 窄的
+       容器裡仍會維持 280px，整格推出視窗造成橫向捲動。 */
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 2rem;
+}
+
+/* grid 項目預設 min-width:auto，會以內容的最小寬度當作下限，
+   讓格軌撐得比容器還寬。歸零後才能真的跟著容器縮。 */
+.services-grid > *,
+.related-grid > * {
+    min-width: 0;
 }
 
 .service-card {
@@ -702,7 +711,9 @@ footer {
 
 .footer-links {
     display: flex;
-    gap: 2rem;
+    /* 沒有 wrap 的話，連結一多就整列推出視窗外——手機上會造成整頁橫向捲動。 */
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
 }
 
 .footer-links a {
@@ -1006,7 +1017,9 @@ footer {
 
 .related-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* min() 讓欄寬下限跟著容器縮：純 minmax(260px,1fr) 在比 260px 窄的
+       容器裡仍會維持 260px，整格推出視窗造成橫向捲動。 */
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
     gap: 1.5rem;
 }
 
@@ -1432,8 +1445,9 @@ footer {
     display: none;
     position: absolute;
     right: 0;
-    top: 100%;
-    margin-top: 10px;
+    /* 用 padding 而非 margin 拉開視覺間距：留 margin 會在按鈕與選單之間
+       形成沒有元素的死區，游標經過時 hover 中斷，選單就關掉了。 */
+    top: calc(100% + 10px);
     background: rgba(26, 26, 46, 0.95);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1457,8 +1471,24 @@ footer {
     background: rgba(138, 43, 226, 0.2);
     color: var(--primary-color);
 }
-.lang-switcher:hover .lang-dropdown {
+/* 由 JS 切換 .open，hover 在觸控裝置上不存在，純 CSS 版本點不開。 */
+.lang-switcher.open .lang-dropdown {
     display: block;
+}
+
+.lang-switcher::after {
+    /* 補上按鈕與選單之間的透明橋接區，游標斜著移過去也不會中斷。 */
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    height: 12px;
+}
+
+.lang-btn[aria-expanded="true"] {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 /* Mobile lang-switcher styles live with the nav collapse rules above,
@@ -1488,4 +1518,35 @@ footer {
     font-size: 0.85rem;
     line-height: 1.7;
     color: var(--text-secondary);
+}
+
+
+/* ---- 手機版版面修正 ---- */
+@media (max-width: 768px) {
+    .footer-links {
+        justify-content: center;
+        gap: 0.75rem 1.25rem;
+    }
+
+    /* hero 的 3rem 內距在 375px 視窗上會把標題擠出可視範圍，
+       而 .hero 有 overflow:hidden，結果是文字直接被裁掉。 */
+    .hero-text {
+        max-width: 100%;
+        padding: 2rem 1.25rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        overflow-wrap: break-word;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
 }

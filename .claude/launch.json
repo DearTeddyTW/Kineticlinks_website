@@ -4,8 +4,12 @@
     {
       "name": "kineticlinks-static",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8123"],
-      "port": 8123
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8127"
+      ],
+      "port": 8127
     }
   ]
 }
