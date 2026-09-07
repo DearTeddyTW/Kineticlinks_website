@@ -99,7 +99,8 @@
       "service_other": "其他",
       "message": "您的需求说明",
       "submit": "发送信息"
-    }
+    },
+    "telegram": "Telegram：@Kineticlinks"
   },
   "cdn_page": {
     "seo": {

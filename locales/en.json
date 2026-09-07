@@ -99,7 +99,8 @@
       "service_other": "Other",
       "message": "Your Requirements",
       "submit": "Send Message"
-    }
+    },
+    "telegram": "Telegram: @Kineticlinks"
   },
   "cdn_page": {
     "seo": {
