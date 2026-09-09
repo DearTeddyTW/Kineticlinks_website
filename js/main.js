@@ -136,3 +136,65 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
         if (e.key === 'Escape') close();
     });
 });
+
+// 轉換追蹤：把「讀者實際做了什麼」記下來。沒有設定 GA ID 時 gtag 不存在，
+// 事件會留在佇列裡不送出，也不會報錯——之後補上 ID 就自動生效。
+(function () {
+    const queue = [];
+    const send = (name, params) => {
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', name, params);
+        } else {
+            queue.push([name, params]);
+        }
+    };
+    // gtag 若稍後才載入，把先前排隊的事件補送
+    window.addEventListener('load', () => {
+        if (typeof window.gtag === 'function') {
+            while (queue.length) window.gtag('event', ...queue.shift());
+        }
+    });
+
+    const pageType = location.pathname.includes('/blog/')
+        ? (location.pathname.split('/blog/')[1] ? 'article' : 'blog_index')
+        : (location.pathname.replace(/^\/(en|zh-cn)\//, '/').replace(/\//g, '') || 'home');
+
+    document.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (!a) return;
+        const href = a.getAttribute('href') || '';
+
+        // 導向平台本身——這是最接近成交的一步
+        if (href.includes('app.kineticlinks.net') || href.includes('speedtest.kineticlinks.net')) {
+            send('platform_click', { platform: href.split('//')[1].split('.')[0], from: pageType });
+        } else if (href.includes('t.me/')) {
+            send('telegram_click', { from: pageType });
+        } else if (a.classList.contains('btn-primary') && href.startsWith('/')) {
+            // 文章底部 CTA 導向服務頁
+            send('cta_click', { target: href, from: pageType });
+        } else if (href.startsWith('http') && a.rel && a.rel.includes('sponsored')) {
+            send('affiliate_click', { from: pageType });
+        }
+    });
+
+    const form = document.getElementById('contactForm');
+    if (form) form.addEventListener('submit', () => send('contact_submit', { from: pageType }));
+
+    // 只有文章頁量閱讀深度：曝光高但沒人讀完，跟沒人看到是兩種問題
+    if (pageType === 'article') {
+        const marks = [25, 50, 75, 100];
+        const hit = new Set();
+        const onScroll = () => {
+            const h = document.documentElement;
+            const pct = (h.scrollTop + h.clientHeight) / h.scrollHeight * 100;
+            for (const m of marks) {
+                if (pct >= m && !hit.has(m)) {
+                    hit.add(m);
+                    send('scroll_depth', { percent: m, page: location.pathname });
+                }
+            }
+            if (hit.size === marks.length) window.removeEventListener('scroll', onScroll);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+    }
+})();

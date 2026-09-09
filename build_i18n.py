@@ -5,6 +5,25 @@ import subprocess
 
 BASE_URL = "https://www.kineticlinks.net"
 
+# GA4 評估 ID。留空字串則完全不輸出追蹤腳本——沒有 ID 時不該讓
+# 空的 gtag 呼叫散落在頁面上。填入後所有頁面自動帶上。
+GA_MEASUREMENT_ID = ""
+
+
+def build_analytics_snippet():
+    if not GA_MEASUREMENT_ID:
+        return ""
+    return (
+        '    <!-- Analytics -->\n'
+        f'    <script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>\n'
+        '    <script>\n'
+        '        window.dataLayer = window.dataLayer || [];\n'
+        '        function gtag(){dataLayer.push(arguments);}\n'
+        "        gtag('js', new Date());\n"
+        f"        gtag('config', '{GA_MEASUREMENT_ID}');\n"
+        '    </script>\n'
+    )
+
 TODAY = datetime.date.today().isoformat()
 
 LANGS = [
@@ -171,6 +190,7 @@ def build():
         base_flat['article_list'] = build_article_list(translations, lang['lang_path'])
         base_flat['homepage_articles'] = build_homepage_articles(translations, lang['lang_path'])
         base_flat['blog_itemlist'] = build_blog_itemlist(translations, lang['lang_path'])
+        base_flat['analytics'] = build_analytics_snippet()
 
         for page in PAGES:
             flat = dict(base_flat)

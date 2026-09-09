@@ -235,7 +235,7 @@
                 <!-- Impact -->
                 <h2>What DNS-01 Costs You</h2>
                 <p>DNS-01 solves all of the above — it never needs the CA to reach your server, only to resolve a DNS record. So it doesn't matter whether you're behind a CDN, how many machines you run, or whether port 80 is open. That's why multi-node architectures almost always end up on DNS-01.</p>
-                <p>It carries its own cost, though. Every issuance requires adding a TXT record, meaning your automation must hold **DNS provider API credentials**. Those credentials have to reach every machine or CI environment that performs renewals — and DNS access is high-risk, since holding it means being able to repoint your domain.</p>
+                <p>It carries its own cost, though. Every issuance requires adding a TXT record, meaning your automation must hold **DNS provider API credentials**. Those credentials have to reach every machine or CI environment that performs renewals — and DNS access is high-risk, since holding it means being able to repoint your domain. (If you would rather not distribute that key yourself, <a href="/en/ssl/">having a platform perform DNS validation</a> is one alternative.)</p>
 
                 <aside class="callout">
                     <p>The other practical pain is propagation delay. A TXT record isn't instantly visible on every DNS server, so automation has to wait, and there's no standard answer for how long. Too short and validation fails; too long and every issuance drags. As lifetimes shorten and renewals multiply, that accumulated waiting becomes significant.</p>
