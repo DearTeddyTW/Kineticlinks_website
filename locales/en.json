@@ -563,7 +563,7 @@
     }
   },
   "ssl_page": {
-    "platform_url": "https://app.kineticlinks.net/login",
+    "platform_url": "https://app.kineticlinks.net/register",
     "seo": {
       "title": "SSL Certificate Automation | DNS Validation & CDN Push",
       "description": "Kineticlinks' SSL automation platform supports automatic DNS validation and pushes issued certificates directly to multiple CDN brands, cutting the manual work of certificate management and renewal.",
@@ -574,7 +574,7 @@
       "title": "SSL Certificate Automation Platform",
       "subtitle": "One-stop certificate issuance, validation, and deployment — no more manual certificate juggling",
       "desc": "The Kineticlinks SSL automation platform integrates with major DNS providers to fully automate domain validation, and pushes issued certificates directly to multiple CDN brands, so engineering and ops teams never have to manually upload certificates or track expiration dates again.",
-      "cta_primary": "Go to the Platform",
+      "cta_primary": "Create an Account",
       "cta_secondary": "View Other Platforms"
     },
     "overview": {
@@ -623,6 +623,28 @@
         "desc": "Part of the same Kineticlinks product line, so pairing with our CDN service requires no extra integration work."
       }
     },
+    "pricing": {
+      "title": "Plans and Pricing",
+      "desc": "Priced per certificate. Platform features are not charged separately.",
+      "p1": {
+        "name": "Single-Domain Certificate",
+        "price": "US$30",
+        "unit": "/year",
+        "desc": "Covers one domain or a specified subdomain, e.g. example.com or shop.example.com."
+      },
+      "p2": {
+        "name": "Wildcard Certificate",
+        "price": "US$90",
+        "unit": "/year",
+        "desc": "Covers every subdomain under the domain, e.g. *.example.com, with no limit on how many."
+      },
+      "includes_title": "Every platform feature is included in these prices",
+      "i1": "Automated DNS validation, without distributing DNS API keys yourself",
+      "i2": "Automatic push on issuance to GoDaddy, NS1, Apeiro CDN, Tencent CDNRay, CDNetworks and Alibaba Cloud",
+      "i3": "Expiry tracking and automatic reissue within the term, at no extra charge",
+      "i4": "No monthly fee, no account fee, no platform usage fee",
+      "note": "Your first certificate is fully refundable if it doesn't fit. Account top-ups currently accept cryptocurrency; contact us about other payment methods."
+    },
     "customers": {
       "title": "Who It's For",
       "desc": "The following types of teams commonly rely on the SSL automation platform",
@@ -653,13 +675,13 @@
       "a3": "Yes. The platform issues standard SSL certificates that can be downloaded and used on any server or CDN that supports SSL — they aren't locked to Kineticlinks services.",
       "q4": "Which DNS providers support automatic validation?",
       "a4": "We currently integrate with major DNS providers including GoDaddy, and are continuing to expand support. If your provider isn't yet supported, reach out and we'll evaluate adding it.",
-      "q5": "Is the platform free to use?",
-      "a5": "Plans and pricing depend on your certificate volume and feature needs — contact our team and we'll walk you through the options that fit your use case."
+      "q5": "Is the platform free? How is it charged?",
+      "a5": "Platform features carry no separate charge — the cost is the certificate itself: US$30/year for a single-domain certificate and US$90/year for a wildcard, with automatic reissue within the term at no extra cost. There is no monthly or account fee, and your first certificate is fully refundable if it doesn't fit."
     },
     "cta": {
-      "title": "Ready to Simplify Your Certificate Management?",
-      "desc": "Sign up for the Kineticlinks SSL automation platform, or contact us to learn more about integration details.",
-      "button": "Go to the Platform"
+      "title": "Ready to Simplify Certificate Management?",
+      "desc": "Create an account and issue your first certificate — fully refundable if it doesn't fit.",
+      "button": "Create an Account"
     },
     "related": {
       "title": "Related Services & Reading",

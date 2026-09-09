@@ -149,6 +149,53 @@ def build_blog_itemlist(translations, lang_path):
     }, ensure_ascii=False, indent=2)
 
 
+def build_pricing_section(page_content, lang_path):
+    """Render the pricing block only for pages that define prices.
+
+    platform.html is shared by /ssl/ and /speedtest/, so an unconditional
+    section would leave unresolved placeholders on the page without one.
+    """
+    pricing = page_content.get('pricing')
+    if not pricing:
+        return ''
+    plans = []
+    n = 1
+    while f'p{n}' in pricing:
+        p = pricing[f'p{n}']
+        plans.append(f"""<div class="service-card glass-panel interactive price-card">
+                    <h3>{p['name']}</h3>
+                    <p class="price"><span class="price-amount">{p['price']}</span> <span class="price-unit">{p['unit']}</span></p>
+                    <p>{p['desc']}</p>
+                </div>""")
+        n += 1
+    items = []
+    m = 1
+    while f'i{m}' in pricing:
+        items.append(f'<li>{pricing[f"i{m}"]}</li>')
+        m += 1
+    return f"""
+    <!-- Pricing -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>{pricing['title']}</h2>
+                <p>{pricing['desc']}</p>
+            </div>
+            <div class="services-grid pricing-grid">
+                {chr(10).join('                ' + p for p in plans).strip()}
+            </div>
+            <div class="glass-panel price-includes">
+                <h3>{pricing['includes_title']}</h3>
+                <ul class="feature-list">
+                    {chr(10).join('                    ' + i for i in items).strip()}
+                </ul>
+                <p class="price-note">{pricing['note']}</p>
+            </div>
+        </div>
+    </section>
+"""
+
+
 def render(template, flat_translations):
     out_html = template
     # Replace longer keys first so e.g. "page.faq.q1" doesn't get clobbered
@@ -228,6 +275,8 @@ def build():
                     )
                     n += 1
                 flat['table_extra_rows'] = ('\n' + '\n'.join(extra)) if extra else ''
+
+                flat['pricing_section'] = build_pricing_section(page_content, lang['lang_path'])
 
                 disclosure = (page_content.get('disclosure') or '').strip()
                 flat['affiliate_disclosure'] = (

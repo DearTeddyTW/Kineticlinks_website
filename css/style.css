@@ -1550,3 +1550,60 @@ footer {
         font-size: 1.75rem;
     }
 }
+
+/* ---- 方案與價格 ---- */
+.pricing-grid {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+}
+
+.price-card .price {
+    margin: 0.75rem 0 1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.price-amount {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    line-height: 1;
+}
+
+.price-unit {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.price-includes {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.price-includes h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+}
+
+.price-note {
+    margin: 1.25rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .price-includes {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
