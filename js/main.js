@@ -169,9 +169,14 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
             send('platform_click', { platform: href.split('//')[1].split('.')[0], from: pageType });
         } else if (href.includes('t.me/')) {
             send('telegram_click', { from: pageType });
-        } else if (a.classList.contains('btn-primary') && href.startsWith('/')) {
-            // 文章底部 CTA 導向服務頁
-            send('cta_click', { target: href, from: pageType });
+        } else if (/^\/(en\/|zh-cn\/)?(ssl|speedtest|cdn|vps|idc|cloud)\/$/.test(href)) {
+            // 導向服務或平台頁。位置要分開記：內文連結、延伸閱讀卡片與
+            // 文末 CTA 的效果差很多，混在一起就看不出哪個placement有用。
+            const placement = a.closest('.article-body') ? 'body'
+                : a.closest('.related-grid') ? 'related'
+                : a.classList.contains('btn-primary') ? 'cta'
+                : a.closest('footer') ? 'footer' : 'other';
+            send('service_click', { target: href.replace(/^\/(en|zh-cn)\//, '/'), placement: placement, from: pageType });
         } else if (href.startsWith('http') && a.rel && a.rel.includes('sponsored')) {
             send('affiliate_click', { from: pageType });
         }
@@ -186,7 +191,10 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
         const hit = new Set();
         const onScroll = () => {
             const h = document.documentElement;
-            const pct = (h.scrollTop + h.clientHeight) / h.scrollHeight * 100;
+            const view = h.clientHeight || window.innerHeight || 0;
+            // 頁面比視窗短時整篇本來就看得完，直接記 100，否則永遠不會觸發
+            const pct = h.scrollHeight <= view ? 100
+                : (h.scrollTop + view) / h.scrollHeight * 100;
             for (const m of marks) {
                 if (pct >= m && !hit.has(m)) {
                     hit.add(m);

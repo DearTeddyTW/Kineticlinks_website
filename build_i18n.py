@@ -1,4 +1,5 @@
 import datetime
+import hashlib
 import json
 import os
 import subprocess
@@ -7,7 +8,21 @@ BASE_URL = "https://www.kineticlinks.net"
 
 # GA4 評估 ID。留空字串則完全不輸出追蹤腳本——沒有 ID 時不該讓
 # 空的 gtag 呼叫散落在頁面上。填入後所有頁面自動帶上。
-GA_MEASUREMENT_ID = ""
+GA_MEASUREMENT_ID = "G-1E2X03M831"
+
+
+def asset_version(path):
+    """Short content hash, appended to CSS/JS URLs.
+
+    Without it a deploy leaves visitors on the cached copy until their
+    browser decides otherwise — new markup with old styles and old
+    behaviour, which is worse than either.
+    """
+    try:
+        with open(path, 'rb') as f:
+            return hashlib.sha256(f.read()).hexdigest()[:8]
+    except OSError:
+        return ''
 
 
 def build_analytics_snippet():
@@ -238,6 +253,8 @@ def build():
         base_flat['homepage_articles'] = build_homepage_articles(translations, lang['lang_path'])
         base_flat['blog_itemlist'] = build_blog_itemlist(translations, lang['lang_path'])
         base_flat['analytics'] = build_analytics_snippet()
+        base_flat['css_v'] = asset_version('css/style.css')
+        base_flat['js_v'] = asset_version('js/main.js')
 
         for page in PAGES:
             flat = dict(base_flat)
