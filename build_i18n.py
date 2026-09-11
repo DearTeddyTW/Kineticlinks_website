@@ -32,10 +32,14 @@ def build_analytics_snippet():
         '    <!-- Analytics -->\n'
         f'    <script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>\n'
         '    <script>\n'
-        '        window.dataLayer = window.dataLayer || [];\n'
-        '        function gtag(){dataLayer.push(arguments);}\n'
-        "        gtag('js', new Date());\n"
-        f"        gtag('config', '{GA_MEASUREMENT_ID}');\n"
+        '        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，\n'
+        '        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。\n'
+        "        if (!/^(localhost|127\\.0\\.0\\.1|\\[::1\\])$/.test(location.hostname)) {\n"
+        '            window.dataLayer = window.dataLayer || [];\n'
+        '            function gtag(){dataLayer.push(arguments);}\n'
+        "            gtag('js', new Date());\n"
+        f"            gtag('config', '{GA_MEASUREMENT_ID}');\n"
+        '        }\n'
         '    </script>\n'
     )
 

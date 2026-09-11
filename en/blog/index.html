@@ -175,10 +175,14 @@
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1E2X03M831');
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
     </script>
 </head>
 
