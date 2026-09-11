@@ -175,15 +175,15 @@
                     <span class="dot">·</span>
                     <span>9 min read</span>
                 </div>
-                <p class="article-lead">The symptom is distinctive: **the site loads perfectly in a browser, but the mobile app can't connect, curl reports a certificate error, and monitoring keeps alerting**. Which becomes a standoff between "it works fine for me" and "it just won't connect". Both are right. Desktop browsers have a self-repair mechanism that fills in the intermediate certificate your server omitted; almost no non-browser client does.</p>
+                <p class="article-lead">The symptom is distinctive: <strong>the site loads perfectly in a browser, but the mobile app can't connect, curl reports a certificate error, and monitoring keeps alerting</strong>. Which becomes a standoff between "it works fine for me" and "it just won't connect". Both are right. Desktop browsers have a self-repair mechanism that fills in the intermediate certificate your server omitted; almost no non-browser client does.</p>
             </header>
 
             <div class="article-body">
 
                 <!-- What happened -->
                 <h2>What the Chain Is, and Who Sends What</h2>
-                <p>A website certificate doesn't stand alone. It relies on a trust chain leading upward: **your certificate (leaf) → intermediate → root**. The validating party must be able to follow that path to a root it already trusts before it will accept the certificate.</p>
-                <p>The crucial part is where each piece comes from. **Roots are preinstalled in the operating system or browser trust store** and don't need sending. **Intermediates are not, and your server must send them alongside the leaf.** Send only the leaf and the validator is missing the middle, so the chain can't be assembled.</p>
+                <p>A website certificate doesn't stand alone. It relies on a trust chain leading upward: <strong>your certificate (leaf) → intermediate → root</strong>. The validating party must be able to follow that path to a root it already trusts before it will accept the certificate.</p>
+                <p>The crucial part is where each piece comes from. <strong>Roots are preinstalled in the operating system or browser trust store</strong> and don't need sending. <strong>Intermediates are not, and your server must send them alongside the leaf.</strong> Send only the leaf and the validator is missing the middle, so the chain can't be assembled.</p>
 
                 <!-- Timeline table -->
                 <figure class="data-table-wrap">
@@ -251,11 +251,11 @@
 
                 <!-- Impact -->
                 <h2>Why the Symptom Comes and Goes</h2>
-                <p>Desktop browsers have two repair mechanisms. The first is the certificate's **AIA field** (Authority Information Access), which carries a URL for the issuer's certificate; on finding a broken chain, the browser downloads the intermediate from there and completes it. The second is **caching** — browsers retain intermediates encountered on other sites and reuse them.</p>
-                <p>Together these make the problem nearly invisible in a browser. Worse, the behaviour is **inconsistent**: support for AIA fetching varies between browsers and versions, and what's cached depends on which sites that user happened to visit. So the same machine gives different results in different browsers, and the same browser behaves differently for different people.</p>
+                <p>Desktop browsers have two repair mechanisms. The first is the certificate's <strong>AIA field</strong> (Authority Information Access), which carries a URL for the issuer's certificate; on finding a broken chain, the browser downloads the intermediate from there and completes it. The second is <strong>caching</strong> — browsers retain intermediates encountered on other sites and reuse them.</p>
+                <p>Together these make the problem nearly invisible in a browser. Worse, the behaviour is <strong>inconsistent</strong>: support for AIA fetching varies between browsers and versions, and what's cached depends on which sites that user happened to visit. So the same machine gives different results in different browsers, and the same browser behaves differently for different people.</p>
 
                 <aside class="callout">
-                    <p>This is why "it works on my machine" isn't evidence. Your browser may simply have cached that intermediate from another site days ago. There is only one way to be sure — **inspect what the server actually sends**, rather than whether some client managed to connect.</p>
+                    <p>This is why "it works on my machine" isn't evidence. Your browser may simply have cached that intermediate from another site days ago. There is only one way to be sure — <strong>inspect what the server actually sends</strong>, rather than whether some client managed to connect.</p>
                 </aside>
 
                 <p>Non-browser clients generally have neither mechanism. They validate exactly what they receive, and a missing intermediate fails immediately. So the first reports usually come from apps, API integrators, or monitoring — not from ordinary web visitors.</p>
@@ -263,7 +263,7 @@
                 <!-- Why manual fails -->
                 <h2>How to See What the Server Sends</h2>
                 <p>The direct method is `openssl s_client -connect domain:443 -servername domain -showcerts`, which lists every certificate the server actually presents. Each `s:` (subject) and `i:` (issuer) pair in the output is one link in the chain — if only one certificate appears, the server is sending the leaf alone.</p>
-                <p>In a healthy chain the leaf's issuer matches the next certificate's subject, continuing up to a root or a known intermediate. **Run the check from outside**, against the address users actually reach. With a CDN in front, establish which layer you're testing, since edge nodes and origin can carry different certificates.</p>
+                <p>In a healthy chain the leaf's issuer matches the next certificate's subject, continuing up to a root or a known intermediate. <strong>Run the check from outside</strong>, against the address users actually reach. With a CDN in front, establish which layer you're testing, since edge nodes and origin can carry different certificates.</p>
 
                 <!-- How to respond -->
                 <h2>Three Levels of Fix</h2>
@@ -298,7 +298,7 @@
 
                 <!-- Conclusion -->
                 <h2>In Summary</h2>
-                <p>"It opens in my browser" isn't a valid test for certificate problems, because the browser repairs the missing intermediate for you while your apps, API clients and monitoring do not. There is one reliable method: **inspect what the server sends, not whether a given client connected**.</p>
+                <p>"It opens in my browser" isn't a valid test for certificate problems, because the browser repairs the missing intermediate for you while your apps, API clients and monitoring do not. There is one reliable method: <strong>inspect what the server sends, not whether a given client connected</strong>.</p>
                 <p>These faults almost always originate in manual deployment — the wrong file, an empty field, or a CA rotating its intermediate unnoticed. If you'd rather not verify this by hand every time, our SSL automation platform deploys the complete chain to each node on issuance, removing the step where intermediates get dropped.</p>
 
                 <!-- Sources -->
