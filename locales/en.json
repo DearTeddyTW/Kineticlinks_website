@@ -829,6 +829,132 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_cert_chain": {
+    "date": "2026-09-11",
+    "date_display": "September 11, 2026",
+    "category": "Certificate Management",
+    "reading_time": "9 min read",
+    "short_title": "Incomplete Certificate Chains",
+    "title": "It Opens in Your Browser, So the Certificate Is Fine? Diagnosing Missing Intermediates",
+    "excerpt": "\"It looks fine on my machine\" — while the app can't connect and the API throws certificate errors. Neither side is lying: desktop browsers quietly repair the missing intermediate, and your code doesn't.",
+    "disclosure": "",
+    "lead": "The symptom is distinctive: **the site loads perfectly in a browser, but the mobile app can't connect, curl reports a certificate error, and monitoring keeps alerting**. Which becomes a standoff between \"it works fine for me\" and \"it just won't connect\". Both are right. Desktop browsers have a self-repair mechanism that fills in the intermediate certificate your server omitted; almost no non-browser client does.",
+    "seo": {
+      "title": "Incomplete Certificate Chains | Why Only Some Clients Fail",
+      "description": "Browsers fine but apps and APIs failing usually means a missing intermediate. How the chain works, why AIA fetching hides the problem, how clients differ, and how to see what your server actually sends.",
+      "keywords": "incomplete certificate chain, intermediate certificate, AIA fetching, fullchain, certificate validation failed, SSL chain error"
+    },
+    "s1": {
+      "title": "What the Chain Is, and Who Sends What",
+      "p1": "A website certificate doesn't stand alone. It relies on a trust chain leading upward: **your certificate (leaf) → intermediate → root**. The validating party must be able to follow that path to a root it already trusts before it will accept the certificate.",
+      "p2": "The crucial part is where each piece comes from. **Roots are preinstalled in the operating system or browser trust store** and don't need sending. **Intermediates are not, and your server must send them alongside the leaf.** Send only the leaf and the validator is missing the middle, so the chain can't be assembled.",
+      "p3": "Why do some devices connect anyway? Because certain clients repair it themselves. The table shows where they differ."
+    },
+    "table": {
+      "caption": "How different clients react when the server omits the intermediate. This difference is why the symptom appears intermittent.",
+      "col1": "Client",
+      "col2": "When the intermediate is missing",
+      "col3": "What the user sees",
+      "r1c1": "Desktop browsers",
+      "r1c2": "Usually fetch it via the AIA field, or reuse a cached intermediate",
+      "r1c3": "Everything works, no sign of trouble",
+      "r1_class": "",
+      "r2c1": "Mobile apps and WebViews",
+      "r2c2": "Generally do not repair it",
+      "r2c3": "Connection failure or a certificate warning",
+      "r2_class": "is-current",
+      "r3c1": "curl, wget",
+      "r3c2": "Do not",
+      "r3c3": "Certificate verification fails outright",
+      "r3_class": "",
+      "r4c1": "Language HTTP clients (Python, Node.js, Java)",
+      "r4c2": "Do not",
+      "r4c3": "Certificate validation exception",
+      "r4_class": "",
+      "r5c1": "Monitoring and health checks",
+      "r5c2": "Do not",
+      "r5c3": "Persistent alerts, or a false outage",
+      "r5_class": ""
+    },
+    "s2": {
+      "title": "Three Ways the Chain Ends Up Incomplete",
+      "intro": "Nearly every case comes from one of these, and none of them errors at the time:",
+      "r1_title": "Installing the leaf-only certificate file",
+      "r1_desc": "The most common cause. A CA typically hands you several files: one containing just your certificate, another containing the full chain. With Let's Encrypt, `cert.pem` is leaf-only while `fullchain.pem` is complete. Point the config at the wrong one and the service starts normally — the fault only surfaces when a particular kind of client connects.",
+      "r2_title": "Leaving the intermediate field empty",
+      "r2_desc": "On control panels that ask for certificate and intermediate separately — common with hosting providers and load balancers — leaving the intermediate box blank still saves successfully. Nothing warns you, because from the panel's perspective that field was always optional.",
+      "r3_title": "The CA rotated its intermediate",
+      "r3_desc": "CAs rotate their own intermediates. After a renewal your new leaf may be signed by a new intermediate while the server still holds the old one, and the chain breaks again. This one is hard to diagnose, because it worked last time and broke this time while you changed nothing."
+    },
+    "s3": {
+      "title": "Why the Symptom Comes and Goes",
+      "p1": "Desktop browsers have two repair mechanisms. The first is the certificate's **AIA field** (Authority Information Access), which carries a URL for the issuer's certificate; on finding a broken chain, the browser downloads the intermediate from there and completes it. The second is **caching** — browsers retain intermediates encountered on other sites and reuse them.",
+      "p2": "Together these make the problem nearly invisible in a browser. Worse, the behaviour is **inconsistent**: support for AIA fetching varies between browsers and versions, and what's cached depends on which sites that user happened to visit. So the same machine gives different results in different browsers, and the same browser behaves differently for different people.",
+      "callout": "This is why \"it works on my machine\" isn't evidence. Your browser may simply have cached that intermediate from another site days ago. There is only one way to be sure — **inspect what the server actually sends**, rather than whether some client managed to connect.",
+      "p3": "Non-browser clients generally have neither mechanism. They validate exactly what they receive, and a missing intermediate fails immediately. So the first reports usually come from apps, API integrators, or monitoring — not from ordinary web visitors."
+    },
+    "s4": {
+      "title": "How to See What the Server Sends",
+      "p1": "The direct method is `openssl s_client -connect domain:443 -servername domain -showcerts`, which lists every certificate the server actually presents. Each `s:` (subject) and `i:` (issuer) pair in the output is one link in the chain — if only one certificate appears, the server is sending the leaf alone.",
+      "p2": "In a healthy chain the leaf's issuer matches the next certificate's subject, continuing up to a root or a known intermediate. **Run the check from outside**, against the address users actually reach. With a CDN in front, establish which layer you're testing, since edge nodes and origin can carry different certificates."
+    },
+    "s5": {
+      "title": "Three Levels of Fix",
+      "intro": "Once you've confirmed the problem, work through these:",
+      "l1_title": "1. Switch to the full-chain file",
+      "l1_desc": "Point the configuration at the file containing intermediates (`fullchain.pem` for Let's Encrypt), or fill in the intermediate field in the control panel. Including the root is optional — a few hundred extra bytes, and harmless. Reload the service afterwards: a changed file without a reload changes nothing.",
+      "l2_title": "2. Fix every TLS-terminating endpoint",
+      "l2_desc": "Origin, each CDN node and load balancers all hold their own certificate. Fixing origin while CDN nodes still serve the old configuration leaves users exactly where they were. This mirrors expiry handling — certificate problems are nearly always \"some places updated, others didn't\".",
+      "l3_title": "3. Make chain checking part of renewal",
+      "l3_desc": "CAs don't notify you when they rotate intermediates. The reliable defence is verifying chain completeness automatically after each renewal and deployment, rather than waiting for user reports. It's the same mechanism as expiry monitoring, checking one more property."
+    },
+    "s6": {
+      "title": "Three Things to Establish While Diagnosing",
+      "intro": "These save considerable time before you start changing configuration:",
+      "c1_title": "Confirm it really is the chain",
+      "c1_desc": "Expired certificates, hostname mismatches and clock skew all produce similar-looking errors. Use openssl to see how many certificates the server sends before deciding what to fix.",
+      "c2_title": "Confirm which layer you're inspecting",
+      "c2_desc": "Behind a CDN, an external check measures the edge node's certificate. If the fault is between edge and origin, the origin needs testing separately. Getting the layer wrong leads to the opposite conclusion.",
+      "c3_title": "Confirm which kind of client fails",
+      "c3_desc": "If only some mobile devices fail while desktops are fine, a missing intermediate is very likely. If desktop browsers fail too, it's usually something else — because browsers can repair an incomplete chain on their own."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "\"It opens in my browser\" isn't a valid test for certificate problems, because the browser repairs the missing intermediate for you while your apps, API clients and monitoring do not. There is one reliable method: **inspect what the server sends, not whether a given client connected**.",
+      "p2": "These faults almost always originate in manual deployment — the wrong file, an empty field, or a CA rotating its intermediate unnoticed. If you'd rather not verify this by hand every time, our SSL automation platform deploys the complete chain to each node on issuance, removing the step where intermediates get dropped."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "IETF RFC 5280 — Authority Information Access (Section 4.2.2.1)",
+      "u1": "https://www.rfc-editor.org/rfc/rfc5280#section-4.2.2.1",
+      "s2": "Mozilla Bugzilla #399324 — Fetch missing intermediate certs (AIA)",
+      "u2": "https://bugzilla.mozilla.org/show_bug.cgi?id=399324",
+      "s3": "Let's Encrypt — Chains of Trust",
+      "u3": "https://letsencrypt.org/certificates/"
+    },
+    "cta": {
+      "href": "ssl/",
+      "title": "Take Manual Pasting Out of Deployment",
+      "desc": "The Kineticlinks SSL automation platform pushes the complete chain to every node on issuance, so intermediates never get dropped.",
+      "button": "Explore the SSL Platform"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/certificate-expiry-monitoring/",
+      "l1_kicker": "Article",
+      "l1_title": "Certificate Expiry Monitoring",
+      "l1_desc": "The same principle: check what users receive, not what's in the file.",
+      "l2_slug": "blog/acme-challenge-types/",
+      "l2_kicker": "Article",
+      "l2_title": "Choosing an ACME Challenge",
+      "l2_desc": "The first decision in automating issuance, before deployment matters.",
+      "l3_slug": "ssl/",
+      "l3_kicker": "Platform",
+      "l3_title": "SSL Certificate Automation",
+      "l3_desc": "Complete chains pushed automatically to multiple CDN nodes."
+    }
+  },
   "article_icp_filing": {
     "date": "2026-09-07",
     "date_display": "September 7, 2026",
@@ -1669,8 +1795,8 @@
     },
     "sources": {
       "title": "Sources",
-      "s1": "University of Wisconsin KB — SSL/TLS Certificates: Certificate Management Best Practices",
-      "u1": "https://kb.wisc.edu/122433",
+      "s1": "NIST SP 1800-16 — Securing Web Transactions: TLS Server Certificate Management",
+      "u1": "https://csrc.nist.gov/pubs/sp/1800/16/final",
       "s2": "Kodu Cloud — 7 SSL Certificate Renewal Mistakes to Avoid",
       "u2": "https://blog.kodu.cloud/ssl-certificate-renewal-mistakes/",
       "s3": "UptimeRobot — SSL Monitoring",
@@ -1689,10 +1815,10 @@
       "l1_kicker": "Article",
       "l1_title": "SSL Lifetimes Cut to 200 Days",
       "l1_desc": "Why renewals reach eight a year by 2029 — the reason monitoring now matters.",
-      "l2_slug": "ssl/",
-      "l2_kicker": "Platform",
-      "l2_title": "SSL Certificate Automation",
-      "l2_desc": "DNS validation and multi-CDN push, from issuance through deployment.",
+      "l2_slug": "blog/incomplete-certificate-chain/",
+      "l2_kicker": "Article",
+      "l2_title": "Incomplete Certificate Chains",
+      "l2_desc": "Opening in a browser proves nothing — diagnosing missing intermediates.",
       "l3_slug": "blog/acme-challenge-types/",
       "l3_kicker": "Article",
       "l3_title": "Choosing an ACME Challenge",
