@@ -840,6 +840,132 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_hk_filing": {
+    "date": "2026-09-13",
+    "date_display": "September 13, 2026",
+    "category": "China Networking",
+    "reading_time": "9 min read",
+    "short_title": "Do Hong Kong Servers Need Filing",
+    "title": "Do Hong Kong Servers Need ICP Filing? The Exemption Isn't About Where You Bought It",
+    "excerpt": "Hong Kong sits outside mainland filing rules, so no filing is required. But the exemption covers the paperwork rather than every regulation — and it most often lapses when a mainland node is switched on for speed.",
+    "disclosure": "",
+    "lead": "\"Hong Kong servers need no ICP filing\" is true, and frequently read as a blanket pass. In practice **the trigger is where your servers and nodes sit, not who you bought them from** — hosting in Hong Kong genuinely requires no filing, but enabling a mainland CDN node for speed brings the requirement straight back. Here's where the exemption actually ends, why it doesn't exempt you from everything, and a separate confusion worth clearing up: no filing has nothing to do with being fast.",
+    "seo": {
+      "title": "Do Hong Kong Servers Need ICP Filing? Where the Exemption Ends",
+      "description": "Hong Kong sits outside mainland filing rules. But the exemption depends on whether any mainland node is in the path, not where the server was bought.",
+      "keywords": "Hong Kong server ICP filing, no filing required, overseas server, mainland CDN node, CN2, cross-border deployment"
+    },
+    "s1": {
+      "title": "Why Hong Kong Is Exempt",
+      "p1": "The reason is jurisdictional. Hong Kong is a Special Administrative Region under one country, two systems, and the ministry's website filing requirements don't extend there. So whether it's shared hosting, a cloud instance or bare metal, and whether the site is commercial or not, filing simply doesn't apply.",
+      "p2": "One point matters here: **the test is server location, not where the domain is registered**. Which registrar holds the domain, and whether it's a .com or a .cn, makes no difference. Equally, a domain registered through a Chinese registrar needs no filing so long as the servers sit outside and no mainland node is involved. These two things are widely conflated.",
+      "p3": "The table sets out the combinations. The fourth row is the trigger people miss."
+    },
+    "table": {
+      "caption": "Deployment options and filing requirements. The test is node location, not domain registration.",
+      "col1": "Deployment",
+      "col2": "Filing required?",
+      "col3": "Notes",
+      "r1c1": "Servers inside mainland China",
+      "r1c2": "Yes",
+      "r1c3": "Regardless of where the domain is registered",
+      "r1_class": "",
+      "r2c1": "Servers in Hong Kong",
+      "r2c2": "No",
+      "r2c3": "One country, two systems; filing rules don't reach there",
+      "r2_class": "is-current",
+      "r3c1": "Servers in Singapore, Japan, the US etc.",
+      "r3c2": "No",
+      "r3c3": "Also overseas; same test applies",
+      "r3_class": "",
+      "r4c1": "Overseas servers plus mainland CDN nodes",
+      "r4c2": "Yes",
+      "r4c3": "Any mainland node triggers it; most often missed",
+      "r4_class": "",
+      "r5c1": "Overseas servers plus overseas-only CDN",
+      "r5c2": "No",
+      "r5c3": "The compliant acceleration route",
+      "r5_class": ""
+    },
+    "s2": {
+      "title": "Three Misreadings of \"No Filing Required\"",
+      "intro": "All three are common and none is accurate:",
+      "r1_title": "\"Hong Kong is part of China, so filing still applies\"",
+      "r1_desc": "Filing requirements apply by jurisdiction, not by sovereignty. Hong Kong has its own legal system and the ministry's filing rules don't extend to it. Every major cloud provider's documentation states this plainly — it isn't a grey area or lax enforcement, the rule genuinely doesn't apply.",
+      "r2_title": "\"No filing means no regulations at all\"",
+      "r2_desc": "What's exempt is the filing procedure, not every rule. If your service targets mainland users, content compliance and cross-border data requirements still exist; they simply aren't administered through filing. Reading \"no filing\" as \"no obligations\" mistakes a procedural exemption for a substantive one.",
+      "r3_title": "\"Filing-free servers are faster\"",
+      "r3_desc": "The two are unrelated. Filing exemption is a regulatory property; speed is a network one. Line quality between Hong Kong facilities varies enormously — premium direct routes can mean tens of milliseconds, while ordinary international transit or a detour through a third location can be several times slower than a mainland facility at evening peak. **Whether a server is in Hong Kong has no causal bearing on how fast it connects.**"
+    },
+    "s3": {
+      "title": "When the Exemption Usually Lapses",
+      "p1": "The typical sequence: the site runs from Hong Kong, launches smoothly, no filing concerns at all. Later, mainland users report it feeling slow, so someone enables mainland nodes in the CDN dashboard — **and at that moment the filing requirement attaches**, usually without whoever clicked it realising a line was crossed.",
+      "p2": "The mistake is common because in the interface it's just a toggle, indistinguishable from selecting nodes in any other region. Providers don't necessarily warn you, and nothing changes visibly on the user side.",
+      "callout": "So when evaluating acceleration, **the first question is whether the plan uses mainland nodes**, ahead of price or node count. Some plans enable them by default, and signing without asking puts you in a filing-required state unknowingly. This generally isn't visible on a quotation — you have to ask directly.",
+      "p3": "Conversely, an overseas-only CDN deployment is a fully compliant acceleration route. It can't remove the physical latency of distance, but nearby nodes, connection reuse and edge caching substantially reduce how many cross-border round trips happen — usually the larger part of what users actually feel."
+    },
+    "s4": {
+      "title": "Handling Speed Without Filing",
+      "p1": "The cross-border bottleneck is rarely bandwidth; it's latency and packet loss, which compound. So the effective response isn't buying more bandwidth but shortening the path and reducing round trips: static assets on nearby nodes, reusable connections, cacheable content held at the edge.",
+      "p2": "When choosing Hong Kong or any overseas facility, **ask about the route, not just the location**. Within Hong Kong, a direct route and a detoured one can differ by an order of magnitude, and the gap typically appears at evening peak — daytime testing won't show it. Which is also why a single speed test tells you little about cross-border quality."
+    },
+    "s5": {
+      "title": "Three Levels of Decision",
+      "intro": "Work through these in order:",
+      "l1_title": "1. Will a mainland node appear anywhere in your path?",
+      "l1_desc": "This is the only dividing line, covering servers and CDN nodes alike. If none ever will, no filing is required; if one will, it is. Note that's \"will\", not \"does today\" — enabling one later for speed triggers it just the same.",
+      "l2_title": "2. Does your business ultimately need mainland nodes?",
+      "l2_desc": "If so, schedule the filing rather than routing around it, and launch on overseas nodes meanwhile. Filing usually completes within three weeks and the site can serve normally throughout — far easier than discovering later that it was unavoidable.",
+      "l3_title": "3. Can overseas nodes meet your performance requirement?",
+      "l3_desc": "For many cross-border services they can. It comes down to route selection and cache strategy rather than nodes needing to be inside the mainland. Measure before deciding, rather than accepting the cost of filing on the assumption that mainland nodes must be faster."
+    },
+    "s6": {
+      "title": "Three Things to Confirm Before Committing",
+      "intro": "These are the ones most often discovered too late:",
+      "c1_title": "Whether the plan includes mainland nodes",
+      "c1_desc": "Ask the provider directly rather than reading the plan name. Some acceleration plans enable them by default, which changes your filing obligations outright.",
+      "c2_title": "Route quality, not just facility location",
+      "c2_desc": "Within Hong Kong, cross-border performance varies widely by route. Ask what kind of route it is, and test at evening peak rather than relying on daytime figures.",
+      "c3_title": "Content and data requirements",
+      "c3_desc": "No filing doesn't mean no other obligations. If the service targets mainland users and handles personal data, cross-border transfer requirements still apply and deserve separate confirmation."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "Hong Kong servers genuinely need no filing, because the rules don't extend to that jurisdiction. But **the test is node location rather than domain registration**, and the exemption most often lapses when mainland CDN nodes are enabled for speed — one toggle away, and indistinguishable in the interface.",
+      "p2": "If you want cross-border performance without entering the filing process, an overseas-only CDN deployment is both compliant and workable. Our CDN service deploys without connecting mainland nodes, improving cross-border latency and stability."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "Alibaba Cloud — FAQ about ICP filing in different scenarios",
+      "u1": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/product-overview/faq-about-icp-filing-applications-in-different-scenarios",
+      "s2": "Alibaba Cloud — ICP Filing Application Overview",
+      "u2": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/user-guide/icp-filing-application-overview",
+      "s3": "Huawei Cloud — ICP Filing vs Commercial ICP Licence",
+      "u3": "https://support.huaweicloud.com/tg-icp/icp_05_0078.html"
+    },
+    "cta": {
+      "href": "cdn/",
+      "title": "Cross-Border Acceleration Without Triggering Filing",
+      "desc": "Kineticlinks CDN deploys without connecting mainland China nodes, improving cross-border latency and stability.",
+      "button": "Explore CDN Services"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/icp-filing-explained/",
+      "l1_kicker": "Article",
+      "l1_title": "ICP Filing Explained",
+      "l1_desc": "Who needs it, how long it takes, and how pre-filed domain deals work.",
+      "l2_slug": "blog/china-network-latency/",
+      "l2_kicker": "Article",
+      "l2_title": "Why China Connections Are Slow",
+      "l2_desc": "The latency causes overseas nodes face, and time-of-day degradation.",
+      "l3_slug": "cdn/",
+      "l3_kicker": "Service",
+      "l3_title": "CDN Content Delivery Network",
+      "l3_desc": "Overseas acceleration; no mainland nodes means no filing trigger."
+    }
+  },
   "article_http_caching": {
     "date": "2026-09-13",
     "date_display": "September 13, 2026",
