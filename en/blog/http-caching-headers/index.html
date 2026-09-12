@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>HTTP Caching Headers | no-cache Does Not Mean Do Not Cache</title>
+    <meta name="title" content="HTTP Caching Headers | no-cache Does Not Mean Do Not Cache">
+    <meta name="description" content="no-cache permits storage and requires revalidation; no-store forbids it. How max-age and s-maxage divide, what Vary keys on, and how ETag validation works.">
+    <meta name="keywords" content="Cache-Control, no-cache, no-store, max-age, s-maxage, Vary, ETag, CDN caching, HTTP caching">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/en/blog/http-caching-headers/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/http-caching-headers/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/http-caching-headers/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/en/blog/http-caching-headers/">
+    <meta property="og:title" content="HTTP Caching Headers | no-cache Does Not Mean Do Not Cache">
+    <meta property="og:description" content="no-cache permits storage and requires revalidation; no-store forbids it. How max-age and s-maxage divide, what Vary keys on, and how ETag validation works.">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-09-13">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/en/blog/http-caching-headers/">
+    <meta property="twitter:title" content="HTTP Caching Headers | no-cache Does Not Mean Do Not Cache">
+    <meta property="twitter:description" content="no-cache permits storage and requires revalidation; no-store forbids it. How max-age and s-maxage divide, what Vary keys on, and how ETag validation works.">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "no-cache Does Not Mean Do Not Cache: What HTTP Caching Headers Actually Say",
+      "description": "no-cache permits storage and requires revalidation; no-store forbids it. How max-age and s-maxage divide, what Vary keys on, and how ETag validation works.",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/en/blog/http-caching-headers/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kineticlinks.net/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.kineticlinks.net/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "no-cache Does Not Mean Do Not Cache: What HTTP Caching Headers Actually Say",
+          "item": "https://www.kineticlinks.net/en/blog/http-caching-headers/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
+    <script>
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/en/#home">Home</a>
+                <a href="/en/#services">Services</a>
+                <a href="/en/#platforms">Platforms</a>
+                <a href="/en/blog/">Blog</a>
+                <a href="/en/#about">About</a>
+                <a href="/en/#contact" class="btn btn-outline">Contact</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">English ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/http-caching-headers/">繁體中文</a>
+                        <a href="/en/blog/http-caching-headers/">English</a>
+                        <a href="/zh-cn/blog/http-caching-headers/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="Open menu"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/en/">Home</a>
+            <span>/</span>
+            <a href="/en/blog/">Blog</a>
+            <span>/</span>
+            <span class="current">HTTP Caching Headers</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">Network Quality</div>
+                <h1>no-cache Does Not Mean Do Not Cache: What HTTP Caching Headers Actually Say</h1>
+                <div class="article-meta">
+                    <time datetime="2026-09-13">September 13, 2026</time>
+                    <span class="dot">·</span>
+                    <span>10 min read</span>
+                </div>
+                <p class="article-lead">`Cache-Control: no-cache` is badly named. It does <strong>not</strong> mean "don't cache" — it permits a cache to store the response and requires it to check with the origin before each reuse. The directive that forbids storage is `no-store`. The confusion has practical consequences: people protecting sensitive data reach for no-cache and it still lands on disk, while people avoiding risk apply no-store everywhere and give up performance entirely.</p>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>Six Directives and What They Actually Mean</h2>
+                <p>HTTP caching is specified in RFC 9111, where each directive has a precise definition. The trouble is that several are named against intuition, and most people copy them from someone else's configuration without reading the spec.</p>
+                <p>The key distinction is between <strong>storing</strong> and <strong>using</strong>: a cache may hold a response but might need to validate it before serving. `no-cache` governs the second, `no-store` the first — easily confused by name, entirely different in behaviour.</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Directive</th>
+                                    <th>Actual meaning</th>
+                                    <th>Common misreading</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="is-current">
+                                    <td>no-cache</td>
+                                    <td class="num">May be stored, but must be revalidated before each reuse</td>
+                                    <td>Read as "don't cache" — it isn't</td>
+                                </tr>
+                                <tr class="">
+                                    <td>no-store</td>
+                                    <td class="num">Must not be stored at all, headers included</td>
+                                    <td>This is the one that means "don't cache"</td>
+                                </tr>
+                                <tr class="">
+                                    <td>max-age=N</td>
+                                    <td class="num">Fresh for N seconds, applies to every cache</td>
+                                    <td>Assumed sufficient for CDNs too</td>
+                                </tr>
+                                <tr class="">
+                                    <td>s-maxage=N</td>
+                                    <td class="num">Shared caches only; overrides max-age and Expires</td>
+                                    <td>Not knowing it overrides max-age</td>
+                                </tr>
+
+                                <tr>
+                                    <td>must-revalidate</td>
+                                    <td class="num">Stale responses can't be served unvalidated; errors if offline</td>
+                                    <td>Expecting stale content as a fallback</td>
+                                </tr>
+                                <tr>
+                                    <td>private</td>
+                                    <td class="num">Browser may store; shared caches must not</td>
+                                    <td>Conflated with no-store, so used too defensively</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>Six common Cache-Control directives and what RFC 9111 actually says they mean.</figcaption>
+                </figure>
+
+                <p>The table covers the six most-used directives. The first is the most misunderstood of them.</p>
+
+                <!-- Why -->
+                <h2>Three Real Consequences of the Confusion</h2>
+                <p>The naming problem isn't academic. All three of these happen:</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>Using no-cache to protect sensitive data doesn't work</strong>
+                        <span>Wanting billing pages or personal details to leave no trace, people set `no-cache` and consider it handled. Per the specification, a cache <strong>may still write the entire response to disk</strong> — it just has to validate before reusing it. Browser caches on shared machines and corporate proxies can both retain that content. Genuinely preventing storage requires `no-store`.</span>
+                    </li>
+                    <li>
+                        <strong>Applying no-store everywhere costs performance</strong>
+                        <span>Having learned no-store is safer, some apply it site-wide. Every request then goes fully back to origin, the CDN becomes decorative, and static assets stop being reused by browsers. The right approach is identifying which responses genuinely contain personal data — usually only authenticated dynamic pages — and caching the rest normally.</span>
+                    </li>
+                    <li>
+                        <strong>Not knowing s-maxage ties CDN and browser together</strong>
+                        <span>`max-age` applies to browsers and CDNs alike, so one directive can't cache longer at the edge than in the browser. `s-maxage` exists for exactly that: it affects shared caches only and overrides max-age. Setting `max-age=60, s-maxage=86400` means one minute in the browser and one day at the edge — the most basic CDN tuning tool, and among the most overlooked.</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>Vary: the Header That Sets the Cache Key</h2>
+                <p>Caches key on the URL by default. But when one URL returns different content depending on request headers — compressed or uncompressed by `Accept-Encoding`, say — the cache has to know, or it will hand a compressed response to a client that can't read it. `Vary` declares which request headers affect the response.</p>
+                <p>Per the specification, a cache must not reuse a stored response unless every header named in `Vary` matches the original request. <strong>So the more Vary lists, the lower the hit rate</strong> — each header named subdivides the cache key again.</p>
+
+                <aside class="callout">
+                    <p>The classic disaster is `Vary: User-Agent`. User-Agent strings number in the tens of thousands, so this stores a separate copy per browser variant — effectively disabling caching while the configuration looks perfectly fine and the hit rate is inexplicably poor. `Vary: Accept-Encoding`, by contrast, is reasonable and necessary, because it takes only a handful of values.</p>
+                </aside>
+
+                <p>If your CDN hit rate is unreasonably low, `Vary` is the first thing to check. The problem produces no error at all — it just quietly sends every request to origin.</p>
+
+                <!-- Why manual fails -->
+                <h2>After Expiry: ETag and Conditional Requests</h2>
+                <p>An expired cache entry doesn't mean the content changed. The cache can issue a <strong>conditional request</strong>, carrying the `ETag` it received (a content fingerprint) or `Last-Modified`, asking the origin whether this is still current. If nothing changed, the origin answers `304 Not Modified` — headers only, no body.</p>
+                <p>This is what `no-cache` is genuinely for: it forces that validation every time while keeping the fast 304 path. For content that must be current but rarely changes — a homepage, typically — `no-cache` plus ETag is far more efficient than `no-store` retransmitting everything, while still guaranteeing users never see stale content.</p>
+
+                <!-- How to respond -->
+                <h2>Three Levels of Configuration</h2>
+                <p>In practice, sort content into three categories:</p>
+
+                <h3>1. Versioned or fingerprinted static assets</h3>
+                <p>JS, CSS and images with a hash in the filename never change — a change produces a new filename. These take a long max-age plus `immutable`, so browsers skip validation entirely. Highest performance gain, lowest risk.</p>
+
+                <h3>2. Changing but non-sensitive content</h3>
+                <p>HTML pages and public API responses. Suited to `no-cache` or a short max-age with ETag — always current, but costing only a 304 when unchanged. Add s-maxage to keep it longer at the edge if you want the CDN absorbing most traffic.</p>
+
+                <h3>3. Responses containing personal data</h3>
+                <p>Authenticated pages, billing information, anything identity-bearing. These need `no-store`, not `no-cache`. If the intent is merely keeping it out of CDNs while browsers may store it, that's what `private` is for. Don't conflate the three.</p>
+
+                <!-- Checklist -->
+                <h2>Three Things to Check When Caching Misbehaves</h2>
+                <p>When hit rates disappoint or content won't update, these are the usual causes:</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>What Vary lists</strong>
+                        <span>Inspect the actual response headers with developer tools or curl. If it names User-Agent or Cookie — headers with enormous value spaces — hits become nearly impossible, and nothing warns you.</span>
+                    </li>
+                    <li>
+                        <strong>How s-maxage relates to max-age</strong>
+                        <span>If CDN caching duration doesn't match the max-age you set, look for s-maxage — it overrides max-age and affects shared caches only. With both present, it's easy to misread.</span>
+                    </li>
+                    <li>
+                        <strong>Which cache layer you're looking at</strong>
+                        <span>Browser, CDN edge and reverse proxy each store separately. The `Age` response header reports how long the content has sat in a cache — more reliable than guessing which layer served it.</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>In Summary</h2>
+                <p>`no-cache` permits storage and requires validation; `no-store` forbids storage. The naming confusion writes sensitive data to disk on one side while discarding the entire caching layer on the other. <strong>The costs differ, but the cause is the same.</strong></p>
+                <p>What usually decides CDN effectiveness, though, isn't these directives but `Vary` and `s-maxage` — the two least discussed. If cross-border traffic depends on the CDN absorbing origin requests, those two matter more than node count.</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>Sources</h3>
+                    <ul>
+                        <li><a href="https://www.rfc-editor.org/rfc/rfc9111.html" target="_blank" rel="noopener">IETF RFC 9111 — HTTP Caching</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control" target="_blank" rel="noopener">MDN — Cache-Control header</a></li>
+                        <li><a href="https://developers.cloudflare.com/cache/concepts/cache-control/" target="_blank" rel="noopener">Cloudflare — Origin Cache Control</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>Related Services & Reading</h2>
+                <p class="article-related-desc">These pages connect directly to the topic above</p>
+                <div class="related-grid">
+                    <a href="/en/blog/geodns-resolver-location/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>GeoDNS and Traffic Steering</h3>
+                        <p>How nodes get chosen, and why it sees the resolver rather than the user.</p>
+                    </a>
+                    <a href="/en/blog/reading-speed-test-results/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>Reading Speed Test Results</h3>
+                        <p>Beyond cache hits, loss and latency are the cross-border bottleneck.</p>
+                    </a>
+                    <a href="/en/cdn/" class="related-card glass-panel">
+                        <span class="related-kicker">Service</span>
+                        <h3>CDN Content Delivery Network</h3>
+                        <p>Cross-border acceleration, where cache policy decides the origin ratio.</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>Make the CDN Actually Absorb Origin Traffic</h2>
+                <p>Kineticlinks CDN provides cross-border node acceleration, deployable without mainland China nodes, with help reviewing cache strategy.</p>
+                <div class="hero-actions">
+                    <a href="/en/cdn/" class="btn btn-primary">Explore CDN Services</a>
+                    <a href="/en/blog/" class="btn btn-secondary">Back to all articles</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/en/cdn/">Content Delivery Network (CDN)</a>
+                    <a href="/en/vps/">Virtual Private Server (VPS)</a>
+                    <a href="/en/idc/">IDC Construction</a>
+                    <a href="/en/cloud/">Public Cloud Solutions</a>
+                    <a href="/en/ssl/">Automated SSL Platform</a>
+                    <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/blog/">Blog</a>
+                    <a href="/en/#contact">Contact</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=ded9249e" defer></script>
+</body>
+
+</html>

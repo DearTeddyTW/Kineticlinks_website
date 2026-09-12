@@ -82,6 +82,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.kineticlinks.net/blog/http-caching-headers/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/http-caching-headers/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/http-caching-headers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.kineticlinks.net/blog/geodns-resolver-location/</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/geodns-resolver-location/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/geodns-resolver-location/" />
@@ -342,6 +352,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.kineticlinks.net/en/blog/http-caching-headers/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/http-caching-headers/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/http-caching-headers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.kineticlinks.net/en/blog/geodns-resolver-location/</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/geodns-resolver-location/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/geodns-resolver-location/" />
@@ -597,6 +617,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/" />
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/zh-cn/blog/http-caching-headers/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/http-caching-headers/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/http-caching-headers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

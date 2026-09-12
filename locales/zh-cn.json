@@ -840,6 +840,136 @@
       "keywords": "IT 技术文章, CDN 教程, VPS 选购指南, 云端迁移, SSL 证书管理, 基础架构"
     }
   },
+  "article_http_caching": {
+    "date": "2026-09-13",
+    "date_display": "2026 年 9 月 13 日",
+    "category": "网络质量",
+    "reading_time": "约 10 分钟",
+    "short_title": "HTTP 缓存标头",
+    "title": "no-cache 不是「不要缓存」：HTTP 缓存标头的实际语意",
+    "excerpt": "用 no-cache 想挡住缓存的人，其实允许了存储——它要求的是每次使用前验证。真正禁止存储的是 no-store，而两者的差别会直接影响敏感数据与 CDN 性能。",
+    "disclosure": "",
+    "lead": "`Cache-Control: no-cache` 这个名字取得很糟。它**不是**「不要缓存」——它允许缓存存储这份响应，只是要求每次使用前先向源站确认还新不新。真正禁止存储的指令叫 `no-store`。这个命名造成的误解有实际后果：想保护敏感数据的人用了 no-cache，数据仍然被写到磁盘；想避免风险的人一律用 no-store，性能整个赔进去。",
+    "seo": {
+      "title": "HTTP 缓存标头完整说明｜no-cache 不是不要缓存 - Kineticlinks",
+      "description": "no-cache 允许存储、只是要求验证，no-store 才是禁止存储。说明 max-age 与 s-maxage 的分工、Vary 如何决定缓存键，以及 ETag 验证机制。",
+      "keywords": "Cache-Control, no-cache, no-store, max-age, s-maxage, Vary, ETag, CDN 缓存, HTTP 缓存"
+    },
+    "s1": {
+      "title": "六个指令与它们实际的意思",
+      "p1": "HTTP 缓存的规范是 RFC 9111，里面每个指令的语意都有明确定义。问题在于其中几个的名字与直觉不符，而多数人是从别人的配置文件复制过来、没查过规范。",
+      "p2": "最关键的区分是**存储**与**使用**：缓存可以存储一份响应，但在使用它之前可能需要先验证。`no-cache` 管的是后者，`no-store` 管的是前者——名字容易混淆，行为完全不同。",
+      "p3": "下表列出六个最常用的指令。第一行就是那个被误解得最严重的。"
+    },
+    "table": {
+      "caption": "六个常用的 Cache-Control 指令与它们在 RFC 9111 中的实际语意。",
+      "col1": "指令",
+      "col2": "实际语意",
+      "col3": "常见误解",
+      "r1c1": "no-cache",
+      "r1c2": "可以存储，但每次使用前必须向源站验证",
+      "r1c3": "被当成「不要缓存」——它不是",
+      "r1_class": "is-current",
+      "r2c1": "no-store",
+      "r2c2": "完全不得存储，包含标头在内",
+      "r2c3": "这才是真正的「不要缓存」",
+      "r2_class": "",
+      "r3c1": "max-age=N",
+      "r3c2": "N 秒内视为新鲜，对所有缓存生效",
+      "r3c3": "以为它也管 CDN 就够了",
+      "r3_class": "",
+      "r4c1": "s-maxage=N",
+      "r4c2": "只对共享缓存生效，并覆盖 max-age 与 Expires",
+      "r4c3": "不知道它会盖掉 max-age",
+      "r4_class": "",
+      "r5c1": "must-revalidate",
+      "r5c2": "过期后未经验证不得供应，离线时须回错误",
+      "r5c3": "以为过期后还能先挡一下",
+      "r5_class": "",
+      "r6c1": "private",
+      "r6c2": "只允许浏览器存储，共享缓存不得存储",
+      "r6c3": "与 no-store 混用，结果过度保守",
+      "r6_class": ""
+    },
+    "s2": {
+      "title": "这个误解造成的三种实际后果",
+      "intro": "名称误导不只是学术问题，以下三种都会实际发生：",
+      "r1_title": "用 no-cache 保护敏感数据是无效的",
+      "r1_desc": "想让账单页面、个人资料不被留下痕迹，设了 `no-cache` 就以为安全了。但依规范，缓存**仍然可以把整份响应写进磁盘**，只是下次使用前要验证。共用电脑上的浏览器缓存、企业的代理服务器，都可能留着那份内容。要真正不留存，必须用 `no-store`。",
+      "r2_title": "一律用 no-store 会赔掉性能",
+      "r2_desc": "知道 no-store 比较保险之后，有些人干脆全站都设。结果是每一次请求都要完整回源，CDN 形同虚设，静态资源也不再被浏览器重用。正确做法是分清楚哪些响应真的含个人数据——通常只有登录后的动态页面——其余照常缓存。",
+      "r3_title": "不知道 s-maxage 导致 CDN 与浏览器绑在一起",
+      "r3_desc": "`max-age` 同时作用于浏览器与 CDN，所以想让 CDN 缓存久一点、浏览器短一点，用单一指令做不到。`s-maxage` 就是为此存在：它只对共享缓存生效，而且会覆盖 max-age。设定 `max-age=60, s-maxage=86400` 的意思是浏览器一分钟、CDN 一天——这是 CDN 调优最基本也最常被忽略的工具。"
+    },
+    "s3": {
+      "title": "Vary：决定缓存键的那个标头",
+      "p1": "缓存默认以网址作为键。但如果同一个网址会依请求标头返回不同内容（例如依 `Accept-Encoding` 给压缩或未压缩版本），缓存必须知道这件事，否则会把压缩版回给不支持的客户端。`Vary` 就是用来声明「这些请求标头会影响响应内容」。",
+      "p2": "依规范，缓存在使用已存储的响应之前，`Vary` 列出的每一个请求标头都必须与当初那次请求相符，否则不得直接使用。**所以 Vary 列得越多，缓存命中率越低**——每一个被列入的标头都会让缓存键再细分一次。",
+      "callout": "最常见的灾难是 `Vary: User-Agent`。User-Agent 字符串的变体数以万计，等于为每一种浏览器版本各存一份——实际效果接近完全停用缓存，但配置看起来一切正常，只是命中率莫名其妙地低。相对地 `Vary: Accept-Encoding` 是合理且必要的，因为它的取值只有少数几种。",
+      "p3": "如果您的 CDN 命中率低得不合理，`Vary` 是第一个该检查的地方。这个问题不会产生任何错误信息，只会安静地让每一次请求都回源。"
+    },
+    "s4": {
+      "title": "过期之后：ETag 与条件式请求",
+      "p1": "缓存过期不代表内容变了。这时候缓存可以发出**条件式请求**：带上先前拿到的 `ETag`（内容指纹）或 `Last-Modified`（修改时间），问源站「还是这一份吗？」。如果没变，源站回 `304 Not Modified`，只有标头没有内容。",
+      "p2": "这就是 `no-cache` 真正的用途——它强制每次都走这个验证流程，但保留了 304 的快速路径。对于「必须是最新、但通常不会变」的内容（例如 HTML 首页），`no-cache` 加上 ETag 的组合，比起 `no-store` 每次完整传输有效率得多，同时仍保证用户不会看到旧内容。"
+    },
+    "s5": {
+      "title": "三个层次的配置",
+      "intro": "实务上可以依内容性质分成三类处理：",
+      "l1_title": "一、带版本或指纹的静态资源",
+      "l1_desc": "文件名含哈希的 JS、CSS、图片，内容永远不会变（变了就是新文件名）。这类可以设很长的 max-age 并加上 `immutable`，让浏览器连验证都省下。这是性能收益最大、风险最低的一类。",
+      "l2_title": "二、会变动但不敏感的内容",
+      "l2_desc": "HTML 页面、API 的公开响应。适合 `no-cache` 或短的 max-age 搭配 ETag——确保拿到最新版本，但不变时只付出一次 304 的成本。若想让 CDN 挡掉大部分流量，再用 s-maxage 拉长边缘的缓存时间。",
+      "l3_title": "三、含个人数据的响应",
+      "l3_desc": "登录后的页面、账务信息、任何带身份的内容。这类要用 `no-store`，而不是 `no-cache`。如果只是不想让 CDN 存、但浏览器可以存，那是 `private` 的用途。三者不要混用。"
+    },
+    "s6": {
+      "title": "排查缓存问题时该先确认的三件事",
+      "intro": "命中率不如预期或内容没更新时，这三项最常是原因：",
+      "c1_title": "确认 Vary 列了什么",
+      "c1_desc": "用浏览器开发者工具或 curl 看实际响应标头。若列了 User-Agent 或 Cookie 之类取值极多的标头，缓存几乎不可能命中，而这不会有任何错误提示。",
+      "c2_title": "确认 s-maxage 与 max-age 的关系",
+      "c2_desc": "如果 CDN 的缓存时间跟你设的 max-age 不一致，先看有没有 s-maxage——它会覆盖 max-age，而且只影响共享缓存。两者并存时很容易误判。",
+      "c3_title": "确认你看的是哪一层缓存",
+      "c3_desc": "浏览器、CDN 边缘节点、反向代理各有各的存储。响应中的 `Age` 标头会告诉你这份内容在缓存里待了多久——用它判断内容是从哪一层来的，比猜测可靠。"
+    },
+    "s7": {
+      "title": "小结",
+      "p1": "`no-cache` 允许存储、要求验证；`no-store` 才是禁止存储。这个命名造成的误解，一边让敏感数据在以为受保护的情况下被写入磁盘，一边让过度保守的配置牺牲掉整个缓存层的价值。**两种错误的代价不同，但根源是同一个。**",
+      "p2": "而真正决定 CDN 效果的往往不是这些指令本身，是 `Vary` 与 `s-maxage` 这两个较少被谈到的部分。如果您的跨境流量需要靠 CDN 挡下大部分回源，这两项的配置比节点数量更有影响。"
+    },
+    "sources": {
+      "title": "参考资料",
+      "s1": "IETF RFC 9111 — HTTP Caching",
+      "u1": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "s2": "MDN — Cache-Control header",
+      "u2": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+      "s3": "Cloudflare — Origin Cache Control",
+      "u3": "https://developers.cloudflare.com/cache/concepts/cache-control/"
+    },
+    "cta": {
+      "href": "cdn/",
+      "title": "让 CDN 真的挡下回源流量",
+      "desc": "Kineticlinks CDN 提供跨境节点加速，可在不接入大陆节点的前提下部署，并协助检视缓存策略。",
+      "button": "了解 CDN 服务"
+    },
+    "related": {
+      "title": "延伸阅读与相关服务",
+      "desc": "这些内容与本页主题直接相关，可一并参考",
+      "l1_slug": "blog/geodns-resolver-location/",
+      "l1_kicker": "技术文章",
+      "l1_title": "GeoDNS 与流量调度",
+      "l1_desc": "节点怎么选，以及为什么它看的是解析器不是用户。",
+      "l2_slug": "blog/reading-speed-test-results/",
+      "l2_kicker": "技术文章",
+      "l2_title": "测速数字怎么读",
+      "l2_desc": "缓存命中之外，延迟与丢包才是跨境的主要瓶颈。",
+      "l3_slug": "cdn/",
+      "l3_kicker": "核心服务",
+      "l3_title": "CDN 内容分发网络",
+      "l3_desc": "跨境节点加速，缓存策略直接决定回源比例。"
+    }
+  },
   "article_geodns": {
     "date": "2026-09-13",
     "date_display": "2026 年 9 月 13 日",

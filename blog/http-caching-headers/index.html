@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>HTTP 快取標頭完整說明｜no-cache 不是不要快取 - Kineticlinks</title>
+    <meta name="title" content="HTTP 快取標頭完整說明｜no-cache 不是不要快取 - Kineticlinks">
+    <meta name="description" content="no-cache 允許儲存、只是要求驗證，no-store 才是禁止儲存。說明 max-age 與 s-maxage 的分工、Vary 如何決定快取鍵，以及 ETag 驗證機制。">
+    <meta name="keywords" content="Cache-Control, no-cache, no-store, max-age, s-maxage, Vary, ETag, CDN 快取, HTTP 快取">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/blog/http-caching-headers/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/http-caching-headers/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/http-caching-headers/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/blog/http-caching-headers/">
+    <meta property="og:title" content="HTTP 快取標頭完整說明｜no-cache 不是不要快取 - Kineticlinks">
+    <meta property="og:description" content="no-cache 允許儲存、只是要求驗證，no-store 才是禁止儲存。說明 max-age 與 s-maxage 的分工、Vary 如何決定快取鍵，以及 ETag 驗證機制。">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-09-13">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/blog/http-caching-headers/">
+    <meta property="twitter:title" content="HTTP 快取標頭完整說明｜no-cache 不是不要快取 - Kineticlinks">
+    <meta property="twitter:description" content="no-cache 允許儲存、只是要求驗證，no-store 才是禁止儲存。說明 max-age 與 s-maxage 的分工、Vary 如何決定快取鍵，以及 ETag 驗證機制。">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "no-cache 不是「不要快取」：HTTP 快取標頭的實際語意",
+      "description": "no-cache 允許儲存、只是要求驗證，no-store 才是禁止儲存。說明 max-age 與 s-maxage 的分工、Vary 如何決定快取鍵，以及 ETag 驗證機制。",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13",
+      "inLanguage": "zh-TW",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/blog/http-caching-headers/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "https://www.kineticlinks.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "技術文章",
+          "item": "https://www.kineticlinks.net/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "no-cache 不是「不要快取」：HTTP 快取標頭的實際語意",
+          "item": "https://www.kineticlinks.net/blog/http-caching-headers/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
+    <script>
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/#home">首頁</a>
+                <a href="/#services">服務項目</a>
+                <a href="/#platforms">平台產品</a>
+                <a href="/blog/">技術文章</a>
+                <a href="/#about">關於我們</a>
+                <a href="/#contact" class="btn btn-outline">聯絡我們</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">繁體中文 ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/http-caching-headers/">繁體中文</a>
+                        <a href="/en/blog/http-caching-headers/">English</a>
+                        <a href="/zh-cn/blog/http-caching-headers/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="開啟選單"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/">首頁</a>
+            <span>/</span>
+            <a href="/blog/">技術文章</a>
+            <span>/</span>
+            <span class="current">HTTP 快取標頭</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">網路品質</div>
+                <h1>no-cache 不是「不要快取」：HTTP 快取標頭的實際語意</h1>
+                <div class="article-meta">
+                    <time datetime="2026-09-13">2026 年 9 月 13 日</time>
+                    <span class="dot">·</span>
+                    <span>約 10 分鐘</span>
+                </div>
+                <p class="article-lead">`Cache-Control: no-cache` 這個名字取得很糟。它<strong>不是</strong>「不要快取」——它允許快取儲存這份回應，只是要求每次使用前先向源站確認還新不新。真正禁止儲存的指令叫 `no-store`。這個命名造成的誤解有實際後果：想保護敏感資料的人用了 no-cache，資料仍然被寫到磁碟；想避免風險的人一律用 no-store，效能整個賠進去。</p>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>六個指令與它們實際的意思</h2>
+                <p>HTTP 快取的規範是 RFC 9111，裡面每個指令的語意都有明確定義。問題在於其中幾個的名字與直覺不符，而多數人是從別人的設定檔複製過來、沒查過規範。</p>
+                <p>最關鍵的區分是<strong>儲存</strong>與<strong>使用</strong>：快取可以儲存一份回應，但在使用它之前可能需要先驗證。`no-cache` 管的是後者，`no-store` 管的是前者——名字容易混淆，行為完全不同。</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>指令</th>
+                                    <th>實際語意</th>
+                                    <th>常見誤解</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="is-current">
+                                    <td>no-cache</td>
+                                    <td class="num">可以儲存，但每次使用前必須向源站驗證</td>
+                                    <td>被當成「不要快取」——它不是</td>
+                                </tr>
+                                <tr class="">
+                                    <td>no-store</td>
+                                    <td class="num">完全不得儲存，包含標頭在內</td>
+                                    <td>這才是真正的「不要快取」</td>
+                                </tr>
+                                <tr class="">
+                                    <td>max-age=N</td>
+                                    <td class="num">N 秒內視為新鮮，對所有快取生效</td>
+                                    <td>以為它也管 CDN 就夠了</td>
+                                </tr>
+                                <tr class="">
+                                    <td>s-maxage=N</td>
+                                    <td class="num">只對共享快取生效，並覆蓋 max-age 與 Expires</td>
+                                    <td>不知道它會蓋掉 max-age</td>
+                                </tr>
+
+                                <tr>
+                                    <td>must-revalidate</td>
+                                    <td class="num">過期後未經驗證不得供應，離線時須回錯誤</td>
+                                    <td>以為過期後還能先擋一下</td>
+                                </tr>
+                                <tr>
+                                    <td>private</td>
+                                    <td class="num">只允許瀏覽器儲存，共享快取不得儲存</td>
+                                    <td>與 no-store 混用，結果過度保守</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>六個常用的 Cache-Control 指令與它們在 RFC 9111 中的實際語意。</figcaption>
+                </figure>
+
+                <p>下表列出六個最常用的指令。第一列就是那個被誤解得最嚴重的。</p>
+
+                <!-- Why -->
+                <h2>這個誤解造成的三種實際後果</h2>
+                <p>名稱誤導不只是學術問題，以下三種都會實際發生：</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>用 no-cache 保護敏感資料是無效的</strong>
+                        <span>想讓帳單頁面、個人資料不被留下痕跡，設了 `no-cache` 就以為安全了。但依規範，快取<strong>仍然可以把整份回應寫進磁碟</strong>，只是下次使用前要驗證。共用電腦上的瀏覽器快取、企業的代理伺服器，都可能留著那份內容。要真正不留存，必須用 `no-store`。</span>
+                    </li>
+                    <li>
+                        <strong>一律用 no-store 會賠掉效能</strong>
+                        <span>知道 no-store 比較保險之後，有些人乾脆全站都設。結果是每一次請求都要完整回源，CDN 形同虛設，靜態資源也不再被瀏覽器重用。正確做法是分清楚哪些回應真的含個人資料——通常只有登入後的動態頁面——其餘照常快取。</span>
+                    </li>
+                    <li>
+                        <strong>不知道 s-maxage 導致 CDN 與瀏覽器綁在一起</strong>
+                        <span>`max-age` 同時作用於瀏覽器與 CDN，所以想讓 CDN 快取久一點、瀏覽器短一點，用單一指令做不到。`s-maxage` 就是為此存在：它只對共享快取生效，而且會覆蓋 max-age。設定 `max-age=60, s-maxage=86400` 的意思是瀏覽器一分鐘、CDN 一天——這是 CDN 調校最基本也最常被忽略的工具。</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>Vary：決定快取鍵的那個標頭</h2>
+                <p>快取預設以網址作為鍵。但如果同一個網址會依請求標頭回傳不同內容（例如依 `Accept-Encoding` 給壓縮或未壓縮版本），快取必須知道這件事，否則會把壓縮版回給不支援的客戶端。`Vary` 就是用來宣告「這些請求標頭會影響回應內容」。</p>
+                <p>依規範，快取在使用已儲存的回應之前，`Vary` 列出的每一個請求標頭都必須與當初那次請求相符，否則不得直接使用。<strong>所以 Vary 列得越多，快取命中率越低</strong>——每一個被列入的標頭都會讓快取鍵再細分一次。</p>
+
+                <aside class="callout">
+                    <p>最常見的災難是 `Vary: User-Agent`。User-Agent 字串的變體數以萬計，等於為每一種瀏覽器版本各存一份——實際效果接近完全停用快取，但設定看起來一切正常，只是命中率莫名其妙地低。相對地 `Vary: Accept-Encoding` 是合理且必要的，因為它的取值只有少數幾種。</p>
+                </aside>
+
+                <p>如果您的 CDN 命中率低得不合理，`Vary` 是第一個該檢查的地方。這個問題不會產生任何錯誤訊息，只會安靜地讓每一次請求都回源。</p>
+
+                <!-- Why manual fails -->
+                <h2>過期之後：ETag 與條件式請求</h2>
+                <p>快取過期不代表內容變了。這時候快取可以發出<strong>條件式請求</strong>：帶上先前拿到的 `ETag`（內容指紋）或 `Last-Modified`（修改時間），問源站「還是這一份嗎？」。如果沒變，源站回 `304 Not Modified`，只有標頭沒有內容。</p>
+                <p>這就是 `no-cache` 真正的用途——它強制每次都走這個驗證流程，但保留了 304 的快速路徑。對於「必須是最新、但通常不會變」的內容（例如 HTML 首頁），`no-cache` 加上 ETag 的組合，比起 `no-store` 每次完整傳輸有效率得多，同時仍保證使用者不會看到舊內容。</p>
+
+                <!-- How to respond -->
+                <h2>三個層次的設定</h2>
+                <p>實務上可以依內容性質分成三類處理：</p>
+
+                <h3>一、帶版本或指紋的靜態資源</h3>
+                <p>檔名含雜湊的 JS、CSS、圖片，內容永遠不會變（變了就是新檔名）。這類可以設很長的 max-age 並加上 `immutable`，讓瀏覽器連驗證都省下。這是效能收益最大、風險最低的一類。</p>
+
+                <h3>二、會變動但不敏感的內容</h3>
+                <p>HTML 頁面、API 的公開回應。適合 `no-cache` 或短的 max-age 搭配 ETag——確保拿到最新版本，但不變時只付出一次 304 的成本。若想讓 CDN 擋掉大部分流量，再用 s-maxage 拉長邊緣的快取時間。</p>
+
+                <h3>三、含個人資料的回應</h3>
+                <p>登入後的頁面、帳務資訊、任何帶身分的內容。這類要用 `no-store`，而不是 `no-cache`。如果只是不想讓 CDN 存、但瀏覽器可以存，那是 `private` 的用途。三者不要混用。</p>
+
+                <!-- Checklist -->
+                <h2>排查快取問題時該先確認的三件事</h2>
+                <p>命中率不如預期或內容沒更新時，這三項最常是原因：</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>確認 Vary 列了什麼</strong>
+                        <span>用瀏覽器開發者工具或 curl 看實際回應標頭。若列了 User-Agent 或 Cookie 之類取值極多的標頭，快取幾乎不可能命中，而這不會有任何錯誤提示。</span>
+                    </li>
+                    <li>
+                        <strong>確認 s-maxage 與 max-age 的關係</strong>
+                        <span>如果 CDN 的快取時間跟你設的 max-age 不一致，先看有沒有 s-maxage——它會覆蓋 max-age，而且只影響共享快取。兩者並存時很容易誤判。</span>
+                    </li>
+                    <li>
+                        <strong>確認你看的是哪一層快取</strong>
+                        <span>瀏覽器、CDN 邊緣節點、反向代理各有各的儲存。回應中的 `Age` 標頭會告訴你這份內容在快取裡待了多久——用它判斷內容是從哪一層來的，比猜測可靠。</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>小結</h2>
+                <p>`no-cache` 允許儲存、要求驗證；`no-store` 才是禁止儲存。這個命名造成的誤解，一邊讓敏感資料在以為受保護的情況下被寫入磁碟，一邊讓過度保守的設定犧牲掉整個快取層的價值。<strong>兩種錯誤的代價不同，但根源是同一個。</strong></p>
+                <p>而真正決定 CDN 效果的往往不是這些指令本身，是 `Vary` 與 `s-maxage` 這兩個較少被談到的部分。如果您的跨境流量需要靠 CDN 擋下大部分回源，這兩項的設定比節點數量更有影響。</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>參考資料</h3>
+                    <ul>
+                        <li><a href="https://www.rfc-editor.org/rfc/rfc9111.html" target="_blank" rel="noopener">IETF RFC 9111 — HTTP Caching</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control" target="_blank" rel="noopener">MDN — Cache-Control header</a></li>
+                        <li><a href="https://developers.cloudflare.com/cache/concepts/cache-control/" target="_blank" rel="noopener">Cloudflare — Origin Cache Control</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>延伸閱讀與相關服務</h2>
+                <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
+                <div class="related-grid">
+                    <a href="/blog/geodns-resolver-location/" class="related-card glass-panel">
+                        <span class="related-kicker">技術文章</span>
+                        <h3>GeoDNS 與流量調度</h3>
+                        <p>節點怎麼選，以及為什麼它看的是解析器不是使用者。</p>
+                    </a>
+                    <a href="/blog/reading-speed-test-results/" class="related-card glass-panel">
+                        <span class="related-kicker">技術文章</span>
+                        <h3>測速數字怎麼讀</h3>
+                        <p>快取命中之外，延遲與丟包才是跨境的主要瓶頸。</p>
+                    </a>
+                    <a href="/cdn/" class="related-card glass-panel">
+                        <span class="related-kicker">核心服務</span>
+                        <h3>CDN 內容傳遞網路</h3>
+                        <p>跨境節點加速，快取策略直接決定回源比例。</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>讓 CDN 真的擋下回源流量</h2>
+                <p>Kineticlinks CDN 提供跨境節點加速，可在不接入大陸節點的前提下部署，並協助檢視快取策略。</p>
+                <div class="hero-actions">
+                    <a href="/cdn/" class="btn btn-primary">了解 CDN 服務</a>
+                    <a href="/blog/" class="btn btn-secondary">返回文章列表</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/cdn/">CDN 內容傳遞網路</a>
+                    <a href="/vps/">VPS 虛擬專屬主機</a>
+                    <a href="/idc/">IDC 機房建置</a>
+                    <a href="/cloud/">公有雲架構解決方案</a>
+                    <a href="/ssl/">SSL 憑證自動化平台</a>
+                    <a href="/speedtest/">全球三網測速平台</a>
+                    <a href="/blog/">技術文章</a>
+                    <a href="/#contact">聯絡我們</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=ded9249e" defer></script>
+</body>
+
+</html>

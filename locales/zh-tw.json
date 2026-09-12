@@ -840,6 +840,136 @@
       "keywords": "IT 技術文章, CDN 教學, VPS 選購指南, 雲端搬遷, SSL 憑證管理, 基礎架構"
     }
   },
+  "article_http_caching": {
+    "date": "2026-09-13",
+    "date_display": "2026 年 9 月 13 日",
+    "category": "網路品質",
+    "reading_time": "約 10 分鐘",
+    "short_title": "HTTP 快取標頭",
+    "title": "no-cache 不是「不要快取」：HTTP 快取標頭的實際語意",
+    "excerpt": "用 no-cache 想擋住快取的人，其實允許了儲存——它要求的是每次使用前驗證。真正禁止儲存的是 no-store，而兩者的差別會直接影響敏感資料與 CDN 效能。",
+    "disclosure": "",
+    "lead": "`Cache-Control: no-cache` 這個名字取得很糟。它**不是**「不要快取」——它允許快取儲存這份回應，只是要求每次使用前先向源站確認還新不新。真正禁止儲存的指令叫 `no-store`。這個命名造成的誤解有實際後果：想保護敏感資料的人用了 no-cache，資料仍然被寫到磁碟；想避免風險的人一律用 no-store，效能整個賠進去。",
+    "seo": {
+      "title": "HTTP 快取標頭完整說明｜no-cache 不是不要快取 - Kineticlinks",
+      "description": "no-cache 允許儲存、只是要求驗證，no-store 才是禁止儲存。說明 max-age 與 s-maxage 的分工、Vary 如何決定快取鍵，以及 ETag 驗證機制。",
+      "keywords": "Cache-Control, no-cache, no-store, max-age, s-maxage, Vary, ETag, CDN 快取, HTTP 快取"
+    },
+    "s1": {
+      "title": "六個指令與它們實際的意思",
+      "p1": "HTTP 快取的規範是 RFC 9111，裡面每個指令的語意都有明確定義。問題在於其中幾個的名字與直覺不符，而多數人是從別人的設定檔複製過來、沒查過規範。",
+      "p2": "最關鍵的區分是**儲存**與**使用**：快取可以儲存一份回應，但在使用它之前可能需要先驗證。`no-cache` 管的是後者，`no-store` 管的是前者——名字容易混淆，行為完全不同。",
+      "p3": "下表列出六個最常用的指令。第一列就是那個被誤解得最嚴重的。"
+    },
+    "table": {
+      "caption": "六個常用的 Cache-Control 指令與它們在 RFC 9111 中的實際語意。",
+      "col1": "指令",
+      "col2": "實際語意",
+      "col3": "常見誤解",
+      "r1c1": "no-cache",
+      "r1c2": "可以儲存，但每次使用前必須向源站驗證",
+      "r1c3": "被當成「不要快取」——它不是",
+      "r1_class": "is-current",
+      "r2c1": "no-store",
+      "r2c2": "完全不得儲存，包含標頭在內",
+      "r2c3": "這才是真正的「不要快取」",
+      "r2_class": "",
+      "r3c1": "max-age=N",
+      "r3c2": "N 秒內視為新鮮，對所有快取生效",
+      "r3c3": "以為它也管 CDN 就夠了",
+      "r3_class": "",
+      "r4c1": "s-maxage=N",
+      "r4c2": "只對共享快取生效，並覆蓋 max-age 與 Expires",
+      "r4c3": "不知道它會蓋掉 max-age",
+      "r4_class": "",
+      "r5c1": "must-revalidate",
+      "r5c2": "過期後未經驗證不得供應，離線時須回錯誤",
+      "r5c3": "以為過期後還能先擋一下",
+      "r5_class": "",
+      "r6c1": "private",
+      "r6c2": "只允許瀏覽器儲存，共享快取不得儲存",
+      "r6c3": "與 no-store 混用，結果過度保守",
+      "r6_class": ""
+    },
+    "s2": {
+      "title": "這個誤解造成的三種實際後果",
+      "intro": "名稱誤導不只是學術問題，以下三種都會實際發生：",
+      "r1_title": "用 no-cache 保護敏感資料是無效的",
+      "r1_desc": "想讓帳單頁面、個人資料不被留下痕跡，設了 `no-cache` 就以為安全了。但依規範，快取**仍然可以把整份回應寫進磁碟**，只是下次使用前要驗證。共用電腦上的瀏覽器快取、企業的代理伺服器，都可能留著那份內容。要真正不留存，必須用 `no-store`。",
+      "r2_title": "一律用 no-store 會賠掉效能",
+      "r2_desc": "知道 no-store 比較保險之後，有些人乾脆全站都設。結果是每一次請求都要完整回源，CDN 形同虛設，靜態資源也不再被瀏覽器重用。正確做法是分清楚哪些回應真的含個人資料——通常只有登入後的動態頁面——其餘照常快取。",
+      "r3_title": "不知道 s-maxage 導致 CDN 與瀏覽器綁在一起",
+      "r3_desc": "`max-age` 同時作用於瀏覽器與 CDN，所以想讓 CDN 快取久一點、瀏覽器短一點，用單一指令做不到。`s-maxage` 就是為此存在：它只對共享快取生效，而且會覆蓋 max-age。設定 `max-age=60, s-maxage=86400` 的意思是瀏覽器一分鐘、CDN 一天——這是 CDN 調校最基本也最常被忽略的工具。"
+    },
+    "s3": {
+      "title": "Vary：決定快取鍵的那個標頭",
+      "p1": "快取預設以網址作為鍵。但如果同一個網址會依請求標頭回傳不同內容（例如依 `Accept-Encoding` 給壓縮或未壓縮版本），快取必須知道這件事，否則會把壓縮版回給不支援的客戶端。`Vary` 就是用來宣告「這些請求標頭會影響回應內容」。",
+      "p2": "依規範，快取在使用已儲存的回應之前，`Vary` 列出的每一個請求標頭都必須與當初那次請求相符，否則不得直接使用。**所以 Vary 列得越多，快取命中率越低**——每一個被列入的標頭都會讓快取鍵再細分一次。",
+      "callout": "最常見的災難是 `Vary: User-Agent`。User-Agent 字串的變體數以萬計，等於為每一種瀏覽器版本各存一份——實際效果接近完全停用快取，但設定看起來一切正常，只是命中率莫名其妙地低。相對地 `Vary: Accept-Encoding` 是合理且必要的，因為它的取值只有少數幾種。",
+      "p3": "如果您的 CDN 命中率低得不合理，`Vary` 是第一個該檢查的地方。這個問題不會產生任何錯誤訊息，只會安靜地讓每一次請求都回源。"
+    },
+    "s4": {
+      "title": "過期之後：ETag 與條件式請求",
+      "p1": "快取過期不代表內容變了。這時候快取可以發出**條件式請求**：帶上先前拿到的 `ETag`（內容指紋）或 `Last-Modified`（修改時間），問源站「還是這一份嗎？」。如果沒變，源站回 `304 Not Modified`，只有標頭沒有內容。",
+      "p2": "這就是 `no-cache` 真正的用途——它強制每次都走這個驗證流程，但保留了 304 的快速路徑。對於「必須是最新、但通常不會變」的內容（例如 HTML 首頁），`no-cache` 加上 ETag 的組合，比起 `no-store` 每次完整傳輸有效率得多，同時仍保證使用者不會看到舊內容。"
+    },
+    "s5": {
+      "title": "三個層次的設定",
+      "intro": "實務上可以依內容性質分成三類處理：",
+      "l1_title": "一、帶版本或指紋的靜態資源",
+      "l1_desc": "檔名含雜湊的 JS、CSS、圖片，內容永遠不會變（變了就是新檔名）。這類可以設很長的 max-age 並加上 `immutable`，讓瀏覽器連驗證都省下。這是效能收益最大、風險最低的一類。",
+      "l2_title": "二、會變動但不敏感的內容",
+      "l2_desc": "HTML 頁面、API 的公開回應。適合 `no-cache` 或短的 max-age 搭配 ETag——確保拿到最新版本，但不變時只付出一次 304 的成本。若想讓 CDN 擋掉大部分流量，再用 s-maxage 拉長邊緣的快取時間。",
+      "l3_title": "三、含個人資料的回應",
+      "l3_desc": "登入後的頁面、帳務資訊、任何帶身分的內容。這類要用 `no-store`，而不是 `no-cache`。如果只是不想讓 CDN 存、但瀏覽器可以存，那是 `private` 的用途。三者不要混用。"
+    },
+    "s6": {
+      "title": "排查快取問題時該先確認的三件事",
+      "intro": "命中率不如預期或內容沒更新時，這三項最常是原因：",
+      "c1_title": "確認 Vary 列了什麼",
+      "c1_desc": "用瀏覽器開發者工具或 curl 看實際回應標頭。若列了 User-Agent 或 Cookie 之類取值極多的標頭，快取幾乎不可能命中，而這不會有任何錯誤提示。",
+      "c2_title": "確認 s-maxage 與 max-age 的關係",
+      "c2_desc": "如果 CDN 的快取時間跟你設的 max-age 不一致，先看有沒有 s-maxage——它會覆蓋 max-age，而且只影響共享快取。兩者並存時很容易誤判。",
+      "c3_title": "確認你看的是哪一層快取",
+      "c3_desc": "瀏覽器、CDN 邊緣節點、反向代理各有各的儲存。回應中的 `Age` 標頭會告訴你這份內容在快取裡待了多久——用它判斷內容是從哪一層來的，比猜測可靠。"
+    },
+    "s7": {
+      "title": "小結",
+      "p1": "`no-cache` 允許儲存、要求驗證；`no-store` 才是禁止儲存。這個命名造成的誤解，一邊讓敏感資料在以為受保護的情況下被寫入磁碟，一邊讓過度保守的設定犧牲掉整個快取層的價值。**兩種錯誤的代價不同，但根源是同一個。**",
+      "p2": "而真正決定 CDN 效果的往往不是這些指令本身，是 `Vary` 與 `s-maxage` 這兩個較少被談到的部分。如果您的跨境流量需要靠 CDN 擋下大部分回源，這兩項的設定比節點數量更有影響。"
+    },
+    "sources": {
+      "title": "參考資料",
+      "s1": "IETF RFC 9111 — HTTP Caching",
+      "u1": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "s2": "MDN — Cache-Control header",
+      "u2": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+      "s3": "Cloudflare — Origin Cache Control",
+      "u3": "https://developers.cloudflare.com/cache/concepts/cache-control/"
+    },
+    "cta": {
+      "href": "cdn/",
+      "title": "讓 CDN 真的擋下回源流量",
+      "desc": "Kineticlinks CDN 提供跨境節點加速，可在不接入大陸節點的前提下部署，並協助檢視快取策略。",
+      "button": "了解 CDN 服務"
+    },
+    "related": {
+      "title": "延伸閱讀與相關服務",
+      "desc": "這些內容與本頁主題直接相關，可一併參考",
+      "l1_slug": "blog/geodns-resolver-location/",
+      "l1_kicker": "技術文章",
+      "l1_title": "GeoDNS 與流量調度",
+      "l1_desc": "節點怎麼選，以及為什麼它看的是解析器不是使用者。",
+      "l2_slug": "blog/reading-speed-test-results/",
+      "l2_kicker": "技術文章",
+      "l2_title": "測速數字怎麼讀",
+      "l2_desc": "快取命中之外，延遲與丟包才是跨境的主要瓶頸。",
+      "l3_slug": "cdn/",
+      "l3_kicker": "核心服務",
+      "l3_title": "CDN 內容傳遞網路",
+      "l3_desc": "跨境節點加速，快取策略直接決定回源比例。"
+    }
+  },
   "article_geodns": {
     "date": "2026-09-13",
     "date_display": "2026 年 9 月 13 日",

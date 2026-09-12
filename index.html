@@ -344,6 +344,17 @@
                 <p>來自第一線的基礎架構實務筆記</p>
             </div>
             <div class="article-list">
+                <a href="/blog/http-caching-headers/" class="article-card">
+                    <div class="article-card-meta">
+                        <span class="article-card-tag">網路品質</span>
+                        <time datetime="2026-09-13">2026 年 9 月 13 日</time>
+                        <span>·</span>
+                        <span>約 10 分鐘</span>
+                    </div>
+                    <h2>no-cache 不是「不要快取」：HTTP 快取標頭的實際語意</h2>
+                    <p>用 no-cache 想擋住快取的人，其實允許了儲存——它要求的是每次使用前驗證。真正禁止儲存的是 no-store，而兩者的差別會直接影響敏感資料與 CDN 效能。</p>
+                    <span class="card-link">閱讀全文 →</span>
+                </a>
                 <a href="/blog/geodns-resolver-location/" class="article-card">
                     <div class="article-card-meta">
                         <span class="article-card-tag">網路品質</span>
@@ -364,17 +375,6 @@
                     </div>
                     <h2>免費憑證與付費憑證差在哪：不是加密強度，也不是萬用字元</h2>
                     <p>「付費憑證比較安全」和「付費憑證是智商稅」兩種說法都不對。真正的分界在驗證層級與營運限制——而萬用字元免費就有，這點很多人不知道。</p>
-                    <span class="card-link">閱讀全文 →</span>
-                </a>
-                <a href="/blog/nginx-certificate-configuration/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">憑證管理</span>
-                        <time datetime="2026-09-12">2026 年 9 月 12 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
-                    </div>
-                    <h2>nginx -t 通過不代表憑證正確：三個讓設定與實際脫鉤的機制</h2>
-                    <p>設定檔改好了、測試也通過了，使用者卻拿到舊憑證或別的網域的憑證。問題不在憑證本身，而在 Nginx 載入與挑選憑證的方式。</p>
                     <span class="card-link">閱讀全文 →</span>
                 </a>
             </div>
