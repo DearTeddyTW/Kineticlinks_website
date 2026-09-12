@@ -344,6 +344,17 @@
                 <p>Infrastructure notes from the front line</p>
             </div>
             <div class="article-list">
+                <a href="/en/blog/geodns-resolver-location/" class="article-card">
+                    <div class="article-card-meta">
+                        <span class="article-card-tag">Network Quality</span>
+                        <time datetime="2026-09-13">September 13, 2026</time>
+                        <span>·</span>
+                        <span>10 min read</span>
+                    </div>
+                    <h2>Why GeoDNS Sends Users to the Wrong Node: It Sees the Resolver, Not You</h2>
+                    <p>Geographic routing sounds straightforward — send people to the nearest node. But the authoritative server only ever sees the recursive resolver, so a user on 8.8.8.8 is effectively anonymous.</p>
+                    <span class="card-link">Read the full article →</span>
+                </a>
                 <a href="/en/blog/free-vs-paid-ssl-certificates/" class="article-card">
                     <div class="article-card-meta">
                         <span class="article-card-tag">Certificate Management</span>
@@ -364,17 +375,6 @@
                     </div>
                     <h2>nginx -t Passing Doesn't Mean the Certificate Is Right: Three Mechanisms That Decouple Config From Reality</h2>
                     <p>The config is edited, the test passes, and users still get the old certificate or one for a different domain. The problem isn't the certificate — it's how Nginx loads and chooses them.</p>
-                    <span class="card-link">Read the full article →</span>
-                </a>
-                <a href="/en/blog/ocsp-stapling-deprecated/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">Certificate Management</span>
-                        <time datetime="2026-09-12">September 12, 2026</time>
-                        <span>·</span>
-                        <span>9 min read</span>
-                    </div>
-                    <h2>Still Configuring OCSP Stapling? Let's Encrypt Switched It Off</h2>
-                    <p>Guides still tell you to enable ssl_stapling, but Let's Encrypt shut its OCSP service down in August 2025 and certificates no longer carry the URL — that directive now does nothing at all.</p>
                     <span class="card-link">Read the full article →</span>
                 </a>
             </div>

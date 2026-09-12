@@ -840,6 +840,132 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_geodns": {
+    "date": "2026-09-13",
+    "date_display": "September 13, 2026",
+    "category": "Network Quality",
+    "reading_time": "10 min read",
+    "short_title": "GeoDNS and Traffic Steering",
+    "title": "Why GeoDNS Sends Users to the Wrong Node: It Sees the Resolver, Not You",
+    "excerpt": "Geographic routing sounds straightforward — send people to the nearest node. But the authoritative server only ever sees the recursive resolver, so a user on 8.8.8.8 is effectively anonymous.",
+    "disclosure": "",
+    "lead": "A GeoDNS configuration screen makes it look as though the system knows where users are. In reality **the authoritative server never sees the user** — only the recursive resolver asking on their behalf. When the two are co-located it works well; when they aren't, users in Taiwan get routed to a US node and nothing in your logs looks wrong. Here's what each steering method actually uses, when it misjudges, and why ECS isn't a complete fix.",
+    "seo": {
+      "title": "GeoDNS Limitations | Resolver Location and EDNS Client Subnet",
+      "description": "GeoDNS routes on resolver location, not the user's. What each steering method uses, how public DNS breaks it, and what ECS does and doesn't fix.",
+      "keywords": "GeoDNS, geographic routing, EDNS Client Subnet, ECS, DNS traffic steering, latency routing, health checks, failover"
+    },
+    "s1": {
+      "title": "DNS Can Do More Than Return an Address",
+      "p1": "Basic DNS behaviour is \"give a name, get an address\". Managed DNS services — NS1, UltraDNS and similar — turn that answer into a programmable decision point: the same name can return different addresses depending on where the query came from, measured latency to each endpoint, and current health.",
+      "p2": "That's genuinely useful for cross-border architecture: Asian users to Asian nodes, European to European, with nothing needed at the application layer. **But the whole mechanism rests on an assumption that frequently doesn't hold** — the third row below is where it breaks.",
+      "p3": "First, what each steering method actually decides on."
+    },
+    "table": {
+      "caption": "Common DNS steering methods and what each bases decisions on.",
+      "col1": "Method",
+      "col2": "What it decides on",
+      "col3": "Limitation",
+      "r1c1": "Round robin",
+      "r1c2": "Returns each address in turn",
+      "r1c3": "Ignores location and health entirely",
+      "r1_class": "",
+      "r2c1": "Weighted distribution",
+      "r2c2": "A preconfigured traffic ratio",
+      "r2c3": "Controllable split, still ignores location",
+      "r2_class": "",
+      "r3c1": "Geographic (GeoDNS)",
+      "r3c2": "Location of the recursive resolver asking",
+      "r3c3": "Not the user's location — unless ECS is present",
+      "r3_class": "is-current",
+      "r4c1": "Latency-based",
+      "r4c2": "Measured latency to each endpoint",
+      "r4c3": "Measured from the resolver, not the user",
+      "r4_class": "",
+      "r5c1": "Health-check failover",
+      "r5c2": "Whether an endpoint passes health checks",
+      "r5c3": "Switching is bounded by TTL, not immediate",
+      "r5_class": ""
+    },
+    "s2": {
+      "title": "Three Situations That Misjudge",
+      "intro": "All three are common, and all share one property: the user and the resolver aren't in the same place.",
+      "r1_title": "The user switched to a public resolver",
+      "r1_desc": "Public resolvers like 8.8.8.8 and 1.1.1.1 run on anycast, distributed globally. A user in Taiwan querying 8.8.8.8 may actually be answered from Singapore or Hong Kong, and that's the location your authoritative server sees. One line changed in their network settings defeats your geographic routing, entirely outside your control.",
+      "r2_title": "Corporate resolvers centralised at headquarters",
+      "r2_desc": "Many organisations funnel DNS queries through internal resolvers at head office. So staff in the Tokyo branch generate queries originating from Taipei, and GeoDNS sends all of them to the Taipei node. Nothing looks wrong in the logs, because from the authoritative server's view those genuinely were queries from Taipei.",
+      "r3_title": "Carrier and mobile network resolver placement",
+      "r3_desc": "Operator resolvers aren't necessarily deployed in the region their users occupy, which shows most in cross-border scenarios. China's three carriers each structure their resolvers differently, which is one reason the same site performs inconsistently between Telecom and Mobile users."
+    },
+    "s3": {
+      "title": "What ECS Fixes, and What It Doesn't",
+      "p1": "EDNS Client Subnet (ECS, specified in RFC 7871) exists for exactly this problem: the recursive resolver forwards a **fragment of the user's IP subnet** alongside the query, letting the authoritative server decide on the user rather than the resolver. NS1's documentation says as much — its geographic filters work best when resolvers support ECS.",
+      "p2": "It has three limits. First, **not every resolver sends it** — privacy concerns mean some deliberately don't, and you can't compel them. Second, it carries a subnet rather than a full address, so precision is bounded. Third, it increases caching load on the authoritative side, since one name now needs different answers per subnet.",
+      "callout": "The practical consequence: **GeoDNS accuracy is probabilistic, not guaranteed**. It works for most users, but some fraction always reaches a suboptimal node, and your own logs can't tell you which ones or what proportion. Treating it as best-effort optimisation is reasonable; treating it as precise traffic control leaves you unable to explain the cases that go wrong.",
+      "p3": "Where geographic accuracy genuinely matters, **anycast is structurally better than GeoDNS**. Anycast routing happens at the network layer along the actual BGP path, reflecting where the user really is without a resolver in between. It's why CDNs generally don't rely on GeoDNS for node selection."
+    },
+    "s4": {
+      "title": "Health-Check Failover Is Slower Than It Looks",
+      "p1": "Managed DNS health checks detect a failed endpoint and start returning a backup address. But that switch only takes effect once **the answer users already hold expires** — the record's TTL. At a 300-second TTL, users can keep reaching the failed endpoint for up to five minutes.",
+      "p2": "So DNS-level failover suits outages lasting minutes or more, not second-scale high availability. For that, a load balancer or anycast network does the work instead. This follows directly from TTL behaviour, the same mechanism that governs any DNS change."
+    },
+    "s5": {
+      "title": "Three Levels of Assessment",
+      "intro": "When evaluating GeoDNS, work through these in order:",
+      "l1_title": "1. Which resolvers do your users use?",
+      "l1_desc": "This decides how accurate GeoDNS will be for you. Consumers use public DNS heavily; corporate users often go through internal resolvers — both reduce accuracy. If users concentrate in a few regions and mostly use local carrier resolvers, accuracy is considerably higher.",
+      "l2_title": "2. How serious is reaching the wrong node?",
+      "l2_desc": "If the consequence is somewhat higher latency, probabilistic accuracy is acceptable. If it involves data residency or regulatory separation — certain data not leaving a jurisdiction — GeoDNS cannot be relied on. That needs an explicit decision in the application, not a mechanism that never sees the user.",
+      "l3_title": "3. Are you after optimisation or failover?",
+      "l3_desc": "The two want opposite TTLs. Optimisation prefers longer TTLs to reduce queries; failover prefers short ones to switch faster. Doing both means compromising, or handing failover to a lower layer."
+    },
+    "s6": {
+      "title": "Three Things to Confirm Before Configuring",
+      "intro": "These decide whether it can meet your expectations at all:",
+      "c1_title": "That your provider supports ECS and it's enabled",
+      "c1_desc": "Supporting and enabling are separate; some services require switching it on explicitly. Without it, every query is judged on resolver location.",
+      "c2_title": "That TTL matches your switching requirement",
+      "c2_desc": "Decide what switching delay is acceptable, then work back to a TTL. Discovering later that it's too long doesn't help — answers already handed out don't expire because you changed a setting.",
+      "c3_title": "That you can verify actual behaviour",
+      "c3_desc": "Query from different regions and different resolvers and see which address comes back. Testing only from your own network always yields the same answer, which proves nothing about whether geographic routing works."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "GeoDNS's fundamental limit is that **the authoritative server cannot see users, only resolvers**. ECS mitigates this without eliminating it, because whether ECS is sent is the resolver's decision, not yours. As best-effort optimisation it's reasonable; as precise traffic control it will leave you unable to explain the failures.",
+      "p2": "If what you need is reliable proximity rather than a probabilistic guess, anycast fits structurally better — the routing decision happens at the network layer, along the user's real path rather than the resolver's location. Our CDN works this way, and can be deployed without connecting mainland China nodes."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "IETF RFC 7871 — Client Subnet in DNS Queries",
+      "u1": "https://www.rfc-editor.org/rfc/rfc7871.html",
+      "s2": "IBM NS1 Connect — DNS Traffic Steering",
+      "u2": "https://www.ibm.com/products/ns1-connect/addons/dns-traffic-steering",
+      "s3": "UltraDNS — Directional Pool",
+      "u3": "https://docs.ultradns.com/Content/MSP_User_Guide/Content/User%20Guides/MSP_User_Guide/Pools/Directional%20Pool.htm"
+    },
+    "cta": {
+      "href": "cdn/",
+      "title": "Need Reliable Proximity Rather Than a Guess?",
+      "desc": "Kineticlinks CDN selects nodes at the network layer, unaffected by resolver location, and deploys without mainland China nodes.",
+      "button": "Explore CDN Services"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/dns-record-types/",
+      "l1_kicker": "Article",
+      "l1_title": "DNS Records and TTL",
+      "l1_desc": "TTL behaviour decides how long failover actually takes.",
+      "l2_slug": "blog/china-network-latency/",
+      "l2_kicker": "Article",
+      "l2_title": "Why China Connections Are Slow",
+      "l2_desc": "Resolver architecture differences between the three carriers.",
+      "l3_slug": "cdn/",
+      "l3_kicker": "Service",
+      "l3_title": "CDN Content Delivery Network",
+      "l3_desc": "Node selection at the network layer, independent of resolver location."
+    }
+  },
   "article_free_vs_paid": {
     "date": "2026-09-13",
     "date_display": "September 13, 2026",
