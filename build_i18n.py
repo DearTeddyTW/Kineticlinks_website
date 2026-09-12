@@ -1,6 +1,7 @@
 import datetime
 import hashlib
 import json
+import re
 import os
 import subprocess
 
@@ -91,6 +92,21 @@ PAGES = [
 ]
 
 
+def convert_emphasis(value, key):
+    """Turn **text** into <strong>text</strong> for fields rendered as HTML.
+
+    Writing content in JSON invites markdown habits, and a literal ** ships
+    as visible asterisks. Converting at build time removes the chance of
+    missing one. seo.* and the sources feed meta tags and JSON-LD, where
+    markup would be wrong, so they are left alone and checked instead.
+    """
+    if not isinstance(value, str) or '**' not in value:
+        return value
+    if key.startswith('seo.') or '.seo.' in key or key.endswith(('.title', '.name')):
+        raise ValueError(f"'{key}' 含 ** 但會輸出到 meta 或 JSON-LD，請改寫純文字")
+    return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', value)
+
+
 def flatten_dict(d, parent_key='', sep='.'):
     items = []
     for k, v in d.items():
@@ -98,7 +114,7 @@ def flatten_dict(d, parent_key='', sep='.'):
         if isinstance(v, dict):
             items.extend(flatten_dict(v, new_key, sep=sep).items())
         else:
-            items.append((new_key, v))
+            items.append((new_key, convert_emphasis(v, new_key)))
     return dict(items)
 
 
