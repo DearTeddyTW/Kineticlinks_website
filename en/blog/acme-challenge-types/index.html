@@ -175,7 +175,7 @@
                     <span class="dot">·</span>
                     <span>9 min read</span>
                 </div>
-                <p class="article-lead">"Just install Certbot" is the most common misconception about certificate automation. The tooling isn't the hard part. What actually blocks people is **choosing the wrong challenge type** — and the problem usually doesn't surface at install time. It surfaces when you put the service behind a CDN, or the first time you request a wildcard certificate. Each of the three challenge types has hard constraints worth knowing before you commit.</p>
+                <p class="article-lead">"Just install Certbot" is the most common misconception about certificate automation. The tooling isn't the hard part. What actually blocks people is <strong>choosing the wrong challenge type</strong> — and the problem usually doesn't surface at install time. It surfaces when you put the service behind a CDN, or the first time you request a wildcard certificate. Each of the three challenge types has hard constraints worth knowing before you commit.</p>
             </header>
 
             <div class="article-body">
@@ -247,17 +247,17 @@
                 <!-- Impact -->
                 <h2>What DNS-01 Costs You</h2>
                 <p>DNS-01 solves all of the above — it never needs the CA to reach your server, only to resolve a DNS record. So it doesn't matter whether you're behind a CDN, how many machines you run, or whether port 80 is open. That's why multi-node architectures almost always end up on DNS-01.</p>
-                <p>It carries its own cost, though. Every issuance requires adding a TXT record, meaning your automation must hold **DNS provider API credentials**. Those credentials have to reach every machine or CI environment that performs renewals — and DNS access is high-risk, since holding it means being able to repoint your domain. (If you would rather not distribute that key yourself, <a href="/en/ssl/">having a platform perform DNS validation</a> is one alternative.)</p>
+                <p>It carries its own cost, though. Every issuance requires adding a TXT record, meaning your automation must hold <strong>DNS provider API credentials</strong>. Those credentials have to reach every machine or CI environment that performs renewals — and DNS access is high-risk, since holding it means being able to repoint your domain. (If you would rather not distribute that key yourself, <a href="/en/ssl/">having a platform perform DNS validation</a> is one alternative.)</p>
 
                 <aside class="callout">
                     <p>The other practical pain is propagation delay. A TXT record isn't instantly visible on every DNS server, so automation has to wait, and there's no standard answer for how long. Too short and validation fails; too long and every issuance drags. As lifetimes shorten and renewals multiply, that accumulated waiting becomes significant.</p>
                 </aside>
 
-                <p>Worth noting: in February 2026 Let's Encrypt proposed **DNS-PERSIST-01**, which replaces the repeated updates with a single standing authorisation record bound to a specific ACME account — aimed squarely at both pain points above. It remains an IETF draft; the announced production target was Q2 2026, so check Let's Encrypt's own announcements for current availability. Note too that once authorisation is persistent, protecting the ACME account key matters correspondingly more.</p>
+                <p>Worth noting: in February 2026 Let's Encrypt proposed <strong>DNS-PERSIST-01</strong>, which replaces the repeated updates with a single standing authorisation record bound to a specific ACME account — aimed squarely at both pain points above. It remains an IETF draft; the announced production target was Q2 2026, so check Let's Encrypt's own announcements for current availability. Note too that once authorisation is persistent, protecting the ACME account key matters correspondingly more.</p>
 
                 <!-- Why manual fails -->
                 <h2>The Hard Constraint on Wildcards</h2>
-                <p>If you need a wildcard like `*.example.com`, the decision is already made: **only DNS-01 can issue one**. Neither HTTP-01 nor TLS-ALPN-01 can produce wildcard certificates. This isn't a configuration issue; it's a protocol-level constraint.</p>
+                <p>If you need a wildcard like `*.example.com`, the decision is already made: <strong>only DNS-01 can issue one</strong>. Neither HTTP-01 nor TLS-ALPN-01 can produce wildcard certificates. This isn't a configuration issue; it's a protocol-level constraint.</p>
                 <p>It's worth knowing early, because it works backwards into your choice of DNS provider. If your registrar or DNS service offers no API, you can't automate DNS-01, which means no automatically-renewed wildcard — you'd be adding TXT records by hand every time. With lifetimes already at 200 days and heading to 47, manual handling isn't a viable long-term plan.</p>
 
                 <!-- How to respond -->
@@ -293,7 +293,7 @@
 
                 <!-- Conclusion -->
                 <h2>In Summary</h2>
-                <p>The hard part of certificate automation was never installing Certbot; it's picking the right challenge for your actual architecture. The logic is short: **a CDN in front or a wildcard requirement means DNS-01** — and committing to DNS-01 means first confirming your DNS provider has an API, then managing that key carefully.</p>
+                <p>The hard part of certificate automation was never installing Certbot; it's picking the right challenge for your actual architecture. The logic is short: <strong>a CDN in front or a wildcard requirement means DNS-01</strong> — and committing to DNS-01 means first confirming your DNS provider has an API, then managing that key carefully.</p>
                 <p>If you'd rather not handle DNS API key distribution and multi-node deployment yourself, our SSL automation platform combines validation and delivery in one flow: the platform performs DNS validation and pushes issued certificates straight to CDN nodes.</p>
 
                 <!-- Sources -->

@@ -846,7 +846,7 @@
     "title": "It Opens in Your Browser, So the Certificate Is Fine? Diagnosing Missing Intermediates",
     "excerpt": "\"It looks fine on my machine\" — while the app can't connect and the API throws certificate errors. Neither side is lying: desktop browsers quietly repair the missing intermediate, and your code doesn't.",
     "disclosure": "",
-    "lead": "The symptom is distinctive: **the site loads perfectly in a browser, but the mobile app can't connect, curl reports a certificate error, and monitoring keeps alerting**. Which becomes a standoff between \"it works fine for me\" and \"it just won't connect\". Both are right. Desktop browsers have a self-repair mechanism that fills in the intermediate certificate your server omitted; almost no non-browser client does.",
+    "lead": "The symptom is distinctive: <strong>the site loads perfectly in a browser, but the mobile app can't connect, curl reports a certificate error, and monitoring keeps alerting</strong>. Which becomes a standoff between \"it works fine for me\" and \"it just won't connect\". Both are right. Desktop browsers have a self-repair mechanism that fills in the intermediate certificate your server omitted; almost no non-browser client does.",
     "seo": {
       "title": "Incomplete Certificate Chains | Why Only Some Clients Fail",
       "description": "Browsers repair a missing intermediate certificate; apps, curl and monitoring do not. How the chain works and how to see what your server actually sends.",
@@ -854,8 +854,8 @@
     },
     "s1": {
       "title": "What the Chain Is, and Who Sends What",
-      "p1": "A website certificate doesn't stand alone. It relies on a trust chain leading upward: **your certificate (leaf) → intermediate → root**. The validating party must be able to follow that path to a root it already trusts before it will accept the certificate.",
-      "p2": "The crucial part is where each piece comes from. **Roots are preinstalled in the operating system or browser trust store** and don't need sending. **Intermediates are not, and your server must send them alongside the leaf.** Send only the leaf and the validator is missing the middle, so the chain can't be assembled.",
+      "p1": "A website certificate doesn't stand alone. It relies on a trust chain leading upward: <strong>your certificate (leaf) → intermediate → root</strong>. The validating party must be able to follow that path to a root it already trusts before it will accept the certificate.",
+      "p2": "The crucial part is where each piece comes from. <strong>Roots are preinstalled in the operating system or browser trust store</strong> and don't need sending. <strong>Intermediates are not, and your server must send them alongside the leaf.</strong> Send only the leaf and the validator is missing the middle, so the chain can't be assembled.",
       "p3": "Why do some devices connect anyway? Because certain clients repair it themselves. The table shows where they differ."
     },
     "table": {
@@ -896,15 +896,15 @@
     },
     "s3": {
       "title": "Why the Symptom Comes and Goes",
-      "p1": "Desktop browsers have two repair mechanisms. The first is the certificate's **AIA field** (Authority Information Access), which carries a URL for the issuer's certificate; on finding a broken chain, the browser downloads the intermediate from there and completes it. The second is **caching** — browsers retain intermediates encountered on other sites and reuse them.",
-      "p2": "Together these make the problem nearly invisible in a browser. Worse, the behaviour is **inconsistent**: support for AIA fetching varies between browsers and versions, and what's cached depends on which sites that user happened to visit. So the same machine gives different results in different browsers, and the same browser behaves differently for different people.",
-      "callout": "This is why \"it works on my machine\" isn't evidence. Your browser may simply have cached that intermediate from another site days ago. There is only one way to be sure — **inspect what the server actually sends**, rather than whether some client managed to connect.",
+      "p1": "Desktop browsers have two repair mechanisms. The first is the certificate's <strong>AIA field</strong> (Authority Information Access), which carries a URL for the issuer's certificate; on finding a broken chain, the browser downloads the intermediate from there and completes it. The second is <strong>caching</strong> — browsers retain intermediates encountered on other sites and reuse them.",
+      "p2": "Together these make the problem nearly invisible in a browser. Worse, the behaviour is <strong>inconsistent</strong>: support for AIA fetching varies between browsers and versions, and what's cached depends on which sites that user happened to visit. So the same machine gives different results in different browsers, and the same browser behaves differently for different people.",
+      "callout": "This is why \"it works on my machine\" isn't evidence. Your browser may simply have cached that intermediate from another site days ago. There is only one way to be sure — <strong>inspect what the server actually sends</strong>, rather than whether some client managed to connect.",
       "p3": "Non-browser clients generally have neither mechanism. They validate exactly what they receive, and a missing intermediate fails immediately. So the first reports usually come from apps, API integrators, or monitoring — not from ordinary web visitors."
     },
     "s4": {
       "title": "How to See What the Server Sends",
       "p1": "The direct method is `openssl s_client -connect domain:443 -servername domain -showcerts`, which lists every certificate the server actually presents. Each `s:` (subject) and `i:` (issuer) pair in the output is one link in the chain — if only one certificate appears, the server is sending the leaf alone.",
-      "p2": "In a healthy chain the leaf's issuer matches the next certificate's subject, continuing up to a root or a known intermediate. **Run the check from outside**, against the address users actually reach. With a CDN in front, establish which layer you're testing, since edge nodes and origin can carry different certificates."
+      "p2": "In a healthy chain the leaf's issuer matches the next certificate's subject, continuing up to a root or a known intermediate. <strong>Run the check from outside</strong>, against the address users actually reach. With a CDN in front, establish which layer you're testing, since edge nodes and origin can carry different certificates."
     },
     "s5": {
       "title": "Three Levels of Fix",
@@ -928,7 +928,7 @@
     },
     "s7": {
       "title": "In Summary",
-      "p1": "\"It opens in my browser\" isn't a valid test for certificate problems, because the browser repairs the missing intermediate for you while your apps, API clients and monitoring do not. There is one reliable method: **inspect what the server sends, not whether a given client connected**.",
+      "p1": "\"It opens in my browser\" isn't a valid test for certificate problems, because the browser repairs the missing intermediate for you while your apps, API clients and monitoring do not. There is one reliable method: <strong>inspect what the server sends, not whether a given client connected</strong>.",
       "p2": "These faults almost always originate in manual deployment — the wrong file, an empty field, or a CA rotating its intermediate unnoticed. If you'd rather not verify this by hand every time, our SSL automation platform deploys the complete chain to each node on issuance, removing the step where intermediates get dropped."
     },
     "sources": {
@@ -972,7 +972,7 @@
     "title": "ICP Filing and Pre-Filed Domains: Rules, Timelines and Real Risk",
     "excerpt": "Filing takes weeks, so a market in pre-filed domains exists. Here are the actual rules, what the subject-change regulation says, how verification really works, and when no filing is needed at all.",
     "disclosure": "",
-    "lead": "\"The site needs to launch in China, but filing takes weeks\" is the first obstacle most cross-border projects hit. Hence a market in \"pre-filed domains\". The arithmetic doesn't work, though: **regulations require that a change of filing subject means cancelling the existing filing and submitting a new application**. Done properly, a purchased filing evaporates on transfer. Here are the actual rules, including when no filing is needed at all.",
+    "lead": "\"The site needs to launch in China, but filing takes weeks\" is the first obstacle most cross-border projects hit. Hence a market in \"pre-filed domains\". The arithmetic doesn't work, though: <strong>regulations require that a change of filing subject means cancelling the existing filing and submitting a new application</strong>. Done properly, a purchased filing evaporates on transfer. Here are the actual rules, including when no filing is needed at all.",
     "seo": {
       "title": "ICP Filing Explained | Rules, Timelines and Pre-Filed Domains",
       "description": "Who needs ICP filing, how long review takes, what the subject-change rule requires, and the conditions under which overseas nodes need no filing at all.",
@@ -980,7 +980,7 @@
     },
     "s1": {
       "title": "What Filing Actually Governs",
-      "p1": "ICP filing doesn't attach to a domain. It attaches to **the entity operating a site and the network resources that site uses**. The test is simple: does your service use servers or network nodes inside mainland China? If yes, filing is required; if no, it isn't.",
+      "p1": "ICP filing doesn't attach to a domain. It attaches to <strong>the entity operating a site and the network resources that site uses</strong>. The test is simple: does your service use servers or network nodes inside mainland China? If yes, filing is required; if no, it isn't.",
       "p2": "So \"does this domain have a filing\" is the wrong question. A filing records a relationship — which entity, using which resources, running which site — and the domain is one field within it. That's also why filings can't be traded like domains: they record a subject, not an asset.",
       "p3": "The table covers common scenarios. The third row is the one most often overlooked."
     },
@@ -1014,7 +1014,7 @@
       "title": "How Pre-Filed Domain Transactions Actually Work",
       "intro": "There's a gap between how these transactions operate and what the regulations require. Three mechanics:",
       "r1_title": "By regulation, a different subject requires cancellation and re-application",
-      "r1_desc": "Every major cloud provider's filing documentation states it plainly: where a change of subject involves a different enterprise registration number, the original filing **must be cancelled and a new application submitted**. So a buyer who processes the subject change as specified no longer has that filing. Most transactions don't take that route — the filing stays under the original subject.",
+      "r1_desc": "Every major cloud provider's filing documentation states it plainly: where a change of subject involves a different enterprise registration number, the original filing <strong>must be cancelled and a new application submitted</strong>. So a buyer who processes the subject change as specified no longer has that filing. Most transactions don't take that route — the filing stays under the original subject.",
       "r2_title": "Domain real-name data must match the filing subject",
       "r2_desc": "Registry rules require the domain's real-name verification to match the filing subject. That check is the binding between subject and domain, and it's part of what a transaction has to account for.",
       "r3_title": "Verification is periodic, not continuous",
@@ -1024,13 +1024,13 @@
       "title": "How Long It Actually Takes",
       "p1": "Filing is quicker than most people assume, which is partly why the incentive to detour is weaker than it looks. There are two stages: provider pre-review, then administration review.",
       "p2": "Per timelines published by major cloud providers, pre-review runs about 1–2 business days and administration review 1–20 business days, varying by province. In most cases the total lands inside three weeks, and often faster.",
-      "callout": "What deserves planning isn't how to skip filing, but **scheduling it into the project while launching on overseas nodes in the meantime**. While filing is in progress the site can already serve traffic through Hong Kong or other overseas nodes — no dead time waiting, and no exposure to having a filing cancelled. Switching over or running both once it comes through is entirely compliant.",
+      "callout": "What deserves planning isn't how to skip filing, but <strong>scheduling it into the project while launching on overseas nodes in the meantime</strong>. While filing is in progress the site can already serve traffic through Hong Kong or other overseas nodes — no dead time waiting, and no exposure to having a filing cancelled. Switching over or running both once it comes through is entirely compliant.",
       "p3": "Filing also isn't a one-off. Within 30 days of a site going live, a separate public security filing is required. If paid information services are involved, a commercial ICP licence is needed too — and that can only be applied for once a valid filing number exists. Schedule all of it, or the later stages become the bottleneck."
     },
     "s4": {
       "title": "The Compliant No-Filing Route, and Its Boundary",
-      "p1": "A service deployed **entirely on Hong Kong or other overseas nodes**, using no mainland servers or CDN nodes, generally requires no ICP filing. Plenty of cross-border operations run exactly this way, fully compliantly.",
-      "p2": "But the boundary matters: **connecting any mainland server or CDN node triggers the requirement**. This is the most commonly missed point, because people assume \"hosted overseas means no filing needed\" and then cross the line unintentionally by enabling mainland CDN nodes for speed. When evaluating acceleration options, this is the first thing to confirm.",
+      "p1": "A service deployed <strong>entirely on Hong Kong or other overseas nodes</strong>, using no mainland servers or CDN nodes, generally requires no ICP filing. Plenty of cross-border operations run exactly this way, fully compliantly.",
+      "p2": "But the boundary matters: <strong>connecting any mainland server or CDN node triggers the requirement</strong>. This is the most commonly missed point, because people assume \"hosted overseas means no filing needed\" and then cross the line unintentionally by enabling mainland CDN nodes for speed. When evaluating acceleration options, this is the first thing to confirm.",
       "p3": "That boundary also shapes the technical choice. Overseas nodes mean dealing with cross-border latency and time-of-day degradation — a separate set of engineering problems, but ones architecture can address, rather than a compliance exposure."
     },
     "s5": {
@@ -1055,7 +1055,7 @@
     },
     "s7": {
       "title": "In Summary",
-      "p1": "The filing rule itself isn't complicated: **mainland nodes mean filing; a purely overseas deployment doesn't**. The market in pre-filed domains exists because of a gap between what the regulation requires — cancel and re-file — and what buyers want, which is to skip the wait. Understanding what that gap is, and who carries the risk, matters more than a simple verdict either way.",
+      "p1": "The filing rule itself isn't complicated: <strong>mainland nodes mean filing; a purely overseas deployment doesn't</strong>. The market in pre-filed domains exists because of a gap between what the regulation requires — cancel and re-file — and what buyers want, which is to skip the wait. Understanding what that gap is, and who carries the risk, matters more than a simple verdict either way.",
       "p2": "The practical approach is to schedule the filing while launching through Hong Kong or other overseas nodes. If what you need is cross-border connection quality rather than mainland deployment, our CDN and overseas node options can improve latency without triggering the filing requirement."
     },
     "sources": {
@@ -1099,7 +1099,7 @@
     "title": "Why Your DNS Change Hasn't Taken Effect: Record Types, TTL and the Apex Limit",
     "excerpt": "\"Still propagating\" is the usual explanation, but usually propagation isn't the issue — TTL wasn't lowered first, and lowering it only helps if done beforehand. Also, apex domains can't use CNAME. That one is protocol-level.",
     "disclosure": "",
-    "lead": "\"The DNS change hasn't taken yet — still propagating, right?\" Half true, and it hides the actual cause. There is no mechanism in DNS called propagation. **Changes take time because the old record is still cached, and how long it stays cached is set by your own TTL.** Which means something counterintuitive: to make a change take effect quickly, you act *before* making it. This covers six record types, how TTL should actually be used, and the apex limitation you cannot design around.",
+    "lead": "\"The DNS change hasn't taken yet — still propagating, right?\" Half true, and it hides the actual cause. There is no mechanism in DNS called propagation. <strong>Changes take time because the old record is still cached, and how long it stays cached is set by your own TTL.</strong> Which means something counterintuitive: to make a change take effect quickly, you act *before* making it. This covers six record types, how TTL should actually be used, and the apex limitation you cannot design around.",
     "seo": {
       "title": "DNS Record Types and TTL | Why Changes Don't Take Effect",
       "description": "A, AAAA, CNAME, MX, TXT and NS explained. Why TTL must be lowered before a change takes effect, and why an apex domain can never carry a CNAME record.",
@@ -1149,19 +1149,19 @@
       "r2_title": "An apex necessarily has SOA and NS records",
       "r2_desc": "Every domain's apex (`example.com` itself) must carry SOA and NS records — that's what makes it resolvable at all. Since the apex always has those, the previous rule means a CNAME can never be added there. The two cannot coexist.",
       "r3_title": "So pointing an apex at a name requires an alternative",
-      "r3_desc": "Most DNS providers offer ALIAS, ANAME, or \"CNAME flattening\": externally it looks like an A record, but the provider resolves the target name behind the scenes and returns its current IP. The effect approximates CNAME while staying compliant. Note this is **not a standardised feature** — names and behaviour differ per provider, so re-verify when switching."
+      "r3_desc": "Most DNS providers offer ALIAS, ANAME, or \"CNAME flattening\": externally it looks like an A record, but the provider resolves the target name behind the scenes and returns its current IP. The effect approximates CNAME while staying compliant. Note this is <strong>not a standardised feature</strong> — names and behaviour differ per provider, so re-verify when switching."
     },
     "s3": {
       "title": "TTL: Adjust It Before the Change",
       "p1": "TTL (Time To Live) is how you tell every resolver in the world how long this record may be cached. Set 3600 and for the next hour, any resolver that already asked won't ask again — it serves the cached answer.",
-      "p2": "So when a change doesn't appear to take effect, the cause usually isn't \"propagation takes time\", it's that **the old record's TTL hasn't expired**. And crucially: lowering TTL now is too late, because the copy resolvers are holding carries the TTL that was in effect when they fetched it.",
-      "callout": "Treat TTL as something to plan ahead. If a migration is coming, lower the TTL **at least one old TTL period before** the change (say 3600 down to 300). Once the old caches have expired and everyone holds the short-TTL version, make the actual change — and it now takes effect in five minutes. Raise the TTL again once things are stable, to avoid unnecessary query load.",
+      "p2": "So when a change doesn't appear to take effect, the cause usually isn't \"propagation takes time\", it's that <strong>the old record's TTL hasn't expired</strong>. And crucially: lowering TTL now is too late, because the copy resolvers are holding carries the TTL that was in effect when they fetched it.",
+      "callout": "Treat TTL as something to plan ahead. If a migration is coming, lower the TTL <strong>at least one old TTL period before</strong> the change (say 3600 down to 300). Once the old caches have expired and everyone holds the short-TTL version, make the actual change — and it now takes effect in five minutes. Raise the TTL again once things are stable, to avoid unnecessary query load.",
       "p3": "Operationally, records that rarely change (MX, NS) can carry longer TTLs, while records you may need to switch in a hurry (an A record pointing at origin) are worth keeping short. It's a trade-off between stability and agility, with no single right answer."
     },
     "s4": {
       "title": "Two Practical Traps in TXT Records",
       "p1": "TXT is the messiest type, because it's where all kinds of verification data ends up: domain ownership proofs, SPF, DKIM, DMARC, and the ACME DNS-01 challenge values used in certificate automation. Different formats, all sharing one name.",
-      "p2": "The first trap is that **SPF must be a single record**. Adding a second SPF entry for a new mail service doesn't mean both apply — validation simply fails. All sources belong merged into one record. The second is that **certificate validation TXT records change frequently**, so without a DNS provider API you can't automate it — and as certificate lifetimes shorten, that becomes manual work several times a year."
+      "p2": "The first trap is that <strong>SPF must be a single record</strong>. Adding a second SPF entry for a new mail service doesn't mean both apply — validation simply fails. All sources belong merged into one record. The second is that <strong>certificate validation TXT records change frequently</strong>, so without a DNS provider API you can't automate it — and as certificate lifetimes shorten, that becomes manual work several times a year."
     },
     "s5": {
       "title": "Three Practical Judgements",
@@ -1169,7 +1169,7 @@
       "l1_title": "1. Will the target's IP change?",
       "l1_desc": "If it will, use a CNAME pointing at the provider's hostname and let them manage the IP; only use an A record when it won't. This matters most for CDNs and cloud load balancers, whose IPs are expected to move — hard-coding an A record there plants a fault that detonates at an unpredictable time.",
       "l2_title": "2. How often will this record change?",
-      "l2_desc": "That sets the TTL. Rarely-touched records take a longer value (3600+); anything you may need to switch urgently takes a shorter one (around 300). The point is **setting it short before you need it short**, not during the incident.",
+      "l2_desc": "That sets the TTL. Rarely-touched records take a longer value (3600+); anything you may need to switch urgently takes a shorter one (around 300). The point is <strong>setting it short before you need it short</strong>, not during the incident.",
       "l3_title": "3. Who is authoritative for this domain?",
       "l3_desc": "NS records decide who answers queries. A common mess: NS edited once at the registrar and again in the DNS provider's panel, leaving the two inconsistent. What takes effect is the registry's copy — the one set at your registrar. This bites hardest when transferring a domain or switching DNS providers."
     },
@@ -1185,7 +1185,7 @@
     },
     "s7": {
       "title": "In Summary",
-      "p1": "Waiting for a DNS change isn't mysterious — the wait is the TTL you set. Once that's clear, the correct migration order follows: **lower the TTL, wait one old period, then make the change.** Adjusting TTL afterwards does nothing for the change you're making now.",
+      "p1": "Waiting for a DNS change isn't mysterious — the wait is the TTL you set. Once that's clear, the correct migration order follows: <strong>lower the TTL, wait one old period, then make the change.</strong> Adjusting TTL afterwards does nothing for the change you're making now.",
       "p2": "The other thing worth retaining is that an apex can't take a CNAME. That's protocol-level; the ALIAS and flattening features providers offer are their own workarounds, not a standard. When choosing a DNS provider, both that feature and API availability — the prerequisite for certificate automation — are worth confirming."
     },
     "sources": {
@@ -1229,7 +1229,7 @@
     "title": "Your Transfer Lock Won't Stop a Hijack: What Domain Security Settings Actually Cover",
     "excerpt": "Most people enable transfer lock and feel protected. But that lock lives inside your registrar account — and an attacker who takes the account simply switches it off.",
     "disclosure": "",
-    "lead": "In almost every domain hijacking case, the victim had transfer lock enabled. The problem is where that lock sits: **it's a setting inside your registrar account, and the account is what's being attacked**. Once someone is in, turning the lock off is one click. This covers what four common protections actually cover, and why some widely-recommended measures don't defend against account-level compromise at all.",
+    "lead": "In almost every domain hijacking case, the victim had transfer lock enabled. The problem is where that lock sits: <strong>it's a setting inside your registrar account, and the account is what's being attacked</strong>. Once someone is in, turning the lock off is one click. This covers what four common protections actually cover, and why some widely-recommended measures don't defend against account-level compromise at all.",
     "seo": {
       "title": "Domain Hijacking Defence | Why Transfer Lock Isn't Enough",
       "description": "Transfer lock sits inside the registrar account, so it falls with the account. What 2FA, DNSSEC and registry lock each cover, and the signs worth acting on.",
@@ -1237,9 +1237,9 @@
     },
     "s1": {
       "title": "There Are Two Locks, and Most People Only Have the Outer One",
-      "p1": "Domain transfer locking exists at two levels with confusingly similar names and very different strength. The toggle in a normal registrar dashboard is **clientTransferProhibited**, set and removed by the registrar. The other is a **registry lock**, enforced by the registry that runs the top-level domain.",
+      "p1": "Domain transfer locking exists at two levels with confusingly similar names and very different strength. The toggle in a normal registrar dashboard is <strong>clientTransferProhibited</strong>, set and removed by the registrar. The other is a <strong>registry lock</strong>, enforced by the registry that runs the top-level domain.",
       "p2": "The difference is who can remove it. The first can be removed from inside your account; the second cannot. An attacker holding your registrar credentials can switch off clientTransferProhibited themselves, whereas lifting a registry lock requires registrar staff to request it from the registry and pass out-of-band verification — in practice often a phone call with a passphrase.",
-      "p3": "The table lays out four common measures. The third column is the point — what each one **fails to stop** is where the breach actually happens."
+      "p3": "The table lays out four common measures. The third column is the point — what each one <strong>fails to stop</strong> is where the breach actually happens."
     },
     "table": {
       "caption": "What four domain protections cover. Only registry lock survives a compromised account.",
@@ -1275,23 +1275,23 @@
     },
     "s3": {
       "title": "Why Registrar-Level Protection Isn't Enough",
-      "p1": "Those three signs share a property: **they all occur after the attacker is already inside the account**. And once the account is lost, every setting within it is changeable — transfer lock, contact address, nameservers, all of it. That's why \"I have the lock enabled\" isn't a security guarantee.",
+      "p1": "Those three signs share a property: <strong>they all occur after the attacker is already inside the account</strong>. And once the account is lost, every setting within it is changeable — transfer lock, contact address, nameservers, all of it. That's why \"I have the lock enabled\" isn't a security guarantee.",
       "p2": "Two-factor authentication genuinely raises the bar and belongs on every domain. But it defends against leaked passwords, not social engineering — an attacker impersonating the registrant to support staff bypasses people, not systems. In hijacks of corporate domains, that path is far from rare.",
       "callout": "If it does happen, speed decides the outcome. Practical experience puts most successful recoveries within 24 to 48 hours, with odds falling the longer it takes. So on discovering something wrong, the order is: contact your registrar's abuse or security team immediately and ask them to lock the domain, while preserving evidence (WHOIS history, screenshots, timeline, proof of ownership) — rather than trying to change settings back yourself first. If it has already been transferred out, contact the gaining registrar too, and consider ICANN's Transfer Dispute Resolution Policy.",
-      "p3": "As for registry lock, it's the only measure that survives account compromise — at the cost of flexibility. Unlocking is a manual process taking hours to a business day, which suits domains that rarely change but absolutely cannot fail. **Note that this service is typically offered by enterprise or corporate registrars; most consumer registrars don't provide it**, so confirm availability before relying on it."
+      "p3": "As for registry lock, it's the only measure that survives account compromise — at the cost of flexibility. Unlocking is a manual process taking hours to a business day, which suits domains that rarely change but absolutely cannot fail. <strong>Note that this service is typically offered by enterprise or corporate registrars; most consumer registrars don't provide it</strong>, so confirm availability before relying on it."
     },
     "s4": {
       "title": "What DNSSEC Is Commonly Mistaken For",
       "p1": "DNSSEC appears on nearly every domain security checklist, but the problem it solves isn't hijacking. Its purpose is to let resolvers verify that a DNS response genuinely came from the domain's authoritative servers and wasn't altered in transit — it defends against cache poisoning and man-in-the-middle tampering.",
-      "p2": "But if an attacker logs into your registrar account and openly changes the NS records, those new records get signed correctly too. **DNSSEC raises no alarm, because from the protocol's perspective that was a legitimate change made by the domain owner**. So enable DNSSEC, but don't count it as part of your anti-hijacking defence — they address different threats."
+      "p2": "But if an attacker logs into your registrar account and openly changes the NS records, those new records get signed correctly too. <strong>DNSSEC raises no alarm, because from the protocol's perspective that was a legitimate change made by the domain owner</strong>. So enable DNSSEC, but don't count it as part of your anti-hijacking defence — they address different threats."
     },
     "s5": {
       "title": "Three Layers of Defence",
       "intro": "By cost and effectiveness, build in this order:",
       "l1_title": "1. Treat the registrar account as critical",
-      "l1_desc": "This is the most basic and most effective layer, because it's the actual attack surface. Enable two-factor authentication, use a unique password, and **make sure the account's contact address isn't hosted on the domain itself** — otherwise a problem with the domain leaves you unable to receive the verification email, a deadlock.",
+      "l1_desc": "This is the most basic and most effective layer, because it's the actual attack surface. Enable two-factor authentication, use a unique password, and <strong>make sure the account's contact address isn't hosted on the domain itself</strong> — otherwise a problem with the domain leaves you unable to receive the verification email, a deadlock.",
       "l2_title": "2. Enable every available lock, and re-check regularly",
-      "l2_desc": "Transfer lock doesn't stop account compromise, but it does stop unauthorised transfer requests, and it costs nothing. The key is **re-checking** — locks get \"temporarily\" removed during a migration and never restored. Put it on a quarterly checklist.",
+      "l2_desc": "Transfer lock doesn't stop account compromise, but it does stop unauthorised transfer requests, and it costs nothing. The key is <strong>re-checking</strong> — locks get \"temporarily\" removed during a migration and never restored. Put it on a quarterly checklist.",
       "l3_title": "3. Evaluate registry lock for critical domains",
       "l3_desc": "If losing a domain would halt operations, registry lock is worth evaluating. It makes routine changes cumbersome, which is precisely the point. If this matters to you, confirm your registrar offers it before committing."
     },
@@ -1303,11 +1303,11 @@
       "c2_title": "Whether the account email is independent of this domain",
       "c2_desc": "If the registrar account uses `admin@your-domain`, and that domain is what you're protecting, you have a circular dependency. Moving to an independent address costs nothing and matters enormously.",
       "c3_title": "Whether two-factor authentication is on",
-      "c3_desc": "Check **both** the registrar account and the email account it's tied to. Protecting the registrar while leaving the mailbox on a password alone leaves a password-reset bypass wide open."
+      "c3_desc": "Check <strong>both</strong> the registrar account and the email account it's tied to. Protecting the registrar while leaving the mailbox on a password alone leaves a password-reset bypass wide open."
     },
     "s7": {
       "title": "In Summary",
-      "p1": "The real weak point in domain security isn't the domain — it's **the account that manages it**. Transfer lock and DNSSEC each have value, but neither defends against account takeover, and account takeover is the actual route in the overwhelming majority of hijacks.",
+      "p1": "The real weak point in domain security isn't the domain — it's <strong>the account that manages it</strong>. Transfer lock and DNSSEC each have value, but neither defends against account takeover, and account takeover is the actual route in the overwhelming majority of hijacks.",
       "p2": "So the priority is: protect the registrar account as you would any critical credential (2FA, independent email, unique password), then consider the rest. If you're evaluating registrars, support for these options is worth comparing — our domain registration guide covers the other criteria worth weighing."
     },
     "sources": {
@@ -1351,7 +1351,7 @@
     "title": "One Test Proves Nothing: Why Cross-Border Quality Needs Continuous Monitoring",
     "excerpt": "Cross-border problems are overwhelmingly time-of-day. You test when users complain and everything looks fine — they aren't mistaken, you're measuring at the wrong hour.",
     "disclosure": "",
-    "lead": "\"Users say it's unusable in the evening, but every test I run looks fine.\" This is the most common dispute in cross-border services, and usually neither side is wrong — **cross-border quality varies substantially by hour**, and a daytime measurement says nothing about the evening. A single test answers \"how is this second\", when the question you need answered is \"what are users actually getting\". Only continuous monitoring closes that gap.",
+    "lead": "\"Users say it's unusable in the evening, but every test I run looks fine.\" This is the most common dispute in cross-border services, and usually neither side is wrong — <strong>cross-border quality varies substantially by hour</strong>, and a daytime measurement says nothing about the evening. A single test answers \"how is this second\", when the question you need answered is \"what are users actually getting\". Only continuous monitoring closes that gap.",
     "seo": {
       "title": "Monitoring Cross-Border Connectivity | Why One Test Isn't Enough",
       "description": "Cross-border faults are time-of-day, so testing after a complaint finds nothing. What continuous monitoring catches that a single check structurally cannot.",
@@ -1359,7 +1359,7 @@
     },
     "s1": {
       "title": "The Second You Measured vs the Hour Users Lived Through",
-      "p1": "The key difference from local networking: local faults tend to be persistent — broken stays broken — while cross-border problems are **almost always time-of-day**. International gateways congest at peak, routes shift at particular hours, carrier interconnects load up at night. All of these make one link behave completely differently depending on when you look.",
+      "p1": "The key difference from local networking: local faults tend to be persistent — broken stays broken — while cross-border problems are <strong>almost always time-of-day</strong>. International gateways congest at peak, routes shift at particular hours, carrier interconnects load up at night. All of these make one link behave completely differently depending on when you look.",
       "p2": "So when a user reports stuttering at 8pm and you test at 10am the next morning, \"everything looks fine\" is the expected result. It doesn't mean the problem isn't real; it means you weren't measuring while it was happening.",
       "p3": "The table compares four common approaches. The third column is the point — what each one cannot see."
     },
@@ -1397,14 +1397,14 @@
     },
     "s3": {
       "title": "What to Monitor",
-      "p1": "The metric priority is the same as for single readings: **loss first, latency second, bandwidth last**. But continuous monitoring adds a more important dimension — **variation**. A link steady at 120ms is usually more usable than one swinging between 60ms and 250ms, even though the latter has the better average.",
+      "p1": "The metric priority is the same as for single readings: <strong>loss first, latency second, bandwidth last</strong>. But continuous monitoring adds a more important dimension — <strong>variation</strong>. A link steady at 120ms is usually more usable than one swinging between 60ms and 250ms, even though the latter has the better average.",
       "p2": "So look at distribution, not just absolute values. For any metric, what matters is behaviour during peak hours rather than the mean — an average dilutes the three bad hours until the report looks healthy, while those diluted hours are exactly what users experienced.",
       "callout": "Match check frequency to the problem you're hunting. Hourly is enough to catch an evening peak; brief routing instability needs more. But higher isn't automatically better — frequent checks are themselves traffic, and they generate large volumes of uninformative data points. Decide what question you're answering, then set the frequency.",
-      "p3": "One thing easily overlooked: **checks must originate from the user's network**. Testing from your own facility measures your line. If your users are on China Mobile, the test has to run on Mobile's network, or the data has nothing to do with their experience. This is why cross-border monitoring generally requires probes inside the target market."
+      "p3": "One thing easily overlooked: <strong>checks must originate from the user's network</strong>. Testing from your own facility measures your line. If your users are on China Mobile, the test has to run on Mobile's network, or the data has nothing to do with their experience. This is why cross-border monitoring generally requires probes inside the target market."
     },
     "s4": {
       "title": "Same Logic as Certificate Monitoring",
-      "p1": "If you read our piece on certificate expiry monitoring, the argument is structurally identical: **a one-off check cannot prove a continuous state**. There it was \"renewal succeeded doesn't mean the certificate is being served\"; here it's \"fine this second doesn't mean users are fine\".",
+      "p1": "If you read our piece on certificate expiry monitoring, the argument is structurally identical: <strong>a one-off check cannot prove a continuous state</strong>. There it was \"renewal succeeded doesn't mean the certificate is being served\"; here it's \"fine this second doesn't mean users are fine\".",
       "p2": "The remedy is the same too — replace one-off checks with scheduled continuous ones, run from outside and from where users actually are. The only difference is that certificate monitoring cares about correctness of state, while network monitoring cares about the distribution of quality."
     },
     "s5": {
@@ -1473,7 +1473,7 @@
     "title": "Reading Speed Test Results: Why Enough Bandwidth Still Feels Slow Cross-Border",
     "excerpt": "Most people read a speed test as one number — download Mbps. That's the least useful figure for cross-border services. Latency and packet loss decide what users feel, and their effects multiply rather than add.",
     "disclosure": "",
-    "lead": "\"We're paying for 1Gbps — why do users still say it's slow?\" That question almost always rests on one assumption: that bandwidth is a synonym for connection quality. In cross-border scenarios **bandwidth usually isn't the bottleneck** — latency and packet loss are, and their damage to real throughput compounds. This explains what each number on a speed test actually means, and which one to read first.",
+    "lead": "\"We're paying for 1Gbps — why do users still say it's slow?\" That question almost always rests on one assumption: that bandwidth is a synonym for connection quality. In cross-border scenarios <strong>bandwidth usually isn't the bottleneck</strong> — latency and packet loss are, and their damage to real throughput compounds. This explains what each number on a speed test actually means, and which one to read first.",
     "seo": {
       "title": "Reading Speed Test Results | Latency, Jitter & Packet Loss",
       "description": "A speed test is more than download speed. Why throughput falls with packet loss and latency combined, and the order to read the numbers in cross-border.",
@@ -1529,7 +1529,7 @@
     },
     "s4": {
       "title": "Why China Connectivity Needs Three Separate Tests",
-      "p1": "China Telecom, Unicom and Mobile each run their own backbone and international gateways, and interconnection between them is uneven. The same overseas node might sit 80ms away for a Telecom user and 200ms with packet loss for a Mobile user — **that isn't measurement error, the traffic genuinely takes different paths**.",
+      "p1": "China Telecom, Unicom and Mobile each run their own backbone and international gateways, and interconnection between them is uneven. The same overseas node might sit 80ms away for a Telecom user and 200ms with packet loss for a Mobile user — <strong>that isn't measurement error, the traffic genuinely takes different paths</strong>.",
       "p2": "So one carrier's result can't stand in for the whole. If your users span all three but you test through one, two thirds of your user experience is unmeasured. That's why cross-border testing tools present the carriers separately: not for presentation, but because a single figure is meaningless here."
     },
     "s5": {
@@ -1598,7 +1598,7 @@
     "title": "Where Certificate Automation Actually Breaks: Choosing an ACME Challenge Type",
     "excerpt": "People assume installing Certbot means automation is done. What actually blocks them is picking the wrong challenge type — HTTP-01 fails behind a CDN, and wildcard certificates can't use it at all.",
     "disclosure": "",
-    "lead": "\"Just install Certbot\" is the most common misconception about certificate automation. The tooling isn't the hard part. What actually blocks people is **choosing the wrong challenge type** — and the problem usually doesn't surface at install time. It surfaces when you put the service behind a CDN, or the first time you request a wildcard certificate. Each of the three challenge types has hard constraints worth knowing before you commit.",
+    "lead": "\"Just install Certbot\" is the most common misconception about certificate automation. The tooling isn't the hard part. What actually blocks people is <strong>choosing the wrong challenge type</strong> — and the problem usually doesn't surface at install time. It surfaces when you put the service behind a CDN, or the first time you request a wildcard certificate. Each of the three challenge types has hard constraints worth knowing before you commit.",
     "seo": {
       "title": "Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards",
       "description": "Certificate automation stalls on the challenge type, not on Certbot. Where HTTP-01 fails, and why wildcards can only ever be issued through DNS-01.",
@@ -1645,13 +1645,13 @@
     "s3": {
       "title": "What DNS-01 Costs You",
       "p1": "DNS-01 solves all of the above — it never needs the CA to reach your server, only to resolve a DNS record. So it doesn't matter whether you're behind a CDN, how many machines you run, or whether port 80 is open. That's why multi-node architectures almost always end up on DNS-01.",
-      "p2": "It carries its own cost, though. Every issuance requires adding a TXT record, meaning your automation must hold **DNS provider API credentials**. Those credentials have to reach every machine or CI environment that performs renewals — and DNS access is high-risk, since holding it means being able to repoint your domain. (If you would rather not distribute that key yourself, <a href=\"{{ lang_path }}ssl/\">having a platform perform DNS validation</a> is one alternative.)",
+      "p2": "It carries its own cost, though. Every issuance requires adding a TXT record, meaning your automation must hold <strong>DNS provider API credentials</strong>. Those credentials have to reach every machine or CI environment that performs renewals — and DNS access is high-risk, since holding it means being able to repoint your domain. (If you would rather not distribute that key yourself, <a href=\"{{ lang_path }}ssl/\">having a platform perform DNS validation</a> is one alternative.)",
       "callout": "The other practical pain is propagation delay. A TXT record isn't instantly visible on every DNS server, so automation has to wait, and there's no standard answer for how long. Too short and validation fails; too long and every issuance drags. As lifetimes shorten and renewals multiply, that accumulated waiting becomes significant.",
-      "p3": "Worth noting: in February 2026 Let's Encrypt proposed **DNS-PERSIST-01**, which replaces the repeated updates with a single standing authorisation record bound to a specific ACME account — aimed squarely at both pain points above. It remains an IETF draft; the announced production target was Q2 2026, so check Let's Encrypt's own announcements for current availability. Note too that once authorisation is persistent, protecting the ACME account key matters correspondingly more."
+      "p3": "Worth noting: in February 2026 Let's Encrypt proposed <strong>DNS-PERSIST-01</strong>, which replaces the repeated updates with a single standing authorisation record bound to a specific ACME account — aimed squarely at both pain points above. It remains an IETF draft; the announced production target was Q2 2026, so check Let's Encrypt's own announcements for current availability. Note too that once authorisation is persistent, protecting the ACME account key matters correspondingly more."
     },
     "s4": {
       "title": "The Hard Constraint on Wildcards",
-      "p1": "If you need a wildcard like `*.example.com`, the decision is already made: **only DNS-01 can issue one**. Neither HTTP-01 nor TLS-ALPN-01 can produce wildcard certificates. This isn't a configuration issue; it's a protocol-level constraint.",
+      "p1": "If you need a wildcard like `*.example.com`, the decision is already made: <strong>only DNS-01 can issue one</strong>. Neither HTTP-01 nor TLS-ALPN-01 can produce wildcard certificates. This isn't a configuration issue; it's a protocol-level constraint.",
       "p2": "It's worth knowing early, because it works backwards into your choice of DNS provider. If your registrar or DNS service offers no API, you can't automate DNS-01, which means no automatically-renewed wildcard — you'd be adding TXT records by hand every time. With lifetimes already at 200 days and heading to 47, manual handling isn't a viable long-term plan."
     },
     "s5": {
@@ -1676,7 +1676,7 @@
     },
     "s7": {
       "title": "In Summary",
-      "p1": "The hard part of certificate automation was never installing Certbot; it's picking the right challenge for your actual architecture. The logic is short: **a CDN in front or a wildcard requirement means DNS-01** — and committing to DNS-01 means first confirming your DNS provider has an API, then managing that key carefully.",
+      "p1": "The hard part of certificate automation was never installing Certbot; it's picking the right challenge for your actual architecture. The logic is short: <strong>a CDN in front or a wildcard requirement means DNS-01</strong> — and committing to DNS-01 means first confirming your DNS provider has an API, then managing that key carefully.",
       "p2": "If you'd rather not handle DNS API key distribution and multi-node deployment yourself, our SSL automation platform combines validation and delivery in one flow: the platform performs DNS validation and pushes issued certificates straight to CDN nodes."
     },
     "sources": {
@@ -1719,7 +1719,7 @@
     "short_title": "Certificate Expiry Monitoring",
     "title": "Certificate Monitoring: A Successful Renewal Doesn't Mean Users Got the New Certificate",
     "excerpt": "Most teams monitor whether renewal ran successfully. What actually causes incidents is renewal succeeding while the certificate never reaches every endpoint — and only one kind of check catches that.",
-    "lead": "Once ACME automation is in place, most people stop thinking about certificates. Certificate incidents don't disappear though — they change shape: the renewal log says success, the CA portal shows issued, and users still get a browser warning. The reason is that **a successful renewal and a certificate actually being served are two independent things**, and most monitoring only watches the first.",
+    "lead": "Once ACME automation is in place, most people stop thinking about certificates. Certificate incidents don't disappear though — they change shape: the renewal log says success, the CA portal shows issued, and users still get a browser warning. The reason is that <strong>a successful renewal and a certificate actually being served are two independent things</strong>, and most monitoring only watches the first.",
     "disclosure": "",
     "seo": {
       "title": "Certificate Expiry Monitoring | Why Auto-Renewal Still Breaks",
@@ -1728,9 +1728,9 @@
     },
     "s1": {
       "title": "\"Renewal Succeeded\" and \"Everything's Fine\" Are Different Claims",
-      "p1": "A full certificate update has four stages: request from the CA, complete domain validation, deploy the new certificate to every TLS endpoint, and confirm users actually receive it. ACME tooling handles **the first two**; the third depends on your configuration; and almost nothing does the fourth for you automatically.",
+      "p1": "A full certificate update has four stages: request from the CA, complete domain validation, deploy the new certificate to every TLS endpoint, and confirm users actually receive it. ACME tooling handles <strong>the first two</strong>; the third depends on your configuration; and almost nothing does the fourth for you automatically.",
       "p2": "That's where the gap opens. A renewal log reading `success` means the certificate was obtained, not that it's being served. Deployment and reload still sit in between, and a failure at either never shows up in the renewal log.",
-      "p3": "The table below lays out four common monitoring approaches. The important column is the third — what each one **misses** is exactly where incidents happen."
+      "p3": "The table below lays out four common monitoring approaches. The important column is the third — what each one <strong>misses</strong> is exactly where incidents happen."
     },
     "table": {
       "caption": "What four monitoring approaches cover. Only the last proves users are unaffected.",
@@ -1766,7 +1766,7 @@
     },
     "s3": {
       "title": "What to Monitor, and When to Alert",
-      "p1": "Those three situations point to one principle: **monitoring has to originate outside your network, against the address users actually reach**. A check from inside the facility or on the same machine cannot prove that every layer on the public path received the new certificate.",
+      "p1": "Those three situations point to one principle: <strong>monitoring has to originate outside your network, against the address users actually reach</strong>. A check from inside the facility or on the same machine cannot prove that every layer on the public path received the new certificate.",
       "p2": "What you check shouldn't be limited to the expiry date either. Cover at minimum: expiry time, whether the chain is complete (a missing intermediate fails on some clients), whether the served certificate matches the expected domain, and — if you run multiple nodes — whether every node serves the same certificate.",
       "callout": "Don't set a single alert threshold. In practice, alert at 60, 30, 14, 7, and 1 day before expiry. The first says \"start paying attention\"; the last says \"handle this now\". A single threshold either fires so early it gets dismissed as noise, or so late there's no time to diagnose a failure — and short-lived certificates already compress that diagnostic window.",
       "p3": "Also confirm where alerts land. Mail to an unwatched inbox, or a red dot on a dashboard nobody opens, is equivalent to no alerting at all. Route it into a channel the team actually reads, and name someone responsible."
@@ -1774,7 +1774,7 @@
     "s4": {
       "title": "Shorter Lifetimes Move This From Optional to Required",
       "p1": "When certificates lasted 398 days, you handled this once a year, and imperfect monitoring carried limited risk. Lifetimes dropped to 200 days in March 2026, fall to 100 days in 2027, and to 47 days in 2029 — roughly eight renewals a year at that point.",
-      "p2": "Every renewal is another chance to fail. Going from once a year to eight times a year means **the same failure rate produces eight times as many incidents**. That's why monitoring stops being a nice-to-have in the short-lifetime era and becomes automation's necessary counterpart: automation makes the frequency survivable, and monitoring is what confirms those automated updates actually took effect."
+      "p2": "Every renewal is another chance to fail. Going from once a year to eight times a year means <strong>the same failure rate produces eight times as many incidents</strong>. That's why monitoring stops being a nice-to-have in the short-lifetime era and becomes automation's necessary counterpart: automation makes the frequency survivable, and monitoring is what confirms those automated updates actually took effect."
     },
     "s5": {
       "title": "Three Layers of Implementation",
@@ -1799,7 +1799,7 @@
     "s7": {
       "title": "In Summary",
       "p1": "Certificate automation solves \"renewing is tedious\". Monitoring solves \"did the renewal actually take effect\". Both need to exist — automation without monitoring hands a high-frequency process entirely to a mechanism nobody checks, and shrinking lifetimes are pushing that frequency toward eight times a year.",
-      "p2": "There's a single question that tells you whether your monitoring is sufficient: **does it check the certificate file, or what users actually receive?** If it's the former, it catches none of the three situations described above."
+      "p2": "There's a single question that tells you whether your monitoring is sufficient: <strong>does it check the certificate file, or what users actually receive?</strong> If it's the former, it catches none of the three situations described above."
     },
     "sources": {
       "title": "Sources",
@@ -1841,7 +1841,7 @@
     "short_title": "Domain Transfer Guide",
     "title": "Transferring a Domain Won't Take Your Site Down: Process, Auth Codes, and Timing",
     "excerpt": "Plenty of people stay with a bad registrar because they fear a transfer will break their site. It won't — a transfer changes who manages the registration, not where the site is hosted. Here's the actual process and when not to do it.",
-    "lead": "\"I want to switch registrars but I'm worried the site will go down mid-transfer\" is a common concern, and the reason many people tolerate poor service or steep renewal pricing. In practice a domain transfer does **not** touch your DNS — as long as you don't change nameservers yourself, your site and mail keep running throughout. What actually needs attention isn't downtime; it's timing and lock rules.",
+    "lead": "\"I want to switch registrars but I'm worried the site will go down mid-transfer\" is a common concern, and the reason many people tolerate poor service or steep renewal pricing. In practice a domain transfer does <strong>not</strong> touch your DNS — as long as you don't change nameservers yourself, your site and mail keep running throughout. What actually needs attention isn't downtime; it's timing and lock rules.",
     "disclosure": "This article contains affiliate links. If you register through a link here, Kineticlinks may earn a referral commission at no additional cost to you. This does not affect the technical content or recommendations — the caveats raised apply to every registrar equally.",
     "seo": {
       "title": "Domain Transfer Guide | Auth Codes, Timing & Zero Downtime",
@@ -1852,7 +1852,7 @@
       "title": "What a Transfer Actually Changes",
       "p1": "The fastest way to kill the downtime worry is to be clear about what a transfer actually touches. A domain's registration and its DNS resolution are separate things: the registrar handles the first (who owns this domain, who you pay), and the nameservers handle the second (which machine this domain points at).",
       "p2": "A transfer only swaps the first one. Your nameserver settings carry over untouched, so site, mail, and certificate validation all keep working. The table below sets out exactly what changes and what doesn't.",
-      "p3": "The one situation that does cause downtime is **changing nameservers at the same time as transferring**. Do those two things separately, a few days apart, and there is no interruption risk at all."
+      "p3": "The one situation that does cause downtime is <strong>changing nameservers at the same time as transferring</strong>. Do those two things separately, a few days apart, and there is no interruption risk at all."
     },
     "table": {
       "caption": "What a domain transfer changes and doesn't. Nearly all downtime fear comes from misreading the second row.",
@@ -1882,21 +1882,21 @@
       "r1_title": "1. Remove the registrar lock",
       "r1_desc": "Turn off Registrar Lock (`clientTransferProhibited`) in your current registrar's control panel. This lock should normally stay on to prevent hijacking — you only lift it to transfer. Once removed, the WHOIS status shows `ok` or `clientTransferPeriod`.",
       "r2_title": "2. Get the EPP auth code",
-      "r2_desc": "The EPP code (also called an auth code or transfer key) is a string generated by your current registrar proving you're authorised to move the domain. Most registrars display it in the panel or email it to the admin address. Under ICANN rules the registrar must release it to you **within five calendar days** and may not stall without cause.",
+      "r2_desc": "The EPP code (also called an auth code or transfer key) is a string generated by your current registrar proving you're authorised to move the domain. Most registrars display it in the panel or email it to the admin address. Under ICANN rules the registrar must release it to you <strong>within five calendar days</strong> and may not stall without cause.",
       "r3_title": "3. Confirm you can receive mail at the admin address",
-      "r3_desc": "The confirmation email goes to the admin contact in WHOIS. If that mailbox is long abandoned — or worse, hosted on the very domain you're moving — you won't receive it and the transfer deadlocks. Update it to an address you actually use and that doesn't depend on this domain. Note that changing registrant details can trigger a 60-day lock, so do this **well in advance**."
+      "r3_desc": "The confirmation email goes to the admin contact in WHOIS. If that mailbox is long abandoned — or worse, hosted on the very domain you're moving — you won't receive it and the transfer deadlocks. Update it to an address you actually use and that doesn't depend on this domain. Note that changing registrant details can trigger a 60-day lock, so do this <strong>well in advance</strong>."
     },
     "s3": {
       "title": "The Process and the Timing",
-      "p1": "With the prerequisites in place the process is simple: order the transfer at the **new** registrar, enter the auth code, pay (a transfer usually costs the same as a one-year renewal), and wait for confirmation. The new registrar sends a confirmation email for you to approve, and your current registrar notifies you as well.",
-      "p2": "Then you wait. The losing registrar may release the domain immediately, completing the transfer in minutes. If it takes no action, ICANN rules mean the transfer **auto-approves after five days**. That waiting period is deliberate: it gives the genuine holder time to spot and stop an unauthorised transfer.",
+      "p1": "With the prerequisites in place the process is simple: order the transfer at the <strong>new</strong> registrar, enter the auth code, pay (a transfer usually costs the same as a one-year renewal), and wait for confirmation. The new registrar sends a confirmation email for you to approve, and your current registrar notifies you as well.",
+      "p2": "Then you wait. The losing registrar may release the domain immediately, completing the transfer in minutes. If it takes no action, ICANN rules mean the transfer <strong>auto-approves after five days</strong>. That waiting period is deliberate: it gives the genuine holder time to spot and stop an unauthorised transfer.",
       "callout": "The practical implication: if your current registrar has no \"approve\" button, or you can't find it, just wait the five days — the transfer completes regardless, and chasing support won't speed it up. Conversely, if you receive a transfer notice you didn't initiate, those five days are your window to stop it, so log in to the current registrar and reject it immediately.",
       "p3": "Once complete, the new expiry is the old one plus a year. Note that some TLDs — country-code domains in particular — follow different rules, with their own timing and fees, so it's worth checking that TLD's policy before you start."
     },
     "s4": {
       "title": "When Not to Transfer",
-      "p1": "Three situations make a transfer fail or cost more. First, **being inside a 60-day lock**: within 60 days of initial registration, of a previous transfer, or of changing registrant details, the domain can't move. Second, **being too close to expiry**: a transfer takes days, and starting one a few days before expiry risks the domain lapsing mid-process, dropping you into renewal or even redemption.",
-      "p2": "Third, the domain **already being in the grace or redemption period**. Once the current registrar has begun deletion, it must restore the domain first (possibly for a redemption fee) before any transfer. So if you're planning to switch and expiry is close, the correct order is **renew at the current registrar first, then transfer at your leisure** — the transfer adds a year anyway, so nothing is wasted."
+      "p1": "Three situations make a transfer fail or cost more. First, <strong>being inside a 60-day lock</strong>: within 60 days of initial registration, of a previous transfer, or of changing registrant details, the domain can't move. Second, <strong>being too close to expiry</strong>: a transfer takes days, and starting one a few days before expiry risks the domain lapsing mid-process, dropping you into renewal or even redemption.",
+      "p2": "Third, the domain <strong>already being in the grace or redemption period</strong>. Once the current registrar has begun deletion, it must restore the domain first (possibly for a redemption fee) before any transfer. So if you're planning to switch and expiry is close, the correct order is <strong>renew at the current registrar first, then transfer at your leisure</strong> — the transfer adds a year anyway, so nothing is wasted."
     },
     "s5": {
       "title": "Three Habits That Keep You Online",
@@ -1921,7 +1921,7 @@
     "s7": {
       "title": "In Summary",
       "p1": "A domain transfer is simpler than most people expect: unlock, get the auth code, order at the new registrar, wait up to five days. The site doesn't go down, because DNS was never part of the transfer. What genuinely needs care is the two timing issues — lock periods and expiry dates — and avoiding those makes the process near-foolproof.",
-      "p2": "If you're moving because renewals got expensive, remember to check the new registrar's **standard renewal price** rather than the first-year promotion. Our domain registration guide covers that in detail, and it applies equally after a transfer."
+      "p2": "If you're moving because renewals got expensive, remember to check the new registrar's <strong>standard renewal price</strong> rather than the first-year promotion. Our domain registration guide covers that in detail, and it applies equally after a transfer."
     },
     "sources": {
       "title": "Sources",
@@ -2004,21 +2004,21 @@
       "r1_title": "Target market and trust",
       "r1_desc": "`.com` remains the most universally recognised and the one you never have to explain. If your customers are in Taiwan and local identity helps, `.tw` or `.com.tw` earns something. Conversely, obscure new gTLDs may be memorable but still carry lower trust with some users and corporate procurement processes — worth weighing in B2B contexts.",
       "r2_title": "The renewal price, not the first-year price",
-      "r2_desc": "Many new gTLDs attract registrations with a very low first year while the renewal is several times that, with no cap guaranteed. Look up the TLD's **standard renewal price** and multiply by the years you expect to hold it. That's the real cost.",
+      "r2_desc": "Many new gTLDs attract registrations with a very low first year while the renewal is several times that, with no cap guaranteed. Look up the TLD's <strong>standard renewal price</strong> and multiply by the years you expect to hold it. That's the real cost.",
       "r3_title": "Eligibility and restrictions",
       "r3_desc": "Some TLDs restrict who may register (a local registered entity, a particular industry), and some have unusual dispute or transfer rules. Obscure TLDs carry one rarely-mentioned risk too: if the registry operator struggles commercially, long-term stability is weaker than with mainstream choices."
     },
     "s3": {
       "title": "What Actually Differs Between Registrars",
-      "p1": "Most of the difference between registrars isn't the first-year price — it's the terms you won't notice at signup but will meet every year afterwards. First is **renewal pricing**: promotional rates usually apply to year one only, reverting to standard price from year two, and the gap can be large.",
-      "p2": "Second is **whether WHOIS privacy is free**. Registration details are public by default — name, address, phone, email — and privacy protection substitutes proxy details for those fields. Some registrars include it free for the life of the domain; others bill annually, which adds up considerably over time.",
+      "p1": "Most of the difference between registrars isn't the first-year price — it's the terms you won't notice at signup but will meet every year afterwards. First is <strong>renewal pricing</strong>: promotional rates usually apply to year one only, reverting to standard price from year two, and the gap can be large.",
+      "p2": "Second is <strong>whether WHOIS privacy is free</strong>. Registration details are public by default — name, address, phone, email — and privacy protection substitutes proxy details for those fields. Some registrars include it free for the life of the domain; others bill annually, which adds up considerably over time.",
       "callout": "Working out the ten-year total is the single best way to avoid this trap: first-year promotional price + standard renewal × 9 years + privacy protection (if billed separately). Compare on that number and the cheapest first year frequently turns out to be the most expensive overall.",
-      "p3": "Third are the **attached conditions**: whether transferring out costs anything, whether you're forced onto the registrar's own DNS, and whether a DNS management API exists. That last one matters especially to teams automating things — if you intend to issue SSL certificates automatically via ACME with DNS validation, whether your registrar exposes an API decides whether that's possible at all."
+      "p3": "Third are the <strong>attached conditions</strong>: whether transferring out costs anything, whether you're forced onto the registrar's own DNS, and whether a DNS management API exists. That last one matters especially to teams automating things — if you intend to issue SSL certificates automatically via ACME with DNS validation, whether your registrar exposes an API decides whether that's possible at all."
     },
     "s4": {
       "title": "Transfer Locks: The Real Rules, and What's Changing",
-      "p1": "Moving a domain to another registrar runs into ICANN's transfer lock rules. Three situations currently trigger a 60-day hold: **within 60 days of initial registration**, **within 60 days of a previous transfer**, and **within 60 days of changing registrant contact details** (most registrars let you opt out of that last one in advance). Separately, the transfer authorisation code (EPP code) must be released to you within five calendar days.",
-      "p2": "Here's the part most articles get wrong: this rule **is changing, but hasn't landed**. ICANN's GNSO Council approved reform recommendations in late 2024 that would shorten the 60-day hold to 30 days (720 hours), but it still requires Board approval and registrar implementation, and no timeline is settled. So both \"it's been abolished\" and \"it's a fixed 60 days\" are currently imprecise — most registrars are still enforcing 60 days in practice, so confirm the current rule with yours before planning a transfer."
+      "p1": "Moving a domain to another registrar runs into ICANN's transfer lock rules. Three situations currently trigger a 60-day hold: <strong>within 60 days of initial registration</strong>, <strong>within 60 days of a previous transfer</strong>, and <strong>within 60 days of changing registrant contact details</strong> (most registrars let you opt out of that last one in advance). Separately, the transfer authorisation code (EPP code) must be released to you within five calendar days.",
+      "p2": "Here's the part most articles get wrong: this rule <strong>is changing, but hasn't landed</strong>. ICANN's GNSO Council approved reform recommendations in late 2024 that would shorten the 60-day hold to 30 days (720 hours), but it still requires Board approval and registrar implementation, and no timeline is settled. So both \"it's been abolished\" and \"it's a fixed 60 days\" are currently imprecise — most registrars are still enforcing 60 days in practice, so confirm the current rule with yours before planning a transfer."
     },
     "s5": {
       "title": "Three Protective Settings Worth Doing Now",
@@ -2028,7 +2028,7 @@
       "l2_title": "2. Auto-renew — and verify the payment method",
       "l2_desc": "Auto-renew alone isn't enough. The most common failure is an expired card nobody noticed: the renewal charge fails, and the domain lapses anyway. Put the card's expiry in your calendar too, and make sure renewal notices go to a mailbox somebody actually reads.",
       "l3_title": "3. WHOIS privacy and a separate admin mailbox",
-      "l3_desc": "Enable privacy so your contact details aren't publicly harvested. And critically, **don't use an address on this domain** as the registrar account contact — if the domain breaks and mail stops, you won't receive the password reset needed to fix it. Use a separate domain or a free mail service for that contact."
+      "l3_desc": "Enable privacy so your contact details aren't publicly harvested. And critically, <strong>don't use an address on this domain</strong> as the registrar account contact — if the domain breaks and mail stops, you won't receive the password reset needed to fix it. Use a separate domain or a free mail service for that contact."
     },
     "s6": {
       "title": "Three Things to Confirm Before Registering",

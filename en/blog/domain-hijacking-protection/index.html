@@ -175,14 +175,14 @@
                     <span class="dot">·</span>
                     <span>9 min read</span>
                 </div>
-                <p class="article-lead">In almost every domain hijacking case, the victim had transfer lock enabled. The problem is where that lock sits: **it's a setting inside your registrar account, and the account is what's being attacked**. Once someone is in, turning the lock off is one click. This covers what four common protections actually cover, and why some widely-recommended measures don't defend against account-level compromise at all.</p>
+                <p class="article-lead">In almost every domain hijacking case, the victim had transfer lock enabled. The problem is where that lock sits: <strong>it's a setting inside your registrar account, and the account is what's being attacked</strong>. Once someone is in, turning the lock off is one click. This covers what four common protections actually cover, and why some widely-recommended measures don't defend against account-level compromise at all.</p>
             </header>
 
             <div class="article-body">
 
                 <!-- What happened -->
                 <h2>There Are Two Locks, and Most People Only Have the Outer One</h2>
-                <p>Domain transfer locking exists at two levels with confusingly similar names and very different strength. The toggle in a normal registrar dashboard is **clientTransferProhibited**, set and removed by the registrar. The other is a **registry lock**, enforced by the registry that runs the top-level domain.</p>
+                <p>Domain transfer locking exists at two levels with confusingly similar names and very different strength. The toggle in a normal registrar dashboard is <strong>clientTransferProhibited</strong>, set and removed by the registrar. The other is a <strong>registry lock</strong>, enforced by the registry that runs the top-level domain.</p>
                 <p>The difference is who can remove it. The first can be removed from inside your account; the second cannot. An attacker holding your registrar credentials can switch off clientTransferProhibited themselves, whereas lifting a registry lock requires registrar staff to request it from the registry and pass out-of-band verification — in practice often a phone call with a passphrase.</p>
 
                 <!-- Timeline table -->
@@ -224,7 +224,7 @@
                     <figcaption>What four domain protections cover. Only registry lock survives a compromised account.</figcaption>
                 </figure>
 
-                <p>The table lays out four common measures. The third column is the point — what each one **fails to stop** is where the breach actually happens.</p>
+                <p>The table lays out four common measures. The third column is the point — what each one <strong>fails to stop</strong> is where the breach actually happens.</p>
 
                 <!-- Why -->
                 <h2>Three Early Signs People Miss</h2>
@@ -246,29 +246,29 @@
 
                 <!-- Impact -->
                 <h2>Why Registrar-Level Protection Isn't Enough</h2>
-                <p>Those three signs share a property: **they all occur after the attacker is already inside the account**. And once the account is lost, every setting within it is changeable — transfer lock, contact address, nameservers, all of it. That's why "I have the lock enabled" isn't a security guarantee.</p>
+                <p>Those three signs share a property: <strong>they all occur after the attacker is already inside the account</strong>. And once the account is lost, every setting within it is changeable — transfer lock, contact address, nameservers, all of it. That's why "I have the lock enabled" isn't a security guarantee.</p>
                 <p>Two-factor authentication genuinely raises the bar and belongs on every domain. But it defends against leaked passwords, not social engineering — an attacker impersonating the registrant to support staff bypasses people, not systems. In hijacks of corporate domains, that path is far from rare.</p>
 
                 <aside class="callout">
                     <p>If it does happen, speed decides the outcome. Practical experience puts most successful recoveries within 24 to 48 hours, with odds falling the longer it takes. So on discovering something wrong, the order is: contact your registrar's abuse or security team immediately and ask them to lock the domain, while preserving evidence (WHOIS history, screenshots, timeline, proof of ownership) — rather than trying to change settings back yourself first. If it has already been transferred out, contact the gaining registrar too, and consider ICANN's Transfer Dispute Resolution Policy.</p>
                 </aside>
 
-                <p>As for registry lock, it's the only measure that survives account compromise — at the cost of flexibility. Unlocking is a manual process taking hours to a business day, which suits domains that rarely change but absolutely cannot fail. **Note that this service is typically offered by enterprise or corporate registrars; most consumer registrars don't provide it**, so confirm availability before relying on it.</p>
+                <p>As for registry lock, it's the only measure that survives account compromise — at the cost of flexibility. Unlocking is a manual process taking hours to a business day, which suits domains that rarely change but absolutely cannot fail. <strong>Note that this service is typically offered by enterprise or corporate registrars; most consumer registrars don't provide it</strong>, so confirm availability before relying on it.</p>
 
                 <!-- Why manual fails -->
                 <h2>What DNSSEC Is Commonly Mistaken For</h2>
                 <p>DNSSEC appears on nearly every domain security checklist, but the problem it solves isn't hijacking. Its purpose is to let resolvers verify that a DNS response genuinely came from the domain's authoritative servers and wasn't altered in transit — it defends against cache poisoning and man-in-the-middle tampering.</p>
-                <p>But if an attacker logs into your registrar account and openly changes the NS records, those new records get signed correctly too. **DNSSEC raises no alarm, because from the protocol's perspective that was a legitimate change made by the domain owner**. So enable DNSSEC, but don't count it as part of your anti-hijacking defence — they address different threats.</p>
+                <p>But if an attacker logs into your registrar account and openly changes the NS records, those new records get signed correctly too. <strong>DNSSEC raises no alarm, because from the protocol's perspective that was a legitimate change made by the domain owner</strong>. So enable DNSSEC, but don't count it as part of your anti-hijacking defence — they address different threats.</p>
 
                 <!-- How to respond -->
                 <h2>Three Layers of Defence</h2>
                 <p>By cost and effectiveness, build in this order:</p>
 
                 <h3>1. Treat the registrar account as critical</h3>
-                <p>This is the most basic and most effective layer, because it's the actual attack surface. Enable two-factor authentication, use a unique password, and **make sure the account's contact address isn't hosted on the domain itself** — otherwise a problem with the domain leaves you unable to receive the verification email, a deadlock.</p>
+                <p>This is the most basic and most effective layer, because it's the actual attack surface. Enable two-factor authentication, use a unique password, and <strong>make sure the account's contact address isn't hosted on the domain itself</strong> — otherwise a problem with the domain leaves you unable to receive the verification email, a deadlock.</p>
 
                 <h3>2. Enable every available lock, and re-check regularly</h3>
-                <p>Transfer lock doesn't stop account compromise, but it does stop unauthorised transfer requests, and it costs nothing. The key is **re-checking** — locks get "temporarily" removed during a migration and never restored. Put it on a quarterly checklist.</p>
+                <p>Transfer lock doesn't stop account compromise, but it does stop unauthorised transfer requests, and it costs nothing. The key is <strong>re-checking</strong> — locks get "temporarily" removed during a migration and never restored. Put it on a quarterly checklist.</p>
 
                 <h3>3. Evaluate registry lock for critical domains</h3>
                 <p>If losing a domain would halt operations, registry lock is worth evaluating. It makes routine changes cumbersome, which is precisely the point. If this matters to you, confirm your registrar offers it before committing.</p>
@@ -287,13 +287,13 @@
                     </li>
                     <li>
                         <strong>Whether two-factor authentication is on</strong>
-                        <span>Check **both** the registrar account and the email account it's tied to. Protecting the registrar while leaving the mailbox on a password alone leaves a password-reset bypass wide open.</span>
+                        <span>Check <strong>both</strong> the registrar account and the email account it's tied to. Protecting the registrar while leaving the mailbox on a password alone leaves a password-reset bypass wide open.</span>
                     </li>
                 </ol>
 
                 <!-- Conclusion -->
                 <h2>In Summary</h2>
-                <p>The real weak point in domain security isn't the domain — it's **the account that manages it**. Transfer lock and DNSSEC each have value, but neither defends against account takeover, and account takeover is the actual route in the overwhelming majority of hijacks.</p>
+                <p>The real weak point in domain security isn't the domain — it's <strong>the account that manages it</strong>. Transfer lock and DNSSEC each have value, but neither defends against account takeover, and account takeover is the actual route in the overwhelming majority of hijacks.</p>
                 <p>So the priority is: protect the registrar account as you would any critical credential (2FA, independent email, unique password), then consider the rest. If you're evaluating registrars, support for these options is worth comparing — our domain registration guide covers the other criteria worth weighing.</p>
 
                 <!-- Sources -->

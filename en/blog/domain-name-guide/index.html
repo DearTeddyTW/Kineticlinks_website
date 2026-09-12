@@ -237,7 +237,7 @@
                     </li>
                     <li>
                         <strong>The renewal price, not the first-year price</strong>
-                        <span>Many new gTLDs attract registrations with a very low first year while the renewal is several times that, with no cap guaranteed. Look up the TLD's **standard renewal price** and multiply by the years you expect to hold it. That's the real cost.</span>
+                        <span>Many new gTLDs attract registrations with a very low first year while the renewal is several times that, with no cap guaranteed. Look up the TLD's <strong>standard renewal price</strong> and multiply by the years you expect to hold it. That's the real cost.</span>
                     </li>
                     <li>
                         <strong>Eligibility and restrictions</strong>
@@ -247,19 +247,19 @@
 
                 <!-- Impact -->
                 <h2>What Actually Differs Between Registrars</h2>
-                <p>Most of the difference between registrars isn't the first-year price — it's the terms you won't notice at signup but will meet every year afterwards. First is **renewal pricing**: promotional rates usually apply to year one only, reverting to standard price from year two, and the gap can be large.</p>
-                <p>Second is **whether WHOIS privacy is free**. Registration details are public by default — name, address, phone, email — and privacy protection substitutes proxy details for those fields. Some registrars include it free for the life of the domain; others bill annually, which adds up considerably over time.</p>
+                <p>Most of the difference between registrars isn't the first-year price — it's the terms you won't notice at signup but will meet every year afterwards. First is <strong>renewal pricing</strong>: promotional rates usually apply to year one only, reverting to standard price from year two, and the gap can be large.</p>
+                <p>Second is <strong>whether WHOIS privacy is free</strong>. Registration details are public by default — name, address, phone, email — and privacy protection substitutes proxy details for those fields. Some registrars include it free for the life of the domain; others bill annually, which adds up considerably over time.</p>
 
                 <aside class="callout">
                     <p>Working out the ten-year total is the single best way to avoid this trap: first-year promotional price + standard renewal × 9 years + privacy protection (if billed separately). Compare on that number and the cheapest first year frequently turns out to be the most expensive overall.</p>
                 </aside>
 
-                <p>Third are the **attached conditions**: whether transferring out costs anything, whether you're forced onto the registrar's own DNS, and whether a DNS management API exists. That last one matters especially to teams automating things — if you intend to issue SSL certificates automatically via ACME with DNS validation, whether your registrar exposes an API decides whether that's possible at all.</p>
+                <p>Third are the <strong>attached conditions</strong>: whether transferring out costs anything, whether you're forced onto the registrar's own DNS, and whether a DNS management API exists. That last one matters especially to teams automating things — if you intend to issue SSL certificates automatically via ACME with DNS validation, whether your registrar exposes an API decides whether that's possible at all.</p>
 
                 <!-- Why manual fails -->
                 <h2>Transfer Locks: The Real Rules, and What's Changing</h2>
-                <p>Moving a domain to another registrar runs into ICANN's transfer lock rules. Three situations currently trigger a 60-day hold: **within 60 days of initial registration**, **within 60 days of a previous transfer**, and **within 60 days of changing registrant contact details** (most registrars let you opt out of that last one in advance). Separately, the transfer authorisation code (EPP code) must be released to you within five calendar days.</p>
-                <p>Here's the part most articles get wrong: this rule **is changing, but hasn't landed**. ICANN's GNSO Council approved reform recommendations in late 2024 that would shorten the 60-day hold to 30 days (720 hours), but it still requires Board approval and registrar implementation, and no timeline is settled. So both "it's been abolished" and "it's a fixed 60 days" are currently imprecise — most registrars are still enforcing 60 days in practice, so confirm the current rule with yours before planning a transfer.</p>
+                <p>Moving a domain to another registrar runs into ICANN's transfer lock rules. Three situations currently trigger a 60-day hold: <strong>within 60 days of initial registration</strong>, <strong>within 60 days of a previous transfer</strong>, and <strong>within 60 days of changing registrant contact details</strong> (most registrars let you opt out of that last one in advance). Separately, the transfer authorisation code (EPP code) must be released to you within five calendar days.</p>
+                <p>Here's the part most articles get wrong: this rule <strong>is changing, but hasn't landed</strong>. ICANN's GNSO Council approved reform recommendations in late 2024 that would shorten the 60-day hold to 30 days (720 hours), but it still requires Board approval and registrar implementation, and no timeline is settled. So both "it's been abolished" and "it's a fixed 60 days" are currently imprecise — most registrars are still enforcing 60 days in practice, so confirm the current rule with yours before planning a transfer.</p>
 
                 <!-- How to respond -->
                 <h2>Three Protective Settings Worth Doing Now</h2>
@@ -272,7 +272,7 @@
                 <p>Auto-renew alone isn't enough. The most common failure is an expired card nobody noticed: the renewal charge fails, and the domain lapses anyway. Put the card's expiry in your calendar too, and make sure renewal notices go to a mailbox somebody actually reads.</p>
 
                 <h3>3. WHOIS privacy and a separate admin mailbox</h3>
-                <p>Enable privacy so your contact details aren't publicly harvested. And critically, **don't use an address on this domain** as the registrar account contact — if the domain breaks and mail stops, you won't receive the password reset needed to fix it. Use a separate domain or a free mail service for that contact.</p>
+                <p>Enable privacy so your contact details aren't publicly harvested. And critically, <strong>don't use an address on this domain</strong> as the registrar account contact — if the domain breaks and mail stops, you won't receive the password reset needed to fix it. Use a separate domain or a free mail service for that contact.</p>
 
                 <!-- Checklist -->
                 <h2>Three Things to Confirm Before Registering</h2>

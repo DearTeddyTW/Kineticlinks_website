@@ -175,14 +175,14 @@
                     <span class="dot">·</span>
                     <span>8 min read</span>
                 </div>
-                <p class="article-lead">"Users say it's unusable in the evening, but every test I run looks fine." This is the most common dispute in cross-border services, and usually neither side is wrong — **cross-border quality varies substantially by hour**, and a daytime measurement says nothing about the evening. A single test answers "how is this second", when the question you need answered is "what are users actually getting". Only continuous monitoring closes that gap.</p>
+                <p class="article-lead">"Users say it's unusable in the evening, but every test I run looks fine." This is the most common dispute in cross-border services, and usually neither side is wrong — <strong>cross-border quality varies substantially by hour</strong>, and a daytime measurement says nothing about the evening. A single test answers "how is this second", when the question you need answered is "what are users actually getting". Only continuous monitoring closes that gap.</p>
             </header>
 
             <div class="article-body">
 
                 <!-- What happened -->
                 <h2>The Second You Measured vs the Hour Users Lived Through</h2>
-                <p>The key difference from local networking: local faults tend to be persistent — broken stays broken — while cross-border problems are **almost always time-of-day**. International gateways congest at peak, routes shift at particular hours, carrier interconnects load up at night. All of these make one link behave completely differently depending on when you look.</p>
+                <p>The key difference from local networking: local faults tend to be persistent — broken stays broken — while cross-border problems are <strong>almost always time-of-day</strong>. International gateways congest at peak, routes shift at particular hours, carrier interconnects load up at night. All of these make one link behave completely differently depending on when you look.</p>
                 <p>So when a user reports stuttering at 8pm and you test at 10am the next morning, "everything looks fine" is the expected result. It doesn't mean the problem isn't real; it means you weren't measuring while it was happening.</p>
 
                 <!-- Timeline table -->
@@ -246,18 +246,18 @@
 
                 <!-- Impact -->
                 <h2>What to Monitor</h2>
-                <p>The metric priority is the same as for single readings: **loss first, latency second, bandwidth last**. But continuous monitoring adds a more important dimension — **variation**. A link steady at 120ms is usually more usable than one swinging between 60ms and 250ms, even though the latter has the better average.</p>
+                <p>The metric priority is the same as for single readings: <strong>loss first, latency second, bandwidth last</strong>. But continuous monitoring adds a more important dimension — <strong>variation</strong>. A link steady at 120ms is usually more usable than one swinging between 60ms and 250ms, even though the latter has the better average.</p>
                 <p>So look at distribution, not just absolute values. For any metric, what matters is behaviour during peak hours rather than the mean — an average dilutes the three bad hours until the report looks healthy, while those diluted hours are exactly what users experienced.</p>
 
                 <aside class="callout">
                     <p>Match check frequency to the problem you're hunting. Hourly is enough to catch an evening peak; brief routing instability needs more. But higher isn't automatically better — frequent checks are themselves traffic, and they generate large volumes of uninformative data points. Decide what question you're answering, then set the frequency.</p>
                 </aside>
 
-                <p>One thing easily overlooked: **checks must originate from the user's network**. Testing from your own facility measures your line. If your users are on China Mobile, the test has to run on Mobile's network, or the data has nothing to do with their experience. This is why cross-border monitoring generally requires probes inside the target market.</p>
+                <p>One thing easily overlooked: <strong>checks must originate from the user's network</strong>. Testing from your own facility measures your line. If your users are on China Mobile, the test has to run on Mobile's network, or the data has nothing to do with their experience. This is why cross-border monitoring generally requires probes inside the target market.</p>
 
                 <!-- Why manual fails -->
                 <h2>Same Logic as Certificate Monitoring</h2>
-                <p>If you read our piece on certificate expiry monitoring, the argument is structurally identical: **a one-off check cannot prove a continuous state**. There it was "renewal succeeded doesn't mean the certificate is being served"; here it's "fine this second doesn't mean users are fine".</p>
+                <p>If you read our piece on certificate expiry monitoring, the argument is structurally identical: <strong>a one-off check cannot prove a continuous state</strong>. There it was "renewal succeeded doesn't mean the certificate is being served"; here it's "fine this second doesn't mean users are fine".</p>
                 <p>The remedy is the same too — replace one-off checks with scheduled continuous ones, run from outside and from where users actually are. The only difference is that certificate monitoring cares about correctness of state, while network monitoring cares about the distribution of quality.</p>
 
                 <!-- How to respond -->
