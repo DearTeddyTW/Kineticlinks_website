@@ -88,6 +88,14 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "這張憑證是誰簽發的？主流瀏覽器都會信任嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "憑證由 GoGetSSL 的 DV CA 簽發，信任鏈往上經 USERTrust 連到 Sectigo 的公開信任根憑證——該根憑證已內建於所有主流瀏覽器與作業系統的信任庫，不需使用者額外安裝任何東西。平台在部署時會一併送出完整憑證鏈，避免因缺少中繼憑證而導致部分裝置連線失敗。"
+      }
+    },
+    {
+      "@type": "Question",
       "name": "使用這個平台需要先具備網域的哪些權限？",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -307,6 +315,7 @@
             <div class="glass-panel price-includes">
                 <h3>以上價格已包含平台全部功能</h3>
                 <ul class="feature-list">
+                    <li>憑證由 GoGetSSL DV CA 簽發，信任鏈上溯至 Sectigo 公開信任根憑證</li>
                     <li>DNS 自動驗證，不需自行散布 DNS API 金鑰</li>
                     <li>簽發後自動推播至 GoDaddy、NS1、Apeiro CDN、騰雲 CDNRay、CDNetworks、阿里雲</li>
                     <li>憑證到期追蹤與效期內自動重簽，重簽不另外收費</li>
@@ -380,6 +389,10 @@
                 <h2>常見問題</h2>
             </div>
             <div class="faq-list">
+                <details class="faq-item glass-panel">
+                    <summary>這張憑證是誰簽發的？主流瀏覽器都會信任嗎？</summary>
+                    <p>憑證由 GoGetSSL 的 DV CA 簽發，信任鏈往上經 USERTrust 連到 Sectigo 的公開信任根憑證——該根憑證已內建於所有主流瀏覽器與作業系統的信任庫，不需使用者額外安裝任何東西。平台在部署時會一併送出完整憑證鏈，避免因缺少中繼憑證而導致部分裝置連線失敗。</p>
+                </details>
                 <details class="faq-item glass-panel">
                     <summary>使用這個平台需要先具備網域的哪些權限？</summary>
                     <p>需要有網域的 DNS 管理權限，平台會透過整合的 DNS 服務商 API 自動建立驗證紀錄；若您的 DNS 服務商尚未支援自動整合，也可改用手動驗證方式。</p>

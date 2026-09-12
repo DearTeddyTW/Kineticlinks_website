@@ -639,11 +639,12 @@
         "desc": "Covers every subdomain under the domain, e.g. *.example.com, with no limit on how many."
       },
       "includes_title": "Every platform feature is included in these prices",
-      "i1": "Automated DNS validation, without distributing DNS API keys yourself",
-      "i2": "Automatic push on issuance to GoDaddy, NS1, Apeiro CDN, Tencent CDNRay, CDNetworks and Alibaba Cloud",
-      "i3": "Expiry tracking and automatic reissue within the term, at no extra charge",
-      "i4": "No monthly fee, no account fee, no platform usage fee",
-      "note": "Your first certificate is fully refundable if it doesn't fit. Account top-ups currently accept cryptocurrency; contact us about other payment methods."
+      "i1": "Issued by GoGetSSL DV CA, chaining to a publicly trusted Sectigo root",
+      "i2": "Automated DNS validation, without distributing DNS API keys yourself",
+      "i3": "Automatic push on issuance to GoDaddy, NS1, Apeiro CDN, Tencent CDNRay, CDNetworks and Alibaba Cloud",
+      "i4": "Expiry tracking and automatic reissue within the term, at no extra charge",
+      "note": "Your first certificate is fully refundable if it doesn't fit. Account top-ups currently accept cryptocurrency; contact us about other payment methods.",
+      "i5": "No monthly fee, no account fee, no platform usage fee"
     },
     "customers": {
       "title": "Who It's For",
@@ -667,16 +668,18 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "q1": "What domain permissions do I need to use this platform?",
-      "a1": "You need DNS management access to the domain — the platform creates validation records automatically through its integrated DNS provider APIs. If your DNS provider isn't yet supported, manual validation is also available.",
-      "q2": "Will the platform notify me before a certificate expires?",
-      "a2": "Yes. The platform sends proactive reminders before expiration, and you can enable automatic renewal to reduce the risk of a lapsed certificate causing a security warning.",
-      "q3": "Can issued certificates be used on hosting or CDNs outside of Kineticlinks?",
-      "a3": "Yes. The platform issues standard SSL certificates that can be downloaded and used on any server or CDN that supports SSL — they aren't locked to Kineticlinks services.",
-      "q4": "Which DNS providers support automatic validation?",
-      "a4": "We currently integrate with major DNS providers including GoDaddy, and are continuing to expand support. If your provider isn't yet supported, reach out and we'll evaluate adding it.",
-      "q5": "Is the platform free? How is it charged?",
-      "a5": "Platform features carry no separate charge — the cost is the certificate itself: US$30/year for a single-domain certificate and US$90/year for a wildcard, with automatic reissue within the term at no extra cost. There is no monthly or account fee, and your first certificate is fully refundable if it doesn't fit."
+      "q1": "Who issues the certificate, and will browsers trust it?",
+      "a1": "Certificates are issued by GoGetSSL's DV CA, chaining up through USERTrust to a publicly trusted Sectigo root. That root ships in the trust stores of every major browser and operating system, so visitors install nothing. The platform deploys the complete chain, avoiding the missing-intermediate failures that affect apps and API clients.",
+      "q2": "What domain permissions do I need to use this platform?",
+      "a2": "You need DNS management access to the domain — the platform creates validation records automatically through its integrated DNS provider APIs. If your DNS provider isn't yet supported, manual validation is also available.",
+      "q3": "Will the platform notify me before a certificate expires?",
+      "a3": "Yes. The platform sends proactive reminders before expiration, and you can enable automatic renewal to reduce the risk of a lapsed certificate causing a security warning.",
+      "q4": "Can issued certificates be used on hosting or CDNs outside of Kineticlinks?",
+      "a4": "Yes. The platform issues standard SSL certificates that can be downloaded and used on any server or CDN that supports SSL — they aren't locked to Kineticlinks services.",
+      "q5": "Which DNS providers support automatic validation?",
+      "a5": "We currently integrate with major DNS providers including GoDaddy, and are continuing to expand support. If your provider isn't yet supported, reach out and we'll evaluate adding it.",
+      "q6": "Is the platform free? How is it charged?",
+      "a6": "Platform features carry no separate charge — the cost is the certificate itself: US$30/year for a single-domain certificate and US$90/year for a wildcard, with automatic reissue within the term at no extra cost. There is no monthly or account fee, and your first certificate is fully refundable if it doesn't fit."
     },
     "cta": {
       "title": "Ready to Simplify Certificate Management?",

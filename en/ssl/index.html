@@ -88,6 +88,14 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Who issues the certificate, and will browsers trust it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Certificates are issued by GoGetSSL's DV CA, chaining up through USERTrust to a publicly trusted Sectigo root. That root ships in the trust stores of every major browser and operating system, so visitors install nothing. The platform deploys the complete chain, avoiding the missing-intermediate failures that affect apps and API clients."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "What domain permissions do I need to use this platform?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -307,6 +315,7 @@
             <div class="glass-panel price-includes">
                 <h3>Every platform feature is included in these prices</h3>
                 <ul class="feature-list">
+                    <li>Issued by GoGetSSL DV CA, chaining to a publicly trusted Sectigo root</li>
                     <li>Automated DNS validation, without distributing DNS API keys yourself</li>
                     <li>Automatic push on issuance to GoDaddy, NS1, Apeiro CDN, Tencent CDNRay, CDNetworks and Alibaba Cloud</li>
                     <li>Expiry tracking and automatic reissue within the term, at no extra charge</li>
@@ -380,6 +389,10 @@
                 <h2>Frequently Asked Questions</h2>
             </div>
             <div class="faq-list">
+                <details class="faq-item glass-panel">
+                    <summary>Who issues the certificate, and will browsers trust it?</summary>
+                    <p>Certificates are issued by GoGetSSL's DV CA, chaining up through USERTrust to a publicly trusted Sectigo root. That root ships in the trust stores of every major browser and operating system, so visitors install nothing. The platform deploys the complete chain, avoiding the missing-intermediate failures that affect apps and API clients.</p>
+                </details>
                 <details class="faq-item glass-panel">
                     <summary>What domain permissions do I need to use this platform?</summary>
                     <p>You need DNS management access to the domain — the platform creates validation records automatically through its integrated DNS provider APIs. If your DNS provider isn't yet supported, manual validation is also available.</p>
