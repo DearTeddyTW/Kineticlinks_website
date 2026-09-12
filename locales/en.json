@@ -841,6 +841,133 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_filing_cancelled": {
+    "date": "2026-09-13",
+    "date_display": "September 13, 2026",
+    "category": "China Networking",
+    "reading_time": "9 min read",
+    "short_title": "Why Filings Get Cancelled",
+    "title": "ICP Filings Are Usually Cancelled Because You Changed Hosts, Not Because You Broke a Rule",
+    "excerpt": "You move hosting, the old provider cancels the access record, you don't file access with the new one — and the filing becomes a shell awaiting cancellation. The site runs normally throughout.",
+    "disclosure": "",
+    "lead": "Most people assume a cancelled filing means something went wrong with the content. The commonest cause is far more mundane: **you changed hosting providers**. The original access provider cancels its access record once you've left, and unless you file access with the new one, the filing becomes a \"shell website\" and gets cancelled at the next verification round. Throughout all of this the site runs normally with no error of any kind, until one day the filing number no longer resolves.",
+    "seo": {
+      "title": "Why ICP Filings Get Cancelled | Usually It's Changing Hosts",
+      "description": "The commonest cause isn't content violations but switching hosts without filing access with the new provider. The site keeps working while the filing lapses.",
+      "keywords": "ICP filing cancelled, shell website, shell entity, verification, access cancellation, access provider, re-filing"
+    },
+    "s1": {
+      "title": "Filing Isn't a One-Off Registration",
+      "p1": "A filing binds three things together: **the entity, the website, and the access provider**. The access provider is whoever supplies the server or network access, and it's obliged to verify the filings recorded under its name. When you move the site elsewhere, that provider cancels the access record — because the site genuinely isn't with them any more.",
+      "p2": "The problem is that this completes only half the process. The filing also needs **access filed with the new provider** to reconnect the relationship. Skip that step and the filing sits with an entity and website on record but no access provider at all — a shell website.",
+      "p3": "The table lists the cancellation causes. The first is both the commonest and the easiest to miss entirely."
+    },
+    "table": {
+      "caption": "Common reasons ICP filings get cancelled. The first gives no warning at all.",
+      "col1": "Cause",
+      "col2": "How it happens",
+      "col3": "Any warning?",
+      "r1c1": "Shell website",
+      "r1c2": "Host changed, old access cancelled, none filed with the new",
+      "r1c3": "None — the site keeps working",
+      "r1_class": "is-current",
+      "r2c1": "Shell entity",
+      "r2c2": "Every service under the entity has been cancelled",
+      "r2c3": "Only the entity record remains",
+      "r2_class": "",
+      "r3c1": "Verification found inaccurate data",
+      "r3c2": "Entity or site details don't match reality",
+      "r3c3": "A remediation notice with a deadline",
+      "r3_class": "",
+      "r4c1": "Content violation",
+      "r4c2": "The site carries prohibited content",
+      "r4c3": "Handled according to severity",
+      "r4_class": "",
+      "r5c1": "Voluntary cancellation",
+      "r5c2": "No longer needed; owner applies",
+      "r5c3": "Normal procedure",
+      "r5_class": ""
+    },
+    "s2": {
+      "title": "Three Ways Filings Lapse Unnoticed",
+      "intro": "All three share a property: everything looks fine at the time, and the problem surfaces months later.",
+      "r1_title": "A migration completed halfway",
+      "r1_desc": "You move from cloud A to cloud B, the site comes up, DNS is switched, and the migration feels done. But the filing's access relationship is still registered with A, and A cancels it once it confirms the site has gone. **The site runs perfectly on B while the filing hangs unattached** — the commonest case, and entirely invisible from the user side.",
+      "r2_title": "Changing IPs or reworking the architecture",
+      "r2_desc": "Even without switching providers, substantially reworking the architecture or changing IPs can trigger the access provider's verification process. If recorded details no longer match reality, the same remediation or access cancellation follows. Introducing a CDN or load balancer makes this especially likely.",
+      "r3_title": "The remediation notice went to an unwatched inbox",
+      "r3_desc": "When verification finds something non-compliant, a notice with a deadline usually comes first — there is a chance to fix it. But it goes to the contact details recorded at filing time, and that address or phone number is often years old and long unwatched. By the time anyone notices, the deadline has typically passed."
+    },
+    "s3": {
+      "title": "Verification and the Remediation Window",
+      "p1": "Administrations run periodic verification comparing filing records against reality. Being found non-compliant usually doesn't mean immediate cancellation — a notice comes first, requiring updated details or content changes within a deadline. **Cancellation or access removal follows only if that passes unanswered.**",
+      "p2": "So the remediation window is the crucial buffer. Receiving the notice means there's still time; missing it means going through cancellation and a complete re-filing instead, at considerably greater cost in time.",
+      "callout": "The most effective preventive measure costs nothing: **confirm the contact email and phone recorded on the filing are ones you still use**, and don't host that mailbox on the domain in question. It's the same trap as domain management — tying the notification channel to the asset you're protecting means losing both together. Five minutes logging in to check saves weeks later.",
+      "p3": "Also worth knowing: verification is periodic and sampled rather than continuous. A problem can therefore exist for months without your knowing, until a round happens to include you. The timing is unpredictable, which makes self-checks more reliable than waiting for notices."
+    },
+    "s4": {
+      "title": "What to Do If It's Already Cancelled",
+      "p1": "Establish the state first. Query the domain in the ministry's filing system to see whether the record still exists and what state the entity is in. That determines the route — whether filing access with a new provider suffices, or the whole record has gone and a fresh application is needed.",
+      "p2": "If only access was cancelled while the entity and site records remain, filing access with the new provider generally restores it without starting over. If the whole filing is gone, it's a new application on the same timeline as the first one.",
+      "p3": "The awkward case is different: **a domain carrying someone else's filing, or a shell entity's filing**, which blocks you from applying under your own entity. That requires a written offline application to the local administration for cancellation, takes longer, and needs supporting documentation. It's also what to check before taking over anyone else's domain."
+    },
+    "s5": {
+      "title": "Three Levels of Prevention",
+      "intro": "In order of importance:",
+      "l1_title": "1. Put access filing on the migration checklist",
+      "l1_desc": "When moving hosts, \"file access with the new provider\" belongs alongside DNS cutover and data transfer as a required step. The site loading doesn't mean the migration finished — the filing is a separate thread, and it won't reconnect itself.",
+      "l2_title": "2. Keep contact details current and independent",
+      "l2_desc": "The email and phone on the filing must be ones you still use, and the mailbox shouldn't sit on the domain itself. A remediation notice is your only early warning; missing it skips you straight to cancellation.",
+      "l3_title": "3. Self-check rather than waiting for notices",
+      "l3_desc": "Log in quarterly and confirm the state — entity details, site details, and whether the access provider is correct. Verification is sampled, so a problem may have existed for a long time. Checking yourself is the only way to find it deliberately."
+    },
+    "s6": {
+      "title": "Three Things to Check Before Taking Over a Domain",
+      "intro": "If you're acquiring a domain that already carries a filing, these decide how difficult it gets:",
+      "c1_title": "Which entity currently holds the filing",
+      "c1_desc": "Query the ministry's system. If it's in someone else's name, you can't file under your own entity until the existing record is dealt with.",
+      "c2_title": "The access provider state",
+      "c2_desc": "Whether a valid access relationship still exists or the filing is already a shell. This decides whether you need access filing or a complete new application.",
+      "c3_title": "Whether domain real-name data matches the filing entity",
+      "c3_desc": "Registries require the two to agree. If they don't, the application gets rejected at review even when everything else is in order."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "Filings are most often cancelled because access wasn't filed with a new host, not because anything went wrong with content. The mistake is widespread precisely because **it produces no symptoms** — the site runs normally until a verification round reaches you.",
+      "p2": "Prevention is cheap: put access filing on the migration checklist, confirm notices can reach you, and self-check quarterly. If you're planning a China launch or taking over an existing domain, tell us the situation and we'll help assess it."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "Alibaba Cloud — ICP filing information verification guide",
+      "u1": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/special-verification-icp-registration-information/",
+      "s2": "Alibaba Cloud — Cancelling another unit's or a shell entity's ICP filing",
+      "u2": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/the-cancellation-of-other-units-or-the-shell-of-the-icp-for-the-record",
+      "s3": "Tencent Cloud — What is an ICP filing number",
+      "u3": "https://cloud.tencent.com/document/product/243/19618"
+    },
+    "cta": {
+      "href": "#contact",
+      "title": "Questions About a Filing, or Planning a China Launch?",
+      "desc": "We offer cross-border deployment planning, CDN acceleration, and pre-filed domains. The rules and risks around the latter are covered in our ICP filing article — bring us your situation.",
+      "button": "Get in Touch"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/icp-filing-explained/",
+      "l1_kicker": "Article",
+      "l1_title": "ICP Filing Explained",
+      "l1_desc": "Who needs it, how long it takes, and how pre-filed domain deals work.",
+      "l2_slug": "blog/hong-kong-server-icp-filing/",
+      "l2_kicker": "Article",
+      "l2_title": "Do Hong Kong Servers Need Filing",
+      "l2_desc": "Where the exemption ends, and what makes it lapse.",
+      "l3_slug": "blog/domain-hijacking-protection/",
+      "l3_kicker": "Article",
+      "l3_title": "Domain Hijacking Defence",
+      "l3_desc": "The same trap: hosting the notification mailbox on the asset you're protecting."
+    }
+  },
   "article_hk_filing": {
     "date": "2026-09-13",
     "date_display": "September 13, 2026",

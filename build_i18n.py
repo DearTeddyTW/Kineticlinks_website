@@ -56,6 +56,7 @@ LANGS = [
 # Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
 # listed on the blog index. content_key is looked up in the locale JSON.
 ARTICLES = [
+    {'slug': 'icp-filing-cancelled', 'content_key': 'article_filing_cancelled'},
     {'slug': 'hong-kong-server-icp-filing', 'content_key': 'article_hk_filing'},
     {'slug': 'http-caching-headers', 'content_key': 'article_http_caching'},
     {'slug': 'geodns-resolver-location', 'content_key': 'article_geodns'},

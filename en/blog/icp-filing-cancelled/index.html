@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Why ICP Filings Get Cancelled | Usually It's Changing Hosts</title>
+    <meta name="title" content="Why ICP Filings Get Cancelled | Usually It's Changing Hosts">
+    <meta name="description" content="The commonest cause isn't content violations but switching hosts without filing access with the new provider. The site keeps working while the filing lapses.">
+    <meta name="keywords" content="ICP filing cancelled, shell website, shell entity, verification, access cancellation, access provider, re-filing">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/en/blog/icp-filing-cancelled/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/icp-filing-cancelled/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-filing-cancelled/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-filing-cancelled/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-filing-cancelled/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/en/blog/icp-filing-cancelled/">
+    <meta property="og:title" content="Why ICP Filings Get Cancelled | Usually It's Changing Hosts">
+    <meta property="og:description" content="The commonest cause isn't content violations but switching hosts without filing access with the new provider. The site keeps working while the filing lapses.">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-09-13">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/en/blog/icp-filing-cancelled/">
+    <meta property="twitter:title" content="Why ICP Filings Get Cancelled | Usually It's Changing Hosts">
+    <meta property="twitter:description" content="The commonest cause isn't content violations but switching hosts without filing access with the new provider. The site keeps working while the filing lapses.">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "ICP Filings Are Usually Cancelled Because You Changed Hosts, Not Because You Broke a Rule",
+      "description": "The commonest cause isn't content violations but switching hosts without filing access with the new provider. The site keeps working while the filing lapses.",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/en/blog/icp-filing-cancelled/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kineticlinks.net/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.kineticlinks.net/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ICP Filings Are Usually Cancelled Because You Changed Hosts, Not Because You Broke a Rule",
+          "item": "https://www.kineticlinks.net/en/blog/icp-filing-cancelled/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
+    <script>
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/en/#home">Home</a>
+                <a href="/en/#services">Services</a>
+                <a href="/en/#platforms">Platforms</a>
+                <a href="/en/blog/">Blog</a>
+                <a href="/en/#about">About</a>
+                <a href="/en/#contact" class="btn btn-outline">Contact</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">English ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/icp-filing-cancelled/">繁體中文</a>
+                        <a href="/en/blog/icp-filing-cancelled/">English</a>
+                        <a href="/zh-cn/blog/icp-filing-cancelled/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="Open menu"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/en/">Home</a>
+            <span>/</span>
+            <a href="/en/blog/">Blog</a>
+            <span>/</span>
+            <span class="current">Why Filings Get Cancelled</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">China Networking</div>
+                <h1>ICP Filings Are Usually Cancelled Because You Changed Hosts, Not Because You Broke a Rule</h1>
+                <div class="article-meta">
+                    <time datetime="2026-09-13">September 13, 2026</time>
+                    <span class="dot">·</span>
+                    <span>9 min read</span>
+                </div>
+                <p class="article-lead">Most people assume a cancelled filing means something went wrong with the content. The commonest cause is far more mundane: <strong>you changed hosting providers</strong>. The original access provider cancels its access record once you've left, and unless you file access with the new one, the filing becomes a "shell website" and gets cancelled at the next verification round. Throughout all of this the site runs normally with no error of any kind, until one day the filing number no longer resolves.</p>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>Filing Isn't a One-Off Registration</h2>
+                <p>A filing binds three things together: <strong>the entity, the website, and the access provider</strong>. The access provider is whoever supplies the server or network access, and it's obliged to verify the filings recorded under its name. When you move the site elsewhere, that provider cancels the access record — because the site genuinely isn't with them any more.</p>
+                <p>The problem is that this completes only half the process. The filing also needs <strong>access filed with the new provider</strong> to reconnect the relationship. Skip that step and the filing sits with an entity and website on record but no access provider at all — a shell website.</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Cause</th>
+                                    <th>How it happens</th>
+                                    <th>Any warning?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="is-current">
+                                    <td>Shell website</td>
+                                    <td class="num">Host changed, old access cancelled, none filed with the new</td>
+                                    <td>None — the site keeps working</td>
+                                </tr>
+                                <tr class="">
+                                    <td>Shell entity</td>
+                                    <td class="num">Every service under the entity has been cancelled</td>
+                                    <td>Only the entity record remains</td>
+                                </tr>
+                                <tr class="">
+                                    <td>Verification found inaccurate data</td>
+                                    <td class="num">Entity or site details don't match reality</td>
+                                    <td>A remediation notice with a deadline</td>
+                                </tr>
+                                <tr class="">
+                                    <td>Content violation</td>
+                                    <td class="num">The site carries prohibited content</td>
+                                    <td>Handled according to severity</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Voluntary cancellation</td>
+                                    <td class="num">No longer needed; owner applies</td>
+                                    <td>Normal procedure</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>Common reasons ICP filings get cancelled. The first gives no warning at all.</figcaption>
+                </figure>
+
+                <p>The table lists the cancellation causes. The first is both the commonest and the easiest to miss entirely.</p>
+
+                <!-- Why -->
+                <h2>Three Ways Filings Lapse Unnoticed</h2>
+                <p>All three share a property: everything looks fine at the time, and the problem surfaces months later.</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>A migration completed halfway</strong>
+                        <span>You move from cloud A to cloud B, the site comes up, DNS is switched, and the migration feels done. But the filing's access relationship is still registered with A, and A cancels it once it confirms the site has gone. <strong>The site runs perfectly on B while the filing hangs unattached</strong> — the commonest case, and entirely invisible from the user side.</span>
+                    </li>
+                    <li>
+                        <strong>Changing IPs or reworking the architecture</strong>
+                        <span>Even without switching providers, substantially reworking the architecture or changing IPs can trigger the access provider's verification process. If recorded details no longer match reality, the same remediation or access cancellation follows. Introducing a CDN or load balancer makes this especially likely.</span>
+                    </li>
+                    <li>
+                        <strong>The remediation notice went to an unwatched inbox</strong>
+                        <span>When verification finds something non-compliant, a notice with a deadline usually comes first — there is a chance to fix it. But it goes to the contact details recorded at filing time, and that address or phone number is often years old and long unwatched. By the time anyone notices, the deadline has typically passed.</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>Verification and the Remediation Window</h2>
+                <p>Administrations run periodic verification comparing filing records against reality. Being found non-compliant usually doesn't mean immediate cancellation — a notice comes first, requiring updated details or content changes within a deadline. <strong>Cancellation or access removal follows only if that passes unanswered.</strong></p>
+                <p>So the remediation window is the crucial buffer. Receiving the notice means there's still time; missing it means going through cancellation and a complete re-filing instead, at considerably greater cost in time.</p>
+
+                <aside class="callout">
+                    <p>The most effective preventive measure costs nothing: <strong>confirm the contact email and phone recorded on the filing are ones you still use</strong>, and don't host that mailbox on the domain in question. It's the same trap as domain management — tying the notification channel to the asset you're protecting means losing both together. Five minutes logging in to check saves weeks later.</p>
+                </aside>
+
+                <p>Also worth knowing: verification is periodic and sampled rather than continuous. A problem can therefore exist for months without your knowing, until a round happens to include you. The timing is unpredictable, which makes self-checks more reliable than waiting for notices.</p>
+
+                <!-- Why manual fails -->
+                <h2>What to Do If It's Already Cancelled</h2>
+                <p>Establish the state first. Query the domain in the ministry's filing system to see whether the record still exists and what state the entity is in. That determines the route — whether filing access with a new provider suffices, or the whole record has gone and a fresh application is needed.</p>
+                <p>If only access was cancelled while the entity and site records remain, filing access with the new provider generally restores it without starting over. If the whole filing is gone, it's a new application on the same timeline as the first one.</p>
+
+                <!-- How to respond -->
+                <h2>Three Levels of Prevention</h2>
+                <p>In order of importance:</p>
+
+                <h3>1. Put access filing on the migration checklist</h3>
+                <p>When moving hosts, "file access with the new provider" belongs alongside DNS cutover and data transfer as a required step. The site loading doesn't mean the migration finished — the filing is a separate thread, and it won't reconnect itself.</p>
+
+                <h3>2. Keep contact details current and independent</h3>
+                <p>The email and phone on the filing must be ones you still use, and the mailbox shouldn't sit on the domain itself. A remediation notice is your only early warning; missing it skips you straight to cancellation.</p>
+
+                <h3>3. Self-check rather than waiting for notices</h3>
+                <p>Log in quarterly and confirm the state — entity details, site details, and whether the access provider is correct. Verification is sampled, so a problem may have existed for a long time. Checking yourself is the only way to find it deliberately.</p>
+
+                <!-- Checklist -->
+                <h2>Three Things to Check Before Taking Over a Domain</h2>
+                <p>If you're acquiring a domain that already carries a filing, these decide how difficult it gets:</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>Which entity currently holds the filing</strong>
+                        <span>Query the ministry's system. If it's in someone else's name, you can't file under your own entity until the existing record is dealt with.</span>
+                    </li>
+                    <li>
+                        <strong>The access provider state</strong>
+                        <span>Whether a valid access relationship still exists or the filing is already a shell. This decides whether you need access filing or a complete new application.</span>
+                    </li>
+                    <li>
+                        <strong>Whether domain real-name data matches the filing entity</strong>
+                        <span>Registries require the two to agree. If they don't, the application gets rejected at review even when everything else is in order.</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>In Summary</h2>
+                <p>Filings are most often cancelled because access wasn't filed with a new host, not because anything went wrong with content. The mistake is widespread precisely because <strong>it produces no symptoms</strong> — the site runs normally until a verification round reaches you.</p>
+                <p>Prevention is cheap: put access filing on the migration checklist, confirm notices can reach you, and self-check quarterly. If you're planning a China launch or taking over an existing domain, tell us the situation and we'll help assess it.</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>Sources</h3>
+                    <ul>
+                        <li><a href="https://help.aliyun.com/zh/icp-filing/basic-icp-service/special-verification-icp-registration-information/" target="_blank" rel="noopener">Alibaba Cloud — ICP filing information verification guide</a></li>
+                        <li><a href="https://help.aliyun.com/zh/icp-filing/basic-icp-service/the-cancellation-of-other-units-or-the-shell-of-the-icp-for-the-record" target="_blank" rel="noopener">Alibaba Cloud — Cancelling another unit's or a shell entity's ICP filing</a></li>
+                        <li><a href="https://cloud.tencent.com/document/product/243/19618" target="_blank" rel="noopener">Tencent Cloud — What is an ICP filing number</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>Related Services & Reading</h2>
+                <p class="article-related-desc">These pages connect directly to the topic above</p>
+                <div class="related-grid">
+                    <a href="/en/blog/icp-filing-explained/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>ICP Filing Explained</h3>
+                        <p>Who needs it, how long it takes, and how pre-filed domain deals work.</p>
+                    </a>
+                    <a href="/en/blog/hong-kong-server-icp-filing/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>Do Hong Kong Servers Need Filing</h3>
+                        <p>Where the exemption ends, and what makes it lapse.</p>
+                    </a>
+                    <a href="/en/blog/domain-hijacking-protection/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>Domain Hijacking Defence</h3>
+                        <p>The same trap: hosting the notification mailbox on the asset you're protecting.</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>Questions About a Filing, or Planning a China Launch?</h2>
+                <p>We offer cross-border deployment planning, CDN acceleration, and pre-filed domains. The rules and risks around the latter are covered in our ICP filing article — bring us your situation.</p>
+                <div class="hero-actions">
+                    <a href="/en/#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="/en/blog/" class="btn btn-secondary">Back to all articles</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/en/cdn/">Content Delivery Network (CDN)</a>
+                    <a href="/en/vps/">Virtual Private Server (VPS)</a>
+                    <a href="/en/idc/">IDC Construction</a>
+                    <a href="/en/cloud/">Public Cloud Solutions</a>
+                    <a href="/en/ssl/">Automated SSL Platform</a>
+                    <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/blog/">Blog</a>
+                    <a href="/en/#contact">Contact</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=ded9249e" defer></script>
+</body>
+
+</html>
