@@ -837,6 +837,129 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_ocsp_stapling": {
+    "date": "2026-09-12",
+    "date_display": "September 12, 2026",
+    "category": "Certificate Management",
+    "reading_time": "9 min read",
+    "short_title": "OCSP Stapling Is Over",
+    "title": "Still Configuring OCSP Stapling? Let's Encrypt Switched It Off",
+    "excerpt": "Guides still tell you to enable ssl_stapling, but Let's Encrypt shut its OCSP service down in August 2025 and certificates no longer carry the URL — that directive now does nothing at all.",
+    "disclosure": "",
+    "lead": "If your Nginx config contains `ssl_stapling on;` and your certificate comes from Let's Encrypt, **that line has done nothing since May 2025**. Certificates no longer carry an OCSP URL, so the server has nothing to query and nothing to staple. This isn't a misconfiguration — the mechanism was retired. Here's what happened, what to check, and how revocation works now.",
+    "seo": {
+      "title": "Is OCSP Stapling Still Needed? After Let's Encrypt Ended Support",
+      "description": "Let's Encrypt shut down OCSP in August 2025 and the CA/Browser Forum made it optional before that. The four revocation mechanisms and what to check.",
+      "keywords": "OCSP stapling, ssl_stapling, OCSP Must-Staple, CRL, certificate revocation, Let's Encrypt, CRLSets"
+    },
+    "s1": {
+      "title": "How Revocation Checking Actually Works",
+      "p1": "A certificate can be revoked before it expires — a leaked private key, a domain changing hands, or a mis-issuance are all reasons. Which raises a simple-sounding question: how does the validating party know the certificate in front of it has been revoked? That question has had several different answers over twenty years.",
+      "p2": "OCSP was the dominant one: on connecting, the client asks the CA's server whether this certificate is still valid. It carries a structural problem, though — **the CA thereby learns which IP address is visiting which website**, inserting a third-party observer into every connection.",
+      "p3": "The table sets out four mechanisms and where each stands. The second row is the one most guides still teach and which no longer functions."
+    },
+    "table": {
+      "caption": "Four revocation mechanisms and their status in 2026.",
+      "col1": "Mechanism",
+      "col2": "How it works",
+      "col3": "Status",
+      "r1c1": "Direct OCSP query",
+      "r1c2": "Client asks the CA in real time on connection",
+      "r1c3": "Clear privacy problem; largely abandoned by browsers",
+      "r1_class": "",
+      "r2c1": "OCSP stapling",
+      "r2c2": "Server queries on the client's behalf and attaches the result",
+      "r2c3": "Let's Encrypt shut the service down in Aug 2025",
+      "r2_class": "is-current",
+      "r3c1": "CRL revocation lists",
+      "r3c2": "CA publishes a list that validators fetch themselves",
+      "r3c3": "Required by CA/B Forum since March 2024",
+      "r3_class": "",
+      "r4c1": "Chrome CRLSets",
+      "r4c2": "Google curates a subset and ships it with the browser",
+      "r4c3": "What Chrome has always actually used",
+      "r4_class": ""
+    },
+    "s2": {
+      "title": "The Three Dates in Let's Encrypt's Shutdown",
+      "intro": "It wasn't switched off at once. Three stages, all now in the past:",
+      "r1_title": "30 January 2025: new Must-Staple requests stopped",
+      "r1_desc": "Must-Staple is a flag in the certificate requiring the client to see a valid stapled response before accepting the connection. It was meant to close the \"stapling failed, carry on anyway\" gap, at the cost that any stapling failure takes the site down outright. From this point most accounts could no longer request certificates carrying the flag.",
+      "r2_title": "7 May 2025: OCSP URLs dropped from certificates",
+      "r2_desc": "The most widely felt step. With no OCSP URL in the certificate, the server has nothing to query, and directives like `ssl_stapling on;` stop having any effect — no error, just silence. Plenty of configuration files still carry those lines today.",
+      "r3_title": "6 August 2025: the OCSP responders were turned off",
+      "r3_desc": "The response servers went offline, so even older certificates still carrying an OCSP URL began failing their lookups. At current certificate lifetimes, those have long since expired and been replaced."
+    },
+    "s3": {
+      "title": "Why Retire a Security Mechanism",
+      "p1": "The first stated reason is **privacy**. Let's Encrypt puts it plainly: when a visitor accesses a website, the CA operating the OCSP responder immediately learns which site is being visited from that visitor's particular IP address. For an authority that has issued hundreds of millions of certificates, that amounts to an extraordinarily large browsing record.",
+      "p2": "The second is **operational cost** — running a real-time lookup service at global scale consumes considerable resources that could be spent elsewhere.",
+      "callout": "Worth noting: OCSP stapling existed precisely to solve that privacy problem, by having the server ask on the client's behalf. But stapling requires every site to configure it correctly, and deployment rates never got high — so the privacy problem persisted for the majority of sites that never set it up. CRLs, by contrast, protect every site equally and need no server configuration at all.",
+      "p3": "The direction was set earlier. In 2023 the CA/Browser Forum voted to **make OCSP optional and CRLs mandatory**, effective March 2024. Let's Encrypt's decision follows that, rather than standing alone."
+    },
+    "s4": {
+      "title": "What to Check Now",
+      "p1": "Start with leftovers in your configuration. Nginx's `ssl_stapling on;` and `ssl_stapling_verify on;`, Apache's `SSLUseStapling on` — with no OCSP URL in the certificate these cause no error, but they no longer do anything either. Leaving them does no harm; they're simply meaningless now.",
+      "p2": "Also confirm that **commercial certificates behave differently**. This was Let's Encrypt's decision, and some commercial CAs still run OCSP services. If you manage both free and commercial certificates, the two will behave differently — check whether a given certificate actually carries an OCSP URL before concluding anything.",
+      "p3": "Checking is straightforward: `openssl x509 -in cert.pem -noout -ocsp_uri` prints the OCSP URL, and no output means the certificate carries none. To inspect what's served live, retrieve it with `openssl s_client` first and check that."
+    },
+    "s5": {
+      "title": "Three Levels of Response",
+      "intro": "Handle each case on its own terms:",
+      "l1_title": "1. Establish whether the certificate has an OCSP URL",
+      "l1_desc": "This determines everything else. No URL means stapling configuration is moot; a URL present (usually commercial certificates) means stapling still works and can stay. Don't assume it still functions because it was configured once.",
+      "l2_title": "2. Clear out dead configuration, without urgency",
+      "l2_desc": "Leftover stapling directives cause no failures, so nothing needs fixing today. But remove them next time you touch the file — leaving them makes whoever inherits the system believe stapling is active, and debugging from a false premise wastes a great deal of time.",
+      "l3_title": "3. Understand what revocation actually covers",
+      "l3_desc": "Don't assume revocation takes effect immediately. CRLs and CRLSets both have update cycles, and Chrome's CRLSets are a curated subset rather than a complete list. This is part of the backdrop to shrinking certificate lifetimes — the shorter the lifetime, the less revocation has to carry."
+    },
+    "s6": {
+      "title": "Three Things to Establish First",
+      "intro": "When something revocation- or stapling-related goes wrong, settle these before anything else:",
+      "c1_title": "Which CA issued this certificate",
+      "c1_desc": "Let's Encrypt and commercial CAs now behave entirely differently here. Getting the issuer wrong sends the whole investigation off course.",
+      "c2_title": "Whether stapling is actually functioning",
+      "c2_desc": "Configured isn't the same as working. Nginx logs a warning rather than refusing to start when it can't obtain an OCSP response, so the service looks perfectly healthy. Read the logs, not the config file.",
+      "c3_title": "Whether the problem involves revocation at all",
+      "c3_desc": "Incomplete chains, expiry and hostname mismatches produce similar-looking errors and are far more common. Rule those out before pursuing revocation."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "\"Remember to enable OCSP stapling\" was once correct advice and no longer applies to Let's Encrypt certificates — **there is no OCSP URL in the certificate, so the directive raises no error and silently does nothing**. Outdated guidance like this circulates widely, and its harm isn't broken services; it's leaving people convinced a protection is running when it isn't.",
+      "p2": "Revocation is converging on CRLs and shorter certificate lifetimes. If you'd rather not track ecosystem shifts like this one, our SSL automation platform handles issuance and deployment so certificate management follows the standards without your watching each change."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "Let's Encrypt — Ending OCSP Support in 2025",
+      "u1": "https://letsencrypt.org/2024/12/05/ending-ocsp/",
+      "s2": "CA/Browser Forum — Ballot SC-063: Make OCSP Optional, Require CRLs",
+      "u2": "https://cabforum.org/2023/07/14/ballot-sc063v4-make-ocsp-optional-require-crls-and-incentivize-automation/",
+      "s3": "The Chromium Projects — CRLSets",
+      "u3": "https://www.chromium.org/Home/chromium-security/crlsets/"
+    },
+    "cta": {
+      "href": "ssl/",
+      "title": "Let Certificate Management Follow the Standards",
+      "desc": "The Kineticlinks SSL automation platform handles issuance, validation and multi-node deployment, so ecosystem shifts aren't yours to track.",
+      "button": "Explore the SSL Platform"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/ssl-certificate-validity-200-days/",
+      "l1_kicker": "Article",
+      "l1_title": "SSL Lifetimes Cut to 200 Days",
+      "l1_desc": "Shorter lifetimes are part of why revocation could be simplified.",
+      "l2_slug": "blog/incomplete-certificate-chain/",
+      "l2_kicker": "Article",
+      "l2_title": "Incomplete Certificate Chains",
+      "l2_desc": "A far more common class of certificate failure than revocation.",
+      "l3_slug": "ssl/",
+      "l3_kicker": "Platform",
+      "l3_title": "SSL Certificate Automation",
+      "l3_desc": "Issuance, validation and multi-node deployment in one flow."
+    }
+  },
   "article_cert_chain": {
     "date": "2026-09-11",
     "date_display": "September 11, 2026",

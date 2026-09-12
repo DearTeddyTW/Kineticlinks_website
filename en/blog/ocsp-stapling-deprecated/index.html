@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Is OCSP Stapling Still Needed? After Let's Encrypt Ended Support</title>
+    <meta name="title" content="Is OCSP Stapling Still Needed? After Let's Encrypt Ended Support">
+    <meta name="description" content="Let's Encrypt shut down OCSP in August 2025 and the CA/Browser Forum made it optional before that. The four revocation mechanisms and what to check.">
+    <meta name="keywords" content="OCSP stapling, ssl_stapling, OCSP Must-Staple, CRL, certificate revocation, Let's Encrypt, CRLSets">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/ocsp-stapling-deprecated/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/">
+    <meta property="og:title" content="Is OCSP Stapling Still Needed? After Let's Encrypt Ended Support">
+    <meta property="og:description" content="Let's Encrypt shut down OCSP in August 2025 and the CA/Browser Forum made it optional before that. The four revocation mechanisms and what to check.">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-09-12">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/">
+    <meta property="twitter:title" content="Is OCSP Stapling Still Needed? After Let's Encrypt Ended Support">
+    <meta property="twitter:description" content="Let's Encrypt shut down OCSP in August 2025 and the CA/Browser Forum made it optional before that. The four revocation mechanisms and what to check.">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Still Configuring OCSP Stapling? Let's Encrypt Switched It Off",
+      "description": "Let's Encrypt shut down OCSP in August 2025 and the CA/Browser Forum made it optional before that. The four revocation mechanisms and what to check.",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-09-12",
+      "dateModified": "2026-09-12",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kineticlinks.net/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.kineticlinks.net/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Still Configuring OCSP Stapling? Let's Encrypt Switched It Off",
+          "item": "https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
+    <script>
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/en/#home">Home</a>
+                <a href="/en/#services">Services</a>
+                <a href="/en/#platforms">Platforms</a>
+                <a href="/en/blog/">Blog</a>
+                <a href="/en/#about">About</a>
+                <a href="/en/#contact" class="btn btn-outline">Contact</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">English ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/ocsp-stapling-deprecated/">繁體中文</a>
+                        <a href="/en/blog/ocsp-stapling-deprecated/">English</a>
+                        <a href="/zh-cn/blog/ocsp-stapling-deprecated/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="Open menu"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/en/">Home</a>
+            <span>/</span>
+            <a href="/en/blog/">Blog</a>
+            <span>/</span>
+            <span class="current">OCSP Stapling Is Over</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">Certificate Management</div>
+                <h1>Still Configuring OCSP Stapling? Let's Encrypt Switched It Off</h1>
+                <div class="article-meta">
+                    <time datetime="2026-09-12">September 12, 2026</time>
+                    <span class="dot">·</span>
+                    <span>9 min read</span>
+                </div>
+                <p class="article-lead">If your Nginx config contains `ssl_stapling on;` and your certificate comes from Let's Encrypt, <strong>that line has done nothing since May 2025</strong>. Certificates no longer carry an OCSP URL, so the server has nothing to query and nothing to staple. This isn't a misconfiguration — the mechanism was retired. Here's what happened, what to check, and how revocation works now.</p>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>How Revocation Checking Actually Works</h2>
+                <p>A certificate can be revoked before it expires — a leaked private key, a domain changing hands, or a mis-issuance are all reasons. Which raises a simple-sounding question: how does the validating party know the certificate in front of it has been revoked? That question has had several different answers over twenty years.</p>
+                <p>OCSP was the dominant one: on connecting, the client asks the CA's server whether this certificate is still valid. It carries a structural problem, though — <strong>the CA thereby learns which IP address is visiting which website</strong>, inserting a third-party observer into every connection.</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Mechanism</th>
+                                    <th>How it works</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>Direct OCSP query</td>
+                                    <td class="num">Client asks the CA in real time on connection</td>
+                                    <td>Clear privacy problem; largely abandoned by browsers</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>OCSP stapling</td>
+                                    <td class="num">Server queries on the client's behalf and attaches the result</td>
+                                    <td>Let's Encrypt shut the service down in Aug 2025</td>
+                                </tr>
+                                <tr class="">
+                                    <td>CRL revocation lists</td>
+                                    <td class="num">CA publishes a list that validators fetch themselves</td>
+                                    <td>Required by CA/B Forum since March 2024</td>
+                                </tr>
+                                <tr class="">
+                                    <td>Chrome CRLSets</td>
+                                    <td class="num">Google curates a subset and ships it with the browser</td>
+                                    <td>What Chrome has always actually used</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>Four revocation mechanisms and their status in 2026.</figcaption>
+                </figure>
+
+                <p>The table sets out four mechanisms and where each stands. The second row is the one most guides still teach and which no longer functions.</p>
+
+                <!-- Why -->
+                <h2>The Three Dates in Let's Encrypt's Shutdown</h2>
+                <p>It wasn't switched off at once. Three stages, all now in the past:</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>30 January 2025: new Must-Staple requests stopped</strong>
+                        <span>Must-Staple is a flag in the certificate requiring the client to see a valid stapled response before accepting the connection. It was meant to close the "stapling failed, carry on anyway" gap, at the cost that any stapling failure takes the site down outright. From this point most accounts could no longer request certificates carrying the flag.</span>
+                    </li>
+                    <li>
+                        <strong>7 May 2025: OCSP URLs dropped from certificates</strong>
+                        <span>The most widely felt step. With no OCSP URL in the certificate, the server has nothing to query, and directives like `ssl_stapling on;` stop having any effect — no error, just silence. Plenty of configuration files still carry those lines today.</span>
+                    </li>
+                    <li>
+                        <strong>6 August 2025: the OCSP responders were turned off</strong>
+                        <span>The response servers went offline, so even older certificates still carrying an OCSP URL began failing their lookups. At current certificate lifetimes, those have long since expired and been replaced.</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>Why Retire a Security Mechanism</h2>
+                <p>The first stated reason is <strong>privacy</strong>. Let's Encrypt puts it plainly: when a visitor accesses a website, the CA operating the OCSP responder immediately learns which site is being visited from that visitor's particular IP address. For an authority that has issued hundreds of millions of certificates, that amounts to an extraordinarily large browsing record.</p>
+                <p>The second is <strong>operational cost</strong> — running a real-time lookup service at global scale consumes considerable resources that could be spent elsewhere.</p>
+
+                <aside class="callout">
+                    <p>Worth noting: OCSP stapling existed precisely to solve that privacy problem, by having the server ask on the client's behalf. But stapling requires every site to configure it correctly, and deployment rates never got high — so the privacy problem persisted for the majority of sites that never set it up. CRLs, by contrast, protect every site equally and need no server configuration at all.</p>
+                </aside>
+
+                <p>The direction was set earlier. In 2023 the CA/Browser Forum voted to <strong>make OCSP optional and CRLs mandatory</strong>, effective March 2024. Let's Encrypt's decision follows that, rather than standing alone.</p>
+
+                <!-- Why manual fails -->
+                <h2>What to Check Now</h2>
+                <p>Start with leftovers in your configuration. Nginx's `ssl_stapling on;` and `ssl_stapling_verify on;`, Apache's `SSLUseStapling on` — with no OCSP URL in the certificate these cause no error, but they no longer do anything either. Leaving them does no harm; they're simply meaningless now.</p>
+                <p>Also confirm that <strong>commercial certificates behave differently</strong>. This was Let's Encrypt's decision, and some commercial CAs still run OCSP services. If you manage both free and commercial certificates, the two will behave differently — check whether a given certificate actually carries an OCSP URL before concluding anything.</p>
+
+                <!-- How to respond -->
+                <h2>Three Levels of Response</h2>
+                <p>Handle each case on its own terms:</p>
+
+                <h3>1. Establish whether the certificate has an OCSP URL</h3>
+                <p>This determines everything else. No URL means stapling configuration is moot; a URL present (usually commercial certificates) means stapling still works and can stay. Don't assume it still functions because it was configured once.</p>
+
+                <h3>2. Clear out dead configuration, without urgency</h3>
+                <p>Leftover stapling directives cause no failures, so nothing needs fixing today. But remove them next time you touch the file — leaving them makes whoever inherits the system believe stapling is active, and debugging from a false premise wastes a great deal of time.</p>
+
+                <h3>3. Understand what revocation actually covers</h3>
+                <p>Don't assume revocation takes effect immediately. CRLs and CRLSets both have update cycles, and Chrome's CRLSets are a curated subset rather than a complete list. This is part of the backdrop to shrinking certificate lifetimes — the shorter the lifetime, the less revocation has to carry.</p>
+
+                <!-- Checklist -->
+                <h2>Three Things to Establish First</h2>
+                <p>When something revocation- or stapling-related goes wrong, settle these before anything else:</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>Which CA issued this certificate</strong>
+                        <span>Let's Encrypt and commercial CAs now behave entirely differently here. Getting the issuer wrong sends the whole investigation off course.</span>
+                    </li>
+                    <li>
+                        <strong>Whether stapling is actually functioning</strong>
+                        <span>Configured isn't the same as working. Nginx logs a warning rather than refusing to start when it can't obtain an OCSP response, so the service looks perfectly healthy. Read the logs, not the config file.</span>
+                    </li>
+                    <li>
+                        <strong>Whether the problem involves revocation at all</strong>
+                        <span>Incomplete chains, expiry and hostname mismatches produce similar-looking errors and are far more common. Rule those out before pursuing revocation.</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>In Summary</h2>
+                <p>"Remember to enable OCSP stapling" was once correct advice and no longer applies to Let's Encrypt certificates — <strong>there is no OCSP URL in the certificate, so the directive raises no error and silently does nothing</strong>. Outdated guidance like this circulates widely, and its harm isn't broken services; it's leaving people convinced a protection is running when it isn't.</p>
+                <p>Revocation is converging on CRLs and shorter certificate lifetimes. If you'd rather not track ecosystem shifts like this one, our SSL automation platform handles issuance and deployment so certificate management follows the standards without your watching each change.</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>Sources</h3>
+                    <ul>
+                        <li><a href="https://letsencrypt.org/2024/12/05/ending-ocsp/" target="_blank" rel="noopener">Let's Encrypt — Ending OCSP Support in 2025</a></li>
+                        <li><a href="https://cabforum.org/2023/07/14/ballot-sc063v4-make-ocsp-optional-require-crls-and-incentivize-automation/" target="_blank" rel="noopener">CA/Browser Forum — Ballot SC-063: Make OCSP Optional, Require CRLs</a></li>
+                        <li><a href="https://www.chromium.org/Home/chromium-security/crlsets/" target="_blank" rel="noopener">The Chromium Projects — CRLSets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>Related Services & Reading</h2>
+                <p class="article-related-desc">These pages connect directly to the topic above</p>
+                <div class="related-grid">
+                    <a href="/en/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>SSL Lifetimes Cut to 200 Days</h3>
+                        <p>Shorter lifetimes are part of why revocation could be simplified.</p>
+                    </a>
+                    <a href="/en/blog/incomplete-certificate-chain/" class="related-card glass-panel">
+                        <span class="related-kicker">Article</span>
+                        <h3>Incomplete Certificate Chains</h3>
+                        <p>A far more common class of certificate failure than revocation.</p>
+                    </a>
+                    <a href="/en/ssl/" class="related-card glass-panel">
+                        <span class="related-kicker">Platform</span>
+                        <h3>SSL Certificate Automation</h3>
+                        <p>Issuance, validation and multi-node deployment in one flow.</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>Let Certificate Management Follow the Standards</h2>
+                <p>The Kineticlinks SSL automation platform handles issuance, validation and multi-node deployment, so ecosystem shifts aren't yours to track.</p>
+                <div class="hero-actions">
+                    <a href="/en/ssl/" class="btn btn-primary">Explore the SSL Platform</a>
+                    <a href="/en/blog/" class="btn btn-secondary">Back to all articles</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/en/cdn/">Content Delivery Network (CDN)</a>
+                    <a href="/en/vps/">Virtual Private Server (VPS)</a>
+                    <a href="/en/idc/">IDC Construction</a>
+                    <a href="/en/cloud/">Public Cloud Solutions</a>
+                    <a href="/en/ssl/">Automated SSL Platform</a>
+                    <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/blog/">Blog</a>
+                    <a href="/en/#contact">Contact</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=ded9249e" defer></script>
+</body>
+
+</html>

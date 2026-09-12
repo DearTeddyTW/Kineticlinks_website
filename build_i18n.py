@@ -4,6 +4,7 @@ import json
 import re
 import os
 import subprocess
+import unicodedata
 
 BASE_URL = "https://www.kineticlinks.net"
 
@@ -55,6 +56,7 @@ LANGS = [
 # Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
 # listed on the blog index. content_key is looked up in the locale JSON.
 ARTICLES = [
+    {'slug': 'ocsp-stapling-deprecated', 'content_key': 'article_ocsp_stapling'},
     {'slug': 'incomplete-certificate-chain', 'content_key': 'article_cert_chain'},
     {'slug': 'icp-filing-explained', 'content_key': 'article_icp_filing'},
     {'slug': 'dns-record-types', 'content_key': 'article_dns_records'},
@@ -273,6 +275,27 @@ def build_pricing_section(page_content, lang_path):
 """
 
 
+def display_width(text):
+    """Width as a SERP renders it: CJK glyphs take two columns, latin one."""
+    return sum(2 if unicodedata.east_asian_width(c) in 'WF' else 1 for c in text)
+
+
+def check_meta_lengths(flat, page_label):
+    """Fail the build when a title or description would be truncated.
+
+    Guidance written for English ("50-60 characters") doesn't transfer to
+    Chinese, where each glyph occupies two columns, so the limits here are
+    in display width against where Google actually cuts.
+    """
+    for key, limit in (('seo.title', 70), ('page.seo.title', 70),
+                       ('seo.description', 160), ('page.seo.description', 160)):
+        value = flat.get(key)
+        if isinstance(value, str) and display_width(value) > limit:
+            raise ValueError(
+                f"{page_label} 的 {key} 顯示寬度 {display_width(value)} 超過 {limit}，"
+                f"會在搜尋結果被截斷")
+
+
 def render(template, flat_translations):
     out_html = template
     # Replace longer keys first so e.g. "page.faq.q1" doesn't get clobbered
@@ -364,6 +387,8 @@ def build():
                     f'                <aside class="affiliate-note">{disclosure}</aside>\n'
                     if disclosure else ''
                 )
+
+            check_meta_lengths(flat, out_label := f"{lang['lang_code']} /{slug_path}")
 
             out_html = render(templates[page['template']], flat)
 
