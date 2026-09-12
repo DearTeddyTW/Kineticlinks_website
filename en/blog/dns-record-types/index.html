@@ -175,7 +175,7 @@
                     <span class="dot">·</span>
                     <span>9 min read</span>
                 </div>
-                <p class="article-lead">"The DNS change hasn't taken yet — still propagating, right?" Half true, and it hides the actual cause. There is no mechanism in DNS called propagation. **Changes take time because the old record is still cached, and how long it stays cached is set by your own TTL.** Which means something counterintuitive: to make a change take effect quickly, you act *before* making it. This covers six record types, how TTL should actually be used, and the apex limitation you cannot design around.</p>
+                <p class="article-lead">"The DNS change hasn't taken yet — still propagating, right?" Half true, and it hides the actual cause. There is no mechanism in DNS called propagation. <strong>Changes take time because the old record is still cached, and how long it stays cached is set by your own TTL.</strong> Which means something counterintuitive: to make a change take effect quickly, you act *before* making it. This covers six record types, how TTL should actually be used, and the apex limitation you cannot design around.</p>
             </header>
 
             <div class="article-body">
@@ -250,17 +250,17 @@
                     </li>
                     <li>
                         <strong>So pointing an apex at a name requires an alternative</strong>
-                        <span>Most DNS providers offer ALIAS, ANAME, or "CNAME flattening": externally it looks like an A record, but the provider resolves the target name behind the scenes and returns its current IP. The effect approximates CNAME while staying compliant. Note this is **not a standardised feature** — names and behaviour differ per provider, so re-verify when switching.</span>
+                        <span>Most DNS providers offer ALIAS, ANAME, or "CNAME flattening": externally it looks like an A record, but the provider resolves the target name behind the scenes and returns its current IP. The effect approximates CNAME while staying compliant. Note this is <strong>not a standardised feature</strong> — names and behaviour differ per provider, so re-verify when switching.</span>
                     </li>
                 </ol>
 
                 <!-- Impact -->
                 <h2>TTL: Adjust It Before the Change</h2>
                 <p>TTL (Time To Live) is how you tell every resolver in the world how long this record may be cached. Set 3600 and for the next hour, any resolver that already asked won't ask again — it serves the cached answer.</p>
-                <p>So when a change doesn't appear to take effect, the cause usually isn't "propagation takes time", it's that **the old record's TTL hasn't expired**. And crucially: lowering TTL now is too late, because the copy resolvers are holding carries the TTL that was in effect when they fetched it.</p>
+                <p>So when a change doesn't appear to take effect, the cause usually isn't "propagation takes time", it's that <strong>the old record's TTL hasn't expired</strong>. And crucially: lowering TTL now is too late, because the copy resolvers are holding carries the TTL that was in effect when they fetched it.</p>
 
                 <aside class="callout">
-                    <p>Treat TTL as something to plan ahead. If a migration is coming, lower the TTL **at least one old TTL period before** the change (say 3600 down to 300). Once the old caches have expired and everyone holds the short-TTL version, make the actual change — and it now takes effect in five minutes. Raise the TTL again once things are stable, to avoid unnecessary query load.</p>
+                    <p>Treat TTL as something to plan ahead. If a migration is coming, lower the TTL <strong>at least one old TTL period before</strong> the change (say 3600 down to 300). Once the old caches have expired and everyone holds the short-TTL version, make the actual change — and it now takes effect in five minutes. Raise the TTL again once things are stable, to avoid unnecessary query load.</p>
                 </aside>
 
                 <p>Operationally, records that rarely change (MX, NS) can carry longer TTLs, while records you may need to switch in a hurry (an A record pointing at origin) are worth keeping short. It's a trade-off between stability and agility, with no single right answer.</p>
@@ -268,7 +268,7 @@
                 <!-- Why manual fails -->
                 <h2>Two Practical Traps in TXT Records</h2>
                 <p>TXT is the messiest type, because it's where all kinds of verification data ends up: domain ownership proofs, SPF, DKIM, DMARC, and the ACME DNS-01 challenge values used in certificate automation. Different formats, all sharing one name.</p>
-                <p>The first trap is that **SPF must be a single record**. Adding a second SPF entry for a new mail service doesn't mean both apply — validation simply fails. All sources belong merged into one record. The second is that **certificate validation TXT records change frequently**, so without a DNS provider API you can't automate it — and as certificate lifetimes shorten, that becomes manual work several times a year.</p>
+                <p>The first trap is that <strong>SPF must be a single record</strong>. Adding a second SPF entry for a new mail service doesn't mean both apply — validation simply fails. All sources belong merged into one record. The second is that <strong>certificate validation TXT records change frequently</strong>, so without a DNS provider API you can't automate it — and as certificate lifetimes shorten, that becomes manual work several times a year.</p>
 
                 <!-- How to respond -->
                 <h2>Three Practical Judgements</h2>
@@ -278,7 +278,7 @@
                 <p>If it will, use a CNAME pointing at the provider's hostname and let them manage the IP; only use an A record when it won't. This matters most for CDNs and cloud load balancers, whose IPs are expected to move — hard-coding an A record there plants a fault that detonates at an unpredictable time.</p>
 
                 <h3>2. How often will this record change?</h3>
-                <p>That sets the TTL. Rarely-touched records take a longer value (3600+); anything you may need to switch urgently takes a shorter one (around 300). The point is **setting it short before you need it short**, not during the incident.</p>
+                <p>That sets the TTL. Rarely-touched records take a longer value (3600+); anything you may need to switch urgently takes a shorter one (around 300). The point is <strong>setting it short before you need it short</strong>, not during the incident.</p>
 
                 <h3>3. Who is authoritative for this domain?</h3>
                 <p>NS records decide who answers queries. A common mess: NS edited once at the registrar and again in the DNS provider's panel, leaving the two inconsistent. What takes effect is the registry's copy — the one set at your registrar. This bites hardest when transferring a domain or switching DNS providers.</p>
@@ -303,7 +303,7 @@
 
                 <!-- Conclusion -->
                 <h2>In Summary</h2>
-                <p>Waiting for a DNS change isn't mysterious — the wait is the TTL you set. Once that's clear, the correct migration order follows: **lower the TTL, wait one old period, then make the change.** Adjusting TTL afterwards does nothing for the change you're making now.</p>
+                <p>Waiting for a DNS change isn't mysterious — the wait is the TTL you set. Once that's clear, the correct migration order follows: <strong>lower the TTL, wait one old period, then make the change.</strong> Adjusting TTL afterwards does nothing for the change you're making now.</p>
                 <p>The other thing worth retaining is that an apex can't take a CNAME. That's protocol-level; the ALIAS and flattening features providers offer are their own workarounds, not a standard. When choosing a DNS provider, both that feature and API availability — the prerequisite for certificate automation — are worth confirming.</p>
 
                 <!-- Sources -->

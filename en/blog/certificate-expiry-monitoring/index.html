@@ -175,14 +175,14 @@
                     <span class="dot">·</span>
                     <span>8 min read</span>
                 </div>
-                <p class="article-lead">Once ACME automation is in place, most people stop thinking about certificates. Certificate incidents don't disappear though — they change shape: the renewal log says success, the CA portal shows issued, and users still get a browser warning. The reason is that **a successful renewal and a certificate actually being served are two independent things**, and most monitoring only watches the first.</p>
+                <p class="article-lead">Once ACME automation is in place, most people stop thinking about certificates. Certificate incidents don't disappear though — they change shape: the renewal log says success, the CA portal shows issued, and users still get a browser warning. The reason is that <strong>a successful renewal and a certificate actually being served are two independent things</strong>, and most monitoring only watches the first.</p>
             </header>
 
             <div class="article-body">
 
                 <!-- What happened -->
                 <h2>"Renewal Succeeded" and "Everything's Fine" Are Different Claims</h2>
-                <p>A full certificate update has four stages: request from the CA, complete domain validation, deploy the new certificate to every TLS endpoint, and confirm users actually receive it. ACME tooling handles **the first two**; the third depends on your configuration; and almost nothing does the fourth for you automatically.</p>
+                <p>A full certificate update has four stages: request from the CA, complete domain validation, deploy the new certificate to every TLS endpoint, and confirm users actually receive it. ACME tooling handles <strong>the first two</strong>; the third depends on your configuration; and almost nothing does the fourth for you automatically.</p>
                 <p>That's where the gap opens. A renewal log reading `success` means the certificate was obtained, not that it's being served. Deployment and reload still sit in between, and a failure at either never shows up in the renewal log.</p>
 
                 <!-- Timeline table -->
@@ -224,7 +224,7 @@
                     <figcaption>What four monitoring approaches cover. Only the last proves users are unaffected.</figcaption>
                 </figure>
 
-                <p>The table below lays out four common monitoring approaches. The important column is the third — what each one **misses** is exactly where incidents happen.</p>
+                <p>The table below lays out four common monitoring approaches. The important column is the third — what each one <strong>misses</strong> is exactly where incidents happen.</p>
 
                 <!-- Why -->
                 <h2>Three Ways Renewal Succeeds and Things Still Break</h2>
@@ -246,7 +246,7 @@
 
                 <!-- Impact -->
                 <h2>What to Monitor, and When to Alert</h2>
-                <p>Those three situations point to one principle: **monitoring has to originate outside your network, against the address users actually reach**. A check from inside the facility or on the same machine cannot prove that every layer on the public path received the new certificate.</p>
+                <p>Those three situations point to one principle: <strong>monitoring has to originate outside your network, against the address users actually reach</strong>. A check from inside the facility or on the same machine cannot prove that every layer on the public path received the new certificate.</p>
                 <p>What you check shouldn't be limited to the expiry date either. Cover at minimum: expiry time, whether the chain is complete (a missing intermediate fails on some clients), whether the served certificate matches the expected domain, and — if you run multiple nodes — whether every node serves the same certificate.</p>
 
                 <aside class="callout">
@@ -258,7 +258,7 @@
                 <!-- Why manual fails -->
                 <h2>Shorter Lifetimes Move This From Optional to Required</h2>
                 <p>When certificates lasted 398 days, you handled this once a year, and imperfect monitoring carried limited risk. Lifetimes dropped to 200 days in March 2026, fall to 100 days in 2027, and to 47 days in 2029 — roughly eight renewals a year at that point.</p>
-                <p>Every renewal is another chance to fail. Going from once a year to eight times a year means **the same failure rate produces eight times as many incidents**. That's why monitoring stops being a nice-to-have in the short-lifetime era and becomes automation's necessary counterpart: automation makes the frequency survivable, and monitoring is what confirms those automated updates actually took effect.</p>
+                <p>Every renewal is another chance to fail. Going from once a year to eight times a year means <strong>the same failure rate produces eight times as many incidents</strong>. That's why monitoring stops being a nice-to-have in the short-lifetime era and becomes automation's necessary counterpart: automation makes the frequency survivable, and monitoring is what confirms those automated updates actually took effect.</p>
 
                 <!-- How to respond -->
                 <h2>Three Layers of Implementation</h2>
@@ -294,7 +294,7 @@
                 <!-- Conclusion -->
                 <h2>In Summary</h2>
                 <p>Certificate automation solves "renewing is tedious". Monitoring solves "did the renewal actually take effect". Both need to exist — automation without monitoring hands a high-frequency process entirely to a mechanism nobody checks, and shrinking lifetimes are pushing that frequency toward eight times a year.</p>
-                <p>There's a single question that tells you whether your monitoring is sufficient: **does it check the certificate file, or what users actually receive?** If it's the former, it catches none of the three situations described above.</p>
+                <p>There's a single question that tells you whether your monitoring is sufficient: <strong>does it check the certificate file, or what users actually receive?</strong> If it's the former, it catches none of the three situations described above.</p>
 
                 <!-- Sources -->
                 <div class="article-sources">
