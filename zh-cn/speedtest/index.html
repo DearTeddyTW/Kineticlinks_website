@@ -39,7 +39,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "全球三网测速平台",
+      "serviceType": "免费网页测速与中国三网延迟分析工具",
       "name": "全球三网测速平台 | 中国电信联通移动连接测试 - Kineticlinks",
       "description": "Kineticlinks 测速平台专为亚太区与中国三大电信商（电信、联通、移动）打造，提供免费即时测速与商业版 API，协助企业掌握跨境连接质量。",
       "provider": {
@@ -73,7 +73,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "全球三网测速平台",
+          "name": "免费网页测速与中国三网延迟分析工具",
           "item": "https://www.kineticlinks.net/zh-cn/speedtest/"
         }
       ]
@@ -82,37 +82,84 @@
 
     <!-- Structured Data (JSON-LD): FAQPage -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "免费版测速功能有什么限制吗？",
-          "acceptedAnswer": { "@type": "Answer", "text": "免费版提供即时的网页测速功能，适合个别、非频繁的检测需求；若需要排程自动化测试或大量查询，建议评估商业版 API 方案。" }
-        },
-        {
-          "@type": "Question",
-          "name": "商业版 API 可以整合到我们自己的监控系统吗？",
-          "acceptedAnswer": { "@type": "Answer", "text": "可以。商业版 API 设计为可直接串接至企业既有的监控仪表盘或告警系统，方便长期追踪特定节点的连接质量趋势。" }
-        },
-        {
-          "@type": "Question",
-          "name": "测速结果只涵盖中国三网吗？",
-          "acceptedAnswer": { "@type": "Answer", "text": "测速平台以中国电信、联通、移动三网为核心，同时也涵盖亚太区其他主要市场的连接质量检测，并非仅限中国地区。" }
-        },
-        {
-          "@type": "Question",
-          "name": "可以指定测试特定的服务器或网址吗？",
-          "acceptedAnswer": { "@type": "Answer", "text": "可以。用户可自行输入欲测试的服务器地址或域名，获取该目标对三大电信商的实测连接数据。" }
-        },
-        {
-          "@type": "Question",
-          "name": "测速数据多久更新一次？",
-          "acceptedAnswer": { "@type": "Answer", "text": "测速结果为即时检测，每次测试都会返回当下的实际连接状况；通过 API 排程调用则可依需求自定义检测频率。" }
-        }
-      ]
+      "@type": "Question",
+      "name": "免费版测速功能有什么限制吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "免费版提供即时的网页测速功能，适合个别、非频繁的检测需求；若需要排程自动化测试或大量查询，建议评估商业版 API 方案。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "商业版 API 可以整合到我们自己的监控系统吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。商业版 API 设计为可直接串接至企业既有的监控仪表盘或告警系统，方便长期追踪特定节点的连接质量趋势。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "测速结果只涵盖中国三网吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "测速平台以中国电信、联通、移动三网为核心，同时也涵盖亚太区其他主要市场的连接质量检测，并非仅限中国地区。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "可以指定测试特定的服务器或网址吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。用户可自行输入欲测试的服务器地址或域名，获取该目标对三大电信商的实测连接数据。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "测速数据多久更新一次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "测速结果为即时检测，每次测试都会返回当下的实际连接状况；通过 API 排程调用则可依需求自定义检测频率。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "什么是 TTFB？如何改善网站的首字节时间？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TTFB（Time To First Byte）是从发出请求到收到第一个字节的时间，包含 DNS 解析、TCP 与 TLS 握手、以及服务器生成响应的时间。跨境情境下，TTFB 高多半来自物理距离与路由绕行而非服务器性能——这种情况加大服务器规格没有帮助，缩短路径（例如就近的 CDN 节点）才有效。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么海外访问中国、或中国访问海外特别慢？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "主要有三个原因叠加：国际出口带宽在高峰时段共享而拥塞、三大运营商各自的国际线路质量不对等、以及跨境路由可能绕经第三地。这些都会同时推高延迟与丢包，而丢包对实际传输速度的伤害远大于带宽不足。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "测速结果不理想，该从哪里开始优化？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "依序看三个数字：先确认丢包率，超过 1% 就要先解决，否则加带宽无效；再看延迟，改善方式是缩短路径而非升级主机；最后才看带宽。若延迟主要来自跨境距离，引入 CDN 让用户连到就近节点是最直接的做法。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "单次测速的结果可靠吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "单次测速只能反映当下那一秒。跨境线路的问题绝大多数是时段性的——晚间高峰拥塞、路由变动都会让同一条线路在不同时段表现截然不同。要判断真实质量，需要跨越完整日夜周期的持续检测。"
+      }
     }
+  ]
+}
     </script>
 
     <!-- Favicon -->
@@ -179,7 +226,7 @@
             <span>/</span>
             <a href="/zh-cn/#platforms">平台产品</a>
             <span>/</span>
-            <span class="current">全球三网测速平台</span>
+            <span class="current">免费网页测速与中国三网延迟分析工具</span>
         </div>
     </div>
 
@@ -189,8 +236,8 @@
         <div class="container">
             <div class="page-hero-content glass-panel">
                 <div class="badge">全球三网测速平台</div>
-                <h1>全球三网测速平台</h1>
-                <p class="page-hero-subtitle">实时掌握中国三大电信商与亚太区的连接质量</p>
+                <h1>免费网页测速与中国三网延迟分析工具</h1>
+                <p class="page-hero-subtitle">排查 TTFB、DNS 解析与 CDN 缓存瓶颈，分别检视电信、联通、移动的实际连接表现</p>
                 <p>Kineticlinks 测速平台专为亚太区及中国三网（电信、联通、移动）打造，提供免费且即时的节点连接质量检测，并开放商业版 API 供企业串接至内部监控系统，协助掌握跨境服务的实际用户体验。</p>
                 <div class="hero-actions">
                     <a href="https://speedtest.kineticlinks.net/" target="_blank" rel="noopener" class="btn btn-primary">立即免费测速</a>
@@ -352,6 +399,22 @@
                 <details class="faq-item glass-panel">
                     <summary>测速数据多久更新一次？</summary>
                     <p>测速结果为即时检测，每次测试都会返回当下的实际连接状况；通过 API 排程调用则可依需求自定义检测频率。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>什么是 TTFB？如何改善网站的首字节时间？</summary>
+                    <p>TTFB（Time To First Byte）是从发出请求到收到第一个字节的时间，包含 DNS 解析、TCP 与 TLS 握手、以及服务器生成响应的时间。跨境情境下，TTFB 高多半来自物理距离与路由绕行而非服务器性能——这种情况加大服务器规格没有帮助，缩短路径（例如就近的 CDN 节点）才有效。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>为什么海外访问中国、或中国访问海外特别慢？</summary>
+                    <p>主要有三个原因叠加：国际出口带宽在高峰时段共享而拥塞、三大运营商各自的国际线路质量不对等、以及跨境路由可能绕经第三地。这些都会同时推高延迟与丢包，而丢包对实际传输速度的伤害远大于带宽不足。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>测速结果不理想，该从哪里开始优化？</summary>
+                    <p>依序看三个数字：先确认丢包率，超过 1% 就要先解决，否则加带宽无效；再看延迟，改善方式是缩短路径而非升级主机；最后才看带宽。若延迟主要来自跨境距离，引入 CDN 让用户连到就近节点是最直接的做法。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>单次测速的结果可靠吗？</summary>
+                    <p>单次测速只能反映当下那一秒。跨境线路的问题绝大多数是时段性的——晚间高峰拥塞、路由变动都会让同一条线路在不同时段表现截然不同。要判断真实质量，需要跨越完整日夜周期的持续检测。</p>
                 </details>
             </div>
         </div>

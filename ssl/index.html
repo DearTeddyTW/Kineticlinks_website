@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>SSL 憑證自動化平台 | DNS 自動驗證與多 CDN 推播 - Kineticlinks</title>
-    <meta name="title" content="SSL 憑證自動化平台 | DNS 自動驗證與多 CDN 推播 - Kineticlinks">
-    <meta name="description" content="Kineticlinks SSL 憑證自動化平台支援 DNS 自動驗證，簽發後自動推播至多品牌 CDN 節點，大幅降低憑證管理與更新的人力成本。">
+    <title>SSL 憑證自動化｜ACME 驗證、自動續簽與多 CDN 部署 - Kineticlinks</title>
+    <meta name="title" content="SSL 憑證自動化｜ACME 驗證、自動續簽與多 CDN 部署 - Kineticlinks">
+    <meta name="description" content="告別憑證過期風險。支援 ACME 與 DNS 自動驗證，簽發後自動推播至 GoDaddy、阿里雲等多品牌 CDN 節點。單網域 US$30 起，無月費，效期內重簽不加價。">
     <meta name="keywords" content="SSL 憑證自動化, SSL 憑證管理, 憑證自動續簽, DV SSL, CDN SSL 憑證, SSL API">
 
     <!-- Canonical URL -->
@@ -23,15 +23,15 @@
     <!-- Open Graph / Facebook / Line -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.kineticlinks.net/ssl/">
-    <meta property="og:title" content="SSL 憑證自動化平台 | DNS 自動驗證與多 CDN 推播 - Kineticlinks">
-    <meta property="og:description" content="Kineticlinks SSL 憑證自動化平台支援 DNS 自動驗證，簽發後自動推播至多品牌 CDN 節點，大幅降低憑證管理與更新的人力成本。">
+    <meta property="og:title" content="SSL 憑證自動化｜ACME 驗證、自動續簽與多 CDN 部署 - Kineticlinks">
+    <meta property="og:description" content="告別憑證過期風險。支援 ACME 與 DNS 自動驗證，簽發後自動推播至 GoDaddy、阿里雲等多品牌 CDN 節點。單網域 US$30 起，無月費，效期內重簽不加價。">
     <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.kineticlinks.net/ssl/">
-    <meta property="twitter:title" content="SSL 憑證自動化平台 | DNS 自動驗證與多 CDN 推播 - Kineticlinks">
-    <meta property="twitter:description" content="Kineticlinks SSL 憑證自動化平台支援 DNS 自動驗證，簽發後自動推播至多品牌 CDN 節點，大幅降低憑證管理與更新的人力成本。">
+    <meta property="twitter:title" content="SSL 憑證自動化｜ACME 驗證、自動續簽與多 CDN 部署 - Kineticlinks">
+    <meta property="twitter:description" content="告別憑證過期風險。支援 ACME 與 DNS 自動驗證，簽發後自動推播至 GoDaddy、阿里雲等多品牌 CDN 節點。單網域 US$30 起，無月費，效期內重簽不加價。">
     <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Structured Data (JSON-LD): Service -->
@@ -40,8 +40,8 @@
       "@context": "https://schema.org",
       "@type": "Service",
       "serviceType": "SSL 憑證自動化平台",
-      "name": "SSL 憑證自動化平台 | DNS 自動驗證與多 CDN 推播 - Kineticlinks",
-      "description": "Kineticlinks SSL 憑證自動化平台支援 DNS 自動驗證，簽發後自動推播至多品牌 CDN 節點，大幅降低憑證管理與更新的人力成本。",
+      "name": "SSL 憑證自動化｜ACME 驗證、自動續簽與多 CDN 部署 - Kineticlinks",
+      "description": "告別憑證過期風險。支援 ACME 與 DNS 自動驗證，簽發後自動推播至 GoDaddy、阿里雲等多品牌 CDN 節點。單網域 US$30 起，無月費，效期內重簽不加價。",
       "provider": {
         "@type": "Organization",
         "name": "Kineticlinks",
@@ -82,37 +82,52 @@
 
     <!-- Structured Data (JSON-LD): FAQPage -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "使用這個平台需要先具備網域的哪些權限？",
-          "acceptedAnswer": { "@type": "Answer", "text": "需要有網域的 DNS 管理權限，平台會透過整合的 DNS 服務商 API 自動建立驗證紀錄；若您的 DNS 服務商尚未支援自動整合，也可改用手動驗證方式。" }
-        },
-        {
-          "@type": "Question",
-          "name": "憑證到期前平台會主動通知嗎？",
-          "acceptedAnswer": { "@type": "Answer", "text": "會。平台會在憑證到期前主動提醒，並可依設定啟用自動續簽，降低因忘記更新而導致網站出現不安全警告的風險。" }
-        },
-        {
-          "@type": "Question",
-          "name": "簽發的憑證可以用在 Kineticlinks 以外的 CDN 或主機嗎？",
-          "acceptedAnswer": { "@type": "Answer", "text": "可以。平台簽發的是標準 SSL 憑證，可下載後應用於任何支援 SSL 的伺服器或 CDN 服務，並非僅限定 Kineticlinks 自家服務使用。" }
-        },
-        {
-          "@type": "Question",
-          "name": "平台支援哪些 DNS 服務商的自動驗證？",
-          "acceptedAnswer": { "@type": "Answer", "text": "目前已整合 GoDaddy 等主流 DNS 服務商，並持續擴充支援清單，若您使用的服務商尚未支援，歡迎與我們聯繫評估整合可行性。" }
-        },
-        {
-          "@type": "Question",
-          "name": "這個平台是免費使用嗎？收費方式為何？",
-          "acceptedAnswer": { "@type": "Answer", "text": "平台功能本身不另外收費，費用即憑證本身：單一網域憑證 US$30／年，萬用字元憑證 US$90／年，效期內自動重簽不加價。沒有月費或帳號費。首張憑證若不符合需求可全額退費。" }
-        }
-      ]
+      "@type": "Question",
+      "name": "使用這個平台需要先具備網域的哪些權限？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "需要有網域的 DNS 管理權限，平台會透過整合的 DNS 服務商 API 自動建立驗證紀錄；若您的 DNS 服務商尚未支援自動整合，也可改用手動驗證方式。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "憑證到期前平台會主動通知嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "會。平台會在憑證到期前主動提醒，並可依設定啟用自動續簽，降低因忘記更新而導致網站出現不安全警告的風險。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "簽發的憑證可以用在 Kineticlinks 以外的 CDN 或主機嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。平台簽發的是標準 SSL 憑證，可下載後應用於任何支援 SSL 的伺服器或 CDN 服務，並非僅限定 Kineticlinks 自家服務使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "平台支援哪些 DNS 服務商的自動驗證？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "目前已整合 GoDaddy 等主流 DNS 服務商，並持續擴充支援清單，若您使用的服務商尚未支援，歡迎與我們聯繫評估整合可行性。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "這個平台是免費使用嗎？收費方式為何？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "平台功能本身不另外收費，費用即憑證本身：單一網域憑證 US$30／年，萬用字元憑證 US$90／年，效期內自動重簽不加價。沒有月費或帳號費。首張憑證若不符合需求可全額退費。"
+      }
     }
+  ]
+}
     </script>
 
     <!-- Favicon -->

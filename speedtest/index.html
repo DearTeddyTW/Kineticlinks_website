@@ -39,7 +39,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "全球三網測速平台",
+      "serviceType": "免費網頁測速與中國三網延遲分析工具",
       "name": "全球三網測速平台 | 中國電信聯通移動連線測試 - Kineticlinks",
       "description": "Kineticlinks 測速平台專為亞太區與中國三大電信商（電信、聯通、移動）打造，提供免費即時測速與商業版 API，協助企業掌握跨境連線品質。",
       "provider": {
@@ -73,7 +73,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "全球三網測速平台",
+          "name": "免費網頁測速與中國三網延遲分析工具",
           "item": "https://www.kineticlinks.net/speedtest/"
         }
       ]
@@ -82,37 +82,84 @@
 
     <!-- Structured Data (JSON-LD): FAQPage -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "免費版測速功能有什麼限制嗎？",
-          "acceptedAnswer": { "@type": "Answer", "text": "免費版提供即時的網頁測速功能，適合個別、非頻繁的檢測需求；若需要排程自動化測試或大量查詢，建議評估商業版 API 方案。" }
-        },
-        {
-          "@type": "Question",
-          "name": "商業版 API 可以整合到我們自己的監控系統嗎？",
-          "acceptedAnswer": { "@type": "Answer", "text": "可以。商業版 API 設計為可直接串接至企業既有的監控儀表板或告警系統，方便長期追蹤特定節點的連線品質趨勢。" }
-        },
-        {
-          "@type": "Question",
-          "name": "測速結果只涵蓋中國三網嗎？",
-          "acceptedAnswer": { "@type": "Answer", "text": "測速平台以中國電信、聯通、移動三網為核心，同時也涵蓋亞太區其他主要市場的連線品質檢測，並非僅限中國地區。" }
-        },
-        {
-          "@type": "Question",
-          "name": "可以指定測試特定的伺服器或網址嗎？",
-          "acceptedAnswer": { "@type": "Answer", "text": "可以。使用者可自行輸入欲測試的伺服器位址或網域，取得該目標對三大電信商的實測連線數據。" }
-        },
-        {
-          "@type": "Question",
-          "name": "測速數據多久更新一次？",
-          "acceptedAnswer": { "@type": "Answer", "text": "測速結果為即時檢測，每次測試都會回傳當下的實際連線狀況；透過 API 排程呼叫則可依需求自訂檢測頻率。" }
-        }
-      ]
+      "@type": "Question",
+      "name": "免費版測速功能有什麼限制嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "免費版提供即時的網頁測速功能，適合個別、非頻繁的檢測需求；若需要排程自動化測試或大量查詢，建議評估商業版 API 方案。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "商業版 API 可以整合到我們自己的監控系統嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。商業版 API 設計為可直接串接至企業既有的監控儀表板或告警系統，方便長期追蹤特定節點的連線品質趨勢。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "測速結果只涵蓋中國三網嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "測速平台以中國電信、聯通、移動三網為核心，同時也涵蓋亞太區其他主要市場的連線品質檢測，並非僅限中國地區。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "可以指定測試特定的伺服器或網址嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。使用者可自行輸入欲測試的伺服器位址或網域，取得該目標對三大電信商的實測連線數據。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "測速數據多久更新一次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "測速結果為即時檢測，每次測試都會回傳當下的實際連線狀況；透過 API 排程呼叫則可依需求自訂檢測頻率。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "什麼是 TTFB？如何改善網站的首位元組時間？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TTFB（Time To First Byte）是從發出請求到收到第一個位元組的時間，包含 DNS 解析、TCP 與 TLS 交握、以及伺服器產生回應的時間。跨境情境下，TTFB 高多半來自實體距離與路由繞行而非伺服器效能——這種情況加大伺服器規格沒有幫助，縮短路徑（例如就近的 CDN 節點）才有效。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "為什麼海外訪問中國、或中國訪問海外特別慢？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "主要有三個原因疊加：國際出口頻寬在尖峰時段共享而壅塞、三大營運商各自的國際線路品質不對等、以及跨境路由可能繞經第三地。這些都會同時推高延遲與丟包，而丟包對實際傳輸速度的傷害遠大於頻寬不足。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "測速結果不理想，該從哪裡開始優化？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "依序看三個數字：先確認丟包率，超過 1% 就要先解決，否則加頻寬無效；再看延遲，改善方式是縮短路徑而非升級主機；最後才看頻寬。若延遲主要來自跨境距離，導入 CDN 讓使用者連到就近節點是最直接的做法。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "單次測速的結果可靠嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "單次測速只能反映當下那一秒。跨境線路的問題絕大多數是時段性的——晚間尖峰壅塞、路由變動都會讓同一條線路在不同時段表現截然不同。要判斷真實品質，需要跨越完整日夜週期的持續檢測。"
+      }
     }
+  ]
+}
     </script>
 
     <!-- Favicon -->
@@ -179,7 +226,7 @@
             <span>/</span>
             <a href="/#platforms">平台產品</a>
             <span>/</span>
-            <span class="current">全球三網測速平台</span>
+            <span class="current">免費網頁測速與中國三網延遲分析工具</span>
         </div>
     </div>
 
@@ -189,8 +236,8 @@
         <div class="container">
             <div class="page-hero-content glass-panel">
                 <div class="badge">全球三網測速平台</div>
-                <h1>全球三網測速平台</h1>
-                <p class="page-hero-subtitle">即時掌握中國三大電信商與亞太區的連線品質</p>
+                <h1>免費網頁測速與中國三網延遲分析工具</h1>
+                <p class="page-hero-subtitle">排查 TTFB、DNS 解析與 CDN 快取瓶頸，分別檢視電信、聯通、移動的實際連線表現</p>
                 <p>Kineticlinks 測速平台專為亞太區及中國三網（電信、聯通、移動）打造，提供免費且即時的節點連線品質檢測，並開放商業版 API 供企業串接至內部監控系統，協助掌握跨境服務的實際使用者體驗。</p>
                 <div class="hero-actions">
                     <a href="https://speedtest.kineticlinks.net/" target="_blank" rel="noopener" class="btn btn-primary">立即免費測速</a>
@@ -352,6 +399,22 @@
                 <details class="faq-item glass-panel">
                     <summary>測速數據多久更新一次？</summary>
                     <p>測速結果為即時檢測，每次測試都會回傳當下的實際連線狀況；透過 API 排程呼叫則可依需求自訂檢測頻率。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>什麼是 TTFB？如何改善網站的首位元組時間？</summary>
+                    <p>TTFB（Time To First Byte）是從發出請求到收到第一個位元組的時間，包含 DNS 解析、TCP 與 TLS 交握、以及伺服器產生回應的時間。跨境情境下，TTFB 高多半來自實體距離與路由繞行而非伺服器效能——這種情況加大伺服器規格沒有幫助，縮短路徑（例如就近的 CDN 節點）才有效。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>為什麼海外訪問中國、或中國訪問海外特別慢？</summary>
+                    <p>主要有三個原因疊加：國際出口頻寬在尖峰時段共享而壅塞、三大營運商各自的國際線路品質不對等、以及跨境路由可能繞經第三地。這些都會同時推高延遲與丟包，而丟包對實際傳輸速度的傷害遠大於頻寬不足。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>測速結果不理想，該從哪裡開始優化？</summary>
+                    <p>依序看三個數字：先確認丟包率，超過 1% 就要先解決，否則加頻寬無效；再看延遲，改善方式是縮短路徑而非升級主機；最後才看頻寬。若延遲主要來自跨境距離，導入 CDN 讓使用者連到就近節點是最直接的做法。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>單次測速的結果可靠嗎？</summary>
+                    <p>單次測速只能反映當下那一秒。跨境線路的問題絕大多數是時段性的——晚間尖峰壅塞、路由變動都會讓同一條線路在不同時段表現截然不同。要判斷真實品質，需要跨越完整日夜週期的持續檢測。</p>
                 </details>
             </div>
         </div>

@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "CDN, VPS Hosting & IDC Data Center Services | Kineticlinks",
-    "description": "Kineticlinks delivers global CDN acceleration, high-performance NVMe SSD VPS, IDC data center buildout, and public cloud architecture, plus our own SSL automation and 3-network speed test platforms.",
+    "title": "Cross-Border Infrastructure | CDN, VPS & Data Centers - Kineticlinks",
+    "description": "Cross-border network infrastructure: global CDN acceleration, NVMe SSD VPS, data center build-out and cloud architecture, plus SSL and speed test platforms.",
     "keywords": "Kineticlinks, CDN, VPS, IDC, Public Cloud, IT Infrastructure, Network Acceleration, Web Hosting, Hybrid Cloud, SSL Certificate"
   },
   "nav": {
@@ -104,8 +104,8 @@
   },
   "cdn_page": {
     "seo": {
-      "title": "CDN Services | Global Acceleration & DDoS Protection",
-      "description": "Kineticlinks CDN delivers 100+ global edge nodes, intelligent routing, and terabit-scale DDoS protection for e-commerce, streaming, and gaming. Get a custom CDN quote today.",
+      "title": "CDN Network | Cross-Border Acceleration & DDoS Protection",
+      "description": "Fix cross-border latency and traffic spikes: 100+ global nodes, intelligent routing and terabit DDoS protection, deployable without triggering ICP filing.",
       "keywords": "CDN acceleration, content delivery network, DDoS protection, website acceleration, edge nodes, CDN provider Asia"
     },
     "hero": {
@@ -220,7 +220,7 @@
   "vps_page": {
     "seo": {
       "title": "VPS Hosting | High-Performance NVMe SSD Servers - Kineticlinks",
-      "description": "Kineticlinks VPS runs on NVMe SSD storage and top-tier CPUs with elastic scaling, dedicated resources, and automated snapshots — built for websites, game servers, and app deployment.",
+      "description": "NVMe SSD virtual private servers with elastic scaling, snapshot backups and full root access. Deployed across Asia-Pacific for low-latency delivery.",
       "keywords": "VPS hosting, virtual private server, NVMe SSD VPS, cloud server, dedicated VPS, VPS Taiwan"
     },
     "hero": {
@@ -335,7 +335,7 @@
   "idc_page": {
     "seo": {
       "title": "IDC Data Center Buildout | Custom Facility Planning",
-      "description": "Kineticlinks delivers end-to-end IDC data center buildout — hardware procurement, network architecture, deployment, and 24/7 on-site monitoring for enterprise-grade secure facilities.",
+      "description": "End-to-end data center build-out: network architecture planning, rack deployment, power and cooling design, plus ongoing operations support.",
       "keywords": "IDC data center, data center buildout, colocation services, BGP dual-line network, enterprise data center, data center Taiwan"
     },
     "hero": {
@@ -450,7 +450,7 @@
   "cloud_page": {
     "seo": {
       "title": "Public Cloud Architecture | Hybrid Cloud & Migration",
-      "description": "Kineticlinks delivers AWS, GCP, and Azure architecture planning, hybrid cloud design, seamless migration, and cost optimization consulting to help enterprises complete cloud transformation securely.",
+      "description": "AWS, GCP and Azure architecture planning, hybrid and multi-cloud design, and migration consulting that maps dependencies before anything moves.",
       "keywords": "public cloud architecture, hybrid cloud, cloud migration, AWS consulting, GCP consulting, Azure consulting, cloud cost optimization"
     },
     "hero": {
@@ -565,8 +565,8 @@
   "ssl_page": {
     "platform_url": "https://app.kineticlinks.net/register",
     "seo": {
-      "title": "SSL Certificate Automation | DNS Validation & CDN Push",
-      "description": "Kineticlinks' SSL automation platform supports automatic DNS validation and pushes issued certificates directly to multiple CDN brands, cutting the manual work of certificate management and renewal.",
+      "title": "SSL Automation | ACME Validation, Renewal & Multi-CDN Deploy",
+      "description": "End certificate expiry risk. ACME and DNS validation with automatic push to GoDaddy, Alibaba Cloud and other CDN nodes. From US$30 per domain, no monthly fee.",
       "keywords": "SSL certificate automation, SSL certificate management, automatic certificate renewal, DV SSL, CDN SSL certificate, SSL API"
     },
     "hero": {
@@ -704,13 +704,13 @@
     "platform_url": "https://speedtest.kineticlinks.net/",
     "seo": {
       "title": "China 3-Network Speed Test | Telecom, Unicom, Mobile",
-      "description": "Kineticlinks' speed test platform is built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time testing and a commercial API for connection quality monitoring.",
+      "description": "Free web speed test with China Telecom, Unicom and Mobile measured separately. Diagnose TTFB, DNS and CDN bottlenecks, with a commercial API for scheduling.",
       "keywords": "speed test platform, China 3-network speed test, Telecom Unicom Mobile testing, cross-border network testing, network speed API, Asia-Pacific connection quality"
     },
     "hero": {
       "badge": "Global 3-Network Speed Test",
-      "title": "Global 3-Network Speed Test Platform",
-      "subtitle": "Real-time visibility into connection quality across China's three major carriers and Asia-Pacific",
+      "title": "Free Web Speed Test and China Three-Network Latency Analysis",
+      "subtitle": "Diagnose TTFB, DNS resolution and CDN cache bottlenecks, with Telecom, Unicom and Mobile measured separately",
       "desc": "The Kineticlinks speed test platform is purpose-built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time node testing plus a commercial API for enterprises to integrate into their own monitoring systems and track real-world cross-border user experience.",
       "cta_primary": "Run a Free Test",
       "cta_secondary": "View Other Platforms"
@@ -792,7 +792,15 @@
       "q4": "Can I test a specific server or domain?",
       "a4": "Yes. You can enter the server address or domain you want to test and get real measured connection data against all three major carriers.",
       "q5": "How often is the test data updated?",
-      "a5": "Results are measured in real time — every test returns the current actual connection status. Scheduled calls through the API let you set your own testing frequency."
+      "a5": "Results are measured in real time — every test returns the current actual connection status. Scheduled calls through the API let you set your own testing frequency.",
+      "q6": "What is TTFB, and how do you improve time to first byte?",
+      "a6": "TTFB is the time from sending a request to receiving the first byte, covering DNS resolution, TCP and TLS handshakes, and the server generating a response. Cross-border, high TTFB usually comes from physical distance and routing rather than server performance — so a bigger server won't help, while shortening the path with a nearby CDN node will.",
+      "q7": "Why is access between China and overseas particularly slow?",
+      "a7": "Three causes compound: shared international gateway capacity congesting at peak, uneven international link quality across the three carriers, and cross-border routes sometimes detouring via a third location. All raise latency and packet loss together, and loss damages real throughput far more than limited bandwidth does.",
+      "q8": "The results look poor — where should optimisation start?",
+      "a8": "Read three numbers in order. Check packet loss first; above 1% it must be fixed before anything else, since added bandwidth won't help. Then latency, improved by shortening the path rather than upgrading hardware. Bandwidth last. Where latency comes from cross-border distance, a CDN serving users from nearby nodes is the most direct fix.",
+      "q9": "Is a single test result reliable?",
+      "a9": "A single test reflects only that second. Cross-border problems are overwhelmingly time-of-day — evening congestion and routing changes make the same link behave completely differently at different hours. Judging real quality needs continuous checks spanning a full day-night cycle."
     },
     "cta": {
       "title": "Want to Know How Your Service Really Performs on China's Three Networks?",
@@ -825,7 +833,7 @@
     "back": "Back to all articles",
     "seo": {
       "title": "Technical Blog | CDN, VPS & Cloud Architecture Notes - Kineticlinks",
-      "description": "The Kineticlinks engineering team shares practical experience and industry trends on CDN acceleration, VPS selection, IDC buildout, cloud migration, and SSL certificate automation.",
+      "description": "Practical notes on infrastructure: certificate automation, cross-border network quality, domain management and data center operations.",
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
@@ -841,7 +849,7 @@
     "lead": "The symptom is distinctive: **the site loads perfectly in a browser, but the mobile app can't connect, curl reports a certificate error, and monitoring keeps alerting**. Which becomes a standoff between \"it works fine for me\" and \"it just won't connect\". Both are right. Desktop browsers have a self-repair mechanism that fills in the intermediate certificate your server omitted; almost no non-browser client does.",
     "seo": {
       "title": "Incomplete Certificate Chains | Why Only Some Clients Fail",
-      "description": "Browsers fine but apps and APIs failing usually means a missing intermediate. How the chain works, why AIA fetching hides the problem, how clients differ, and how to see what your server actually sends.",
+      "description": "Browsers repair a missing intermediate certificate; apps, curl and monitoring do not. How the chain works and how to see what your server actually sends.",
       "keywords": "incomplete certificate chain, intermediate certificate, AIA fetching, fullchain, certificate validation failed, SSL chain error"
     },
     "s1": {
@@ -967,7 +975,7 @@
     "lead": "\"The site needs to launch in China, but filing takes weeks\" is the first obstacle most cross-border projects hit. Hence a market in \"pre-filed domains\". The arithmetic doesn't work, though: **regulations require that a change of filing subject means cancelling the existing filing and submitting a new application**. Done properly, a purchased filing evaporates on transfer. Here are the actual rules, including when no filing is needed at all.",
     "seo": {
       "title": "ICP Filing Explained | Rules, Timelines and Pre-Filed Domains",
-      "description": "Who needs ICP filing, review timelines, and the separate public security deadline. What the subject-change rule requires, how verification actually operates, and the conditions under which overseas nodes need no filing.",
+      "description": "Who needs ICP filing, how long review takes, what the subject-change rule requires, and the conditions under which overseas nodes need no filing at all.",
       "keywords": "ICP filing, ICP beian, pre-filed domain, commercial ICP licence, public security filing, Hong Kong server, mainland CDN node"
     },
     "s1": {
@@ -1094,7 +1102,7 @@
     "lead": "\"The DNS change hasn't taken yet — still propagating, right?\" Half true, and it hides the actual cause. There is no mechanism in DNS called propagation. **Changes take time because the old record is still cached, and how long it stays cached is set by your own TTL.** Which means something counterintuitive: to make a change take effect quickly, you act *before* making it. This covers six record types, how TTL should actually be used, and the apex limitation you cannot design around.",
     "seo": {
       "title": "DNS Record Types and TTL | Why Changes Don't Take Effect",
-      "description": "A, AAAA, CNAME, MX, TXT and NS records — what each does and how each goes wrong. Why TTL must be lowered before a change, why apex domains can't use CNAME, and what ALIAS/flattening does instead.",
+      "description": "A, AAAA, CNAME, MX, TXT and NS explained. Why TTL must be lowered before a change takes effect, and why an apex domain can never carry a CNAME record.",
       "keywords": "DNS records, A record, CNAME, MX, TXT, NS, TTL, DNS propagation, apex CNAME, ALIAS record"
     },
     "s1": {
@@ -1224,7 +1232,7 @@
     "lead": "In almost every domain hijacking case, the victim had transfer lock enabled. The problem is where that lock sits: **it's a setting inside your registrar account, and the account is what's being attacked**. Once someone is in, turning the lock off is one click. This covers what four common protections actually cover, and why some widely-recommended measures don't defend against account-level compromise at all.",
     "seo": {
       "title": "Domain Hijacking Defence | Why Transfer Lock Isn't Enough",
-      "description": "Transfer lock lives inside the registrar account and falls with it. What transfer lock, 2FA, DNSSEC and registry lock each cover, the early warning signs of a hijack, and how fast you must act.",
+      "description": "Transfer lock sits inside the registrar account, so it falls with the account. What 2FA, DNSSEC and registry lock each cover, and the signs worth acting on.",
       "keywords": "domain hijacking, transfer lock, registry lock, DNSSEC, domain security, stolen domain, clientTransferProhibited, two-factor authentication"
     },
     "s1": {
@@ -1346,7 +1354,7 @@
     "lead": "\"Users say it's unusable in the evening, but every test I run looks fine.\" This is the most common dispute in cross-border services, and usually neither side is wrong — **cross-border quality varies substantially by hour**, and a daytime measurement says nothing about the evening. A single test answers \"how is this second\", when the question you need answered is \"what are users actually getting\". Only continuous monitoring closes that gap.",
     "seo": {
       "title": "Monitoring Cross-Border Connectivity | Why One Test Isn't Enough",
-      "description": "Cross-border issues are mostly time-of-day, so single tests misrepresent reality. What four testing approaches each reveal, three problems only continuous monitoring catches, and which metrics to track.",
+      "description": "Cross-border faults are time-of-day, so testing after a complaint finds nothing. What continuous monitoring catches that a single check structurally cannot.",
       "keywords": "connectivity monitoring, cross-border network monitoring, three-network monitoring, speed test API, peak hour congestion, packet loss monitoring"
     },
     "s1": {
@@ -1468,7 +1476,7 @@
     "lead": "\"We're paying for 1Gbps — why do users still say it's slow?\" That question almost always rests on one assumption: that bandwidth is a synonym for connection quality. In cross-border scenarios **bandwidth usually isn't the bottleneck** — latency and packet loss are, and their damage to real throughput compounds. This explains what each number on a speed test actually means, and which one to read first.",
     "seo": {
       "title": "Reading Speed Test Results | Latency, Jitter & Packet Loss",
-      "description": "A speed test isn't just download speed. What bandwidth, latency, jitter, and packet loss each mean, why loss hurts cross-border transfer far more than limited bandwidth, and why China's three carriers must be measured separately.",
+      "description": "A speed test is more than download speed. Why throughput falls with packet loss and latency combined, and the order to read the numbers in cross-border.",
       "keywords": "speed test, latency, jitter, packet loss, RTT, three-network test, cross-border connectivity, network quality"
     },
     "s1": {
@@ -1593,7 +1601,7 @@
     "lead": "\"Just install Certbot\" is the most common misconception about certificate automation. The tooling isn't the hard part. What actually blocks people is **choosing the wrong challenge type** — and the problem usually doesn't surface at install time. It surfaces when you put the service behind a CDN, or the first time you request a wildcard certificate. Each of the three challenge types has hard constraints worth knowing before you commit.",
     "seo": {
       "title": "Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards",
-      "description": "Certificate automation usually stalls on the challenge type. How HTTP-01, DNS-01, and TLS-ALPN-01 work and where each fails, why wildcards require DNS-01, and what a CDN changes.",
+      "description": "Certificate automation stalls on the challenge type, not on Certbot. Where HTTP-01 fails, and why wildcards can only ever be issued through DNS-01.",
       "keywords": "ACME challenge, HTTP-01, DNS-01, TLS-ALPN-01, wildcard certificate, Certbot, automatic certificate renewal, Let's Encrypt"
     },
     "s1": {
@@ -1715,7 +1723,7 @@
     "disclosure": "",
     "seo": {
       "title": "Certificate Expiry Monitoring | Why Auto-Renewal Still Breaks",
-      "description": "A successful renewal doesn't mean your site is fine. What four kinds of monitoring catch and miss, three ways renewal succeeds but still breaks, tiered alert thresholds, and the only check that proves users are unaffected.",
+      "description": "A successful renewal doesn't mean users receive the new certificate. Three ways it still breaks, tiered alert thresholds, and the only check that proves it.",
       "keywords": "certificate expiry monitoring, SSL certificate monitoring, certificate alerts, auto-renewal failure, certificate deployment, TLS monitoring"
     },
     "s1": {
@@ -1837,7 +1845,7 @@
     "disclosure": "This article contains affiliate links. If you register through a link here, Kineticlinks may earn a referral commission at no additional cost to you. This does not affect the technical content or recommendations — the caveats raised apply to every registrar equally.",
     "seo": {
       "title": "Domain Transfer Guide | Auth Codes, Timing & Zero Downtime",
-      "description": "A domain transfer won't take your site offline. What changes and what doesn't, how to get the EPP auth code, the five-day auto-approval rule, and when not to transfer.",
+      "description": "Transfers don't cause downtime: nameservers carry over untouched. Auth codes, the five-day auto-approval window, and the order to do things in.",
       "keywords": "domain transfer, EPP auth code, transfer registrar, domain transfer process, transfer lock, how long does a domain transfer take"
     },
     "s1": {
@@ -1959,7 +1967,7 @@
     "disclosure": "This article contains affiliate links. If you register through a link here, Kineticlinks may earn a referral commission at no additional cost to you. This does not affect the technical content or recommendations — the caveats raised above, including renewal pricing and transfer-out policy, apply to every registrar equally.",
     "seo": {
       "title": "Domain Registration Guide | Renewals, Transfer Locks & Fees",
-      "description": "A domain is rented, not bought. The four stages of the expiry lifecycle, how to pick a TLD, what actually differs between registrars, ICANN's 60-day transfer lock, and three protective settings.",
+      "description": "Domains are rented, not bought. Renewal pricing, transfer locks, the redemption period, and the settings worth checking before you register anywhere.",
       "keywords": "domain registration, domain renewal price, domain transfer, ICANN transfer lock, redemption period, WHOIS privacy, TLD selection, domain management"
     },
     "s1": {
@@ -2080,7 +2088,7 @@
     "lead": "\"Our site won't load in China.\" \"Customers there say it's slow.\" Almost every team doing cross-border business hits this, and the firewall is usually the first suspect. It exists and it does have effects — but attributing everything to it tends to make you miss the parts you can actually fix. In practice, most latency and packet loss comes down to three purely structural network problems.",
     "seo": {
       "title": "Why Connections to China Are Slow | Routes & Gateways",
-      "description": "A technical breakdown of why network access to China is slow: inter-carrier interconnection bottlenecks, international gateways concentrated in Beijing/Shanghai/Guangzhou, the difference between 163 and CN2 GIA return routes, and what can be improved.",
+      "description": "Why access to China is slow, beyond the firewall: interconnection bottlenecks between carriers, congested international gateways and routing detours.",
       "keywords": "China network latency, slow connection to China, CN2 GIA, 163 backbone, return route, China interconnection, cross-border network optimization, China CDN"
     },
     "s1": {
@@ -2201,7 +2209,7 @@
     "lead": "As of March 15, 2026, the maximum lifetime for a publicly trusted TLS/SSL certificate has dropped from 398 days to 200. This isn't one certificate authority adjusting its policy — it's an industry-wide requirement ratified by the CA/Browser Forum, with two more reductions already scheduled. For teams still managing certificates by hand, the operational burden is set to multiply over the next three years.",
     "seo": {
       "title": "SSL Lifetimes Cut to 200 Days | 2026 Schedule & Guide",
-      "description": "The CA/Browser Forum has scheduled phased reductions to TLS certificate lifetimes: 200 days in 2026, 100 days in 2027, and 47 days in 2029. Full timeline, real-world impact, and how to automate your response.",
+      "description": "TLS certificate lifetimes fall to 200 days in 2026, 100 in 2027 and 47 by 2029. What the schedule means for renewal frequency and manual processes.",
       "keywords": "SSL certificate lifetime, certificate validity reduction, 200 day certificates, 47 day certificates, SC-081, ACME protocol, automatic certificate renewal, SSL certificate management"
     },
     "s1": {
@@ -2322,7 +2330,7 @@
     "lead": "\"How many cores and how much RAM should I get?\" is the most common question when choosing a VPS, and the hardest to answer directly — because it depends on what you run, what your traffic looks like, and how much of your own time you want to spend on operations. This guide avoids brand comparisons and instead separates the decision into three dimensions: specs, budget, and contract terms.",
     "seo": {
       "title": "How to Choose a VPS | Specs, Budget & Renewal Traps - Kineticlinks",
-      "description": "A practical VPS buying guide: how shared hosting differs from VPS, how to size CPU and memory, why data center location matters, and the renewal pricing traps to watch for.",
+      "description": "How to read VPS specifications, set a realistic budget, and spot the traps: renewal pricing, oversold resources and bandwidth measured in ways that mislead.",
       "keywords": "how to choose a VPS, VPS buying guide, VPS specs, VPS renewal price, shared hosting vs VPS, VPS hosting comparison"
     },
     "s1": {
@@ -2443,7 +2451,7 @@
     "lead": "IDC (Internet Data Center) is often used loosely to mean any kind of facility service, but rack rental, colocation, and full buildout carry very different responsibility boundaries. Getting that wrong before signing is how disputes about \"whose job was that?\" begin. This article separates the definitions, the rating standard, and the situations each suits.",
     "seo": {
       "title": "What Is an IDC? Colocation vs Rack Rental & Tiers",
-      "description": "A full explanation of what an IDC is, how colocation differs from rack rental, the Uptime Institute Tier I-IV classification, and how to decide between a facility and public cloud.",
+      "description": "Colocation, rack leasing and building your own compared. What Uptime Institute tiers actually describe, and why 'Tier III+' is not a recognised rating.",
       "keywords": "what is an IDC, IDC data center, colocation, rack rental, Tier III data center, data center tiers, choosing a data center"
     },
     "s1": {

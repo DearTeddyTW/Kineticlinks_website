@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>SSL 证书自动化平台 | DNS 自动验证与多 CDN 推送 - Kineticlinks</title>
-    <meta name="title" content="SSL 证书自动化平台 | DNS 自动验证与多 CDN 推送 - Kineticlinks">
-    <meta name="description" content="Kineticlinks SSL 证书自动化平台支持 DNS 自动验证，签发后自动推送至多品牌 CDN 节点，大幅降低证书管理与更新的人力成本。">
+    <title>SSL 证书自动化｜ACME 验证、自动续签与多 CDN 部署 - Kineticlinks</title>
+    <meta name="title" content="SSL 证书自动化｜ACME 验证、自动续签与多 CDN 部署 - Kineticlinks">
+    <meta name="description" content="告别证书过期风险。支持 ACME 与 DNS 自动验证，签发后自动推送至 GoDaddy、阿里云等多品牌 CDN 节点。单域名 US$30 起，无月费，有效期内重签不加价。">
     <meta name="keywords" content="SSL 证书自动化, SSL 证书管理, 证书自动续签, DV SSL, CDN SSL 证书, SSL API">
 
     <!-- Canonical URL -->
@@ -23,15 +23,15 @@
     <!-- Open Graph / Facebook / Line -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.kineticlinks.net/zh-cn/ssl/">
-    <meta property="og:title" content="SSL 证书自动化平台 | DNS 自动验证与多 CDN 推送 - Kineticlinks">
-    <meta property="og:description" content="Kineticlinks SSL 证书自动化平台支持 DNS 自动验证，签发后自动推送至多品牌 CDN 节点，大幅降低证书管理与更新的人力成本。">
+    <meta property="og:title" content="SSL 证书自动化｜ACME 验证、自动续签与多 CDN 部署 - Kineticlinks">
+    <meta property="og:description" content="告别证书过期风险。支持 ACME 与 DNS 自动验证，签发后自动推送至 GoDaddy、阿里云等多品牌 CDN 节点。单域名 US$30 起，无月费，有效期内重签不加价。">
     <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.kineticlinks.net/zh-cn/ssl/">
-    <meta property="twitter:title" content="SSL 证书自动化平台 | DNS 自动验证与多 CDN 推送 - Kineticlinks">
-    <meta property="twitter:description" content="Kineticlinks SSL 证书自动化平台支持 DNS 自动验证，签发后自动推送至多品牌 CDN 节点，大幅降低证书管理与更新的人力成本。">
+    <meta property="twitter:title" content="SSL 证书自动化｜ACME 验证、自动续签与多 CDN 部署 - Kineticlinks">
+    <meta property="twitter:description" content="告别证书过期风险。支持 ACME 与 DNS 自动验证，签发后自动推送至 GoDaddy、阿里云等多品牌 CDN 节点。单域名 US$30 起，无月费，有效期内重签不加价。">
     <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Structured Data (JSON-LD): Service -->
@@ -40,8 +40,8 @@
       "@context": "https://schema.org",
       "@type": "Service",
       "serviceType": "SSL 证书自动化平台",
-      "name": "SSL 证书自动化平台 | DNS 自动验证与多 CDN 推送 - Kineticlinks",
-      "description": "Kineticlinks SSL 证书自动化平台支持 DNS 自动验证，签发后自动推送至多品牌 CDN 节点，大幅降低证书管理与更新的人力成本。",
+      "name": "SSL 证书自动化｜ACME 验证、自动续签与多 CDN 部署 - Kineticlinks",
+      "description": "告别证书过期风险。支持 ACME 与 DNS 自动验证，签发后自动推送至 GoDaddy、阿里云等多品牌 CDN 节点。单域名 US$30 起，无月费，有效期内重签不加价。",
       "provider": {
         "@type": "Organization",
         "name": "Kineticlinks",
@@ -82,37 +82,52 @@
 
     <!-- Structured Data (JSON-LD): FAQPage -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "使用这个平台需要先具备域名的哪些权限？",
-          "acceptedAnswer": { "@type": "Answer", "text": "需要有域名的 DNS 管理权限，平台会通过整合的 DNS 服务商 API 自动创建验证记录；若您的 DNS 服务商尚未支持自动整合，也可改用手动验证方式。" }
-        },
-        {
-          "@type": "Question",
-          "name": "证书到期前平台会主动通知吗？",
-          "acceptedAnswer": { "@type": "Answer", "text": "会。平台会在证书到期前主动提醒，并可依设置启用自动续签，降低因忘记更新而导致网站出现不安全警告的风险。" }
-        },
-        {
-          "@type": "Question",
-          "name": "签发的证书可以用在 Kineticlinks 以外的 CDN 或主机吗？",
-          "acceptedAnswer": { "@type": "Answer", "text": "可以。平台签发的是标准 SSL 证书，可下载后应用于任何支持 SSL 的服务器或 CDN 服务，并非仅限定 Kineticlinks 自家服务使用。" }
-        },
-        {
-          "@type": "Question",
-          "name": "平台支持哪些 DNS 服务商的自动验证？",
-          "acceptedAnswer": { "@type": "Answer", "text": "目前已整合 GoDaddy 等主流 DNS 服务商，并持续扩充支持清单，若您使用的服务商尚未支持，欢迎与我们联系评估整合可行性。" }
-        },
-        {
-          "@type": "Question",
-          "name": "这个平台是免费使用吗？收费方式为何？",
-          "acceptedAnswer": { "@type": "Answer", "text": "平台功能本身不另外收费，费用即证书本身：单一域名证书 US$30／年，通配符证书 US$90／年，有效期内自动重签不加价。没有月费或账户费。首张证书若不符合需求可全额退费。" }
-        }
-      ]
+      "@type": "Question",
+      "name": "使用这个平台需要先具备域名的哪些权限？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "需要有域名的 DNS 管理权限，平台会通过整合的 DNS 服务商 API 自动创建验证记录；若您的 DNS 服务商尚未支持自动整合，也可改用手动验证方式。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "证书到期前平台会主动通知吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "会。平台会在证书到期前主动提醒，并可依设置启用自动续签，降低因忘记更新而导致网站出现不安全警告的风险。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "签发的证书可以用在 Kineticlinks 以外的 CDN 或主机吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。平台签发的是标准 SSL 证书，可下载后应用于任何支持 SSL 的服务器或 CDN 服务，并非仅限定 Kineticlinks 自家服务使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "平台支持哪些 DNS 服务商的自动验证？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "目前已整合 GoDaddy 等主流 DNS 服务商，并持续扩充支持清单，若您使用的服务商尚未支持，欢迎与我们联系评估整合可行性。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "这个平台是免费使用吗？收费方式为何？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "平台功能本身不另外收费，费用即证书本身：单一域名证书 US$30／年，通配符证书 US$90／年，有效期内自动重签不加价。没有月费或账户费。首张证书若不符合需求可全额退费。"
+      }
     }
+  ]
+}
     </script>
 
     <!-- Favicon -->

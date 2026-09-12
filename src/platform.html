@@ -82,37 +82,7 @@
 
     <!-- Structured Data (JSON-LD): FAQPage -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "{{ page.faq.q1 }}",
-          "acceptedAnswer": { "@type": "Answer", "text": "{{ page.faq.a1 }}" }
-        },
-        {
-          "@type": "Question",
-          "name": "{{ page.faq.q2 }}",
-          "acceptedAnswer": { "@type": "Answer", "text": "{{ page.faq.a2 }}" }
-        },
-        {
-          "@type": "Question",
-          "name": "{{ page.faq.q3 }}",
-          "acceptedAnswer": { "@type": "Answer", "text": "{{ page.faq.a3 }}" }
-        },
-        {
-          "@type": "Question",
-          "name": "{{ page.faq.q4 }}",
-          "acceptedAnswer": { "@type": "Answer", "text": "{{ page.faq.a4 }}" }
-        },
-        {
-          "@type": "Question",
-          "name": "{{ page.faq.q5 }}",
-          "acceptedAnswer": { "@type": "Answer", "text": "{{ page.faq.a5 }}" }
-        }
-      ]
-    }
+{{ faq_jsonld }}
     </script>
 
     <!-- Favicon -->
@@ -321,26 +291,7 @@
                 <h2>{{ page.faq.title }}</h2>
             </div>
             <div class="faq-list">
-                <details class="faq-item glass-panel">
-                    <summary>{{ page.faq.q1 }}</summary>
-                    <p>{{ page.faq.a1 }}</p>
-                </details>
-                <details class="faq-item glass-panel">
-                    <summary>{{ page.faq.q2 }}</summary>
-                    <p>{{ page.faq.a2 }}</p>
-                </details>
-                <details class="faq-item glass-panel">
-                    <summary>{{ page.faq.q3 }}</summary>
-                    <p>{{ page.faq.a3 }}</p>
-                </details>
-                <details class="faq-item glass-panel">
-                    <summary>{{ page.faq.q4 }}</summary>
-                    <p>{{ page.faq.a4 }}</p>
-                </details>
-                <details class="faq-item glass-panel">
-                    <summary>{{ page.faq.q5 }}</summary>
-                    <p>{{ page.faq.a5 }}</p>
-                </details>
+{{ faq_items }}
             </div>
         </div>
     </section>

@@ -8,7 +8,7 @@
     <!-- Primary Meta Tags -->
     <title>China 3-Network Speed Test | Telecom, Unicom, Mobile</title>
     <meta name="title" content="China 3-Network Speed Test | Telecom, Unicom, Mobile">
-    <meta name="description" content="Kineticlinks' speed test platform is built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time testing and a commercial API for connection quality monitoring.">
+    <meta name="description" content="Free web speed test with China Telecom, Unicom and Mobile measured separately. Diagnose TTFB, DNS and CDN bottlenecks, with a commercial API for scheduling.">
     <meta name="keywords" content="speed test platform, China 3-network speed test, Telecom Unicom Mobile testing, cross-border network testing, network speed API, Asia-Pacific connection quality">
 
     <!-- Canonical URL -->
@@ -24,14 +24,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.kineticlinks.net/en/speedtest/">
     <meta property="og:title" content="China 3-Network Speed Test | Telecom, Unicom, Mobile">
-    <meta property="og:description" content="Kineticlinks' speed test platform is built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time testing and a commercial API for connection quality monitoring.">
+    <meta property="og:description" content="Free web speed test with China Telecom, Unicom and Mobile measured separately. Diagnose TTFB, DNS and CDN bottlenecks, with a commercial API for scheduling.">
     <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.kineticlinks.net/en/speedtest/">
     <meta property="twitter:title" content="China 3-Network Speed Test | Telecom, Unicom, Mobile">
-    <meta property="twitter:description" content="Kineticlinks' speed test platform is built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time testing and a commercial API for connection quality monitoring.">
+    <meta property="twitter:description" content="Free web speed test with China Telecom, Unicom and Mobile measured separately. Diagnose TTFB, DNS and CDN bottlenecks, with a commercial API for scheduling.">
     <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Structured Data (JSON-LD): Service -->
@@ -39,9 +39,9 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "Global 3-Network Speed Test Platform",
+      "serviceType": "Free Web Speed Test and China Three-Network Latency Analysis",
       "name": "China 3-Network Speed Test | Telecom, Unicom, Mobile",
-      "description": "Kineticlinks' speed test platform is built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time testing and a commercial API for connection quality monitoring.",
+      "description": "Free web speed test with China Telecom, Unicom and Mobile measured separately. Diagnose TTFB, DNS and CDN bottlenecks, with a commercial API for scheduling.",
       "provider": {
         "@type": "Organization",
         "name": "Kineticlinks",
@@ -73,7 +73,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Global 3-Network Speed Test Platform",
+          "name": "Free Web Speed Test and China Three-Network Latency Analysis",
           "item": "https://www.kineticlinks.net/en/speedtest/"
         }
       ]
@@ -82,37 +82,84 @@
 
     <!-- Structured Data (JSON-LD): FAQPage -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Are there limits on the free speed test?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The free tier offers real-time web-based testing, suited for individual, infrequent checks. If you need scheduled automated tests or high query volume, consider the commercial API plan." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can the commercial API integrate with our own monitoring system?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The commercial API is designed to plug directly into your existing monitoring dashboard or alerting system, making it easy to track connection quality trends for specific nodes over time." }
-        },
-        {
-          "@type": "Question",
-          "name": "Does testing only cover China's three carriers?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The platform's core focus is China's Telecom, Unicom, and Mobile networks, but it also covers connection quality testing across other major Asia-Pacific markets — it isn't limited to China." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I test a specific server or domain?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can enter the server address or domain you want to test and get real measured connection data against all three major carriers." }
-        },
-        {
-          "@type": "Question",
-          "name": "How often is the test data updated?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Results are measured in real time — every test returns the current actual connection status. Scheduled calls through the API let you set your own testing frequency." }
-        }
-      ]
+      "@type": "Question",
+      "name": "Are there limits on the free speed test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The free tier offers real-time web-based testing, suited for individual, infrequent checks. If you need scheduled automated tests or high query volume, consider the commercial API plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the commercial API integrate with our own monitoring system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The commercial API is designed to plug directly into your existing monitoring dashboard or alerting system, making it easy to track connection quality trends for specific nodes over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does testing only cover China's three carriers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The platform's core focus is China's Telecom, Unicom, and Mobile networks, but it also covers connection quality testing across other major Asia-Pacific markets — it isn't limited to China."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I test a specific server or domain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can enter the server address or domain you want to test and get real measured connection data against all three major carriers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often is the test data updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Results are measured in real time — every test returns the current actual connection status. Scheduled calls through the API let you set your own testing frequency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is TTFB, and how do you improve time to first byte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TTFB is the time from sending a request to receiving the first byte, covering DNS resolution, TCP and TLS handshakes, and the server generating a response. Cross-border, high TTFB usually comes from physical distance and routing rather than server performance — so a bigger server won't help, while shortening the path with a nearby CDN node will."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is access between China and overseas particularly slow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three causes compound: shared international gateway capacity congesting at peak, uneven international link quality across the three carriers, and cross-border routes sometimes detouring via a third location. All raise latency and packet loss together, and loss damages real throughput far more than limited bandwidth does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The results look poor — where should optimisation start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Read three numbers in order. Check packet loss first; above 1% it must be fixed before anything else, since added bandwidth won't help. Then latency, improved by shortening the path rather than upgrading hardware. Bandwidth last. Where latency comes from cross-border distance, a CDN serving users from nearby nodes is the most direct fix."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a single test result reliable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single test reflects only that second. Cross-border problems are overwhelmingly time-of-day — evening congestion and routing changes make the same link behave completely differently at different hours. Judging real quality needs continuous checks spanning a full day-night cycle."
+      }
     }
+  ]
+}
     </script>
 
     <!-- Favicon -->
@@ -179,7 +226,7 @@
             <span>/</span>
             <a href="/en/#platforms">Platforms</a>
             <span>/</span>
-            <span class="current">Global 3-Network Speed Test Platform</span>
+            <span class="current">Free Web Speed Test and China Three-Network Latency Analysis</span>
         </div>
     </div>
 
@@ -189,8 +236,8 @@
         <div class="container">
             <div class="page-hero-content glass-panel">
                 <div class="badge">Global 3-Network Speed Test</div>
-                <h1>Global 3-Network Speed Test Platform</h1>
-                <p class="page-hero-subtitle">Real-time visibility into connection quality across China's three major carriers and Asia-Pacific</p>
+                <h1>Free Web Speed Test and China Three-Network Latency Analysis</h1>
+                <p class="page-hero-subtitle">Diagnose TTFB, DNS resolution and CDN cache bottlenecks, with Telecom, Unicom and Mobile measured separately</p>
                 <p>The Kineticlinks speed test platform is purpose-built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time node testing plus a commercial API for enterprises to integrate into their own monitoring systems and track real-world cross-border user experience.</p>
                 <div class="hero-actions">
                     <a href="https://speedtest.kineticlinks.net/" target="_blank" rel="noopener" class="btn btn-primary">Run a Free Test</a>
@@ -352,6 +399,22 @@
                 <details class="faq-item glass-panel">
                     <summary>How often is the test data updated?</summary>
                     <p>Results are measured in real time — every test returns the current actual connection status. Scheduled calls through the API let you set your own testing frequency.</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>What is TTFB, and how do you improve time to first byte?</summary>
+                    <p>TTFB is the time from sending a request to receiving the first byte, covering DNS resolution, TCP and TLS handshakes, and the server generating a response. Cross-border, high TTFB usually comes from physical distance and routing rather than server performance — so a bigger server won't help, while shortening the path with a nearby CDN node will.</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>Why is access between China and overseas particularly slow?</summary>
+                    <p>Three causes compound: shared international gateway capacity congesting at peak, uneven international link quality across the three carriers, and cross-border routes sometimes detouring via a third location. All raise latency and packet loss together, and loss damages real throughput far more than limited bandwidth does.</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>The results look poor — where should optimisation start?</summary>
+                    <p>Read three numbers in order. Check packet loss first; above 1% it must be fixed before anything else, since added bandwidth won't help. Then latency, improved by shortening the path rather than upgrading hardware. Bandwidth last. Where latency comes from cross-border distance, a CDN serving users from nearby nodes is the most direct fix.</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>Is a single test result reliable?</summary>
+                    <p>A single test reflects only that second. Cross-border problems are overwhelmingly time-of-day — evening congestion and routing changes make the same link behave completely differently at different hours. Judging real quality needs continuous checks spanning a full day-night cycle.</p>
                 </details>
             </div>
         </div>

@@ -169,6 +169,47 @@ def build_blog_itemlist(translations, lang_path):
     }, ensure_ascii=False, indent=2)
 
 
+def collect_faq(page_content):
+    """All Q&A pairs defined for a page, in order."""
+    faq = page_content.get('faq') or {}
+    out, n = [], 1
+    while f'q{n}' in faq:
+        out.append((faq[f'q{n}'], faq.get(f'a{n}', '')))
+        n += 1
+    return out
+
+
+def build_faq_items(page_content):
+    """Visible FAQ list, driven by the content rather than a fixed count."""
+    return '\n'.join(
+        f'                <details class="faq-item glass-panel">\n'
+        f'                    <summary>{q}</summary>\n'
+        f'                    <p>{a}</p>\n'
+        f'                </details>'
+        for q, a in collect_faq(page_content)
+    )
+
+
+def build_faq_jsonld(page_content):
+    """FAQPage data matching what the page actually shows.
+
+    Hand-written entries capped the list at five, so extra questions were
+    dropped from both the page and the structured data without warning.
+    """
+    pairs = collect_faq(page_content)
+    if not pairs:
+        return ''
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q,
+             "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in pairs
+        ],
+    }, ensure_ascii=False, indent=2)
+
+
 def build_pricing_section(page_content, lang_path):
     """Render the pricing block only for pages that define prices.
 
@@ -299,6 +340,8 @@ def build():
                 flat['table_extra_rows'] = ('\n' + '\n'.join(extra)) if extra else ''
 
                 flat['pricing_section'] = build_pricing_section(page_content, lang['lang_path'])
+                flat['faq_items'] = build_faq_items(page_content)
+                flat['faq_jsonld'] = build_faq_jsonld(page_content)
 
                 disclosure = (page_content.get('disclosure') or '').strip()
                 flat['affiliate_disclosure'] = (
