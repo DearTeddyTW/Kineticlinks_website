@@ -56,6 +56,7 @@ LANGS = [
 # Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
 # listed on the blog index. content_key is looked up in the locale JSON.
 ARTICLES = [
+    {'slug': 'nginx-certificate-configuration', 'content_key': 'article_nginx_cert'},
     {'slug': 'ocsp-stapling-deprecated', 'content_key': 'article_ocsp_stapling'},
     {'slug': 'incomplete-certificate-chain', 'content_key': 'article_cert_chain'},
     {'slug': 'icp-filing-explained', 'content_key': 'article_icp_filing'},
@@ -391,6 +392,14 @@ def build():
             check_meta_lengths(flat, out_label := f"{lang['lang_code']} /{slug_path}")
 
             out_html = render(templates[page['template']], flat)
+
+            # 未被取代的佔位符代表該語言少了對應內容。頁面仍會產生、仍回
+            # 200，只是滿版的 {{ }}——所以必須在這裡擋下，而不是靠事後檢查。
+            leftover = re.findall(r'\{\{\s*[\w.]+\s*\}\}', out_html)
+            if leftover:
+                raise ValueError(
+                    f"{out_label} 有 {len(leftover)} 個未取代的佔位符，"
+                    f"例如 {leftover[0]}——該語言可能缺少 '{page['content_key']}'")
 
             out_path = f"{lang['lang_path'].lstrip('/')}{slug_path}index.html"
             out_dir = os.path.dirname(out_path)

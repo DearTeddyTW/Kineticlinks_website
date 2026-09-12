@@ -82,6 +82,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.kineticlinks.net/blog/nginx-certificate-configuration/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/nginx-certificate-configuration/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/nginx-certificate-configuration/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/nginx-certificate-configuration/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/nginx-certificate-configuration/" />
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/" />
@@ -312,6 +322,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.kineticlinks.net/en/blog/nginx-certificate-configuration/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/nginx-certificate-configuration/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/nginx-certificate-configuration/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/nginx-certificate-configuration/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/nginx-certificate-configuration/" />
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/" />
@@ -537,7 +557,17 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/zh-cn/blog/nginx-certificate-configuration/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/nginx-certificate-configuration/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/nginx-certificate-configuration/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/nginx-certificate-configuration/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/nginx-certificate-configuration/" />
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

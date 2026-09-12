@@ -837,6 +837,128 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_nginx_cert": {
+    "date": "2026-09-12",
+    "date_display": "September 12, 2026",
+    "category": "Certificate Management",
+    "reading_time": "9 min read",
+    "short_title": "Nginx Certificate Configuration",
+    "title": "nginx -t Passing Doesn't Mean the Certificate Is Right: Three Mechanisms That Decouple Config From Reality",
+    "excerpt": "The config is edited, the test passes, and users still get the old certificate or one for a different domain. The problem isn't the certificate — it's how Nginx loads and chooses them.",
+    "disclosure": "",
+    "lead": "`nginx -t` prints `test is successful`, so the certificate configuration must be fine. Its scope is narrower than most people assume, though: **it checks syntax and verifies that the certificate and private key are a pair, but it cannot tell you which certificate users will actually receive**. Three Nginx-specific mechanisms sit in between, and each can separate \"the config is correct\" from \"users get the right certificate\".",
+    "seo": {
+      "title": "Nginx Certificate Mistakes | Why nginx -t Passing Isn't Enough",
+      "description": "nginx -t validates syntax and key pairing only. The stale certificate held in memory, how SNI and default_server pick a certificate, and why file order matters.",
+      "keywords": "nginx certificate configuration, nginx -t, ssl_certificate, default_server, SNI, nginx reload, certificate order"
+    },
+    "s1": {
+      "title": "What nginx -t Actually Validates",
+      "p1": "`nginx -t` parses the configuration, loads the certificate and private key, and **compares their moduli to confirm they match** — so a certificate paired with the wrong key genuinely is caught, which is stricter than many expect.",
+      "p2": "That's where its scope ends. It doesn't know which domains your certificate covers, doesn't check whether the chain is complete, and certainly doesn't simulate a real connection to see what a user ends up with. **It validates that the configuration can load, not what the configuration will produce.**",
+      "p3": "The table lists four situations that look fine alongside what they actually cover. The second row is the most common of them."
+    },
+    "table": {
+      "caption": "Four configurations that look correct while users can still hit errors.",
+      "col1": "What you see",
+      "col2": "What was actually verified",
+      "col3": "What isn't covered",
+      "r1c1": "nginx -t reports successful",
+      "r1c2": "Valid syntax; certificate and key pair correctly",
+      "r1c3": "Chain completeness and domain coverage",
+      "r1_class": "",
+      "r2c1": "The certificate file is already new",
+      "r2c2": "The file on disk was indeed updated",
+      "r2c3": "Until reload, the old certificate in memory is served",
+      "r2_class": "is-current",
+      "r3c1": "server_name is configured correctly",
+      "r3c2": "Requests for that domain hit this block",
+      "r3c3": "Non-matching requests fall to the default server",
+      "r3_class": "",
+      "r4c1": "Certificate and intermediate share one file",
+      "r4c2": "The contents are all present",
+      "r4c3": "Wrong order makes Nginx pick the wrong one",
+      "r4_class": ""
+    },
+    "s2": {
+      "title": "Three Mechanisms That Decouple Config From Reality",
+      "intro": "In all three the configuration is entirely correct and users still get errors:",
+      "r1_title": "The certificate lives in memory, not in the file",
+      "r1_desc": "Nginx reads certificates into memory at start or reload and keeps using that copy. Renewal replacing the file changes nothing for the running process — a reload signal is required. This is the most common cause of \"the certificate was renewed but it still warns about expiry\", and it's hard to spot because the service itself is perfectly healthy.",
+      "r2_title": "The TLS handshake happens before Nginx knows the domain",
+      "r2_desc": "The documentation is direct about this: the SSL connection is established before the browser sends an HTTP request, so Nginx doesn't yet know which server name was requested and can only offer the default server's certificate. SNI fixes that by carrying the name in the handshake — but a request matching no `server_name` still lands on the default server and receives that block's certificate.",
+      "r3_title": "Nginx treats only the first certificate in the file as the server certificate",
+      "r3_desc": "The file named by `ssl_certificate` may hold several certificates, but **the server certificate must come first**, followed by intermediates. The documentation requires that order explicitly. Concatenate them the other way round and Nginx tries to pair the intermediate with your private key, then fails to start with a key values mismatch — an error pointing at the key when the real problem is ordering."
+    },
+    "s3": {
+      "title": "Why the Default Server Bites",
+      "p1": "On a given listening address, if no `server` block is marked `default_server`, **the first block automatically becomes the default**. So the order of blocks in your configuration directly decides whose certificate users see when nothing matches.",
+      "p2": "The resulting symptom misleads easily: a domain configured perfectly well, and users receiving a warning that the certificate belongs to some other domain. Typical causes are a newly added domain whose DNS already points here while `server_name` isn't right yet, or someone connecting by IP address — both land on the default server.",
+      "callout": "In practice, **declare a default_server explicitly and make it a block whose only job is catching non-matching requests**, rather than letting a real service inherit the role by accident. That block can return 444 (close the connection) or a clear error page, so the symptom points at \"this domain isn't configured\" instead of \"the certificate belongs to someone else\" — the latter sends diagnosis in entirely the wrong direction.",
+      "p3": "Also note SNI isn't universal. TLS 1.3 makes it mandatory to implement and modern browsers all send it, but some older clients — and anything connecting by IP address — do not. For those, the default server's certificate is the only thing they will ever receive."
+    },
+    "s4": {
+      "title": "Confirming What Users Actually Receive",
+      "p1": "The principle is the same throughout: **don't read the config, look at what the server sends**. `openssl s_client -connect domain:443 -servername domain` performs a real handshake and prints the certificate, and the `-servername` flag is what sends SNI. Don't omit it — without it you're testing what a client with no SNI receives, which is the default server's certificate.",
+      "p2": "To verify a reload took effect, compare the certificate's `notBefore` date. If what's served still carries the old start date, the process hasn't reloaded. That's more reliable than checking file modification times, since the file was updated long before."
+    },
+    "s5": {
+      "title": "Three Levels of Configuration Check",
+      "intro": "In ascending order of reliability:",
+      "l1_title": "1. Treat nginx -t as the first gate only",
+      "l1_desc": "It catches syntax errors and mismatched key pairs, and is worth running after every change. But passing means the configuration can load, not that it's correct. Necessary, not sufficient.",
+      "l2_title": "2. Always reload after changing certificates, then confirm",
+      "l2_desc": "`nginx -s reload` or the equivalent service command. What matters is **connecting afterwards to confirm** — a reload can fail on a configuration error while the old process keeps serving quite happily, showing nothing unusual from outside.",
+      "l3_title": "3. Declare default_server and audit coverage",
+      "l3_desc": "List every domain that resolves to this machine, confirm each has a matching `server_name`, and designate a dedicated default_server for the rest. Uncovered domains don't disappear — they quietly receive someone else's certificate."
+    },
+    "s6": {
+      "title": "Three Things to Establish While Diagnosing",
+      "intro": "When a certificate problem is reported, these narrow it down fast:",
+      "c1_title": "Whether it's simply a missing reload",
+      "c1_desc": "Compare the served certificate's notBefore against the file's. A mismatch means it hasn't loaded, which accounts for the overwhelming majority of \"renewed but not in effect\".",
+      "c2_title": "Whether the requested domain has a matching block",
+      "c2_desc": "If the error says the certificate belongs to another domain, check `server_name` coverage before suspecting the certificate. That \"someone else's certificate\" is usually the default server's.",
+      "c3_title": "The order of certificates in the file",
+      "c3_desc": "If Nginx fails to start with a key values mismatch, check ordering before suspecting the key — the server certificate must come first. That error message sends people looking in the wrong place."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "`nginx -t` passing is necessary, not sufficient. It validates whether the configuration loads, while **certificates living in memory, a handshake that precedes knowing the domain, and file order deciding which certificate is the server's** all happen outside what it examines.",
+      "p2": "None of these mechanisms is wrong in itself; the trouble is the false confidence a correct-looking config creates. If you'd rather not verify each of these on every deployment, our SSL automation platform pushes complete chains to each node on issuance, removing the manual config editing step."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "nginx — Configuring HTTPS servers",
+      "u1": "https://nginx.org/en/docs/http/configuring_https_servers.html",
+      "s2": "nginx — ngx_http_ssl_module",
+      "u2": "https://nginx.org/en/docs/http/ngx_http_ssl_module.html",
+      "s3": "nginx — Controlling nginx (signals and reload)",
+      "u3": "https://nginx.org/en/docs/control.html"
+    },
+    "cta": {
+      "href": "ssl/",
+      "title": "Remove the Manual Config Editing Step",
+      "desc": "The Kineticlinks SSL automation platform pushes complete chains to every node on issuance, with no per-server updates by hand.",
+      "button": "Explore the SSL Platform"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/incomplete-certificate-chain/",
+      "l1_kicker": "Article",
+      "l1_title": "Incomplete Certificate Chains",
+      "l1_desc": "Why browsers work while apps fail — another ordering and file-selection problem.",
+      "l2_slug": "blog/certificate-expiry-monitoring/",
+      "l2_kicker": "Article",
+      "l2_title": "Certificate Expiry Monitoring",
+      "l2_desc": "\"File updated, service not reloaded\" is exactly what monitoring should catch.",
+      "l3_slug": "ssl/",
+      "l3_kicker": "Platform",
+      "l3_title": "SSL Certificate Automation",
+      "l3_desc": "Automatic push to every node on issuance, with less manual configuration."
+    }
+  },
   "article_ocsp_stapling": {
     "date": "2026-09-12",
     "date_display": "September 12, 2026",

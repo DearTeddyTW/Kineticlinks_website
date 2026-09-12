@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>{{ page.seo.title }}</title>
-    <meta name="title" content="{{ page.seo.title }}">
-    <meta name="description" content="{{ page.seo.description }}">
-    <meta name="keywords" content="{{ page.seo.keywords }}">
+    <title>OCSP 裝訂還需要嗎｜Let's Encrypt 停止支援後的現況 - Kineticlinks</title>
+    <meta name="title" content="OCSP 裝訂還需要嗎｜Let's Encrypt 停止支援後的現況 - Kineticlinks">
+    <meta name="description" content="Let's Encrypt 已於 2025 年 8 月關閉 OCSP 服務，CA/Browser Forum 也早將 OCSP 改為選配。說明撤銷檢查的四種機制、該檢查哪些設定，以及商用憑證的差異。">
+    <meta name="keywords" content="OCSP 裝訂, ssl_stapling, OCSP Must-Staple, CRL, 憑證撤銷, Let's Encrypt, CRLSets">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/">
@@ -23,16 +23,16 @@
     <!-- Open Graph / Facebook / Line -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/">
-    <meta property="og:title" content="{{ page.seo.title }}">
-    <meta property="og:description" content="{{ page.seo.description }}">
+    <meta property="og:title" content="OCSP 裝訂還需要嗎｜Let's Encrypt 停止支援後的現況 - Kineticlinks">
+    <meta property="og:description" content="Let's Encrypt 已於 2025 年 8 月關閉 OCSP 服務，CA/Browser Forum 也早將 OCSP 改為選配。說明撤銷檢查的四種機制、該檢查哪些設定，以及商用憑證的差異。">
     <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
-    <meta property="article:published_time" content="{{ page.date }}">
+    <meta property="article:published_time" content="2026-09-12">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/">
-    <meta property="twitter:title" content="{{ page.seo.title }}">
-    <meta property="twitter:description" content="{{ page.seo.description }}">
+    <meta property="twitter:title" content="OCSP 裝訂還需要嗎｜Let's Encrypt 停止支援後的現況 - Kineticlinks">
+    <meta property="twitter:description" content="Let's Encrypt 已於 2025 年 8 月關閉 OCSP 服務，CA/Browser Forum 也早將 OCSP 改為選配。說明撤銷檢查的四種機制、該檢查哪些設定，以及商用憑證的差異。">
     <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Structured Data (JSON-LD): BlogPosting -->
@@ -40,11 +40,11 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "{{ page.title }}",
-      "description": "{{ page.seo.description }}",
+      "headline": "還在設定 OCSP 裝訂？Let's Encrypt 已經關掉它了",
+      "description": "Let's Encrypt 已於 2025 年 8 月關閉 OCSP 服務，CA/Browser Forum 也早將 OCSP 改為選配。說明撤銷檢查的四種機制、該檢查哪些設定，以及商用憑證的差異。",
       "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
-      "datePublished": "{{ page.date }}",
-      "dateModified": "{{ page.date }}",
+      "datePublished": "2026-09-12",
+      "dateModified": "2026-09-12",
       "inLanguage": "zh-TW",
       "author": {
         "@type": "Organization",
@@ -87,7 +87,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "{{ page.title }}",
+          "name": "還在設定 OCSP 裝訂？Let's Encrypt 已經關掉它了",
           "item": "https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/"
         }
       ]
@@ -158,7 +158,7 @@
             <span>/</span>
             <a href="/blog/">技術文章</a>
             <span>/</span>
-            <span class="current">{{ page.short_title }}</span>
+            <span class="current">OCSP 裝訂已成過去式</span>
         </div>
     </div>
 
@@ -168,22 +168,22 @@
 
             <!-- Article Header -->
             <header class="article-header">
-                <div class="badge">{{ page.category }}</div>
-                <h1>{{ page.title }}</h1>
+                <div class="badge">憑證管理</div>
+                <h1>還在設定 OCSP 裝訂？Let's Encrypt 已經關掉它了</h1>
                 <div class="article-meta">
-                    <time datetime="{{ page.date }}">{{ page.date_display }}</time>
+                    <time datetime="2026-09-12">2026 年 9 月 12 日</time>
                     <span class="dot">·</span>
-                    <span>{{ page.reading_time }}</span>
+                    <span>約 9 分鐘</span>
                 </div>
-                <p class="article-lead">{{ page.lead }}</p>
+                <p class="article-lead">如果你的 Nginx 設定裡有 `ssl_stapling on;`，而憑證是 Let's Encrypt 簽發的，<strong>那行設定從 2025 年 5 月起就沒有作用了</strong>——憑證裡已經不再包含 OCSP 網址，伺服器沒有東西可以查、也沒有東西可以裝訂。這不是設定錯誤，是整個機制被淘汰了。這篇說明發生了什麼、你該檢查什麼，以及撤銷檢查現在怎麼運作。</p>
             </header>
 
             <div class="article-body">
 
                 <!-- What happened -->
-                <h2>{{ page.s1.title }}</h2>
-                <p>{{ page.s1.p1 }}</p>
-                <p>{{ page.s1.p2 }}</p>
+                <h2>撤銷檢查到底怎麼運作</h2>
+                <p>憑證可能在到期前被撤銷——私鑰外洩、網域易主、簽發有誤都是理由。問題是：驗證方怎麼知道手上這張憑證已經被撤銷了？這個看似單純的問題，過去二十年換過好幾種答案。</p>
+                <p>OCSP 曾經是主流解法：客戶端連線時向憑證機構的伺服器查詢「這張憑證還有效嗎」。但它有個結構性問題——<strong>憑證機構因此知道了哪個 IP 正在造訪哪個網站</strong>，等於在每次連線裡插入一個第三方觀察者。</p>
 
                 <!-- Timeline table -->
                 <figure class="data-table-wrap">
@@ -191,151 +191,151 @@
                         <table class="data-table">
                             <thead>
                                 <tr>
-                                    <th>{{ page.table.col1 }}</th>
-                                    <th>{{ page.table.col2 }}</th>
-                                    <th>{{ page.table.col3 }}</th>
+                                    <th>機制</th>
+                                    <th>運作方式</th>
+                                    <th>現況</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="{{ page.table.r1_class }}">
-                                    <td>{{ page.table.r1c1 }}</td>
-                                    <td class="num">{{ page.table.r1c2 }}</td>
-                                    <td>{{ page.table.r1c3 }}</td>
+                                <tr class="">
+                                    <td>OCSP 直接查詢</td>
+                                    <td class="num">客戶端連線時即時詢問憑證機構</td>
+                                    <td>隱私問題明確，瀏覽器多已不採用</td>
                                 </tr>
-                                <tr class="{{ page.table.r2_class }}">
-                                    <td>{{ page.table.r2c1 }}</td>
-                                    <td class="num">{{ page.table.r2c2 }}</td>
-                                    <td>{{ page.table.r2c3 }}</td>
+                                <tr class="is-current">
+                                    <td>OCSP 裝訂</td>
+                                    <td class="num">伺服器代為查詢，把結果附在 TLS 交握中</td>
+                                    <td>Let's Encrypt 已於 2025/8 關閉服務</td>
                                 </tr>
-                                <tr class="{{ page.table.r3_class }}">
-                                    <td>{{ page.table.r3c1 }}</td>
-                                    <td class="num">{{ page.table.r3c2 }}</td>
-                                    <td>{{ page.table.r3c3 }}</td>
+                                <tr class="">
+                                    <td>CRL 撤銷清單</td>
+                                    <td class="num">憑證機構發布清單，由驗證方自行取得</td>
+                                    <td>CA/B Forum 自 2024/3 起列為必要</td>
                                 </tr>
-                                <tr class="{{ page.table.r4_class }}">
-                                    <td>{{ page.table.r4c1 }}</td>
-                                    <td class="num">{{ page.table.r4c2 }}</td>
-                                    <td>{{ page.table.r4c3 }}</td>
+                                <tr class="">
+                                    <td>Chrome CRLSets</td>
+                                    <td class="num">Google 篩選後隨瀏覽器更新推送</td>
+                                    <td>Chrome 一直以來的實際做法</td>
                                 </tr>
 
                             </tbody>
                         </table>
                     </div>
-                    <figcaption>{{ page.table.caption }}</figcaption>
+                    <figcaption>四種撤銷檢查機制與 2026 年的實際狀況。</figcaption>
                 </figure>
 
-                <p>{{ page.s1.p3 }}</p>
+                <p>下表整理四種機制與現況。第二列是多數教學仍在教、但已經停止運作的那一種。</p>
 
                 <!-- Why -->
-                <h2>{{ page.s2.title }}</h2>
-                <p>{{ page.s2.intro }}</p>
+                <h2>Let's Encrypt 停止 OCSP 的三個時間點</h2>
+                <p>這不是突然關閉，而是分三階段完成，時程都已經過去：</p>
                 <ol class="reason-list">
                     <li>
-                        <strong>{{ page.s2.r1_title }}</strong>
-                        <span>{{ page.s2.r1_desc }}</span>
+                        <strong>2025 年 1 月 30 日：停止新的 Must-Staple 請求</strong>
+                        <span>Must-Staple 是憑證裡的一個標記，要求客戶端<strong>必須</strong>看到有效的裝訂回應才接受連線。它原本用來堵住「裝訂失敗就當作沒事」的漏洞，但代價是一旦裝訂出問題，網站直接連不上。這個階段之後，多數帳戶已無法再申請帶此標記的憑證。</span>
                     </li>
                     <li>
-                        <strong>{{ page.s2.r2_title }}</strong>
-                        <span>{{ page.s2.r2_desc }}</span>
+                        <strong>2025 年 5 月 7 日：憑證中不再包含 OCSP 網址</strong>
+                        <span>這是影響最廣的一步。憑證裡沒有 OCSP 網址，伺服器就無從查詢，`ssl_stapling on;` 這類設定自此失去作用——不會報錯，只是靜默地什麼都不做。許多人的設定檔至今仍留著那幾行。</span>
                     </li>
                     <li>
-                        <strong>{{ page.s2.r3_title }}</strong>
-                        <span>{{ page.s2.r3_desc }}</span>
+                        <strong>2025 年 8 月 6 日：OCSP 服務完全關閉</strong>
+                        <span>回應伺服器下線。在此之前簽發、仍帶有 OCSP 網址的舊憑證，查詢也會開始失敗。以目前的憑證效期來算，那些憑證早已全部過期輪替完畢。</span>
                     </li>
                 </ol>
 
                 <!-- Impact -->
-                <h2>{{ page.s3.title }}</h2>
-                <p>{{ page.s3.p1 }}</p>
-                <p>{{ page.s3.p2 }}</p>
+                <h2>為什麼要廢掉一個安全機制</h2>
+                <p>官方給的第一個理由是<strong>隱私</strong>。Let's Encrypt 明確指出：使用者造訪網站時，運作 OCSP 回應伺服器的憑證機構會立即得知「某個 IP 位址正在造訪哪個網站」。對一個簽發了數億張憑證的機構而言，這等於掌握了一份規模驚人的瀏覽紀錄。</p>
+                <p>第二個理由是<strong>營運成本</strong>——維持全球規模的即時查詢服務消耗大量資源，那些資源可以用在別的地方。</p>
 
                 <aside class="callout">
-                    <p>{{ page.s3.callout }}</p>
+                    <p>值得注意的是，OCSP 裝訂原本正是為了解決隱私問題而設計的：由伺服器代查，客戶端就不必自己去問憑證機構。但裝訂需要每個網站主動正確設定，而實際部署率始終不高——結果是隱私問題對「大多數沒設定的網站」依然存在。相較之下，CRL 的隱私保護對所有網站一體適用，不需要任何伺服器設定。</p>
                 </aside>
 
-                <p>{{ page.s3.p3 }}</p>
+                <p>方向其實在更早就定了。CA/Browser Forum 在 2023 年通過表決，<strong>將 OCSP 改為選配、CRL 改為必要</strong>，並於 2024 年 3 月生效。Let's Encrypt 的決定是順著這個方向走，不是單方面的行動。</p>
 
                 <!-- Why manual fails -->
-                <h2>{{ page.s4.title }}</h2>
-                <p>{{ page.s4.p1 }}</p>
-                <p>{{ page.s4.p2 }}</p>
+                <h2>你現在該檢查什麼</h2>
+                <p>最直接的是看設定檔裡還有沒有殘留。Nginx 的 `ssl_stapling on;` 與 `ssl_stapling_verify on;`、Apache 的 `SSLUseStapling on` 這類指令，在憑證沒有 OCSP 網址的情況下不會造成錯誤，但也不再有任何效果。留著不會壞事，只是那是一段已經沒有意義的設定。</p>
+                <p>另一個要確認的是<strong>商用憑證的情況不同</strong>。這次變動是 Let's Encrypt 的決定，部分商業憑證機構仍在提供 OCSP 服務。如果你同時管理免費與商用憑證，兩者的行為會不一樣——判斷之前先確認該憑證實際上還有沒有 OCSP 網址。</p>
 
                 <!-- How to respond -->
-                <h2>{{ page.s5.title }}</h2>
-                <p>{{ page.s5.intro }}</p>
+                <h2>三個層次的處理</h2>
+                <p>依實際情況分別處理：</p>
 
-                <h3>{{ page.s5.l1_title }}</h3>
-                <p>{{ page.s5.l1_desc }}</p>
+                <h3>一、確認憑證本身有沒有 OCSP 網址</h3>
+                <p>這決定後續所有判斷。沒有網址就不必再考慮裝訂相關設定；有網址（多為商用憑證）則裝訂仍然有效，可以保留。不要憑「以前設過」就假設它還在運作。</p>
 
-                <h3>{{ page.s5.l2_title }}</h3>
-                <p>{{ page.s5.l2_desc }}</p>
+                <h3>二、清掉已失效的設定，但不必急</h3>
+                <p>殘留的裝訂設定不會造成故障，所以不需要緊急處理。但在下次調整設定檔時順手移除比較好——留著會讓後來接手的人以為裝訂正在運作，而依據錯誤的前提排查問題會浪費很多時間。</p>
 
-                <h3>{{ page.s5.l3_title }}</h3>
-                <p>{{ page.s5.l3_desc }}</p>
+                <h3>三、理解撤銷檢查的實際覆蓋範圍</h3>
+                <p>不要假設撤銷會即時生效。CRL 與 CRLSets 都有更新週期，而 Chrome 的 CRLSets 是經過篩選的子集、並非完整清單。這也是憑證效期持續縮短的背景之一——效期越短，撤銷機制需要承擔的責任就越小。</p>
 
                 <!-- Checklist -->
-                <h2>{{ page.s6.title }}</h2>
-                <p>{{ page.s6.intro }}</p>
+                <h2>排查前該確認的三件事</h2>
+                <p>遇到與撤銷或裝訂相關的問題時，先釐清這三項：</p>
                 <ol class="check-list">
                     <li>
-                        <strong>{{ page.s6.c1_title }}</strong>
-                        <span>{{ page.s6.c1_desc }}</span>
+                        <strong>這張憑證是誰簽發的</strong>
+                        <span>Let's Encrypt 與商用憑證機構的行為現在完全不同。搞錯簽發者會讓整個排查方向偏掉。</span>
                     </li>
                     <li>
-                        <strong>{{ page.s6.c2_title }}</strong>
-                        <span>{{ page.s6.c2_desc }}</span>
+                        <strong>設定檔裡的裝訂是真的在運作嗎</strong>
+                        <span>設定存在不等於生效。Nginx 在無法取得 OCSP 回應時會寫入警告而非中止啟動，所以服務看起來一切正常。要看日誌，不是看設定檔。</span>
                     </li>
                     <li>
-                        <strong>{{ page.s6.c3_title }}</strong>
-                        <span>{{ page.s6.c3_desc }}</span>
+                        <strong>問題是否真的與撤銷有關</strong>
+                        <span>憑證鏈不完整、效期問題、網域不符都會產生類似的錯誤訊息，而且常見得多。先排除那些，再往撤銷的方向查。</span>
                     </li>
                 </ol>
 
                 <!-- Conclusion -->
-                <h2>{{ page.s7.title }}</h2>
-                <p>{{ page.s7.p1 }}</p>
-                <p>{{ page.s7.p2 }}</p>
+                <h2>小結</h2>
+                <p>「記得開啟 OCSP 裝訂」曾經是正確的建議，現在對 Let's Encrypt 憑證已經不適用——<strong>憑證裡沒有 OCSP 網址，那行設定不會報錯，只是靜默地什麼都不做</strong>。這類過時建議在中文技術內容裡仍然大量流傳，而它的危害不在於造成故障，在於讓人誤以為某個防護還在運作。</p>
+                <p>撤銷檢查的整體趨勢是往 CRL 與更短的憑證效期靠攏。若您不想追蹤這類生態變動，我們的 SSL 憑證自動化平台處理簽發與部署，讓憑證管理跟著標準走而不需要您逐項盯著。</p>
 
                 <!-- Sources -->
                 <div class="article-sources">
-                    <h3>{{ page.sources.title }}</h3>
+                    <h3>參考資料</h3>
                     <ul>
-                        <li><a href="{{ page.sources.u1 }}" target="_blank" rel="noopener">{{ page.sources.s1 }}</a></li>
-                        <li><a href="{{ page.sources.u2 }}" target="_blank" rel="noopener">{{ page.sources.s2 }}</a></li>
-                        <li><a href="{{ page.sources.u3 }}" target="_blank" rel="noopener">{{ page.sources.s3 }}</a></li>
+                        <li><a href="https://letsencrypt.org/2024/12/05/ending-ocsp/" target="_blank" rel="noopener">Let's Encrypt — Ending OCSP Support in 2025</a></li>
+                        <li><a href="https://cabforum.org/2023/07/14/ballot-sc063v4-make-ocsp-optional-require-crls-and-incentivize-automation/" target="_blank" rel="noopener">CA/Browser Forum — Ballot SC-063: Make OCSP Optional, Require CRLs</a></li>
+                        <li><a href="https://www.chromium.org/Home/chromium-security/crlsets/" target="_blank" rel="noopener">The Chromium Projects — CRLSets</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Related Pages (contextual internal links) -->
             <aside class="article-related">
-                <h2>{{ page.related.title }}</h2>
-                <p class="article-related-desc">{{ page.related.desc }}</p>
+                <h2>延伸閱讀與相關服務</h2>
+                <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/{{ page.related.l1_slug }}" class="related-card glass-panel">
-                        <span class="related-kicker">{{ page.related.l1_kicker }}</span>
-                        <h3>{{ page.related.l1_title }}</h3>
-                        <p>{{ page.related.l1_desc }}</p>
+                    <a href="/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
+                        <span class="related-kicker">技術文章</span>
+                        <h3>SSL 憑證效期縮短至 200 天</h3>
+                        <p>效期縮短正是撤銷機制得以簡化的背景之一。</p>
                     </a>
-                    <a href="/{{ page.related.l2_slug }}" class="related-card glass-panel">
-                        <span class="related-kicker">{{ page.related.l2_kicker }}</span>
-                        <h3>{{ page.related.l2_title }}</h3>
-                        <p>{{ page.related.l2_desc }}</p>
+                    <a href="/blog/incomplete-certificate-chain/" class="related-card glass-panel">
+                        <span class="related-kicker">技術文章</span>
+                        <h3>憑證鏈不完整</h3>
+                        <p>比撤銷問題常見得多的另一類憑證故障。</p>
                     </a>
-                    <a href="/{{ page.related.l3_slug }}" class="related-card glass-panel">
-                        <span class="related-kicker">{{ page.related.l3_kicker }}</span>
-                        <h3>{{ page.related.l3_title }}</h3>
-                        <p>{{ page.related.l3_desc }}</p>
+                    <a href="/ssl/" class="related-card glass-panel">
+                        <span class="related-kicker">平台產品</span>
+                        <h3>SSL 憑證自動化平台</h3>
+                        <p>簽發、驗證與多節點部署一次完成。</p>
                     </a>
                 </div>
             </aside>
 
             <!-- Article CTA -->
             <aside class="article-cta glass-panel">
-                <h2>{{ page.cta.title }}</h2>
-                <p>{{ page.cta.desc }}</p>
+                <h2>讓憑證管理跟著標準走</h2>
+                <p>Kineticlinks SSL 憑證自動化平台處理簽發、驗證與多節點部署，不需自行追蹤生態變動。</p>
                 <div class="hero-actions">
-                    <a href="/" class="btn btn-primary">{{ page.cta.button }}</a>
+                    <a href="/ssl/" class="btn btn-primary">了解 SSL 自動化平台</a>
                     <a href="/blog/" class="btn btn-secondary">返回文章列表</a>
                 </div>
             </aside>
