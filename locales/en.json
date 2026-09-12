@@ -840,6 +840,132 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_free_vs_paid": {
+    "date": "2026-09-13",
+    "date_display": "September 13, 2026",
+    "category": "Certificate Management",
+    "reading_time": "10 min read",
+    "short_title": "Free vs Paid Certificates",
+    "title": "Free vs Paid Certificates: It Isn't Encryption Strength, and It Isn't Wildcards",
+    "excerpt": "\"Paid certificates are more secure\" and \"paid certificates are a scam\" are both wrong. The real line is validation level and operational limits — and wildcards are free, which surprises people.",
+    "disclosure": "",
+    "lead": "Two extremes circulate on whether certificates are worth paying for: one still sells \"256-bit encryption\" as a feature, the other insists Let's Encrypt is free so paying is a scam. **Both are wrong**, in opposite directions. The real difference isn't encryption strength — that's identical — but what the CA verified, and which operational limits you'll run into.",
+    "seo": {
+      "title": "Free vs Paid SSL Certificates | DV, OV, EV and Rate Limits",
+      "description": "Free and paid certificates encrypt identically, and wildcards are free too. The real differences are validation level, rate limits and support.",
+      "keywords": "free SSL certificate, paid certificate, Let's Encrypt, DV OV EV, wildcard certificate, rate limits, certificate warranty"
+    },
+    "s1": {
+      "title": "First, What Genuinely Doesn't Differ",
+      "p1": "Of the four things most often compared, three are **identical** between free and paid. Clearing those away leaves what should actually drive the decision.",
+      "p2": "The most entrenched misconception is encryption strength. A certificate doesn't determine how strongly a connection is encrypted — the cipher suite is negotiated between client and server during the TLS handshake. A free DV certificate and an EV certificate costing four figures produce exactly the same encrypted connection. The old \"128-bit versus 256-bit\" marketing has no technical reality behind it any more.",
+      "p3": "The table lays out four common comparison points. Only the last two actually differ."
+    },
+    "table": {
+      "caption": "Which of the commonly compared properties actually differ.",
+      "col1": "Property",
+      "col2": "Reality",
+      "col3": "Explanation",
+      "r1c1": "Encryption strength",
+      "r1c2": "Identical",
+      "r1c3": "Negotiated in the TLS handshake, unrelated to certificate type",
+      "r1_class": "",
+      "r2c1": "Browser trust",
+      "r2c2": "Identical",
+      "r2c3": "Both chain to publicly trusted roots",
+      "r2_class": "",
+      "r3c1": "Wildcard certificates",
+      "r3c2": "Free too",
+      "r3c3": "Let's Encrypt issues them via DNS-01 at no charge",
+      "r3_class": "",
+      "r4c1": "Validation level",
+      "r4c2": "Differs",
+      "r4c3": "Let's Encrypt issues DV only; OV and EV require payment",
+      "r4_class": "is-current",
+      "r5c1": "Lifetime and renewal frequency",
+      "r5c2": "Differs",
+      "r5c3": "Let's Encrypt 90 days and shrinking; commercial DV currently 200"
+    },
+    "s2": {
+      "title": "The Three Differences That Are Real",
+      "intro": "With the non-differences cleared away, these are what a decision should rest on:",
+      "r1_title": "Validation level: free means DV only",
+      "r1_desc": "Let's Encrypt issues only DV certificates — proving you control the domain, not who you are. OV and EV require the CA to verify company registration and contact details, and that human process costs money, so it can't be free. If a customer or compliance regime requires verified organisational identity inside the certificate, this is the one hard limit free cannot meet.",
+      "r2_title": "Rate limits: bulk issuance hits a wall",
+      "r2_desc": "Let's Encrypt caps issuance at 50 certificates per registered domain per seven days, with up to 100 identifiers in a single certificate. Personal sites and ordinary businesses never approach that, but hosting providers, SaaS platforms and agencies managing many customer domains hit it readily. Once hit, the only option is waiting — there's no paid fast path.",
+      "r3_title": "Warranty and support: is there someone to call",
+      "r3_desc": "Commercial certificates carry a warranty figure, while DV warranties are minimal or absent. Honestly, warranty terms are narrow and claims rare, so it's a weak reason on its own. Support matters more: paid plans come with a channel and a response time, Let's Encrypt has a community forum. That difference only shows up when something breaks."
+    },
+    "s3": {
+      "title": "Lifetimes Are Changing Fast",
+      "p1": "Let's Encrypt currently issues 90-day certificates and has announced a reduction **to 45 days by 2028**. In January 2026 it also made short-lived certificates generally available — valid for 160 hours, a little over six days — for those wanting higher rotation.",
+      "p2": "On the commercial side, the CA/Browser Forum has already brought the maximum down to 200 days, heading for 47 in 2029. The direction is the same; commercial simply remains somewhat longer for now.",
+      "callout": "That gap is closing, and with it the argument. When lifetimes went from 398 days to 200, \"fewer renewals\" was still worth something; once both sides sit in the tens of days, **manual renewal is unworkable either way and automation becomes a prerequisite rather than an option**. Choosing a certificate on lifetime is a criterion in the process of expiring — the real question is whether your automation works.",
+      "p3": "This also explains why the free-versus-paid question is shifting. As obtaining certificates becomes cheap and automatic, the cost moves from acquiring one to deploying it everywhere it needs to go — and that has nothing to do with what the certificate cost."
+    },
+    "s4": {
+      "title": "When Paying Is the Right Call",
+      "p1": "Judged on requirements rather than price, paying makes sense in roughly four situations: **OV or EV is needed** (compliance, procurement rules, or wanting verified organisational identity in the certificate); **issuance volume will hit rate limits**; **support with a contract and response times is required**; and **a specific platform or appliance accepts only certain CAs**.",
+      "p2": "Conversely, if your need is \"one domain, DV is enough, and I can run certbot\", Let's Encrypt is the right answer and paying buys nothing extra. **Anyone recommending payment in that situation either hasn't understood the question or is selling something.**",
+      "p3": "One case deserves separating out: when the problem isn't the certificate but the **deployment**. If a certificate has to reach several CDN nodes across different providers' interfaces, that workload is unrelated to what the certificate cost — a free one still has to be pushed everywhere individually. What to evaluate then is automation tooling, not certificate pricing."
+    },
+    "s5": {
+      "title": "Three Levels of Decision",
+      "intro": "Answering these in order settles it:",
+      "l1_title": "1. Do you need DV, or OV/EV?",
+      "l1_desc": "This is the only hard boundary. If DV suffices, free and paid differ in no meaningful way at the certificate level. If OV or EV is required, paying is the only route, because human verification is involved. Confirm the requirement genuinely exists — plenty of people assume it from impression.",
+      "l2_title": "2. What's your issuance volume and frequency?",
+      "l2_desc": "For one domain or a handful of subdomains, free quotas are far more than enough. Managing dozens or hundreds of customer domains, estimate whether weekly issuance approaches the limit of 50. Hitting it means you simply cannot issue until it resets, which is a real risk for hosting businesses.",
+      "l3_title": "3. Where is deployment actually stuck?",
+      "l3_desc": "If the pain is \"the certificate has to reach six places and each is manual\", switching to a paid certificate solves none of it. That's an automation question, independent of where certificates come from — establish whether you're solving acquisition or deployment."
+    },
+    "s6": {
+      "title": "Three Things to Establish First",
+      "intro": "Before comparing options, settle these:",
+      "c1_title": "Confirm the compliance requirement is real",
+      "c1_desc": "\"We need EV\" is sometimes inherited from an old policy. Modern browsers stopped displaying the verified company name for EV certificates, so visually there is no difference from DV. Check the requirement comes from a written rule, not a memory of the green address bar.",
+      "c2_title": "Confirm your automation works",
+      "c2_desc": "Lifetimes will keep shrinking on both sides. If renewal is still manual, that's what to fix first — it shapes operational cost far more than which CA you choose.",
+      "c3_title": "Confirm which part you're solving",
+      "c3_desc": "Obtaining, deploying and monitoring certificates are three separate problems with different cost structures. Buying a certificate addresses the first; the other two don't disappear because you paid."
+    },
+    "s7": {
+      "title": "In Summary",
+      "p1": "Free and paid certificates differ **in no way at all** on encryption strength, browser trust, or wildcard support. The real boundaries are validation level (Let's Encrypt issues DV only), rate limits, and whether support comes with a contract. If you need DV, your volume is modest, and you can run the automation yourself, **free is the correct answer**.",
+      "p2": "But if what's actually stuck is deployment — one certificate reaching several CDN nodes across different providers — that's a different problem, and changing where certificates come from won't solve it. Our SSL platform addresses that part: DNS validation and multi-node push, with certificates issued by GoGetSSL's DV CA chaining to a publicly trusted Sectigo root."
+    },
+    "sources": {
+      "title": "Sources",
+      "s1": "Let's Encrypt — Decreasing Certificate Lifetimes to 45 Days",
+      "u1": "https://letsencrypt.org/2025/12/02/from-90-to-45/",
+      "s2": "Let's Encrypt — 6-day and IP Address Certificates are Generally Available",
+      "u2": "https://letsencrypt.org/2026/01/15/6day-and-ip-general-availability/",
+      "s3": "Let's Encrypt — Rate Limits",
+      "u3": "https://letsencrypt.org/docs/rate-limits/"
+    },
+    "cta": {
+      "href": "ssl/",
+      "title": "If Deployment Is the Problem, Not the Certificate",
+      "desc": "The Kineticlinks SSL platform combines DNS validation with multi-brand CDN push. From US$30 per domain, every platform feature included.",
+      "button": "Explore the SSL Platform"
+    },
+    "related": {
+      "title": "Related Services & Reading",
+      "desc": "These pages connect directly to the topic above",
+      "l1_slug": "blog/ssl-certificate-validity-200-days/",
+      "l1_kicker": "Article",
+      "l1_title": "SSL Lifetimes Cut to 200 Days",
+      "l1_desc": "Why lifetime is losing its usefulness as a criterion.",
+      "l2_slug": "blog/acme-challenge-types/",
+      "l2_kicker": "Article",
+      "l2_title": "Choosing an ACME Challenge",
+      "l2_desc": "The first decision to get right when running free certificates yourself.",
+      "l3_slug": "ssl/",
+      "l3_kicker": "Platform",
+      "l3_title": "SSL Certificate Automation",
+      "l3_desc": "Handles the deployment half: DNS validation and multi-node push."
+    }
+  },
   "article_nginx_cert": {
     "date": "2026-09-12",
     "date_display": "September 12, 2026",
