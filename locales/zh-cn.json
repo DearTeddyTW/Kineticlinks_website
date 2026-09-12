@@ -96,6 +96,7 @@
       "service_vps": "VPS 虚拟主机",
       "service_idc": "IDC 机房建置",
       "service_cloud": "公有云架构解决方案",
+      "service_icp": "中国跨境部署与备案咨询",
       "service_other": "其他",
       "message": "您的需求说明",
       "submit": "发送信息"
@@ -944,10 +945,10 @@
       "u3": "https://support.huaweicloud.com/tg-icp/icp_05_0078.html"
     },
     "cta": {
-      "href": "cdn/",
-      "title": "不触发备案要求的跨境加速",
-      "desc": "Kineticlinks CDN 可在不接入大陆境内节点的前提下部署，改善跨境延迟与连接稳定度。",
-      "button": "了解 CDN 服务"
+      "href": "#contact",
+      "title": "不确定您的架构会不会触发备案？",
+      "desc": "路径上有没有大陆节点、线路怎么选、要不要排备案时程——这些取决于您的实际部署。欢迎把情况告诉我们。",
+      "button": "联系我们讨论"
     },
     "related": {
       "title": "延伸阅读与相关服务",
@@ -1824,10 +1825,10 @@
       "u3": "https://support.huaweicloud.com/tg-icp/icp_05_0078.html"
     },
     "cta": {
-      "href": "cdn/",
-      "title": "不触发备案要求的跨境加速",
-      "desc": "若您的部署完全走境外节点，Kineticlinks CDN 可在不接入大陆节点的前提下改善跨境延迟与连接稳定度。",
-      "button": "了解 CDN 服务"
+      "href": "#contact",
+      "title": "跨境上线的规划需要讨论吗？",
+      "desc": "备案时程、境外部署、加速方案怎么搭配，会因业务型态而不同。告诉我们您的情况，我们协助评估可行路径。",
+      "button": "联系我们讨论"
     },
     "related": {
       "title": "延伸阅读与相关服务",

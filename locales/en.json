@@ -96,6 +96,7 @@
       "service_vps": "Virtual Private Server (VPS)",
       "service_idc": "IDC Construction",
       "service_cloud": "Public Cloud Solutions",
+      "service_icp": "China deployment & ICP filing consulting",
       "service_other": "Other",
       "message": "Your Requirements",
       "submit": "Send Message"
@@ -944,10 +945,10 @@
       "u3": "https://support.huaweicloud.com/tg-icp/icp_05_0078.html"
     },
     "cta": {
-      "href": "cdn/",
-      "title": "Cross-Border Acceleration Without Triggering Filing",
-      "desc": "Kineticlinks CDN deploys without connecting mainland China nodes, improving cross-border latency and stability.",
-      "button": "Explore CDN Services"
+      "href": "#contact",
+      "title": "Unsure Whether Your Setup Triggers Filing?",
+      "desc": "Whether a mainland node sits in your path, which route to choose, whether to schedule filing — it depends on your actual deployment. Tell us about it.",
+      "button": "Get in Touch"
     },
     "related": {
       "title": "Related Services & Reading",
@@ -1824,10 +1825,10 @@
       "u3": "https://support.huaweicloud.com/tg-icp/icp_05_0078.html"
     },
     "cta": {
-      "href": "cdn/",
-      "title": "Cross-Border Acceleration Without Triggering Filing",
-      "desc": "For deployments running entirely on overseas nodes, Kineticlinks CDN improves cross-border latency and stability without connecting mainland nodes.",
-      "button": "Explore CDN Services"
+      "href": "#contact",
+      "title": "Want to Talk Through a China Launch?",
+      "desc": "How filing timelines, overseas deployment and acceleration fit together depends on your business. Tell us your situation and we'll help assess the options.",
+      "button": "Get in Touch"
     },
     "related": {
       "title": "Related Services & Reading",
