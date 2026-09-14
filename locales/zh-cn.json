@@ -2484,8 +2484,8 @@
     "disclosure": "",
     "lead": "「装个 Certbot 就好了」是证书自动化最常见的误解。工具本身不难装，真正会卡住的是<strong>验证方式（challenge）选错</strong>——而且问题往往不是在安装当下暴露，是在你把服务放到 CDN 后面、或第一次要申请通配符证书时才爆出来。这三种验证方式各有硬性限制，选之前必须先知道。",
     "seo": {
-      "title": "ACME 验证方式怎么选｜HTTP-01、DNS-01 与通配符证书 - Kineticlinks",
-      "description": "证书自动化卡关多半是验证方式选错。完整说明 HTTP-01、DNS-01、TLS-ALPN-01 的运作原理与限制、为何通配符证书只能用 DNS-01，以及 CDN 架构下的实际考量。",
+      "title": "HTTP-01、DNS-01 还是 TLS-ALPN-01？ACME 验证方式怎么选 - Kineticlinks",
+      "description": "HTTP-01 在 CDN 后面会失败，通配符证书只能用 DNS-01。完整说明三种 ACME 验证方式的运作原理、各自的硬性限制，以及该怎么选。",
       "keywords": "ACME 验证, HTTP-01, DNS-01, TLS-ALPN-01, 通配符证书, Certbot, 证书自动续签, Let's Encrypt"
     },
     "s1": {

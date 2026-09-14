@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards</title>
-    <meta name="title" content="Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards">
-    <meta name="description" content="Certificate automation stalls on the challenge type, not on Certbot. Where HTTP-01 fails, and why wildcards can only ever be issued through DNS-01.">
+    <title>HTTP-01 vs DNS-01 vs TLS-ALPN-01: Choosing an ACME Challenge</title>
+    <meta name="title" content="HTTP-01 vs DNS-01 vs TLS-ALPN-01: Choosing an ACME Challenge">
+    <meta name="description" content="HTTP-01 fails behind a CDN, and wildcards can only be issued via DNS-01. How the three ACME challenge types work, what constrains each, and how to choose.">
     <meta name="keywords" content="ACME challenge, HTTP-01, DNS-01, TLS-ALPN-01, wildcard certificate, Certbot, automatic certificate renewal, Let's Encrypt">
 
     <!-- Canonical URL -->
@@ -23,16 +23,16 @@
     <!-- Open Graph / Facebook / Line -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.kineticlinks.net/en/blog/acme-challenge-types/">
-    <meta property="og:title" content="Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards">
-    <meta property="og:description" content="Certificate automation stalls on the challenge type, not on Certbot. Where HTTP-01 fails, and why wildcards can only ever be issued through DNS-01.">
+    <meta property="og:title" content="HTTP-01 vs DNS-01 vs TLS-ALPN-01: Choosing an ACME Challenge">
+    <meta property="og:description" content="HTTP-01 fails behind a CDN, and wildcards can only be issued via DNS-01. How the three ACME challenge types work, what constrains each, and how to choose.">
     <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
     <meta property="article:published_time" content="2026-09-06">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.kineticlinks.net/en/blog/acme-challenge-types/">
-    <meta property="twitter:title" content="Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards">
-    <meta property="twitter:description" content="Certificate automation stalls on the challenge type, not on Certbot. Where HTTP-01 fails, and why wildcards can only ever be issued through DNS-01.">
+    <meta property="twitter:title" content="HTTP-01 vs DNS-01 vs TLS-ALPN-01: Choosing an ACME Challenge">
+    <meta property="twitter:description" content="HTTP-01 fails behind a CDN, and wildcards can only be issued via DNS-01. How the three ACME challenge types work, what constrains each, and how to choose.">
     <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Structured Data (JSON-LD): BlogPosting -->
@@ -41,7 +41,7 @@
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "Where Certificate Automation Actually Breaks: Choosing an ACME Challenge Type",
-      "description": "Certificate automation stalls on the challenge type, not on Certbot. Where HTTP-01 fails, and why wildcards can only ever be issued through DNS-01.",
+      "description": "HTTP-01 fails behind a CDN, and wildcards can only be issued via DNS-01. How the three ACME challenge types work, what constrains each, and how to choose.",
       "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
       "datePublished": "2026-09-06",
       "dateModified": "2026-09-06",

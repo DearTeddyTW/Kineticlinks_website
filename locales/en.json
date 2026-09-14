@@ -2484,8 +2484,8 @@
     "disclosure": "",
     "lead": "\"Just install Certbot\" is the most common misconception about certificate automation. The tooling isn't the hard part. What actually blocks people is <strong>choosing the wrong challenge type</strong> — and the problem usually doesn't surface at install time. It surfaces when you put the service behind a CDN, or the first time you request a wildcard certificate. Each of the three challenge types has hard constraints worth knowing before you commit.",
     "seo": {
-      "title": "Choosing an ACME Challenge | HTTP-01, DNS-01 & Wildcards",
-      "description": "Certificate automation stalls on the challenge type, not on Certbot. Where HTTP-01 fails, and why wildcards can only ever be issued through DNS-01.",
+      "title": "HTTP-01 vs DNS-01 vs TLS-ALPN-01: Choosing an ACME Challenge",
+      "description": "HTTP-01 fails behind a CDN, and wildcards can only be issued via DNS-01. How the three ACME challenge types work, what constrains each, and how to choose.",
       "keywords": "ACME challenge, HTTP-01, DNS-01, TLS-ALPN-01, wildcard certificate, Certbot, automatic certificate renewal, Let's Encrypt"
     },
     "s1": {

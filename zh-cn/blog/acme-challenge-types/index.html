@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>ACME 验证方式怎么选｜HTTP-01、DNS-01 与通配符证书 - Kineticlinks</title>
-    <meta name="title" content="ACME 验证方式怎么选｜HTTP-01、DNS-01 与通配符证书 - Kineticlinks">
-    <meta name="description" content="证书自动化卡关多半是验证方式选错。完整说明 HTTP-01、DNS-01、TLS-ALPN-01 的运作原理与限制、为何通配符证书只能用 DNS-01，以及 CDN 架构下的实际考量。">
+    <title>HTTP-01、DNS-01 还是 TLS-ALPN-01？ACME 验证方式怎么选 - Kineticlinks</title>
+    <meta name="title" content="HTTP-01、DNS-01 还是 TLS-ALPN-01？ACME 验证方式怎么选 - Kineticlinks">
+    <meta name="description" content="HTTP-01 在 CDN 后面会失败，通配符证书只能用 DNS-01。完整说明三种 ACME 验证方式的运作原理、各自的硬性限制，以及该怎么选。">
     <meta name="keywords" content="ACME 验证, HTTP-01, DNS-01, TLS-ALPN-01, 通配符证书, Certbot, 证书自动续签, Let's Encrypt">
 
     <!-- Canonical URL -->
@@ -23,16 +23,16 @@
     <!-- Open Graph / Facebook / Line -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/">
-    <meta property="og:title" content="ACME 验证方式怎么选｜HTTP-01、DNS-01 与通配符证书 - Kineticlinks">
-    <meta property="og:description" content="证书自动化卡关多半是验证方式选错。完整说明 HTTP-01、DNS-01、TLS-ALPN-01 的运作原理与限制、为何通配符证书只能用 DNS-01，以及 CDN 架构下的实际考量。">
+    <meta property="og:title" content="HTTP-01、DNS-01 还是 TLS-ALPN-01？ACME 验证方式怎么选 - Kineticlinks">
+    <meta property="og:description" content="HTTP-01 在 CDN 后面会失败，通配符证书只能用 DNS-01。完整说明三种 ACME 验证方式的运作原理、各自的硬性限制，以及该怎么选。">
     <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
     <meta property="article:published_time" content="2026-09-06">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/">
-    <meta property="twitter:title" content="ACME 验证方式怎么选｜HTTP-01、DNS-01 与通配符证书 - Kineticlinks">
-    <meta property="twitter:description" content="证书自动化卡关多半是验证方式选错。完整说明 HTTP-01、DNS-01、TLS-ALPN-01 的运作原理与限制、为何通配符证书只能用 DNS-01，以及 CDN 架构下的实际考量。">
+    <meta property="twitter:title" content="HTTP-01、DNS-01 还是 TLS-ALPN-01？ACME 验证方式怎么选 - Kineticlinks">
+    <meta property="twitter:description" content="HTTP-01 在 CDN 后面会失败，通配符证书只能用 DNS-01。完整说明三种 ACME 验证方式的运作原理、各自的硬性限制，以及该怎么选。">
     <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Structured Data (JSON-LD): BlogPosting -->
@@ -41,7 +41,7 @@
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "证书自动化真正的卡关点：三种 ACME 验证方式该怎么选",
-      "description": "证书自动化卡关多半是验证方式选错。完整说明 HTTP-01、DNS-01、TLS-ALPN-01 的运作原理与限制、为何通配符证书只能用 DNS-01，以及 CDN 架构下的实际考量。",
+      "description": "HTTP-01 在 CDN 后面会失败，通配符证书只能用 DNS-01。完整说明三种 ACME 验证方式的运作原理、各自的硬性限制，以及该怎么选。",
       "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
       "datePublished": "2026-09-06",
       "dateModified": "2026-09-06",

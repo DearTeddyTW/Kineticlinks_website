@@ -2484,8 +2484,8 @@
     "disclosure": "",
     "lead": "「裝個 Certbot 就好了」是憑證自動化最常見的誤解。工具本身不難裝，真正會卡住的是<strong>驗證方式（challenge）選錯</strong>——而且問題往往不是在安裝當下暴露，是在你把服務放到 CDN 後面、或第一次要申請萬用字元憑證時才爆出來。這三種驗證方式各有硬性限制，選之前必須先知道。",
     "seo": {
-      "title": "ACME 驗證方式怎麼選｜HTTP-01、DNS-01 與萬用字元憑證 - Kineticlinks",
-      "description": "憑證自動化卡關多半是驗證方式選錯。完整說明 HTTP-01、DNS-01、TLS-ALPN-01 的運作原理與限制、為何萬用字元憑證只能用 DNS-01，以及 CDN 架構下的實際考量。",
+      "title": "HTTP-01、DNS-01 還是 TLS-ALPN-01？ACME 驗證方式怎麼選 - Kineticlinks",
+      "description": "HTTP-01 在 CDN 後面會失敗，萬用字元憑證只能用 DNS-01。完整說明三種 ACME 驗證方式的運作原理、各自的硬性限制，以及該怎麼選。",
       "keywords": "ACME 驗證, HTTP-01, DNS-01, TLS-ALPN-01, 萬用字元憑證, Certbot, 憑證自動續簽, Let's Encrypt"
     },
     "s1": {
