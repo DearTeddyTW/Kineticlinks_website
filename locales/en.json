@@ -1035,7 +1035,7 @@
     "s4": {
       "title": "Handling Speed Without Filing",
       "p1": "The cross-border bottleneck is rarely bandwidth; it's latency and packet loss, which compound. So the effective response isn't buying more bandwidth but shortening the path and reducing round trips: static assets on nearby nodes, reusable connections, cacheable content held at the edge.",
-      "p2": "When choosing Hong Kong or any overseas facility, **ask about the route, not just the location**. Within Hong Kong, a direct route and a detoured one can differ by an order of magnitude, and the gap typically appears at evening peak — daytime testing won't show it. Which is also why a single speed test tells you little about cross-border quality."
+      "p2": "When choosing Hong Kong or any overseas facility, **ask about the route, not just the location** (for what else to assess in a facility, see <a href=\"{{ lang_path }}blog/idc-explained/\">what IDC actually means</a>). Within Hong Kong, a direct route and a detoured one can differ by an order of magnitude, and the gap typically appears at evening peak — daytime testing won't show it. Which is also why a single speed test tells you little about cross-border quality."
     },
     "s5": {
       "title": "Three Levels of Decision",
@@ -1545,7 +1545,7 @@
       "title": "Three Levels of Configuration Check",
       "intro": "In ascending order of reliability:",
       "l1_title": "1. Treat nginx -t as the first gate only",
-      "l1_desc": "It catches syntax errors and mismatched key pairs, and is worth running after every change. But passing means the configuration can load, not that it's correct. Necessary, not sufficient.",
+      "l1_desc": "It catches syntax errors and mismatched key pairs, and is worth running after every change. But passing means the configuration can load, not that it's correct. Necessary, not sufficient. Worth clearing out alongside it is configuration that no longer does anything — <a href=\"{{ lang_path }}blog/ocsp-stapling-deprecated/\">OCSP stapling</a> being the common case.",
       "l2_title": "2. Always reload after changing certificates, then confirm",
       "l2_desc": "`nginx -s reload` or the equivalent service command. What matters is **connecting afterwards to confirm** — a reload can fail on a configuration error while the old process keeps serving quite happily, showing nothing unusual from outside.",
       "l3_title": "3. Declare default_server and audit coverage",
@@ -1794,7 +1794,7 @@
       "title": "Three Levels of Fix",
       "intro": "Once you've confirmed the problem, work through these:",
       "l1_title": "1. Switch to the full-chain file",
-      "l1_desc": "Point the configuration at the file containing intermediates (`fullchain.pem` for Let's Encrypt), or fill in the intermediate field in the control panel. Including the root is optional — a few hundred extra bytes, and harmless. Reload the service afterwards: a changed file without a reload changes nothing.",
+      "l1_desc": "Point the configuration at the file containing intermediates (`fullchain.pem` for Let's Encrypt), or fill in the intermediate field in the control panel. Including the root is optional — a few hundred extra bytes, and harmless. Reload the service afterwards: a changed file without a reload changes nothing — <a href=\"{{ lang_path }}blog/nginx-certificate-configuration/\">how Nginx loads certificates</a> covers why.",
       "l2_title": "2. Fix every TLS-terminating endpoint",
       "l2_desc": "Origin, each CDN node and load balancers all hold their own certificate. Fixing origin while CDN nodes still serve the old configuration leaves users exactly where they were. This mirrors expiry handling — certificate problems are nearly always \"some places updated, others didn't\".",
       "l3_title": "3. Make chain checking part of renewal",
@@ -2546,7 +2546,7 @@
       "l2_title": "2. Do you need wildcard certificates?",
       "l2_desc": "If yes, DNS-01 is the only option. If your subdomains are few and stable, a SAN certificate listing them all avoids wildcards — but every new subdomain then requires reissuing, so weigh that against how often they change.",
       "l3_title": "3. Does your DNS provider expose an API?",
-      "l3_desc": "This is the prerequisite for DNS-01. When choosing a registrar or DNS service, treat API support as a requirement rather than a bonus. Plan credential storage too — putting DNS API keys directly in config files on every server turns your certificate automation into a security weakness."
+      "l3_desc": "This is the prerequisite for DNS-01. When choosing a registrar or DNS service, treat API support as a requirement rather than a bonus (on whether to pay for the certificate itself, see <a href=\"{{ lang_path }}blog/free-vs-paid-ssl-certificates/\">free versus paid certificates</a>). Plan credential storage too — putting DNS API keys directly in config files on every server turns your certificate automation into a security weakness."
     },
     "s6": {
       "title": "Three Things to Establish First",
@@ -3402,7 +3402,7 @@
       "title": "Three Things to Prepare Beforehand",
       "intro": "Gathering these three items before approaching facilities dramatically shortens the conversation:",
       "c1_title": "Equipment list and power estimate",
-      "c1_desc": "List the servers and network devices you'll install, with per-unit power draw and cooling requirements. Racks are priced by power rather than space, so without this no one can quote you.",
+      "c1_desc": "List the servers and network devices you'll install, with per-unit power draw and cooling requirements (the <a href=\"{{ lang_path }}blog/vps-buying-guide/\">VPS buying guide</a> applies the same sizing logic). Racks are priced by power rather than space, so without this no one can quote you.",
       "c2_title": "Tolerable downtime",
       "c2_desc": "Define explicitly how much interruption each system can absorb. That number determines which Tier level you actually need, and stops you paying for redundancy you'll never use.",
       "c3_title": "Regulatory and audit requirements",

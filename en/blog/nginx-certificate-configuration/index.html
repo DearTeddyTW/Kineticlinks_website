@@ -265,7 +265,7 @@
                 <p>In ascending order of reliability:</p>
 
                 <h3>1. Treat nginx -t as the first gate only</h3>
-                <p>It catches syntax errors and mismatched key pairs, and is worth running after every change. But passing means the configuration can load, not that it's correct. Necessary, not sufficient.</p>
+                <p>It catches syntax errors and mismatched key pairs, and is worth running after every change. But passing means the configuration can load, not that it's correct. Necessary, not sufficient. Worth clearing out alongside it is configuration that no longer does anything — <a href="/en/blog/ocsp-stapling-deprecated/">OCSP stapling</a> being the common case.</p>
 
                 <h3>2. Always reload after changing certificates, then confirm</h3>
                 <p>`nginx -s reload` or the equivalent service command. What matters is <strong>connecting afterwards to confirm</strong> — a reload can fail on a configuration error while the old process keeps serving quite happily, showing nothing unusual from outside.</p>

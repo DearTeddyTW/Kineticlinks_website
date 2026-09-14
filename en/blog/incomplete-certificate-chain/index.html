@@ -270,7 +270,7 @@
                 <p>Once you've confirmed the problem, work through these:</p>
 
                 <h3>1. Switch to the full-chain file</h3>
-                <p>Point the configuration at the file containing intermediates (`fullchain.pem` for Let's Encrypt), or fill in the intermediate field in the control panel. Including the root is optional — a few hundred extra bytes, and harmless. Reload the service afterwards: a changed file without a reload changes nothing.</p>
+                <p>Point the configuration at the file containing intermediates (`fullchain.pem` for Let's Encrypt), or fill in the intermediate field in the control panel. Including the root is optional — a few hundred extra bytes, and harmless. Reload the service afterwards: a changed file without a reload changes nothing — <a href="/en/blog/nginx-certificate-configuration/">how Nginx loads certificates</a> covers why.</p>
 
                 <h3>2. Fix every TLS-terminating endpoint</h3>
                 <p>Origin, each CDN node and load balancers all hold their own certificate. Fixing origin while CDN nodes still serve the old configuration leaves users exactly where they were. This mirrors expiry handling — certificate problems are nearly always "some places updated, others didn't".</p>
