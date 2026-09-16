@@ -2,3 +2,6 @@
 *.log
 node_modules/
 .env
+
+# 商務往來草稿不進公開 repo
+outreach/
