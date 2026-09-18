@@ -120,7 +120,7 @@
     "overview": {
       "title": "What Is a CDN?",
       "p1": "A CDN (Content Delivery Network) is a network of edge servers distributed across multiple regions. When a user visits your site, the CDN routes the request to the node physically closest to them instead of forcing every request back to a single origin server, shortening the data path, reducing latency, and easing the load on your origin infrastructure.",
-      "p2": "Kineticlinks operates over 100 edge nodes across Asia-Pacific, North America, and Europe, using intelligent routing to continuously measure latency and congestion at each node and automatically select the fastest path. Whether your users are in Taiwan, mainland China, Southeast Asia, or Western markets, they get access speeds close to a local server.",
+      "p2": "Kineticlinks operates over 100 edge nodes across Asia-Pacific, North America, and Europe, using intelligent routing to continuously measure latency and congestion at each node and automatically select the fastest path. Whether your users are in Taiwan, mainland China, Southeast Asia, or Western markets, they get access speeds close to a local server. How much that actually delivers depends heavily on the caching headers your origin sends — set wrongly, they leave a CDN doing almost nothing, as <a href=\"{{ lang_path }}blog/http-caching-headers/\">our guide to HTTP caching headers</a> explains.",
       "p3": "Beyond acceleration, a CDN is also your first line of defense against distributed denial-of-service (DDoS) attacks. Kineticlinks provides terabit-scale scrubbing capacity that filters malicious traffic at the edge before it ever reaches your origin server, keeping your business running without interruption."
     },
     "use_cases": {
@@ -1045,7 +1045,7 @@
       "l2_title": "2. Does your business ultimately need mainland nodes?",
       "l2_desc": "If so, schedule the filing rather than routing around it, and launch on overseas nodes meanwhile. Filing usually completes within three weeks and the site can serve normally throughout — far easier than discovering later that it was unavoidable.",
       "l3_title": "3. Can overseas nodes meet your performance requirement?",
-      "l3_desc": "For many cross-border services they can. It comes down to route selection and cache strategy rather than nodes needing to be inside the mainland. Measure before deciding, rather than accepting the cost of filing on the assumption that mainland nodes must be faster."
+      "l3_desc": "For many cross-border services they can. It comes down to route selection and <a href=\"{{ lang_path }}blog/http-caching-headers/\">cache strategy</a> rather than nodes needing to be inside the mainland. Measure before deciding, rather than accepting the cost of filing on the assumption that mainland nodes must be faster."
     },
     "s6": {
       "title": "Three Things to Confirm Before Committing",
@@ -3029,7 +3029,7 @@
       "title": "Three Practical Directions for Improvement",
       "intro": "Against the structural problems above, there are three layers you can work on:",
       "l1_title": "1. Move content closer to users",
-      "l1_desc": "The most direct approach is caching static content at edge nodes nearer to users in China, reducing how much traffic has to cross the international gateways at all. Nodes in Hong Kong and around China help somewhat; genuinely landing content on nodes inside the mainland requires completing ICP filing — a regulatory process that takes time and paperwork, so it's worth assessing early.",
+      "l1_desc": "The most direct approach is <a href=\"{{ lang_path }}blog/http-caching-headers/\">caching static content</a> at edge nodes nearer to users in China, reducing how much traffic has to cross the international gateways at all. Nodes in Hong Kong and around China help somewhat; genuinely landing content on nodes inside the mainland requires completing ICP filing — a regulatory process that takes time and paperwork, so it's worth assessing early.",
       "l2_title": "2. Choose the right return route",
       "l2_desc": "When selecting a facility or CDN provider, ask specifically which return route is used rather than comparing bandwidth figures alone. At the same monthly cost, the difference between a CN2 GIA return path and an ordinary 163 one at evening peak is often more noticeable than doubling your bandwidth.",
       "l3_title": "3. Reduce the number of round trips",
