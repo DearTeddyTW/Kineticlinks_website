@@ -1043,7 +1043,7 @@
       "l1_title": "1. Will a mainland node appear anywhere in your path?",
       "l1_desc": "This is the only dividing line, covering servers and CDN nodes alike. If none ever will, no filing is required; if one will, it is. Note that's \"will\", not \"does today\" — enabling one later for speed triggers it just the same.",
       "l2_title": "2. Does your business ultimately need mainland nodes?",
-      "l2_desc": "If so, schedule the filing rather than routing around it, and launch on overseas nodes meanwhile. Filing usually completes within three weeks and the site can serve normally throughout — far easier than discovering later that it was unavoidable.",
+      "l2_desc": "If so, schedule the filing rather than routing around it. But note that a domain under a new filing generally has to stay offline during administration review; keeping it serving traffic can get the filing rejected. Practice varies by province, so confirm with your access provider first. Filing usually completes within three weeks — building that window into the launch plan is far easier than discovering later that it was unavoidable.",
       "l3_title": "3. Can overseas nodes meet your performance requirement?",
       "l3_desc": "For many cross-border services they can. It comes down to route selection and <a href=\"{{ lang_path }}blog/http-caching-headers/\">cache strategy</a> rather than nodes needing to be inside the mainland. Measure before deciding, rather than accepting the cost of filing on the assumption that mainland nodes must be faster."
     },
@@ -1908,7 +1908,7 @@
       "title": "How Long It Actually Takes",
       "p1": "Filing is quicker than most people assume, which is partly why the incentive to detour is weaker than it looks. There are two stages: provider pre-review, then administration review.",
       "p2": "Per timelines published by major cloud providers, pre-review runs about 1–2 business days and administration review 1–20 business days, varying by province. In most cases the total lands inside three weeks, and often faster.",
-      "callout": "What deserves planning isn't how to skip filing, but <strong>scheduling it into the project while launching on overseas nodes in the meantime</strong>. While filing is in progress the site can already serve traffic through Hong Kong or other overseas nodes — no dead time waiting, and no exposure to having a filing cancelled. Switching over or running both once it comes through is entirely compliant.",
+      "callout": "What deserves planning isn't how to skip filing, but <strong>scheduling it into the project</strong>. One detail catches people out: a domain under a new filing is <strong>generally expected to stay offline until the administration approves it</strong> — filings have been rejected because the site was reachable during review, and changing DNS mid-review can also cause failure. Practice varies by province and access provider, so confirm before submitting. If the business can't pause, discuss with your access provider serving from a separate domain that isn't under review in the meantime.",
       "p3": "Filing also isn't a one-off. Within 30 days of a site going live, a separate public security filing is required. If paid information services are involved, a commercial ICP licence is needed too — and that can only be applied for once a valid filing number exists. Schedule all of it, or the later stages become the bottleneck."
     },
     "s4": {
@@ -1923,7 +1923,7 @@
       "l1_title": "1. Will your service use mainland nodes?",
       "l1_desc": "This is the only dividing line. If yes, filing is required — including when the only mainland involvement is enabling CDN nodes for speed. If no, an overseas deployment needs no filing.",
       "l2_title": "2. If filing is needed, can the timeline fit the project?",
-      "l2_desc": "Most cases complete within three weeks. The right move is scheduling it and launching on overseas nodes during the wait, rather than looking for a way around it.",
+      "l2_desc": "Most cases complete within three weeks. The right move is scheduling it — including the window where the domain under review typically has to stay offline — rather than looking for a way around it.",
       "l3_title": "3. Does your service involve paid information services?",
       "l3_desc": "If so, a commercial ICP licence is needed beyond the filing, and it can only be applied for once a valid filing number exists. Budget that time separately rather than discovering it when you're ready to charge."
     },
@@ -1940,7 +1940,7 @@
     "s7": {
       "title": "In Summary",
       "p1": "The filing rule itself isn't complicated: <strong>mainland nodes mean filing; a purely overseas deployment doesn't</strong>. The market in pre-filed domains exists because of a gap between what the regulation requires — cancel and re-file — and what buyers want, which is to skip the wait. Understanding what that gap is, and who carries the risk, matters more than a simple verdict either way.",
-      "p2": "The practical approach is to schedule the filing while launching through Hong Kong or other overseas nodes. If what you need is cross-border connection quality rather than mainland deployment, our CDN and overseas node options can improve latency without triggering the filing requirement."
+      "p2": "The practical approach is to schedule the filing, allowing for the window where the domain under review generally has to stay offline. If what you need is cross-border connection quality rather than mainland deployment, our CDN and overseas node options can improve latency without triggering the filing requirement."
     },
     "sources": {
       "title": "Sources",
