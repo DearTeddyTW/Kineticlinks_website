@@ -982,7 +982,7 @@
     "s1": {
       "title": "Nineteen domains, four categories",
       "p1": "The sample splits into four groups, each with an answer that can be checked independently: **ten obscure domains holding valid filings** (filing number and registrant verifiable against the MIIT system), **one domain that was filed but no longer is**, **five large Chinese sites** (baidu, taobao, qq, zhihu, bilibili, whose filing numbers are public), and **three domains that definitely have no filing** (google.com, github.com, and our own kineticlinks.net).",
-      "p2": "Those last three are the reverse controls, and their job is to catch guessing — if a tool reports them as filed, what it is returning isn't a lookup result. For comparison we used a public, free ICP lookup API (apihz.cn) called with the demo key from its own documentation. Both tools saw the same 19 domains.",
+      "p2": "Those last three are the reverse controls, and their job is to catch guessing — if a tool reports them as filed, what it is returning isn't a lookup result. For comparison we used a public, free ICP lookup API, called with the demo key from its own documentation. Both tools saw the same 19 domains.",
       "p3": "Start with the bottom row. Most people test a lookup tool by feeding it domains that do have filings, but the category that exposes problems is usually the reverse control — the one where the correct answer is \"no\"."
     },
     "table": {
@@ -1060,8 +1060,8 @@
       "u1": "https://beian.miit.gov.cn/",
       "s2": "Alibaba Cloud — Special verification of ICP filing information",
       "u2": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/special-verification-of-icp-filing-information",
-      "s3": "apihz.cn — public API documentation",
-      "u3": "https://www.apihz.cn/"
+      "s3": "RFC 9457 — Problem Details for HTTP APIs",
+      "u3": "https://www.rfc-editor.org/rfc/rfc9457.html"
     },
     "cta": {
       "href": "https://icp-check.kineticlinks.net/",

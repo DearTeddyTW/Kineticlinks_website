@@ -982,7 +982,7 @@
     "s1": {
       "title": "19 個網域，四種類別",
       "p1": "樣本分四類，每一類的正確答案都能獨立覆核：**十個仍在有效備案狀態的冷門網域**（備案號與主體名稱可在工信部系統比對）、**一個曾經備案但已失效的網域**、**五個中國大型網站**（baidu、taobao、qq、zhihu、bilibili，備案號公開可查），以及**三個確定沒有備案的網域**（google.com、github.com，還有我們自己的 kineticlinks.net）。",
-      "p2": "最後那三個是反向對照，用途是抓「亂猜」——工具如果把它們判成有備案，那它回報的就不是查詢結果。對照組則選了一個公開的免費 ICP 查詢 API（apihz.cn），使用它文件上的展示金鑰呼叫。兩邊跑的是同一批網域。",
+      "p2": "最後那三個是反向對照，用途是抓「亂猜」——工具如果把它們判成有備案，那它回報的就不是查詢結果。對照組則選了一個公開的免費 ICP 查詢 API，使用它文件上的展示金鑰呼叫。兩邊跑的是同一批網域。",
       "p3": "值得先看的是最後一列。大多數人測查詢工具時只會丟有備案的網域進去，但真正暴露問題的往往是反向對照——正確答案是「沒有」的那一種。"
     },
     "table": {
@@ -1060,8 +1060,8 @@
       "u1": "https://beian.miit.gov.cn/",
       "s2": "阿里雲 — ICP 備案資訊專項核查指南",
       "u2": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/special-verification-of-icp-filing-information",
-      "s3": "apihz.cn — 公開介面文件",
-      "u3": "https://www.apihz.cn/"
+      "s3": "RFC 9457 — HTTP API 的問題詳情格式（錯誤該如何表達）",
+      "u3": "https://www.rfc-editor.org/rfc/rfc9457.html"
     },
     "cta": {
       "href": "https://icp-check.kineticlinks.net/",
