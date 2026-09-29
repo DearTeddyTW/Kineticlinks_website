@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>ICP Lookup API Test: Finding Baidu Proves Nothing - Kineticlinks</title>
+    <meta name="title" content="ICP Lookup API Test: Finding Baidu Proves Nothing - Kineticlinks">
+    <meta name="description" content="Nineteen domains of known status run against an ICP filing lookup API. The worst failure is not a miss: it is HTTP 200 with the error string in the ICP field.">
+    <meta name="keywords" content="ICP filing lookup, ICP filing API, MIIT filing check, ICP number lookup, beian lookup API, pre-filed domain">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-lookup-api-accuracy/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/">
+    <meta property="og:title" content="ICP Lookup API Test: Finding Baidu Proves Nothing - Kineticlinks">
+    <meta property="og:description" content="Nineteen domains of known status run against an ICP filing lookup API. The worst failure is not a miss: it is HTTP 200 with the error string in the ICP field.">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-09-29">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/">
+    <meta property="twitter:title" content="ICP Lookup API Test: Finding Baidu Proves Nothing - Kineticlinks">
+    <meta property="twitter:description" content="Nineteen domains of known status run against an ICP filing lookup API. The worst failure is not a miss: it is HTTP 200 with the error string in the ICP field.">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Finding Baidu Doesn't Mean Finding the Domain You Care About",
+      "description": "Nineteen domains of known status run against an ICP filing lookup API. The worst failure is not a miss: it is HTTP 200 with the error string in the ICP field.",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-09-29",
+      "dateModified": "2026-09-29",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kineticlinks.net/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.kineticlinks.net/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Finding Baidu Doesn't Mean Finding the Domain You Care About",
+          "item": "https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
+    <script>
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/en/#home">Home</a>
+                <a href="/en/#services">Services</a>
+                <a href="/en/#platforms">Platforms</a>
+                <a href="/en/blog/">Blog</a>
+                <a href="/en/#about">About</a>
+                <a href="/en/#contact" class="btn btn-outline">Contact</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">English ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/icp-lookup-api-accuracy/">繁體中文</a>
+                        <a href="/en/blog/icp-lookup-api-accuracy/">English</a>
+                        <a href="/zh-cn/blog/icp-lookup-api-accuracy/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="Open menu"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/en/">Home</a>
+            <span>/</span>
+            <a href="/en/blog/">Blog</a>
+            <span>/</span>
+            <span class="current">ICP Lookup API Test</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">China Networking</div>
+                <h1>Finding Baidu Doesn't Mean Finding the Domain You Care About</h1>
+                <div class="article-meta">
+                    <time datetime="2026-09-29">September 29, 2026</time>
+                    <span class="dot">·</span>
+                    <span>9 min read</span>
+                </div>
+                <p class="article-lead">The instinctive way to check whether an ICP filing lookup tool works is to throw <code>baidu.com</code> at it. It comes back with a filing number, so the tool looks fine.
+
+That test has almost no discriminating power. The situations where you actually need a filing status — sizing up a pre-filed domain before buying it, confirming a hosting relationship is still active, checking what a counterparty told you — never involve Baidu. They involve domains you have never heard of. We ran 19 domains of known status through two tools, and the finding worth writing up isn't which one had better coverage. It's <strong>a failure mode that quietly writes wrong data into your database</strong>.</p>
+                <aside class="affiliate-note">One of the tools compared here is the ICP filing lookup service Kineticlinks builds and operates, and we designed and ran the test ourselves. Treat this as a published method rather than a neutral review. The sample, the calls and the comparison endpoint are all described below, so you can re-run it with domains whose status you already know. If your results differ, we would like to hear about it.</aside>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>Nineteen domains, four categories</h2>
+                <p>The sample splits into four groups, each with an answer that can be checked independently: <strong>ten obscure domains holding valid filings</strong> (filing number and registrant verifiable against the MIIT system), <strong>one domain that was filed but no longer is</strong>, <strong>five large Chinese sites</strong> (baidu, taobao, qq, zhihu, bilibili, whose filing numbers are public), and <strong>three domains that definitely have no filing</strong> (google.com, github.com, and our own kineticlinks.net).</p>
+                <p>Those last three are the reverse controls, and their job is to catch guessing — if a tool reports them as filed, what it is returning isn't a lookup result. For comparison we used a public, free ICP lookup API (apihz.cn) called with the demo key from its own documentation. Both tools saw the same 19 domains.</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Kineticlinks</th>
+                                    <th>Comparison (free public API)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>Obscure domains, all validly filed (10)</td>
+                                    <td class="num">10 / 10</td>
+                                    <td>1 correct; 8 reported "lookup failed or no filing"; 1 reported success with "lookup failed" as the field value</td>
+                                </tr>
+                                <tr class="">
+                                    <td>Previously filed, now lapsed (1)</td>
+                                    <td class="num">1 / 1</td>
+                                    <td>1 correct</td>
+                                </tr>
+                                <tr class="">
+                                    <td>Large Chinese sites (5)</td>
+                                    <td class="num">5 / 5</td>
+                                    <td>5 correct, with matching filing numbers and registrants</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>Definitely unfiled (3, reverse control)</td>
+                                    <td class="num">3 / 3</td>
+                                    <td>1 correct; 1 returned a retryable error; 1 reported as filed</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>The same 19 domains through both tools. The bottom row is the category most people never test.</figcaption>
+                </figure>
+
+                <p>Start with the bottom row. Most people test a lookup tool by feeding it domains that do have filings, but the category that exposes problems is usually the reverse control — the one where the correct answer is "no".</p>
+
+                <!-- Why -->
+                <h2>Three findings</h2>
+                <p>Three things in this data are worth separating out.</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>The failures cluster in the only category that discriminates</strong>
+                        <span>The comparison API got all five large Chinese sites right, filing numbers and registrant names included — and got one out of ten obscure filed domains. That distribution isn't random. It points at coverage: popular domains get indexed and maintained, obscure ones may never have entered the dataset at all. Obscure domains are exactly what people look up.</span>
+                    </li>
+                    <li>
+                        <strong>Reports success, but every field says "lookup failed"</strong>
+                        <span>Some queries came back with HTTP 200 and a <code>code</code> field of 200, while <code>icp</code>, <code>unit</code>, <code>domain</code> and <code>time</code> were each set to the string 查询失败 — "lookup failed". To calling code that is a successful query, and those two characters get stored as the filing number and the registrant name. It is much harder to notice than an outright error.</span>
+                    </li>
+                    <li>
+                        <strong>The same domain gives different answers at different times</strong>
+                        <span>We ran the set twice. In the first run <code>kineticlinks.net</code> came back with the success-but-garbage response described above; in the second it was correct, and <code>google.com</code> and <code>0592tk.com</code> drew the bad response instead. The behaviour is intermittent, so passing a test once says nothing about the next call.</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>Why "success" is more dangerous than failure</h2>
+                <p>Ask the comparison API about <code>google.com</code> and this comes back — HTTP 200, <code>code</code> 200, a syntactically perfect success: <code>{"code": 200, "icp": "查询失败", "unit": "查询失败", "domain": "查询失败", "time": "查询失败"}</code></p>
+                <p><code>google.com</code> obviously has no ICP filing. But nothing in that response says the lookup failed: the status is success and the filing-number field has a value. Calling code written as <code>if resp["icp"]: mark_as_filed()</code> — the most natural way to write it — marks google.com as filed and stores "lookup failed" as its filing number.</p>
+
+                <aside class="callout">
+                    <p>An API that reports failure stops your pipeline, and you find out immediately. An API that reports success with a garbage value lets wrong data flow into your database, your reports and your decisions, with nothing anywhere turning red.</p>
+                </aside>
+
+                <p>The same response shape appeared for <code>0592tk.com</code> — a domain that <strong>does</strong> hold a valid filing. So the value in that field proves neither presence nor absence of a filing; it is simply an error message occupying a data field. From the outside, two opposite situations look identical. This isn't a question of accuracy rates, it's a question of response design: the error has no way to express itself. Any lookup API should make "definitely yes", "definitely no" and "couldn't tell you this time" structurally distinguishable, or the caller has nothing to work with.</p>
+
+                <!-- Why manual fails -->
+                <h2>What this test does not prove</h2>
+                <p>The sample is 19 domains, one comparison tool, one point in time (September 29, 2026). That is not enough to infer any tool's overall accuracy, and it shouldn't be read as a general rule — it is what happened in this test, not an industry conclusion. Some specific limits: the obscure domains all came from one source rather than a random sample, and the comparison used a free endpoint with a published demo key, so a paid tier may draw on entirely different data. We also deliberately left speed out of the comparison — that demo key permits roughly one query every 20 seconds, and we slowed our calls to respect it, so presenting the elapsed time as a performance result would be dishonest.</p>
+                <p>One more thing that needs saying plainly: one of the tools under test is ours, and we designed and ran the test. Our own tool has had the same class of problem — in earlier testing it returned <code>unknown</code> for every large Chinese site, and a run before that failed in bulk under rate limiting; both were found and fixed during this testing. Our first comparison run also hammered the free endpoint hard enough to trigger its rate limiter, which made that run our fault, so we discarded it and re-ran. We are writing this down because a comparison that only shows the author scoring full marks is not worth reading. The method is the part worth taking away, not the score.</p>
+
+                <!-- How to respond -->
+                <h2>Three steps to check a lookup tool yourself</h2>
+                <p>Whichever tool you end up with, these three steps filter out the unusable ones before you wire anything in:</p>
+
+                <h3>1. Put obscure domains and reverse controls in the sample</h3>
+                <p>Testing only with well-known sites is not testing. Find a handful of domains whose status you already know but that nobody has heard of, and add two or three that <strong>definitely have no filing</strong>. The second group catches guessing — a lot of problems only surface when the correct answer is negative.</p>
+
+                <h3>2. Check that "lookup failed" and "no filing" are distinguishable</h3>
+                <p>Those two mean opposite things, yet plenty of APIs collapse them into one response. Deliberately send a nonexistent domain, a malformed string, or a call while rate-limited, and look at what comes back. If error text can appear inside a data field, that API cannot be wired directly into anything that writes to a database.</p>
+
+                <h3>3. Run the same set twice</h3>
+                <p>Intermittent bad responses don't show up in a single pass. Re-run the same domains after a gap and compare the two sets of results. Wherever they disagree is a problem you will hit in production and struggle to reproduce.</p>
+
+                <!-- Checklist -->
+                <h2>Three questions to ask before buying a lookup API</h2>
+                <p>If you are wiring filing lookups into your own system, these three determine whether you can trust it:</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>Is the data live or a snapshot</strong>
+                        <span>Ask directly, and ask for the snapshot's refresh interval and coverage. This determines whether obscure domains resolve at all, and how long a lapsed filing takes to show up.</span>
+                    </li>
+                    <li>
+                        <strong>How are failures distinguished from "no filing"</strong>
+                        <span>Look at the actual response structure, not the prose in the documentation. Confirm that errors get their own status code or field instead of being packed into the filing-number field.</span>
+                    </li>
+                    <li>
+                        <strong>Rate limits, quotas and timeout behaviour</strong>
+                        <span>What are the per-second and daily ceilings, what comes back when you exceed them, and on an upstream timeout does it return an error or "no filing". That last one is the easiest to discover only after you go live.</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>In summary</h2>
+                <p>The part of this test worth remembering isn't the score, it's the shape of the failure: <strong>reports success, field has a value, the value is wrong</strong>. It doesn't raise an exception, so nobody notices, and it quietly records "lookup failed" as some domain's filing number. Finding Baidu proves very little; testing with domains that definitely have no filing tells you far more about whether a tool is usable.</p>
+                <p>Filing status isn't fixed once you've looked it up, either — a hosting provider withdrawing access, or a compliance review cancelling the record, can make it disappear with no warning at all. If you are evaluating a pre-filed domain, or wiring filing lookups into your own workflow, tell us what you are working with and we will look at it with you.</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>References</h3>
+                    <ul>
+                        <li><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">MIIT — ICP/IP Address/Domain Information Filing Management System</a></li>
+                        <li><a href="https://help.aliyun.com/zh/icp-filing/basic-icp-service/special-verification-of-icp-filing-information" target="_blank" rel="noopener">Alibaba Cloud — Special verification of ICP filing information</a></li>
+                        <li><a href="https://www.apihz.cn/" target="_blank" rel="noopener">apihz.cn — public API documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>Further reading and related services</h2>
+                <p class="article-related-desc">Directly related to this page's topic</p>
+                <div class="related-grid">
+                    <a href="/en/blog/icp-filing-explained/" class="related-card glass-panel">
+                        <span class="related-kicker">Technical article</span>
+                        <h3>ICP filing explained</h3>
+                        <p>Who needs one, how long it takes, and how pre-filed domain trading actually works.</p>
+                    </a>
+                    <a href="/en/blog/icp-filing-cancelled/" class="related-card glass-panel">
+                        <span class="related-kicker">Technical article</span>
+                        <h3>Why filings get cancelled</h3>
+                        <p>The usual cause isn't a violation, it's changing hosts — with no warning at all.</p>
+                    </a>
+                    <a href="/en/icp-check/" class="related-card glass-panel">
+                        <span class="related-kicker">Platform product</span>
+                        <h3>Live ICP filing lookup</h3>
+                        <p>Check MIIT filing validity and registrant details in one step.</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>Want to re-run this test with your own domains?</h2>
+                <p>The ICP filing lookup tool is open to use directly — enter a domain to see its current MIIT filing status, filing number and registrant. If you need batch access over an API, email us with your expected volume and use case.</p>
+                <div class="hero-actions">
+                    <a href="https://icp-check.kineticlinks.net/" target="_blank" rel="sponsored noopener" class="btn btn-primary">Check an ICP filing status</a>
+                    <a href="/en/blog/" class="btn btn-secondary">Back to all articles</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/en/cdn/">Content Delivery Network (CDN)</a>
+                    <a href="/en/vps/">Virtual Private Server (VPS)</a>
+                    <a href="/en/idc/">IDC Construction</a>
+                    <a href="/en/cloud/">Public Cloud Solutions</a>
+                    <a href="/en/ssl/">Automated SSL Platform</a>
+                    <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/icp-check/">Live ICP filing lookup</a>
+                    <a href="/en/blog/">Blog</a>
+                    <a href="/en/#contact">Contact</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=ded9249e" defer></script>
+</body>
+
+</html>

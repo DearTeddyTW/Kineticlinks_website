@@ -96,7 +96,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -289,6 +289,23 @@
                     </ul>
                     <span class="card-link">Learn More →</span>
                 </a>
+                <!-- ICP Check Platform Card -->
+                <a href="/en/icp-check/" class="service-card glass-panel interactive" style="display: block;">
+                    <div class="icon-wrapper">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Live ICP filing lookup</h3>
+                    <p>Check a domain's ICP filing status, registrant and approval details with China's MIIT in real time.</p>
+                    <ul class="feature-list">
+                        <li>Live MIIT ICP filing status lookup</li>
+                        <li>Verify registrant type, filing number and domain</li>
+                        <li>Batch checks and API access available on request</li>
+                    </ul>
+                    <span class="card-link">Learn More →</span>
+                </a>
             </div>
         </div>
     </section>
@@ -344,6 +361,17 @@
                 <p>Infrastructure notes from the front line</p>
             </div>
             <div class="article-list">
+                <a href="/en/blog/icp-lookup-api-accuracy/" class="article-card">
+                    <div class="article-card-meta">
+                        <span class="article-card-tag">China Networking</span>
+                        <time datetime="2026-09-29">September 29, 2026</time>
+                        <span>·</span>
+                        <span>9 min read</span>
+                    </div>
+                    <h2>Finding Baidu Doesn't Mean Finding the Domain You Care About</h2>
+                    <p>Nineteen domains of known status, run against an ICP filing lookup API. The worst failure isn't a miss — it's HTTP 200 with the error string sitting in the ICP number field.</p>
+                    <span class="card-link">Read the full article →</span>
+                </a>
                 <a href="/en/blog/icp-filing-cancelled/" class="article-card">
                     <div class="article-card-meta">
                         <span class="article-card-tag">China Networking</span>
@@ -364,17 +392,6 @@
                     </div>
                     <h2>Do Hong Kong Servers Need ICP Filing? The Exemption Isn't About Where You Bought It</h2>
                     <p>Hong Kong sits outside mainland filing rules, so no filing is required. But the exemption covers the paperwork rather than every regulation — and it most often lapses when a mainland node is switched on for speed.</p>
-                    <span class="card-link">Read the full article →</span>
-                </a>
-                <a href="/en/blog/http-caching-headers/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">Network Quality</span>
-                        <time datetime="2026-09-13">September 13, 2026</time>
-                        <span>·</span>
-                        <span>10 min read</span>
-                    </div>
-                    <h2>no-cache Does Not Mean Do Not Cache: What HTTP Caching Headers Actually Say</h2>
-                    <p>People reaching for no-cache to prevent caching are in fact permitting storage — it requires revalidation before reuse. no-store is the one that forbids storing, and the difference has real consequences.</p>
                     <span class="card-link">Read the full article →</span>
                 </a>
             </div>
@@ -496,6 +513,7 @@
                     <a href="/en/cloud/">Public Cloud Solutions</a>
                     <a href="/en/ssl/">Automated SSL Platform</a>
                     <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/icp-check/">Live ICP filing lookup</a>
                     <a href="/en/blog/">Blog</a>
                     <a href="#contact">Contact</a>
                 </div>

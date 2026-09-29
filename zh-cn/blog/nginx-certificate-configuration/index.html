@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -175,14 +175,14 @@
                     <span class="dot">·</span>
                     <span>约 9 分钟</span>
                 </div>
-                <p class="article-lead">`nginx -t` 显示 `test is successful`，于是你认为证书配置没问题。但它验证的范围比多数人以为的窄——<strong>它检查语法、也比对证书与私钥是否成对，但不会告诉你用户实际会拿到哪一张证书</strong>。这中间隔着三个 Nginx 特有的机制，每一个都能让「配置文件是对的」和「用户拿到对的证书」脱钩。</p>
+                <p class="article-lead"><code>nginx -t</code> 显示 <code>test is successful</code>，于是你认为证书配置没问题。但它验证的范围比多数人以为的窄——<strong>它检查语法、也比对证书与私钥是否成对，但不会告诉你用户实际会拿到哪一张证书</strong>。这中间隔着三个 Nginx 特有的机制，每一个都能让「配置文件是对的」和「用户拿到对的证书」脱钩。</p>
             </header>
 
             <div class="article-body">
 
                 <!-- What happened -->
                 <h2>nginx -t 到底验证了什么</h2>
-                <p>`nginx -t` 会解析配置文件、加载证书与私钥，并<strong>比对两者的模数是否相符</strong>——所以证书配错私钥确实会被挡下来，这点比很多人以为的严格。</p>
+                <p><code>nginx -t</code> 会解析配置文件、加载证书与私钥，并<strong>比对两者的模数是否相符</strong>——所以证书配错私钥确实会被挡下来，这点比很多人以为的严格。</p>
                 <p>但它的范围就到这里。它不知道你的证书涵盖哪些域名、不检查证书链是否完整、更不会模拟一次真实连接来看用户最后拿到什么。<strong>它验证的是「这份配置能不能加载」，不是「这份配置会产生什么结果」。</strong></p>
 
                 <!-- Timeline table -->
@@ -236,18 +236,18 @@
                     </li>
                     <li>
                         <strong>TLS 握手发生在 Nginx 知道域名之前</strong>
-                        <span>官方文档讲得很直接：SSL 连接在浏览器发送 HTTP 请求之前就已建立，此时 Nginx 还不知道对方要的是哪个域名，因此只能先提供 default server 的证书。SNI 解决了这个问题——浏览器在握手阶段就带上域名——但若请求没有匹配到任何 `server_name`，仍会落到 default server，拿到那个块的证书。</span>
+                        <span>官方文档讲得很直接：SSL 连接在浏览器发送 HTTP 请求之前就已建立，此时 Nginx 还不知道对方要的是哪个域名，因此只能先提供 default server 的证书。SNI 解决了这个问题——浏览器在握手阶段就带上域名——但若请求没有匹配到任何 <code>server_name</code>，仍会落到 default server，拿到那个块的证书。</span>
                     </li>
                     <li>
                         <strong>Nginx 只把文件里的第一张证书当作服务器证书</strong>
-                        <span>`ssl_certificate` 指向的文件可以包含多张证书，但<strong>服务器证书必须排在最前面</strong>，后面才是中间证书。官方文档明确要求这个顺序。如果拼接时顺序颠倒，Nginx 会拿中间证书去配对你的私钥，然后以 key values mismatch 启动失败——错误信息指向私钥，但真正的问题在顺序。</span>
+                        <span><code>ssl_certificate</code> 指向的文件可以包含多张证书，但<strong>服务器证书必须排在最前面</strong>，后面才是中间证书。官方文档明确要求这个顺序。如果拼接时顺序颠倒，Nginx 会拿中间证书去配对你的私钥，然后以 key values mismatch 启动失败——错误信息指向私钥，但真正的问题在顺序。</span>
                     </li>
                 </ol>
 
                 <!-- Impact -->
                 <h2>default server 为什么会咬到你</h2>
-                <p>Nginx 在同一个监听地址上，若没有任何 `server` 块标记 `default_server`，<strong>第一个块就自动成为默认</strong>。所以配置文件里块的排列顺序，会直接决定「域名不匹配时用户看到谁的证书」。</p>
-                <p>这造成的症状很容易误导：某个域名明明配置正确，用户却收到「证书属于别的域名」的警告。典型情境是新增了一个域名但 DNS 已经指过来、而 `server_name` 还没写对，或是有人直接用 IP 地址连接——这两种都会落到 default server。</p>
+                <p>Nginx 在同一个监听地址上，若没有任何 <code>server</code> 块标记 <code>default_server</code>，<strong>第一个块就自动成为默认</strong>。所以配置文件里块的排列顺序，会直接决定「域名不匹配时用户看到谁的证书」。</p>
+                <p>这造成的症状很容易误导：某个域名明明配置正确，用户却收到「证书属于别的域名」的警告。典型情境是新增了一个域名但 DNS 已经指过来、而 <code>server_name</code> 还没写对，或是有人直接用 IP 地址连接——这两种都会落到 default server。</p>
 
                 <aside class="callout">
                     <p>实务上的建议是<strong>明确指定一个 default_server，并让它是一个专门用来挡下不匹配请求的块</strong>，而不是让某个正式服务不小心兼任。那个块可以直接返回 444（关闭连接）或一个明确的错误页，这样至少症状会指向「这个域名没配置」，而不是「证书是别人的」——后者会让排查往完全错误的方向走。</p>
@@ -257,8 +257,8 @@
 
                 <!-- Why manual fails -->
                 <h2>确认用户实际拿到什么</h2>
-                <p>所有检查的原则都一样：<strong>不要看配置文件，要看服务器实际发送什么</strong>。`openssl s_client -connect 域名:443 -servername 域名` 会建立一次真实握手并打印证书，其中 `-servername` 就是发送 SNI，这一项不能省——省掉它等于在测试「没有 SNI 的客户端会拿到什么」，结果会是 default server 的证书。</p>
-                <p>要验证 reload 是否确实生效，比对证书的有效期起始时间（`notBefore`）最直接。如果线上供应的证书起始时间仍是旧的那一张，代表进程还没重新加载。这比检查文件修改时间可靠，因为文件早就更新了。</p>
+                <p>所有检查的原则都一样：<strong>不要看配置文件，要看服务器实际发送什么</strong>。<code>openssl s_client -connect 域名:443 -servername 域名</code> 会建立一次真实握手并打印证书，其中 <code>-servername</code> 就是发送 SNI，这一项不能省——省掉它等于在测试「没有 SNI 的客户端会拿到什么」，结果会是 default server 的证书。</p>
+                <p>要验证 reload 是否确实生效，比对证书的有效期起始时间（<code>notBefore</code>）最直接。如果线上供应的证书起始时间仍是旧的那一张，代表进程还没重新加载。这比检查文件修改时间可靠，因为文件早就更新了。</p>
 
                 <!-- How to respond -->
                 <h2>三个层次的配置检查</h2>
@@ -268,10 +268,10 @@
                 <p>它能挡下语法错误与证书私钥不配对，值得每次改完都跑。但通过不代表配置正确，只代表配置能被加载。把它当作必要条件而非充分条件。另外值得顺手清掉的是已经失效的配置，例如 <a href="/zh-cn/blog/ocsp-stapling-deprecated/">OCSP 装订</a>——它在多数证书上已经不再有作用。</p>
 
                 <h3>二、改完证书一定要 reload，并确认生效</h3>
-                <p>`nginx -s reload` 或对应的服务命令。重点是之后要<strong>实际连一次确认</strong>——reload 可能因为配置错误而失败，而旧的进程会继续正常服务，从外部看不出任何异状。</p>
+                <p><code>nginx -s reload</code> 或对应的服务命令。重点是之后要<strong>实际连一次确认</strong>——reload 可能因为配置错误而失败，而旧的进程会继续正常服务，从外部看不出任何异状。</p>
 
                 <h3>三、明确指定 default_server 与涵盖范围</h3>
-                <p>列出所有会连到这台机器的域名，确认每一个都有对应的 `server_name`，并指定一个专门的 default_server 接住其余的。没被涵盖的域名不会消失，只会静静拿到别人的证书。</p>
+                <p>列出所有会连到这台机器的域名，确认每一个都有对应的 <code>server_name</code>，并指定一个专门的 default_server 接住其余的。没被涵盖的域名不会消失，只会静静拿到别人的证书。</p>
 
                 <!-- Checklist -->
                 <h2>排查时该先确认的三件事</h2>
@@ -283,7 +283,7 @@
                     </li>
                     <li>
                         <strong>确认用户连的域名有没有对应块</strong>
-                        <span>如果错误信息说证书属于另一个域名，先查 `server_name` 是否涵盖，而不是怀疑证书本身。那张「别人的证书」通常就是 default server 的。</span>
+                        <span>如果错误信息说证书属于另一个域名，先查 <code>server_name</code> 是否涵盖，而不是怀疑证书本身。那张「别人的证书」通常就是 default server 的。</span>
                     </li>
                     <li>
                         <strong>确认证书文件的排列顺序</strong>
@@ -293,7 +293,7 @@
 
                 <!-- Conclusion -->
                 <h2>小结</h2>
-                <p>`nginx -t` 通过是必要条件，不是充分条件。它验证配置能否加载，但<strong>证书在内存里、TLS 握手早于域名判断、文件顺序决定哪张是服务器证书</strong>这三件事，都发生在它的检查范围之外。</p>
+                <p><code>nginx -t</code> 通过是必要条件，不是充分条件。它验证配置能否加载，但<strong>证书在内存里、TLS 握手早于域名判断、文件顺序决定哪张是服务器证书</strong>这三件事，都发生在它的检查范围之外。</p>
                 <p>这些机制本身没有问题，麻烦的是它们让「配置文件正确」产生了虚假的安全感。如果不想每次部署都逐项确认，我们的 SSL 证书自动化平台在签发后直接把完整证书链推送到各节点，减少手动编辑配置文件的环节。</p>
 
                 <!-- Sources -->
@@ -359,6 +359,7 @@
                     <a href="/zh-cn/cloud/">公有云架构解决方案</a>
                     <a href="/zh-cn/ssl/">SSL 证书自动化平台</a>
                     <a href="/zh-cn/speedtest/">全球三网测速平台</a>
+                    <a href="/zh-cn/icp-check/">ICP 备案状态即时查询</a>
                     <a href="/zh-cn/blog/">技术文章</a>
                     <a href="/zh-cn/#contact">联系我们</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

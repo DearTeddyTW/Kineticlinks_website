@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -175,7 +175,7 @@
                     <span class="dot">·</span>
                     <span>约 10 分钟</span>
                 </div>
-                <p class="article-lead">`Cache-Control: no-cache` 这个名字取得很糟。它<strong>不是</strong>「不要缓存」——它允许缓存存储这份响应，只是要求每次使用前先向源站确认还新不新。真正禁止存储的指令叫 `no-store`。这个命名造成的误解有实际后果：想保护敏感数据的人用了 no-cache，数据仍然被写到磁盘；想避免风险的人一律用 no-store，性能整个赔进去。</p>
+                <p class="article-lead"><code>Cache-Control: no-cache</code> 这个名字取得很糟。它<strong>不是</strong>「不要缓存」——它允许缓存存储这份响应，只是要求每次使用前先向源站确认还新不新。真正禁止存储的指令叫 <code>no-store</code>。这个命名造成的误解有实际后果：想保护敏感数据的人用了 no-cache，数据仍然被写到磁盘；想避免风险的人一律用 no-store，性能整个赔进去。</p>
             </header>
 
             <div class="article-body">
@@ -183,7 +183,7 @@
                 <!-- What happened -->
                 <h2>六个指令与它们实际的意思</h2>
                 <p>HTTP 缓存的规范是 RFC 9111，里面每个指令的语意都有明确定义。问题在于其中几个的名字与直觉不符，而多数人是从别人的配置文件复制过来、没查过规范。</p>
-                <p>最关键的区分是<strong>存储</strong>与<strong>使用</strong>：缓存可以存储一份响应，但在使用它之前可能需要先验证。`no-cache` 管的是后者，`no-store` 管的是前者——名字容易混淆，行为完全不同。</p>
+                <p>最关键的区分是<strong>存储</strong>与<strong>使用</strong>：缓存可以存储一份响应，但在使用它之前可能需要先验证。<code>no-cache</code> 管的是后者，<code>no-store</code> 管的是前者——名字容易混淆，行为完全不同。</p>
 
                 <!-- Timeline table -->
                 <figure class="data-table-wrap">
@@ -242,7 +242,7 @@
                 <ol class="reason-list">
                     <li>
                         <strong>用 no-cache 保护敏感数据是无效的</strong>
-                        <span>想让账单页面、个人资料不被留下痕迹，设了 `no-cache` 就以为安全了。但依规范，缓存<strong>仍然可以把整份响应写进磁盘</strong>，只是下次使用前要验证。共用电脑上的浏览器缓存、企业的代理服务器，都可能留着那份内容。要真正不留存，必须用 `no-store`。</span>
+                        <span>想让账单页面、个人资料不被留下痕迹，设了 <code>no-cache</code> 就以为安全了。但依规范，缓存<strong>仍然可以把整份响应写进磁盘</strong>，只是下次使用前要验证。共用电脑上的浏览器缓存、企业的代理服务器，都可能留着那份内容。要真正不留存，必须用 <code>no-store</code>。</span>
                     </li>
                     <li>
                         <strong>一律用 no-store 会赔掉性能</strong>
@@ -250,38 +250,38 @@
                     </li>
                     <li>
                         <strong>不知道 s-maxage 导致 CDN 与浏览器绑在一起</strong>
-                        <span>`max-age` 同时作用于浏览器与 CDN，所以想让 CDN 缓存久一点、浏览器短一点，用单一指令做不到。`s-maxage` 就是为此存在：它只对共享缓存生效，而且会覆盖 max-age。设定 `max-age=60, s-maxage=86400` 的意思是浏览器一分钟、CDN 一天——这是 CDN 调优最基本也最常被忽略的工具。</span>
+                        <span><code>max-age</code> 同时作用于浏览器与 CDN，所以想让 CDN 缓存久一点、浏览器短一点，用单一指令做不到。<code>s-maxage</code> 就是为此存在：它只对共享缓存生效，而且会覆盖 max-age。设定 <code>max-age=60, s-maxage=86400</code> 的意思是浏览器一分钟、CDN 一天——这是 CDN 调优最基本也最常被忽略的工具。</span>
                     </li>
                 </ol>
 
                 <!-- Impact -->
                 <h2>Vary：决定缓存键的那个标头</h2>
-                <p>缓存默认以网址作为键。但如果同一个网址会依请求标头返回不同内容（例如依 `Accept-Encoding` 给压缩或未压缩版本），缓存必须知道这件事，否则会把压缩版回给不支持的客户端。`Vary` 就是用来声明「这些请求标头会影响响应内容」。</p>
-                <p>依规范，缓存在使用已存储的响应之前，`Vary` 列出的每一个请求标头都必须与当初那次请求相符，否则不得直接使用。<strong>所以 Vary 列得越多，缓存命中率越低</strong>——每一个被列入的标头都会让缓存键再细分一次。</p>
+                <p>缓存默认以网址作为键。但如果同一个网址会依请求标头返回不同内容（例如依 <code>Accept-Encoding</code> 给压缩或未压缩版本），缓存必须知道这件事，否则会把压缩版回给不支持的客户端。<code>Vary</code> 就是用来声明「这些请求标头会影响响应内容」。</p>
+                <p>依规范，缓存在使用已存储的响应之前，<code>Vary</code> 列出的每一个请求标头都必须与当初那次请求相符，否则不得直接使用。<strong>所以 Vary 列得越多，缓存命中率越低</strong>——每一个被列入的标头都会让缓存键再细分一次。</p>
 
                 <aside class="callout">
-                    <p>最常见的灾难是 `Vary: User-Agent`。User-Agent 字符串的变体数以万计，等于为每一种浏览器版本各存一份——实际效果接近完全停用缓存，但配置看起来一切正常，只是命中率莫名其妙地低。相对地 `Vary: Accept-Encoding` 是合理且必要的，因为它的取值只有少数几种。</p>
+                    <p>最常见的灾难是 <code>Vary: User-Agent</code>。User-Agent 字符串的变体数以万计，等于为每一种浏览器版本各存一份——实际效果接近完全停用缓存，但配置看起来一切正常，只是命中率莫名其妙地低。相对地 <code>Vary: Accept-Encoding</code> 是合理且必要的，因为它的取值只有少数几种。</p>
                 </aside>
 
-                <p>如果您的 CDN 命中率低得不合理，`Vary` 是第一个该检查的地方。这个问题不会产生任何错误信息，只会安静地让每一次请求都回源。</p>
+                <p>如果您的 CDN 命中率低得不合理，<code>Vary</code> 是第一个该检查的地方。这个问题不会产生任何错误信息，只会安静地让每一次请求都回源。</p>
 
                 <!-- Why manual fails -->
                 <h2>过期之后：ETag 与条件式请求</h2>
-                <p>缓存过期不代表内容变了。这时候缓存可以发出<strong>条件式请求</strong>：带上先前拿到的 `ETag`（内容指纹）或 `Last-Modified`（修改时间），问源站「还是这一份吗？」。如果没变，源站回 `304 Not Modified`，只有标头没有内容。</p>
-                <p>这就是 `no-cache` 真正的用途——它强制每次都走这个验证流程，但保留了 304 的快速路径。对于「必须是最新、但通常不会变」的内容（例如 HTML 首页），`no-cache` 加上 ETag 的组合，比起 `no-store` 每次完整传输有效率得多，同时仍保证用户不会看到旧内容。</p>
+                <p>缓存过期不代表内容变了。这时候缓存可以发出<strong>条件式请求</strong>：带上先前拿到的 <code>ETag</code>（内容指纹）或 <code>Last-Modified</code>（修改时间），问源站「还是这一份吗？」。如果没变，源站回 <code>304 Not Modified</code>，只有标头没有内容。</p>
+                <p>这就是 <code>no-cache</code> 真正的用途——它强制每次都走这个验证流程，但保留了 304 的快速路径。对于「必须是最新、但通常不会变」的内容（例如 HTML 首页），<code>no-cache</code> 加上 ETag 的组合，比起 <code>no-store</code> 每次完整传输有效率得多，同时仍保证用户不会看到旧内容。</p>
 
                 <!-- How to respond -->
                 <h2>三个层次的配置</h2>
                 <p>实务上可以依内容性质分成三类处理：</p>
 
                 <h3>一、带版本或指纹的静态资源</h3>
-                <p>文件名含哈希的 JS、CSS、图片，内容永远不会变（变了就是新文件名）。这类可以设很长的 max-age 并加上 `immutable`，让浏览器连验证都省下。这是性能收益最大、风险最低的一类。</p>
+                <p>文件名含哈希的 JS、CSS、图片，内容永远不会变（变了就是新文件名）。这类可以设很长的 max-age 并加上 <code>immutable</code>，让浏览器连验证都省下。这是性能收益最大、风险最低的一类。</p>
 
                 <h3>二、会变动但不敏感的内容</h3>
-                <p>HTML 页面、API 的公开响应。适合 `no-cache` 或短的 max-age 搭配 ETag——确保拿到最新版本，但不变时只付出一次 304 的成本。若想让 CDN 挡掉大部分流量，再用 s-maxage 拉长边缘的缓存时间。</p>
+                <p>HTML 页面、API 的公开响应。适合 <code>no-cache</code> 或短的 max-age 搭配 ETag——确保拿到最新版本，但不变时只付出一次 304 的成本。若想让 CDN 挡掉大部分流量，再用 s-maxage 拉长边缘的缓存时间。</p>
 
                 <h3>三、含个人数据的响应</h3>
-                <p>登录后的页面、账务信息、任何带身份的内容。这类要用 `no-store`，而不是 `no-cache`。如果只是不想让 CDN 存、但浏览器可以存，那是 `private` 的用途。三者不要混用。</p>
+                <p>登录后的页面、账务信息、任何带身份的内容。这类要用 <code>no-store</code>，而不是 <code>no-cache</code>。如果只是不想让 CDN 存、但浏览器可以存，那是 <code>private</code> 的用途。三者不要混用。</p>
 
                 <!-- Checklist -->
                 <h2>排查缓存问题时该先确认的三件事</h2>
@@ -297,14 +297,14 @@
                     </li>
                     <li>
                         <strong>确认你看的是哪一层缓存</strong>
-                        <span>浏览器、CDN 边缘节点、反向代理各有各的存储。响应中的 `Age` 标头会告诉你这份内容在缓存里待了多久——用它判断内容是从哪一层来的，比猜测可靠。</span>
+                        <span>浏览器、CDN 边缘节点、反向代理各有各的存储。响应中的 <code>Age</code> 标头会告诉你这份内容在缓存里待了多久——用它判断内容是从哪一层来的，比猜测可靠。</span>
                     </li>
                 </ol>
 
                 <!-- Conclusion -->
                 <h2>小结</h2>
-                <p>`no-cache` 允许存储、要求验证；`no-store` 才是禁止存储。这个命名造成的误解，一边让敏感数据在以为受保护的情况下被写入磁盘，一边让过度保守的配置牺牲掉整个缓存层的价值。<strong>两种错误的代价不同，但根源是同一个。</strong></p>
-                <p>而真正决定 CDN 效果的往往不是这些指令本身，是 `Vary` 与 `s-maxage` 这两个较少被谈到的部分。如果您的跨境流量需要靠 CDN 挡下大部分回源，这两项的配置比节点数量更有影响。</p>
+                <p><code>no-cache</code> 允许存储、要求验证；<code>no-store</code> 才是禁止存储。这个命名造成的误解，一边让敏感数据在以为受保护的情况下被写入磁盘，一边让过度保守的配置牺牲掉整个缓存层的价值。<strong>两种错误的代价不同，但根源是同一个。</strong></p>
+                <p>而真正决定 CDN 效果的往往不是这些指令本身，是 <code>Vary</code> 与 <code>s-maxage</code> 这两个较少被谈到的部分。如果您的跨境流量需要靠 CDN 挡下大部分回源，这两项的配置比节点数量更有影响。</p>
 
                 <!-- Sources -->
                 <div class="article-sources">
@@ -369,6 +369,7 @@
                     <a href="/zh-cn/cloud/">公有云架构解决方案</a>
                     <a href="/zh-cn/ssl/">SSL 证书自动化平台</a>
                     <a href="/zh-cn/speedtest/">全球三网测速平台</a>
+                    <a href="/zh-cn/icp-check/">ICP 备案状态即时查询</a>
                     <a href="/zh-cn/blog/">技术文章</a>
                     <a href="/zh-cn/#contact">联系我们</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

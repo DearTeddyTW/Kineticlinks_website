@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -237,7 +237,7 @@
                 <ol class="reason-list">
                     <li>
                         <strong>上傳了只含 leaf 的憑證檔</strong>
-                        <span>這是最常見的一種。憑證機構通常會給你數個檔案，其中一個只有你的憑證本身，另一個才是包含中繼憑證的完整鏈。以 Let's Encrypt 為例，`cert.pem` 只有 leaf，`fullchain.pem` 才是完整的——裝設定時挑錯檔案，服務會正常啟動，錯誤要等到特定客戶端連進來才浮現。</span>
+                        <span>這是最常見的一種。憑證機構通常會給你數個檔案，其中一個只有你的憑證本身，另一個才是包含中繼憑證的完整鏈。以 Let's Encrypt 為例，<code>cert.pem</code> 只有 leaf，<code>fullchain.pem</code> 才是完整的——裝設定時挑錯檔案，服務會正常啟動，錯誤要等到特定客戶端連進來才浮現。</span>
                     </li>
                     <li>
                         <strong>手動安裝時漏掉中繼憑證</strong>
@@ -262,7 +262,7 @@
 
                 <!-- Why manual fails -->
                 <h2>怎麼確認伺服器送出了什麼</h2>
-                <p>最直接的方式是用 `openssl s_client -connect 網域:443 -servername 網域 -showcerts` 連上去，它會列出伺服器實際送出的所有憑證。輸出裡每一個 `s:`（subject）與 `i:`（issuer）配對就是鏈的一段——如果只看到一張憑證，那就是只送了 leaf。</p>
+                <p>最直接的方式是用 <code>openssl s_client -connect 網域:443 -servername 網域 -showcerts</code> 連上去，它會列出伺服器實際送出的所有憑證。輸出裡每一個 <code>s:</code>（subject）與 <code>i:</code>（issuer）配對就是鏈的一段——如果只看到一張憑證，那就是只送了 leaf。</p>
                 <p>正常的情況下，你會看到 leaf 的 issuer 等於下一張憑證的 subject，一路串接到根憑證或某張已知的中繼憑證為止。<strong>檢查要從外部發起</strong>，而且要對著使用者實際連到的位址——如果服務前面有 CDN，要確認你測的是哪一層，因為 CDN 節點與源站可能裝著不同的憑證。</p>
 
                 <!-- How to respond -->
@@ -270,7 +270,7 @@
                 <p>確認問題存在之後，依序處理：</p>
 
                 <h3>一、換成完整鏈的憑證檔</h3>
-                <p>把設定指向包含中繼憑證的那個檔案（Let's Encrypt 是 `fullchain.pem`），或在管理介面把中繼憑證補進對應欄位。根憑證送不送都可以，多送一張只是多幾百位元組，不會造成錯誤。改完記得重新載入服務——檔案換了但服務沒 reload，等於沒改，<a href="/blog/nginx-certificate-configuration/">Nginx 的憑證載入機制</a>一文有詳細說明。</p>
+                <p>把設定指向包含中繼憑證的那個檔案（Let's Encrypt 是 <code>fullchain.pem</code>），或在管理介面把中繼憑證補進對應欄位。根憑證送不送都可以，多送一張只是多幾百位元組，不會造成錯誤。改完記得重新載入服務——檔案換了但服務沒 reload，等於沒改，<a href="/blog/nginx-certificate-configuration/">Nginx 的憑證載入機制</a>一文有詳細說明。</p>
 
                 <h3>二、確認每一個終止 TLS 的位置都改到</h3>
                 <p>源站、每個 CDN 節點、負載平衡器都各自持有憑證。只改了源站而 CDN 節點還是舊的，對使用者而言問題依然存在。這一點跟憑證到期的處理是同一個道理——憑證問題幾乎都出在「有些地方改了、有些沒有」。</p>
@@ -364,6 +364,7 @@
                     <a href="/cloud/">公有雲架構解決方案</a>
                     <a href="/ssl/">SSL 憑證自動化平台</a>
                     <a href="/speedtest/">全球三網測速平台</a>
+                    <a href="/icp-check/">ICP 備案狀態即時查詢</a>
                     <a href="/blog/">技術文章</a>
                     <a href="/#contact">聯絡我們</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

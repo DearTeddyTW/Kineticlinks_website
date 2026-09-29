@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -183,7 +183,7 @@
                 <!-- What happened -->
                 <h2>「续签成功」和「没事」是两件事</h2>
                 <p>一次完整的证书更新其实有四个阶段：向证书机构申请、完成域名验证、把新证书部署到每一个 TLS 端点、确认用户实际拿到的是新证书。ACME 这类自动化工具处理的是<strong>前两个阶段</strong>，第三阶段依配置而定，第四阶段则几乎没有工具会自动帮你做。</p>
-                <p>问题就出在这里：续签日志显示 `success`，指的是「证书拿到了」，不是「证书在服务」。中间还隔着部署与重新加载，任何一步失败都不会反映在续签日志上。</p>
+                <p>问题就出在这里：续签日志显示 <code>success</code>，指的是「证书拿到了」，不是「证书在服务」。中间还隔着部署与重新加载，任何一步失败都不会反映在续签日志上。</p>
 
                 <!-- Timeline table -->
                 <figure class="data-table-wrap">
@@ -265,7 +265,7 @@
                 <p>从最基本到最完整，可以分阶段建立：</p>
 
                 <h3>一、对外部端点做定期连接检查</h3>
-                <p>最基本的做法是排程一个检查，对每个对外域名建立 TLS 连接，读取实际供应的证书并比对到期日。命令行上 `openssl s_client -connect <域名>:443 -servername <域名>` 就能看到服务器实际返回的证书。把它包成排程并在阈值内告警，就已经能挡掉多数事故。</p>
+                <p>最基本的做法是排程一个检查，对每个对外域名建立 TLS 连接，读取实际供应的证书并比对到期日。命令行上 <code>openssl s_client -connect <域名>:443 -servername <域名></code> 就能看到服务器实际返回的证书。把它包成排程并在阈值内告警，就已经能挡掉多数事故。</p>
 
                 <h3>二、确认覆盖所有 TLS 端点</h3>
                 <p>列出所有会终止 TLS 的位置——源站、每个 CDN 节点、负载均衡器、API 域名、邮件服务器。只检查主域名会漏掉其他端点。如果 CDN 有多个节点，理想上应该从不同地区发起检查，因为节点的证书更新未必同步。</p>
@@ -359,6 +359,7 @@
                     <a href="/zh-cn/cloud/">公有云架构解决方案</a>
                     <a href="/zh-cn/ssl/">SSL 证书自动化平台</a>
                     <a href="/zh-cn/speedtest/">全球三网测速平台</a>
+                    <a href="/zh-cn/icp-check/">ICP 备案状态即时查询</a>
                     <a href="/zh-cn/blog/">技术文章</a>
                     <a href="/zh-cn/#contact">联系我们</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

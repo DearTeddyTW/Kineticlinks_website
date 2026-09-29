@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -175,14 +175,14 @@
                     <span class="dot">·</span>
                     <span>9 min read</span>
                 </div>
-                <p class="article-lead">`nginx -t` prints `test is successful`, so the certificate configuration must be fine. Its scope is narrower than most people assume, though: <strong>it checks syntax and verifies that the certificate and private key are a pair, but it cannot tell you which certificate users will actually receive</strong>. Three Nginx-specific mechanisms sit in between, and each can separate "the config is correct" from "users get the right certificate".</p>
+                <p class="article-lead"><code>nginx -t</code> prints <code>test is successful</code>, so the certificate configuration must be fine. Its scope is narrower than most people assume, though: <strong>it checks syntax and verifies that the certificate and private key are a pair, but it cannot tell you which certificate users will actually receive</strong>. Three Nginx-specific mechanisms sit in between, and each can separate "the config is correct" from "users get the right certificate".</p>
             </header>
 
             <div class="article-body">
 
                 <!-- What happened -->
                 <h2>What nginx -t Actually Validates</h2>
-                <p>`nginx -t` parses the configuration, loads the certificate and private key, and <strong>compares their moduli to confirm they match</strong> — so a certificate paired with the wrong key genuinely is caught, which is stricter than many expect.</p>
+                <p><code>nginx -t</code> parses the configuration, loads the certificate and private key, and <strong>compares their moduli to confirm they match</strong> — so a certificate paired with the wrong key genuinely is caught, which is stricter than many expect.</p>
                 <p>That's where its scope ends. It doesn't know which domains your certificate covers, doesn't check whether the chain is complete, and certainly doesn't simulate a real connection to see what a user ends up with. <strong>It validates that the configuration can load, not what the configuration will produce.</strong></p>
 
                 <!-- Timeline table -->
@@ -236,18 +236,18 @@
                     </li>
                     <li>
                         <strong>The TLS handshake happens before Nginx knows the domain</strong>
-                        <span>The documentation is direct about this: the SSL connection is established before the browser sends an HTTP request, so Nginx doesn't yet know which server name was requested and can only offer the default server's certificate. SNI fixes that by carrying the name in the handshake — but a request matching no `server_name` still lands on the default server and receives that block's certificate.</span>
+                        <span>The documentation is direct about this: the SSL connection is established before the browser sends an HTTP request, so Nginx doesn't yet know which server name was requested and can only offer the default server's certificate. SNI fixes that by carrying the name in the handshake — but a request matching no <code>server_name</code> still lands on the default server and receives that block's certificate.</span>
                     </li>
                     <li>
                         <strong>Nginx treats only the first certificate in the file as the server certificate</strong>
-                        <span>The file named by `ssl_certificate` may hold several certificates, but <strong>the server certificate must come first</strong>, followed by intermediates. The documentation requires that order explicitly. Concatenate them the other way round and Nginx tries to pair the intermediate with your private key, then fails to start with a key values mismatch — an error pointing at the key when the real problem is ordering.</span>
+                        <span>The file named by <code>ssl_certificate</code> may hold several certificates, but <strong>the server certificate must come first</strong>, followed by intermediates. The documentation requires that order explicitly. Concatenate them the other way round and Nginx tries to pair the intermediate with your private key, then fails to start with a key values mismatch — an error pointing at the key when the real problem is ordering.</span>
                     </li>
                 </ol>
 
                 <!-- Impact -->
                 <h2>Why the Default Server Bites</h2>
-                <p>On a given listening address, if no `server` block is marked `default_server`, <strong>the first block automatically becomes the default</strong>. So the order of blocks in your configuration directly decides whose certificate users see when nothing matches.</p>
-                <p>The resulting symptom misleads easily: a domain configured perfectly well, and users receiving a warning that the certificate belongs to some other domain. Typical causes are a newly added domain whose DNS already points here while `server_name` isn't right yet, or someone connecting by IP address — both land on the default server.</p>
+                <p>On a given listening address, if no <code>server</code> block is marked <code>default_server</code>, <strong>the first block automatically becomes the default</strong>. So the order of blocks in your configuration directly decides whose certificate users see when nothing matches.</p>
+                <p>The resulting symptom misleads easily: a domain configured perfectly well, and users receiving a warning that the certificate belongs to some other domain. Typical causes are a newly added domain whose DNS already points here while <code>server_name</code> isn't right yet, or someone connecting by IP address — both land on the default server.</p>
 
                 <aside class="callout">
                     <p>In practice, <strong>declare a default_server explicitly and make it a block whose only job is catching non-matching requests</strong>, rather than letting a real service inherit the role by accident. That block can return 444 (close the connection) or a clear error page, so the symptom points at "this domain isn't configured" instead of "the certificate belongs to someone else" — the latter sends diagnosis in entirely the wrong direction.</p>
@@ -257,8 +257,8 @@
 
                 <!-- Why manual fails -->
                 <h2>Confirming What Users Actually Receive</h2>
-                <p>The principle is the same throughout: <strong>don't read the config, look at what the server sends</strong>. `openssl s_client -connect domain:443 -servername domain` performs a real handshake and prints the certificate, and the `-servername` flag is what sends SNI. Don't omit it — without it you're testing what a client with no SNI receives, which is the default server's certificate.</p>
-                <p>To verify a reload took effect, compare the certificate's `notBefore` date. If what's served still carries the old start date, the process hasn't reloaded. That's more reliable than checking file modification times, since the file was updated long before.</p>
+                <p>The principle is the same throughout: <strong>don't read the config, look at what the server sends</strong>. <code>openssl s_client -connect domain:443 -servername domain</code> performs a real handshake and prints the certificate, and the <code>-servername</code> flag is what sends SNI. Don't omit it — without it you're testing what a client with no SNI receives, which is the default server's certificate.</p>
+                <p>To verify a reload took effect, compare the certificate's <code>notBefore</code> date. If what's served still carries the old start date, the process hasn't reloaded. That's more reliable than checking file modification times, since the file was updated long before.</p>
 
                 <!-- How to respond -->
                 <h2>Three Levels of Configuration Check</h2>
@@ -268,10 +268,10 @@
                 <p>It catches syntax errors and mismatched key pairs, and is worth running after every change. But passing means the configuration can load, not that it's correct. Necessary, not sufficient. Worth clearing out alongside it is configuration that no longer does anything — <a href="/en/blog/ocsp-stapling-deprecated/">OCSP stapling</a> being the common case.</p>
 
                 <h3>2. Always reload after changing certificates, then confirm</h3>
-                <p>`nginx -s reload` or the equivalent service command. What matters is <strong>connecting afterwards to confirm</strong> — a reload can fail on a configuration error while the old process keeps serving quite happily, showing nothing unusual from outside.</p>
+                <p><code>nginx -s reload</code> or the equivalent service command. What matters is <strong>connecting afterwards to confirm</strong> — a reload can fail on a configuration error while the old process keeps serving quite happily, showing nothing unusual from outside.</p>
 
                 <h3>3. Declare default_server and audit coverage</h3>
-                <p>List every domain that resolves to this machine, confirm each has a matching `server_name`, and designate a dedicated default_server for the rest. Uncovered domains don't disappear — they quietly receive someone else's certificate.</p>
+                <p>List every domain that resolves to this machine, confirm each has a matching <code>server_name</code>, and designate a dedicated default_server for the rest. Uncovered domains don't disappear — they quietly receive someone else's certificate.</p>
 
                 <!-- Checklist -->
                 <h2>Three Things to Establish While Diagnosing</h2>
@@ -283,7 +283,7 @@
                     </li>
                     <li>
                         <strong>Whether the requested domain has a matching block</strong>
-                        <span>If the error says the certificate belongs to another domain, check `server_name` coverage before suspecting the certificate. That "someone else's certificate" is usually the default server's.</span>
+                        <span>If the error says the certificate belongs to another domain, check <code>server_name</code> coverage before suspecting the certificate. That "someone else's certificate" is usually the default server's.</span>
                     </li>
                     <li>
                         <strong>The order of certificates in the file</strong>
@@ -293,7 +293,7 @@
 
                 <!-- Conclusion -->
                 <h2>In Summary</h2>
-                <p>`nginx -t` passing is necessary, not sufficient. It validates whether the configuration loads, while <strong>certificates living in memory, a handshake that precedes knowing the domain, and file order deciding which certificate is the server's</strong> all happen outside what it examines.</p>
+                <p><code>nginx -t</code> passing is necessary, not sufficient. It validates whether the configuration loads, while <strong>certificates living in memory, a handshake that precedes knowing the domain, and file order deciding which certificate is the server's</strong> all happen outside what it examines.</p>
                 <p>None of these mechanisms is wrong in itself; the trouble is the false confidence a correct-looking config creates. If you'd rather not verify each of these on every deployment, our SSL automation platform pushes complete chains to each node on issuance, removing the manual config editing step.</p>
 
                 <!-- Sources -->
@@ -359,6 +359,7 @@
                     <a href="/en/cloud/">Public Cloud Solutions</a>
                     <a href="/en/ssl/">Automated SSL Platform</a>
                     <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/icp-check/">Live ICP filing lookup</a>
                     <a href="/en/blog/">Blog</a>
                     <a href="/en/#contact">Contact</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

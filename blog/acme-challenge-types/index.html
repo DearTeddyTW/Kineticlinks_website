@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -232,7 +232,7 @@
                 <ol class="reason-list">
                     <li>
                         <strong>服務在 CDN 後面</strong>
-                        <span>CA 連過來時會先碰到 CDN 節點，而驗證檔案放在源站。除非 CDN 設定了對 `/.well-known/acme-challenge/` 路徑的回源穿透，否則 CA 讀到的是 CDN 的快取或 404。這是台灣與港澳團隊最常遇到的狀況，因為跨境服務幾乎都會掛 CDN。</span>
+                        <span>CA 連過來時會先碰到 CDN 節點，而驗證檔案放在源站。除非 CDN 設定了對 <code>/.well-known/acme-challenge/</code> 路徑的回源穿透，否則 CA 讀到的是 CDN 的快取或 404。這是台灣與港澳團隊最常遇到的狀況，因為跨境服務幾乎都會掛 CDN。</span>
                     </li>
                     <li>
                         <strong>後端有多台伺服器</strong>
@@ -257,7 +257,7 @@
 
                 <!-- Why manual fails -->
                 <h2>萬用字元憑證的硬限制</h2>
-                <p>如果你需要 `*.example.com` 這種萬用字元憑證，選擇題直接結束：<strong>只有 DNS-01 可以</strong>。HTTP-01 與 TLS-ALPN-01 都無法簽發萬用字元憑證，這不是設定問題，是協定層面的限制。</p>
+                <p>如果你需要 <code>*.example.com</code> 這種萬用字元憑證，選擇題直接結束：<strong>只有 DNS-01 可以</strong>。HTTP-01 與 TLS-ALPN-01 都無法簽發萬用字元憑證，這不是設定問題，是協定層面的限制。</p>
                 <p>這件事值得提早知道，因為它會反過來決定你的 DNS 供應商選擇。如果你的網域註冊商或 DNS 服務不提供 API，就無法自動化 DNS-01，也就拿不到自動續簽的萬用字元憑證——只能每次手動加 TXT 記錄。在效期已縮短到 200 天、未來將降至 47 天的情況下，手動處理不是可行的長期方案。</p>
 
                 <!-- How to respond -->
@@ -359,6 +359,7 @@
                     <a href="/cloud/">公有雲架構解決方案</a>
                     <a href="/ssl/">SSL 憑證自動化平台</a>
                     <a href="/speedtest/">全球三網測速平台</a>
+                    <a href="/icp-check/">ICP 備案狀態即時查詢</a>
                     <a href="/blog/">技術文章</a>
                     <a href="/#contact">聯絡我們</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

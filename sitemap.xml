@@ -72,12 +72,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.kineticlinks.net/icp-check/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/icp-check/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/icp-check/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/icp-check/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/icp-check/" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.kineticlinks.net/blog/</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/" />
     <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-lookup-api-accuracy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/" />
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -362,6 +382,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.kineticlinks.net/en/icp-check/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/icp-check/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/icp-check/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/icp-check/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/icp-check/" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.kineticlinks.net/en/blog/</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/" />
@@ -372,12 +402,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-lookup-api-accuracy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.kineticlinks.net/en/blog/icp-filing-cancelled/</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/icp-filing-cancelled/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-filing-cancelled/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-filing-cancelled/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-filing-cancelled/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -387,7 +427,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/hong-kong-server-icp-filing/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/hong-kong-server-icp-filing/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/hong-kong-server-icp-filing/" />
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -397,7 +437,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/http-caching-headers/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/http-caching-headers/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -407,7 +447,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/geodns-resolver-location/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/geodns-resolver-location/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/geodns-resolver-location/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -417,7 +457,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/free-vs-paid-ssl-certificates/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/free-vs-paid-ssl-certificates/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/free-vs-paid-ssl-certificates/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -427,7 +467,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/nginx-certificate-configuration/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/nginx-certificate-configuration/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/nginx-certificate-configuration/" />
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -437,7 +477,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/ocsp-stapling-deprecated/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -447,7 +487,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/incomplete-certificate-chain/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/incomplete-certificate-chain/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/incomplete-certificate-chain/" />
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -457,7 +497,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-filing-explained/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-filing-explained/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-filing-explained/" />
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -467,7 +507,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/dns-record-types/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/dns-record-types/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/dns-record-types/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -477,7 +517,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/domain-hijacking-protection/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/domain-hijacking-protection/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/domain-hijacking-protection/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -487,7 +527,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/connection-quality-monitoring/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/connection-quality-monitoring/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/connection-quality-monitoring/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -497,7 +537,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/reading-speed-test-results/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/reading-speed-test-results/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/reading-speed-test-results/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -507,7 +547,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/acme-challenge-types/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/acme-challenge-types/" />
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -517,7 +557,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/certificate-expiry-monitoring/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/certificate-expiry-monitoring/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -527,7 +567,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/domain-transfer-guide/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/domain-transfer-guide/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/domain-transfer-guide/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -537,7 +577,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/domain-name-guide/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/domain-name-guide/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/domain-name-guide/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -547,7 +587,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/china-network-latency/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/china-network-latency/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/china-network-latency/" />
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -557,7 +597,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/vps-buying-guide/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/vps-buying-guide/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/vps-buying-guide/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -567,7 +607,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/idc-explained/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/idc-explained/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/idc-explained/" />
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -577,7 +617,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/ssl-certificate-validity-200-days/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/ssl-certificate-validity-200-days/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -587,7 +627,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -597,7 +637,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/cdn/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/cdn/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/cdn/" />
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -607,7 +647,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/vps/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/vps/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/vps/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -617,7 +657,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/idc/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/idc/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/idc/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -627,7 +667,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/cloud/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/cloud/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/cloud/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -637,7 +677,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/ssl/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/ssl/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/ssl/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -647,7 +687,17 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/speedtest/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/speedtest/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/speedtest/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/zh-cn/icp-check/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/icp-check/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/icp-check/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/icp-check/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/icp-check/" />
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -657,7 +707,17 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kineticlinks.net/zh-cn/blog/icp-lookup-api-accuracy/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-lookup-api-accuracy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/" />
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -667,7 +727,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-filing-cancelled/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-filing-cancelled/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-filing-cancelled/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -677,7 +737,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/hong-kong-server-icp-filing/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/hong-kong-server-icp-filing/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/hong-kong-server-icp-filing/" />
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -687,7 +747,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/http-caching-headers/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/http-caching-headers/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/http-caching-headers/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -697,7 +757,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/geodns-resolver-location/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/geodns-resolver-location/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/geodns-resolver-location/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -707,7 +767,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/free-vs-paid-ssl-certificates/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/free-vs-paid-ssl-certificates/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/free-vs-paid-ssl-certificates/" />
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -717,7 +777,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/nginx-certificate-configuration/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/nginx-certificate-configuration/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/nginx-certificate-configuration/" />
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -727,7 +787,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ocsp-stapling-deprecated/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/ocsp-stapling-deprecated/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/ocsp-stapling-deprecated/" />
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -737,7 +797,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/incomplete-certificate-chain/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/incomplete-certificate-chain/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/incomplete-certificate-chain/" />
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -747,7 +807,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-filing-explained/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-filing-explained/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-filing-explained/" />
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -757,7 +817,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/dns-record-types/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/dns-record-types/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/dns-record-types/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -767,7 +827,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/domain-hijacking-protection/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/domain-hijacking-protection/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/domain-hijacking-protection/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -777,7 +837,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/connection-quality-monitoring/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/connection-quality-monitoring/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/connection-quality-monitoring/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -787,7 +847,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/reading-speed-test-results/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/reading-speed-test-results/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/reading-speed-test-results/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -797,7 +857,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/acme-challenge-types/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/acme-challenge-types/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/acme-challenge-types/" />
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -807,7 +867,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/certificate-expiry-monitoring/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/certificate-expiry-monitoring/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/certificate-expiry-monitoring/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -817,7 +877,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/domain-transfer-guide/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/domain-transfer-guide/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/domain-transfer-guide/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -827,7 +887,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/domain-name-guide/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/domain-name-guide/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/domain-name-guide/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -837,7 +897,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/china-network-latency/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/china-network-latency/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/china-network-latency/" />
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -847,7 +907,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/vps-buying-guide/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/vps-buying-guide/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/vps-buying-guide/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -857,7 +917,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/idc-explained/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/idc-explained/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/idc-explained/" />
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -867,7 +927,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/ssl-certificate-validity-200-days/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/ssl-certificate-validity-200-days/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/ssl-certificate-validity-200-days/" />
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

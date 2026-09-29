@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -183,7 +183,7 @@
                 <!-- What happened -->
                 <h2>「續簽成功」和「沒事」是兩件事</h2>
                 <p>一次完整的憑證更新其實有四個階段：向憑證機構申請、完成網域驗證、把新憑證部署到每一個 TLS 端點、確認使用者實際拿到的是新憑證。ACME 這類自動化工具處理的是<strong>前兩個階段</strong>，第三階段依設定而定，第四階段則幾乎沒有工具會自動幫你做。</p>
-                <p>問題就出在這裡：續簽日誌顯示 `success`，指的是「憑證拿到了」，不是「憑證在服務」。中間還隔著部署與重新載入，任何一步失敗都不會反映在續簽日誌上。</p>
+                <p>問題就出在這裡：續簽日誌顯示 <code>success</code>，指的是「憑證拿到了」，不是「憑證在服務」。中間還隔著部署與重新載入，任何一步失敗都不會反映在續簽日誌上。</p>
 
                 <!-- Timeline table -->
                 <figure class="data-table-wrap">
@@ -265,7 +265,7 @@
                 <p>從最基本到最完整，可以分階段建立：</p>
 
                 <h3>一、對外部端點做定期連線檢查</h3>
-                <p>最基本的作法是排程一個檢查，對每個對外網域建立 TLS 連線，讀取實際供應的憑證並比對到期日。命令列上 `openssl s_client -connect <網域>:443 -servername <網域>` 就能看到伺服器實際回傳的憑證。把它包成排程並在門檻內告警，就已經能擋掉多數事故。</p>
+                <p>最基本的作法是排程一個檢查，對每個對外網域建立 TLS 連線，讀取實際供應的憑證並比對到期日。命令列上 <code>openssl s_client -connect <網域>:443 -servername <網域></code> 就能看到伺服器實際回傳的憑證。把它包成排程並在門檻內告警，就已經能擋掉多數事故。</p>
 
                 <h3>二、確認涵蓋所有 TLS 端點</h3>
                 <p>列出所有會終止 TLS 的位置——源站、每個 CDN 節點、負載平衡器、API 網域、郵件伺服器。只檢查主網域會漏掉其他端點。如果 CDN 有多個節點，理想上應該從不同地區發起檢查，因為節點的憑證更新未必同步。</p>
@@ -359,6 +359,7 @@
                     <a href="/cloud/">公有雲架構解決方案</a>
                     <a href="/ssl/">SSL 憑證自動化平台</a>
                     <a href="/speedtest/">全球三網測速平台</a>
+                    <a href="/icp-check/">ICP 備案狀態即時查詢</a>
                     <a href="/blog/">技術文章</a>
                     <a href="/#contact">聯絡我們</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

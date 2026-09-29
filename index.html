@@ -96,7 +96,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -289,6 +289,23 @@
                     </ul>
                     <span class="card-link">了解更多 →</span>
                 </a>
+                <!-- ICP Check Platform Card -->
+                <a href="/icp-check/" class="service-card glass-panel interactive" style="display: block;">
+                    <div class="icon-wrapper">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>ICP 備案狀態即時查詢</h3>
+                    <p>即時查詢網域在中國工信部（MIIT）的 ICP 備案狀態、主體名稱與審核資訊。</p>
+                    <ul class="feature-list">
+                        <li>即時工信部 ICP 備案狀態查詢</li>
+                        <li>驗證主體性質、備案號與網域名稱</li>
+                        <li>批量檢測與 API 接取歡迎來信洽詢</li>
+                    </ul>
+                    <span class="card-link">了解更多 →</span>
+                </a>
             </div>
         </div>
     </section>
@@ -344,6 +361,17 @@
                 <p>來自第一線的基礎架構實務筆記</p>
             </div>
             <div class="article-list">
+                <a href="/blog/icp-lookup-api-accuracy/" class="article-card">
+                    <div class="article-card-meta">
+                        <span class="article-card-tag">中國網路</span>
+                        <time datetime="2026-09-29">2026 年 9 月 29 日</time>
+                        <span>·</span>
+                        <span>約 9 分鐘</span>
+                    </div>
+                    <h2>查得到百度，不代表查得到你要查的那個網域</h2>
+                    <p>用 19 個狀態已知的網域實測 ICP 備案查詢 API。最危險的失敗不是查不到，而是回報成功、並在每個欄位裡填進「查詢失敗」四個字——連沒有備案的網域也一樣。</p>
+                    <span class="card-link">閱讀全文 →</span>
+                </a>
                 <a href="/blog/icp-filing-cancelled/" class="article-card">
                     <div class="article-card-meta">
                         <span class="article-card-tag">中國網路</span>
@@ -364,17 +392,6 @@
                     </div>
                     <h2>香港伺服器要備案嗎：免備案的邊界不在你買在哪</h2>
                     <p>香港屬境外，確實不適用大陸的備案規定。但「免備案」免的是手續而不是所有規範，而且那道豁免最常在為了加速而開啟大陸節點時失效。</p>
-                    <span class="card-link">閱讀全文 →</span>
-                </a>
-                <a href="/blog/http-caching-headers/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">網路品質</span>
-                        <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                        <span>·</span>
-                        <span>約 10 分鐘</span>
-                    </div>
-                    <h2>no-cache 不是「不要快取」：HTTP 快取標頭的實際語意</h2>
-                    <p>用 no-cache 想擋住快取的人，其實允許了儲存——它要求的是每次使用前驗證。真正禁止儲存的是 no-store，而兩者的差別會直接影響敏感資料與 CDN 效能。</p>
                     <span class="card-link">閱讀全文 →</span>
                 </a>
             </div>
@@ -496,6 +513,7 @@
                     <a href="/cloud/">公有雲架構解決方案</a>
                     <a href="/ssl/">SSL 憑證自動化平台</a>
                     <a href="/speedtest/">全球三網測速平台</a>
+                    <a href="/icp-check/">ICP 備案狀態即時查詢</a>
                     <a href="/blog/">技術文章</a>
                     <a href="#contact">聯絡我們</a>
                 </div>

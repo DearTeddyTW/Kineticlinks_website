@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -183,7 +183,7 @@
                 <!-- What happened -->
                 <h2>"Renewal Succeeded" and "Everything's Fine" Are Different Claims</h2>
                 <p>A full certificate update has four stages: request from the CA, complete domain validation, deploy the new certificate to every TLS endpoint, and confirm users actually receive it. ACME tooling handles <strong>the first two</strong>; the third depends on your configuration; and almost nothing does the fourth for you automatically.</p>
-                <p>That's where the gap opens. A renewal log reading `success` means the certificate was obtained, not that it's being served. Deployment and reload still sit in between, and a failure at either never shows up in the renewal log.</p>
+                <p>That's where the gap opens. A renewal log reading <code>success</code> means the certificate was obtained, not that it's being served. Deployment and reload still sit in between, and a failure at either never shows up in the renewal log.</p>
 
                 <!-- Timeline table -->
                 <figure class="data-table-wrap">
@@ -265,7 +265,7 @@
                 <p>From the basics up, this can be built in stages:</p>
 
                 <h3>1. Scheduled external connection checks</h3>
-                <p>The basic version is a scheduled job that opens a TLS connection to each public domain, reads the certificate actually served, and compares the expiry date. On the command line, `openssl s_client -connect <domain>:443 -servername <domain>` shows exactly what the server returns. Wrap that in a schedule with threshold alerting and you've already prevented most incidents.</p>
+                <p>The basic version is a scheduled job that opens a TLS connection to each public domain, reads the certificate actually served, and compares the expiry date. On the command line, <code>openssl s_client -connect <domain>:443 -servername <domain></code> shows exactly what the server returns. Wrap that in a schedule with threshold alerting and you've already prevented most incidents.</p>
 
                 <h3>2. Cover every TLS endpoint</h3>
                 <p>List everywhere TLS terminates — origin, each CDN node, load balancers, API domains, mail servers. Checking only the main domain misses the rest. If your CDN has multiple nodes, ideally run checks from several regions, since node certificate updates don't always propagate in step.</p>
@@ -359,6 +359,7 @@
                     <a href="/en/cloud/">Public Cloud Solutions</a>
                     <a href="/en/ssl/">Automated SSL Platform</a>
                     <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/icp-check/">Live ICP filing lookup</a>
                     <a href="/en/blog/">Blog</a>
                     <a href="/en/#contact">Contact</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

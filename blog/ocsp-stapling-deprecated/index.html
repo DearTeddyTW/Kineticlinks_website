@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -175,7 +175,7 @@
                     <span class="dot">·</span>
                     <span>約 9 分鐘</span>
                 </div>
-                <p class="article-lead">如果你的 Nginx 設定裡有 `ssl_stapling on;`，而憑證是 Let's Encrypt 簽發的，<strong>那行設定從 2025 年 5 月起就沒有作用了</strong>——憑證裡已經不再包含 OCSP 網址，伺服器沒有東西可以查、也沒有東西可以裝訂。這不是設定錯誤，是整個機制被淘汰了。這篇說明發生了什麼、你該檢查什麼，以及撤銷檢查現在怎麼運作。</p>
+                <p class="article-lead">如果你的 Nginx 設定裡有 <code>ssl_stapling on;</code>，而憑證是 Let's Encrypt 簽發的，<strong>那行設定從 2025 年 5 月起就沒有作用了</strong>——憑證裡已經不再包含 OCSP 網址，伺服器沒有東西可以查、也沒有東西可以裝訂。這不是設定錯誤，是整個機制被淘汰了。這篇說明發生了什麼、你該檢查什麼，以及撤銷檢查現在怎麼運作。</p>
             </header>
 
             <div class="article-body">
@@ -236,7 +236,7 @@
                     </li>
                     <li>
                         <strong>2025 年 5 月 7 日：憑證中不再包含 OCSP 網址</strong>
-                        <span>這是影響最廣的一步。憑證裡沒有 OCSP 網址，伺服器就無從查詢，`ssl_stapling on;` 這類設定自此失去作用——不會報錯，只是靜默地什麼都不做。許多人的設定檔至今仍留著那幾行。</span>
+                        <span>這是影響最廣的一步。憑證裡沒有 OCSP 網址，伺服器就無從查詢，<code>ssl_stapling on;</code> 這類設定自此失去作用——不會報錯，只是靜默地什麼都不做。許多人的設定檔至今仍留著那幾行。</span>
                     </li>
                     <li>
                         <strong>2025 年 8 月 6 日：OCSP 服務完全關閉</strong>
@@ -257,7 +257,7 @@
 
                 <!-- Why manual fails -->
                 <h2>你現在該檢查什麼</h2>
-                <p>最直接的是看設定檔裡還有沒有殘留。Nginx 的 `ssl_stapling on;` 與 `ssl_stapling_verify on;`、Apache 的 `SSLUseStapling on` 這類指令，在憑證沒有 OCSP 網址的情況下不會造成錯誤，但也不再有任何效果。留著不會壞事，只是那是一段已經沒有意義的設定。</p>
+                <p>最直接的是看設定檔裡還有沒有殘留。Nginx 的 <code>ssl_stapling on;</code> 與 <code>ssl_stapling_verify on;</code>、Apache 的 <code>SSLUseStapling on</code> 這類指令，在憑證沒有 OCSP 網址的情況下不會造成錯誤，但也不再有任何效果。留著不會壞事，只是那是一段已經沒有意義的設定。</p>
                 <p>另一個要確認的是<strong>商用憑證的情況不同</strong>。這次變動是 Let's Encrypt 的決定，部分商業憑證機構仍在提供 OCSP 服務。如果你同時管理免費與商用憑證，兩者的行為會不一樣——判斷之前先確認該憑證實際上還有沒有 OCSP 網址。</p>
 
                 <!-- How to respond -->
@@ -359,6 +359,7 @@
                     <a href="/cloud/">公有雲架構解決方案</a>
                     <a href="/ssl/">SSL 憑證自動化平台</a>
                     <a href="/speedtest/">全球三網測速平台</a>
+                    <a href="/icp-check/">ICP 備案狀態即時查詢</a>
                     <a href="/blog/">技術文章</a>
                     <a href="/#contact">聯絡我們</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

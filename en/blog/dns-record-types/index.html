@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -246,7 +246,7 @@
                     </li>
                     <li>
                         <strong>An apex necessarily has SOA and NS records</strong>
-                        <span>Every domain's apex (`example.com` itself) must carry SOA and NS records — that's what makes it resolvable at all. Since the apex always has those, the previous rule means a CNAME can never be added there. The two cannot coexist.</span>
+                        <span>Every domain's apex (<code>example.com</code> itself) must carry SOA and NS records — that's what makes it resolvable at all. Since the apex always has those, the previous rule means a CNAME can never be added there. The two cannot coexist.</span>
                     </li>
                     <li>
                         <strong>So pointing an apex at a name requires an alternative</strong>
@@ -297,7 +297,7 @@
                     </li>
                     <li>
                         <strong>Verify against the authoritative server</strong>
-                        <span>`dig @authoritative-server name TYPE` queries the authoritative server directly, bypassing every cache, and confirms immediately whether the record itself is right. If the authoritative answer is correct but elsewhere is stale, you're simply waiting on TTL.</span>
+                        <span><code>dig @authoritative-server name TYPE</code> queries the authoritative server directly, bypassing every cache, and confirms immediately whether the record itself is right. If the authoritative answer is correct but elsewhere is stale, you're simply waiting on TTL.</span>
                     </li>
                 </ol>
 
@@ -369,6 +369,7 @@
                     <a href="/en/cloud/">Public Cloud Solutions</a>
                     <a href="/en/ssl/">Automated SSL Platform</a>
                     <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/icp-check/">Live ICP filing lookup</a>
                     <a href="/en/blog/">Blog</a>
                     <a href="/en/#contact">Contact</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

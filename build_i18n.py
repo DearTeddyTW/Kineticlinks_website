@@ -56,6 +56,7 @@ LANGS = [
 # Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
 # listed on the blog index. content_key is looked up in the locale JSON.
 ARTICLES = [
+    {'slug': 'icp-lookup-api-accuracy', 'content_key': 'article_icp_lookup_accuracy'},
     {'slug': 'icp-filing-cancelled', 'content_key': 'article_filing_cancelled'},
     {'slug': 'hong-kong-server-icp-filing', 'content_key': 'article_hk_filing'},
     {'slug': 'http-caching-headers', 'content_key': 'article_http_caching'},
@@ -89,6 +90,7 @@ PAGES = [
     {'template': 'src/service.html', 'slug': 'cloud', 'content_key': 'cloud_page'},
     {'template': 'src/platform.html', 'slug': 'ssl', 'content_key': 'ssl_page'},
     {'template': 'src/platform.html', 'slug': 'speedtest', 'content_key': 'speedtest_page'},
+    {'template': 'src/platform.html', 'slug': 'icp-check', 'content_key': 'icp_check_page'},
     {'template': 'src/blog.html', 'slug': 'blog', 'content_key': None},
 ] + [
     {
@@ -101,18 +103,25 @@ PAGES = [
 
 
 def convert_emphasis(value, key):
-    """Turn **text** into <strong>text</strong> for fields rendered as HTML.
+    """Turn **text** into <strong> and `text` into <code>, for HTML fields.
 
-    Writing content in JSON invites markdown habits, and a literal ** ships
-    as visible asterisks. Converting at build time removes the chance of
-    missing one. seo.* and the sources feed meta tags and JSON-LD, where
-    markup would be wrong, so they are left alone and checked instead.
+    Writing content in JSON invites markdown habits, and a literal ** or `
+    ships as a visible character. Converting at build time removes the
+    chance of missing one. seo.* and the sources feed meta tags and JSON-LD,
+    where markup would be wrong, so they are left alone and checked instead.
     """
-    if not isinstance(value, str) or '**' not in value:
+    if not isinstance(value, str) or ('**' not in value and '`' not in value):
         return value
-    if key.startswith('seo.') or '.seo.' in key or key.endswith(('.title', '.name')):
-        raise ValueError(f"'{key}' 含 ** 但會輸出到 meta 或 JSON-LD，請改寫純文字")
-    return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', value)
+    meta_field = (key.startswith('seo.') or '.seo.' in key
+                  or key.endswith(('.title', '.name')))
+    if meta_field:
+        for mark, label in (('**', '**'), ('`', '`')):
+            if mark in value:
+                raise ValueError(
+                    f"'{key}' 含 {label} 但會輸出到 meta 或 JSON-LD，請改寫純文字")
+        return value
+    value = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', value)
+    return re.sub(r'`([^`]+)`', r'<code>\1</code>', value)
 
 
 def flatten_dict(d, parent_key='', sep='.'):

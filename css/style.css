@@ -571,6 +571,20 @@ ul {
 .code-snippet span.string { color: #98c379; }
 .code-snippet span.property { color: #e5c07b; }
 
+/* Inline code in prose. Article content is written in JSON, where `backticks`
+   are the natural way to mark a header name or a field; without this they
+   would ship as visible backtick characters. */
+.article-body code,
+.article-body-content code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.16);
+    border-radius: 4px;
+    padding: 0.12em 0.36em;
+    word-break: break-word;
+}
+
 /* ==========================================================================
    Contact Section
    ========================================================================== */

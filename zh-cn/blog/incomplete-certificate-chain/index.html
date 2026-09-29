@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -237,7 +237,7 @@
                 <ol class="reason-list">
                     <li>
                         <strong>上传了只含 leaf 的证书文件</strong>
-                        <span>这是最常见的一种。证书机构通常会给你数个文件，其中一个只有你的证书本身，另一个才是包含中间证书的完整链。以 Let's Encrypt 为例，`cert.pem` 只有 leaf，`fullchain.pem` 才是完整的——配置时挑错文件，服务会正常启动，错误要等到特定客户端连进来才浮现。</span>
+                        <span>这是最常见的一种。证书机构通常会给你数个文件，其中一个只有你的证书本身，另一个才是包含中间证书的完整链。以 Let's Encrypt 为例，<code>cert.pem</code> 只有 leaf，<code>fullchain.pem</code> 才是完整的——配置时挑错文件，服务会正常启动，错误要等到特定客户端连进来才浮现。</span>
                     </li>
                     <li>
                         <strong>手动安装时漏掉中间证书</strong>
@@ -262,7 +262,7 @@
 
                 <!-- Why manual fails -->
                 <h2>怎么确认服务器发送了什么</h2>
-                <p>最直接的方式是用 `openssl s_client -connect 域名:443 -servername 域名 -showcerts` 连上去，它会列出服务器实际发送的所有证书。输出里每一个 `s:`（subject）与 `i:`（issuer）配对就是链的一段——如果只看到一张证书，那就是只发了 leaf。</p>
+                <p>最直接的方式是用 <code>openssl s_client -connect 域名:443 -servername 域名 -showcerts</code> 连上去，它会列出服务器实际发送的所有证书。输出里每一个 <code>s:</code>（subject）与 <code>i:</code>（issuer）配对就是链的一段——如果只看到一张证书，那就是只发了 leaf。</p>
                 <p>正常的情况下，你会看到 leaf 的 issuer 等于下一张证书的 subject，一路串接到根证书或某张已知的中间证书为止。<strong>检查要从外部发起</strong>，而且要对着用户实际连到的地址——如果服务前面有 CDN，要确认你测的是哪一层，因为 CDN 节点与源站可能装着不同的证书。</p>
 
                 <!-- How to respond -->
@@ -270,7 +270,7 @@
                 <p>确认问题存在之后，依序处理：</p>
 
                 <h3>一、换成完整链的证书文件</h3>
-                <p>把配置指向包含中间证书的那个文件（Let's Encrypt 是 `fullchain.pem`），或在管理界面把中间证书补进对应字段。根证书发不发都可以，多发一张只是多几百字节，不会造成错误。改完记得重新加载服务——文件换了但服务没 reload，等于没改，<a href="/zh-cn/blog/nginx-certificate-configuration/">Nginx 的证书加载机制</a>一文有详细说明。</p>
+                <p>把配置指向包含中间证书的那个文件（Let's Encrypt 是 <code>fullchain.pem</code>），或在管理界面把中间证书补进对应字段。根证书发不发都可以，多发一张只是多几百字节，不会造成错误。改完记得重新加载服务——文件换了但服务没 reload，等于没改，<a href="/zh-cn/blog/nginx-certificate-configuration/">Nginx 的证书加载机制</a>一文有详细说明。</p>
 
                 <h3>二、确认每一个终止 TLS 的位置都改到</h3>
                 <p>源站、每个 CDN 节点、负载均衡器都各自持有证书。只改了源站而 CDN 节点还是旧的，对用户而言问题依然存在。这一点跟证书到期的处理是同一个道理——证书问题几乎都出在「有些地方改了、有些没有」。</p>
@@ -364,6 +364,7 @@
                     <a href="/zh-cn/cloud/">公有云架构解决方案</a>
                     <a href="/zh-cn/ssl/">SSL 证书自动化平台</a>
                     <a href="/zh-cn/speedtest/">全球三网测速平台</a>
+                    <a href="/zh-cn/icp-check/">ICP 备案状态即时查询</a>
                     <a href="/zh-cn/blog/">技术文章</a>
                     <a href="/zh-cn/#contact">联系我们</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

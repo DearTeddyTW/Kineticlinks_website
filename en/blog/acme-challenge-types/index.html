@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -232,7 +232,7 @@
                 <ol class="reason-list">
                     <li>
                         <strong>The service sits behind a CDN</strong>
-                        <span>The CA's request hits a CDN node first, while the validation file lives on the origin. Unless the CDN is configured to pass `/.well-known/acme-challenge/` through to the origin, the CA gets a cached response or a 404. This is the most common case for teams in Taiwan and Hong Kong, since cross-border services almost always front with a CDN.</span>
+                        <span>The CA's request hits a CDN node first, while the validation file lives on the origin. Unless the CDN is configured to pass <code>/.well-known/acme-challenge/</code> through to the origin, the CA gets a cached response or a 404. This is the most common case for teams in Taiwan and Hong Kong, since cross-border services almost always front with a CDN.</span>
                     </li>
                     <li>
                         <strong>There are multiple backend servers</strong>
@@ -257,7 +257,7 @@
 
                 <!-- Why manual fails -->
                 <h2>The Hard Constraint on Wildcards</h2>
-                <p>If you need a wildcard like `*.example.com`, the decision is already made: <strong>only DNS-01 can issue one</strong>. Neither HTTP-01 nor TLS-ALPN-01 can produce wildcard certificates. This isn't a configuration issue; it's a protocol-level constraint.</p>
+                <p>If you need a wildcard like <code>*.example.com</code>, the decision is already made: <strong>only DNS-01 can issue one</strong>. Neither HTTP-01 nor TLS-ALPN-01 can produce wildcard certificates. This isn't a configuration issue; it's a protocol-level constraint.</p>
                 <p>It's worth knowing early, because it works backwards into your choice of DNS provider. If your registrar or DNS service offers no API, you can't automate DNS-01, which means no automatically-renewed wildcard — you'd be adding TXT records by hand every time. With lifetimes already at 200 days and heading to 47, manual handling isn't a viable long-term plan.</p>
 
                 <!-- How to respond -->
@@ -359,6 +359,7 @@
                     <a href="/en/cloud/">Public Cloud Solutions</a>
                     <a href="/en/ssl/">Automated SSL Platform</a>
                     <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/icp-check/">Live ICP filing lookup</a>
                     <a href="/en/blog/">Blog</a>
                     <a href="/en/#contact">Contact</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

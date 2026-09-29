@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -175,7 +175,7 @@
                     <span class="dot">·</span>
                     <span>9 min read</span>
                 </div>
-                <p class="article-lead">If your Nginx config contains `ssl_stapling on;` and your certificate comes from Let's Encrypt, <strong>that line has done nothing since May 2025</strong>. Certificates no longer carry an OCSP URL, so the server has nothing to query and nothing to staple. This isn't a misconfiguration — the mechanism was retired. Here's what happened, what to check, and how revocation works now.</p>
+                <p class="article-lead">If your Nginx config contains <code>ssl_stapling on;</code> and your certificate comes from Let's Encrypt, <strong>that line has done nothing since May 2025</strong>. Certificates no longer carry an OCSP URL, so the server has nothing to query and nothing to staple. This isn't a misconfiguration — the mechanism was retired. Here's what happened, what to check, and how revocation works now.</p>
             </header>
 
             <div class="article-body">
@@ -236,7 +236,7 @@
                     </li>
                     <li>
                         <strong>7 May 2025: OCSP URLs dropped from certificates</strong>
-                        <span>The most widely felt step. With no OCSP URL in the certificate, the server has nothing to query, and directives like `ssl_stapling on;` stop having any effect — no error, just silence. Plenty of configuration files still carry those lines today.</span>
+                        <span>The most widely felt step. With no OCSP URL in the certificate, the server has nothing to query, and directives like <code>ssl_stapling on;</code> stop having any effect — no error, just silence. Plenty of configuration files still carry those lines today.</span>
                     </li>
                     <li>
                         <strong>6 August 2025: the OCSP responders were turned off</strong>
@@ -257,7 +257,7 @@
 
                 <!-- Why manual fails -->
                 <h2>What to Check Now</h2>
-                <p>Start with leftovers in your configuration. Nginx's `ssl_stapling on;` and `ssl_stapling_verify on;`, Apache's `SSLUseStapling on` — with no OCSP URL in the certificate these cause no error, but they no longer do anything either. Leaving them does no harm; they're simply meaningless now.</p>
+                <p>Start with leftovers in your configuration. Nginx's <code>ssl_stapling on;</code> and <code>ssl_stapling_verify on;</code>, Apache's <code>SSLUseStapling on</code> — with no OCSP URL in the certificate these cause no error, but they no longer do anything either. Leaving them does no harm; they're simply meaningless now.</p>
                 <p>Also confirm that <strong>commercial certificates behave differently</strong>. This was Let's Encrypt's decision, and some commercial CAs still run OCSP services. If you manage both free and commercial certificates, the two will behave differently — check whether a given certificate actually carries an OCSP URL before concluding anything.</p>
 
                 <!-- How to respond -->
@@ -359,6 +359,7 @@
                     <a href="/en/cloud/">Public Cloud Solutions</a>
                     <a href="/en/ssl/">Automated SSL Platform</a>
                     <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/icp-check/">Live ICP filing lookup</a>
                     <a href="/en/blog/">Blog</a>
                     <a href="/en/#contact">Contact</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -237,7 +237,7 @@
                 <ol class="reason-list">
                     <li>
                         <strong>Installing the leaf-only certificate file</strong>
-                        <span>The most common cause. A CA typically hands you several files: one containing just your certificate, another containing the full chain. With Let's Encrypt, `cert.pem` is leaf-only while `fullchain.pem` is complete. Point the config at the wrong one and the service starts normally — the fault only surfaces when a particular kind of client connects.</span>
+                        <span>The most common cause. A CA typically hands you several files: one containing just your certificate, another containing the full chain. With Let's Encrypt, <code>cert.pem</code> is leaf-only while <code>fullchain.pem</code> is complete. Point the config at the wrong one and the service starts normally — the fault only surfaces when a particular kind of client connects.</span>
                     </li>
                     <li>
                         <strong>Leaving the intermediate field empty</strong>
@@ -262,7 +262,7 @@
 
                 <!-- Why manual fails -->
                 <h2>How to See What the Server Sends</h2>
-                <p>The direct method is `openssl s_client -connect domain:443 -servername domain -showcerts`, which lists every certificate the server actually presents. Each `s:` (subject) and `i:` (issuer) pair in the output is one link in the chain — if only one certificate appears, the server is sending the leaf alone.</p>
+                <p>The direct method is <code>openssl s_client -connect domain:443 -servername domain -showcerts</code>, which lists every certificate the server actually presents. Each <code>s:</code> (subject) and <code>i:</code> (issuer) pair in the output is one link in the chain — if only one certificate appears, the server is sending the leaf alone.</p>
                 <p>In a healthy chain the leaf's issuer matches the next certificate's subject, continuing up to a root or a known intermediate. <strong>Run the check from outside</strong>, against the address users actually reach. With a CDN in front, establish which layer you're testing, since edge nodes and origin can carry different certificates.</p>
 
                 <!-- How to respond -->
@@ -270,7 +270,7 @@
                 <p>Once you've confirmed the problem, work through these:</p>
 
                 <h3>1. Switch to the full-chain file</h3>
-                <p>Point the configuration at the file containing intermediates (`fullchain.pem` for Let's Encrypt), or fill in the intermediate field in the control panel. Including the root is optional — a few hundred extra bytes, and harmless. Reload the service afterwards: a changed file without a reload changes nothing — <a href="/en/blog/nginx-certificate-configuration/">how Nginx loads certificates</a> covers why.</p>
+                <p>Point the configuration at the file containing intermediates (<code>fullchain.pem</code> for Let's Encrypt), or fill in the intermediate field in the control panel. Including the root is optional — a few hundred extra bytes, and harmless. Reload the service afterwards: a changed file without a reload changes nothing — <a href="/en/blog/nginx-certificate-configuration/">how Nginx loads certificates</a> covers why.</p>
 
                 <h3>2. Fix every TLS-terminating endpoint</h3>
                 <p>Origin, each CDN node and load balancers all hold their own certificate. Fixing origin while CDN nodes still serve the old configuration leaves users exactly where they were. This mirrors expiry handling — certificate problems are nearly always "some places updated, others didn't".</p>
@@ -364,6 +364,7 @@
                     <a href="/en/cloud/">Public Cloud Solutions</a>
                     <a href="/en/ssl/">Automated SSL Platform</a>
                     <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/icp-check/">Live ICP filing lookup</a>
                     <a href="/en/blog/">Blog</a>
                     <a href="/en/#contact">Contact</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

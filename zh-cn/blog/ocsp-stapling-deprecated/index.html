@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -175,7 +175,7 @@
                     <span class="dot">·</span>
                     <span>约 9 分钟</span>
                 </div>
-                <p class="article-lead">如果你的 Nginx 配置里有 `ssl_stapling on;`，而证书是 Let's Encrypt 签发的，<strong>那行配置从 2025 年 5 月起就没有作用了</strong>——证书里已经不再包含 OCSP 网址，服务器没有东西可以查、也没有东西可以装订。这不是配置错误，是整个机制被淘汰了。这篇说明发生了什么、你该检查什么，以及吊销检查现在怎么运作。</p>
+                <p class="article-lead">如果你的 Nginx 配置里有 <code>ssl_stapling on;</code>，而证书是 Let's Encrypt 签发的，<strong>那行配置从 2025 年 5 月起就没有作用了</strong>——证书里已经不再包含 OCSP 网址，服务器没有东西可以查、也没有东西可以装订。这不是配置错误，是整个机制被淘汰了。这篇说明发生了什么、你该检查什么，以及吊销检查现在怎么运作。</p>
             </header>
 
             <div class="article-body">
@@ -236,7 +236,7 @@
                     </li>
                     <li>
                         <strong>2025 年 5 月 7 日：证书中不再包含 OCSP 网址</strong>
-                        <span>这是影响最广的一步。证书里没有 OCSP 网址，服务器就无从查询，`ssl_stapling on;` 这类配置自此失去作用——不会报错，只是静默地什么都不做。许多人的配置文件至今仍留着那几行。</span>
+                        <span>这是影响最广的一步。证书里没有 OCSP 网址，服务器就无从查询，<code>ssl_stapling on;</code> 这类配置自此失去作用——不会报错，只是静默地什么都不做。许多人的配置文件至今仍留着那几行。</span>
                     </li>
                     <li>
                         <strong>2025 年 8 月 6 日：OCSP 服务完全关闭</strong>
@@ -257,7 +257,7 @@
 
                 <!-- Why manual fails -->
                 <h2>你现在该检查什么</h2>
-                <p>最直接的是看配置文件里还有没有残留。Nginx 的 `ssl_stapling on;` 与 `ssl_stapling_verify on;`、Apache 的 `SSLUseStapling on` 这类指令，在证书没有 OCSP 网址的情况下不会造成错误，但也不再有任何效果。留着不会坏事，只是那是一段已经没有意义的配置。</p>
+                <p>最直接的是看配置文件里还有没有残留。Nginx 的 <code>ssl_stapling on;</code> 与 <code>ssl_stapling_verify on;</code>、Apache 的 <code>SSLUseStapling on</code> 这类指令，在证书没有 OCSP 网址的情况下不会造成错误，但也不再有任何效果。留着不会坏事，只是那是一段已经没有意义的配置。</p>
                 <p>另一个要确认的是<strong>商用证书的情况不同</strong>。这次变动是 Let's Encrypt 的决定，部分商业证书机构仍在提供 OCSP 服务。如果你同时管理免费与商用证书，两者的行为会不一样——判断之前先确认该证书实际上还有没有 OCSP 网址。</p>
 
                 <!-- How to respond -->
@@ -359,6 +359,7 @@
                     <a href="/zh-cn/cloud/">公有云架构解决方案</a>
                     <a href="/zh-cn/ssl/">SSL 证书自动化平台</a>
                     <a href="/zh-cn/speedtest/">全球三网测速平台</a>
+                    <a href="/zh-cn/icp-check/">ICP 备案状态即时查询</a>
                     <a href="/zh-cn/blog/">技术文章</a>
                     <a href="/zh-cn/#contact">联系我们</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

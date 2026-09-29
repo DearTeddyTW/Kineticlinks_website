@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -246,7 +246,7 @@
                     </li>
                     <li>
                         <strong>根域名必然带有 SOA 与 NS 记录</strong>
-                        <span>每个域名的根（例如 `example.com` 本身）一定要有 SOA 与 NS 记录，这是域名能被解析的前提。既然根域名必定已有这两种记录，依前一条规则，就不可能再放 CNAME——两者无法并存。</span>
+                        <span>每个域名的根（例如 <code>example.com</code> 本身）一定要有 SOA 与 NS 记录，这是域名能被解析的前提。既然根域名必定已有这两种记录，依前一条规则，就不可能再放 CNAME——两者无法并存。</span>
                     </li>
                     <li>
                         <strong>所以想让根域名指向一个名称，要用替代方案</strong>
@@ -297,7 +297,7 @@
                     </li>
                     <li>
                         <strong>改完用权威服务器直接查证</strong>
-                        <span>用 `dig @权威服务器 名称 记录类型` 直接向权威服务器查询，可以跳过所有缓存，立刻确认记录本身是否正确。若权威回答是对的、其他地方还是旧的，那就纯粹是等 TTL 的问题。</span>
+                        <span>用 <code>dig @权威服务器 名称 记录类型</code> 直接向权威服务器查询，可以跳过所有缓存，立刻确认记录本身是否正确。若权威回答是对的、其他地方还是旧的，那就纯粹是等 TTL 的问题。</span>
                     </li>
                 </ol>
 
@@ -369,6 +369,7 @@
                     <a href="/zh-cn/cloud/">公有云架构解决方案</a>
                     <a href="/zh-cn/ssl/">SSL 证书自动化平台</a>
                     <a href="/zh-cn/speedtest/">全球三网测速平台</a>
+                    <a href="/zh-cn/icp-check/">ICP 备案状态即时查询</a>
                     <a href="/zh-cn/blog/">技术文章</a>
                     <a href="/zh-cn/#contact">联系我们</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

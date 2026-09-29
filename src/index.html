@@ -277,6 +277,23 @@
                     </ul>
                     <span class="card-link">{{ services.learn_more }} →</span>
                 </a>
+                <!-- ICP Check Platform Card -->
+                <a href="{{ lang_path }}icp-check/" class="service-card glass-panel interactive" style="display: block;">
+                    <div class="icon-wrapper">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>{{ platforms.icp_check.title }}</h3>
+                    <p>{{ platforms.icp_check.desc }}</p>
+                    <ul class="feature-list">
+                        <li>{{ platforms.icp_check.f1 }}</li>
+                        <li>{{ platforms.icp_check.f2 }}</li>
+                        <li>{{ platforms.icp_check.f3 }}</li>
+                    </ul>
+                    <span class="card-link">{{ services.learn_more }} →</span>
+                </a>
             </div>
         </div>
     </section>
@@ -452,6 +469,7 @@
                     <a href="{{ lang_path }}cloud/">{{ services.cloud.title }}</a>
                     <a href="{{ lang_path }}ssl/">{{ platforms.ssl.title }}</a>
                     <a href="{{ lang_path }}speedtest/">{{ platforms.speedtest.title }}</a>
+                    <a href="{{ lang_path }}icp-check/">{{ platforms.icp_check.title }}</a>
                     <a href="{{ lang_path }}blog/">{{ nav.blog }}</a>
                     <a href="#contact">{{ nav.contact }}</a>
                 </div>

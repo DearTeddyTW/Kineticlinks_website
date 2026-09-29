@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -175,14 +175,14 @@
                     <span class="dot">·</span>
                     <span>約 9 分鐘</span>
                 </div>
-                <p class="article-lead">`nginx -t` 顯示 `test is successful`，於是你認為憑證設定沒問題。但它驗證的範圍比多數人以為的窄——<strong>它檢查語法、也比對憑證與私鑰是否成對，但不會告訴你使用者實際會拿到哪一張憑證</strong>。這中間隔著三個 Nginx 特有的機制，每一個都能讓「設定檔是對的」和「使用者拿到對的憑證」脫鉤。</p>
+                <p class="article-lead"><code>nginx -t</code> 顯示 <code>test is successful</code>，於是你認為憑證設定沒問題。但它驗證的範圍比多數人以為的窄——<strong>它檢查語法、也比對憑證與私鑰是否成對，但不會告訴你使用者實際會拿到哪一張憑證</strong>。這中間隔著三個 Nginx 特有的機制，每一個都能讓「設定檔是對的」和「使用者拿到對的憑證」脫鉤。</p>
             </header>
 
             <div class="article-body">
 
                 <!-- What happened -->
                 <h2>nginx -t 到底驗證了什麼</h2>
-                <p>`nginx -t` 會解析設定檔、載入憑證與私鑰，並<strong>比對兩者的模數是否相符</strong>——所以憑證配錯私鑰確實會被擋下來，這點比很多人以為的嚴格。</p>
+                <p><code>nginx -t</code> 會解析設定檔、載入憑證與私鑰，並<strong>比對兩者的模數是否相符</strong>——所以憑證配錯私鑰確實會被擋下來，這點比很多人以為的嚴格。</p>
                 <p>但它的範圍就到這裡。它不知道你的憑證涵蓋哪些網域、不檢查憑證鏈是否完整、更不會模擬一次真實連線來看使用者最後拿到什麼。<strong>它驗證的是「這份設定能不能載入」，不是「這份設定會產生什麼結果」。</strong></p>
 
                 <!-- Timeline table -->
@@ -236,18 +236,18 @@
                     </li>
                     <li>
                         <strong>TLS 交握發生在 Nginx 知道網域之前</strong>
-                        <span>官方文件講得很直接：SSL 連線在瀏覽器送出 HTTP 請求之前就已建立，此時 Nginx 還不知道對方要的是哪個網域，因此只能先提供 default server 的憑證。SNI 解決了這個問題——瀏覽器在交握階段就帶上網域——但若請求沒有匹配到任何 `server_name`，仍會落到 default server，拿到那個區塊的憑證。</span>
+                        <span>官方文件講得很直接：SSL 連線在瀏覽器送出 HTTP 請求之前就已建立，此時 Nginx 還不知道對方要的是哪個網域，因此只能先提供 default server 的憑證。SNI 解決了這個問題——瀏覽器在交握階段就帶上網域——但若請求沒有匹配到任何 <code>server_name</code>，仍會落到 default server，拿到那個區塊的憑證。</span>
                     </li>
                     <li>
                         <strong>Nginx 只把檔案裡的第一張憑證當作伺服器憑證</strong>
-                        <span>`ssl_certificate` 指向的檔案可以包含多張憑證，但<strong>伺服器憑證必須排在最前面</strong>，後面才是中繼憑證。官方文件明確要求這個順序。如果串接時順序顛倒，Nginx 會拿中繼憑證去配對你的私鑰，然後以 key values mismatch 啟動失敗——錯誤訊息指向私鑰，但真正的問題在順序。</span>
+                        <span><code>ssl_certificate</code> 指向的檔案可以包含多張憑證，但<strong>伺服器憑證必須排在最前面</strong>，後面才是中繼憑證。官方文件明確要求這個順序。如果串接時順序顛倒，Nginx 會拿中繼憑證去配對你的私鑰，然後以 key values mismatch 啟動失敗——錯誤訊息指向私鑰，但真正的問題在順序。</span>
                     </li>
                 </ol>
 
                 <!-- Impact -->
                 <h2>default server 為什麼會咬到你</h2>
-                <p>Nginx 在同一個監聽位址上，若沒有任何 `server` 區塊標記 `default_server`，<strong>第一個區塊就自動成為預設</strong>。所以設定檔裡區塊的排列順序，會直接決定「網域不匹配時使用者看到誰的憑證」。</p>
-                <p>這造成的症狀很容易誤導：某個網域明明設定正確，使用者卻收到「憑證屬於別的網域」的警告。典型情境是新增了一個網域但 DNS 已經指過來、而 `server_name` 還沒寫對，或是有人直接用 IP 位址連線——這兩種都會落到 default server。</p>
+                <p>Nginx 在同一個監聽位址上，若沒有任何 <code>server</code> 區塊標記 <code>default_server</code>，<strong>第一個區塊就自動成為預設</strong>。所以設定檔裡區塊的排列順序，會直接決定「網域不匹配時使用者看到誰的憑證」。</p>
+                <p>這造成的症狀很容易誤導：某個網域明明設定正確，使用者卻收到「憑證屬於別的網域」的警告。典型情境是新增了一個網域但 DNS 已經指過來、而 <code>server_name</code> 還沒寫對，或是有人直接用 IP 位址連線——這兩種都會落到 default server。</p>
 
                 <aside class="callout">
                     <p>實務上的建議是<strong>明確指定一個 default_server，並讓它是一個專門用來擋下不匹配請求的區塊</strong>，而不是讓某個正式服務不小心兼任。那個區塊可以直接回傳 444（關閉連線）或一個明確的錯誤頁，這樣至少症狀會指向「這個網域沒設定」，而不是「憑證是別人的」——後者會讓排查往完全錯誤的方向走。</p>
@@ -257,8 +257,8 @@
 
                 <!-- Why manual fails -->
                 <h2>確認使用者實際拿到什麼</h2>
-                <p>所有檢查的原則都一樣：<strong>不要看設定檔，要看伺服器實際送出什麼</strong>。`openssl s_client -connect 網域:443 -servername 網域` 會建立一次真實交握並印出憑證，其中 `-servername` 就是送出 SNI，這一項不能省——省掉它等於在測試「沒有 SNI 的客戶端會拿到什麼」，結果會是 default server 的憑證。</p>
-                <p>要驗證 reload 是否確實生效，比對憑證的有效期起始時間（`notBefore`）最直接。如果線上供應的憑證起始時間仍是舊的那一張，代表程序還沒重新載入。這比檢查檔案修改時間可靠，因為檔案早就更新了。</p>
+                <p>所有檢查的原則都一樣：<strong>不要看設定檔，要看伺服器實際送出什麼</strong>。<code>openssl s_client -connect 網域:443 -servername 網域</code> 會建立一次真實交握並印出憑證，其中 <code>-servername</code> 就是送出 SNI，這一項不能省——省掉它等於在測試「沒有 SNI 的客戶端會拿到什麼」，結果會是 default server 的憑證。</p>
+                <p>要驗證 reload 是否確實生效，比對憑證的有效期起始時間（<code>notBefore</code>）最直接。如果線上供應的憑證起始時間仍是舊的那一張，代表程序還沒重新載入。這比檢查檔案修改時間可靠，因為檔案早就更新了。</p>
 
                 <!-- How to respond -->
                 <h2>三個層次的設定檢查</h2>
@@ -268,10 +268,10 @@
                 <p>它能擋下語法錯誤與憑證私鑰不配對，值得每次改完都跑。但通過不代表設定正確，只代表設定能被載入。把它當作必要條件而非充分條件。另外值得順手清掉的是已經失效的設定，例如 <a href="/blog/ocsp-stapling-deprecated/">OCSP 裝訂</a>——它在多數憑證上已經不再有作用。</p>
 
                 <h3>二、改完憑證一定要 reload，並確認生效</h3>
-                <p>`nginx -s reload` 或對應的服務指令。重點是之後要<strong>實際連一次確認</strong>——reload 可能因為設定錯誤而失敗，而舊的程序會繼續正常服務，從外部看不出任何異狀。</p>
+                <p><code>nginx -s reload</code> 或對應的服務指令。重點是之後要<strong>實際連一次確認</strong>——reload 可能因為設定錯誤而失敗，而舊的程序會繼續正常服務，從外部看不出任何異狀。</p>
 
                 <h3>三、明確指定 default_server 與涵蓋範圍</h3>
-                <p>列出所有會連到這台機器的網域，確認每一個都有對應的 `server_name`，並指定一個專門的 default_server 接住其餘的。沒被涵蓋的網域不會消失，只會靜靜拿到別人的憑證。</p>
+                <p>列出所有會連到這台機器的網域，確認每一個都有對應的 <code>server_name</code>，並指定一個專門的 default_server 接住其餘的。沒被涵蓋的網域不會消失，只會靜靜拿到別人的憑證。</p>
 
                 <!-- Checklist -->
                 <h2>排查時該先確認的三件事</h2>
@@ -283,7 +283,7 @@
                     </li>
                     <li>
                         <strong>確認使用者連的網域有沒有對應區塊</strong>
-                        <span>如果錯誤訊息說憑證屬於另一個網域，先查 `server_name` 是否涵蓋，而不是懷疑憑證本身。那張「別人的憑證」通常就是 default server 的。</span>
+                        <span>如果錯誤訊息說憑證屬於另一個網域，先查 <code>server_name</code> 是否涵蓋，而不是懷疑憑證本身。那張「別人的憑證」通常就是 default server 的。</span>
                     </li>
                     <li>
                         <strong>確認憑證檔的排列順序</strong>
@@ -293,7 +293,7 @@
 
                 <!-- Conclusion -->
                 <h2>小結</h2>
-                <p>`nginx -t` 通過是必要條件，不是充分條件。它驗證設定能否載入，但<strong>憑證在記憶體裡、TLS 交握早於網域判斷、檔案順序決定哪張是伺服器憑證</strong>這三件事，都發生在它的檢查範圍之外。</p>
+                <p><code>nginx -t</code> 通過是必要條件，不是充分條件。它驗證設定能否載入，但<strong>憑證在記憶體裡、TLS 交握早於網域判斷、檔案順序決定哪張是伺服器憑證</strong>這三件事，都發生在它的檢查範圍之外。</p>
                 <p>這些機制本身沒有問題，麻煩的是它們讓「設定檔正確」產生了虛假的安全感。如果不想每次部署都逐項確認，我們的 SSL 憑證自動化平台在簽發後直接把完整憑證鏈推播到各節點，減少手動編輯設定檔的環節。</p>
 
                 <!-- Sources -->
@@ -359,6 +359,7 @@
                     <a href="/cloud/">公有雲架構解決方案</a>
                     <a href="/ssl/">SSL 憑證自動化平台</a>
                     <a href="/speedtest/">全球三網測速平台</a>
+                    <a href="/icp-check/">ICP 備案狀態即時查詢</a>
                     <a href="/blog/">技術文章</a>
                     <a href="/#contact">聯絡我們</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

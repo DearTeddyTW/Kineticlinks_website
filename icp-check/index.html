@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>ICP 備案查詢工具 | 中國工信部網站備案狀態即時檢測 - Kineticlinks</title>
+    <meta name="title" content="ICP 備案查詢工具 | 中國工信部網站備案狀態即時檢測 - Kineticlinks">
+    <meta name="description" content="即時查詢與驗證網域在中國工信部（MIIT）的 ICP 備案狀態。提供網域名稱、主體名稱、備案號與審核時間即時檢測，協助排查備案有效性與跨境合規風險。">
+    <meta name="keywords" content="ICP 備案查詢, 工信部備案查詢, 網域 ICP 查詢, ICP 備案狀態檢測, 網站備案號查詢, 中國網站合規">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/icp-check/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/icp-check/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/icp-check/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/icp-check/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/icp-check/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kineticlinks.net/icp-check/">
+    <meta property="og:title" content="ICP 備案查詢工具 | 中國工信部網站備案狀態即時檢測 - Kineticlinks">
+    <meta property="og:description" content="即時查詢與驗證網域在中國工信部（MIIT）的 ICP 備案狀態。提供網域名稱、主體名稱、備案號與審核時間即時檢測，協助排查備案有效性與跨境合規風險。">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/icp-check/">
+    <meta property="twitter:title" content="ICP 備案查詢工具 | 中國工信部網站備案狀態即時檢測 - Kineticlinks">
+    <meta property="twitter:description" content="即時查詢與驗證網域在中國工信部（MIIT）的 ICP 備案狀態。提供網域名稱、主體名稱、備案號與審核時間即時檢測，協助排查備案有效性與跨境合規風險。">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "即時 ICP 備案狀態檢測與網域合規查詢",
+      "name": "ICP 備案查詢工具 | 中國工信部網站備案狀態即時檢測 - Kineticlinks",
+      "description": "即時查詢與驗證網域在中國工信部（MIIT）的 ICP 備案狀態。提供網域名稱、主體名稱、備案號與審核時間即時檢測，協助排查備案有效性與跨境合規風險。",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "areaServed": ["TW", "CN", "HK", "Asia"],
+      "url": "https://www.kineticlinks.net/icp-check/"
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "https://www.kineticlinks.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "平台產品",
+          "item": "https://www.kineticlinks.net/#platforms"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "即時 ICP 備案狀態檢測與網域合規查詢",
+          "item": "https://www.kineticlinks.net/icp-check/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): FAQPage -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什麼情況下網站必須辦理 ICP 備案？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "只要您的網站使用位於中國大陸境內的伺服器，或開啟了中國大陸境內的 CDN 加速節點，依規定就必須辦理 ICP 備案。若服務完全部署在香港或海外其他地區且不經過大陸節點，則不強制要求備案。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "查詢顯示「未備案」代表什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "代表該網域目前在工信部系統中查無有效備案紀錄。此時該網域不能解析至中國境內伺服器或啟用境內 CDN，否則會被機房或雲服務商攔截存取。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "備案被管局註銷了會有通知嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "管局在定期抽查或發現資訊不符（如主體失效、空殼備案、聯絡方式失效）時進行註銷，有時通知可能未及時送達。因此建議定期使用本工具主動檢查備案健康狀態。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "本工具查詢到的資料是即時的嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的，工具會即時請求並解析最新備案狀態，確保您取得最新的工信部登記資訊。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "使用境外伺服器但想加速中國訪問，一定要備案嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "如果不經過大陸境內節點，使用香港或亞太優化線路（如 CN2 GIA / 9929）或海外 CDN 則不需要備案；但若要使用大陸境內邊緣節點加速，就必須完成 ICP 備案。"
+      }
+    }
+  ]
+}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
+    <script>
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/#home">首頁</a>
+                <a href="/#services">服務項目</a>
+                <a href="/#platforms">平台產品</a>
+                <a href="/blog/">技術文章</a>
+                <a href="/#about">關於我們</a>
+                <a href="/#contact" class="btn btn-outline">聯絡我們</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">繁體中文 ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/icp-check/">繁體中文</a>
+                        <a href="/en/icp-check/">English</a>
+                        <a href="/zh-cn/icp-check/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="開啟選單"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/">首頁</a>
+            <span>/</span>
+            <a href="/#platforms">平台產品</a>
+            <span>/</span>
+            <span class="current">即時 ICP 備案狀態檢測與網域合規查詢</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content glass-panel">
+                <div class="badge">ICP 備案即時查詢工具</div>
+                <h1>即時 ICP 備案狀態檢測與網域合規查詢</h1>
+                <p class="page-hero-subtitle">一鍵快速檢測網域是否具備有效 ICP 備案，精準掌握主體名稱、備案號與審核狀態</p>
+                <p>Kineticlinks ICP 檢查工具提供快速、即時的中國工信部（MIIT）備案狀態查詢服務，協助企業與開發者在部署中國節點、CDN 加速或網域轉移前，即時確認備案有效性，避免因備案失效或資訊不符造成業務中斷。</p>
+                <div class="hero-actions">
+                    <a href="https://icp-check.kineticlinks.net/" target="_blank" rel="noopener" class="btn btn-primary">立即查詢 ICP 備案</a>
+                    <a href="/#platforms" class="btn btn-secondary">查看其他平台產品</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section prose-section">
+        <div class="container">
+            <div class="section-header" style="text-align:left; margin-bottom: 2rem;">
+                <h2>為什麼需要即時檢查 ICP 備案狀態？</h2>
+            </div>
+            <div class="prose glass-panel">
+                <p>依中國大陸法規，任何使用中國境內伺服器或境內 CDN 節點加速的網域，皆須取得中華人民共和國工業和信息化部（MIIT）核發的有效 ICP 備案號。若備案資訊不符、主體變更未更新或遭管局抽查註銷，域名將被接入商立即攔截，導致網站無法訪問。</p>
+                <p>Kineticlinks ICP 備案查詢工具串接即時資料源，讓您只需輸入網域名稱，即可快速獲得工信部最新備案狀態、主體名稱、主體性質（企業／個人）、ICP 備案號以及審核通過時間，免去手動前往官方系統輸入驗證碼的麻煩。</p>
+                <p>無論是日常維運定期巡檢、採購二手里程網域前的背景調查，或是評估跨境業務合規性，都能透過本工具即時獲得準確的備案驗證結果。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>適用場景</h2>
+                <p>在各個關鍵維運與部署環節，即時確保網域備案合規</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-panel interactive">
+                    <h3>CDN 與主機節點上線前核查</h3>
+                    <p>在開啟中國境內 CDN 節點或境內主機前，確認網域具備正常有效備案。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>定期巡檢防止無預警註銷</h3>
+                    <p>管局週期性抽查常導致不符資訊的備案被註銷，定期排查以確保服務連續性。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>網域交易與資產盤點</h3>
+                    <p>在交易或接收二手網域前，核實其備案歷史與目前主體歸屬狀態。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>跨境合規架構評估</h3>
+                    <p>釐清業務是否已合規備案，決定該採用境內節點加速或純境外 CDN 架構。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators -->
+    <section class="section" style="background-color: var(--bg-darker);">
+        <div class="container">
+            <div class="section-header">
+                <h2>為什麼選擇 Kineticlinks ICP 查詢工具</h2>
+                <p>相較於傳統官方系統或延遲嚴重的第三方資料庫</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-panel interactive">
+                    <h3>即時連線查詢與高準確度</h3>
+                    <p>直連即時查詢資料源，避免過期快取資料導致誤判備案狀態。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>極簡無干擾的操作介面</h3>
+                    <p>無繁瑣驗證碼干擾與廣告彈窗，輸入網域秒級回傳完整備案報告。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>完整展示主體與備案細節</h3>
+                    <p>清楚呈現主辦單位名稱、性質、備案號、首頁網址與審核通過日期。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>與 Kineticlinks 全球網絡深度整合</h3>
+                    <p>可結合我們的測速平台與 CDN 服務，一站式排查跨境網路與合規問題。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Customer Types -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>適合的使用者類型</h2>
+                <p>以下團隊與個人經常使用 ICP 備案檢查工具</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-panel interactive">
+                    <h3>跨境電商與出海企業</h3>
+                    <p>需要同時管理境內與境外網域資產，確保合規上線的運營團隊。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>DevOps 與系統維運工程師</h3>
+                    <p>負責網站上線、CDN 配置與日常域名可用性監控的技術人員。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>網域名稱投資與交易者</h3>
+                    <p>在收購或轉移網域前，需要快速評估域名資產背景與備案狀態。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>企業法務與合規顧問</h3>
+                    <p>負責審查數位資產合規性與工信部備案登記一致性的團隊。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Pages (contextual internal links) -->
+    <section class="section related-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>延伸閱讀與相關服務</h2>
+                <p>這些內容與本頁主題直接相關，可一併參考</p>
+            </div>
+            <div class="related-grid">
+                <a href="/blog/icp-filing-explained/" class="related-card glass-panel">
+                    <span class="related-kicker">合規指南</span>
+                    <h3>ICP 備案完整指南</h3>
+                    <p>誰需要備案、流程怎麼走、需要等多久，以及常見的誤解與邊界。</p>
+                </a>
+                <a href="/blog/icp-filing-cancelled/" class="related-card glass-panel">
+                    <span class="related-kicker">技術文章</span>
+                    <h3>ICP 備案被註銷的原因與自查</h3>
+                    <p>常見的空殼備案與資訊不符排查，以及挽救網站訪問的緊急處置。</p>
+                </a>
+                <a href="/speedtest/" class="related-card glass-panel">
+                    <span class="related-kicker">平台產品</span>
+                    <h3>全球三網測速平台</h3>
+                    <p>檢測中國電信、聯通、移動三網跨境連線延遲與線路品質。</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" style="background-color: var(--bg-darker);">
+        <div class="container">
+            <div class="section-header">
+                <h2>常見問題</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item glass-panel">
+                    <summary>什麼情況下網站必須辦理 ICP 備案？</summary>
+                    <p>只要您的網站使用位於中國大陸境內的伺服器，或開啟了中國大陸境內的 CDN 加速節點，依規定就必須辦理 ICP 備案。若服務完全部署在香港或海外其他地區且不經過大陸節點，則不強制要求備案。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>查詢顯示「未備案」代表什麼？</summary>
+                    <p>代表該網域目前在工信部系統中查無有效備案紀錄。此時該網域不能解析至中國境內伺服器或啟用境內 CDN，否則會被機房或雲服務商攔截存取。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>備案被管局註銷了會有通知嗎？</summary>
+                    <p>管局在定期抽查或發現資訊不符（如主體失效、空殼備案、聯絡方式失效）時進行註銷，有時通知可能未及時送達。因此建議定期使用本工具主動檢查備案健康狀態。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>本工具查詢到的資料是即時的嗎？</summary>
+                    <p>是的，工具會即時請求並解析最新備案狀態，確保您取得最新的工信部登記資訊。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>使用境外伺服器但想加速中國訪問，一定要備案嗎？</summary>
+                    <p>如果不經過大陸境內節點，使用香港或亞太優化線路（如 CN2 GIA / 9929）或海外 CDN 則不需要備案；但若要使用大陸境內邊緣節點加速，就必須完成 ICP 備案。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section cta-banner-section">
+        <div class="container">
+            <div class="cta-banner glass-panel">
+                <h2>立即檢測您的網域備案狀態</h2>
+                <p>只需輸入網域名稱，秒級獲得完整工信部 ICP 備案分析報告。</p>
+                <a href="https://icp-check.kineticlinks.net/" target="_blank" rel="noopener" class="btn btn-primary">前往 ICP 檢查工具</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/cdn/">CDN 內容傳遞網路</a>
+                    <a href="/vps/">VPS 虛擬專屬主機</a>
+                    <a href="/idc/">IDC 機房建置</a>
+                    <a href="/cloud/">公有雲架構解決方案</a>
+                    <a href="/ssl/">SSL 憑證自動化平台</a>
+                    <a href="/speedtest/">全球三網測速平台</a>
+                    <a href="/icp-check/">ICP 備案狀態即時查詢</a>
+                    <a href="/blog/">技術文章</a>
+                    <a href="/#contact">聯絡我們</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=ded9249e" defer></script>
+</body>
+
+</html>

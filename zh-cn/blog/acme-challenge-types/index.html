@@ -104,7 +104,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -232,7 +232,7 @@
                 <ol class="reason-list">
                     <li>
                         <strong>服务在 CDN 后面</strong>
-                        <span>CA 连过来时会先碰到 CDN 节点，而验证文件放在源站。除非 CDN 配置了对 `/.well-known/acme-challenge/` 路径的回源穿透，否则 CA 读到的是 CDN 的缓存或 404。这是跨境团队最常遇到的状况，因为跨境服务几乎都会挂 CDN。</span>
+                        <span>CA 连过来时会先碰到 CDN 节点，而验证文件放在源站。除非 CDN 配置了对 <code>/.well-known/acme-challenge/</code> 路径的回源穿透，否则 CA 读到的是 CDN 的缓存或 404。这是跨境团队最常遇到的状况，因为跨境服务几乎都会挂 CDN。</span>
                     </li>
                     <li>
                         <strong>后端有多台服务器</strong>
@@ -257,7 +257,7 @@
 
                 <!-- Why manual fails -->
                 <h2>通配符证书的硬限制</h2>
-                <p>如果你需要 `*.example.com` 这种通配符证书，选择题直接结束：<strong>只有 DNS-01 可以</strong>。HTTP-01 与 TLS-ALPN-01 都无法签发通配符证书，这不是配置问题，是协议层面的限制。</p>
+                <p>如果你需要 <code>*.example.com</code> 这种通配符证书，选择题直接结束：<strong>只有 DNS-01 可以</strong>。HTTP-01 与 TLS-ALPN-01 都无法签发通配符证书，这不是配置问题，是协议层面的限制。</p>
                 <p>这件事值得提早知道，因为它会反过来决定你的 DNS 供应商选择。如果你的域名注册商或 DNS 服务不提供 API，就无法自动化 DNS-01，也就拿不到自动续签的通配符证书——只能每次手动加 TXT 记录。在有效期已缩短到 200 天、未来将降至 47 天的情况下，手动处理不是可行的长期方案。</p>
 
                 <!-- How to respond -->
@@ -359,6 +359,7 @@
                     <a href="/zh-cn/cloud/">公有云架构解决方案</a>
                     <a href="/zh-cn/ssl/">SSL 证书自动化平台</a>
                     <a href="/zh-cn/speedtest/">全球三网测速平台</a>
+                    <a href="/zh-cn/icp-check/">ICP 备案状态即时查询</a>
                     <a href="/zh-cn/blog/">技术文章</a>
                     <a href="/zh-cn/#contact">联系我们</a>
                     <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>

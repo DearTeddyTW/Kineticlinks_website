@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>ICP 備案查詢工具實測｜查得到百度不代表查得到你的網域 - Kineticlinks</title>
+    <meta name="title" content="ICP 備案查詢工具實測｜查得到百度不代表查得到你的網域 - Kineticlinks">
+    <meta name="description" content="用 19 個狀態已知的網域實測 ICP 備案查詢 API。最危險的失敗不是查不到，而是回傳 code 200、卻把「查詢失敗」填進備案號欄位——連沒有備案的網域也一樣。">
+    <meta name="keywords" content="ICP 備案查詢, ICP 備案 API, 備案查詢工具, 備案號查詢, 工信部備案查詢, 備案網域">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/icp-lookup-api-accuracy/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/icp-lookup-api-accuracy/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/">
+    <meta property="og:title" content="ICP 備案查詢工具實測｜查得到百度不代表查得到你的網域 - Kineticlinks">
+    <meta property="og:description" content="用 19 個狀態已知的網域實測 ICP 備案查詢 API。最危險的失敗不是查不到，而是回傳 code 200、卻把「查詢失敗」填進備案號欄位——連沒有備案的網域也一樣。">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-09-29">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/">
+    <meta property="twitter:title" content="ICP 備案查詢工具實測｜查得到百度不代表查得到你的網域 - Kineticlinks">
+    <meta property="twitter:description" content="用 19 個狀態已知的網域實測 ICP 備案查詢 API。最危險的失敗不是查不到，而是回傳 code 200、卻把「查詢失敗」填進備案號欄位——連沒有備案的網域也一樣。">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "查得到百度，不代表查得到你要查的那個網域",
+      "description": "用 19 個狀態已知的網域實測 ICP 備案查詢 API。最危險的失敗不是查不到，而是回傳 code 200、卻把「查詢失敗」填進備案號欄位——連沒有備案的網域也一樣。",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-09-29",
+      "dateModified": "2026-09-29",
+      "inLanguage": "zh-TW",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "https://www.kineticlinks.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "技術文章",
+          "item": "https://www.kineticlinks.net/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "查得到百度，不代表查得到你要查的那個網域",
+          "item": "https://www.kineticlinks.net/blog/icp-lookup-api-accuracy/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
+    <script>
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/#home">首頁</a>
+                <a href="/#services">服務項目</a>
+                <a href="/#platforms">平台產品</a>
+                <a href="/blog/">技術文章</a>
+                <a href="/#about">關於我們</a>
+                <a href="/#contact" class="btn btn-outline">聯絡我們</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">繁體中文 ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/icp-lookup-api-accuracy/">繁體中文</a>
+                        <a href="/en/blog/icp-lookup-api-accuracy/">English</a>
+                        <a href="/zh-cn/blog/icp-lookup-api-accuracy/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="開啟選單"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/">首頁</a>
+            <span>/</span>
+            <a href="/blog/">技術文章</a>
+            <span>/</span>
+            <span class="current">ICP 查詢工具實測</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">中國網路</div>
+                <h1>查得到百度，不代表查得到你要查的那個網域</h1>
+                <div class="article-meta">
+                    <time datetime="2026-09-29">2026 年 9 月 29 日</time>
+                    <span class="dot">·</span>
+                    <span>約 9 分鐘</span>
+                </div>
+                <p class="article-lead">要測一個 ICP 備案查詢工具準不準，最直覺的做法是丟 <code>baidu.com</code> 進去。查得到，看起來就沒問題。
+
+問題是這個測試幾乎沒有鑑別力。真正需要查備案狀態的場合——評估一個準備買下的備案網域、確認接入關係是否還有效、核對交易對象的說法——查的從來不是百度，而是一些您沒聽過的網域。我們拿 19 個狀態已知的網域跑了一輪，而最值得講的發現不是誰查得比較全，是<strong>一種會安靜寫錯資料的失敗方式</strong>。</p>
+                <aside class="affiliate-note">本文比較的其中一個工具是 Kineticlinks 自行開發並營運的 ICP 備案查詢服務，測試由我們自己設計與執行，因此請把本文當成公開的方法而不是中立的評測。樣本組成、呼叫方式與對照端點都寫在內文，您可以用自己手上狀態已知的網域重跑一次；若結果與我們不同，歡迎告訴我們。</aside>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>19 個網域，四種類別</h2>
+                <p>樣本分四類，每一類的正確答案都能獨立覆核：<strong>十個仍在有效備案狀態的冷門網域</strong>（備案號與主體名稱可在工信部系統比對）、<strong>一個曾經備案但已失效的網域</strong>、<strong>五個中國大型網站</strong>（baidu、taobao、qq、zhihu、bilibili，備案號公開可查），以及<strong>三個確定沒有備案的網域</strong>（google.com、github.com，還有我們自己的 kineticlinks.net）。</p>
+                <p>最後那三個是反向對照，用途是抓「亂猜」——工具如果把它們判成有備案，那它回報的就不是查詢結果。對照組則選了一個公開的免費 ICP 查詢 API（apihz.cn），使用它文件上的展示金鑰呼叫。兩邊跑的是同一批網域。</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>測試類別</th>
+                                    <th>Kineticlinks</th>
+                                    <th>對照組（免費公開 API）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>冷門網域，皆有有效備案（10 個）</td>
+                                    <td class="num">10 / 10</td>
+                                    <td>1 個正確；8 個回報「查詢失敗或沒有備案」；1 個回報成功但欄位內容是「查詢失敗」</td>
+                                </tr>
+                                <tr class="">
+                                    <td>曾備案、現已失效（1 個）</td>
+                                    <td class="num">1 / 1</td>
+                                    <td>1 個正確</td>
+                                </tr>
+                                <tr class="">
+                                    <td>中國大型網站（5 個）</td>
+                                    <td class="num">5 / 5</td>
+                                    <td>5 個全部正確，備案號與主體名稱皆相符</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>確定沒有備案（3 個，反向對照）</td>
+                                    <td class="num">3 / 3</td>
+                                    <td>1 個正確；1 個回報可重試的錯誤；1 個誤判為有備案</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>同一批 19 個網域的結果。最後一列是多數人不會測、卻最能看出問題的一類。</figcaption>
+                </figure>
+
+                <p>值得先看的是最後一列。大多數人測查詢工具時只會丟有備案的網域進去，但真正暴露問題的往往是反向對照——正確答案是「沒有」的那一種。</p>
+
+                <!-- Why -->
+                <h2>三個發現</h2>
+                <p>同一批資料裡，有三件事值得分開講。</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>失敗集中在唯一有鑑別力的那一類</strong>
+                        <span>對照組在五個中國大型網站上全部正確，備案號與主體名稱都對；但在十個冷門備案網域上只答對一個。這個分布不是隨機的，它指向資料覆蓋率——熱門網域被收錄、被維護，冷門網域可能從來沒進過那份資料。而冷門網域正是實際會拿去查的對象。</span>
+                    </li>
+                    <li>
+                        <strong>回報「成功」，但每個欄位都是「查詢失敗」</strong>
+                        <span>有些查詢回傳的 HTTP 狀態是 200、<code>code</code> 欄位也是 200，但 <code>icp</code>、<code>unit</code>、<code>domain</code>、<code>time</code> 每一個欄位的值都是字串「查询失败」。對串接的程式來說這是一次成功的查詢，那四個字會被當成備案號與主體名稱寫進資料庫。這比直接回報錯誤難發現得多。</span>
+                    </li>
+                    <li>
+                        <strong>同一個網域，不同時間得到不同答案</strong>
+                        <span>我們跑了兩輪。第一輪 <code>kineticlinks.net</code> 拿到上述那種「成功但內容是查詢失敗」的回應；第二輪它回報正確，換成 <code>google.com</code> 和 <code>0592tk.com</code> 拿到同樣的壞回應。也就是說這個行為是間歇性的——測一次通過，不代表下一次也通過。</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>為什麼「成功」比「失敗」更危險</h2>
+                <p>把 <code>google.com</code> 丟進對照組，拿回來的是這樣的內容——HTTP 200，<code>code</code> 200，一次語法上完全成功的查詢：<code>{"code": 200, "icp": "查询失败", "unit": "查询失败", "domain": "查询失败", "time": "查询失败"}</code></p>
+                <p><code>google.com</code> 當然沒有 ICP 備案。但這個回應沒有任何一處指出查詢失敗了：狀態碼是成功的，備案號欄位有值。串接的程式如果寫成 <code>if resp["icp"]: mark_as_filed()</code>——這是最自然的寫法——它就會把 google.com 標記為已備案，並把「查詢失敗」四個字當成備案號存進去。</p>
+
+                <aside class="callout">
+                    <p>一個回報失敗的 API 只會讓您的流程停下來，您會立刻知道。一個回報成功卻給出垃圾值的 API，會讓錯誤資料一路流進資料庫、報表與決策，而且沒有任何地方會亮紅燈。</p>
+                </aside>
+
+                <p>同樣形狀的回應也出現在 <code>0592tk.com</code> 上——那是一個<strong>確實有備案</strong>的網域。所以這個欄位的值既不能證明有備案，也不能證明沒有，它單純是把錯誤訊息塞進了資料欄位。從外部看，兩種完全相反的情況長得一模一樣。這不是準確率高低的問題，是回應設計的問題：錯誤沒有自己的表達方式。任何查詢類 API 都該讓「確定有」「確定沒有」「這次查不到」三者在結構上可區分，否則接的人無從判斷。</p>
+
+                <!-- Why manual fails -->
+                <h2>這組測試不能證明什麼</h2>
+                <p>樣本是 19 個網域、一個對照組、單一時間點（2026 年 9 月 29 日）。這不足以推論任何工具的整體準確率，也不該被當成通則——它是這組測試裡發生的事，不是產業結論。幾個限制要講清楚：冷門網域樣本全部來自同一批來源，不是隨機抽樣；對照組用的是公開展示金鑰的免費端點，付費方案的資料來源與品質可能完全不同。我們也刻意沒有比較速度——該免費金鑰約每 20 秒才允許一次查詢，我們為了配合它而放慢呼叫，把那個耗時拿來當效能比較會是不誠實的。</p>
+                <p>還有一點必須直接講：受測的其中一個工具是我們自己的，測試也是我們自己設計與執行的。我們自己的工具同樣有過這類問題——在更早的測試裡它對中國大型網站一律回傳 <code>unknown</code>，也曾因為速率限制而大量失敗，兩者都是在這次測試過程中才發現並修掉的。第一輪比較還因為我們呼叫得太密集，把對照組打到限流，那一輪的結果是我們自己的問題，已作廢重跑。把這些寫出來，是因為一篇只呈現自己全對的比較文沒有參考價值。真正值得帶走的是方法，不是分數。</p>
+
+                <!-- How to respond -->
+                <h2>自己驗證一個查詢工具的三個步驟</h2>
+                <p>不論最後選哪一個，這三步能在接進系統前先篩掉不能用的：</p>
+
+                <h3>一、樣本裡一定要有冷門網域與反向對照</h3>
+                <p>只用知名網站測等於沒測。找幾個您已經知道答案、但沒什麼名氣的網域，再加上兩三個<strong>確定沒有備案</strong>的網域。後者是抓亂猜用的——很多問題只有在正確答案是否定的時候才會現形。</p>
+
+                <h3>二、確認「查詢失敗」和「查無備案」分得開</h3>
+                <p>這兩件事意義完全相反，但不少 API 把它們壓成同一種回應。刻意送一個不存在的網域、格式錯誤的字串，或在限流狀態下呼叫，看回應長什麼樣子。如果錯誤訊息會出現在資料欄位裡，那這個 API 不能直接接進會寫入資料庫的流程。</p>
+
+                <h3>三、同一批網域跑兩次</h3>
+                <p>間歇性的壞回應跑一次看不出來。隔一段時間用同一批網域再跑一次，比對兩次的結果是否一致。不一致的地方就是您上線後會遇到、但很難重現的問題。</p>
+
+                <!-- Checklist -->
+                <h2>採購備案查詢 API 前該問的三件事</h2>
+                <p>如果您要把備案查詢接進自己的系統，這三項會決定它能不能信：</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>資料是即時查詢還是快照</strong>
+                        <span>直接問，並要求說明快照的更新頻率與覆蓋範圍。這一項決定冷門網域查不查得到，也決定備案失效之後要多久才會反映出來。</span>
+                    </li>
+                    <li>
+                        <strong>失敗與「無備案」在回應上如何區分</strong>
+                        <span>要看實際的回應結構，不是文件上的文字描述。確認錯誤有獨立的狀態碼或欄位，而不是被塞進備案號欄位裡。</span>
+                    </li>
+                    <li>
+                        <strong>速率限制、配額與逾時行為</strong>
+                        <span>每秒與每日上限各是多少、超過會回什麼、上游逾時的時候是回錯誤還是回「無備案」。最後這一項最容易在上線之後才踩到。</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>小結</h2>
+                <p>這組測試裡最值得記住的不是分數，是一種失敗的形狀：<strong>回報成功、欄位有值、值是錯的</strong>。它不會讓程式報錯，所以不會有人發現；它會安靜地把「查詢失敗」四個字寫成某個網域的備案號。查得到百度證明不了什麼，拿確定沒有備案的網域去測，反而更容易看出一個工具能不能用。</p>
+                <p>備案狀態本身也不是查一次就固定的——接入商取消接入、專項核查註銷，都可能讓它在毫無徵兆的情況下消失。如果您正在評估備案網域，或要把備案查詢接進自己的流程，歡迎把實際情況告訴我們一起看。</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>參考資料</h3>
+                    <ul>
+                        <li><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">工業和信息化部 — ICP/IP 地址/域名資訊備案管理系統</a></li>
+                        <li><a href="https://help.aliyun.com/zh/icp-filing/basic-icp-service/special-verification-of-icp-filing-information" target="_blank" rel="noopener">阿里雲 — ICP 備案資訊專項核查指南</a></li>
+                        <li><a href="https://www.apihz.cn/" target="_blank" rel="noopener">apihz.cn — 公開介面文件</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>延伸閱讀與相關服務</h2>
+                <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
+                <div class="related-grid">
+                    <a href="/blog/icp-filing-explained/" class="related-card glass-panel">
+                        <span class="related-kicker">技術文章</span>
+                        <h3>ICP 備案完整說明</h3>
+                        <p>誰需要備案、要等多久，以及備案網域交易的實際機制。</p>
+                    </a>
+                    <a href="/blog/icp-filing-cancelled/" class="related-card glass-panel">
+                        <span class="related-kicker">技術文章</span>
+                        <h3>備案為什麼會被註銷</h3>
+                        <p>最常見的原因不是違規，是換了主機——而且完全沒有徵兆。</p>
+                    </a>
+                    <a href="/icp-check/" class="related-card glass-panel">
+                        <span class="related-kicker">平台產品</span>
+                        <h3>ICP 備案狀態即時查詢</h3>
+                        <p>一鍵檢測工信部備案有效性與主體資訊，支援即時驗證。</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>想用自己的網域驗證這組測試？</h2>
+                <p>ICP 備案查詢工具已開放直接使用，輸入網域即可查詢工信部最新備案狀態、備案號與主體名稱。若您需要以 API 方式批次接取，歡迎來信說明用量與使用情境。</p>
+                <div class="hero-actions">
+                    <a href="https://icp-check.kineticlinks.net/" target="_blank" rel="sponsored noopener" class="btn btn-primary">開始查詢 ICP 備案狀態</a>
+                    <a href="/blog/" class="btn btn-secondary">返回文章列表</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/cdn/">CDN 內容傳遞網路</a>
+                    <a href="/vps/">VPS 虛擬專屬主機</a>
+                    <a href="/idc/">IDC 機房建置</a>
+                    <a href="/cloud/">公有雲架構解決方案</a>
+                    <a href="/ssl/">SSL 憑證自動化平台</a>
+                    <a href="/speedtest/">全球三網測速平台</a>
+                    <a href="/icp-check/">ICP 備案狀態即時查詢</a>
+                    <a href="/blog/">技術文章</a>
+                    <a href="/#contact">聯絡我們</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=ded9249e" defer></script>
+</body>
+
+</html>

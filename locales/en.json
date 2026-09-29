@@ -72,6 +72,13 @@
       "f1": "China 3-Network Connection Test",
       "f2": "Free & Real-time Node Testing",
       "f3": "Commercial API Integration"
+    },
+    "icp_check": {
+      "title": "Live ICP filing lookup",
+      "desc": "Check a domain's ICP filing status, registrant and approval details with China's MIIT in real time.",
+      "f1": "Live MIIT ICP filing status lookup",
+      "f2": "Verify registrant type, filing number and domain",
+      "f3": "Batch checks and API access available on request"
     }
   },
   "about": {
@@ -828,6 +835,122 @@
       "l3_desc": "Multi-cloud and hybrid planning that bridges on-premises and public cloud resources."
     }
   },
+  "icp_check_page": {
+    "platform_url": "https://icp-check.kineticlinks.net/",
+    "seo": {
+      "title": "ICP Filing Lookup | Live MIIT Filing Status Check - Kineticlinks",
+      "description": "Check a domain's ICP filing status with China's MIIT in real time: registrant, filing number and approval date, before it breaks something.",
+      "keywords": "ICP filing lookup, MIIT filing check, ICP number lookup, China website filing, ICP beian check, China compliance"
+    },
+    "hero": {
+      "badge": "Live ICP filing lookup",
+      "title": "Real-time ICP filing checks and domain compliance lookup",
+      "subtitle": "Check in one step whether a domain holds a valid ICP filing, with the registrant name, filing number and approval status",
+      "desc": "The Kineticlinks ICP check tool queries China's Ministry of Industry and Information Technology (MIIT) filing status in real time, so teams deploying mainland nodes, enabling CDN acceleration or taking over a domain can confirm filing validity before it causes an outage.",
+      "cta_primary": "Check an ICP filing",
+      "cta_secondary": "See other platform products"
+    },
+    "overview": {
+      "title": "Why check ICP filing status in real time?",
+      "p1": "Under mainland Chinese regulation, any domain served from mainland infrastructure or accelerated through mainland CDN nodes must hold a valid ICP filing number issued by the MIIT. If the filing details no longer match reality, a change of registrant was never updated, or a compliance review cancels the record, the hosting provider blocks the domain and the site stops resolving.",
+      "p2": "The Kineticlinks ICP lookup queries a live data source, so entering a domain returns the current MIIT filing status, registrant name, registrant type (company or individual), ICP filing number and approval date — without working through the official system's captcha flow by hand.",
+      "p3": "Whether you are running routine checks, doing background work on a domain before buying it, or assessing cross-border compliance, the tool gives you a verifiable filing result immediately."
+    },
+    "use_cases": {
+      "title": "When to use it",
+      "desc": "Confirm filing compliance at the points where it actually matters",
+      "item1": {
+        "title": "Before bringing CDN or hosting nodes online",
+        "desc": "Confirm the domain holds a valid filing before enabling mainland CDN nodes or mainland hosting."
+      },
+      "item2": {
+        "title": "Routine checks against silent cancellation",
+        "desc": "Periodic compliance reviews cancel filings whose details no longer match. Regular checks keep the service continuous."
+      },
+      "item3": {
+        "title": "Domain transactions and asset review",
+        "desc": "Verify filing history and current registrant before acquiring or taking over a domain."
+      },
+      "item4": {
+        "title": "Cross-border architecture decisions",
+        "desc": "Establish whether the business is properly filed, and therefore whether to use mainland nodes or an overseas-only CDN."
+      }
+    },
+    "differentiators": {
+      "title": "Why use the Kineticlinks ICP lookup",
+      "desc": "Compared with the official system or third-party databases running on stale data",
+      "item1": {
+        "title": "Live queries, not a cached snapshot",
+        "desc": "Queries a live data source, so a stale cache cannot report a filing status that is no longer true."
+      },
+      "item2": {
+        "title": "A plain interface with nothing in the way",
+        "desc": "No captcha loops and no ad interstitials — enter a domain and get the filing details back in seconds."
+      },
+      "item3": {
+        "title": "Full registrant and filing detail",
+        "desc": "Shows the registrant name and type, filing number, homepage URL and approval date."
+      },
+      "item4": {
+        "title": "Integrated with the wider Kineticlinks network",
+        "desc": "Pairs with our speed test platform and CDN services to diagnose cross-border networking and compliance together."
+      }
+    },
+    "customers": {
+      "title": "Who uses it",
+      "desc": "Teams and individuals who check filing status regularly",
+      "item1": {
+        "title": "Cross-border commerce and companies expanding abroad",
+        "desc": "Operations teams managing mainland and overseas domain assets who need compliant launches."
+      },
+      "item2": {
+        "title": "DevOps and systems engineers",
+        "desc": "Engineers responsible for launches, CDN configuration and day-to-day domain availability."
+      },
+      "item3": {
+        "title": "Domain investors and brokers",
+        "desc": "Anyone who needs a fast read on a domain's background and filing status before acquiring or transferring it."
+      },
+      "item4": {
+        "title": "Legal and compliance teams",
+        "desc": "Teams reviewing digital asset compliance and consistency with MIIT filing records."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "When does a website need an ICP filing?",
+      "a1": "Whenever your site is served from a server located in mainland China, or you enable mainland Chinese CDN acceleration nodes, a filing is required. If everything is deployed in Hong Kong or elsewhere overseas and no mainland node is involved, a filing is not mandatory.",
+      "q2": "What does a \"not filed\" result mean?",
+      "a2": "It means the MIIT system currently holds no valid filing record for that domain. Until that changes, the domain cannot point at mainland servers or use mainland CDN nodes without the provider blocking access.",
+      "q3": "Will I be notified if a filing is cancelled?",
+      "a3": "Cancellations happen during periodic reviews or when details no longer match — a lapsed registrant, a shell filing, contact details that no longer work. The notice does not always arrive in time, which is why checking proactively is worth doing.",
+      "q4": "Is the data returned live?",
+      "a4": "Yes. The tool requests and parses the current filing status at query time, so you see the latest MIIT record rather than a cached copy.",
+      "q5": "If I host overseas but want faster access from China, do I still need a filing?",
+      "a5": "Not if traffic never touches a mainland node — Hong Kong or Asia-Pacific optimised routes (CN2 GIA, 9929) and overseas CDNs are fine. To use mainland edge nodes for acceleration, an ICP filing is required."
+    },
+    "cta": {
+      "title": "Check your domain's filing status",
+      "desc": "Enter a domain and get its MIIT ICP filing details back in seconds.",
+      "button": "Open the ICP check tool"
+    },
+    "related": {
+      "title": "Further reading and related services",
+      "desc": "Directly related to this page's topic",
+      "l1_slug": "blog/icp-filing-explained/",
+      "l1_kicker": "Compliance guide",
+      "l1_title": "ICP filing: the complete guide",
+      "l1_desc": "Who needs one, how the process runs, how long it takes, and the common misconceptions.",
+      "l2_slug": "blog/icp-filing-cancelled/",
+      "l2_kicker": "Technical article",
+      "l2_title": "Why ICP filings get cancelled",
+      "l2_desc": "Shell filings and mismatched details, and what to do when access is already blocked.",
+      "l3_slug": "speedtest/",
+      "l3_kicker": "Platform product",
+      "l3_title": "Global three-network speed test",
+      "l3_desc": "Measure cross-border latency and route quality across China Telecom, Unicom and Mobile."
+    }
+  },
   "blog": {
     "badge": "Blog",
     "title": "Technical Blog",
@@ -839,6 +962,128 @@
       "title": "Technical Blog | CDN, VPS & Cloud Architecture Notes - Kineticlinks",
       "description": "Practical notes on infrastructure: certificate automation, cross-border network quality, domain management and data center operations.",
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
+    }
+  },
+  "article_icp_lookup_accuracy": {
+    "date": "2026-09-29",
+    "date_display": "September 29, 2026",
+    "category": "China Networking",
+    "reading_time": "9 min read",
+    "short_title": "ICP Lookup API Test",
+    "title": "Finding Baidu Doesn't Mean Finding the Domain You Care About",
+    "excerpt": "Nineteen domains of known status, run against an ICP filing lookup API. The worst failure isn't a miss — it's HTTP 200 with the error string sitting in the ICP number field.",
+    "disclosure": "One of the tools compared here is the ICP filing lookup service Kineticlinks builds and operates, and we designed and ran the test ourselves. Treat this as a published method rather than a neutral review. The sample, the calls and the comparison endpoint are all described below, so you can re-run it with domains whose status you already know. If your results differ, we would like to hear about it.",
+    "lead": "The instinctive way to check whether an ICP filing lookup tool works is to throw `baidu.com` at it. It comes back with a filing number, so the tool looks fine.\n\nThat test has almost no discriminating power. The situations where you actually need a filing status — sizing up a pre-filed domain before buying it, confirming a hosting relationship is still active, checking what a counterparty told you — never involve Baidu. They involve domains you have never heard of. We ran 19 domains of known status through two tools, and the finding worth writing up isn't which one had better coverage. It's **a failure mode that quietly writes wrong data into your database**.",
+    "seo": {
+      "title": "ICP Lookup API Test: Finding Baidu Proves Nothing - Kineticlinks",
+      "description": "Nineteen domains of known status run against an ICP filing lookup API. The worst failure is not a miss: it is HTTP 200 with the error string in the ICP field.",
+      "keywords": "ICP filing lookup, ICP filing API, MIIT filing check, ICP number lookup, beian lookup API, pre-filed domain"
+    },
+    "s1": {
+      "title": "Nineteen domains, four categories",
+      "p1": "The sample splits into four groups, each with an answer that can be checked independently: **ten obscure domains holding valid filings** (filing number and registrant verifiable against the MIIT system), **one domain that was filed but no longer is**, **five large Chinese sites** (baidu, taobao, qq, zhihu, bilibili, whose filing numbers are public), and **three domains that definitely have no filing** (google.com, github.com, and our own kineticlinks.net).",
+      "p2": "Those last three are the reverse controls, and their job is to catch guessing — if a tool reports them as filed, what it is returning isn't a lookup result. For comparison we used a public, free ICP lookup API (apihz.cn) called with the demo key from its own documentation. Both tools saw the same 19 domains.",
+      "p3": "Start with the bottom row. Most people test a lookup tool by feeding it domains that do have filings, but the category that exposes problems is usually the reverse control — the one where the correct answer is \"no\"."
+    },
+    "table": {
+      "caption": "The same 19 domains through both tools. The bottom row is the category most people never test.",
+      "col1": "Category",
+      "col2": "Kineticlinks",
+      "col3": "Comparison (free public API)",
+      "r1c1": "Obscure domains, all validly filed (10)",
+      "r1c2": "10 / 10",
+      "r1c3": "1 correct; 8 reported \"lookup failed or no filing\"; 1 reported success with \"lookup failed\" as the field value",
+      "r1_class": "",
+      "r2c1": "Previously filed, now lapsed (1)",
+      "r2c2": "1 / 1",
+      "r2c3": "1 correct",
+      "r2_class": "",
+      "r3c1": "Large Chinese sites (5)",
+      "r3c2": "5 / 5",
+      "r3c3": "5 correct, with matching filing numbers and registrants",
+      "r3_class": "",
+      "r4c1": "Definitely unfiled (3, reverse control)",
+      "r4c2": "3 / 3",
+      "r4c3": "1 correct; 1 returned a retryable error; 1 reported as filed",
+      "r4_class": "is-current"
+    },
+    "s2": {
+      "title": "Three findings",
+      "intro": "Three things in this data are worth separating out.",
+      "r1_title": "The failures cluster in the only category that discriminates",
+      "r1_desc": "The comparison API got all five large Chinese sites right, filing numbers and registrant names included — and got one out of ten obscure filed domains. That distribution isn't random. It points at coverage: popular domains get indexed and maintained, obscure ones may never have entered the dataset at all. Obscure domains are exactly what people look up.",
+      "r2_title": "Reports success, but every field says \"lookup failed\"",
+      "r2_desc": "Some queries came back with HTTP 200 and a `code` field of 200, while `icp`, `unit`, `domain` and `time` were each set to the string 查询失败 — \"lookup failed\". To calling code that is a successful query, and those two characters get stored as the filing number and the registrant name. It is much harder to notice than an outright error.",
+      "r3_title": "The same domain gives different answers at different times",
+      "r3_desc": "We ran the set twice. In the first run `kineticlinks.net` came back with the success-but-garbage response described above; in the second it was correct, and `google.com` and `0592tk.com` drew the bad response instead. The behaviour is intermittent, so passing a test once says nothing about the next call."
+    },
+    "s3": {
+      "title": "Why \"success\" is more dangerous than failure",
+      "p1": "Ask the comparison API about `google.com` and this comes back — HTTP 200, `code` 200, a syntactically perfect success: `{\"code\": 200, \"icp\": \"查询失败\", \"unit\": \"查询失败\", \"domain\": \"查询失败\", \"time\": \"查询失败\"}`",
+      "p2": "`google.com` obviously has no ICP filing. But nothing in that response says the lookup failed: the status is success and the filing-number field has a value. Calling code written as `if resp[\"icp\"]: mark_as_filed()` — the most natural way to write it — marks google.com as filed and stores \"lookup failed\" as its filing number.",
+      "callout": "An API that reports failure stops your pipeline, and you find out immediately. An API that reports success with a garbage value lets wrong data flow into your database, your reports and your decisions, with nothing anywhere turning red.",
+      "p3": "The same response shape appeared for `0592tk.com` — a domain that **does** hold a valid filing. So the value in that field proves neither presence nor absence of a filing; it is simply an error message occupying a data field. From the outside, two opposite situations look identical. This isn't a question of accuracy rates, it's a question of response design: the error has no way to express itself. Any lookup API should make \"definitely yes\", \"definitely no\" and \"couldn't tell you this time\" structurally distinguishable, or the caller has nothing to work with."
+    },
+    "s4": {
+      "title": "What this test does not prove",
+      "p1": "The sample is 19 domains, one comparison tool, one point in time (September 29, 2026). That is not enough to infer any tool's overall accuracy, and it shouldn't be read as a general rule — it is what happened in this test, not an industry conclusion. Some specific limits: the obscure domains all came from one source rather than a random sample, and the comparison used a free endpoint with a published demo key, so a paid tier may draw on entirely different data. We also deliberately left speed out of the comparison — that demo key permits roughly one query every 20 seconds, and we slowed our calls to respect it, so presenting the elapsed time as a performance result would be dishonest.",
+      "p2": "One more thing that needs saying plainly: one of the tools under test is ours, and we designed and ran the test. Our own tool has had the same class of problem — in earlier testing it returned `unknown` for every large Chinese site, and a run before that failed in bulk under rate limiting; both were found and fixed during this testing. Our first comparison run also hammered the free endpoint hard enough to trigger its rate limiter, which made that run our fault, so we discarded it and re-ran. We are writing this down because a comparison that only shows the author scoring full marks is not worth reading. The method is the part worth taking away, not the score."
+    },
+    "s5": {
+      "title": "Three steps to check a lookup tool yourself",
+      "intro": "Whichever tool you end up with, these three steps filter out the unusable ones before you wire anything in:",
+      "l1_title": "1. Put obscure domains and reverse controls in the sample",
+      "l1_desc": "Testing only with well-known sites is not testing. Find a handful of domains whose status you already know but that nobody has heard of, and add two or three that **definitely have no filing**. The second group catches guessing — a lot of problems only surface when the correct answer is negative.",
+      "l2_title": "2. Check that \"lookup failed\" and \"no filing\" are distinguishable",
+      "l2_desc": "Those two mean opposite things, yet plenty of APIs collapse them into one response. Deliberately send a nonexistent domain, a malformed string, or a call while rate-limited, and look at what comes back. If error text can appear inside a data field, that API cannot be wired directly into anything that writes to a database.",
+      "l3_title": "3. Run the same set twice",
+      "l3_desc": "Intermittent bad responses don't show up in a single pass. Re-run the same domains after a gap and compare the two sets of results. Wherever they disagree is a problem you will hit in production and struggle to reproduce."
+    },
+    "s6": {
+      "title": "Three questions to ask before buying a lookup API",
+      "intro": "If you are wiring filing lookups into your own system, these three determine whether you can trust it:",
+      "c1_title": "Is the data live or a snapshot",
+      "c1_desc": "Ask directly, and ask for the snapshot's refresh interval and coverage. This determines whether obscure domains resolve at all, and how long a lapsed filing takes to show up.",
+      "c2_title": "How are failures distinguished from \"no filing\"",
+      "c2_desc": "Look at the actual response structure, not the prose in the documentation. Confirm that errors get their own status code or field instead of being packed into the filing-number field.",
+      "c3_title": "Rate limits, quotas and timeout behaviour",
+      "c3_desc": "What are the per-second and daily ceilings, what comes back when you exceed them, and on an upstream timeout does it return an error or \"no filing\". That last one is the easiest to discover only after you go live."
+    },
+    "s7": {
+      "title": "In summary",
+      "p1": "The part of this test worth remembering isn't the score, it's the shape of the failure: **reports success, field has a value, the value is wrong**. It doesn't raise an exception, so nobody notices, and it quietly records \"lookup failed\" as some domain's filing number. Finding Baidu proves very little; testing with domains that definitely have no filing tells you far more about whether a tool is usable.",
+      "p2": "Filing status isn't fixed once you've looked it up, either — a hosting provider withdrawing access, or a compliance review cancelling the record, can make it disappear with no warning at all. If you are evaluating a pre-filed domain, or wiring filing lookups into your own workflow, tell us what you are working with and we will look at it with you."
+    },
+    "sources": {
+      "title": "References",
+      "s1": "MIIT — ICP/IP Address/Domain Information Filing Management System",
+      "u1": "https://beian.miit.gov.cn/",
+      "s2": "Alibaba Cloud — Special verification of ICP filing information",
+      "u2": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/special-verification-of-icp-filing-information",
+      "s3": "apihz.cn — public API documentation",
+      "u3": "https://www.apihz.cn/"
+    },
+    "cta": {
+      "href": "https://icp-check.kineticlinks.net/",
+      "title": "Want to re-run this test with your own domains?",
+      "desc": "The ICP filing lookup tool is open to use directly — enter a domain to see its current MIIT filing status, filing number and registrant. If you need batch access over an API, email us with your expected volume and use case.",
+      "button": "Check an ICP filing status"
+    },
+    "related": {
+      "title": "Further reading and related services",
+      "desc": "Directly related to this page's topic",
+      "l1_slug": "blog/icp-filing-explained/",
+      "l1_kicker": "Technical article",
+      "l1_title": "ICP filing explained",
+      "l1_desc": "Who needs one, how long it takes, and how pre-filed domain trading actually works.",
+      "l2_slug": "blog/icp-filing-cancelled/",
+      "l2_kicker": "Technical article",
+      "l2_title": "Why filings get cancelled",
+      "l2_desc": "The usual cause isn't a violation, it's changing hosts — with no warning at all.",
+      "l3_slug": "icp-check/",
+      "l3_kicker": "Platform product",
+      "l3_title": "Live ICP filing lookup",
+      "l3_desc": "Check MIIT filing validity and registrant details in one step."
     }
   },
   "article_filing_cancelled": {
@@ -946,10 +1191,10 @@
       "u3": "https://cloud.tencent.com/document/product/243/19618"
     },
     "cta": {
-      "href": "#contact",
-      "title": "Questions About a Filing, or Planning a China Launch?",
-      "desc": "We offer cross-border deployment planning, CDN acceleration, and pre-filed domains. The rules and risks around the latter are covered in our ICP filing article — bring us your situation.",
-      "button": "Get in Touch"
+      "href": "https://icp-check.kineticlinks.net/",
+      "title": "Want to confirm your domain's filing is still valid?",
+      "desc": "Enter a domain to check its current MIIT filing status, registrant and approval details, and catch a silent cancellation before it takes the site down.",
+      "button": "Check ICP filing status"
     },
     "related": {
       "title": "Related Services & Reading",
@@ -962,10 +1207,10 @@
       "l2_kicker": "Article",
       "l2_title": "Do Hong Kong Servers Need Filing",
       "l2_desc": "Where the exemption ends, and what makes it lapse.",
-      "l3_slug": "blog/domain-hijacking-protection/",
-      "l3_kicker": "Article",
-      "l3_title": "Domain Hijacking Defence",
-      "l3_desc": "The same trap: hosting the notification mailbox on the asset you're protecting."
+      "l3_slug": "icp-check/",
+      "l3_kicker": "Platform product",
+      "l3_title": "Live ICP filing lookup",
+      "l3_desc": "Check MIIT filing validity and registrant details in one step."
     }
   },
   "article_hk_filing": {

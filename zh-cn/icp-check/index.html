@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>ICP 备案查询工具 | 中国工信部网站备案状态即时检测 - Kineticlinks</title>
+    <meta name="title" content="ICP 备案查询工具 | 中国工信部网站备案状态即时检测 - Kineticlinks">
+    <meta name="description" content="即时查询与验证域名在中国工信部（MIIT）的 ICP 备案状态。提供域名、主体名称、备案号与审核时间即时检测，帮助排查备案有效性与跨境合规风险。">
+    <meta name="keywords" content="ICP 备案查询, 工信部备案查询, 域名 ICP 查询, ICP 备案状态检测, 网站备案号查询, 中国网站合规">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/zh-cn/icp-check/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/icp-check/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/icp-check/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/icp-check/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/icp-check/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kineticlinks.net/zh-cn/icp-check/">
+    <meta property="og:title" content="ICP 备案查询工具 | 中国工信部网站备案状态即时检测 - Kineticlinks">
+    <meta property="og:description" content="即时查询与验证域名在中国工信部（MIIT）的 ICP 备案状态。提供域名、主体名称、备案号与审核时间即时检测，帮助排查备案有效性与跨境合规风险。">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/zh-cn/icp-check/">
+    <meta property="twitter:title" content="ICP 备案查询工具 | 中国工信部网站备案状态即时检测 - Kineticlinks">
+    <meta property="twitter:description" content="即时查询与验证域名在中国工信部（MIIT）的 ICP 备案状态。提供域名、主体名称、备案号与审核时间即时检测，帮助排查备案有效性与跨境合规风险。">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "即时 ICP 备案状态检测与域名合规查询",
+      "name": "ICP 备案查询工具 | 中国工信部网站备案状态即时检测 - Kineticlinks",
+      "description": "即时查询与验证域名在中国工信部（MIIT）的 ICP 备案状态。提供域名、主体名称、备案号与审核时间即时检测，帮助排查备案有效性与跨境合规风险。",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "areaServed": ["TW", "CN", "HK", "Asia"],
+      "url": "https://www.kineticlinks.net/zh-cn/icp-check/"
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.kineticlinks.net/zh-cn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "平台产品",
+          "item": "https://www.kineticlinks.net/zh-cn/#platforms"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "即时 ICP 备案状态检测与域名合规查询",
+          "item": "https://www.kineticlinks.net/zh-cn/icp-check/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): FAQPage -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什么情况下网站必须办理 ICP 备案？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "只要您的网站使用位于中国大陆境内的服务器，或开启了中国大陆境内的 CDN 加速节点，依规定就必须办理 ICP 备案。若服务完全部署在香港或海外其他地区且不经过大陆节点，则不强制要求备案。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "查询显示「未备案」代表什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "代表该域名目前在工信部系统中查无有效备案记录。此时该域名不能解析至中国境内服务器或启用境内 CDN，否则会被机房或云服务商拦截访问。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "备案被管局注销了会有通知吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "管局在定期抽查或发现信息不符（如主体失效、空壳备案、联系方式失效）时进行注销，有时通知可能未及时送达。因此建议定期使用本工具主动检查备案健康状态。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "本工具查询到的数据是即时的吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的，工具会即时请求并解析最新备案状态，确保您取得最新的工信部登记信息。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "使用境外服务器但想加速中国访问，一定要备案吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "如果不经过大陆境内节点，使用香港或亚太优化线路（如 CN2 GIA / 9929）或海外 CDN 则不需要备案；但若要使用大陆境内边缘节点加速，就必须完成 ICP 备案。"
+      }
+    }
+  ]
+}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
+    <script>
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/zh-cn/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/zh-cn/#home">首页</a>
+                <a href="/zh-cn/#services">服务项目</a>
+                <a href="/zh-cn/#platforms">平台产品</a>
+                <a href="/zh-cn/blog/">技术文章</a>
+                <a href="/zh-cn/#about">关于我们</a>
+                <a href="/zh-cn/#contact" class="btn btn-outline">联系我们</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">简体中文 ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/icp-check/">繁體中文</a>
+                        <a href="/en/icp-check/">English</a>
+                        <a href="/zh-cn/icp-check/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="打开菜单"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/zh-cn/">首页</a>
+            <span>/</span>
+            <a href="/zh-cn/#platforms">平台产品</a>
+            <span>/</span>
+            <span class="current">即时 ICP 备案状态检测与域名合规查询</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content glass-panel">
+                <div class="badge">ICP 备案即时查询工具</div>
+                <h1>即时 ICP 备案状态检测与域名合规查询</h1>
+                <p class="page-hero-subtitle">一键快速检测域名是否具备有效 ICP 备案，准确掌握主体名称、备案号与审核状态</p>
+                <p>Kineticlinks ICP 检查工具提供快速、即时的中国工信部（MIIT）备案状态查询服务，帮助企业与开发者在部署中国节点、CDN 加速或域名转移前，即时确认备案有效性，避免因备案失效或信息不符造成业务中断。</p>
+                <div class="hero-actions">
+                    <a href="https://icp-check.kineticlinks.net/" target="_blank" rel="noopener" class="btn btn-primary">立即查询 ICP 备案</a>
+                    <a href="/zh-cn/#platforms" class="btn btn-secondary">查看其他平台产品</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section prose-section">
+        <div class="container">
+            <div class="section-header" style="text-align:left; margin-bottom: 2rem;">
+                <h2>为什么需要即时检查 ICP 备案状态？</h2>
+            </div>
+            <div class="prose glass-panel">
+                <p>依中国大陆法规，任何使用中国境内服务器或境内 CDN 节点加速的域名，均须取得中华人民共和国工业和信息化部（MIIT）核发的有效 ICP 备案号。若备案信息不符、主体变更未更新或遭管局抽查注销，域名将被接入商立即拦截，导致网站无法访问。</p>
+                <p>Kineticlinks ICP 备案查询工具对接即时数据源，让您只需输入域名，即可快速获得工信部最新备案状态、主体名称、主体性质（企业／个人）、ICP 备案号以及审核通过时间，免去手动前往官方系统输入验证码的麻烦。</p>
+                <p>无论是日常运维定期巡检、采购二手域名前的背景调查，还是评估跨境业务合规性，都能通过本工具即时获得准确的备案验证结果。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>适用场景</h2>
+                <p>在各个关键运维与部署环节，即时确保域名备案合规</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-panel interactive">
+                    <h3>CDN 与主机节点上线前核查</h3>
+                    <p>在开启中国境内 CDN 节点或境内主机前，确认域名具备正常有效备案。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>定期巡检防止无预警注销</h3>
+                    <p>管局周期性抽查常导致信息不符的备案被注销，定期排查以确保服务连续性。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>域名交易与资产盘点</h3>
+                    <p>在交易或接收二手域名前，核实其备案历史与当前主体归属状态。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>跨境合规架构评估</h3>
+                    <p>厘清业务是否已合规备案，决定该采用境内节点加速还是纯境外 CDN 架构。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators -->
+    <section class="section" style="background-color: var(--bg-darker);">
+        <div class="container">
+            <div class="section-header">
+                <h2>为什么选择 Kineticlinks ICP 查询工具</h2>
+                <p>相较于传统官方系统或延迟严重的第三方数据库</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-panel interactive">
+                    <h3>即时连线查询与高准确度</h3>
+                    <p>直连即时查询数据源，避免过期缓存数据导致误判备案状态。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>极简无干扰的操作界面</h3>
+                    <p>无繁琐验证码干扰与广告弹窗，输入域名秒级返回完整备案报告。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>完整展示主体与备案细节</h3>
+                    <p>清楚呈现主办单位名称、性质、备案号、首页网址与审核通过日期。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>与 Kineticlinks 全球网络深度整合</h3>
+                    <p>可结合我们的测速平台与 CDN 服务，一站式排查跨境网络与合规问题。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Customer Types -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>适合的使用者类型</h2>
+                <p>以下团队与个人经常使用 ICP 备案检查工具</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-panel interactive">
+                    <h3>跨境电商与出海企业</h3>
+                    <p>需要同时管理境内与境外域名资产，确保合规上线的运营团队。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>DevOps 与系统运维工程师</h3>
+                    <p>负责网站上线、CDN 配置与日常域名可用性监控的技术人员。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>域名投资与交易者</h3>
+                    <p>在收购或转移域名前，需要快速评估域名资产背景与备案状态。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>企业法务与合规顾问</h3>
+                    <p>负责审查数字资产合规性与工信部备案登记一致性的团队。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Pages (contextual internal links) -->
+    <section class="section related-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>延伸阅读与相关服务</h2>
+                <p>这些内容与本页主题直接相关，可一并参考</p>
+            </div>
+            <div class="related-grid">
+                <a href="/zh-cn/blog/icp-filing-explained/" class="related-card glass-panel">
+                    <span class="related-kicker">合规指南</span>
+                    <h3>ICP 备案完整指南</h3>
+                    <p>谁需要备案、流程怎么走、需要等多久，以及常见的误解与边界。</p>
+                </a>
+                <a href="/zh-cn/blog/icp-filing-cancelled/" class="related-card glass-panel">
+                    <span class="related-kicker">技术文章</span>
+                    <h3>ICP 备案被注销的原因与自查</h3>
+                    <p>常见的空壳备案与信息不符排查，以及挽救网站访问的紧急处置。</p>
+                </a>
+                <a href="/zh-cn/speedtest/" class="related-card glass-panel">
+                    <span class="related-kicker">平台产品</span>
+                    <h3>全球三网测速平台</h3>
+                    <p>检测中国电信、联通、移动三网跨境连线延迟与线路质量。</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" style="background-color: var(--bg-darker);">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item glass-panel">
+                    <summary>什么情况下网站必须办理 ICP 备案？</summary>
+                    <p>只要您的网站使用位于中国大陆境内的服务器，或开启了中国大陆境内的 CDN 加速节点，依规定就必须办理 ICP 备案。若服务完全部署在香港或海外其他地区且不经过大陆节点，则不强制要求备案。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>查询显示「未备案」代表什么？</summary>
+                    <p>代表该域名目前在工信部系统中查无有效备案记录。此时该域名不能解析至中国境内服务器或启用境内 CDN，否则会被机房或云服务商拦截访问。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>备案被管局注销了会有通知吗？</summary>
+                    <p>管局在定期抽查或发现信息不符（如主体失效、空壳备案、联系方式失效）时进行注销，有时通知可能未及时送达。因此建议定期使用本工具主动检查备案健康状态。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>本工具查询到的数据是即时的吗？</summary>
+                    <p>是的，工具会即时请求并解析最新备案状态，确保您取得最新的工信部登记信息。</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>使用境外服务器但想加速中国访问，一定要备案吗？</summary>
+                    <p>如果不经过大陆境内节点，使用香港或亚太优化线路（如 CN2 GIA / 9929）或海外 CDN 则不需要备案；但若要使用大陆境内边缘节点加速，就必须完成 ICP 备案。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section cta-banner-section">
+        <div class="container">
+            <div class="cta-banner glass-panel">
+                <h2>立即检测您的域名备案状态</h2>
+                <p>只需输入域名，秒级获得完整工信部 ICP 备案分析报告。</p>
+                <a href="https://icp-check.kineticlinks.net/" target="_blank" rel="noopener" class="btn btn-primary">前往 ICP 检查工具</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/zh-cn/cdn/">CDN 内容分发网络</a>
+                    <a href="/zh-cn/vps/">VPS 虚拟专属主机</a>
+                    <a href="/zh-cn/idc/">IDC 机房建置</a>
+                    <a href="/zh-cn/cloud/">公有云架构解决方案</a>
+                    <a href="/zh-cn/ssl/">SSL 证书自动化平台</a>
+                    <a href="/zh-cn/speedtest/">全球三网测速平台</a>
+                    <a href="/zh-cn/icp-check/">ICP 备案状态即时查询</a>
+                    <a href="/zh-cn/blog/">技术文章</a>
+                    <a href="/zh-cn/#contact">联系我们</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=ded9249e" defer></script>
+</body>
+
+</html>

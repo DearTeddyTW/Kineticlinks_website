@@ -96,7 +96,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=d64c89e7">
+    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -289,6 +289,23 @@
                     </ul>
                     <span class="card-link">了解更多 →</span>
                 </a>
+                <!-- ICP Check Platform Card -->
+                <a href="/zh-cn/icp-check/" class="service-card glass-panel interactive" style="display: block;">
+                    <div class="icon-wrapper">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>ICP 备案状态即时查询</h3>
+                    <p>即时查询域名在中国工信部（MIIT）的 ICP 备案状态、主体名称与审核信息。</p>
+                    <ul class="feature-list">
+                        <li>即时工信部 ICP 备案状态查询</li>
+                        <li>验证主体性质、备案号与域名</li>
+                        <li>批量检测与 API 接取欢迎来信洽询</li>
+                    </ul>
+                    <span class="card-link">了解更多 →</span>
+                </a>
             </div>
         </div>
     </section>
@@ -344,6 +361,17 @@
                 <p>来自一线的基础架构实务笔记</p>
             </div>
             <div class="article-list">
+                <a href="/zh-cn/blog/icp-lookup-api-accuracy/" class="article-card">
+                    <div class="article-card-meta">
+                        <span class="article-card-tag">中国网络</span>
+                        <time datetime="2026-09-29">2026 年 9 月 29 日</time>
+                        <span>·</span>
+                        <span>约 9 分钟</span>
+                    </div>
+                    <h2>查得到百度，不代表查得到你要查的那个域名</h2>
+                    <p>用 19 个状态已知的域名实测 ICP 备案查询 API。最危险的失败不是查不到，而是报告成功、并在每个字段里填进「查询失败」四个字——连没有备案的域名也一样。</p>
+                    <span class="card-link">阅读全文 →</span>
+                </a>
                 <a href="/zh-cn/blog/icp-filing-cancelled/" class="article-card">
                     <div class="article-card-meta">
                         <span class="article-card-tag">中国网络</span>
@@ -364,17 +392,6 @@
                     </div>
                     <h2>香港服务器要备案吗：免备案的边界不在你买在哪</h2>
                     <p>香港属境外，确实不适用大陆的备案规定。但「免备案」免的是手续而不是所有规范，而且那道豁免最常在为了加速而开启大陆节点时失效。</p>
-                    <span class="card-link">阅读全文 →</span>
-                </a>
-                <a href="/zh-cn/blog/http-caching-headers/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">网络质量</span>
-                        <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                        <span>·</span>
-                        <span>约 10 分钟</span>
-                    </div>
-                    <h2>no-cache 不是「不要缓存」：HTTP 缓存标头的实际语意</h2>
-                    <p>用 no-cache 想挡住缓存的人，其实允许了存储——它要求的是每次使用前验证。真正禁止存储的是 no-store，而两者的差别会直接影响敏感数据与 CDN 性能。</p>
                     <span class="card-link">阅读全文 →</span>
                 </a>
             </div>
@@ -496,6 +513,7 @@
                     <a href="/zh-cn/cloud/">公有云架构解决方案</a>
                     <a href="/zh-cn/ssl/">SSL 证书自动化平台</a>
                     <a href="/zh-cn/speedtest/">全球三网测速平台</a>
+                    <a href="/zh-cn/icp-check/">ICP 备案状态即时查询</a>
                     <a href="/zh-cn/blog/">技术文章</a>
                     <a href="#contact">联系我们</a>
                 </div>
