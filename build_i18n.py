@@ -56,6 +56,7 @@ LANGS = [
 # Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
 # listed on the blog index. content_key is looked up in the locale JSON.
 ARTICLES = [
+    {'slug': 'bulk-icp-filing-lookup', 'content_key': 'article_bulk_filing_lookup'},
     {'slug': 'buying-a-pre-filed-domain', 'content_key': 'article_prefiled_domain_checks'},
     {'slug': 'icp-lookup-api-accuracy', 'content_key': 'article_icp_lookup_accuracy'},
     {'slug': 'icp-filing-cancelled', 'content_key': 'article_filing_cancelled'},
@@ -116,13 +117,14 @@ def convert_emphasis(value, key):
     meta_field = (key.startswith('seo.') or '.seo.' in key
                   or key.endswith(('.title', '.name')))
     if meta_field:
-        for mark, label in (('**', '**'), ('`', '`')):
+        for mark, label in (('**', '**'), ('`', '`'), ('](/', '[]()')):
             if mark in value:
                 raise ValueError(
                     f"'{key}' 含 {label} 但會輸出到 meta 或 JSON-LD，請改寫純文字")
         return value
     value = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', value)
-    return re.sub(r'`([^`]+)`', r'<code>\1</code>', value)
+    value = re.sub(r'`([^`]+)`', r'<code>\1</code>', value)
+    return re.sub(r'\[([^\]]+)\]\((/[^)\s]*)\)', r'<a href="\2">\1</a>', value)
 
 
 def build_webapp_jsonld(page_content, lang_path, slug_path):
@@ -225,6 +227,22 @@ def build_inline_tool(page_content):
                     <p class="inline-tool-note">{e('note')}</p>
                 </div>
 """
+
+
+def build_lead(flat):
+    """Render the lead, which may be several paragraphs.
+
+    Content writes paragraph breaks as a blank line, the way it reads in
+    the JSON. HTML collapses that to a single space, so a three-paragraph
+    lead silently renders as one run-on block. Emitting a <p> per paragraph
+    keeps the markup saying what the content means.
+    """
+    lead = (flat.get('page.lead') or '').strip()
+    if not lead:
+        return ''
+    paras = [p.strip() for p in re.split(r'\n\s*\n', lead) if p.strip()]
+    return '\n                '.join(
+        f'<p class="article-lead">{p}</p>' for p in paras)
 
 
 def flatten_dict(d, parent_key='', sep='.'):
@@ -467,6 +485,7 @@ def build():
             flat['webapp_jsonld'] = ''
             flat['inline_tool'] = ''
             flat['table_col2_class'] = ' class="num"'
+            flat['article_lead'] = ''
 
             if page['content_key']:
                 page_content = translations.get(page['content_key'], {})
@@ -508,6 +527,7 @@ def build():
                 flat['webapp_jsonld'] = build_webapp_jsonld(
                     page_content, lang['lang_path'], slug_path)
                 flat['inline_tool'] = build_inline_tool(page_content)
+                flat['article_lead'] = build_lead(flat)
 
                 disclosure = (page_content.get('disclosure') or '').strip()
                 flat['affiliate_disclosure'] = (

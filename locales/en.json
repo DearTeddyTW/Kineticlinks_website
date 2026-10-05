@@ -980,6 +980,133 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_bulk_filing_lookup": {
+    "date": "2026-10-05",
+    "date_display": "October 5, 2026",
+    "category": "China Networking",
+    "reading_time": "9 min read",
+    "short_title": "Checking filings in bulk",
+    "title": "Checking ICP Filings in Bulk Without Getting Blocked",
+    "excerpt": "Filing status disappears without warning, so it has to be rechecked. Past a certain number of domains, checking by hand stops working — and the hard part is rate limits and error semantics, not speed.",
+    "disclosure": "Kineticlinks runs an ICP filing lookup service, currently as a web tool; API access is by enquiry. The approach described here applies to any data source including one you build yourself. Nothing below claims our service suits you better — your own testing should decide that.",
+    "lead": "A cancelled filing notifies nobody. The site keeps serving until, one day, the hosting provider blocks it — that is the subject of [why filings get cancelled](/en/blog/icp-filing-cancelled/), and the only defence is checking on a schedule.\n\nWith a handful of domains, checking by hand is fine. With one hundred or five hundred — a managed client portfolio, your own domain assets, a batch under evaluation — opening a lookup page for each one stops being realistic.\n\nAt that point the problem has nothing to do with whether the data is accurate. It is **how to get through a whole batch, repeatedly, without being cut off**.",
+    "seo": {
+      "title": "Checking ICP Filings in Bulk: Hundreds of Domains - Kineticlinks",
+      "description": "Checking hundreds of domains for ICP filing status by hand does not scale. Rate limits, caching, detecting changes, and when to build versus buy.",
+      "keywords": "ICP filing API, bulk ICP lookup, beian monitoring, ICP filing status API, batch domain filing check"
+    },
+    "s1": {
+      "title": "The bottleneck is the rate limit, not throughput",
+      "p1": "The intuition is that bulk checking is about going fast. In practice a single lookup takes a second or two, so five hundred domains run strictly in series finish in under twenty minutes. That is not the problem. The constraint is **how fast the upstream will let you ask**.",
+      "p2": "Filing data ultimately traces back to the MIIT, usually through a cloud provider's lookup interface or a third-party database, and every layer has its own rate limit. We measured one public free interface whose demo key permits roughly one query every twenty seconds — five hundred domains would take almost three hours on that, and a single failure to back off triggers a run of rejections. The table below sets out the trade-offs.",
+      "p3": "The second row is the one most people reach for first. Scraping the official lookup page looks like the cheapest option, but captchas, layout changes and blocking all become yours to handle, and every change on their side is a repair on yours — a cost that usually only gets counted honestly about three months in."
+    },
+    "table": {
+      "caption": "Trade-offs between bulk lookup approaches. The second row is the usual starting point and the first to fail.",
+      "col1": "Approach",
+      "col2": "What you actually run into",
+      "col3": "Suits",
+      "r1c1": "Checking each one by hand",
+      "r1c2": "Workable but slow, and nobody really does it monthly",
+      "r1c3": "Under ten",
+      "r1_class": "",
+      "r2c1": "Scraping the official lookup page",
+      "r2c2": "Captchas, layout changes and blocking; upkeep costs far more than expected",
+      "r2c3": "Not advisable",
+      "r2_class": "is-current",
+      "r3c1": "A free public interface",
+      "r3c2": "Tight rate limits, thin coverage of obscure domains, unreliable error reporting",
+      "r3c3": "Dozens, where misses are tolerable",
+      "r3_class": "",
+      "r4c1": "A paid lookup API",
+      "r4c2": "Check the quota, the error semantics, and whether data is live or a snapshot",
+      "r4c3": "Hundreds to thousands",
+      "r4_class": "",
+      "r5c1": "Your own cache plus a scheduler",
+      "r5c2": "Upstream limits still apply but can be spread out, and changes become detectable",
+      "r5c3": "Ongoing monitoring",
+      "r5_class": ""
+    },
+    "s2": {
+      "title": "Three things that decide whether the batch finishes",
+      "intro": "These three separate a run that completes from one that stalls halfway.",
+      "r1_title": "Back off by the number they give you",
+      "r1_desc": "When you are rate limited, many interfaces state in the error how long to wait. Retrying on a fixed interval keeps hitting the wall; reading that number and waiting exactly that long gets through on the next attempt. In our own testing a first run with a fixed one-second gap had fourteen of nineteen domains rate limited — reading the stated delay instead, the same batch completed in full.",
+      "r2_title": "Cache the answer, never the failure",
+      "r2_desc": "Filing status changes rarely, so caching pays off. But **a failed lookup must not be cached as a result**. If an upstream timeout gets stored as \"no filing,\" that error stays in your data, and because it is cached nothing will ever check again. Key the cache on whether the lookup succeeded, and retry failures instead of writing them.",
+      "r3_title": "Store the change, not just the state",
+      "r3_desc": "Storing current state answers \"how is it now.\" Storing each result with a timestamp answers \"when did it go\" — and that is the alert you actually need. A filing usually disappears weeks before anyone notices, and only a history lets you work out which change caused it."
+    },
+    "s3": {
+      "title": "Error semantics: where bulk checking goes wrong",
+      "p1": "Checking one domain by hand, you notice a response that looks odd. Running a batch, nobody is watching — so **errors have to be structurally distinguishable**, or they quietly become data.",
+      "p2": "This is not hypothetical. Testing one public interface, `google.com` came back as HTTP 200 with a `code` of 200, while `icp`, `unit` and the rest were all set to the string 查询失败 — \"lookup failed.\" Code written as `if resp[\"icp\"]: mark_as_filed()` records google.com as filed, with that error text stored as its filing number.",
+      "callout": "The risk in bulk checking is not a miss. It is a wrong answer nobody sees. One bad record among five hundred will never catch anyone's eye.",
+      "p3": "So before wiring in any source, confirm that three outcomes are distinguishable in the response: **definitely filed**, **definitely not filed**, and **could not tell you this time**. The third needs its own expression — a distinct status code or field, not a value in a data field. A source that cannot separate them should not feed anything that writes to a database. That is a separate question from accuracy, which we tested in full in [our lookup tool comparison](/en/blog/icp-lookup-api-accuracy/)."
+    },
+    "s4": {
+      "title": "Build it or buy it",
+      "p1": "For a few dozen domains checked quarterly, a script against a free interface with back-off and retries is enough, and costs nothing. The implementation notes above are sufficient to make it reliable.",
+      "p2": "Paid options start to make sense in three situations: **the count runs into the hundreds**, **you need continuous monitoring rather than a one-off inventory**, or **too high a share of obscure domains come back empty**. That last one is easy to underestimate — free sources behave normally on well-known domains and can miss heavily on obscure ones, which are usually the domains you were asking about.",
+      "p3": "To be clear about where we stand: we currently offer the web tool only, and API access requires an enquiry describing your volume and use case. So if you need an API you can wire in today, we may not be the fastest route — the implementation advice here applies just as well to building your own, which is the main reason this article exists."
+    },
+    "s5": {
+      "title": "Three decisions, in order",
+      "intro": "Taking these in order avoids over-building:",
+      "l1_title": "1. Settle how often you need to check",
+      "l1_desc": "A one-off inventory and continuous monitoring are different systems. An inventory finishes and needs no database; monitoring needs history, change detection and alerting. Decide which before deciding what to build.",
+      "l2_title": "2. Estimate how long a batch takes",
+      "l2_desc": "Multiply domain count by the minimum interval per request. If that exceeds your scheduling window, adding machines will not help — that is an upstream rate limit, and the answers are caching, splitting the batch, or a different source.",
+      "l3_title": "3. Decide what happens when a lookup fails",
+      "l3_desc": "The most commonly skipped design decision. How many retries, whether a persistent failure raises an alert, and above all never writing a failure as \"no filing.\" Deciding up front is far cheaper than cleaning the data later."
+    },
+    "s6": {
+      "title": "Three things to confirm before wiring in any filing API",
+      "intro": "Ours or anyone's, these three decide whether it belongs in an automated pipeline:",
+      "c1_title": "Rate limits, quotas and timeout behaviour",
+      "c1_desc": "The per-second and daily ceilings, what comes back when you exceed them, and whether an upstream timeout returns an error or \"no filing.\" That last one is the easiest to meet only after going live.",
+      "c2_title": "How failures are distinguished from \"no filing\"",
+      "c2_desc": "Look at the actual response structure, not the documentation's prose. Confirm errors get their own status code or field rather than being packed into the filing-number field.",
+      "c3_title": "Whether the data is live or a snapshot",
+      "c3_desc": "This determines whether obscure domains resolve, and how long a lapsed filing takes to show. Ask for the snapshot's refresh interval and coverage."
+    },
+    "s7": {
+      "title": "In summary",
+      "p1": "The difficulty in bulk filing checks is **rate limits** and **error semantics**, not speed. The first decides whether a batch finishes; the second decides whether the resulting data can be trusted. Three implementation points carry most of the weight: back off by the delay the upstream states, never cache a failure as a result, and store changes rather than only current state.",
+      "p2": "At small scale, write it yourself — what is above is enough. If your count runs into the hundreds, or you need continuous monitoring with an alert when a filing disappears, write to us with your volume and use case and we will work out what fits."
+    },
+    "sources": {
+      "title": "References",
+      "s1": "MIIT — ICP/IP Address/Domain Information Filing Management System",
+      "u1": "https://beian.miit.gov.cn/",
+      "s2": "RFC 9457 — Problem Details for HTTP APIs",
+      "u2": "https://www.rfc-editor.org/rfc/rfc9457.html",
+      "s3": "RFC 6585 — Additional HTTP Status Codes (429 Too Many Requests)",
+      "u3": "https://www.rfc-editor.org/rfc/rfc6585.html"
+    },
+    "cta": {
+      "href": "https://icp-check.kineticlinks.net/",
+      "title": "Check the data before committing to an API",
+      "desc": "Before deciding on an API, run a few domains whose status you already know and confirm the filing number and registrant come back correct. API access is by enquiry — tell us your volume and use case.",
+      "button": "Open the ICP lookup tool"
+    },
+    "related": {
+      "title": "Further reading and related services",
+      "desc": "Directly related to this page's topic",
+      "l1_slug": "blog/icp-lookup-api-accuracy/",
+      "l1_kicker": "Technical article",
+      "l1_title": "Testing ICP lookup tools",
+      "l1_desc": "Nineteen domains of known status, and a failure mode that quietly writes wrong data.",
+      "l2_slug": "blog/icp-filing-cancelled/",
+      "l2_kicker": "Technical article",
+      "l2_title": "Why filings get cancelled",
+      "l2_desc": "Why periodic checks matter: the usual cause gives no warning at all.",
+      "l3_slug": "icp-check/",
+      "l3_kicker": "Platform product",
+      "l3_title": "Live ICP filing lookup",
+      "l3_desc": "Enter a domain for its current MIIT filing status and registrant details."
+    }
+  },
   "article_prefiled_domain_checks": {
     "date": "2026-10-05",
     "date_display": "October 5, 2026",

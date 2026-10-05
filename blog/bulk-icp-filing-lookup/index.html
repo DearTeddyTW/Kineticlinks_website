@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>批量查詢 ICP 備案狀態｜幾百個網域怎麼查才不會被擋 - Kineticlinks</title>
+    <meta name="title" content="批量查詢 ICP 備案狀態｜幾百個網域怎麼查才不會被擋 - Kineticlinks">
+    <meta name="description" content="手上有幾百個網域要定期確認備案狀態時，逐一手動查不可行。說明批量查詢的速率限制、快取策略、狀態變動偵測，以及自建與接 API 的取捨。">
+    <meta name="keywords" content="ICP 備案 API, 批量查詢備案, 備案狀態監控, ICP 備案查詢 API, 大量網域備案, 備案批次檢測">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/blog/bulk-icp-filing-lookup/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/bulk-icp-filing-lookup/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/bulk-icp-filing-lookup/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/bulk-icp-filing-lookup/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/bulk-icp-filing-lookup/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/blog/bulk-icp-filing-lookup/">
+    <meta property="og:title" content="批量查詢 ICP 備案狀態｜幾百個網域怎麼查才不會被擋 - Kineticlinks">
+    <meta property="og:description" content="手上有幾百個網域要定期確認備案狀態時，逐一手動查不可行。說明批量查詢的速率限制、快取策略、狀態變動偵測，以及自建與接 API 的取捨。">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-10-05">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/blog/bulk-icp-filing-lookup/">
+    <meta property="twitter:title" content="批量查詢 ICP 備案狀態｜幾百個網域怎麼查才不會被擋 - Kineticlinks">
+    <meta property="twitter:description" content="手上有幾百個網域要定期確認備案狀態時，逐一手動查不可行。說明批量查詢的速率限制、快取策略、狀態變動偵測，以及自建與接 API 的取捨。">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "批量查詢 ICP 備案狀態：幾百個網域怎麼查才不會被擋",
+      "description": "手上有幾百個網域要定期確認備案狀態時，逐一手動查不可行。說明批量查詢的速率限制、快取策略、狀態變動偵測，以及自建與接 API 的取捨。",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-10-05",
+      "dateModified": "2026-10-05",
+      "inLanguage": "zh-TW",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/blog/bulk-icp-filing-lookup/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "https://www.kineticlinks.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "技術文章",
+          "item": "https://www.kineticlinks.net/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "批量查詢 ICP 備案狀態：幾百個網域怎麼查才不會被擋",
+          "item": "https://www.kineticlinks.net/blog/bulk-icp-filing-lookup/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v=44db87d3">
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
+    <script>
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/#home">首頁</a>
+                <a href="/#services">服務項目</a>
+                <a href="/#platforms">平台產品</a>
+                <a href="/blog/">技術文章</a>
+                <a href="/#about">關於我們</a>
+                <a href="/#contact" class="btn btn-outline">聯絡我們</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">繁體中文 ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/bulk-icp-filing-lookup/">繁體中文</a>
+                        <a href="/en/blog/bulk-icp-filing-lookup/">English</a>
+                        <a href="/zh-cn/blog/bulk-icp-filing-lookup/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="開啟選單"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/">首頁</a>
+            <span>/</span>
+            <a href="/blog/">技術文章</a>
+            <span>/</span>
+            <span class="current">批量查詢備案狀態</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">中國網路</div>
+                <h1>批量查詢 ICP 備案狀態：幾百個網域怎麼查才不會被擋</h1>
+                <div class="article-meta">
+                    <time datetime="2026-10-05">2026 年 10 月 5 日</time>
+                    <span class="dot">·</span>
+                    <span>約 9 分鐘</span>
+                </div>
+                <p class="article-lead">備案被註銷不會通知任何人。網站照常運作，直到某天接入商把它擋掉——這是<a href="/blog/icp-filing-cancelled/">備案被註銷</a>那篇的核心，而唯一的防線是定期自查。</p>
+                <p class="article-lead">網域只有幾個的時候，手動查就夠了。但手上有一百個、五百個的時候——代管客戶的網域、自己的網域資產、或是一批評估中的標的——逐一打開查詢頁輸入就不可行了。</p>
+                <p class="article-lead">這時候會遇到的問題跟「查得準不準」無關，而是<strong>怎麼在不被擋的前提下，持續地查完一整批</strong>。</p>
+                <aside class="affiliate-note">Kineticlinks 提供 ICP 備案查詢服務，目前以網頁工具形式開放使用，API 接取需要來信洽詢。本文談的做法對任何資料來源都適用，包含您自建的；文中不會宣稱我們的服務比較適合，那應該由您自己的測試決定。</aside>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>批量查詢真正的瓶頸是速率，不是速度</h2>
+                <p>直覺上會以為批量查詢的挑戰是「跑得夠快」。實際上單筆查詢大概一到兩秒，五百個網域就算完全串行也只要十幾分鐘——那不是問題。真正的瓶頸是<strong>上游願意讓您查多快</strong>。</p>
+                <p>備案資料的來源最終都指向工信部，中間可能經過雲服務商的查詢介面或第三方資料庫，而每一層都有自己的速率限制。我們實測過一個公開的免費介面，它的展示金鑰大約每 20 秒才允許一次查詢——用那個跑五百個網域要將近三小時，而且中途只要一次沒退避就會被連續拒絕。 下表是幾種常見做法的取捨。</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>做法</th>
+                                    <th>實際上會遇到什麼</th>
+                                    <th>適合的規模</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>人工逐一查詢</td>
+                                    <td>可行但耗時，而且不會有人真的每月做一次</td>
+                                    <td>十個以內</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>自己寫爬蟲打官方查詢頁</td>
+                                    <td>要處理驗證碼、版面改版與封鎖，維護成本遠高於預期</td>
+                                    <td>不建議</td>
+                                </tr>
+                                <tr class="">
+                                    <td>接免費公開介面</td>
+                                    <td>速率限制嚴格，冷門網域覆蓋率不足，錯誤回報不可靠</td>
+                                    <td>幾十個，可容忍漏查</td>
+                                </tr>
+                                <tr class="">
+                                    <td>接付費查詢 API</td>
+                                    <td>需要確認配額、錯誤語意與資料來源是即時或快照</td>
+                                    <td>數百到數千</td>
+                                </tr>
+
+                                <tr>
+                                    <td>自建快取層加排程</td>
+                                    <td>上游仍有限制，但可以攤平，並且能偵測變動</td>
+                                    <td>持續監控的場景</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>幾種批量查詢做法的取捨。第二列是最常見的起手式，也最早撞牆。</figcaption>
+                </figure>
+
+                <p>第二列是多數人一開始會選、然後撞牆的那一種。自己寫爬蟲打官方查詢頁看起來最省錢，但驗證碼、版面改版與封鎖都要自己處理，而且對方每改一次版您就要修一次——這份維護成本通常在三個月後才會被認真計算。</p>
+
+                <!-- Why -->
+                <h2>三個實作上的重點</h2>
+                <p>這三件事決定您的批次跑得完、還是跑一半就被擋。</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>退避要讀對方給的數字</strong>
+                        <span>被限流時，很多介面會在錯誤訊息裡明確寫出要等多久。固定間隔重試會持續撞牆，而讀取那個數字再等對應秒數，一次就能過。我們自己測試時第一輪就是因為固定 1 秒間隔，19 個網域有 14 個被限流——換成讀取對方指定的秒數之後，同一批全部跑完。</span>
+                    </li>
+                    <li>
+                        <strong>快取要分清楚「查過」和「查到」</strong>
+                        <span>備案狀態變動不頻繁，所以快取很有效。但要注意：<strong>失敗的查詢不能當成結果快取</strong>。如果上游逾時被存成「無備案」，那個錯誤會留在您的資料裡，而且因為有快取，之後也不會再查一次。快取的鍵應該包含查詢是否成功，失敗的只重試不寫入。</span>
+                    </li>
+                    <li>
+                        <strong>真正要存的是變動，不是狀態</strong>
+                        <span>存「目前狀態」只能回答「現在如何」。存每次查詢的結果與時間戳，才能回答「什麼時候掉的」——而那才是您真正需要的告警。備案消失的時間點通常比發現的時間早好幾週，有歷史記錄才查得出來是哪次改動造成的。</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>錯誤語意：批量查詢最容易出事的地方</h2>
+                <p>單筆手動查詢時，回應看起來怪您會自己發現。批量跑的時候沒有人在看——所以<strong>錯誤必須在結構上可區分</strong>，否則它會安靜地變成資料。</p>
+                <p>這不是假設性的風險。我們實測一個公開介面時，它對 <code>google.com</code> 回傳的是 HTTP 200、<code>code</code> 200，而 <code>icp</code>、<code>unit</code> 等欄位的值全部是字串「查询失败」。寫成 <code>if resp["icp"]: mark_as_filed()</code> 的程式會把 google.com 標記為已備案，並把那四個字存成備案號。</p>
+
+                <aside class="callout">
+                    <p>批量查詢的風險不是查不到，是查錯了而沒有人發現。一筆錯誤資料在五百筆裡面，不會有任何人肉眼看到它。</p>
+                </aside>
+
+                <p>所以接任何資料來源之前，先確認三種情況在回應上分得開：<strong>確定有備案</strong>、<strong>確定沒有備案</strong>、<strong>這次查不到</strong>。第三種必須有自己的表達方式——獨立的狀態碼或欄位，而不是塞進資料欄位裡。分不開的來源，不能直接接進會寫入資料庫的流程。這一點與資料準不準是兩回事，我們在<a href="/blog/icp-lookup-api-accuracy/">備案查詢工具實測</a>那篇有完整的測試過程。</p>
+
+                <!-- Why manual fails -->
+                <h2>自建還是接 API</h2>
+                <p>如果您要查的是幾十個網域、每季一次，自己寫個腳本打免費介面、加上退避與重試就夠了，不需要付費。這篇前半講的實作重點足夠讓它穩定運作。</p>
+                <p>需要考慮付費方案的通常是三種情況：<strong>網域數量到數百以上</strong>、<strong>需要的是持續監控而不是一次性盤點</strong>、或是<strong>冷門網域查不到的比例太高</strong>。最後一項最容易被低估——免費來源在知名網域上表現正常，在冷門網域上可能大量漏查，而冷門網域往往正是您要查的那些。</p>
+
+                <!-- How to respond -->
+                <h2>三個層次的規劃</h2>
+                <p>依序決定，可以避免過度設計：</p>
+
+                <h3>一、先確定查詢的頻率需求</h3>
+                <p>一次性盤點和持續監控是兩種系統。盤點跑完就結束，不需要資料庫；監控需要歷史記錄、變動偵測與告警。先確定是哪一種，再決定要蓋多少東西。</p>
+
+                <h3>二、估算批次需要多久跑完</h3>
+                <p>用「網域數 × 每筆最小間隔」估算。如果結果超過您的排程窗口，問題不是加機器能解的——那是上游速率限制，要靠快取、分批、或換資料來源處理。</p>
+
+                <h3>三、決定查不到的時候怎麼辦</h3>
+                <p>這是最常被略過的設計決定。查不到要重試幾次、重試完還是失敗要不要告警、以及絕對不能把失敗寫成「無備案」。先想清楚，比事後清理資料容易得多。</p>
+
+                <!-- Checklist -->
+                <h2>接任何備案查詢 API 前該確認的三件事</h2>
+                <p>不論是我們的還是別人的，這三項決定它能不能接進自動化流程：</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>速率限制、配額與逾時行為</strong>
+                        <span>每秒與每日上限各是多少、超過回什麼、上游逾時的時候是回錯誤還是回「無備案」。最後這一項最容易在上線後才踩到。</span>
+                    </li>
+                    <li>
+                        <strong>失敗與「無備案」在回應上如何區分</strong>
+                        <span>要看實際的回應結構，不是文件上的描述。確認錯誤有獨立的狀態碼或欄位，而不是被塞進備案號欄位裡。</span>
+                    </li>
+                    <li>
+                        <strong>資料是即時查詢還是快照</strong>
+                        <span>這決定冷門網域查不查得到，也決定備案失效之後多久才會反映出來。要求對方說明快照的更新頻率與覆蓋範圍。</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>小結</h2>
+                <p>批量查詢備案狀態的難點不在速度，在<strong>速率限制</strong>與<strong>錯誤語意</strong>。前者決定批次跑不跑得完，後者決定跑完之後那份資料能不能信。實作上三件事最關鍵：退避時讀對方給的秒數、失敗絕對不要當成結果快取、以及存變動而不只是存狀態。</p>
+                <p>規模不大就自己寫，這篇的做法足夠。如果您的網域數量到數百以上、或是需要持續監控並在備案消失時收到告警，歡迎來信說明用量與使用情境，我們再看怎麼配合。</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>參考資料</h3>
+                    <ul>
+                        <li><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">工業和信息化部 — ICP/IP 地址/域名資訊備案管理系統</a></li>
+                        <li><a href="https://www.rfc-editor.org/rfc/rfc9457.html" target="_blank" rel="noopener">RFC 9457 — HTTP API 的問題詳情格式（錯誤該如何表達）</a></li>
+                        <li><a href="https://www.rfc-editor.org/rfc/rfc6585.html" target="_blank" rel="noopener">RFC 6585 — 額外的 HTTP 狀態碼（429 Too Many Requests）</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>延伸閱讀與相關服務</h2>
+                <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
+                <div class="related-grid">
+                    <a href="/blog/icp-lookup-api-accuracy/" class="related-card glass-panel">
+                        <span class="related-kicker">技術文章</span>
+                        <h3>備案查詢工具實測</h3>
+                        <p>19 個狀態已知的網域實測，以及一種會安靜寫錯資料的失敗方式。</p>
+                    </a>
+                    <a href="/blog/icp-filing-cancelled/" class="related-card glass-panel">
+                        <span class="related-kicker">技術文章</span>
+                        <h3>備案為什麼會被註銷</h3>
+                        <p>為什麼需要定期自查：最常見的註銷原因完全沒有徵兆。</p>
+                    </a>
+                    <a href="/icp-check/" class="related-card glass-panel">
+                        <span class="related-kicker">平台產品</span>
+                        <h3>ICP 備案狀態即時查詢</h3>
+                        <p>輸入網域即可查詢工信部最新備案狀態與主體資訊。</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>先用網頁工具確認資料對不對</h2>
+                <p>在決定要不要接 API 之前，先拿幾個您已經知道答案的網域試一次，確認回傳的備案號與主體名稱正確。API 接取請來信說明用量與使用情境。</p>
+                <div class="hero-actions">
+                    <a href="https://icp-check.kineticlinks.net/" target="_blank" rel="sponsored noopener" class="btn btn-primary">開啟 ICP 備案查詢工具</a>
+                    <a href="/blog/" class="btn btn-secondary">返回文章列表</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/cdn/">CDN 內容傳遞網路</a>
+                    <a href="/vps/">VPS 虛擬專屬主機</a>
+                    <a href="/idc/">IDC 機房建置</a>
+                    <a href="/cloud/">公有雲架構解決方案</a>
+                    <a href="/ssl/">SSL 憑證自動化平台</a>
+                    <a href="/speedtest/">全球三網測速平台</a>
+                    <a href="/icp-check/">ICP 備案狀態即時查詢</a>
+                    <a href="/blog/">技術文章</a>
+                    <a href="/#contact">聯絡我們</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=a1fc1067" defer></script>
+</body>
+
+</html>

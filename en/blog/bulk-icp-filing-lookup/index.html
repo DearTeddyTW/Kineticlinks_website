@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Checking ICP Filings in Bulk: Hundreds of Domains - Kineticlinks</title>
+    <meta name="title" content="Checking ICP Filings in Bulk: Hundreds of Domains - Kineticlinks">
+    <meta name="description" content="Checking hundreds of domains for ICP filing status by hand does not scale. Rate limits, caching, detecting changes, and when to build versus buy.">
+    <meta name="keywords" content="ICP filing API, bulk ICP lookup, beian monitoring, ICP filing status API, batch domain filing check">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net/en/blog/bulk-icp-filing-lookup/">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/blog/bulk-icp-filing-lookup/" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/blog/bulk-icp-filing-lookup/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/blog/bulk-icp-filing-lookup/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/blog/bulk-icp-filing-lookup/" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.kineticlinks.net/en/blog/bulk-icp-filing-lookup/">
+    <meta property="og:title" content="Checking ICP Filings in Bulk: Hundreds of Domains - Kineticlinks">
+    <meta property="og:description" content="Checking hundreds of domains for ICP filing status by hand does not scale. Rate limits, caching, detecting changes, and when to build versus buy.">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+    <meta property="article:published_time" content="2026-10-05">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net/en/blog/bulk-icp-filing-lookup/">
+    <meta property="twitter:title" content="Checking ICP Filings in Bulk: Hundreds of Domains - Kineticlinks">
+    <meta property="twitter:description" content="Checking hundreds of domains for ICP filing status by hand does not scale. Rate limits, caching, detecting changes, and when to build versus buy.">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Checking ICP Filings in Bulk Without Getting Blocked",
+      "description": "Checking hundreds of domains for ICP filing status by hand does not scale. Rate limits, caching, detecting changes, and when to build versus buy.",
+      "image": "https://www.kineticlinks.net/assets/images/og-image.jpg",
+      "datePublished": "2026-10-05",
+      "dateModified": "2026-10-05",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kineticlinks.net/assets/images/Kineticlinks.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kineticlinks.net/en/blog/bulk-icp-filing-lookup/"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.kineticlinks.net/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.kineticlinks.net/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Checking ICP Filings in Bulk Without Getting Blocked",
+          "item": "https://www.kineticlinks.net/en/blog/bulk-icp-filing-lookup/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v=44db87d3">
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
+    <script>
+        // 本機預覽與測試不送資料——同一份建置會在 localhost 執行，
+        // 不擋掉的話每次開發都會在正式資源裡多出假的工作階段。
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1E2X03M831');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/en/" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="/en/#home">Home</a>
+                <a href="/en/#services">Services</a>
+                <a href="/en/#platforms">Platforms</a>
+                <a href="/en/blog/">Blog</a>
+                <a href="/en/#about">About</a>
+                <a href="/en/#contact" class="btn btn-outline">Contact</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">English ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/blog/bulk-icp-filing-lookup/">繁體中文</a>
+                        <a href="/en/blog/bulk-icp-filing-lookup/">English</a>
+                        <a href="/zh-cn/blog/bulk-icp-filing-lookup/">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="Open menu"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container breadcrumb">
+            <a href="/en/">Home</a>
+            <span>/</span>
+            <a href="/en/blog/">Blog</a>
+            <span>/</span>
+            <span class="current">Checking filings in bulk</span>
+        </div>
+    </div>
+
+    <main id="main">
+    <article class="article">
+        <div class="container article-container">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="badge">China Networking</div>
+                <h1>Checking ICP Filings in Bulk Without Getting Blocked</h1>
+                <div class="article-meta">
+                    <time datetime="2026-10-05">October 5, 2026</time>
+                    <span class="dot">·</span>
+                    <span>9 min read</span>
+                </div>
+                <p class="article-lead">A cancelled filing notifies nobody. The site keeps serving until, one day, the hosting provider blocks it — that is the subject of <a href="/en/blog/icp-filing-cancelled/">why filings get cancelled</a>, and the only defence is checking on a schedule.</p>
+                <p class="article-lead">With a handful of domains, checking by hand is fine. With one hundred or five hundred — a managed client portfolio, your own domain assets, a batch under evaluation — opening a lookup page for each one stops being realistic.</p>
+                <p class="article-lead">At that point the problem has nothing to do with whether the data is accurate. It is <strong>how to get through a whole batch, repeatedly, without being cut off</strong>.</p>
+                <aside class="affiliate-note">Kineticlinks runs an ICP filing lookup service, currently as a web tool; API access is by enquiry. The approach described here applies to any data source including one you build yourself. Nothing below claims our service suits you better — your own testing should decide that.</aside>
+            </header>
+
+            <div class="article-body">
+
+                <!-- What happened -->
+                <h2>The bottleneck is the rate limit, not throughput</h2>
+                <p>The intuition is that bulk checking is about going fast. In practice a single lookup takes a second or two, so five hundred domains run strictly in series finish in under twenty minutes. That is not the problem. The constraint is <strong>how fast the upstream will let you ask</strong>.</p>
+                <p>Filing data ultimately traces back to the MIIT, usually through a cloud provider's lookup interface or a third-party database, and every layer has its own rate limit. We measured one public free interface whose demo key permits roughly one query every twenty seconds — five hundred domains would take almost three hours on that, and a single failure to back off triggers a run of rejections. The table below sets out the trade-offs.</p>
+
+                <!-- Timeline table -->
+                <figure class="data-table-wrap">
+                    <div class="data-table-scroll">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Approach</th>
+                                    <th>What you actually run into</th>
+                                    <th>Suits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>Checking each one by hand</td>
+                                    <td>Workable but slow, and nobody really does it monthly</td>
+                                    <td>Under ten</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>Scraping the official lookup page</td>
+                                    <td>Captchas, layout changes and blocking; upkeep costs far more than expected</td>
+                                    <td>Not advisable</td>
+                                </tr>
+                                <tr class="">
+                                    <td>A free public interface</td>
+                                    <td>Tight rate limits, thin coverage of obscure domains, unreliable error reporting</td>
+                                    <td>Dozens, where misses are tolerable</td>
+                                </tr>
+                                <tr class="">
+                                    <td>A paid lookup API</td>
+                                    <td>Check the quota, the error semantics, and whether data is live or a snapshot</td>
+                                    <td>Hundreds to thousands</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Your own cache plus a scheduler</td>
+                                    <td>Upstream limits still apply but can be spread out, and changes become detectable</td>
+                                    <td>Ongoing monitoring</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figcaption>Trade-offs between bulk lookup approaches. The second row is the usual starting point and the first to fail.</figcaption>
+                </figure>
+
+                <p>The second row is the one most people reach for first. Scraping the official lookup page looks like the cheapest option, but captchas, layout changes and blocking all become yours to handle, and every change on their side is a repair on yours — a cost that usually only gets counted honestly about three months in.</p>
+
+                <!-- Why -->
+                <h2>Three things that decide whether the batch finishes</h2>
+                <p>These three separate a run that completes from one that stalls halfway.</p>
+                <ol class="reason-list">
+                    <li>
+                        <strong>Back off by the number they give you</strong>
+                        <span>When you are rate limited, many interfaces state in the error how long to wait. Retrying on a fixed interval keeps hitting the wall; reading that number and waiting exactly that long gets through on the next attempt. In our own testing a first run with a fixed one-second gap had fourteen of nineteen domains rate limited — reading the stated delay instead, the same batch completed in full.</span>
+                    </li>
+                    <li>
+                        <strong>Cache the answer, never the failure</strong>
+                        <span>Filing status changes rarely, so caching pays off. But <strong>a failed lookup must not be cached as a result</strong>. If an upstream timeout gets stored as "no filing," that error stays in your data, and because it is cached nothing will ever check again. Key the cache on whether the lookup succeeded, and retry failures instead of writing them.</span>
+                    </li>
+                    <li>
+                        <strong>Store the change, not just the state</strong>
+                        <span>Storing current state answers "how is it now." Storing each result with a timestamp answers "when did it go" — and that is the alert you actually need. A filing usually disappears weeks before anyone notices, and only a history lets you work out which change caused it.</span>
+                    </li>
+                </ol>
+
+                <!-- Impact -->
+                <h2>Error semantics: where bulk checking goes wrong</h2>
+                <p>Checking one domain by hand, you notice a response that looks odd. Running a batch, nobody is watching — so <strong>errors have to be structurally distinguishable</strong>, or they quietly become data.</p>
+                <p>This is not hypothetical. Testing one public interface, <code>google.com</code> came back as HTTP 200 with a <code>code</code> of 200, while <code>icp</code>, <code>unit</code> and the rest were all set to the string 查询失败 — "lookup failed." Code written as <code>if resp["icp"]: mark_as_filed()</code> records google.com as filed, with that error text stored as its filing number.</p>
+
+                <aside class="callout">
+                    <p>The risk in bulk checking is not a miss. It is a wrong answer nobody sees. One bad record among five hundred will never catch anyone's eye.</p>
+                </aside>
+
+                <p>So before wiring in any source, confirm that three outcomes are distinguishable in the response: <strong>definitely filed</strong>, <strong>definitely not filed</strong>, and <strong>could not tell you this time</strong>. The third needs its own expression — a distinct status code or field, not a value in a data field. A source that cannot separate them should not feed anything that writes to a database. That is a separate question from accuracy, which we tested in full in <a href="/en/blog/icp-lookup-api-accuracy/">our lookup tool comparison</a>.</p>
+
+                <!-- Why manual fails -->
+                <h2>Build it or buy it</h2>
+                <p>For a few dozen domains checked quarterly, a script against a free interface with back-off and retries is enough, and costs nothing. The implementation notes above are sufficient to make it reliable.</p>
+                <p>Paid options start to make sense in three situations: <strong>the count runs into the hundreds</strong>, <strong>you need continuous monitoring rather than a one-off inventory</strong>, or <strong>too high a share of obscure domains come back empty</strong>. That last one is easy to underestimate — free sources behave normally on well-known domains and can miss heavily on obscure ones, which are usually the domains you were asking about.</p>
+
+                <!-- How to respond -->
+                <h2>Three decisions, in order</h2>
+                <p>Taking these in order avoids over-building:</p>
+
+                <h3>1. Settle how often you need to check</h3>
+                <p>A one-off inventory and continuous monitoring are different systems. An inventory finishes and needs no database; monitoring needs history, change detection and alerting. Decide which before deciding what to build.</p>
+
+                <h3>2. Estimate how long a batch takes</h3>
+                <p>Multiply domain count by the minimum interval per request. If that exceeds your scheduling window, adding machines will not help — that is an upstream rate limit, and the answers are caching, splitting the batch, or a different source.</p>
+
+                <h3>3. Decide what happens when a lookup fails</h3>
+                <p>The most commonly skipped design decision. How many retries, whether a persistent failure raises an alert, and above all never writing a failure as "no filing." Deciding up front is far cheaper than cleaning the data later.</p>
+
+                <!-- Checklist -->
+                <h2>Three things to confirm before wiring in any filing API</h2>
+                <p>Ours or anyone's, these three decide whether it belongs in an automated pipeline:</p>
+                <ol class="check-list">
+                    <li>
+                        <strong>Rate limits, quotas and timeout behaviour</strong>
+                        <span>The per-second and daily ceilings, what comes back when you exceed them, and whether an upstream timeout returns an error or "no filing." That last one is the easiest to meet only after going live.</span>
+                    </li>
+                    <li>
+                        <strong>How failures are distinguished from "no filing"</strong>
+                        <span>Look at the actual response structure, not the documentation's prose. Confirm errors get their own status code or field rather than being packed into the filing-number field.</span>
+                    </li>
+                    <li>
+                        <strong>Whether the data is live or a snapshot</strong>
+                        <span>This determines whether obscure domains resolve, and how long a lapsed filing takes to show. Ask for the snapshot's refresh interval and coverage.</span>
+                    </li>
+                </ol>
+
+                <!-- Conclusion -->
+                <h2>In summary</h2>
+                <p>The difficulty in bulk filing checks is <strong>rate limits</strong> and <strong>error semantics</strong>, not speed. The first decides whether a batch finishes; the second decides whether the resulting data can be trusted. Three implementation points carry most of the weight: back off by the delay the upstream states, never cache a failure as a result, and store changes rather than only current state.</p>
+                <p>At small scale, write it yourself — what is above is enough. If your count runs into the hundreds, or you need continuous monitoring with an alert when a filing disappears, write to us with your volume and use case and we will work out what fits.</p>
+
+                <!-- Sources -->
+                <div class="article-sources">
+                    <h3>References</h3>
+                    <ul>
+                        <li><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">MIIT — ICP/IP Address/Domain Information Filing Management System</a></li>
+                        <li><a href="https://www.rfc-editor.org/rfc/rfc9457.html" target="_blank" rel="noopener">RFC 9457 — Problem Details for HTTP APIs</a></li>
+                        <li><a href="https://www.rfc-editor.org/rfc/rfc6585.html" target="_blank" rel="noopener">RFC 6585 — Additional HTTP Status Codes (429 Too Many Requests)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Pages (contextual internal links) -->
+            <aside class="article-related">
+                <h2>Further reading and related services</h2>
+                <p class="article-related-desc">Directly related to this page's topic</p>
+                <div class="related-grid">
+                    <a href="/en/blog/icp-lookup-api-accuracy/" class="related-card glass-panel">
+                        <span class="related-kicker">Technical article</span>
+                        <h3>Testing ICP lookup tools</h3>
+                        <p>Nineteen domains of known status, and a failure mode that quietly writes wrong data.</p>
+                    </a>
+                    <a href="/en/blog/icp-filing-cancelled/" class="related-card glass-panel">
+                        <span class="related-kicker">Technical article</span>
+                        <h3>Why filings get cancelled</h3>
+                        <p>Why periodic checks matter: the usual cause gives no warning at all.</p>
+                    </a>
+                    <a href="/en/icp-check/" class="related-card glass-panel">
+                        <span class="related-kicker">Platform product</span>
+                        <h3>Live ICP filing lookup</h3>
+                        <p>Enter a domain for its current MIIT filing status and registrant details.</p>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Article CTA -->
+            <aside class="article-cta glass-panel">
+                <h2>Check the data before committing to an API</h2>
+                <p>Before deciding on an API, run a few domains whose status you already know and confirm the filing number and registrant come back correct. API access is by enquiry — tell us your volume and use case.</p>
+                <div class="hero-actions">
+                    <a href="https://icp-check.kineticlinks.net/" target="_blank" rel="sponsored noopener" class="btn btn-primary">Open the ICP lookup tool</a>
+                    <a href="/en/blog/" class="btn btn-secondary">Back to all articles</a>
+                </div>
+            </aside>
+
+        </div>
+    </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>Building the digital infrastructure of tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/en/cdn/">Content Delivery Network (CDN)</a>
+                    <a href="/en/vps/">Virtual Private Server (VPS)</a>
+                    <a href="/en/idc/">IDC Construction</a>
+                    <a href="/en/cloud/">Public Cloud Solutions</a>
+                    <a href="/en/ssl/">Automated SSL Platform</a>
+                    <a href="/en/speedtest/">Global 3-Network Speed Test</a>
+                    <a href="/en/icp-check/">Live ICP filing lookup</a>
+                    <a href="/en/blog/">Blog</a>
+                    <a href="/en/#contact">Contact</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kineticlinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=a1fc1067" defer></script>
+</body>
+
+</html>
