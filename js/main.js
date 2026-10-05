@@ -288,9 +288,16 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
             .finally(() => { button.disabled = false; });
     });
 
-    // Probe once, idly, with a domain the API already caches.
+    // Probe once, idly, against the health endpoint rather than the lookup.
+    // /api/check counts against the visitor's rate limit before it even looks
+    // at its cache, so probing there would spend one of their allowance on
+    // every page view — and ten reloads would lock them out before they had
+    // searched for anything. /healthz is not rate limited and still proves
+    // the API will answer this origin.
     const probe = () => {
-        fetch(api + '?domain=example.com', { mode: 'cors' })
+        let health;
+        try { health = new URL(api).origin + '/healthz'; } catch (e) { return; }
+        fetch(health, { mode: 'cors' })
             .then((res) => { if (res.ok) root.hidden = false; })
             .catch(() => { /* no CORS yet: leave the existing button in place */ });
     };
