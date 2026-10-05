@@ -124,6 +124,43 @@ def convert_emphasis(value, key):
     return re.sub(r'`([^`]+)`', r'<code>\1</code>', value)
 
 
+def build_webapp_jsonld(page_content, lang_path, slug_path):
+    """Describe the tool a platform page sends people to, as WebApplication.
+
+    The tools live on their own subdomains, which Google treats as separate
+    sites: icp-check.kineticlinks.net is indexed but has almost no text, so
+    it never surfaces on its own. This states that the subdomain is the
+    application this page is about, so the ranking page and the tool are not
+    two unrelated things competing for the same query.
+    """
+    url = (page_content.get('platform_url') or '').strip()
+    if not url:
+        return ''
+    page_url = f"{BASE_URL}{lang_path}{slug_path}"
+    data = {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": page_content.get('hero', {}).get('title', ''),
+        "url": url,
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "description": page_content.get('seo', {}).get('description', ''),
+        "publisher": {
+            "@type": "Organization",
+            "name": "Kineticlinks",
+            "url": f"{BASE_URL}/",
+        },
+        "mainEntityOfPage": page_url,
+    }
+    body = json.dumps(data, ensure_ascii=False, indent=6)
+    body = '\n'.join(('    ' + ln) if i else ln for i, ln in enumerate(body.split('\n')))
+    return ('    <!-- Structured Data (JSON-LD): WebApplication -->\n'
+            '    <script type="application/ld+json">\n'
+            f'    {body}\n'
+            '    </script>\n')
+
+
 def flatten_dict(d, parent_key='', sep='.'):
     items = []
     for k, v in d.items():
@@ -361,6 +398,7 @@ def build():
             slug_path = f"{page['slug']}/" if page['slug'] else ''
             flat['service_slug'] = page['slug']
             flat['service_slug_path'] = slug_path
+            flat['webapp_jsonld'] = ''
 
             if page['content_key']:
                 page_content = translations.get(page['content_key'], {})
@@ -396,6 +434,8 @@ def build():
                 flat['pricing_section'] = build_pricing_section(page_content, lang['lang_path'])
                 flat['faq_items'] = build_faq_items(page_content)
                 flat['faq_jsonld'] = build_faq_jsonld(page_content)
+                flat['webapp_jsonld'] = build_webapp_jsonld(
+                    page_content, lang['lang_path'], slug_path)
 
                 disclosure = (page_content.get('disclosure') or '').strip()
                 flat['affiliate_disclosure'] = (
