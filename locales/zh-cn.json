@@ -949,6 +949,22 @@
       "l3_kicker": "平台产品",
       "l3_title": "全球三网测速平台",
       "l3_desc": "检测中国电信、联通、移动三网跨境连线延迟与线路质量。"
+    },
+    "inline_tool": {
+      "api": "https://icp-check.kineticlinks.net/api/check",
+      "label": "输入要查询的域名",
+      "placeholder": "example.com",
+      "submit": "查询备案状态",
+      "checking": "查询中…",
+      "registered": "已备案",
+      "registered_detail": "这个域名目前持有有效的 ICP 备案。",
+      "not_registered": "没有备案",
+      "not_registered_detail": "查不到有效的 ICP 备案记录，目前不能解析至中国境内节点。",
+      "error": "查询失败，请稍后再试，或直接前往工具页。",
+      "note": "结果来自阿里云备案数据，仅供参考。备案状态会随时间变动，请以工信部公示为准。",
+      "cta_text": "需要一个已经完成备案的域名？我们有现成的库存，可以直接接手使用。",
+      "cta_link": "联系我们获取已备案域名",
+      "cta_href": "https://t.me/kineticlinks"
     }
   },
   "blog": {

@@ -159,7 +159,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
+    <link rel="stylesheet" href="/css/style.css?v=44db87d3">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -230,6 +230,30 @@
                     <a href="https://icp-check.kineticlinks.net/" target="_blank" rel="noopener" class="btn btn-primary">Check an ICP filing</a>
                     <a href="/en/#platforms" class="btn btn-secondary">See other platform products</a>
                 </div>
+                <div class="inline-tool" data-inline-tool hidden
+                     data-api="https://icp-check.kineticlinks.net/api/check"
+                     data-checking="Checking…"
+                     data-registered="is filed"
+                     data-registered-detail="This domain currently holds a valid ICP filing."
+                     data-not-registered="has no filing"
+                     data-not-registered-detail="No valid ICP filing found, so it cannot resolve to mainland Chinese nodes."
+                     data-error="The lookup failed. Try again shortly, or open the tool directly."
+                     data-cta-text="Need a domain that already holds a filing? We keep pre-filed domains in stock, ready to take over.">
+                    <form class="inline-tool-form" novalidate>
+                        <label class="sr-only" for="inline-tool-input">Enter a domain to check</label>
+                        <input id="inline-tool-input" type="text" inputmode="url"
+                               autocomplete="off" spellcheck="false"
+                               placeholder="example.com" required>
+                        <button type="submit" class="btn btn-primary">Check filing status</button>
+                    </form>
+                    <div class="inline-tool-result" role="status" aria-live="polite"></div>
+                    <div class="inline-tool-cta" hidden>
+                        <p></p>
+                        <a href="https://t.me/kineticlinks" target="_blank" rel="noopener">Talk to us about a pre-filed domain</a>
+                    </div>
+                    <p class="inline-tool-note">Results come from Alibaba Cloud filing data and are indicative only. Filing status changes over time — treat the MIIT listing as authoritative.</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -432,7 +456,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=ded9249e" defer></script>
+    <script src="/js/main.js?v=a1fc1067" defer></script>
 </body>
 
 </html>

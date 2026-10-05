@@ -159,7 +159,7 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=07eaaac4">
+    <link rel="stylesheet" href="/css/style.css?v=44db87d3">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -230,6 +230,30 @@
                     <a href="https://icp-check.kineticlinks.net/" target="_blank" rel="noopener" class="btn btn-primary">立即查詢 ICP 備案</a>
                     <a href="/#platforms" class="btn btn-secondary">查看其他平台產品</a>
                 </div>
+                <div class="inline-tool" data-inline-tool hidden
+                     data-api="https://icp-check.kineticlinks.net/api/check"
+                     data-checking="查詢中…"
+                     data-registered="已備案"
+                     data-registered-detail="這個網域目前持有有效的 ICP 備案。"
+                     data-not-registered="沒有備案"
+                     data-not-registered-detail="查不到有效的 ICP 備案紀錄，目前不能解析至中國境內節點。"
+                     data-error="查詢失敗，請稍後再試，或直接前往工具頁。"
+                     data-cta-text="需要一個已經完成備案的網域？我們有現成的庫存，可以直接接手使用。">
+                    <form class="inline-tool-form" novalidate>
+                        <label class="sr-only" for="inline-tool-input">輸入要查詢的網域</label>
+                        <input id="inline-tool-input" type="text" inputmode="url"
+                               autocomplete="off" spellcheck="false"
+                               placeholder="example.com" required>
+                        <button type="submit" class="btn btn-primary">查詢備案狀態</button>
+                    </form>
+                    <div class="inline-tool-result" role="status" aria-live="polite"></div>
+                    <div class="inline-tool-cta" hidden>
+                        <p></p>
+                        <a href="https://t.me/kineticlinks" target="_blank" rel="noopener">聯絡我們取得已備案網域</a>
+                    </div>
+                    <p class="inline-tool-note">結果來自阿里雲備案資料，僅供參考。備案狀態會隨時間變動，請以工信部公示為準。</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -432,7 +456,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=ded9249e" defer></script>
+    <script src="/js/main.js?v=a1fc1067" defer></script>
 </body>
 
 </html>

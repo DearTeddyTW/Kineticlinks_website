@@ -206,3 +206,94 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
         window.addEventListener('scroll', onScroll, { passive: true });
     }
 })();
+
+/* ------------------------------------------------------------------
+   Inline ICP lookup
+   ------------------------------------------------------------------
+   The tool runs on its own subdomain. Putting the form on the landing
+   page means someone who searched for a lookup gets one without a
+   second click, on the URL that can actually rank for the query.
+
+   The form stays hidden until a probe confirms the API answers
+   cross-origin requests. Until the subdomain sends
+   Access-Control-Allow-Origin the browser blocks every call, and
+   revealing a form that cannot work would be worse than the button
+   that is already there — so this reveals nothing and the page keeps
+   its existing behaviour, then upgrades itself once the header lands.
+   ------------------------------------------------------------------ */
+(function () {
+    const root = document.querySelector('[data-inline-tool]');
+    if (!root) return;
+
+    const api = root.dataset.api;
+    const form = root.querySelector('.inline-tool-form');
+    const input = root.querySelector('input');
+    const button = root.querySelector('button');
+    const result = root.querySelector('.inline-tool-result');
+    const cta = root.querySelector('.inline-tool-cta');
+    const ctaText = cta.querySelector('p');
+    if (!api || !form) return;
+
+    const track = (name, params) => {
+        if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+    };
+
+    const show = (state, headline, detail) => {
+        result.className = 'inline-tool-result show ' + state;
+        result.textContent = '';
+        const h = document.createElement('p');
+        h.className = 'inline-tool-headline';
+        h.textContent = headline;          // textContent: typed input never becomes markup
+        result.appendChild(h);
+        if (detail) {
+            const d = document.createElement('p');
+            d.className = 'inline-tool-detail';
+            d.textContent = detail;
+            result.appendChild(d);
+        }
+    };
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const value = input.value.trim();
+        if (!value) return;
+
+        cta.hidden = true;
+        button.disabled = true;
+        show('pending', root.dataset.checking);
+
+        fetch(api + '?domain=' + encodeURIComponent(value), { mode: 'cors' })
+            .then((res) => res.json().then((data) => [res.ok, data]))
+            .then(([ok, data]) => {
+                if (!ok) {
+                    show('error', data.message || root.dataset.error);
+                    return;
+                }
+                const name = data.domain || value;
+                if (data.verdict === 'registered') {
+                    show('ok', name + ' ' + root.dataset.registered,
+                         root.dataset.registeredDetail);
+                } else if (data.verdict === 'not_registered') {
+                    show('warn', name + ' ' + root.dataset.notRegistered,
+                         root.dataset.notRegisteredDetail);
+                    // No filing is exactly when a pre-filed domain is worth offering.
+                    ctaText.textContent = root.dataset.ctaText;
+                    cta.hidden = false;
+                } else {
+                    show('error', root.dataset.error);
+                }
+                track('icp_lookup', { verdict: data.verdict || 'unknown', placement: 'inline' });
+            })
+            .catch(() => show('error', root.dataset.error))
+            .finally(() => { button.disabled = false; });
+    });
+
+    // Probe once, idly, with a domain the API already caches.
+    const probe = () => {
+        fetch(api + '?domain=example.com', { mode: 'cors' })
+            .then((res) => { if (res.ok) root.hidden = false; })
+            .catch(() => { /* no CORS yet: leave the existing button in place */ });
+    };
+    if ('requestIdleCallback' in window) requestIdleCallback(probe, { timeout: 3000 });
+    else setTimeout(probe, 1200);
+})();

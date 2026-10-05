@@ -949,6 +949,22 @@
       "l3_kicker": "平台產品",
       "l3_title": "全球三網測速平台",
       "l3_desc": "檢測中國電信、聯通、移動三網跨境連線延遲與線路品質。"
+    },
+    "inline_tool": {
+      "api": "https://icp-check.kineticlinks.net/api/check",
+      "label": "輸入要查詢的網域",
+      "placeholder": "example.com",
+      "submit": "查詢備案狀態",
+      "checking": "查詢中…",
+      "registered": "已備案",
+      "registered_detail": "這個網域目前持有有效的 ICP 備案。",
+      "not_registered": "沒有備案",
+      "not_registered_detail": "查不到有效的 ICP 備案紀錄，目前不能解析至中國境內節點。",
+      "error": "查詢失敗，請稍後再試，或直接前往工具頁。",
+      "note": "結果來自阿里雲備案資料，僅供參考。備案狀態會隨時間變動，請以工信部公示為準。",
+      "cta_text": "需要一個已經完成備案的網域？我們有現成的庫存，可以直接接手使用。",
+      "cta_link": "聯絡我們取得已備案網域",
+      "cta_href": "https://t.me/kineticlinks"
     }
   },
   "blog": {

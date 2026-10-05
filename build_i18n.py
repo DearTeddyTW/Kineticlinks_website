@@ -161,6 +161,55 @@ def build_webapp_jsonld(page_content, lang_path, slug_path):
             '    </script>\n')
 
 
+def html_escape(value):
+    """Escape a content string for use inside an HTML attribute."""
+    return (str(value).replace('&', '&amp;').replace('"', '&quot;')
+            .replace('<', '&lt;').replace('>', '&gt;'))
+
+
+def build_inline_tool(page_content):
+    """Render the lookup form that a platform page can carry inline.
+
+    The tool lives on its own subdomain, so a visitor who searched for a
+    lookup currently has to click through to use one. This puts the form on
+    the page that can actually rank for the query.
+
+    It ships hidden and is revealed by main.js only after a probe confirms
+    the API answers cross-origin requests. Without that header the browser
+    blocks the call, so showing the form would replace a working button with
+    one that fails; this way the page behaves exactly as before until the
+    header exists, then upgrades itself with no redeploy.
+    """
+    tool = page_content.get('inline_tool')
+    if not tool:
+        return ''
+    e = lambda k: html_escape(tool.get(k, ''))
+    return f"""                <div class="inline-tool" data-inline-tool hidden
+                     data-api="{e('api')}"
+                     data-checking="{e('checking')}"
+                     data-registered="{e('registered')}"
+                     data-registered-detail="{e('registered_detail')}"
+                     data-not-registered="{e('not_registered')}"
+                     data-not-registered-detail="{e('not_registered_detail')}"
+                     data-error="{e('error')}"
+                     data-cta-text="{e('cta_text')}">
+                    <form class="inline-tool-form" novalidate>
+                        <label class="sr-only" for="inline-tool-input">{e('label')}</label>
+                        <input id="inline-tool-input" type="text" inputmode="url"
+                               autocomplete="off" spellcheck="false"
+                               placeholder="{e('placeholder')}" required>
+                        <button type="submit" class="btn btn-primary">{e('submit')}</button>
+                    </form>
+                    <div class="inline-tool-result" role="status" aria-live="polite"></div>
+                    <div class="inline-tool-cta" hidden>
+                        <p></p>
+                        <a href="{e('cta_href')}" target="_blank" rel="noopener">{e('cta_link')}</a>
+                    </div>
+                    <p class="inline-tool-note">{e('note')}</p>
+                </div>
+"""
+
+
 def flatten_dict(d, parent_key='', sep='.'):
     items = []
     for k, v in d.items():
@@ -399,6 +448,7 @@ def build():
             flat['service_slug'] = page['slug']
             flat['service_slug_path'] = slug_path
             flat['webapp_jsonld'] = ''
+            flat['inline_tool'] = ''
 
             if page['content_key']:
                 page_content = translations.get(page['content_key'], {})
@@ -436,6 +486,7 @@ def build():
                 flat['faq_jsonld'] = build_faq_jsonld(page_content)
                 flat['webapp_jsonld'] = build_webapp_jsonld(
                     page_content, lang['lang_path'], slug_path)
+                flat['inline_tool'] = build_inline_tool(page_content)
 
                 disclosure = (page_content.get('disclosure') or '').strip()
                 flat['affiliate_disclosure'] = (

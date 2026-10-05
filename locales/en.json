@@ -949,6 +949,22 @@
       "l3_kicker": "Platform product",
       "l3_title": "Global three-network speed test",
       "l3_desc": "Measure cross-border latency and route quality across China Telecom, Unicom and Mobile."
+    },
+    "inline_tool": {
+      "api": "https://icp-check.kineticlinks.net/api/check",
+      "label": "Enter a domain to check",
+      "placeholder": "example.com",
+      "submit": "Check filing status",
+      "checking": "Checking…",
+      "registered": "is filed",
+      "registered_detail": "This domain currently holds a valid ICP filing.",
+      "not_registered": "has no filing",
+      "not_registered_detail": "No valid ICP filing found, so it cannot resolve to mainland Chinese nodes.",
+      "error": "The lookup failed. Try again shortly, or open the tool directly.",
+      "note": "Results come from Alibaba Cloud filing data and are indicative only. Filing status changes over time — treat the MIIT listing as authoritative.",
+      "cta_text": "Need a domain that already holds a filing? We keep pre-filed domains in stock, ready to take over.",
+      "cta_link": "Talk to us about a pre-filed domain",
+      "cta_href": "https://t.me/kineticlinks"
     }
   },
   "blog": {
