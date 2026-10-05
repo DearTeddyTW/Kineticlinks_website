@@ -980,6 +980,137 @@
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
     }
   },
+  "article_prefiled_domain_checks": {
+    "date": "2026-10-05",
+    "date_display": "October 5, 2026",
+    "category": "China Networking",
+    "reading_time": "10 min read",
+    "short_title": "Buying a pre-filed domain",
+    "title": "Six Things to Check Yourself Before Buying a Pre-Filed Domain",
+    "excerpt": "The price gap between pre-filed domains is rarely about the domain. It is about the state of the filing — and most of what matters can be checked before you pay.",
+    "disclosure": "Kineticlinks sells pre-filed domains, so read this as a piece with a stake in the outcome. The checks below apply to every seller including us — use the same standard on anything we offer. Nothing here is legal advice; whether an arrangement suits your situation is a question for your own counsel.",
+    "lead": "Quotes for pre-filed domains vary enormously, and the difference is rarely the domain. It is **the state of the filing**.\n\nTwo listings can both say \"filed\" while one is a shell that will be cleared at the next review and the other is a live record with a functioning registrant and hosting relationship behind it. You cannot tell those apart from the screenshot a seller sends you — a screenshot only proves what was true the moment it was taken.\n\nMost of the difference, though, you can establish yourself before paying, at no cost.",
+    "seo": {
+      "title": "Buying a Pre-Filed Domain: Six Checks Before You Pay - Kineticlinks",
+      "description": "Six checks before you buy a domain with a Chinese ICP filing: does the record exist, whose entity holds it, and is hosting still attached?",
+      "keywords": "pre-filed domain, buy ICP filed domain, ICP beian domain, pre-filed domain purchase, China domain filing, ICP filing lookup"
+    },
+    "s1": {
+      "title": "You are buying a relationship, not an attribute",
+      "p1": "The common misreading is to treat a filing as a property of the domain — \"this domain has a filing.\" What the record actually registers is **a relationship between three things: the registrant, the site, and the hosting provider**. The domain is one field inside that relationship.",
+      "p2": "That distinction has teeth. A domain can return a valid filing number from the MIIT system while its hosting provider has already withdrawn access, or while the registrant company has been dissolved. The record persists; the relationship is already broken — and that state gets cleared at the next review. So \"does it have a filing\" is a low-information question. The useful ones are: **whose name is it in, is hosting still attached, and when did it pass review**. The table below lists six things you can establish before paying.",
+      "p3": "The first two decide whether the deal is real at all; the other four decide how long it lasts. If the second — whose entity holds it — does not match what the seller told you, there is no point checking the other four. Settle that question first, and if it cannot be settled, do not pay."
+    },
+    "table": {
+      "caption": "Six checks before paying. The second row is the one that most often fails to match what the seller said.",
+      "col1": "What to check",
+      "col2": "Where to look",
+      "col3": "When to stop",
+      "r1c1": "The filing number actually exists",
+      "r1c2": "MIIT system or a lookup tool",
+      "r1c3": "No record, or the number does not match the domain",
+      "r1_class": "",
+      "r2c1": "Whose entity holds it",
+      "r2c2": "The registrant name in the result",
+      "r2c3": "Differs from what the seller said, or they are vague about it",
+      "r2_class": "is-current",
+      "r3c1": "Registrant type (company or individual)",
+      "r3c2": "The registrant type field",
+      "r3c3": "An individual filing when you intend to run a commercial service",
+      "r3_class": "",
+      "r4c1": "Approval date",
+      "r4c2": "The approval timestamp",
+      "r4c3": "Approved very recently, so it has survived no review yet",
+      "r4_class": "",
+      "r5c1": "Hosting relationship still active",
+      "r5c2": "The hosting provider field in the public listing",
+      "r5c3": "No provider listed — that is a shell filing",
+      "r5_class": "",
+      "r6c1": "Domain verification matches the registrant",
+      "r6c2": "Ask the seller for the registrar record",
+      "r6c3": "The two disagree, which surfaces at the next review",
+      "r6_class": ""
+    },
+    "s2": {
+      "title": "Three situations a screenshot will not show",
+      "intro": "What these three share is that the lookup result looks entirely normal.",
+      "r1_title": "A shell filing",
+      "r1_desc": "Registrant and site details are still on record, but the hosting provider has withdrawn access. This usually follows the previous holder moving their hosting — the site still loads, the filing still resolves, but the relationship behind it has already lapsed. It stays that way until a review happens to select it. This is the most common of the three and the hardest to see from the outside.",
+      "r2_title": "The registrant no longer exists",
+      "r2_desc": "The filing sits under a company that has since been dissolved. Registration data does not remove itself, so a lookup still reports it as valid. But nobody can answer for that record any more, any procedure needing the registrant's cooperation stalls, and a review will classify it as a lapsed entity.",
+      "r3_title": "The same filing sold more than once",
+      "r3_desc": "In the arrangement where the filing stays under its original registrant, what changes hands is use rather than ownership. Nothing technically stops the same filing being sold to several buyers. No lookup will reveal this — you can only judge it from the contract, and from whether the seller will put the terms in writing."
+    },
+    "s3": {
+      "title": "Why you should run the check yourself",
+      "p1": "A seller's screenshot has several problems: it may be months old, it may be of a different domain, or it may show only the flattering part. None of that requires bad faith — filing status changes on its own, and a screenshot from three months ago may simply be out of date.",
+      "p2": "Running it yourself costs nothing. Enter the domain and within seconds you have the current filing number, registrant name, registrant type and approval date. The point is not distrust: it is that **you need the current state, and a screenshot structurally cannot give you that**.",
+      "callout": "The one thing a seller cannot hand you is \"right now.\" A screenshot proves what was true at the instant the shutter closed; what you carry is every day after the payment clears.",
+      "p3": "It is also worth checking again a few days later. Filing status changes without notifying anyone, and a difference between two lookups is exactly the signal you want — while you can still act on it."
+    },
+    "s4": {
+      "title": "What this article cannot settle for you",
+      "p1": "A lookup shows public registration data: filing number, registrant, registrant type, approval date, hosting provider. That is enough to rule out the obviously broken listings, but it cannot show you **the actual relationship between the seller and the registrant**. Whether they run that company, work there, or merely hold an account is not a field in the result — and it determines whether there is anyone to reach when something goes wrong.",
+      "p2": "This is also not legal advice. There is a gap between the written rules on transferring filings and how the market operates; we set out what that gap specifically consists of in our ICP filing article. Whether your intended use is compliant, and what you are liable for, needs advice grounded in your own circumstances. This piece stops at what you can verify before paying.",
+      "p3": "And to be explicit: **we sell pre-filed domains too**. The checklist applies to us in full. If you are buying from us, run the same checks. A seller who cannot stand up to them — us included — is not worth paying."
+    },
+    "s5": {
+      "title": "Three questions, in order",
+      "intro": "Once the checks are done, work through these:",
+      "l1_title": "1. Does your use actually require a filing?",
+      "l1_desc": "The only dividing line is whether mainland Chinese nodes are involved. Deploy entirely outside the mainland and no filing is required, so there is nothing to buy. Settling this first can remove the whole problem.",
+      "l2_title": "2. Can you absorb it disappearing without warning?",
+      "l2_desc": "Cancellation comes with no advance notice and the hosting provider blocks the domain immediately. If your business cannot take that kind of interruption, buying a filing held in someone else's name is the wrong instrument — file under your own entity instead.",
+      "l3_title": "3. How long do you need it to last?",
+      "l3_desc": "A short campaign and a long-running operation carry completely different exposure. Reviews are periodic and sampled, so the longer the horizon, the higher the odds of being selected. Decide the expected lifetime first, then decide what it is worth paying."
+    },
+    "s6": {
+      "title": "Three things to settle with the seller",
+      "intro": "No lookup shows these. You have to ask, and get them in writing:",
+      "c1_title": "Whose name it stays in, and for how long",
+      "c1_desc": "Where the registrant does not change, the filing remains under the other party throughout. Establish who that entity is, what the seller's relationship to it is, and how long they commit to maintaining it. A verbal assurance is worth nothing here.",
+      "c2_title": "What happens if it gets cancelled",
+      "c2_desc": "This is the clause that most deserves to be written down. Refund, replacement, or nothing at all materially changes the real price. A seller unwilling to commit to one has answered the question.",
+      "c3_title": "Whether they will cooperate afterwards",
+      "c3_desc": "Changing hosting provider, updating details, responding to a rectification notice — each needs the registrant to act. Confirm they will still handle these after the sale closes, and how quickly they respond."
+    },
+    "s7": {
+      "title": "In summary",
+      "p1": "Most of the price difference between pre-filed domains comes from the state of the filing, not the domain. Of the six checks, the two that matter most are **whose entity holds it** and **whether hosting is still attached** — the first decides whether anyone can be reached when something breaks, the second whether you are buying a shell that will be cleared at the next review. Both can be settled before you pay.",
+      "p2": "After that there is really only one judgement left: whether you can absorb it vanishing without warning. If you can, this is a worthwhile shortcut. If you cannot, file under your own entity — slower, and it holds. If you are weighing up a specific listing, send us the domain and we will look at it with you, including ones you are planning to buy from someone else."
+    },
+    "sources": {
+      "title": "References",
+      "s1": "MIIT — ICP/IP Address/Domain Information Filing Management System",
+      "u1": "https://beian.miit.gov.cn/",
+      "s2": "Alibaba Cloud — Special verification of ICP filing information",
+      "u2": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/special-verification-of-icp-filing-information",
+      "s3": "Alibaba Cloud — Cancelling a filing held by another entity or a shell registrant",
+      "u3": "https://help.aliyun.com/zh/icp-filing/basic-icp-service/the-cancellation-of-icp-filing"
+    },
+    "cta": {
+      "href": "https://icp-check.kineticlinks.net/",
+      "title": "Check one now?",
+      "desc": "Enter the domain you are considering and see its current filing number, registrant name, registrant type and approval date in seconds. Including domains you plan to buy from someone else — we would rather you checked first.",
+      "button": "Check a filing status"
+    },
+    "related": {
+      "title": "Further reading and related services",
+      "desc": "Directly related to this page's topic",
+      "l1_slug": "blog/icp-filing-explained/",
+      "l1_kicker": "Technical article",
+      "l1_title": "ICP filings and the pre-filed domain market",
+      "l1_desc": "The rules, the timelines, and exactly where written rules and practice diverge.",
+      "l2_slug": "blog/icp-filing-cancelled/",
+      "l2_kicker": "Technical article",
+      "l2_title": "Why filings get cancelled",
+      "l2_desc": "How a shell filing forms, and why it gives no warning at all.",
+      "l3_slug": "icp-check/",
+      "l3_kicker": "Platform product",
+      "l3_title": "Live ICP filing lookup",
+      "l3_desc": "Enter a domain for its current MIIT filing status and registrant details."
+    }
+  },
   "article_icp_lookup_accuracy": {
     "date": "2026-09-29",
     "date_display": "September 29, 2026",

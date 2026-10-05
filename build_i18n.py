@@ -56,6 +56,7 @@ LANGS = [
 # Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
 # listed on the blog index. content_key is looked up in the locale JSON.
 ARTICLES = [
+    {'slug': 'buying-a-pre-filed-domain', 'content_key': 'article_prefiled_domain_checks'},
     {'slug': 'icp-lookup-api-accuracy', 'content_key': 'article_icp_lookup_accuracy'},
     {'slug': 'icp-filing-cancelled', 'content_key': 'article_filing_cancelled'},
     {'slug': 'hong-kong-server-icp-filing', 'content_key': 'article_hk_filing'},
@@ -159,6 +160,22 @@ def build_webapp_jsonld(page_content, lang_path, slug_path):
             '    <script type="application/ld+json">\n'
             f'    {body}\n'
             '    </script>\n')
+
+
+def table_col2_class(table):
+    """Decide whether the table's middle column is a figure or prose.
+
+    The column is styled monospace and nowrap, which suits "10 / 10" or
+    "398 天" and actively hurts a sentence: CJK renders unevenly in
+    monospace, and nowrap forces the cell to one line, widening the table
+    until it scrolls on a phone. Articles write whichever suits them, so
+    this measures the content instead of asking each one to declare it.
+    """
+    values = [v for k, v in table.items()
+              if re.fullmatch(r'r\d+c2', k) and isinstance(v, str)]
+    if not values:
+        return 'num'
+    return 'num' if max(display_width(v) for v in values) <= 14 else ''
 
 
 def html_escape(value):
@@ -449,6 +466,7 @@ def build():
             flat['service_slug_path'] = slug_path
             flat['webapp_jsonld'] = ''
             flat['inline_tool'] = ''
+            flat['table_col2_class'] = ' class="num"'
 
             if page['content_key']:
                 page_content = translations.get(page['content_key'], {})
@@ -467,14 +485,17 @@ def build():
                 # 否則多寫的列會被靜默丟棄。
                 extra = []
                 table = page_content.get('table') or {}
+                col2 = table_col2_class(table)
+                flat['table_col2_class'] = f' class="{col2}"' if col2 else ''
                 n = 5
                 while f'r{n}c1' in table:
                     cls = table.get(f'r{n}_class', '')
                     cls = f' class="{cls}"' if cls else ''
+                    c2 = f' class="{col2}"' if col2 else ''
                     extra.append(
                         f'                                <tr{cls}>\n'
                         f'                                    <td>{table[f"r{n}c1"]}</td>\n'
-                        f'                                    <td class="num">{table[f"r{n}c2"]}</td>\n'
+                        f'                                    <td{c2}>{table[f"r{n}c2"]}</td>\n'
                         f'                                    <td>{table[f"r{n}c3"]}</td>\n'
                         f'                                </tr>'
                     )

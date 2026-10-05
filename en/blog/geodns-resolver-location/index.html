@@ -199,28 +199,28 @@
                             <tbody>
                                 <tr class="">
                                     <td>Round robin</td>
-                                    <td class="num">Returns each address in turn</td>
+                                    <td>Returns each address in turn</td>
                                     <td>Ignores location and health entirely</td>
                                 </tr>
                                 <tr class="">
                                     <td>Weighted distribution</td>
-                                    <td class="num">A preconfigured traffic ratio</td>
+                                    <td>A preconfigured traffic ratio</td>
                                     <td>Controllable split, still ignores location</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>Geographic (GeoDNS)</td>
-                                    <td class="num">Location of the recursive resolver asking</td>
+                                    <td>Location of the recursive resolver asking</td>
                                     <td>Not the user's location — unless ECS is present</td>
                                 </tr>
                                 <tr class="">
                                     <td>Latency-based</td>
-                                    <td class="num">Measured latency to each endpoint</td>
+                                    <td>Measured latency to each endpoint</td>
                                     <td>Measured from the resolver, not the user</td>
                                 </tr>
 
                                 <tr>
                                     <td>Health-check failover</td>
-                                    <td class="num">Whether an endpoint passes health checks</td>
+                                    <td>Whether an endpoint passes health checks</td>
                                     <td>Switching is bounded by TTL, not immediate</td>
                                 </tr>
                             </tbody>

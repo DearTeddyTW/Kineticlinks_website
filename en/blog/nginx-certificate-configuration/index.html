@@ -199,22 +199,22 @@
                             <tbody>
                                 <tr class="">
                                     <td>nginx -t reports successful</td>
-                                    <td class="num">Valid syntax; certificate and key pair correctly</td>
+                                    <td>Valid syntax; certificate and key pair correctly</td>
                                     <td>Chain completeness and domain coverage</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>The certificate file is already new</td>
-                                    <td class="num">The file on disk was indeed updated</td>
+                                    <td>The file on disk was indeed updated</td>
                                     <td>Until reload, the old certificate in memory is served</td>
                                 </tr>
                                 <tr class="">
                                     <td>server_name is configured correctly</td>
-                                    <td class="num">Requests for that domain hit this block</td>
+                                    <td>Requests for that domain hit this block</td>
                                     <td>Non-matching requests fall to the default server</td>
                                 </tr>
                                 <tr class="">
                                     <td>Certificate and intermediate share one file</td>
-                                    <td class="num">The contents are all present</td>
+                                    <td>The contents are all present</td>
                                     <td>Wrong order makes Nginx pick the wrong one</td>
                                 </tr>
 

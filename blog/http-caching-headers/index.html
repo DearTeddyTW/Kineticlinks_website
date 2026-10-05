@@ -199,33 +199,33 @@
                             <tbody>
                                 <tr class="is-current">
                                     <td>no-cache</td>
-                                    <td class="num">可以儲存，但每次使用前必須向源站驗證</td>
+                                    <td>可以儲存，但每次使用前必須向源站驗證</td>
                                     <td>被當成「不要快取」——它不是</td>
                                 </tr>
                                 <tr class="">
                                     <td>no-store</td>
-                                    <td class="num">完全不得儲存，包含標頭在內</td>
+                                    <td>完全不得儲存，包含標頭在內</td>
                                     <td>這才是真正的「不要快取」</td>
                                 </tr>
                                 <tr class="">
                                     <td>max-age=N</td>
-                                    <td class="num">N 秒內視為新鮮，對所有快取生效</td>
+                                    <td>N 秒內視為新鮮，對所有快取生效</td>
                                     <td>以為它也管 CDN 就夠了</td>
                                 </tr>
                                 <tr class="">
                                     <td>s-maxage=N</td>
-                                    <td class="num">只對共享快取生效，並覆蓋 max-age 與 Expires</td>
+                                    <td>只對共享快取生效，並覆蓋 max-age 與 Expires</td>
                                     <td>不知道它會蓋掉 max-age</td>
                                 </tr>
 
                                 <tr>
                                     <td>must-revalidate</td>
-                                    <td class="num">過期後未經驗證不得供應，離線時須回錯誤</td>
+                                    <td>過期後未經驗證不得供應，離線時須回錯誤</td>
                                     <td>以為過期後還能先擋一下</td>
                                 </tr>
                                 <tr>
                                     <td>private</td>
-                                    <td class="num">只允許瀏覽器儲存，共享快取不得儲存</td>
+                                    <td>只允許瀏覽器儲存，共享快取不得儲存</td>
                                     <td>與 no-store 混用，結果過度保守</td>
                                 </tr>
                             </tbody>

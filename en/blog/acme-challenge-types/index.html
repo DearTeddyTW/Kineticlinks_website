@@ -199,22 +199,22 @@
                             <tbody>
                                 <tr class="">
                                     <td>HTTP-01</td>
-                                    <td class="num">Serve a file at a specific path for the CA to fetch</td>
+                                    <td>Serve a file at a specific path for the CA to fetch</td>
                                     <td>Needs port 80 open; fails behind CDNs and multi-node setups; no wildcards</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>DNS-01</td>
-                                    <td class="num">Publish a specified TXT record under the domain</td>
+                                    <td>Publish a specified TXT record under the domain</td>
                                     <td>Only option for wildcards; needs DNS API access and propagation waits</td>
                                 </tr>
                                 <tr class="">
                                     <td>TLS-ALPN-01</td>
-                                    <td class="num">Serve a special certificate during the TLS handshake</td>
+                                    <td>Serve a special certificate during the TLS handshake</td>
                                     <td>Needs direct control of port 443; unusable behind a CDN; no wildcards</td>
                                 </tr>
                                 <tr class="">
                                     <td>DNS-PERSIST-01</td>
-                                    <td class="num">One standing authorisation record, no repeated updates</td>
+                                    <td>One standing authorisation record, no repeated updates</td>
                                     <td>IETF draft; check Let's Encrypt for current production availability</td>
                                 </tr>
 

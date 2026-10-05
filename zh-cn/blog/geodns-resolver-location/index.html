@@ -199,28 +199,28 @@
                             <tbody>
                                 <tr class="">
                                     <td>轮询（round robin）</td>
-                                    <td class="num">依序轮流返回各个地址</td>
+                                    <td>依序轮流返回各个地址</td>
                                     <td>完全不看位置或健康状态</td>
                                 </tr>
                                 <tr class="">
                                     <td>加权分配</td>
-                                    <td class="num">预先设定的流量比例</td>
+                                    <td>预先设定的流量比例</td>
                                     <td>可控分布，但仍不看位置</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>地理路由（GeoDNS）</td>
-                                    <td class="num">提问的递归解析器所在位置</td>
+                                    <td>提问的递归解析器所在位置</td>
                                     <td>不是用户的位置——除非有 ECS</td>
                                 </tr>
                                 <tr class="">
                                     <td>延迟路由</td>
-                                    <td class="num">测量到各端点的网络延迟</td>
+                                    <td>测量到各端点的网络延迟</td>
                                     <td>量的同样是解析器到端点，非用户</td>
                                 </tr>
 
                                 <tr>
                                     <td>健康检查故障转移</td>
-                                    <td class="num">端点是否通过健康检查</td>
+                                    <td>端点是否通过健康检查</td>
                                     <td>切换受 TTL 限制，不是即时的</td>
                                 </tr>
                             </tbody>

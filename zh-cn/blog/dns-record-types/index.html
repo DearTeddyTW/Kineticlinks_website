@@ -199,33 +199,33 @@
                             <tbody>
                                 <tr class="">
                                     <td>A</td>
-                                    <td class="num">把名称指向 IPv4 地址</td>
+                                    <td>把名称指向 IPv4 地址</td>
                                     <td>对方 IP 会变时仍写死 A 记录</td>
                                 </tr>
                                 <tr class="">
                                     <td>AAAA</td>
-                                    <td class="num">把名称指向 IPv6 地址</td>
+                                    <td>把名称指向 IPv6 地址</td>
                                     <td>只设 A 没设 AAAA，IPv6 用户走不到</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>CNAME</td>
-                                    <td class="num">让名称成为另一个名称的别名</td>
+                                    <td>让名称成为另一个名称的别名</td>
                                     <td>设在根域名——协议不允许</td>
                                 </tr>
                                 <tr class="">
                                     <td>MX</td>
-                                    <td class="num">指定收信服务器与优先顺序</td>
+                                    <td>指定收信服务器与优先顺序</td>
                                     <td>填 IP 而非主机名；优先值理解颠倒</td>
                                 </tr>
 
                                 <tr>
                                     <td>TXT</td>
-                                    <td class="num">存放验证字符串（SPF、DKIM、ACME）</td>
+                                    <td>存放验证字符串（SPF、DKIM、ACME）</td>
                                     <td>多笔 SPF 并存导致验证失败</td>
                                 </tr>
                                 <tr>
                                     <td>NS</td>
-                                    <td class="num">指定谁有权回答此域名的查询</td>
+                                    <td>指定谁有权回答此域名的查询</td>
                                     <td>在注册商与 DNS 商两边各改一次，互相冲突</td>
                                 </tr>
                             </tbody>

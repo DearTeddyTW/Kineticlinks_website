@@ -199,33 +199,33 @@
                             <tbody>
                                 <tr class="is-current">
                                     <td>no-cache</td>
-                                    <td class="num">May be stored, but must be revalidated before each reuse</td>
+                                    <td>May be stored, but must be revalidated before each reuse</td>
                                     <td>Read as "don't cache" — it isn't</td>
                                 </tr>
                                 <tr class="">
                                     <td>no-store</td>
-                                    <td class="num">Must not be stored at all, headers included</td>
+                                    <td>Must not be stored at all, headers included</td>
                                     <td>This is the one that means "don't cache"</td>
                                 </tr>
                                 <tr class="">
                                     <td>max-age=N</td>
-                                    <td class="num">Fresh for N seconds, applies to every cache</td>
+                                    <td>Fresh for N seconds, applies to every cache</td>
                                     <td>Assumed sufficient for CDNs too</td>
                                 </tr>
                                 <tr class="">
                                     <td>s-maxage=N</td>
-                                    <td class="num">Shared caches only; overrides max-age and Expires</td>
+                                    <td>Shared caches only; overrides max-age and Expires</td>
                                     <td>Not knowing it overrides max-age</td>
                                 </tr>
 
                                 <tr>
                                     <td>must-revalidate</td>
-                                    <td class="num">Stale responses can't be served unvalidated; errors if offline</td>
+                                    <td>Stale responses can't be served unvalidated; errors if offline</td>
                                     <td>Expecting stale content as a fallback</td>
                                 </tr>
                                 <tr>
                                     <td>private</td>
-                                    <td class="num">Browser may store; shared caches must not</td>
+                                    <td>Browser may store; shared caches must not</td>
                                     <td>Conflated with no-store, so used too defensively</td>
                                 </tr>
                             </tbody>
