@@ -364,6 +364,43 @@ def build_faq_jsonld(page_content):
     }, ensure_ascii=False, indent=2)
 
 
+def build_security_section(page_content):
+    """Render the security block only for pages that define one.
+
+    platform.html is shared by /ssl/, /speedtest/ and /icp-check/, so an
+    unconditional section would leave unresolved placeholders on the pages
+    without one -- same reason build_pricing_section is conditional.
+    """
+    sec = page_content.get('security')
+    if not sec:
+        return ''
+    items = []
+    n = 1
+    while f'item{n}' in sec:
+        it = sec[f'item{n}']
+        items.append(
+            f'<div class="service-card glass-panel interactive">\n'
+            f'                    <h3>{it["title"]}</h3>\n'
+            f'                    <p>{it["desc"]}</p>\n'
+            f'                </div>')
+        n += 1
+    joined = ('\n                ').join(items)
+    return f"""
+    <!-- Security -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>{sec['title']}</h2>
+                <p>{sec['desc']}</p>
+            </div>
+            <div class="services-grid">
+                {joined}
+            </div>
+        </div>
+    </section>
+"""
+
+
 def build_pricing_section(page_content, lang_path):
     """Render the pricing block only for pages that define prices.
 
@@ -486,6 +523,7 @@ def build():
             flat['inline_tool'] = ''
             flat['table_col2_class'] = ' class="num"'
             flat['article_lead'] = ''
+            flat['security_section'] = ''
 
             if page['content_key']:
                 page_content = translations.get(page['content_key'], {})
@@ -522,6 +560,7 @@ def build():
                 flat['table_extra_rows'] = ('\n' + '\n'.join(extra)) if extra else ''
 
                 flat['pricing_section'] = build_pricing_section(page_content, lang['lang_path'])
+                flat['security_section'] = build_security_section(page_content)
                 flat['faq_items'] = build_faq_items(page_content)
                 flat['faq_jsonld'] = build_faq_jsonld(page_content)
                 flat['webapp_jsonld'] = build_webapp_jsonld(

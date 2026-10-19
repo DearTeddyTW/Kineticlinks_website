@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>SSL Automation | ACME Validation, Renewal & Multi-CDN Deploy</title>
-    <meta name="title" content="SSL Automation | ACME Validation, Renewal & Multi-CDN Deploy">
-    <meta name="description" content="End certificate expiry risk. ACME and DNS validation with automatic push to GoDaddy, Alibaba Cloud and other CDN nodes. From US$30 per domain, no monthly fee.">
-    <meta name="keywords" content="SSL certificate automation, SSL certificate management, automatic certificate renewal, DV SSL, CDN SSL certificate, SSL API">
+    <title>SSL Automation | Keys Can Stay On Your Own Network - Kineticlinks</title>
+    <meta name="title" content="SSL Automation | Keys Can Stay On Your Own Network - Kineticlinks">
+    <meta name="description" content="Three private-key modes, ten DNS providers for automated validation, seven CDN deploy targets, and edge checks after deployment. With MFA, roles and audit logs.">
+    <meta name="keywords" content="SSL certificate automation, certificate management, automated renewal, DV SSL, CDN SSL deployment, SSL API, certificate audit, private key management">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.kineticlinks.net/en/ssl/">
@@ -23,15 +23,15 @@
     <!-- Open Graph / Facebook / Line -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.kineticlinks.net/en/ssl/">
-    <meta property="og:title" content="SSL Automation | ACME Validation, Renewal & Multi-CDN Deploy">
-    <meta property="og:description" content="End certificate expiry risk. ACME and DNS validation with automatic push to GoDaddy, Alibaba Cloud and other CDN nodes. From US$30 per domain, no monthly fee.">
+    <meta property="og:title" content="SSL Automation | Keys Can Stay On Your Own Network - Kineticlinks">
+    <meta property="og:description" content="Three private-key modes, ten DNS providers for automated validation, seven CDN deploy targets, and edge checks after deployment. With MFA, roles and audit logs.">
     <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.kineticlinks.net/en/ssl/">
-    <meta property="twitter:title" content="SSL Automation | ACME Validation, Renewal & Multi-CDN Deploy">
-    <meta property="twitter:description" content="End certificate expiry risk. ACME and DNS validation with automatic push to GoDaddy, Alibaba Cloud and other CDN nodes. From US$30 per domain, no monthly fee.">
+    <meta property="twitter:title" content="SSL Automation | Keys Can Stay On Your Own Network - Kineticlinks">
+    <meta property="twitter:description" content="Three private-key modes, ten DNS providers for automated validation, seven CDN deploy targets, and edge checks after deployment. With MFA, roles and audit logs.">
     <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
 
     <!-- Structured Data (JSON-LD): Service -->
@@ -39,9 +39,9 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "SSL Certificate Automation Platform",
-      "name": "SSL Automation | ACME Validation, Renewal & Multi-CDN Deploy",
-      "description": "End certificate expiry risk. ACME and DNS validation with automatic push to GoDaddy, Alibaba Cloud and other CDN nodes. From US$30 per domain, no monthly fee.",
+      "serviceType": "Automated certificates, with the private key wherever you want it",
+      "name": "SSL Automation | Keys Can Stay On Your Own Network - Kineticlinks",
+      "description": "Three private-key modes, ten DNS providers for automated validation, seven CDN deploy targets, and edge checks after deployment. With MFA, roles and audit logs.",
       "provider": {
         "@type": "Organization",
         "name": "Kineticlinks",
@@ -57,12 +57,12 @@
     {
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "SSL Certificate Automation Platform",
+          "name": "Automated certificates, with the private key wherever you want it",
           "url": "https://app.kineticlinks.net/register",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Any",
           "browserRequirements": "Requires JavaScript",
-          "description": "End certificate expiry risk. ACME and DNS validation with automatic push to GoDaddy, Alibaba Cloud and other CDN nodes. From US$30 per domain, no monthly fee.",
+          "description": "Three private-key modes, ten DNS providers for automated validation, seven CDN deploy targets, and edge checks after deployment. With MFA, roles and audit logs.",
           "publisher": {
                 "@type": "Organization",
                 "name": "Kineticlinks",
@@ -92,7 +92,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "SSL Certificate Automation Platform",
+          "name": "Automated certificates, with the private key wherever you want it",
           "item": "https://www.kineticlinks.net/en/ssl/"
         }
       ]
@@ -107,50 +107,50 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Can the platform see my private key?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That depends which mode you pick. Platform-managed keys are generated and stored encrypted, cannot be downloaded by default, and need an administrator to enable it for that account — after which every download is written to the audit log. With bring-your-own-CSR the key never reaches the platform at all. In agent mode the key is generated by the agent in your own racks and stays on your machine; it is never uploaded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which DNS providers can be validated automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ten at present: GoDaddy, NS1, Namecheap, Cloudflare, AWS Route 53, Tencent DNSPod, Google Cloud DNS, UltraDNS, Constellix and Akamai Edge DNS. The list keeps growing — if yours is not on it you can validate manually, or talk to us about adding it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which CDNs can certificates be deployed to?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seven at present: Apeiro8 CDN, Skycloud (CDNRay), CDNetworks, Alibaba Cloud, Tencent Cloud CDN / EdgeOne, EdgeNext and CDN5. Once deployment finishes the platform connects from several edge nodes to confirm the chain and that the certificate is actually live, rather than just reporting that an API call succeeded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it deploy to servers that are not reachable from the internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, using the on-premise agent. One Linux machine runs the agent as a hub and installs certificates over SSH onto the machines you list (nginx, haproxy, Apache). The key is generated on the hub and only ever travels inside your network; the platform cannot see it. Agent packages are signed, so you can verify them with ssh-keygen -Y verify. This feature requires the Enterprise plan."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Who issues the certificate, and will browsers trust it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Certificates are issued by GoGetSSL's DV CA, chaining up through USERTrust to a publicly trusted Sectigo root. That root ships in the trust stores of every major browser and operating system, so visitors install nothing. The platform deploys the complete chain, avoiding the missing-intermediate failures that affect apps and API clients."
+        "text": "Certificates are issued by the GoGetSSL DV CA, chaining up through USERTrust to a publicly trusted Sectigo root. That root ships in the trust stores of every mainstream browser and operating system, so nobody has to install anything."
       }
     },
     {
       "@type": "Question",
-      "name": "What domain permissions do I need to use this platform?",
+      "name": "How does billing work? Is there a monthly fee?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You need DNS management access to the domain — the platform creates validation records automatically through its integrated DNS provider APIs. If your DNS provider isn't yet supported, manual validation is also available."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will the platform notify me before a certificate expires?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The platform sends proactive reminders before expiration, and you can enable automatic renewal to reduce the risk of a lapsed certificate causing a security warning."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can issued certificates be used on hosting or CDNs outside of Kineticlinks?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The platform issues standard SSL certificates that can be downloaded and used on any server or CDN that supports SSL — they aren't locked to Kineticlinks services."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which DNS providers support automatic validation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We currently integrate with major DNS providers including GoDaddy, and are continuing to expand support. If your provider isn't yet supported, reach out and we'll evaluate adding it."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the platform free? How is it charged?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Platform features carry no separate charge — the cost is the certificate itself: US$30/year for a single-domain certificate and US$90/year for a wildcard, with automatic reissue within the term at no extra cost. There is no monthly or account fee, and your first certificate is fully refundable if it doesn't fit."
+        "text": "Certificates are priced individually — from US$30/year for a single domain, from US$90/year for a wildcard — drawn from your account balance, with reissues inside the validity period free. Automation is what the subscription buys: Basic is free but includes none of it; Pro at US$29/month adds CDN deployment, DNS validation and edge checks with up to 5 members; Enterprise at US$149/month adds the on-premise agent and unlimited members. New accounts get 14 days of Pro and then fall back to Basic, with nothing charged automatically."
       }
     }
   ]
@@ -221,7 +221,7 @@
             <span>/</span>
             <a href="/en/#platforms">Platforms</a>
             <span>/</span>
-            <span class="current">SSL Certificate Automation Platform</span>
+            <span class="current">Automated certificates, with the private key wherever you want it</span>
         </div>
     </div>
 
@@ -230,13 +230,13 @@
     <section class="page-hero">
         <div class="container">
             <div class="page-hero-content glass-panel">
-                <div class="badge">SSL Certificate Automation Platform</div>
-                <h1>SSL Certificate Automation Platform</h1>
-                <p class="page-hero-subtitle">One-stop certificate issuance, validation, and deployment — no more manual certificate juggling</p>
-                <p>The Kineticlinks SSL automation platform integrates with major DNS providers to fully automate domain validation, and pushes issued certificates directly to multiple CDN brands, so engineering and ops teams never have to manually upload certificates or track expiration dates again.</p>
+                <div class="badge">SSL certificate automation</div>
+                <h1>Automated certificates, with the private key wherever you want it</h1>
+                <p class="page-hero-subtitle">Request, validate, deploy and verify without touching a file — while the most sensitive piece never has to reach us</p>
+                <p>Most certificate platforms ask you to hand over the private key. Kineticlinks offers three modes: platform-managed, bring your own CSR, or an agent in your own racks that generates the key and keeps it there. With ten DNS providers for automated validation, seven CDN deploy targets, and edge checks once deployment finishes.</p>
                 <div class="hero-actions">
-                    <a href="https://app.kineticlinks.net/register" target="_blank" rel="noopener" class="btn btn-primary">Create an Account</a>
-                    <a href="/en/#platforms" class="btn btn-secondary">View Other Platforms</a>
+                    <a href="https://app.kineticlinks.net/register" target="_blank" rel="noopener" class="btn btn-primary">Create an account</a>
+                    <a href="/en/#platforms" class="btn btn-secondary">See other platform products</a>
                 </div>
 
             </div>
@@ -247,12 +247,12 @@
     <section class="section prose-section">
         <div class="container">
             <div class="section-header" style="text-align:left; margin-bottom: 2rem;">
-                <h2>What Is an SSL Certificate Automation Platform?</h2>
+                <h2>Why certificate automation stalls on the private key</h2>
             </div>
             <div class="prose glass-panel">
-                <p>An SSL certificate is required to enable HTTPS on a website, but the traditional request, validation, and renewal process is often manual: creating DNS validation records by hand, downloading certificate files, and uploading them one by one to servers or CDNs. Certificates typically need reissuing every few months, and a single oversight can leave a site showing a security warning after expiration.</p>
-                <p>The Kineticlinks SSL automation platform ties the whole process into a single interface. It integrates with the APIs of major DNS providers like GoDaddy to complete domain ownership validation automatically, removing the need to manually add TXT or CNAME records. Once a certificate is issued, it can also be pushed automatically to multiple CDN brands, connecting certificate deployment directly to your CDN acceleration setup.</p>
-                <p>The platform also provides expiration reminders and automatic renewal, reducing the risk of a certificate lapsing due to human oversight — especially useful for teams managing many domains or frequently switching certificates between CDN providers.</p>
+                <p>On the surface the problem is drudgery: creating DNS validation records by hand, downloading files, uploading them to each server and CDN in turn. Validity periods keep shrinking, and one missed renewal puts a security warning in front of your users. Automation solves that part.</p>
+                <p>What actually stops enterprises is different: <strong>automating this means some system holds your private key</strong>. A security review asks where the key is stored, who can download it, and whether downloads are logged — and for most platforms the answer is "with us." Procurement stops there.</p>
+                <p>Kineticlinks hands that decision back: three key modes, including an agent that generates the key inside your own network and never uploads it. Platform-managed keys cannot be downloaded by default — an administrator has to enable it for that account, and every download after that is written to the audit log. The full security write-up is public on the platform, including the parts we have not built yet.</p>
             </div>
         </div>
     </section>
@@ -261,25 +261,25 @@
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Use Cases</h2>
-                <p>Whether you manage a single domain or a large number of subdomains, the platform simplifies certificate operations</p>
+                <h2>Where it fits</h2>
+                <p>From a single domain to an environment that has to pass review</p>
             </div>
             <div class="services-grid">
                 <div class="service-card glass-panel interactive">
-                    <h3>Multi-Domain & Subdomain Management</h3>
-                    <p>Centrally track certificate issuance and renewal status across many domains and subdomains without missing one.</p>
+                    <h3>Procurement with a security questionnaire</h3>
+                    <p>Key storage, separation of duties, audit logging and incident timelines all have published written answers you can quote.</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>Cross-CDN Deployment</h3>
-                    <p>Push the same certificate to multiple CDN brand nodes at once through a single platform.</p>
+                    <h3>Managing many client domains</h3>
+                    <p>Track requests and renewals across a large estate, with roles deciding who can touch which certificates.</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>E-commerce & Campaign Sites</h3>
-                    <p>Quickly issue certificates for short-lived campaign pages or rapidly expanding storefront domains.</p>
+                    <h3>Internal and on-premise equipment</h3>
+                    <p>Servers that never face the internet, reached over SSH by your own agent, with the key never leaving your network.</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>Dev & Ops Teams</h3>
-                    <p>Free engineering time from certificate busywork so it can focus on core product development.</p>
+                    <h3>Deploying across CDNs</h3>
+                    <p>Push one certificate to several CDNs, then confirm from edge nodes that it actually took effect.</p>
                 </div>
             </div>
         </div>
@@ -289,59 +289,93 @@
     <section class="section" style="background-color: var(--bg-darker);">
         <div class="container">
             <div class="section-header">
-                <h2>Why Choose the Kineticlinks SSL Automation Platform</h2>
-                <p>Compared to manually requesting each certificate and uploading it to servers one at a time</p>
+                <h2>How this differs from a typical certificate platform</h2>
+                <p>The differences are in key custody, integration coverage, and what happens after deployment</p>
             </div>
             <div class="services-grid">
                 <div class="service-card glass-panel interactive">
-                    <h3>Automatic DNS Validation</h3>
-                    <p>Integrates with major DNS provider APIs to skip manual validation records and cut issuance time significantly.</p>
+                    <h3>Three key modes, your choice</h3>
+                    <p>Platform-managed, bring your own CSR (the key never reaches us), or agent mode, where the key is generated in your racks and stays there.</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>Multi-Brand CDN Auto-Push</h3>
-                    <p>Certificates sync directly to multiple CDN nodes after issuance, with no repeated downloading and uploading.</p>
+                    <h3>Broad DNS and CDN coverage</h3>
+                    <p>Ten DNS providers complete domain validation automatically, seven CDN targets receive deployments, with no API keys to distribute by hand.</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>Expiration Alerts & Auto-Renewal</h3>
-                    <p>The system proactively tracks certificate validity, lowering the risk of a security warning from a lapsed certificate.</p>
+                    <h3>Edge checks after deployment</h3>
+                    <p>A successful push is not proof it works. The platform connects from several edge nodes to confirm the chain and that it is live.</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>Native Integration With CDN Service</h3>
-                    <p>Part of the same Kineticlinks product line, so pairing with our CDN service requires no extra integration work.</p>
+                    <h3>Team governance and audit</h3>
+                    <p>MFA, five roles with itemised permissions, scoped API keys, an order approval step, and an exportable audit log.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Security -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Security and governance</h2>
+                <p>What the platform does today. The full write-up, including what is still missing, is published on the platform's security page</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-panel interactive">
+                    <h3>MFA and sign-in protection</h3>
+                    <p>Authenticator apps and recovery codes; an owner can require it team-wide, and can set idle timeout and which networks may sign in.</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>Five roles, itemised permissions</h3>
+                    <p>Owner, admin, operator, billing and viewer. Every API route must declare the permission it needs or an automated test fails the build.</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>Scoped API keys</h3>
+                    <p>Limited to what you tick and never beyond their creator's permissions; they take an expiry and a source IP range, and die when their creator leaves the team.</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>Order approval and audit log</h3>
+                    <p>Orders from operators and API keys can require approval first. Sign-ins, permission changes and key downloads are recorded, exportable as CSV or over the API.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Pricing -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Plans and Pricing</h2>
-                <p>Priced per certificate. Platform features are not charged separately.</p>
+                <h2>Plans and pricing</h2>
+                <p>Certificates are priced per certificate. Automation comes with a subscription, and every new account gets 14 days of Pro.</p>
             </div>
             <div class="services-grid pricing-grid">
                 <div class="service-card glass-panel interactive price-card">
-                    <h3>Single-Domain Certificate</h3>
-                    <p class="price"><span class="price-amount">US$30</span> <span class="price-unit">/year</span></p>
-                    <p>Covers one domain or a specified subdomain, e.g. example.com or shop.example.com.</p>
+                    <h3>Basic</h3>
+                    <p class="price"><span class="price-amount">Free</span> <span class="price-unit"></span></p>
+                    <p>Request and manage certificates as normal; automation not included. This is where accounts land when the trial ends.</p>
                 </div>
                 <div class="service-card glass-panel interactive price-card">
-                    <h3>Wildcard Certificate</h3>
-                    <p class="price"><span class="price-amount">US$90</span> <span class="price-unit">/year</span></p>
-                    <p>Covers every subdomain under the domain, e.g. *.example.com, with no limit on how many.</p>
+                    <h3>Pro</h3>
+                    <p class="price"><span class="price-amount">US$29</span> <span class="price-unit">/month</span></p>
+                    <p>CDN deployment, DNS validation and edge checks, with up to 5 team members. US$319 billed yearly.</p>
+                </div>
+                <div class="service-card glass-panel interactive price-card">
+                    <h3>Enterprise</h3>
+                    <p class="price"><span class="price-amount">US$149</span> <span class="price-unit">/month</span></p>
+                    <p>Everything in Pro, plus the on-premise agent and unlimited team members. US$1,639 billed yearly.</p>
                 </div>
             </div>
             <div class="glass-panel price-includes">
-                <h3>Every platform feature is included in these prices</h3>
+                <h3>Certificates are charged separately, at the same rate on every plan</h3>
                 <ul class="feature-list">
-                    <li>Issued by GoGetSSL DV CA, chaining to a publicly trusted Sectigo root</li>
-                    <li>Automated DNS validation, without distributing DNS API keys yourself</li>
-                    <li>Automatic push on issuance to GoDaddy, NS1, Apeiro CDN, Tencent CDNRay, CDNetworks and Alibaba Cloud</li>
-                    <li>Expiry tracking and automatic reissue within the term, at no extra charge</li>
-                    <li>No monthly fee, no account fee, no platform usage fee</li>
+                    <li>Single-domain certificates from US$30/year, wildcards from US$90/year, drawn from your account balance</li>
+                    <li>Issued by the GoGetSSL DV CA, chaining to a publicly trusted Sectigo root</li>
+                    <li>Expiry tracking, with reissues inside the validity period at no extra charge</li>
+                    <li>Multi-domain (SAN) and 12/24/36-month terms quoted on request, with volume discounts</li>
+                    <li>No cap on the number of certificates on any plan</li>
                 </ul>
-                <p class="price-note">Your first certificate is fully refundable if it doesn't fit. Account top-ups currently accept cryptocurrency; contact us about other payment methods.</p>
+                <p class="price-note">The 14-day Pro trial drops to Basic when it ends; nothing is charged automatically. Your first certificate is fully refundable if it does not suit. Account top-ups currently accept cryptocurrency — contact us about other payment methods.</p>
             </div>
         </div>
     </section>
@@ -351,25 +385,25 @@
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Who It's For</h2>
-                <p>The following types of teams commonly rely on the SSL automation platform</p>
+                <h2>Who uses it</h2>
+                <p>Teams that run into certificate management at scale</p>
             </div>
             <div class="services-grid">
                 <div class="service-card glass-panel interactive">
-                    <h3>Hosting Providers & Agencies</h3>
-                    <p>Web hosts or digital agencies managing certificates across multiple client domains at once.</p>
+                    <h3>Hosting providers and agencies</h3>
+                    <p>Managing certificates across many client domains from one place.</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>E-commerce Operations Teams</h3>
-                    <p>Brands running multiple storefronts or campaign pages that need certificates issued and deployed quickly.</p>
+                    <h3>Enterprise IT under audit</h3>
+                    <p>Teams who have to account for key storage, separation of duties and operation logs.</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>SaaS & Platform Providers</h3>
-                    <p>Services that need to auto-issue certificates for a large number of custom domains, such as customer subdomains.</p>
+                    <h3>SaaS and platform operators</h3>
+                    <p>Issuing certificates automatically for large numbers of custom customer domains.</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>IT & Operations Departments</h3>
-                    <p>Internal teams that want to standardize certificate management and reduce manual-process risk.</p>
+                    <h3>Teams with on-premise estate</h3>
+                    <p>Servers inside a network that still need valid, current certificates.</p>
                 </div>
             </div>
         </div>
@@ -379,24 +413,24 @@
     <section class="section related-section">
         <div class="container">
             <div class="section-header">
-                <h2>Related Services & Reading</h2>
-                <p>These pages connect directly to the topic above</p>
+                <h2>Further reading and related services</h2>
+                <p>Directly related to this page's topic</p>
             </div>
             <div class="related-grid">
                 <a href="/en/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                    <span class="related-kicker">Article</span>
-                    <h3>SSL Lifetimes Cut to 200 Days</h3>
-                    <p>Down to 47 days by 2029 — the schedule, and why manual renewal will not hold.</p>
+                    <span class="related-kicker">Technical article</span>
+                    <h3>SSL validity drops to 200 days</h3>
+                    <p>47 days by 2029, and why manual management stops working before then.</p>
+                </a>
+                <a href="/en/blog/incomplete-certificate-chain/" class="related-card glass-panel">
+                    <span class="related-kicker">Technical article</span>
+                    <h3>Incomplete certificate chains</h3>
+                    <p>Why some clients connect and others do not, and what to verify after deploying.</p>
                 </a>
                 <a href="/en/cdn/" class="related-card glass-panel">
-                    <span class="related-kicker">Service</span>
-                    <h3>CDN Content Delivery Network</h3>
-                    <p>Global edge acceleration and terabit DDoS protection that pairs with this service.</p>
-                </a>
-                <a href="/en/vps/" class="related-card glass-panel">
-                    <span class="related-kicker">Service</span>
-                    <h3>VPS Hosting</h3>
-                    <p>High-performance NVMe SSD compute, well suited to an initial or transitional deployment.</p>
+                    <span class="related-kicker">Core service</span>
+                    <h3>CDN</h3>
+                    <p>Global edge acceleration and terabit DDoS protection, deployable alongside this.</p>
                 </a>
             </div>
         </div>
@@ -406,32 +440,32 @@
     <section class="section faq-section" style="background-color: var(--bg-darker);">
         <div class="container">
             <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
+                <h2>Frequently asked questions</h2>
             </div>
             <div class="faq-list">
                 <details class="faq-item glass-panel">
+                    <summary>Can the platform see my private key?</summary>
+                    <p>That depends which mode you pick. Platform-managed keys are generated and stored encrypted, cannot be downloaded by default, and need an administrator to enable it for that account — after which every download is written to the audit log. With bring-your-own-CSR the key never reaches the platform at all. In agent mode the key is generated by the agent in your own racks and stays on your machine; it is never uploaded.</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>Which DNS providers can be validated automatically?</summary>
+                    <p>Ten at present: GoDaddy, NS1, Namecheap, Cloudflare, AWS Route 53, Tencent DNSPod, Google Cloud DNS, UltraDNS, Constellix and Akamai Edge DNS. The list keeps growing — if yours is not on it you can validate manually, or talk to us about adding it.</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>Which CDNs can certificates be deployed to?</summary>
+                    <p>Seven at present: Apeiro8 CDN, Skycloud (CDNRay), CDNetworks, Alibaba Cloud, Tencent Cloud CDN / EdgeOne, EdgeNext and CDN5. Once deployment finishes the platform connects from several edge nodes to confirm the chain and that the certificate is actually live, rather than just reporting that an API call succeeded.</p>
+                </details>
+                <details class="faq-item glass-panel">
+                    <summary>Can it deploy to servers that are not reachable from the internet?</summary>
+                    <p>Yes, using the on-premise agent. One Linux machine runs the agent as a hub and installs certificates over SSH onto the machines you list (nginx, haproxy, Apache). The key is generated on the hub and only ever travels inside your network; the platform cannot see it. Agent packages are signed, so you can verify them with ssh-keygen -Y verify. This feature requires the Enterprise plan.</p>
+                </details>
+                <details class="faq-item glass-panel">
                     <summary>Who issues the certificate, and will browsers trust it?</summary>
-                    <p>Certificates are issued by GoGetSSL's DV CA, chaining up through USERTrust to a publicly trusted Sectigo root. That root ships in the trust stores of every major browser and operating system, so visitors install nothing. The platform deploys the complete chain, avoiding the missing-intermediate failures that affect apps and API clients.</p>
+                    <p>Certificates are issued by the GoGetSSL DV CA, chaining up through USERTrust to a publicly trusted Sectigo root. That root ships in the trust stores of every mainstream browser and operating system, so nobody has to install anything.</p>
                 </details>
                 <details class="faq-item glass-panel">
-                    <summary>What domain permissions do I need to use this platform?</summary>
-                    <p>You need DNS management access to the domain — the platform creates validation records automatically through its integrated DNS provider APIs. If your DNS provider isn't yet supported, manual validation is also available.</p>
-                </details>
-                <details class="faq-item glass-panel">
-                    <summary>Will the platform notify me before a certificate expires?</summary>
-                    <p>Yes. The platform sends proactive reminders before expiration, and you can enable automatic renewal to reduce the risk of a lapsed certificate causing a security warning.</p>
-                </details>
-                <details class="faq-item glass-panel">
-                    <summary>Can issued certificates be used on hosting or CDNs outside of Kineticlinks?</summary>
-                    <p>Yes. The platform issues standard SSL certificates that can be downloaded and used on any server or CDN that supports SSL — they aren't locked to Kineticlinks services.</p>
-                </details>
-                <details class="faq-item glass-panel">
-                    <summary>Which DNS providers support automatic validation?</summary>
-                    <p>We currently integrate with major DNS providers including GoDaddy, and are continuing to expand support. If your provider isn't yet supported, reach out and we'll evaluate adding it.</p>
-                </details>
-                <details class="faq-item glass-panel">
-                    <summary>Is the platform free? How is it charged?</summary>
-                    <p>Platform features carry no separate charge — the cost is the certificate itself: US$30/year for a single-domain certificate and US$90/year for a wildcard, with automatic reissue within the term at no extra cost. There is no monthly or account fee, and your first certificate is fully refundable if it doesn't fit.</p>
+                    <summary>How does billing work? Is there a monthly fee?</summary>
+                    <p>Certificates are priced individually — from US$30/year for a single domain, from US$90/year for a wildcard — drawn from your account balance, with reissues inside the validity period free. Automation is what the subscription buys: Basic is free but includes none of it; Pro at US$29/month adds CDN deployment, DNS validation and edge checks with up to 5 members; Enterprise at US$149/month adds the on-premise agent and unlimited members. New accounts get 14 days of Pro and then fall back to Basic, with nothing charged automatically.</p>
                 </details>
             </div>
         </div>
@@ -441,9 +475,9 @@
     <section class="section cta-banner-section">
         <div class="container">
             <div class="cta-banner glass-panel">
-                <h2>Ready to Simplify Certificate Management?</h2>
-                <p>Create an account and issue your first certificate — fully refundable if it doesn't fit.</p>
-                <a href="https://app.kineticlinks.net/register" target="_blank" rel="noopener" class="btn btn-primary">Create an Account</a>
+                <h2>Want to check it clears your review first?</h2>
+                <p>The platform's security write-up is public, including what we have not built. Create an account to request your first certificate — fully refundable if it does not suit — or just send us the questionnaire.</p>
+                <a href="https://app.kineticlinks.net/register" target="_blank" rel="noopener" class="btn btn-primary">Create an account</a>
             </div>
         </div>
     </section>
