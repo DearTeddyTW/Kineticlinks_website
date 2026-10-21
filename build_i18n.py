@@ -364,6 +364,96 @@ def build_faq_jsonld(page_content):
     }, ensure_ascii=False, indent=2)
 
 
+def build_keymodes_section(page_content):
+    """Render the key-custody comparison for pages that define one.
+
+    This is the page's actual argument, so it gets a table rather than
+    another row of cards: the reader is comparing three options on the same
+    two questions, and a table is what that shape reads as. It also breaks
+    a page that would otherwise be four identical card bands.
+    """
+    km = page_content.get('key_modes')
+    if not km:
+        return ''
+    rows = []
+    n = 1
+    while f'r{n}c1' in km:
+        cls = km.get(f'r{n}_class', '')
+        cls = f' class="{cls}"' if cls else ''
+        rows.append(
+            f'                                <tr{cls}>\n'
+            f'                                    <td>{km[f"r{n}c1"]}</td>\n'
+            f'                                    <td>{km[f"r{n}c2"]}</td>\n'
+            f'                                    <td>{km[f"r{n}c3"]}</td>\n'
+            f'                                </tr>')
+        n += 1
+    body = '\n'.join(rows)
+    return f"""
+    <!-- Key custody -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>{km['title']}</h2>
+                <p>{km['desc']}</p>
+            </div>
+            <figure class="data-table-wrap">
+                <div class="data-table-scroll">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>{km['col1']}</th>
+                                <th>{km['col2']}</th>
+                                <th>{km['col3']}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+{body}
+                        </tbody>
+                    </table>
+                </div>
+                <figcaption>{km['caption']}</figcaption>
+            </figure>
+        </div>
+    </section>
+"""
+
+
+def build_customers_section(page_content):
+    """Render the audience block only for pages that define one.
+
+    /ssl/ folds its audience into the use-cases section, so this stays out
+    of its markup instead of repeating the same four readers twice.
+    """
+    c = page_content.get('customers')
+    if not c:
+        return ''
+    cards = []
+    n = 1
+    while f'item{n}' in c:
+        it = c[f'item{n}']
+        cards.append(
+            f'<div class="service-card glass-panel interactive">\n'
+            f'                    <h3>{it["title"]}</h3>\n'
+            f'                    <p>{it["desc"]}</p>\n'
+            f'                </div>')
+        n += 1
+    joined = ('\n                ').join(cards)
+    return f"""
+    <!-- Customer Types -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>{c['title']}</h2>
+                <p>{c['desc']}</p>
+            </div>
+            <div class="services-grid">
+                {joined}
+            </div>
+        </div>
+    </section>
+"""
+
+
 def build_security_section(page_content):
     """Render the security block only for pages that define one.
 
@@ -524,6 +614,8 @@ def build():
             flat['table_col2_class'] = ' class="num"'
             flat['article_lead'] = ''
             flat['security_section'] = ''
+            flat['keymodes_section'] = ''
+            flat['customers_section'] = ''
 
             if page['content_key']:
                 page_content = translations.get(page['content_key'], {})
@@ -561,6 +653,8 @@ def build():
 
                 flat['pricing_section'] = build_pricing_section(page_content, lang['lang_path'])
                 flat['security_section'] = build_security_section(page_content)
+                flat['keymodes_section'] = build_keymodes_section(page_content)
+                flat['customers_section'] = build_customers_section(page_content)
                 flat['faq_items'] = build_faq_items(page_content)
                 flat['faq_jsonld'] = build_faq_jsonld(page_content)
                 flat['webapp_jsonld'] = build_webapp_jsonld(

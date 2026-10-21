@@ -257,29 +257,71 @@
         </div>
     </section>
 
+
+    <!-- Key custody -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>三種私鑰模式，由你決定金鑰放在哪裡</h2>
+                <p>資安稽核會問「私鑰存在哪」「誰能下載」「下載有沒有紀錄」。這三種模式對應三種答案。</p>
+            </div>
+            <figure class="data-table-wrap">
+                <div class="data-table-scroll">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>模式</th>
+                                <th>私鑰在哪裡產生與存放</th>
+                                <th>平台能不能取得</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>平台代管</td>
+                                    <td>平台產生，以加密欄位存放</td>
+                                    <td>預設不能下載。要管理員針對該帳號明確開啟，開啟後每次下載都寫進稽核紀錄</td>
+                                </tr>
+                                <tr>
+                                    <td>自備 CSR</td>
+                                    <td>你自己產生，只把 CSR 交給平台</td>
+                                    <td>完全不經過平台</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>代理程式模式</td>
+                                    <td>你機房裡的代理程式產生，留在原地</td>
+                                    <td>永遠不會上傳。金鑰只在你的內網經 SSH 送到你列出的設備</td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <figcaption>第三種需要 Enterprise 方案。完整的安全性說明（含還沒做到的部分）公開在平台的安全性頁面。</figcaption>
+            </figure>
+        </div>
+    </section>
+
     <!-- Use Cases -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>適用場景</h2>
-                <p>從單一網域到需要通過稽核的企業環境</p>
+                <h2>誰在用，以及用在什麼情況</h2>
+                <p>共通點是憑證的數量或所在位置已經超過手動管理的範圍</p>
             </div>
             <div class="services-grid">
                 <div class="service-card glass-panel interactive">
-                    <h3>需要通過資安問卷的採購</h3>
-                    <p>金鑰存放、權限分離、稽核紀錄、事件通報時效都有公開的書面答案可以直接引用。</p>
+                    <h3>網站代管與代理商</h3>
+                    <p>同時管理多個客戶網域的申請與續簽，並把同一張憑證部署到不同客戶指定的 CDN。以角色區分誰能動哪些憑證。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>代管多個客戶網域</h3>
-                    <p>集中管理大量網域的申請與續簽狀態，以角色與權限區分誰能動哪些憑證。</p>
+                    <h3>有稽核要求的企業 IT</h3>
+                    <p>需要向稽核或客戶說明金鑰存放位置、權限如何分離、以及誰在什麼時候做了什麼。這些都有公開的書面答案可以直接引用。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>內網與地端設備</h3>
-                    <p>機房裡不對外的設備，由你自己的代理程式經 SSH 安裝憑證，私鑰不離開內網。</p>
+                    <h3>SaaS 與平台服務商</h3>
+                    <p>為大量客戶自訂網域自動核發憑證，用 API 金鑰接進既有流程，並以訂單核准控制誰能下單。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>跨 CDN 部署</h3>
-                    <p>同一張憑證部署到多家 CDN，完成後再由節點巡檢確認真的生效。</p>
+                    <h3>有內網與地端設備的團隊</h3>
+                    <p>機房裡不對外的伺服器同樣需要有效憑證。由你自己的代理程式經 SSH 安裝，私鑰不離開內網。</p>
                 </div>
             </div>
         </div>
@@ -290,20 +332,20 @@
         <div class="container">
             <div class="section-header">
                 <h2>與一般憑證平台的差別</h2>
-                <p>差異集中在金鑰的掌控權、整合廣度與事後驗證</p>
+                <p>除了上面的金鑰掌控權，這四項是日常維運會感覺到的</p>
             </div>
             <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>三種私鑰模式，由你選</h3>
-                    <p>平台代管、自備 CSR（私鑰完全不經過平台）、代理程式模式（金鑰在你機房產生並留在原地）。</p>
-                </div>
                 <div class="service-card glass-panel interactive">
                     <h3>DNS 與 CDN 整合覆蓋廣</h3>
                     <p>10 家 DNS 服務商自動完成網域驗證，7 家 CDN 自動部署，不需要手動散布 API 金鑰。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
                     <h3>部署後的節點巡檢</h3>
-                    <p>推播成功不等於裝對了。平台會從多個邊緣節點實際連線，確認憑證鏈與生效狀態。</p>
+                    <p>推送成功不等於裝對了。平台會從多個邊緣節點實際連線，確認憑證鏈與生效狀態。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>效期追蹤與自動重簽</h3>
+                    <p>系統主動追蹤到期時間，效期內重簽不另外收費——憑證效期一路縮短之後，這件事只會更頻繁。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
                     <h3>團隊治理與稽核</h3>
@@ -381,33 +423,6 @@
     </section>
 
 
-    <!-- Customer Types -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>適合的使用者類型</h2>
-                <p>以下類型的團隊經常使用 SSL 憑證自動化平台</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>網站代管與代理商</h3>
-                    <p>需同時管理多個客戶網域憑證的代管業者或數位代理商。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>有稽核要求的企業 IT</h3>
-                    <p>需要向稽核或客戶說明金鑰存放、權限分離與操作紀錄的內部團隊。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>SaaS 與平台服務商</h3>
-                    <p>需要為大量自訂網域（如客戶子網域）自動核發憑證的服務。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>有地端設備的團隊</h3>
-                    <p>機房或內網裡有不對外的伺服器，但同樣需要有效憑證的團隊。</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Related Pages (contextual internal links) -->
     <section class="section related-section">

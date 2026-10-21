@@ -257,29 +257,71 @@
         </div>
     </section>
 
+
+    <!-- Key custody -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>三种私钥模式，由你决定密钥放在哪里</h2>
+                <p>资安审计会问「私钥存在哪」「谁能下载」「下载有没有纪录」。这三种模式对应三种答案。</p>
+            </div>
+            <figure class="data-table-wrap">
+                <div class="data-table-scroll">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>模式</th>
+                                <th>私钥在哪里产生与存放</th>
+                                <th>平台能不能取得</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>平台托管</td>
+                                    <td>平台产生，以加密字段存放</td>
+                                    <td>缺省不能下载。要管理员针对该账号明确打开，打开后每次下载都写进审计纪录</td>
+                                </tr>
+                                <tr>
+                                    <td>自备 CSR</td>
+                                    <td>你自己产生，只把 CSR 交给平台</td>
+                                    <td>完全不经过平台</td>
+                                </tr>
+                                <tr class="is-current">
+                                    <td>代理程序模式</td>
+                                    <td>你机房里的代理程序产生，留在原地</td>
+                                    <td>永远不会上传。密钥只在你的内网经 SSH 送到你列出的设备</td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <figcaption>第三种需要 Enterprise 方案。完整的安全性说明（含还没做到的部分）公开在平台的安全性页面。</figcaption>
+            </figure>
+        </div>
+    </section>
+
     <!-- Use Cases -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>适用场景</h2>
-                <p>从单一域名到需要通过审计的企业环境</p>
+                <h2>谁在用，以及用在什么情况</h2>
+                <p>共通点是证书的数量或所在位置已经超过手动管理的范围</p>
             </div>
             <div class="services-grid">
                 <div class="service-card glass-panel interactive">
-                    <h3>需要通过资安问卷的采购</h3>
-                    <p>密钥存放、权限分离、审计纪录、事件通报时效都有公开的书面答案可以直接引用。</p>
+                    <h3>网站托管与代理商</h3>
+                    <p>同时管理多个客户域名的申请与续签，并把同一张证书部署到不同客户指定的 CDN。以角色区分谁能动哪些证书。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>托管多个客户域名</h3>
-                    <p>集中管理大量域名的申请与续签状态，以角色与权限区分谁能动哪些证书。</p>
+                    <h3>有审计要求的企业 IT</h3>
+                    <p>需要向审计或客户说明密钥存放位置、权限如何分离、以及谁在什么时候做了什么。这些都有公开的书面答案可以直接引用。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>内网与地端设备</h3>
-                    <p>机房里不对外的设备，由你自己的代理程序经 SSH 安装证书，私钥不离开内网。</p>
+                    <h3>SaaS 与平台服务商</h3>
+                    <p>为大量客户自订域名自动核发证书，用 API 密钥接进既有流程，并以订单核准控制谁能下单。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
-                    <h3>跨 CDN 部署</h3>
-                    <p>同一张证书部署到多家 CDN，完成后再由节点巡检确认真的生效。</p>
+                    <h3>有内网与地端设备的团队</h3>
+                    <p>机房里不对外的服务器同样需要有效证书。由你自己的代理程序经 SSH 安装，私钥不离开内网。</p>
                 </div>
             </div>
         </div>
@@ -290,13 +332,9 @@
         <div class="container">
             <div class="section-header">
                 <h2>与一般证书平台的差别</h2>
-                <p>差异集中在密钥的掌控权、集成广度与事后验证</p>
+                <p>除了上面的密钥掌控权，这四项是日常维运会感觉到的</p>
             </div>
             <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>三种私钥模式，由你选</h3>
-                    <p>平台托管、自备 CSR（私钥完全不经过平台）、代理程序模式（密钥在你机房产生并留在原地）。</p>
-                </div>
                 <div class="service-card glass-panel interactive">
                     <h3>DNS 与 CDN 集成覆盖广</h3>
                     <p>10 家 DNS 服务商自动完成域名验证，7 家 CDN 自动部署，不需要手动散布 API 密钥。</p>
@@ -304,6 +342,10 @@
                 <div class="service-card glass-panel interactive">
                     <h3>部署后的节点巡检</h3>
                     <p>推送成功不等于装对了。平台会从多个边缘节点实际连接，确认证书链与生效状态。</p>
+                </div>
+                <div class="service-card glass-panel interactive">
+                    <h3>效期追踪与自动重签</h3>
+                    <p>系统主动追踪到期时间，效期内重签不另外收费——证书效期一路缩短之后，这件事只会更频繁。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
                     <h3>团队治理与审计</h3>
@@ -381,33 +423,6 @@
     </section>
 
 
-    <!-- Customer Types -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>适合的用户类型</h2>
-                <p>以下类型的团队经常使用 SSL 证书自动化平台</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>网站托管与代理商</h3>
-                    <p>需同时管理多个客户域名证书的托管业者或数字代理商。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>有审计要求的企业 IT</h3>
-                    <p>需要向审计或客户说明密钥存放、权限分离与操作纪录的内部团队。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>SaaS 与平台服务商</h3>
-                    <p>需要为大量自订域名（如客户子域名）自动核发证书的服务。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>有地端设备的团队</h3>
-                    <p>机房或内网里有不对外的服务器，但同样需要有效证书的团队。</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Related Pages (contextual internal links) -->
     <section class="section related-section">
