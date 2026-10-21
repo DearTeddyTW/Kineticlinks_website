@@ -17,7 +17,7 @@
     "badge": "Next-Gen IT Infrastructure",
     "title1": "引领未来的",
     "title2": "数字基础建设",
-    "desc": "我们提供 CDN 内容传递、VPS 虚拟主机、IDC 建置与混合云解决方案，并自营 SSL 证书自动化、中国三网测速与 ICP 备案查找平台。",
+    "desc": "我们提供 CDN 内容传递、VPS 虚拟主机、IDC 建置与混合云解决方案，并自营 SSL 证书自动化、中国三网测速与 ICP 备案查询平台。",
     "btn_primary": "探索服务",
     "btn_secondary": "专人咨询"
   },
@@ -84,10 +84,10 @@
   "about": {
     "title1": "以技术为本的",
     "title2": "专业 IT 团队",
-    "desc": "Kineticlinks 专注跨境网络基础架构。CDN、VPS、IDC 与公有云由我们代理上游并负责规划与集成；SSL 证书自动化、三网测速与 ICP 备案查找三个平台则由我们自行开发与营运。规模不大，所以你联系到的就是实际处理的人。",
+    "desc": "Kineticlinks 专注跨境网络基础架构。CDN、VPS、IDC 与公有云由我们代理上游并负责规划与集成；SSL 证书自动化、三网测速与 ICP 备案查询三个平台则由我们自行开发与营运。规模不大，所以你联系到的就是实际处理的人。",
     "stat1": "直接联系，不经工单系统",
     "stat2": "集成的 DNS 与 CDN 服务商",
-    "stat3": "自营平台：证书、测速、备案查找",
+    "stat3": "自营平台：证书、测速、备案查询",
     "stat4": "中国电信、联通、移动实测",
     "code_support": "a person, not a queue",
     "stat1_num": "24/7",
