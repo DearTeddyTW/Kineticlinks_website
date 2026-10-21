@@ -307,19 +307,19 @@
                     <p>{{ about.desc }}</p>
                     <div class="stats-grid">
                         <div class="stat-item glass-panel">
-                            <h3 class="text-gradient">99.99%</h3>
+                            <h3 class="text-gradient">{{ about.stat1_num }}</h3>
                             <p>{{ about.stat1 }}</p>
                         </div>
                         <div class="stat-item glass-panel">
-                            <h3 class="text-gradient">24/7</h3>
+                            <h3 class="text-gradient">{{ about.stat2_num }}</h3>
                             <p>{{ about.stat2 }}</p>
                         </div>
                         <div class="stat-item glass-panel">
-                            <h3 class="text-gradient">500+</h3>
+                            <h3 class="text-gradient">{{ about.stat3_num }}</h3>
                             <p>{{ about.stat3 }}</p>
                         </div>
                         <div class="stat-item glass-panel">
-                            <h3 class="text-gradient">3ms</h3>
+                            <h3 class="text-gradient">{{ about.stat4_num }}</h3>
                             <p>{{ about.stat4 }}</p>
                         </div>
                     </div>
@@ -330,9 +330,9 @@
                     <div class="tech-circle"></div>
                     <div class="code-snippet">
                         <pre><code>const kineticlinks = {
-  status: 'operational',
-  uptime: '99.99%',
-  services: ['CDN', 'VPS', 'IDC', 'Cloud'],
+  operates: ['SSL', 'Speedtest', 'ICP-Check'],
+  resells: ['CDN', 'VPS', 'IDC', 'Cloud'],
+  integrations: 17,
   support: () => '{{ about.code_support }}'
 };</code></pre>
                     </div>

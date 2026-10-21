@@ -81,7 +81,7 @@
         { "@type": "Question", "name": "接入服务需要多久时间？",
           "acceptedAnswer": { "@type": "Answer", "text": "依服务类型差异很大。CDN 通常一个工作日内可完成 DNS 切换；VPS 可即时开通；IDC 机房建置则依规模从数周到数月不等，我们会在评估阶段提供具体时程。" } },
         { "@type": "Question", "name": "有提供中文技术支持吗？",
-          "acceptedAnswer": { "@type": "Answer", "text": "有。我们的工程团队提供 24/7 中文技术支持，熟悉亚太的网络环境，不是仅有自动化工单系统。" } }
+          "acceptedAnswer": { "@type": "Answer", "text": "有。紧急状况可以直接联系到人，不是只有自动化工单系统，中文沟通没有时差问题。机房与网络由上游 NOC 全天监控，我们负责中文窗口与协调。规模不大，所以你联系到的就是实际处理的人。" } }
       ]
     }
     </script>
@@ -151,7 +151,7 @@
             <div class="hero-text glass-panel">
                 <div class="badge">Next-Gen IT Infrastructure</div>
                 <h1>引领未来的<br><span class="text-gradient">数字基础建设</span></h1>
-                <p>我们提供顶级的 CDN 内容分发、VPS 虚拟主机、IDC 建置与混合云解决方案，为您企业打造 99.99% 高可用性的数字基石。</p>
+                <p>我们提供 CDN 内容传递、VPS 虚拟主机、IDC 建置与混合云解决方案，并自营 SSL 证书自动化、中国三网测速与 ICP 备案查找平台。</p>
                 <div class="hero-actions">
                     <a href="#services" class="btn btn-primary">探索服务</a>
                     <a href="#contact" class="btn btn-secondary">专人咨询</a>
@@ -182,9 +182,9 @@
                     <h3>CDN 内容分发网络</h3>
                     <p>全球边缘节点布局，提供极致的静动态内容加速与强大的 DDoS 防护能力，确保您的服务无远弗届。</p>
                     <ul class="feature-list">
-                        <li>全球 100+ 节点</li>
+                        <li>上游节点网络涵盖全球</li>
                         <li>智能路由加速</li>
-                        <li>T 级抗 D 防护</li>
+                        <li>上游 T 级清洗能力</li>
                     </ul>
                     <span class="card-link">了解更多 →</span>
                 </a>
@@ -223,7 +223,7 @@
                     <ul class="feature-list">
                         <li>定制化架构设计</li>
                         <li>BGP 双线路部署</li>
-                        <li>24/7 驻点监控</li>
+                        <li>机房 24/7 驻点监控</li>
                     </ul>
                     <span class="card-link">了解更多 →</span>
                 </a>
@@ -316,23 +316,23 @@
             <div class="about-grid">
                 <div class="about-text">
                     <h2>以技术为本的<br>专业 IT 团队</h2>
-                    <p>Kineticlinks 成立以来，致力于为各行各业提供最稳定、高效的基础架构服务。我们的专家团队拥有丰富的实战经验，能快速响应您的需求，成为您企业数字化转型路上最可靠的后盾。</p>
+                    <p>Kineticlinks 专注跨境网络基础架构。CDN、VPS、IDC 与公有云由我们代理上游并负责规划与集成；SSL 证书自动化、三网测速与 ICP 备案查找三个平台则由我们自行开发与营运。规模不大，所以你联系到的就是实际处理的人。</p>
                     <div class="stats-grid">
                         <div class="stat-item glass-panel">
-                            <h3 class="text-gradient">99.99%</h3>
-                            <p>SLA 服务保证</p>
-                        </div>
-                        <div class="stat-item glass-panel">
                             <h3 class="text-gradient">24/7</h3>
-                            <p>全天候技术支持</p>
+                            <p>直接联系，不经工单系统</p>
                         </div>
                         <div class="stat-item glass-panel">
-                            <h3 class="text-gradient">500+</h3>
-                            <p>企业客户信赖</p>
+                            <h3 class="text-gradient">17</h3>
+                            <p>集成的 DNS 与 CDN 服务商</p>
                         </div>
                         <div class="stat-item glass-panel">
-                            <h3 class="text-gradient">3ms</h3>
-                            <p>最低网络延迟</p>
+                            <h3 class="text-gradient">3</h3>
+                            <p>自营平台：证书、测速、备案查找</p>
+                        </div>
+                        <div class="stat-item glass-panel">
+                            <h3 class="text-gradient">三网</h3>
+                            <p>中国电信、联通、移动实测</p>
                         </div>
                     </div>
                 </div>
@@ -342,10 +342,10 @@
                     <div class="tech-circle"></div>
                     <div class="code-snippet">
                         <pre><code>const kineticlinks = {
-  status: 'operational',
-  uptime: '99.99%',
-  services: ['CDN', 'VPS', 'IDC', 'Cloud'],
-  support: () => 'Always online'
+  operates: ['SSL', 'Speedtest', 'ICP-Check'],
+  resells: ['CDN', 'VPS', 'IDC', 'Cloud'],
+  integrations: 17,
+  support: () => 'a person, not a queue'
 };</code></pre>
                     </div>
                 </div>
@@ -427,7 +427,7 @@
                 </details>
                 <details class="faq-item glass-panel">
                     <summary>有提供中文技术支持吗？</summary>
-                    <p>有。我们的工程团队提供 24/7 中文技术支持，熟悉亚太的网络环境，不是仅有自动化工单系统。</p>
+                    <p>有。紧急状况可以直接联系到人，不是只有自动化工单系统，中文沟通没有时差问题。机房与网络由上游 NOC 全天监控，我们负责中文窗口与协调。规模不大，所以你联系到的就是实际处理的人。</p>
                 </details>
             </div>
         </div>

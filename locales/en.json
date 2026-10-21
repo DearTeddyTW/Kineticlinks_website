@@ -17,7 +17,7 @@
     "badge": "Next-Gen IT Infrastructure",
     "title1": "Leading the Future of",
     "title2": "Digital Infrastructure",
-    "desc": "We provide top-tier CDN, VPS hosting, IDC construction, and hybrid cloud solutions, building a 99.99% high-availability digital foundation for your business.",
+    "desc": "CDN delivery, VPS hosting, IDC build-outs and hybrid cloud, alongside three platforms we run ourselves: SSL certificate automation, China three-network speed testing, and ICP filing lookup.",
     "btn_primary": "Explore Services",
     "btn_secondary": "Consult an Expert"
   },
@@ -28,9 +28,9 @@
     "cdn": {
       "title": "Content Delivery Network (CDN)",
       "desc": "Global edge node deployment delivering extreme static and dynamic content acceleration with powerful DDoS protection.",
-      "f1": "100+ Global Nodes",
+      "f1": "Upstream global node network",
       "f2": "Smart Routing Acceleration",
-      "f3": "Terabit Anti-DDoS Protection"
+      "f3": "Upstream terabit scrubbing"
     },
     "vps": {
       "title": "Virtual Private Server (VPS)",
@@ -44,7 +44,7 @@
       "desc": "From hardware procurement and network architecture planning to data center deployment, offering one-stop custom solutions.",
       "f1": "Custom Architecture Design",
       "f2": "BGP Dual-line Deployment",
-      "f3": "24/7 On-site Monitoring"
+      "f3": "24/7 on-site facility monitoring"
     },
     "cloud": {
       "title": "Public Cloud Solutions",
@@ -84,12 +84,16 @@
   "about": {
     "title1": "Technology-Driven",
     "title2": "Professional IT Team",
-    "desc": "Since its establishment, Kineticlinks has been committed to providing the most stable and efficient infrastructure services for all industries. Our team of experts has rich practical experience and can respond quickly to your needs.",
-    "stat1": "SLA Service Guarantee",
-    "stat2": "24/7 Technical Support",
-    "stat3": "Trusted by Enterprises",
-    "stat4": "Lowest Network Latency",
-    "code_support": "Always online"
+    "desc": "Kineticlinks works on cross-border network infrastructure. CDN, VPS, IDC and public cloud are resold from upstream providers, with the planning and integration done by us; certificate automation, the three-network speed test and the ICP filing lookup are built and operated in-house. We are small, so the person you reach is the person who handles it.",
+    "stat1": "Reach a person, not a ticket queue",
+    "stat2": "DNS and CDN providers integrated",
+    "stat3": "Platforms we build and run ourselves",
+    "stat4": "Chinese networks measured directly",
+    "code_support": "a person, not a queue",
+    "stat1_num": "24/7",
+    "stat2_num": "17",
+    "stat3_num": "3",
+    "stat4_num": "3"
   },
   "contact": {
     "title1": "Ready to Upgrade Your",
@@ -113,14 +117,14 @@
   "cdn_page": {
     "seo": {
       "title": "CDN Network | Cross-Border Acceleration & DDoS Protection",
-      "description": "Fix cross-border latency and traffic spikes: 100+ global nodes, intelligent routing and terabit DDoS protection, deployable without triggering ICP filing.",
+      "description": "Cross-border latency and traffic spikes: upstream global nodes, smart routing and terabit DDoS scrubbing, deployable offshore without triggering ICP filing.",
       "keywords": "CDN acceleration, content delivery network, DDoS protection, website acceleration, edge nodes, CDN provider Asia"
     },
     "hero": {
       "badge": "Content Delivery Network",
       "title": "CDN Content Delivery Network",
       "subtitle": "Global edge acceleration for a faster, more resilient web presence",
-      "desc": "Kineticlinks CDN combines over 100 edge nodes worldwide with intelligent routing to cache static and dynamic content closer to your users, cutting latency and boosting load times. Built-in terabit-scale DDoS protection keeps your service stable through traffic spikes and malicious attacks alike.",
+      "desc": "Cache static and dynamic content at the node nearest your visitors to cut latency and load time. The upstream network we resell carries terabit-scale DDoS scrubbing, so your service stays reachable through traffic spikes and attacks.",
       "cta_primary": "Request an Acceleration Quote",
       "cta_secondary": "View Other Services"
     },
@@ -128,7 +132,7 @@
       "title": "What Is a CDN?",
       "p1": "A CDN (Content Delivery Network) is a network of edge servers distributed across multiple regions. When a user visits your site, the CDN routes the request to the node physically closest to them instead of forcing every request back to a single origin server, shortening the data path, reducing latency, and easing the load on your origin infrastructure.",
       "p2": "Kineticlinks operates over 100 edge nodes across Asia-Pacific, North America, and Europe, using intelligent routing to continuously measure latency and congestion at each node and automatically select the fastest path. Whether your users are in Taiwan, mainland China, Southeast Asia, or Western markets, they get access speeds close to a local server. How much that actually delivers depends heavily on the caching headers your origin sends — set wrongly, they leave a CDN doing almost nothing, as <a href=\"{{ lang_path }}blog/http-caching-headers/\">our guide to HTTP caching headers</a> explains.",
-      "p3": "Beyond acceleration, a CDN is also your first line of defense against distributed denial-of-service (DDoS) attacks. Kineticlinks provides terabit-scale scrubbing capacity that filters malicious traffic at the edge before it ever reaches your origin server, keeping your business running without interruption."
+      "p3": "A public service is also the first line against denial-of-service attacks. The upstream network we resell can scrub at terabit scale, filtering attack traffic at the edge before it reaches your origin."
     },
     "use_cases": {
       "title": "Use Cases",
@@ -166,8 +170,8 @@
         "desc": "Certificates issued through our SSL platform push directly to CDN nodes, removing manual upload and renewal tracking."
       },
       "item4": {
-        "title": "24/7 Dedicated Engineering Support",
-        "desc": "A team that knows network architecture monitors and responds around the clock, not just an automated ticketing system."
+        "title": "A person to reach, not a queue",
+        "desc": "Nodes and scrubbing are monitored around the clock by the upstream NOC; we handle configuration, Chinese-language contact and coordination when something goes wrong."
       }
     },
     "customers": {
@@ -197,7 +201,7 @@
       "q2": "Is CDN setup complicated? Do I need to change hosts or code?",
       "a2": "No hosting change is required. In most cases you only need to update your domain's DNS to route traffic to the CDN — your origin server and codebase stay untouched, and setup is usually completed within a business day.",
       "q3": "Does the CDN also protect against DDoS attacks?",
-      "a3": "Yes. Kineticlinks CDN includes terabit-scale scrubbing that filters malicious traffic at the edge before it reaches your origin server, with no impact on legitimate visitors.",
+      "a3": "Yes. The upstream CDN we resell scrubs at terabit scale, filtering malicious traffic at the edge before it reaches your origin. What any given plan absorbs depends on the plan, so we confirm your traffic profile first.",
       "q4": "Which regions does the CDN cover?",
       "a4": "We currently operate nodes across Asia-Pacific (including Taiwan, Hong Kong, and areas around mainland China), North America, and Europe, with coverage expanding based on customer needs and a particular focus on access quality in the Taiwan and China markets.",
       "q5": "How do I know which CDN plan I need?",
@@ -343,14 +347,14 @@
   "idc_page": {
     "seo": {
       "title": "IDC Data Center Buildout | Custom Facility Planning",
-      "description": "End-to-end data center build-out: network architecture planning, rack deployment, power and cooling design, plus ongoing operations support.",
+      "description": "End-to-end IDC build-out, from hardware procurement and network design to physical deployment, with 24/7 on-site facility monitoring.",
       "keywords": "IDC data center, data center buildout, colocation services, BGP dual-line network, enterprise data center, data center Taiwan"
     },
     "hero": {
       "badge": "IDC Data Center Buildout",
       "title": "IDC Data Center Buildout",
       "subtitle": "From planning to deployment, building enterprise-grade secure data centers",
-      "desc": "Kineticlinks provides end-to-end consulting and execution for IDC data center buildout — covering hardware procurement, network architecture planning, BGP dual-line deployment, and physical facility rollout, backed by 24/7 on-site monitoring — helping enterprises stand up a dedicated data center that matches their scale and security requirements.",
+      "desc": "Hardware procurement, network architecture, dual BGP uplinks and physical deployment, alongside 24/7 on-site monitoring by the facility, to build a data centre matched to your scale and security needs.",
       "cta_primary": "Book a Buildout Consultation",
       "cta_secondary": "View Other Services"
     },
@@ -358,7 +362,7 @@
       "title": "What Is IDC Data Center Buildout?",
       "p1": "IDC (Internet Data Center) buildout means planning and constructing a dedicated facility environment — with complete power, cooling, fire suppression, networking, and physical security infrastructure — for a company's own or outsourced server equipment. Compared to simply renting standard cabinet space in an existing facility or public cloud, a custom IDC buildout can be planned around a company's specific regulatory, data sovereignty, and performance requirements.",
       "p2": "Kineticlinks buildout projects start with upfront network architecture planning and BGP dual-line bandwidth design, helping clients evaluate the best facility location and power specification, then coordinating hardware procurement and rack cabling to ensure the overall architecture is highly available and ready for future expansion.",
-      "p3": "Once the facility is live, we continue providing 24/7 on-site monitoring and operational support, tracking power, temperature, humidity, and network status in real time, with standardized incident response procedures so your core systems run in a stable, well-controlled physical environment."
+      "p3": "Once built, monitoring and operational support continue, covering power, temperature, humidity and connectivity. The facility staffs that rota around the clock; we handle planning, integration and Chinese-language contact."
     },
     "use_cases": {
       "title": "Use Cases",
@@ -392,8 +396,8 @@
         "desc": "Multi-line network architecture sized to your business, reducing the service disruption risk of a single line failing."
       },
       "item3": {
-        "title": "24/7 On-Site Personnel",
-        "desc": "Not just remote monitoring — physical on-site staff respond in real time to facility issues."
+        "title": "On-site facility staff, around the clock",
+        "desc": "Not remote monitoring alone: the facility keeps staff on site to respond to power, climate and network faults as they happen."
       },
       "item4": {
         "title": "Built-In Expansion Planning",
@@ -427,7 +431,7 @@
       "q2": "How long does it typically take to build an IDC facility?",
       "a2": "Timelines vary with scale and complexity. From network architecture planning and equipment procurement through on-site construction, a typical project runs from several weeks to a few months, and we provide a concrete schedule during the initial assessment phase.",
       "q3": "Who handles operations after the facility is built?",
-      "a3": "Kineticlinks provides 24/7 on-site monitoring and operational support covering power, temperature, humidity, and network status in real time, and we can scope a custom managed-service arrangement based on your needs.",
+      "a3": "The facility provides 24/7 on-site monitoring and operational support covering power, climate and connectivity. We handle planning, equipment integration, and the Chinese-language contact and coordination afterwards.",
       "q4": "Can I engage you for just part of the buildout, like network architecture planning only?",
       "a4": "Yes. Our services are modular — depending on your existing in-house capability and needs, you can have Kineticlinks handle network architecture, hardware procurement, or the full buildout process, in whole or in part.",
       "q5": "What size of organization is IDC buildout suited for?",
@@ -4006,7 +4010,7 @@
     "q4": "How long does onboarding take?",
     "a4": "It varies considerably by service. CDN is usually a DNS change completed within a business day; VPS can be provisioned immediately; IDC buildout runs from several weeks to a few months depending on scale, with a concrete schedule provided during assessment.",
     "q5": "Do you offer Chinese-language technical support?",
-    "a5": "Yes. Our engineering team provides 24/7 support in Chinese and knows the Taiwan and Asia-Pacific network environment first-hand — not just an automated ticketing system."
+    "a5": "Yes. In an emergency you reach a person rather than only an automated ticket system, and Chinese-language contact has no timezone gap. Facilities and network are monitored around the clock by the upstream NOC; we handle the Chinese-language side and coordination. We are small, so the person you reach is the person who handles it."
   },
   "latest": {
     "title1": "Latest ",
