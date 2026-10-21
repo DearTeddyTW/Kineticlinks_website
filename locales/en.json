@@ -653,7 +653,7 @@
     },
     "pricing": {
       "title": "Plans and pricing",
-      "desc": "Certificates are priced per certificate. Automation comes with a subscription, and every new account gets 14 days of Pro.",
+      "desc": "Certificates are priced per certificate; automation comes with a subscription",
       "p1": {
         "name": "Basic",
         "price": "Free",

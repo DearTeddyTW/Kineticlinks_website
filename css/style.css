@@ -426,6 +426,18 @@ ul {
     min-width: 0;
 }
 
+/* 四張卡的區塊（全站 26 處）在 1136px 的容器裡會排成 3+1：四欄需要
+   4*280 + 3*2rem = 1216px，差 80px，第四張就變成孤兒。
+   改成 2x2 而不是壓成四欄：四欄時每欄只剩 260px，中文不像英文會斷字，
+   一句話會被切成五六行碎段；2x2 的 552px 約合 34 個中文字，落在正常行寬
+   內，標題也放得下一行。順帶讓區塊矮了四分之一。
+   760px 以下交給上面的 auto-fit，它本來就會給 2 欄或 1 欄，不會有孤兒。 */
+@media (min-width: 760px) {
+    .services-grid:has(> :nth-child(4):last-child) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .service-card {
     padding: 2.5rem 2rem;
     transition: var(--transition-smooth);
@@ -1566,9 +1578,23 @@ footer {
 }
 
 /* ---- 方案與價格 ---- */
+/* 方案卡是拿來互相比較的，所以只有兩種狀態：全部並排，或各佔一列。
+   繼承來的 auto-fit（下限 280px）在這裡會經過一個兩欄的中間狀態，把第三
+   張擠成孤兒——比單欄還難讀，所以直接跳過它。760px 以上三欄各約 220px，
+   夠放價格與一段說明；以下就整個疊起來。
+   上限從 900px 改成 960px：三欄加兩個 2rem 間距需要 904px，原本差 4px。
+   下面的 .price-includes 要維持同寬，否則兩塊會對不齊。
+   註：方案超過三個時，把下面的 3 改掉。 */
 .pricing-grid {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .price-card .price {
@@ -1593,7 +1619,7 @@ footer {
 }
 
 .price-includes {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 12px;
