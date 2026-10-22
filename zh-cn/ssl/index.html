@@ -134,7 +134,7 @@
       "name": "内网里不对外的服务器也能自动部署吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "可以，使用内网代理程序（Agent）：一台 Linux 机器运行 Agent 作为 hub，经 SSH 把证书安装到你列出的设备（nginx、haproxy、Apache）。私钥在 hub 上产生，只在你的内网传递，平台看不到。Agent 的安装包附有签章，可用 ssh-keygen -Y verify 验证来源。此功能需要 Enterprise 方案。"
+        "text": "可以，使用内网代理程序（Agent）：一台 Linux 机器运行 Agent 作为 hub，经 SSH 把证书安装到你列出的设备。Linux 主机（nginx、haproxy、Apache）与 Windows Server 2022 的 IIS 都已实测可用；更旧的 Windows 版本尚未验证，建议先在可测试的机器上确认。私钥在 hub 上产生，只在你的内网传递，平台看不到。Agent 的安装包附有签章，可用 ssh-keygen -Y verify 验证来源。此功能需要 Enterprise 方案。"
       }
     },
     {
@@ -317,7 +317,7 @@
                 </div>
                 <div class="service-card glass-panel interactive">
                     <h3>SaaS 与平台服务商</h3>
-                    <p>为大量客户自订域名自动核发证书，用 API 密钥接进既有流程，并以订单核准控制谁能下单。</p>
+                    <p>机房里不对外的设备，由你自己的代理程序经 SSH 安装证书，Linux 与 IIS 都支持，私钥不离开内网。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
                     <h3>有内网与地端设备的团队</h3>
@@ -472,7 +472,7 @@
                 </details>
                 <details class="faq-item glass-panel">
                     <summary>内网里不对外的服务器也能自动部署吗？</summary>
-                    <p>可以，使用内网代理程序（Agent）：一台 Linux 机器运行 Agent 作为 hub，经 SSH 把证书安装到你列出的设备（nginx、haproxy、Apache）。私钥在 hub 上产生，只在你的内网传递，平台看不到。Agent 的安装包附有签章，可用 ssh-keygen -Y verify 验证来源。此功能需要 Enterprise 方案。</p>
+                    <p>可以，使用内网代理程序（Agent）：一台 Linux 机器运行 Agent 作为 hub，经 SSH 把证书安装到你列出的设备。Linux 主机（nginx、haproxy、Apache）与 Windows Server 2022 的 IIS 都已实测可用；更旧的 Windows 版本尚未验证，建议先在可测试的机器上确认。私钥在 hub 上产生，只在你的内网传递，平台看不到。Agent 的安装包附有签章，可用 ssh-keygen -Y verify 验证来源。此功能需要 Enterprise 方案。</p>
                 </details>
                 <details class="faq-item glass-panel">
                     <summary>这张证书是谁签发的？主流浏览器都会信任吗？</summary>

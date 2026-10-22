@@ -134,7 +134,7 @@
       "name": "內網裡不對外的伺服器也能自動部署嗎？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "可以，使用內網代理程式（Agent）：一台 Linux 機器執行 Agent 作為 hub，經 SSH 把憑證安裝到你列出的設備（nginx、haproxy、Apache）。私鑰在 hub 上產生，只在你的內網傳遞，平台看不到。Agent 的安裝包附有簽章，可用 ssh-keygen -Y verify 驗證來源。此功能需要 Enterprise 方案。"
+        "text": "可以，使用內網代理程式（Agent）：一台 Linux 機器執行 Agent 作為 hub，經 SSH 把憑證安裝到你列出的設備。Linux 主機（nginx、haproxy、Apache）與 Windows Server 2022 的 IIS 都已實測可用；更舊的 Windows 版本尚未驗證，建議先在可測試的機器上確認。私鑰在 hub 上產生，只在你的內網傳遞，平台看不到。Agent 的安裝包附有簽章，可用 ssh-keygen -Y verify 驗證來源。此功能需要 Enterprise 方案。"
       }
     },
     {
@@ -317,7 +317,7 @@
                 </div>
                 <div class="service-card glass-panel interactive">
                     <h3>SaaS 與平台服務商</h3>
-                    <p>為大量客戶自訂網域自動核發憑證，用 API 金鑰接進既有流程，並以訂單核准控制誰能下單。</p>
+                    <p>機房裡不對外的設備，由你自己的代理程式經 SSH 安裝憑證，Linux 與 IIS 都支援，私鑰不離開內網。</p>
                 </div>
                 <div class="service-card glass-panel interactive">
                     <h3>有內網與地端設備的團隊</h3>
@@ -472,7 +472,7 @@
                 </details>
                 <details class="faq-item glass-panel">
                     <summary>內網裡不對外的伺服器也能自動部署嗎？</summary>
-                    <p>可以，使用內網代理程式（Agent）：一台 Linux 機器執行 Agent 作為 hub，經 SSH 把憑證安裝到你列出的設備（nginx、haproxy、Apache）。私鑰在 hub 上產生，只在你的內網傳遞，平台看不到。Agent 的安裝包附有簽章，可用 ssh-keygen -Y verify 驗證來源。此功能需要 Enterprise 方案。</p>
+                    <p>可以，使用內網代理程式（Agent）：一台 Linux 機器執行 Agent 作為 hub，經 SSH 把憑證安裝到你列出的設備。Linux 主機（nginx、haproxy、Apache）與 Windows Server 2022 的 IIS 都已實測可用；更舊的 Windows 版本尚未驗證，建議先在可測試的機器上確認。私鑰在 hub 上產生，只在你的內網傳遞，平台看不到。Agent 的安裝包附有簽章，可用 ssh-keygen -Y verify 驗證來源。此功能需要 Enterprise 方案。</p>
                 </details>
                 <details class="faq-item glass-panel">
                     <summary>這張憑證是誰簽發的？主流瀏覽器都會信任嗎？</summary>

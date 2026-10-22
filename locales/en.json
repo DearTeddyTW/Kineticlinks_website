@@ -628,7 +628,7 @@
       },
       "item3": {
         "title": "SaaS and platform operators",
-        "desc": "Issuing certificates for large numbers of custom customer domains, wired in with scoped API keys, with order approval controlling who can spend."
+        "desc": "Servers that never face the internet, reached over SSH by your own agent on Linux or IIS, with the key never leaving your network."
       },
       "item4": {
         "title": "Teams with on-premise estate",
@@ -713,7 +713,7 @@
       "q3": "Which CDNs can certificates be deployed to?",
       "a3": "Seven at present: Apeiro8 CDN, Skycloud (CDNRay), CDNetworks, Alibaba Cloud, Tencent Cloud CDN / EdgeOne, EdgeNext and CDN5. Once deployment finishes the platform connects from several edge nodes to confirm the chain and that the certificate is actually live, rather than just reporting that an API call succeeded.",
       "q4": "Can it deploy to servers that are not reachable from the internet?",
-      "a4": "Yes, using the on-premise agent. One Linux machine runs the agent as a hub and installs certificates over SSH onto the machines you list (nginx, haproxy, Apache). The key is generated on the hub and only ever travels inside your network; the platform cannot see it. Agent packages are signed, so you can verify them with ssh-keygen -Y verify. This feature requires the Enterprise plan.",
+      "a4": "Yes, using the on-premise agent. One Linux machine runs the agent as a hub and installs certificates over SSH onto the machines you list. Linux hosts (nginx, haproxy, Apache) and IIS on Windows Server 2022 are both tested; earlier Windows versions are not yet verified, so try one you can afford to break first. The key is generated on the hub and only ever travels inside your network; the platform cannot see it. Agent packages are signed, so you can verify them with ssh-keygen -Y verify. This feature requires the Enterprise plan.",
       "q5": "Who issues the certificate, and will browsers trust it?",
       "a5": "Certificates are issued by the GoGetSSL DV CA, chaining up through USERTrust to a publicly trusted Sectigo root. That root ships in the trust stores of every mainstream browser and operating system, so nobody has to install anything.",
       "q6": "How does billing work? Is there a monthly fee?",
