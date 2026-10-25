@@ -134,8 +134,11 @@
     object-fit: cover;
 }
 .p-band figcaption {
-    max-width: min(1200px, 62ch);
-    padding: 24px var(--p-frame) 0;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 24px 2rem 0;
+    box-sizing: border-box;
     font-size: var(--p-body);
     line-height: 1.6;
     color: var(--p-muted);
@@ -168,3 +171,27 @@
 @media (prefers-reduced-motion: reduce) {
     .p-page .p-enter { opacity: 1; transform: none; transition: none; }
 }
+
+/* The first screen needs one dominant thing. The hero picture is it. */
+.p-page .page-hero .container { display: grid; grid-template-columns: 1fr; gap: clamp(32px, 4vw, 56px); }
+@media (min-width: 900px) {
+    .p-page .page-hero .container { grid-template-columns: 0.75fr 1.25fr; align-items: center; }
+}
+.p-hero-pic { margin: 0; border-radius: 6px; overflow: hidden; }
+.p-hero-pic img {
+    display: block; width: 100%;
+    height: clamp(320px, 72svh, 760px);
+    object-fit: cover;
+}
+
+/* The last band's caption sat directly above the next section's heading and
+   read as a label over it. */
+.p-band { padding-bottom: clamp(32px, 4vw, 64px); }
+.p-band + .section { padding-top: clamp(48px, 6vw, 96px); }
+
+/* The caption carries a measure of its own inside the container's width. */
+.p-band figcaption > * { max-width: 62ch; }
+
+/* The "延伸閱讀" cards carry a small label above each title. That is an
+   eyebrow; the card's own position already says what the link is. */
+.p-page .related-kicker { display: none; }

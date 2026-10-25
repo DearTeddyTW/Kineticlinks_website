@@ -564,6 +564,48 @@ def build_board(translations, lang_path):
     return '\n'.join(parts)
 
 
+def build_hero_pic(page_content):
+    """The first screen's picture: the one dominant thing on it."""
+    pics = page_content.get('pics') or {}
+    img = pics.get('hero_img')
+    if not img:
+        return ''
+    return (
+        '            <figure class="p-hero-pic">\n'
+        '                <img src="/assets/%s" width="%s" height="%s" decoding="async"\n'
+        '                     alt="%s">\n'
+        '            </figure>\n'
+        % (html_escape(img), html_escape(pics.get('hero_w', '')),
+           html_escape(pics.get('hero_h', '')), html_escape(pics.get('hero_alt', ''))))
+
+
+def build_page_pics(page_content):
+    """Render the picture bands a page declares.
+
+    Each band is a real picture of the world this service works in, with a
+    caption that says what it is and why it is here. None of them is this
+    company's own equipment, and each is credited in the footer.
+    """
+    pics = page_content.get('pics')
+    if not pics:
+        return ''
+    out = []
+    n = 1
+    while ('p%d_img' % n) in pics:
+        img = pics['p%d_img' % n]
+        out.append(
+            '    <figure class="p-band">\n'
+            '        <img src="/assets/%s" width="%s" height="%s" loading="lazy"\n'
+            '             decoding="async" alt="%s">\n'
+            '        <figcaption>%s</figcaption>\n'
+            '    </figure>\n'
+            % (html_escape(img), html_escape(pics['p%d_w' % n]),
+               html_escape(pics['p%d_h' % n]), html_escape(pics['p%d_alt' % n]),
+               html_escape(pics['p%d_cap' % n])))
+        n += 1
+    return '\n'.join(out)
+
+
 def build_picker_modes(page_content):
     """The hero's live control: three modes, each carrying its own readout.
 
@@ -815,6 +857,8 @@ def build():
                              if page['template'] == 'src/index.html' else '')
             flat['home_css_v'] = asset_version('css/home.css')
             flat['pages_css_v'] = asset_version('css/pages.css')
+            flat['page_pics'] = ''
+            flat['hero_pic'] = ''
             flat['security_section'] = ''
             flat['keymodes_section'] = ''
             flat['customers_section'] = ''
@@ -866,6 +910,8 @@ def build():
                 flat['integration_tiles'] = build_integration_tiles(page_content)
                 flat['flow_edges'] = build_flow_edges(page_content)
                 flat['faq_index'] = build_faq_index(page_content)
+                flat['page_pics'] = build_page_pics(page_content)
+                flat['hero_pic'] = build_hero_pic(page_content)
                 flat['faq_items'] = build_faq_items(page_content)
                 flat['faq_jsonld'] = build_faq_jsonld(page_content)
                 flat['webapp_jsonld'] = build_webapp_jsonld(

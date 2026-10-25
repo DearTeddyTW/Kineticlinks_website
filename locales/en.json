@@ -227,6 +227,27 @@
       "l3_kicker": "Service",
       "l3_title": "Public Cloud Architecture",
       "l3_desc": "Multi-cloud and hybrid planning that bridges on-premises and public cloud resources."
+    },
+    "pics": {
+      "p1_img": "laying-the-submarine-cable-between-kurrachee-and.jpg",
+      "p1_w": "1478",
+      "p1_h": "984",
+      "p1_alt": "An 1860 engraving: two cable ships off Muscat Cove, with boats hauling the end of a submarine cable ashore",
+      "p1_cap": "Content reaches a visitor over a line somebody had to lay first. In 1860, cable ships hauled one ashore at Muscat Cove.",
+      "p2_img": "principal-ocean-cables-in-1917.jpg",
+      "p2_w": "1024",
+      "p2_h": "401",
+      "p2_alt": "A 1917 map of the world's submarine cables, routes drawn as fine lines between black landmasses",
+      "p2_cap": "Ocean cables in 1917. Where the nodes sit decides the latency; that has not changed since.",
+      "hero_img": "laying-the-submarine-cable-between-kurrachee-and.jpg",
+      "hero_w": "1478",
+      "hero_h": "984",
+      "hero_alt": "An 1860 engraving: two cable ships off Muscat Cove, with boats hauling the end of a submarine cable ashore",
+      "p3_img": "a-system-administrator-s-workstation-within-a.jpg",
+      "p3_w": "1365",
+      "p3_h": "2048",
+      "p3_alt": "A data centre aisle lined with black racks on a white raised floor",
+      "p3_cap": "A node is not a dot on a map; it is a row of machines in somebody's building."
     }
   },
   "vps_page": {
@@ -342,6 +363,27 @@
       "l3_kicker": "Service",
       "l3_title": "CDN Content Delivery Network",
       "l3_desc": "Global edge acceleration and terabit DDoS protection that pairs with this service."
+    },
+    "pics": {
+      "p1_img": "a-system-administrator-s-workstation-within-a.jpg",
+      "p1_w": "1365",
+      "p1_h": "2048",
+      "p1_alt": "A data centre aisle lined with black racks on a white raised floor",
+      "p1_cap": "A host still runs in somebody's rack. Virtualisation changes who looks after it, not that it exists.",
+      "p2_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
+      "p2_w": "1920",
+      "p2_h": "1440",
+      "p2_alt": "A telephone exchange building in brick and white concrete, antennas on its roof",
+      "p2_cap": "A telephone exchange building. A network has always needed somewhere to put the equipment.",
+      "hero_img": "a-system-administrator-s-workstation-within-a.jpg",
+      "hero_w": "1365",
+      "hero_h": "2048",
+      "hero_alt": "A data centre aisle lined with black racks on a white raised floor",
+      "p3_img": "1940s-n935-telephone-exchange.jpg",
+      "p3_w": "1920",
+      "p3_h": "1801",
+      "p3_alt": "A 1940s wooden telephone exchange, its panel a row of labelled switches",
+      "p3_cap": "Underneath a spec sheet is this: a row of switches deciding which line goes where."
     }
   },
   "idc_page": {
@@ -457,6 +499,27 @@
       "l3_kicker": "Service",
       "l3_title": "CDN Content Delivery Network",
       "l3_desc": "Global edge acceleration and terabit DDoS protection that pairs with this service."
+    },
+    "pics": {
+      "p1_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
+      "p1_w": "1920",
+      "p1_h": "1440",
+      "p1_alt": "A telephone exchange building in brick and white concrete, antennas on its roof",
+      "p1_cap": "A telephone exchange: a building put up to hold equipment. A data centre solves the same set of problems — power, cooling, who gets in.",
+      "p2_img": "a-system-administrator-s-workstation-within-a.jpg",
+      "p2_w": "1365",
+      "p2_h": "2048",
+      "p2_alt": "A data centre aisle lined with black racks on a white raised floor",
+      "p2_cap": "What it looks like once built. Power and cold air run under that white raised floor.",
+      "hero_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
+      "hero_w": "1920",
+      "hero_h": "1440",
+      "hero_alt": "A telephone exchange building in brick and white concrete, antennas on its roof",
+      "p3_img": "laying-the-submarine-cable-between-kurrachee-and.jpg",
+      "p3_w": "1478",
+      "p3_h": "984",
+      "p3_alt": "An 1860 engraving: two cable ships off Muscat Cove, with boats hauling the end of a submarine cable ashore",
+      "p3_cap": "A facility only matters if it connects outward. In 1860 that meant hauling the line ashore."
     }
   },
   "cloud_page": {
@@ -572,6 +635,27 @@
       "l3_kicker": "Platform",
       "l3_title": "SSL Certificate Automation",
       "l3_desc": "Issued certificates push automatically to CDN nodes, removing manual upload and renewal tracking."
+    },
+    "pics": {
+      "p1_img": "principal-ocean-cables-in-1917.jpg",
+      "p1_w": "1024",
+      "p1_h": "401",
+      "p1_alt": "A 1917 map of the world's submarine cables, routes drawn as fine lines between black landmasses",
+      "p1_cap": "Ocean cables in 1917. The cloud still travels these lines, so an architecture starts by deciding which end the data sits on.",
+      "p2_img": "a-system-administrator-s-workstation-within-a.jpg",
+      "p2_w": "1365",
+      "p2_h": "2048",
+      "p2_alt": "A data centre aisle lined with black racks on a white raised floor",
+      "p2_cap": "Behind a public cloud there are still racks. The difference is whose they are, and who answers when something breaks.",
+      "hero_img": "principal-ocean-cables-in-1917.jpg",
+      "hero_w": "1024",
+      "hero_h": "401",
+      "hero_alt": "A 1917 map of the world's submarine cables, routes drawn as fine lines between black landmasses",
+      "p3_img": "1940s-n935-telephone-exchange.jpg",
+      "p3_w": "1920",
+      "p3_h": "1801",
+      "p3_alt": "A 1940s wooden telephone exchange, its panel a row of labelled switches",
+      "p3_cap": "A cloud architecture comes back to this question: which path, and who decides it."
     }
   },
   "ssl_page": {
@@ -946,6 +1030,27 @@
       "l3_kicker": "Service",
       "l3_title": "Public Cloud Architecture",
       "l3_desc": "Multi-cloud and hybrid planning that bridges on-premises and public cloud resources."
+    },
+    "pics": {
+      "p1_img": "1940s-n935-telephone-exchange.jpg",
+      "p1_w": "1920",
+      "p1_h": "1801",
+      "p1_alt": "A 1940s wooden telephone exchange, its panel a row of labelled switches",
+      "p1_cap": "A 1940s telephone exchange. An operator had to know which line was clear and which was congested. A speed test answers the same question.",
+      "p2_img": "principal-ocean-cables-in-1917.jpg",
+      "p2_w": "1024",
+      "p2_h": "401",
+      "p2_alt": "A 1917 map of the world's submarine cables, routes drawn as fine lines between black landmasses",
+      "p2_cap": "Ocean cables in 1917. Cross-border latency was never an abstract number: it is the length of these lines and the way they bend.",
+      "hero_img": "1940s-n935-telephone-exchange.jpg",
+      "hero_w": "1920",
+      "hero_h": "1801",
+      "hero_alt": "A 1940s wooden telephone exchange, its panel a row of labelled switches",
+      "p3_img": "a-system-administrator-s-workstation-within-a.jpg",
+      "p3_w": "1365",
+      "p3_h": "2048",
+      "p3_alt": "A data centre aisle lined with black racks on a white raised floor",
+      "p3_cap": "At the other end of a latency figure is a physical machine, not a percentage."
     }
   },
   "icp_check_page": {
@@ -1078,6 +1183,27 @@
       "cta_text": "Need a domain that already holds a filing? We keep pre-filed domains in stock, ready to take over.",
       "cta_link": "Talk to us about a pre-filed domain",
       "cta_href": "https://t.me/kineticlinks"
+    },
+    "pics": {
+      "p1_img": "1640-map-of-formosa-taiwan-by-dutch.jpg",
+      "p1_w": "1920",
+      "p1_h": "1326",
+      "p1_alt": "A 1640 Dutch chart of Formosa and the Pescadores, rhumb lines radiating from two compass roses",
+      "p1_cap": "Formosa and the Pescadores, drawn by the Dutch in 1640. Crossing a border has always started with knowing where it is.",
+      "p2_img": "a-system-administrator-s-workstation-within-a.jpg",
+      "p2_w": "1365",
+      "p2_h": "2048",
+      "p2_alt": "A data centre aisle lined with black racks on a white raised floor",
+      "p2_cap": "A filing decides whether your domain may resolve to racks on this side of the border.",
+      "hero_img": "1640-map-of-formosa-taiwan-by-dutch.jpg",
+      "hero_w": "1920",
+      "hero_h": "1326",
+      "hero_alt": "A 1640 Dutch chart of Formosa and the Pescadores, rhumb lines radiating from two compass roses",
+      "p3_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
+      "p3_w": "1920",
+      "p3_h": "1440",
+      "p3_alt": "A telephone exchange building in brick and white concrete, antennas on its roof",
+      "p3_cap": "A filing is about which side's buildings may serve your domain."
     }
   },
   "blog": {

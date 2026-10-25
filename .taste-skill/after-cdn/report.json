@@ -1,26 +1,28 @@
 {
  "url": "cdn/index.html",
- "at": "2026-10-25T03:37:56.144Z",
+ "at": "2026-10-25T03:51:06.164Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 7,
+   "screens": 9,
    "filled": [
-    0.13,
-    0.5,
-    0.75,
-    0.62,
-    0.58,
-    0.85,
+    0.43,
+    0.57,
+    1,
+    0.54,
+    0.92,
+    0.4,
+    0.87,
+    0.78,
     0.83
    ],
    "motion": {
-    "elements": 32,
+    "elements": 35,
     "css": 4,
-    "transitions": 28,
+    "transitions": 31,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -31,10 +33,10 @@
      "h": 900
     },
     "page": {
-     "height": 5646,
-     "screens": 6.3,
-     "words": 154,
-     "img": 0,
+     "height": 7237,
+     "screens": 8,
+     "words": 159,
+     "img": 4,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -43,10 +45,15 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "laying-the-submarine-cable-between-kurrachee-and",
+      "laying-the-submarine-cable-between-kurrachee-and",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
@@ -57,7 +64,7 @@
      "text": "CDN 內容傳遞網路",
      "words": 2,
      "chars": 10,
-     "lines": 1,
+     "lines": 2,
      "size": 64,
      "vw": 4.4,
      "font": "Outfit",
@@ -69,15 +76,15 @@
      "mono": false,
      "align": "left",
      "position": "left",
-     "widthRatio": 0.52,
-     "top": 303,
+     "widthRatio": 0.28,
+     "top": 362,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
      "text": "CDN 內容傳遞網路",
      "words": 2,
-     "lines": 1,
+     "lines": 2,
      "size": 64,
      "font": "Outfit"
     },
@@ -86,7 +93,7 @@
       "text": "CDN 內容傳遞網路",
       "words": 2,
       "chars": 10,
-      "lines": 1,
+      "lines": 2,
       "size": 64,
       "vw": 4.4,
       "font": "Outfit",
@@ -98,8 +105,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.52,
-      "top": 303,
+      "widthRatio": 0.28,
+      "top": 362,
       "tag": "h1",
       "kind": "heading"
      },
@@ -120,7 +127,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 838,
+      "top": 1086,
       "tag": "h2",
       "kind": "heading"
      },
@@ -141,7 +148,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 1527,
+      "top": 3118,
       "tag": "h2",
       "kind": "heading"
      },
@@ -162,7 +169,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 2308,
+      "top": 3899,
       "tag": "h2",
       "kind": "heading"
      },
@@ -183,7 +190,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 3089,
+      "top": 4679,
       "tag": "h2",
       "kind": "heading"
      },
@@ -204,7 +211,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 3746,
+      "top": 5337,
       "tag": "h2",
       "kind": "heading"
      },
@@ -225,7 +232,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 4278,
+      "top": 5868,
       "tag": "h2",
       "kind": "heading"
      },
@@ -246,14 +253,14 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.74,
-      "top": 5020,
+      "top": 6610,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
      "count": 8,
-     "maxLines": 1,
+     "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
      "centered": 1,
@@ -264,12 +271,12 @@
      "families": [
       {
        "family": "Inter",
-       "share": 0.88,
+       "share": 0.89,
        "mono": false
       },
       {
        "family": "Outfit",
-       "share": 0.12,
+       "share": 0.11,
        "mono": false
       }
      ],
@@ -308,8 +315,8 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.31,
-     "centerShare": 0.06,
+     "upperShare": 0.3,
+     "centerShare": 0.05,
      "smallText": 0
     },
     "eyebrows": [],
@@ -325,7 +332,7 @@
      "sectionBgs": [
       {
        "color": "#0d1420",
-       "top": 918,
+       "top": 1166,
        "hsl": {
         "h": 218,
         "s": 0.42,
@@ -334,7 +341,7 @@
       },
       {
        "color": "#04060b",
-       "top": 2212,
+       "top": 3803,
        "hsl": {
         "h": 223,
         "s": 0.47,
@@ -345,15 +352,15 @@
      "textColors": [
       {
        "color": "#a0aec0",
-       "share": 0.71
+       "share": 0.68
       },
       {
        "color": "#ffffff",
-       "share": 0.17
+       "share": 0.16
       },
       {
        "color": "#8b9bb4",
-       "share": 0.09
+       "share": 0.13
       },
       {
        "color": "#00f2fe",
@@ -406,38 +413,43 @@
      "blurred": 1,
      "roundedBoxes": 22,
      "boxRadius": 6,
-     "squareMedia": 0,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
      "textShadow": 0,
      "cardRows": [
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 1683
+       "top": 3273
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 2463
+       "top": 4054
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 3244
+       "top": 4835
       },
       {
        "count": 3,
        "iconTopped": false,
        "rounded": true,
-       "top": 3902
+       "top": 5492
       }
      ]
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.34
+     }
+    ],
     "nav": {
      "links": 7,
      "fixed": true,
@@ -455,7 +467,7 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 5646,
+    "pageH": 7237,
     "margins": {
      "left": 152,
      "right": 196
@@ -484,19 +496,19 @@
       "sel": "section.page-hero",
       "tag": "section",
       "top": 126,
-      "height": 616,
+      "height": 864,
       "words": 14,
-      "media": 0,
-      "middle": 0,
+      "media": 1,
+      "middle": 65,
       "heading": {
        "text": "CDN 內容傳遞網路",
        "size": 64,
        "tag": "h1"
       },
       "left": 152,
-      "right": 651,
+      "right": 152,
       "textLeft": 152,
-      "textRight": 651,
+      "textRight": 892,
       "fullBleed": false,
       "footer": false,
       "hero": true,
@@ -506,7 +518,7 @@
      {
       "sel": "section.section.prose-section",
       "tag": "section",
-      "top": 742,
+      "top": 990,
       "height": 690,
       "words": 59,
       "media": 0,
@@ -527,10 +539,67 @@
       "pinned": false
      },
      {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 1679,
+      "height": 451,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 599,
+      "textLeft": 152,
+      "textRight": 599,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2130,
+      "height": 451,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 739,
+      "textLeft": 152,
+      "textRight": 739,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2581,
+      "height": 451,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 914,
+      "textLeft": 152,
+      "textRight": 914,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
       "sel": "section.section",
       "tag": "section",
-      "top": 1431,
-      "height": 781,
+      "top": 3032,
+      "height": 771,
       "words": 15,
       "media": 0,
       "middle": 108,
@@ -552,7 +621,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 2212,
+      "top": 3803,
       "height": 781,
       "words": 20,
       "media": 0,
@@ -575,7 +644,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 2993,
+      "top": 4583,
       "height": 754,
       "words": 13,
       "media": 0,
@@ -598,7 +667,7 @@
      {
       "sel": "section.section.related-section",
       "tag": "section",
-      "top": 3746,
+      "top": 5337,
       "height": 435,
       "words": 14,
       "media": 0,
@@ -621,7 +690,7 @@
      {
       "sel": "section.section.faq-section",
       "tag": "section",
-      "top": 4182,
+      "top": 5772,
       "height": 774,
       "words": 44,
       "media": 0,
@@ -644,7 +713,7 @@
      {
       "sel": "section.section.cta-banner-section",
       "tag": "section",
-      "top": 4956,
+      "top": 6546,
       "height": 402,
       "words": 5,
       "media": 0,
@@ -667,7 +736,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 5358,
+      "top": 6949,
       "height": 288,
       "words": 29,
       "media": 0,
@@ -693,7 +762,7 @@
      {
       "text": "CDN 內容傳遞網路",
       "size": 64,
-      "top": 303,
+      "top": 362,
       "firstScreen": true
      }
     ],
@@ -733,12 +802,12 @@
     "stage": false,
     "explains": false,
     "slivers": [],
-    "voidShare": 0.36,
+    "voidShare": 0.09,
     "voidBox": {
-     "x": 840,
+     "x": 420,
      "y": 120,
-     "w": 600,
-     "h": 780
+     "w": 1020,
+     "h": 120
     }
    },
    "app": null,
@@ -748,19 +817,21 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 6,
+   "screens": 8,
    "filled": [
-    0.44,
-    0.59,
-    0.8,
-    0.52,
-    0.91,
+    0.62,
+    0.72,
+    1,
+    0.79,
+    0.84,
+    0.54,
+    0.98,
     0.91
    ],
    "motion": {
-    "elements": 32,
+    "elements": 35,
     "css": 4,
-    "transitions": 28,
+    "transitions": 31,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -771,10 +842,10 @@
      "h": 1024
     },
     "page": {
-     "height": 5431,
-     "screens": 5.3,
-     "words": 146,
-     "img": 0,
+     "height": 7601,
+     "screens": 7.4,
+     "words": 151,
+     "img": 4,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -783,10 +854,15 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "laying-the-submarine-cable-between-kurrachee-and",
+      "laying-the-submarine-cable-between-kurrachee-and",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
@@ -860,7 +936,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 661,
+      "top": 1430,
       "tag": "h2",
       "kind": "heading"
      },
@@ -881,7 +957,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 1275,
+      "top": 3444,
       "tag": "h2",
       "kind": "heading"
      },
@@ -902,7 +978,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 2032,
+      "top": 4202,
       "tag": "h2",
       "kind": "heading"
      },
@@ -923,7 +999,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 2790,
+      "top": 4960,
       "tag": "h2",
       "kind": "heading"
      },
@@ -944,7 +1020,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 3457,
+      "top": 5627,
       "tag": "h2",
       "kind": "heading"
      },
@@ -965,7 +1041,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 4119,
+      "top": 6288,
       "tag": "h2",
       "kind": "heading"
      },
@@ -986,7 +1062,7 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.83,
-      "top": 4782,
+      "top": 6951,
       "tag": "h2",
       "kind": "heading"
      }
@@ -1004,12 +1080,12 @@
      "families": [
       {
        "family": "Inter",
-       "share": 0.88,
+       "share": 0.89,
        "mono": false
       },
       {
        "family": "Outfit",
-       "share": 0.12,
+       "share": 0.11,
        "mono": false
       }
      ],
@@ -1048,7 +1124,7 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.32,
+     "upperShare": 0.3,
      "centerShare": 0.12,
      "smallText": 0
     },
@@ -1065,7 +1141,7 @@
      "sectionBgs": [
       {
        "color": "#0d1420",
-       "top": 733,
+       "top": 1502,
        "hsl": {
         "h": 218,
         "s": 0.42,
@@ -1074,7 +1150,7 @@
       },
       {
        "color": "#04060b",
-       "top": 1968,
+       "top": 4138,
        "hsl": {
         "h": 223,
         "s": 0.47,
@@ -1085,15 +1161,15 @@
      "textColors": [
       {
        "color": "#a0aec0",
-       "share": 0.72
+       "share": 0.68
       },
       {
        "color": "#ffffff",
-       "share": 0.17
+       "share": 0.16
       },
       {
        "color": "#8b9bb4",
-       "share": 0.09
+       "share": 0.13
       },
       {
        "color": "#00f2fe",
@@ -1144,38 +1220,43 @@
      "blurred": 1,
      "roundedBoxes": 17,
      "boxRadius": 6,
-     "squareMedia": 0,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
      "textShadow": 0,
      "cardRows": [
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 1422
+       "top": 3592
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 2180
+       "top": 4350
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 2938
+       "top": 5108
       },
       {
        "count": 3,
        "iconTopped": false,
        "rounded": true,
-       "top": 3605
+       "top": 5775
       }
      ]
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.4
+     }
+    ],
     "nav": {
      "links": 1,
      "fixed": true,
@@ -1193,10 +1274,10 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 5431,
+    "pageH": 7601,
     "margins": {
      "left": 32,
-     "right": 61
+     "right": 51
     },
     "sections": [
      {
@@ -1222,9 +1303,9 @@
       "sel": "section.page-hero",
       "tag": "section",
       "top": 126,
-      "height": 471,
+      "height": 1240,
       "words": 14,
-      "media": 0,
+      "media": 1,
       "middle": 0,
       "heading": {
        "text": "CDN 內容傳遞網路",
@@ -1232,7 +1313,7 @@
        "tag": "h1"
       },
       "left": 32,
-      "right": 103,
+      "right": 32,
       "textLeft": 32,
       "textRight": 103,
       "fullBleed": false,
@@ -1244,7 +1325,7 @@
      {
       "sel": "section.section.prose-section",
       "tag": "section",
-      "top": 597,
+      "top": 1366,
       "height": 614,
       "words": 59,
       "media": 0,
@@ -1265,10 +1346,67 @@
       "pinned": false
      },
      {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 1980,
+      "height": 472,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 51,
+      "textLeft": 32,
+      "textRight": 51,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2452,
+      "height": 472,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 190,
+      "textLeft": 32,
+      "textRight": 190,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2924,
+      "height": 472,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 364,
+      "textLeft": 32,
+      "textRight": 364,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
       "sel": "section.section",
       "tag": "section",
-      "top": 1211,
-      "height": 758,
+      "top": 3396,
+      "height": 742,
       "words": 15,
       "media": 0,
       "middle": 0,
@@ -1290,7 +1428,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 1968,
+      "top": 4138,
       "height": 758,
       "words": 20,
       "media": 0,
@@ -1313,7 +1451,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 2726,
+      "top": 4896,
       "height": 731,
       "words": 13,
       "media": 0,
@@ -1336,7 +1474,7 @@
      {
       "sel": "section.section.related-section",
       "tag": "section",
-      "top": 3457,
+      "top": 5627,
       "height": 598,
       "words": 14,
       "media": 0,
@@ -1359,7 +1497,7 @@
      {
       "sel": "section.section.faq-section",
       "tag": "section",
-      "top": 4055,
+      "top": 6224,
       "height": 663,
       "words": 44,
       "media": 0,
@@ -1382,7 +1520,7 @@
      {
       "sel": "section.section.cta-banner-section",
       "tag": "section",
-      "top": 4718,
+      "top": 6887,
       "height": 363,
       "words": 5,
       "media": 0,
@@ -1405,7 +1543,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 5081,
+      "top": 7250,
       "height": 351,
       "words": 29,
       "media": 0,
@@ -1465,23 +1603,25 @@
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 10,
+   "screens": 12,
    "filled": [
-    0.31,
-    0.79,
-    0.57,
-    0.81,
+    0.38,
+    0.68,
+    0.82,
     1,
-    0.6,
-    0.61,
-    0.89,
-    0.87,
+    0.66,
+    0.77,
+    1,
+    0.63,
+    0.62,
+    0.78,
+    0.92,
     0.89
    ],
    "motion": {
-    "elements": 32,
+    "elements": 35,
     "css": 4,
-    "transitions": 28,
+    "transitions": 31,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -1492,10 +1632,10 @@
      "h": 844
     },
     "page": {
-     "height": 7902,
-     "screens": 9.4,
-     "words": 146,
-     "img": 0,
+     "height": 9837,
+     "screens": 11.7,
+     "words": 151,
+     "img": 4,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -1504,10 +1644,15 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "laying-the-submarine-cable-between-kurrachee-and",
+      "laying-the-submarine-cable-between-kurrachee-and",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
@@ -1602,7 +1747,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 788,
+      "top": 1428,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1623,7 +1768,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 1785,
+      "top": 3720,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1644,7 +1789,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 3053,
+      "top": 4989,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1665,7 +1810,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 4356,
+      "top": 6291,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1686,7 +1831,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 5482,
+      "top": 7418,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1707,7 +1852,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 6327,
+      "top": 8263,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1728,7 +1873,7 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.67,
-      "top": 7045,
+      "top": 8980,
       "tag": "h2",
       "kind": "heading"
      }
@@ -1746,12 +1891,12 @@
      "families": [
       {
        "family": "Inter",
-       "share": 0.88,
+       "share": 0.89,
        "mono": false
       },
       {
        "family": "Outfit",
-       "share": 0.12,
+       "share": 0.11,
        "mono": false
       }
      ],
@@ -1791,7 +1936,7 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.32,
+     "upperShare": 0.3,
      "centerShare": 0.12,
      "smallText": 0
     },
@@ -1808,7 +1953,7 @@
      "sectionBgs": [
       {
        "color": "#0d1420",
-       "top": 888,
+       "top": 1527,
        "hsl": {
         "h": 218,
         "s": 0.42,
@@ -1817,7 +1962,7 @@
       },
       {
        "color": "#04060b",
-       "top": 2989,
+       "top": 4925,
        "hsl": {
         "h": 223,
         "s": 0.47,
@@ -1828,15 +1973,15 @@
      "textColors": [
       {
        "color": "#a0aec0",
-       "share": 0.72
+       "share": 0.68
       },
       {
        "color": "#ffffff",
-       "share": 0.17
+       "share": 0.16
       },
       {
        "color": "#8b9bb4",
-       "share": 0.09
+       "share": 0.13
       },
       {
        "color": "#00f2fe",
@@ -1887,44 +2032,49 @@
      "blurred": 1,
      "roundedBoxes": 20,
      "boxRadius": 6,
-     "squareMedia": 0,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
      "textShadow": 0,
      "cardRows": [
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 1950
+       "top": 3886
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 3253
+       "top": 5188
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 4521
+       "top": 6457
       },
       {
        "count": 3,
        "iconTopped": false,
        "rounded": true,
-       "top": 5622
+       "top": 7558
       },
       {
        "count": 3,
        "iconTopped": false,
        "rounded": true,
-       "top": 6425
+       "top": 8361
       }
      ]
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.13
+     }
+    ],
     "nav": {
      "links": 1,
      "fixed": true,
@@ -1942,10 +2092,10 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 7902,
+    "pageH": 9837,
     "margins": {
      "left": 32,
-     "right": 37
+     "right": 34
     },
     "sections": [
      {
@@ -1971,9 +2121,9 @@
       "sel": "section.page-hero",
       "tag": "section",
       "top": 126,
-      "height": 598,
+      "height": 1238,
       "words": 14,
-      "media": 0,
+      "media": 1,
       "middle": 0,
       "heading": {
        "text": "CDN 內容傳遞網路",
@@ -1981,7 +2131,7 @@
        "tag": "h1"
       },
       "left": 32,
-      "right": 34,
+      "right": 32,
       "textLeft": 32,
       "textRight": 34,
       "fullBleed": false,
@@ -1993,7 +2143,7 @@
      {
       "sel": "section.section.prose-section",
       "tag": "section",
-      "top": 724,
+      "top": 1364,
       "height": 997,
       "words": 59,
       "media": 0,
@@ -2014,10 +2164,67 @@
       "pinned": false
      },
      {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2360,
+      "height": 455,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 41,
+      "textLeft": 32,
+      "textRight": 41,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2815,
+      "height": 429,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 61,
+      "textLeft": 32,
+      "textRight": 61,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3243,
+      "height": 429,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
       "sel": "section.section",
       "tag": "section",
-      "top": 1721,
-      "height": 1269,
+      "top": 3672,
+      "height": 1253,
       "words": 15,
       "media": 0,
       "middle": 0,
@@ -2039,7 +2246,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 2989,
+      "top": 4925,
       "height": 1302,
       "words": 20,
       "media": 0,
@@ -2062,7 +2269,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 4292,
+      "top": 6227,
       "height": 1191,
       "words": 13,
       "media": 0,
@@ -2085,7 +2292,7 @@
      {
       "sel": "section.section.related-section",
       "tag": "section",
-      "top": 5482,
+      "top": 7418,
       "height": 781,
       "words": 14,
       "media": 0,
@@ -2108,7 +2315,7 @@
      {
       "sel": "section.section.faq-section",
       "tag": "section",
-      "top": 6263,
+      "top": 8199,
       "height": 718,
       "words": 43,
       "media": 0,
@@ -2131,7 +2338,7 @@
      {
       "sel": "section.section.cta-banner-section",
       "tag": "section",
-      "top": 6981,
+      "top": 8916,
       "height": 414,
       "words": 5,
       "media": 0,
@@ -2154,7 +2361,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 7395,
+      "top": 9330,
       "height": 507,
       "words": 29,
       "media": 0,
@@ -2220,25 +2427,11 @@
    ]
   },
   {
-   "level": "FAIL",
-   "id": "few-pictures",
-   "width": 1440,
-   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
-   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
-  },
-  {
    "level": "WARN",
    "id": "no-footage",
    "width": 1440,
    "message": "No video anywhere on the page.",
    "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
-  },
-  {
-   "level": "FAIL",
-   "id": "focal-point",
-   "width": 1440,
-   "message": "The first screen has no dominant element: the largest type is 64px (4.4vw) and no single picture holds a third of the viewport.",
-   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw."
   },
   {
    "level": "WARN",
@@ -2267,13 +2460,6 @@
     768,
     390
    ]
-  },
-  {
-   "level": "WARN",
-   "id": "hero-void",
-   "width": 1440,
-   "message": "36% of the first screen is one empty block (600×780px at 840,120).",
-   "fix": "Place the void on purpose or fill it: move the picture, the film or one fact into it, grow the headline to meet it, or shrink the screen to its content. A void reads as placed only when something closes it on the far side and it is the screen's one rest."
   }
  ],
  "images": [
@@ -2283,7 +2469,8 @@
    "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-cdn/desktop-fold.jpg",
    "pages": [
     "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-cdn/desktop-page-01.jpg",
-    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-cdn/desktop-page-02.jpg"
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-cdn/desktop-page-02.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-cdn/desktop-page-03.jpg"
    ],
    "film": []
   },
@@ -2292,7 +2479,8 @@
    "width": 768,
    "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-cdn/tablet-fold.jpg",
    "pages": [
-    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-cdn/tablet-page-01.jpg"
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-cdn/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-cdn/tablet-page-02.jpg"
    ],
    "film": []
   },

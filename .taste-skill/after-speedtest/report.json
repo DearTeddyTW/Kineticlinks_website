@@ -1,26 +1,28 @@
 {
  "url": "speedtest/index.html",
- "at": "2026-10-25T03:38:23.113Z",
+ "at": "2026-10-25T03:45:37.652Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 7,
+   "screens": 9,
    "filled": [
-    0.13,
-    0.39,
-    0.78,
-    0.62,
-    0.63,
-    1,
+    0.28,
+    0.59,
+    0.93,
+    0.65,
+    0.88,
+    0.6,
+    0.7,
+    0.95,
     0.83
    ],
    "motion": {
-    "elements": 36,
+    "elements": 39,
     "css": 4,
-    "transitions": 32,
+    "transitions": 35,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -31,10 +33,10 @@
      "h": 900
     },
     "page": {
-     "height": 6081,
-     "screens": 6.8,
-     "words": 142,
-     "img": 0,
+     "height": 7729,
+     "screens": 8.6,
+     "words": 147,
+     "img": 4,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -43,10 +45,15 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "1940s-n935-telephone-exchange.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
@@ -69,7 +76,7 @@
      "mono": false,
      "align": "left",
      "position": "left",
-     "widthRatio": 0.52,
+     "widthRatio": 0.39,
      "top": 303,
      "tag": "h1",
      "kind": "heading"
@@ -98,7 +105,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.52,
+      "widthRatio": 0.39,
       "top": 303,
       "tag": "h1",
       "kind": "heading"
@@ -120,7 +127,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 940,
+      "top": 1354,
       "tag": "h2",
       "kind": "heading"
      },
@@ -141,7 +148,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 1600,
+      "top": 3248,
       "tag": "h2",
       "kind": "heading"
      },
@@ -162,7 +169,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 2381,
+      "top": 4029,
       "tag": "h2",
       "kind": "heading"
      },
@@ -183,7 +190,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 3161,
+      "top": 4809,
       "tag": "h2",
       "kind": "heading"
      },
@@ -204,7 +211,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 3792,
+      "top": 5440,
       "tag": "h2",
       "kind": "heading"
      },
@@ -225,7 +232,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.41,
-      "top": 4323,
+      "top": 5971,
       "tag": "h2",
       "kind": "heading"
      },
@@ -246,7 +253,7 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.74,
-      "top": 5454,
+      "top": 7102,
       "tag": "h2",
       "kind": "heading"
      }
@@ -264,12 +271,12 @@
      "families": [
       {
        "family": "Inter",
-       "share": 0.89,
+       "share": 0.9,
        "mono": false
       },
       {
        "family": "Outfit",
-       "share": 0.11,
+       "share": 0.1,
        "mono": false
       }
      ],
@@ -308,7 +315,7 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.28,
+     "upperShare": 0.27,
      "centerShare": 0.05,
      "smallText": 0
     },
@@ -325,7 +332,7 @@
      "sectionBgs": [
       {
        "color": "#0d1420",
-       "top": 1020,
+       "top": 1434,
        "hsl": {
         "h": 218,
         "s": 0.42,
@@ -334,7 +341,7 @@
       },
       {
        "color": "#04060b",
-       "top": 2285,
+       "top": 3933,
        "hsl": {
         "h": 223,
         "s": 0.47,
@@ -345,15 +352,15 @@
      "textColors": [
       {
        "color": "#a0aec0",
-       "share": 0.71
+       "share": 0.68
       },
       {
        "color": "#ffffff",
-       "share": 0.18
+       "share": 0.17
       },
       {
        "color": "#8b9bb4",
-       "share": 0.08
+       "share": 0.12
       },
       {
        "color": "#00f2fe",
@@ -361,7 +368,7 @@
       },
       {
        "color": "#04121a",
-       "share": 0.01
+       "share": 0
       }
      ],
      "button": {
@@ -406,38 +413,43 @@
      "blurred": 1,
      "roundedBoxes": 26,
      "boxRadius": 6,
-     "squareMedia": 0,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
      "textShadow": 0,
      "cardRows": [
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 1755
+       "top": 3403
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 2536
+       "top": 4184
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 3317
+       "top": 4964
       },
       {
        "count": 3,
        "iconTopped": false,
        "rounded": true,
-       "top": 3947
+       "top": 5595
       }
      ]
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.16
+     }
+    ],
     "nav": {
      "links": 7,
      "fixed": true,
@@ -455,9 +467,9 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 6081,
+    "pageH": 7729,
     "margins": {
-     "left": 152,
+     "left": 32,
      "right": 196
     },
     "sections": [
@@ -484,9 +496,9 @@
       "sel": "section.page-hero",
       "tag": "section",
       "top": 126,
-      "height": 718,
+      "height": 1132,
       "words": 18,
-      "media": 0,
+      "media": 1,
       "middle": 0,
       "heading": {
        "text": "免費網頁測速與中國三網延遲分析工具",
@@ -494,10 +506,10 @@
        "tag": "h1"
       },
       "left": 152,
-      "right": 543,
+      "right": 724,
       "textLeft": 152,
-      "textRight": 543,
-      "fullBleed": false,
+      "textRight": 724,
+      "fullBleed": true,
       "footer": false,
       "hero": true,
       "continues": true,
@@ -506,7 +518,7 @@
      {
       "sel": "section.section.prose-section",
       "tag": "section",
-      "top": 844,
+      "top": 1258,
       "height": 660,
       "words": 35,
       "media": 0,
@@ -527,9 +539,66 @@
       "pinned": false
      },
      {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 1918,
+      "height": 420,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 820,
+      "textLeft": 32,
+      "textRight": 820,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2338,
+      "height": 420,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 826,
+      "textLeft": 32,
+      "textRight": 826,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2759,
+      "height": 393,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 1051,
+      "textLeft": 32,
+      "textRight": 1051,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
       "sel": "section.section",
       "tag": "section",
-      "top": 1504,
+      "top": 3152,
       "height": 781,
       "words": 16,
       "media": 0,
@@ -552,7 +621,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 2285,
+      "top": 3933,
       "height": 781,
       "words": 20,
       "media": 0,
@@ -575,7 +644,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 3065,
+      "top": 4713,
       "height": 726,
       "words": 11,
       "media": 0,
@@ -598,7 +667,7 @@
      {
       "sel": "section.section.related-section",
       "tag": "section",
-      "top": 3792,
+      "top": 5440,
       "height": 435,
       "words": 17,
       "media": 0,
@@ -621,7 +690,7 @@
      {
       "sel": "section.section.faq-section",
       "tag": "section",
-      "top": 4227,
+      "top": 5875,
       "height": 1163,
       "words": 74,
       "media": 0,
@@ -644,7 +713,7 @@
      {
       "sel": "section.section.cta-banner-section",
       "tag": "section",
-      "top": 5390,
+      "top": 7038,
       "height": 402,
       "words": 5,
       "media": 0,
@@ -667,7 +736,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 5793,
+      "top": 7441,
       "height": 288,
       "words": 29,
       "media": 0,
@@ -735,10 +804,10 @@
     "slivers": [],
     "voidShare": 0.33,
     "voidBox": {
-     "x": 900,
+     "x": 720,
      "y": 120,
-     "w": 540,
-     "h": 780
+     "w": 720,
+     "h": 600
     }
    },
    "app": null,
@@ -748,19 +817,21 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 6,
+   "screens": 8,
    "filled": [
-    0.49,
-    0.65,
-    0.83,
-    0.61,
-    0.99,
+    0.68,
+    0.71,
+    1,
+    0.76,
+    0.71,
+    0.64,
+    0.97,
     0.91
    ],
    "motion": {
-    "elements": 36,
+    "elements": 39,
     "css": 4,
-    "transitions": 32,
+    "transitions": 35,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -771,10 +842,10 @@
      "h": 1024
     },
     "page": {
-     "height": 5777,
-     "screens": 5.6,
-     "words": 134,
-     "img": 0,
+     "height": 7595,
+     "screens": 7.4,
+     "words": 139,
+     "img": 4,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -783,10 +854,15 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "1940s-n935-telephone-exchange.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
@@ -860,7 +936,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 746,
+      "top": 1217,
       "tag": "h2",
       "kind": "heading"
      },
@@ -881,7 +957,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 1330,
+      "top": 3149,
       "tag": "h2",
       "kind": "heading"
      },
@@ -902,7 +978,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 2034,
+      "top": 3853,
       "tag": "h2",
       "kind": "heading"
      },
@@ -923,7 +999,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 2765,
+      "top": 4584,
       "tag": "h2",
       "kind": "heading"
      },
@@ -944,7 +1020,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 3405,
+      "top": 5223,
       "tag": "h2",
       "kind": "heading"
      },
@@ -965,7 +1041,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 4066,
+      "top": 5885,
       "tag": "h2",
       "kind": "heading"
      },
@@ -986,7 +1062,7 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.83,
-      "top": 5087,
+      "top": 6905,
       "tag": "h2",
       "kind": "heading"
      }
@@ -1004,12 +1080,12 @@
      "families": [
       {
        "family": "Inter",
-       "share": 0.89,
+       "share": 0.9,
        "mono": false
       },
       {
        "family": "Outfit",
-       "share": 0.11,
+       "share": 0.1,
        "mono": false
       }
      ],
@@ -1048,11 +1124,22 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.29,
-     "centerShare": 0.11,
+     "upperShare": 0.27,
+     "centerShare": 0.1,
      "smallText": 0
     },
-    "eyebrows": [],
+    "eyebrows": [
+     {
+      "text": "延遲的另一端是實體的機器，不是一個百分比。",
+      "above": "適用場景",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 16.9,
+      "top": 3034
+     }
+    ],
     "numbered": [],
     "color": {
      "bodyBg": "#070b14",
@@ -1065,7 +1152,7 @@
      "sectionBgs": [
       {
        "color": "#0d1420",
-       "top": 819,
+       "top": 1290,
        "hsl": {
         "h": 218,
         "s": 0.42,
@@ -1074,7 +1161,7 @@
       },
       {
        "color": "#04060b",
-       "top": 1970,
+       "top": 3789,
        "hsl": {
         "h": 223,
         "s": 0.47,
@@ -1085,15 +1172,15 @@
      "textColors": [
       {
        "color": "#a0aec0",
-       "share": 0.71
+       "share": 0.68
       },
       {
        "color": "#ffffff",
-       "share": 0.18
+       "share": 0.17
       },
       {
        "color": "#8b9bb4",
-       "share": 0.08
+       "share": 0.12
       },
       {
        "color": "#00f2fe",
@@ -1101,7 +1188,7 @@
       },
       {
        "color": "#04121a",
-       "share": 0.01
+       "share": 0
       }
      ],
      "button": {
@@ -1144,38 +1231,43 @@
      "blurred": 1,
      "roundedBoxes": 17,
      "boxRadius": 6,
-     "squareMedia": 0,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
      "textShadow": 0,
      "cardRows": [
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 1478
+       "top": 3297
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 2182
+       "top": 4001
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 2913
+       "top": 4731
       },
       {
        "count": 3,
        "iconTopped": false,
        "rounded": true,
-       "top": 3553
+       "top": 5371
       }
      ]
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.38
+     }
+    ],
     "nav": {
      "links": 1,
      "fixed": true,
@@ -1193,9 +1285,9 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 5777,
+    "pageH": 7595,
     "margins": {
-     "left": 32,
+     "left": 17,
      "right": 61
     },
     "sections": [
@@ -1222,9 +1314,9 @@
       "sel": "section.page-hero",
       "tag": "section",
       "top": 126,
-      "height": 556,
+      "height": 1027,
       "words": 18,
-      "media": 0,
+      "media": 1,
       "middle": 0,
       "heading": {
        "text": "免費網頁測速與中國三網延遲分析工具",
@@ -1235,7 +1327,7 @@
       "right": 99,
       "textLeft": 32,
       "textRight": 99,
-      "fullBleed": false,
+      "fullBleed": true,
       "footer": false,
       "hero": true,
       "continues": true,
@@ -1244,7 +1336,7 @@
      {
       "sel": "section.section.prose-section",
       "tag": "section",
-      "top": 682,
+      "top": 1153,
       "height": 584,
       "words": 35,
       "media": 0,
@@ -1265,9 +1357,66 @@
       "pinned": false
      },
      {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 1738,
+      "height": 467,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 17,
+      "right": 133,
+      "textLeft": 17,
+      "textRight": 133,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2205,
+      "height": 440,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 17,
+      "right": 138,
+      "textLeft": 17,
+      "textRight": 138,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2645,
+      "height": 440,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 17,
+      "right": 396,
+      "textLeft": 17,
+      "textRight": 396,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
       "sel": "section.section",
       "tag": "section",
-      "top": 1266,
+      "top": 3085,
       "height": 704,
       "words": 16,
       "media": 0,
@@ -1290,7 +1439,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 1970,
+      "top": 3789,
       "height": 731,
       "words": 20,
       "media": 0,
@@ -1313,7 +1462,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 2701,
+      "top": 4520,
       "height": 704,
       "words": 11,
       "media": 0,
@@ -1336,7 +1485,7 @@
      {
       "sel": "section.section.related-section",
       "tag": "section",
-      "top": 3405,
+      "top": 5223,
       "height": 598,
       "words": 17,
       "media": 0,
@@ -1359,7 +1508,7 @@
      {
       "sel": "section.section.faq-section",
       "tag": "section",
-      "top": 4002,
+      "top": 5821,
       "height": 1020,
       "words": 67,
       "media": 0,
@@ -1382,7 +1531,7 @@
      {
       "sel": "section.section.cta-banner-section",
       "tag": "section",
-      "top": 5023,
+      "top": 6841,
       "height": 404,
       "words": 5,
       "media": 0,
@@ -1405,7 +1554,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 5426,
+      "top": 7245,
       "height": 351,
       "words": 29,
       "media": 0,
@@ -1465,23 +1614,25 @@
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 10,
+   "screens": 12,
    "filled": [
-    0.38,
-    0.68,
-    0.62,
-    0.9,
-    0.84,
-    0.68,
-    0.66,
+    0.45,
+    0.71,
+    0.82,
+    0.88,
+    0.79,
+    0.92,
+    0.78,
+    0.79,
+    0.69,
     1,
     0.86,
     0.89
    ],
    "motion": {
-    "elements": 36,
+    "elements": 39,
     "css": 4,
-    "transitions": 32,
+    "transitions": 35,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -1492,10 +1643,10 @@
      "h": 844
     },
     "page": {
-     "height": 8041,
-     "screens": 9.5,
-     "words": 134,
-     "img": 0,
+     "height": 9593,
+     "screens": 11.4,
+     "words": 139,
+     "img": 4,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -1504,10 +1655,15 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "1940s-n935-telephone-exchange.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
@@ -1602,7 +1758,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 876,
+      "top": 1264,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1623,7 +1779,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 1725,
+      "top": 3277,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1644,7 +1800,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 2890,
+      "top": 4442,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1665,7 +1821,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 4114,
+      "top": 5667,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1686,7 +1842,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 5189,
+      "top": 6741,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1707,7 +1863,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 6034,
+      "top": 7586,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1728,7 +1884,7 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.67,
-      "top": 7150,
+      "top": 8702,
       "tag": "h2",
       "kind": "heading"
      }
@@ -1746,12 +1902,12 @@
      "families": [
       {
        "family": "Inter",
-       "share": 0.89,
+       "share": 0.9,
        "mono": false
       },
       {
        "family": "Outfit",
-       "share": 0.11,
+       "share": 0.1,
        "mono": false
       }
      ],
@@ -1791,8 +1947,8 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.29,
-     "centerShare": 0.11,
+     "upperShare": 0.27,
+     "centerShare": 0.1,
      "smallText": 0
     },
     "eyebrows": [],
@@ -1808,7 +1964,7 @@
      "sectionBgs": [
       {
        "color": "#0d1420",
-       "top": 942,
+       "top": 1330,
        "hsl": {
         "h": 218,
         "s": 0.42,
@@ -1817,7 +1973,7 @@
       },
       {
        "color": "#04060b",
-       "top": 2826,
+       "top": 4378,
        "hsl": {
         "h": 223,
         "s": 0.47,
@@ -1828,15 +1984,15 @@
      "textColors": [
       {
        "color": "#a0aec0",
-       "share": 0.71
+       "share": 0.68
       },
       {
        "color": "#ffffff",
-       "share": 0.18
+       "share": 0.17
       },
       {
        "color": "#8b9bb4",
-       "share": 0.08
+       "share": 0.12
       },
       {
        "color": "#00f2fe",
@@ -1844,7 +2000,7 @@
       },
       {
        "color": "#04121a",
-       "share": 0.01
+       "share": 0
       }
      ],
      "button": {
@@ -1887,40 +2043,40 @@
      "blurred": 1,
      "roundedBoxes": 22,
      "boxRadius": 6,
-     "squareMedia": 0,
-     "roundedMedia": 0,
-     "mediaRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
      "textShadow": 0,
      "cardRows": [
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 1891
+       "top": 3443
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 3090
+       "top": 4642
       },
       {
        "count": 4,
        "iconTopped": false,
        "rounded": true,
-       "top": 4254
+       "top": 5806
       },
       {
        "count": 3,
        "iconTopped": false,
        "rounded": true,
-       "top": 5329
+       "top": 6881
       },
       {
        "count": 5,
        "iconTopped": false,
        "rounded": true,
-       "top": 6221
+       "top": 7774
       }
      ]
     },
@@ -1942,10 +2098,10 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 8041,
+    "pageH": 9593,
     "margins": {
-     "left": 32,
-     "right": 34
+     "left": 16,
+     "right": 33
     },
     "sections": [
      {
@@ -1971,9 +2127,9 @@
       "sel": "section.page-hero",
       "tag": "section",
       "top": 148,
-      "height": 664,
+      "height": 1052,
       "words": 18,
-      "media": 0,
+      "media": 1,
       "middle": 0,
       "heading": {
        "text": "免費網頁測速與中國三網延遲分析工具",
@@ -1984,7 +2140,7 @@
       "right": 34,
       "textLeft": 32,
       "textRight": 34,
-      "fullBleed": false,
+      "fullBleed": true,
       "footer": false,
       "hero": true,
       "continues": true,
@@ -1993,7 +2149,7 @@
      {
       "sel": "section.section.prose-section",
       "tag": "section",
-      "top": 812,
+      "top": 1200,
       "height": 849,
       "words": 35,
       "media": 0,
@@ -2014,9 +2170,66 @@
       "pinned": false
      },
      {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2049,
+      "height": 397,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 17,
+      "textLeft": 16,
+      "textRight": 17,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2446,
+      "height": 397,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 29,
+      "textLeft": 16,
+      "textRight": 29,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2843,
+      "height": 371,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 33,
+      "textLeft": 16,
+      "textRight": 33,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
       "sel": "section.section",
       "tag": "section",
-      "top": 1661,
+      "top": 3213,
       "height": 1165,
       "words": 16,
       "media": 0,
@@ -2039,7 +2252,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 2826,
+      "top": 4378,
       "height": 1225,
       "words": 20,
       "media": 0,
@@ -2062,7 +2275,7 @@
      {
       "sel": "section.section",
       "tag": "section",
-      "top": 4050,
+      "top": 5603,
       "height": 1139,
       "words": 11,
       "media": 0,
@@ -2085,7 +2298,7 @@
      {
       "sel": "section.section.related-section",
       "tag": "section",
-      "top": 5189,
+      "top": 6741,
       "height": 781,
       "words": 17,
       "media": 0,
@@ -2108,7 +2321,7 @@
      {
       "sel": "section.section.faq-section",
       "tag": "section",
-      "top": 5970,
+      "top": 7522,
       "height": 1116,
       "words": 56,
       "media": 0,
@@ -2131,7 +2344,7 @@
      {
       "sel": "section.section.cta-banner-section",
       "tag": "section",
-      "top": 7086,
+      "top": 8638,
       "height": 447,
       "words": 5,
       "media": 0,
@@ -2154,7 +2367,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 7533,
+      "top": 9086,
       "height": 507,
       "words": 29,
       "media": 0,
@@ -2220,13 +2433,6 @@
    ]
   },
   {
-   "level": "FAIL",
-   "id": "few-pictures",
-   "width": 1440,
-   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
-   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
-  },
-  {
    "level": "WARN",
    "id": "no-footage",
    "width": 1440,
@@ -2255,11 +2461,11 @@
    "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
   },
   {
-   "level": "WARN",
+   "level": "FAIL",
    "id": "off-centre",
    "width": 1440,
-   "message": "The margins differ: 152px on the left, 196px on the right, at 1440px.",
-   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "message": "The page sits off-centre: its content comes to 32px from the left edge but only to 196px from the right, at 1440px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure).",
    "alsoAt": [
     768
    ]
@@ -2268,8 +2474,15 @@
    "level": "WARN",
    "id": "hero-void",
    "width": 1440,
-   "message": "33% of the first screen is one empty block (540×780px at 900,120).",
+   "message": "33% of the first screen is one empty block (720×600px at 720,120).",
    "fix": "Place the void on purpose or fill it: move the picture, the film or one fact into it, grow the headline to meet it, or shrink the screen to its content. A void reads as placed only when something closes it on the far side and it is the screen's one rest."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 768,
+   "message": "1 eyebrow/kicker label(s) above headings: \"延遲的另一端是實體的機器，不是一個百分比。\" above \"適用場景\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence."
   },
   {
    "level": "FAIL",
@@ -2277,6 +2490,13 @@
    "width": 390,
    "message": "1 headline(s) wrap past two lines at 390px: \"想掌握您的服務在中國三網的真實連線表現嗎？\" → 3 lines (1 words, 28.3px)",
    "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 390,
+   "message": "The margins differ: 16px on the left, 33px on the right, at 390px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
   }
  ],
  "images": [
@@ -2286,7 +2506,8 @@
    "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-speedtest/desktop-fold.jpg",
    "pages": [
     "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-speedtest/desktop-page-01.jpg",
-    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-speedtest/desktop-page-02.jpg"
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-speedtest/desktop-page-02.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-speedtest/desktop-page-03.jpg"
    ],
    "film": []
   },
@@ -2295,7 +2516,8 @@
    "width": 768,
    "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-speedtest/tablet-fold.jpg",
    "pages": [
-    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-speedtest/tablet-page-01.jpg"
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-speedtest/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/after-speedtest/tablet-page-02.jpg"
    ],
    "film": []
   },
