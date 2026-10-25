@@ -414,3 +414,26 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
     }, { rootMargin: '0px 0px -10% 0px' });
     parts.forEach((el) => io.observe(el));
 })();
+
+/* Arriving with a hash from another page.
+   The browser's own jump on load is unreliable here: html carries
+   scroll-behavior: smooth, and a smooth scroll started while the page is
+   still settling gets cancelled, which leaves the visitor at the top after
+   clicking "服務項目" from a service page. Do the jump explicitly once the
+   page has loaded, offset by the fixed bar, the same way the click handler
+   on this page does it. */
+(function () {
+    const jump = () => {
+        const id = location.hash.slice(1);
+        if (!id) return;
+        let target;
+        try { target = document.getElementById(decodeURIComponent(id)); } catch (e) { return; }
+        if (!target || window.scrollY > 4) return;   // the visitor already moved
+        const bar = document.querySelector('.navbar');
+        const offset = bar ? bar.offsetHeight : 0;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'auto' });
+    };
+    if (document.readyState === 'complete') jump();
+    else window.addEventListener('load', jump);
+})();
