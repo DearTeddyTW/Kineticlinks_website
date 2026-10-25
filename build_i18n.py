@@ -814,6 +814,7 @@ def build():
             flat['board'] = (build_board(translations, lang['lang_path'])
                              if page['template'] == 'src/index.html' else '')
             flat['home_css_v'] = asset_version('css/home.css')
+            flat['pages_css_v'] = asset_version('css/pages.css')
             flat['security_section'] = ''
             flat['keymodes_section'] = ''
             flat['customers_section'] = ''

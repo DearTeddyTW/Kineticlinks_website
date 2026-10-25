@@ -1,0 +1,170 @@
+/* The service and platform pages, brought onto the system the home page and
+   /ssl/ now set: one ground, one ink, one flat action colour, surfaces
+   separated by a tone step instead of a border, a shadow, or a blur.
+   This is a restyle — the layout and the content stay as they are. */
+
+.p-page {
+    --p-bg:     #070b14;
+    --p-tile:   #0d1420;
+    --p-tile-2: #121b2b;
+    --p-ink:    #ffffff;
+    --p-muted:  #8b9bb4;
+    --p-accent: #00f2fe;
+    --p-accent-ink: #04121a;
+
+    --p-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+    --p-body:  clamp(1rem, 0.97rem + 0.18vw, 1.0625rem);
+    --p-lead:  clamp(1.125rem, 1.03rem + 0.45vw, 1.375rem);
+    --p-head:  clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+    --p-disp:  clamp(2.25rem, 1.2rem + 4.2vw, 4rem);
+
+    --p-frame: clamp(16px, 2.2vw, 32px);
+    background: var(--p-bg);
+    color: var(--p-ink);
+}
+
+/* --- the kit comes off --- */
+
+.p-page .glass-panel,
+.p-page .service-card,
+.p-page .price-card,
+.p-page .price-includes,
+.p-page .faq-item,
+.p-page .article-card,
+.p-page .stat-item,
+.p-page .contact-card,
+.p-page .info-item,
+.p-page .prose {
+    background: var(--p-tile);
+    border: 0;
+    box-shadow: none;  /* taste-skill-ignore: removing the kit's shadow */
+    backdrop-filter: none;  /* taste-skill-ignore: removing the kit's glass */
+    -webkit-backdrop-filter: none;
+    border-radius: 6px;
+}
+
+.p-page .btn-primary {
+    background: var(--p-accent);
+    color: var(--p-accent-ink);
+    box-shadow: none;  /* taste-skill-ignore: removing the kit's glow */
+    border: 0;
+    border-radius: 2px;
+}
+.p-page .btn-primary:hover { background: #5ef7ff; }
+.p-page .btn-secondary,
+.p-page .btn-outline {
+    background: var(--p-tile-2);
+    color: var(--p-ink);
+    border: 0;
+    border-radius: 2px;
+}
+.p-page .btn-secondary:hover,
+.p-page .btn-outline:hover { background: #162033; }
+
+.p-page .text-gradient {
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: currentColor;
+    color: var(--p-accent);
+}
+
+.p-page .tech-circle { display: none; }
+.p-page .article-card-tag {
+    background: none; border: 0; padding: 0;
+    color: var(--p-accent); font-size: var(--p-small);
+}
+.p-page footer,
+.p-page .footer-bottom,
+.p-page .contact-info { border-top: 0; border-right: 0; }
+.p-page .footer-bottom { padding-top: 28px; }
+
+/* --- the frame: one pair of margins, headings on the page's left edge --- */
+
+.p-page .section-header { text-align: left; max-width: 58ch; margin-inline: 0; }
+.p-page .page-hero-content { background: transparent; padding-inline: 0; }
+
+/* --- the first screen gets something to lead with --- */
+
+.p-page .page-hero { padding-block: clamp(72px, 9vw, 150px) clamp(48px, 6vw, 96px); }
+.p-page .page-hero h1 {
+    font-size: var(--p-disp);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    max-width: 18ch;
+}
+.p-page .page-hero-subtitle {
+    font-size: var(--p-lead);
+    line-height: 1.45;
+    color: var(--p-accent);
+    max-width: 46ch;
+}
+.p-page .page-hero-content > p:not(.page-hero-subtitle) {
+    font-size: var(--p-body);
+    line-height: 1.7;
+    color: var(--p-muted);
+    max-width: 60ch;
+}
+
+/* --- five steps, not eleven --- */
+
+.p-page h2 { font-size: var(--p-head); font-weight: 500; letter-spacing: -0.03em; }
+.p-page h3 { font-size: var(--p-lead); font-weight: 500; }
+.p-page p,
+.p-page li,
+.p-page .btn { font-size: var(--p-body); }
+.p-page .section-header p { font-size: var(--p-body); color: var(--p-muted); }
+.p-page .prose p { max-width: 68ch; line-height: 1.75; }
+
+/* --- four cards in a row leave an orphan; two by two does not --- */
+
+@media (min-width: 760px) {
+    .p-page .services-grid:has(> :nth-child(4):last-child) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- a picture band, where a page carries one --- */
+
+.p-band { margin: 0; background: var(--p-tile); }
+.p-band img {
+    display: block; width: 100%;
+    height: clamp(240px, 38svh, 420px);
+    object-fit: cover;
+}
+.p-band figcaption {
+    max-width: min(1200px, 62ch);
+    padding: 24px var(--p-frame) 0;
+    font-size: var(--p-body);
+    line-height: 1.6;
+    color: var(--p-muted);
+}
+.p-page .credits { font-size: var(--p-small); color: var(--p-muted); line-height: 1.6; margin: 0 0 12px; }
+.p-page .credits a { color: var(--p-muted); }
+
+/* --- entrances --- */
+
+.p-page .p-enter {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 580ms cubic-bezier(.2,.7,.3,1), transform 580ms cubic-bezier(.2,.7,.3,1);
+}
+.p-page .p-enter.p-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+    .p-page .page-hero h1,
+    .p-page .page-hero-subtitle,
+    .p-page .page-hero-content > p,
+    .p-page .hero-actions {
+        animation: p-rise 740ms cubic-bezier(.16,.84,.32,1) both;
+    }
+    .p-page .page-hero-subtitle { animation-delay: 90ms; }
+    .p-page .page-hero-content > p { animation-delay: 160ms; }
+    .p-page .hero-actions { animation-delay: 240ms; }
+}
+@keyframes p-rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+    .p-page .p-enter { opacity: 1; transform: none; transition: none; }
+}

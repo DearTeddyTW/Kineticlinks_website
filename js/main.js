@@ -390,3 +390,27 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
     }, { rootMargin: '0px 0px -10% 0px' });
     tiles.forEach((t) => io.observe(t));
 })();
+
+/* Entrances on the service and platform pages. Visible by default. */
+(function () {
+    if (!document.querySelector('.p-page')) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const parts = document.querySelectorAll(
+        '.p-page .section-header, .p-page .service-card, .p-page .price-card, ' +
+        '.p-page .price-includes, .p-page .faq-item, .p-page .prose, ' +
+        '.p-page .related-card, .p-page .p-band');
+    if (!parts.length || !('IntersectionObserver' in window)) return;
+    parts.forEach((el) => el.classList.add('p-enter'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const sibs = [...entry.target.parentElement.children]
+                .filter((c) => c.classList.contains('p-enter'));
+            entry.target.style.transitionDelay =
+                Math.min(Math.max(0, sibs.indexOf(entry.target)), 5) * 65 + 'ms';
+            entry.target.classList.add('p-in');
+            io.unobserve(entry.target);
+        });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    parts.forEach((el) => io.observe(el));
+})();
