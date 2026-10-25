@@ -436,4 +436,20 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
     };
     if (document.readyState === 'complete') jump();
     else window.addEventListener('load', jump);
+
+    // Changing only the hash does not reload the page, so the guard above
+    // ("the visitor already moved") would refuse a jump they just asked for.
+    // A hashchange is an explicit request, so it always moves.
+    window.addEventListener('hashchange', () => {
+        const id = location.hash.slice(1);
+        if (!id) return;
+        let target;
+        try { target = document.getElementById(decodeURIComponent(id)); } catch (e) { return; }
+        if (!target) return;
+        const bar = document.querySelector('.navbar');
+        window.scrollTo({
+            top: target.getBoundingClientRect().top + window.pageYOffset - (bar ? bar.offsetHeight : 0),
+            behavior: 'smooth',
+        });
+    });
 })();
