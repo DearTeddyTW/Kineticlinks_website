@@ -1,0 +1,2613 @@
+{
+ "url": "http://localhost:8131/en/ssl/",
+ "at": "2026-10-25T13:24:51.946Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.47,
+    0.37,
+    0.74,
+    1,
+    0.89,
+    0.53,
+    0.4,
+    0.49,
+    0.76,
+    1
+   ],
+   "motion": {
+    "elements": 33,
+    "css": 6,
+    "transitions": 27,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 8799,
+     "screens": 9.8,
+     "words": 928,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "traite-d-alliance-france-russie-prusse-1717.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "SSL automation. Keep your key.",
+     "words": 5,
+     "chars": 30,
+     "lines": 2,
+     "size": 64,
+     "vw": 4.4,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.34,
+     "top": 323,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "SSL automation. Keep your key.",
+     "words": 5,
+     "lines": 2,
+     "size": 64,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "SSL automation. Keep your key.",
+      "words": 5,
+      "chars": 30,
+      "lines": 2,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 323,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What one deployment actually does",
+      "words": 5,
+      "chars": 33,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 950,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "It reaches what you already use",
+      "words": 6,
+      "chars": 31,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 3159,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Security and governance",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 4757,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Plans and pricing",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5690,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Free",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 5930,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "US$29",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.08,
+      "top": 5930,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "US$149",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.1,
+      "top": 5930,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Frequently asked questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 6892,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Want to check it clears your review first?",
+      "words": 8,
+      "chars": 42,
+      "lines": 3,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 7995,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 3,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      14,
+      15,
+      17,
+      18,
+      22,
+      24,
+      40,
+      64
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 22,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 58,
+     "max": {
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "text": "SSL automation."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 2
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#070b14",
+       "top": 0,
+       "hsl": {
+        "h": 222,
+        "s": 0.48,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#0d1420",
+       "top": 0,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#00f2fe",
+       "top": 7865,
+       "hsl": {
+        "h": 183,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 8464,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.51
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.22
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.22
+      },
+      {
+       "color": "#04121a",
+       "share": 0.04
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 3,
+     "radius": 2,
+     "height": 57,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Contact",
+      "English ▼",
+      "Create an account"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 16,
+     "boxRadius": 6,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3341
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3612
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4921
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5854
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 105,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 8799,
+    "margins": {
+     "left": 152,
+     "right": 203
+    },
+    "sections": [
+     {
+      "sel": "header.s-hero",
+      "tag": "header",
+      "top": 0,
+      "height": 792,
+      "words": 123,
+      "media": 0,
+      "middle": 222,
+      "heading": {
+       "text": "SSL automation.",
+       "size": 64,
+       "tag": "h1"
+      },
+      "left": 176,
+      "right": 161,
+      "textLeft": 176,
+      "textRight": 161,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-flow",
+      "tag": "section",
+      "top": 792,
+      "height": 1513,
+      "words": 108,
+      "media": 0,
+      "middle": 42,
+      "heading": {
+       "text": "What one deployment actually does",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 469,
+      "textLeft": 176,
+      "textRight": 469,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-seal",
+      "tag": "figure",
+      "top": 2305,
+      "height": 696,
+      "words": 41,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 176,
+      "right": 839,
+      "textLeft": 176,
+      "textRight": 839,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-int",
+      "tag": "section",
+      "top": 3001,
+      "height": 983,
+      "words": 59,
+      "media": 0,
+      "middle": 92,
+      "heading": {
+       "text": "It reaches what you already use",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 210,
+      "textLeft": 176,
+      "textRight": 210,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-rack",
+      "tag": "figure",
+      "top": 3984,
+      "height": 615,
+      "words": 20,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 176,
+      "right": 833,
+      "textLeft": 176,
+      "textRight": 833,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4599,
+      "height": 933,
+      "words": 139,
+      "media": 0,
+      "middle": 40,
+      "heading": {
+       "text": "Security and governance",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 202,
+      "textLeft": 152,
+      "textRight": 202,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5531,
+      "height": 1203,
+      "words": 187,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Plans and pricing",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 366,
+      "textLeft": 152,
+      "textRight": 366,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-faq",
+      "tag": "section",
+      "top": 6734,
+      "height": 1131,
+      "words": 256,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently asked questions",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 584,
+      "textLeft": 176,
+      "textRight": 584,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-cta",
+      "tag": "section",
+      "top": 7865,
+      "height": 599,
+      "words": 44,
+      "media": 0,
+      "middle": 185,
+      "heading": {
+       "text": "Want to check it clears your review first?",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 394,
+      "textLeft": 176,
+      "textRight": 394,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 8464,
+      "height": 335,
+      "words": 91,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 220,
+      "textLeft": 152,
+      "textRight": 220,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 2840,
+      "height": 316
+     },
+     {
+      "top": 4436,
+      "height": 316
+     },
+     {
+      "top": 5308,
+      "height": 376
+     },
+     {
+      "top": 6540,
+      "height": 348
+     }
+    ],
+    "h1s": [
+     {
+      "text": "SSL automation. Keep your key.",
+      "size": 64,
+      "top": 323,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 176,
+      "n": 20
+     },
+     {
+      "x": 220,
+      "n": 6
+     },
+     {
+      "x": 152,
+      "n": 4
+     },
+     {
+      "x": 768,
+      "n": 4
+     },
+     {
+      "x": 515,
+      "n": 2
+     },
+     {
+      "x": 845,
+      "n": 2
+     },
+     {
+      "x": 291,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 39,
+    "bodySize": 22,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.2,
+    "voidBox": {
+     "x": 0,
+     "y": 720,
+     "w": 1440,
+     "h": 180
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.63,
+    0.57,
+    0.9,
+    1,
+    0.66,
+    0.56,
+    0.69,
+    0.92,
+    1
+   ],
+   "motion": {
+    "elements": 33,
+    "css": 6,
+    "transitions": 27,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 8889,
+     "screens": 8.7,
+     "words": 920,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "traite-d-alliance-france-russie-prusse-1717.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "SSL automation. Keep your key.",
+     "words": 5,
+     "chars": 30,
+     "lines": 2,
+     "size": 41.6,
+     "vw": 5.4,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.64,
+     "top": 660,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "SSL automation. Keep your key.",
+     "words": 5,
+     "lines": 2,
+     "size": 41.6,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "SSL automation. Keep your key.",
+      "words": 5,
+      "chars": 30,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 5.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.64,
+      "top": 660,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What one deployment actually does",
+      "words": 5,
+      "chars": 33,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1117,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "It reaches what you already use",
+      "words": 6,
+      "chars": 31,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.68,
+      "top": 3168,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Security and governance",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 4892,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Plans and pricing",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 5823,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Free",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 6054,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "US$29",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.13,
+      "top": 6054,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "US$149",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.15,
+      "top": 6054,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Frequently asked questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 7028,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Want to check it clears your review first?",
+      "words": 8,
+      "chars": 42,
+      "lines": 3,
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.61,
+      "top": 7979,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 3,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      20,
+      24,
+      34,
+      42,
+      52
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 19.9,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 58,
+     "max": {
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "text": "Want to check it clears your review firs"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.05,
+     "smallText": 2
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#070b14",
+       "top": 604,
+       "hsl": {
+        "h": 222,
+        "s": 0.48,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#0d1420",
+       "top": 0,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#121b2b",
+       "top": 6443,
+       "hsl": {
+        "h": 218,
+        "s": 0.41,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#00f2fe",
+       "top": 7907,
+       "hsl": {
+        "h": 183,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 8452,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.52
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.22
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.22
+      },
+      {
+       "color": "#04121a",
+       "share": 0.04
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 2,
+     "height": 57,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Create an account"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 16,
+     "boxRadius": 6,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3442
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3793
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5049
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5980
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 8889,
+    "margins": {
+     "left": 31,
+     "right": 57
+    },
+    "sections": [
+     {
+      "sel": "header.s-hero",
+      "tag": "header",
+      "top": 0,
+      "height": 1021,
+      "words": 123,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 31,
+      "right": 185,
+      "textLeft": 31,
+      "textRight": 185,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-flow",
+      "tag": "section",
+      "top": 1021,
+      "height": 1393,
+      "words": 108,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What one deployment actually does",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 118,
+      "textLeft": 31,
+      "textRight": 118,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-seal",
+      "tag": "figure",
+      "top": 2414,
+      "height": 658,
+      "words": 41,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 31,
+      "right": 141,
+      "textLeft": 31,
+      "textRight": 141,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-int",
+      "tag": "section",
+      "top": 3072,
+      "height": 1119,
+      "words": 59,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "It reaches what you already use",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 98,
+      "textLeft": 31,
+      "textRight": 98,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-rack",
+      "tag": "figure",
+      "top": 4191,
+      "height": 604,
+      "words": 20,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 31,
+      "right": 186,
+      "textLeft": 31,
+      "textRight": 186,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4796,
+      "height": 931,
+      "words": 139,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Security and governance",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 65,
+      "textLeft": 32,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5727,
+      "height": 1205,
+      "words": 187,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Plans and pricing",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 53,
+      "textLeft": 32,
+      "textRight": 53,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-faq",
+      "tag": "section",
+      "top": 6932,
+      "height": 975,
+      "words": 256,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently asked questions",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 117,
+      "textLeft": 31,
+      "textRight": 117,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-cta",
+      "tag": "section",
+      "top": 7907,
+      "height": 546,
+      "words": 44,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Want to check it clears your review first?",
+       "size": 51,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 248,
+      "textLeft": 31,
+      "textRight": 248,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 8452,
+      "height": 437,
+      "words": 91,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 36,
+      "textLeft": 32,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "SSL automation. Keep your key.",
+      "size": 42,
+      "top": 660,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 31,
+      "n": 15
+     },
+     {
+      "x": 64,
+      "n": 6
+     },
+     {
+      "x": 75,
+      "n": 6
+     },
+     {
+      "x": 432,
+      "n": 4
+     },
+     {
+      "x": 52,
+      "n": 2
+     },
+     {
+      "x": 309,
+      "n": 2
+     },
+     {
+      "x": 555,
+      "n": 2
+     },
+     {
+      "x": 145,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 38,
+    "bodySize": 20,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.78,
+    0.31,
+    0.75,
+    1,
+    1,
+    1,
+    0.89,
+    0.63,
+    0.66,
+    0.68,
+    0.79,
+    0.62
+   ],
+   "motion": {
+    "elements": 27,
+    "css": 6,
+    "transitions": 21,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 11939,
+     "screens": 14.1,
+     "words": 920,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "traite-d-alliance-france-russie-prusse-1717.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "SSL automation. Keep your key.",
+     "words": 5,
+     "chars": 30,
+     "lines": 2,
+     "size": 30.4,
+     "vw": 7.8,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 718,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "SSL automation. Keep your key.",
+     "words": 5,
+     "lines": 2,
+     "size": 30.4,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "SSL automation. Keep your key.",
+      "words": 5,
+      "chars": 30,
+      "lines": 2,
+      "size": 30.4,
+      "vw": 7.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 718,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What one deployment actually does",
+      "words": 5,
+      "chars": 33,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1169,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "It reaches what you already use",
+      "words": 6,
+      "chars": 31,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3328,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Security and governance",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 6036,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Plans and pricing",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 7573,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Free",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 7796,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "US$29",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 8112,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "US$149",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 8432,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Frequently asked questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 9556,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Want to check it clears your review first?",
+      "words": 8,
+      "chars": 42,
+      "lines": 3,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.85,
+      "top": 10837,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.8,
+      "top": 11317,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 3,
+     "centered": 1,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      24,
+      28,
+      30,
+      36
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 18.2,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 31,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "text": "Want to check it clears your review firs"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.05,
+     "smallText": 2
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#070b14",
+       "top": 686,
+       "hsl": {
+        "h": 222,
+        "s": 0.48,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#0d1420",
+       "top": 0,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#121b2b",
+       "top": 84,
+       "hsl": {
+        "h": 218,
+        "s": 0.41,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#00f2fe",
+       "top": 10743,
+       "hsl": {
+        "h": 183,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 11253,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.52
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.22
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.22
+      },
+      {
+       "color": "#04121a",
+       "share": 0.04
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 0,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 21,
+     "boxRadius": 6,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3950
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 4700
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6244
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 7724
+      },
+      {
+       "count": 6,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 9635
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 11939,
+    "margins": {
+     "left": 20,
+     "right": 30
+    },
+    "sections": [
+     {
+      "sel": "header.s-hero",
+      "tag": "header",
+      "top": 0,
+      "height": 1073,
+      "words": 123,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 25,
+      "textLeft": 20,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-flow",
+      "tag": "section",
+      "top": 1073,
+      "height": 1529,
+      "words": 108,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What one deployment actually does",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 30,
+      "textLeft": 20,
+      "textRight": 30,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-seal",
+      "tag": "figure",
+      "top": 2602,
+      "height": 630,
+      "words": 41,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-int",
+      "tag": "section",
+      "top": 3232,
+      "height": 2156,
+      "words": 59,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "It reaches what you already use",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 39,
+      "textLeft": 20,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-rack",
+      "tag": "figure",
+      "top": 5388,
+      "height": 552,
+      "words": 20,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 44,
+      "textLeft": 20,
+      "textRight": 44,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5940,
+      "height": 1537,
+      "words": 139,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Security and governance",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 39,
+      "textLeft": 32,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 7477,
+      "height": 1984,
+      "words": 187,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Plans and pricing",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 43,
+      "textLeft": 32,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-faq",
+      "tag": "section",
+      "top": 9460,
+      "height": 1283,
+      "words": 126,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently asked questions",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 43,
+      "textLeft": 20,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-cta",
+      "tag": "section",
+      "top": 10743,
+      "height": 510,
+      "words": 0,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": null,
+      "right": null,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 11253,
+      "height": 686,
+      "words": 91,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 39,
+      "textLeft": 32,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 10484,
+      "height": 828
+     }
+    ],
+    "h1s": [
+     {
+      "text": "SSL automation. Keep your key.",
+      "size": 30,
+      "top": 718,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 64,
+      "n": 16
+     },
+     {
+      "x": 20,
+      "n": 9
+     },
+     {
+      "x": 32,
+      "n": 4
+     },
+     {
+      "x": 52,
+      "n": 2
+     },
+     {
+      "x": 130,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 32,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 1440,
+   "message": "1 headline(s) wrap past two lines at 1440px: \"Want to check it clears your review first?\" → 3 lines (8 words, 64px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "4 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "small-text",
+   "width": 1440,
+   "message": "2 text block(s) under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 152px on the left, 203px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "untitled-section",
+   "width": 1440,
+   "message": "A section carries text but no heading: figure.s-band.s-band-seal at 2305px.",
+   "fix": "Name it with a short heading unless it is the continuation of the section above.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 768,
+   "message": "1 headline(s) wrap past two lines at 768px: \"Want to check it clears your review first?\" → 3 lines (8 words, 51.5px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 768,
+   "message": "11 different font sizes (12, 13, 14, 15, 17, 18, 20, 24, 34, 42, 52).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "1 headline(s) wrap past two lines at 390px: \"Want to check it clears your review first?\" → 3 lines (8 words, 36px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 390,
+   "message": "No visible button in the first phone screen.",
+   "fix": "On a phone the first screen still holds the headline, the supporting sentence and the action; move navigation into one row or a menu so it does not push them down."
+  },
+  {
+   "level": "FAIL",
+   "id": "blank-gap",
+   "width": 390,
+   "message": "1 stretch(es) of the page hold nothing at all: 828px at 10484px (the screen is 844px tall).",
+   "fix": "Close the gap: a section gap is 120–240px on desktop and 72–112px on a phone. Look for a min-height: 100vh on a short section, an empty grid row, a hidden element still holding its space, or a reveal that never fired. A deliberate rest is a placed picture or colour field, not nothing."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fix2-en-ssl/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fix2-en-ssl/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fix2-en-ssl/desktop-page-02.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fix2-en-ssl/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fix2-en-ssl/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fix2-en-ssl/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fix2-en-ssl/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fix2-en-ssl/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fix2-en-ssl/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fix2-en-ssl/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

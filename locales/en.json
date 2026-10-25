@@ -83,7 +83,7 @@
   },
   "about": {
     "title1": "Technology-Driven",
-    "title2": "Professional IT Team",
+    "title2": "IT Team",
     "desc": "Kineticlinks works on cross-border network infrastructure. CDN, VPS, IDC and public cloud are resold from upstream providers, with the planning and integration done by us; certificate automation, the three-network speed test and the ICP filing lookup are built and operated in-house. We are small, so the person you reach is the person who handles it.",
     "stat1": "Reach a person, not a ticket queue",
     "stat2": "DNS and CDN providers integrated",
@@ -96,8 +96,8 @@
     "stat4_num": "3"
   },
   "contact": {
-    "title1": "Ready to Upgrade Your",
-    "title2": "Infrastructure?",
+    "title1": "Ready to Upgrade",
+    "title2": "Your Infrastructure?",
     "desc": "Fill out the form or contact us through the following methods, and our architects will get back to you as soon as possible.",
     "form": {
       "name": "Name / Company",
@@ -809,7 +809,7 @@
       "a6": "Certificates are priced individually — from US$30/year for a single domain, from US$90/year for a wildcard — drawn from your account balance, with reissues inside the validity period free. Automation is what the subscription buys: Basic is free but includes none of it; Pro at US$29/month adds CDN deployment, DNS validation and edge checks with up to 5 members; Enterprise at US$149/month adds the on-premise agent and unlimited members. New accounts get 14 days of Pro and then fall back to Basic, with nothing charged automatically."
     },
     "cta": {
-      "title": "Want to check it clears your review first?",
+      "title": "Need it to pass your audit?",
       "desc": "The platform's security write-up is public, including what we have not built. Create an account to request your first certificate — fully refundable if it does not suit — or just send us the questionnaire.",
       "button": "Create an account"
     },
@@ -4208,7 +4208,7 @@
     "rights": "&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved."
   },
   "home_faq": {
-    "title": "Frequently Asked Questions About Kineticlinks",
+    "title": "Frequently Asked Questions",
     "desc": "If your question isn't answered here, get in touch directly",
     "q1": "What services does Kineticlinks provide?",
     "a1": "Four core services: CDN content delivery, VPS hosting, IDC data center buildout, and public cloud architecture solutions. We also operate two platforms of our own: an SSL certificate automation platform and a global 3-network speed test platform.",

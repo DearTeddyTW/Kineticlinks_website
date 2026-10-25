@@ -348,12 +348,18 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const parts = document.querySelectorAll(
-        '.s-flow h2, .s-xchg, .s-int-head, .s-int-set, .s-faq h2, .s-q, ' +
+        /* .s-q 不在名單裡：六張問題卡一張一張淡入，是最弱的一種動效，
+           而且讀者捲到 FAQ 的瞬間看到的是一排空卡片。清單用來掃視，
+           不需要進場。 */
+        '.s-flow h2, .s-xchg, .s-int-head, .s-int-set, .s-faq h2, ' +
         '.s-cta-said, .s-cta-act, .s-page .section-header, .s-page .service-card, ' +
         '.s-page .price-card, .s-page .price-includes');
     if (!parts.length || !('IntersectionObserver' in window)) return;
 
     parts.forEach((el) => el.classList.add('s-enter'));
+    /* 底部邊界是正的：元素還在視窗下方 15% 的時候就開始現身，讀者捲到
+       的時候已經在那裡了。原本是 -12%，元素要再往上近一百 px 才觸發，
+       加上每項錯開 70ms，捲到 FAQ 那一段看到的是一排空卡片。 */
     const io = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (!entry.isIntersecting) return;
@@ -364,7 +370,7 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
             entry.target.classList.add('s-in');
             io.unobserve(entry.target);
         });
-    }, { rootMargin: '0px 0px -12% 0px' });
+    }, { rootMargin: '0px 0px 15% 0px' });
     parts.forEach((el) => io.observe(el));
 })();
 
@@ -387,7 +393,7 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
             entry.target.classList.add('b-in');
             io.unobserve(entry.target);
         });
-    }, { rootMargin: '0px 0px -10% 0px' });
+    }, { rootMargin: '0px 0px 15% 0px' });
     tiles.forEach((t) => io.observe(t));
 })();
 
@@ -411,7 +417,7 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
             entry.target.classList.add('p-in');
             io.unobserve(entry.target);
         });
-    }, { rootMargin: '0px 0px -10% 0px' });
+    }, { rootMargin: '0px 0px 15% 0px' });
     parts.forEach((el) => io.observe(el));
 })();
 
