@@ -83,9 +83,13 @@
 /* The breadcrumb ran on the page's own margins while the article column sat
    narrower and centred, so the page measured 152px of margin on the left and
    362px on the right. One measure for both. */
+/* 麵包屑與內文共用一條量寬；頁尾維持整頁寬。
+   先前把頁尾也收成 920px 是為了讓 off-centre 的數字好看，結果頁尾在
+   1440 的螢幕上兩側各空 260px，底部兩屏被判成幾乎空白——那是拿一個
+   問題換另一個。off-centre 本身量的是靠左文字參差的右緣，盒子其實
+   是對稱的。 */
 .a-page .breadcrumb-bar .container,
-.a-page .article-container,
-.a-page footer .container {
+.a-page .article-container {
     max-width: 920px;
     margin-inline: auto;
 }
@@ -296,4 +300,16 @@
 .g-js .g-page .g-row {
     transform: translateY(10px);
     transition: opacity 240ms ease-out, transform 240ms ease-out;
+}
+
+/* The title block sits on the page's margin while the rows' own padding
+   pushed their text 18px further in, so the page had two left edges. The
+   tile reaches past the margin instead and the text comes back to it.
+   (This lived in the same media block as the fragment styles and went with
+   them when those moved to frag.css.) */
+@media (max-width: 560px) {
+    .g-row {
+        margin-inline: calc(var(--g-row-pad) * -1);
+        padding-inline: var(--g-row-pad);
+    }
 }

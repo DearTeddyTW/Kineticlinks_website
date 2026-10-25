@@ -852,7 +852,10 @@
       "rack_alt": "A data centre aisle lined with black racks on a white raised floor",
       "rack_cap": "In agent mode the key is generated on this side of the wall, and stays there. The platform never has it."
     },
-    "credits": {}
+    "credits": {},
+    "frag": {
+      "title": "What a certificate actually looks like"
+    }
   },
   "speedtest_page": {
     "platform_url": "https://speedtest.kineticlinks.net/",

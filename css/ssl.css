@@ -450,3 +450,10 @@
 .s-page .price-unit { font-size: var(--s-body); }
 .s-page .btn { font-size: var(--s-body); }
 .s-page .price-includes h3 { font-size: var(--s-lead); }
+
+/* 兩個相鄰的 .section 各帶 var(--s-gap) 的上下內距，疊起來是 316px——
+   桌機上超過一個區塊間距該有的 120–240px，看起來就是半個螢幕的空白。 */
+.s-page .section + .section { padding-top: clamp(24px, 3vw, 48px); }
+
+.s-chain { padding-block: var(--s-gap) 0; }
+.s-chain h2 { font-size: var(--s-head); margin-bottom: 32px; }

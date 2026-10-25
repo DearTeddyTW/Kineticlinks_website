@@ -1,0 +1,1899 @@
+{
+ "url": "http://localhost:8131/blog/icp-filing-explained/",
+ "at": "2026-10-25T18:21:37.480Z",
+ "allow": [
+  "few-pictures",
+  "no-footage",
+  "headline-lines"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.19,
+    0.45,
+    0.26,
+    0.25,
+    0.16,
+    0.36,
+    0.59
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 0,
+    "transitions": 12,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6084,
+     "screens": 6.8,
+     "words": 191,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+     "words": 2,
+     "chars": 24,
+     "lines": 2,
+     "size": 56,
+     "vw": 3.9,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.12,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.59,
+     "top": 460,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+     "words": 2,
+     "lines": 2,
+     "size": 56,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+      "words": 2,
+      "chars": 24,
+      "lines": 2,
+      "size": 56,
+      "vw": 3.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.12,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 460,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "備案到底在管什麼",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 943,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "備案域名交易的實際機制",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 1709,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "實際上要等多久",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 2326,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "不需要備案的合規做法，以及它的邊界",
+      "words": 1,
+      "chars": 17,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 2956,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "三個層次的判斷",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 3291,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "評估方案時該確認的三件事",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 3882,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "小結",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 4382,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸閱讀與相關服務",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 5003,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "跨境上線的做法需要討論嗎？",
+      "words": 1,
+      "chars": 13,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.52,
+      "top": 5383,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.92,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.08,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      22,
+      24,
+      34,
+      56
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.1
+     },
+     "measureChars": 94,
+     "max": {
+      "size": 56,
+      "vw": 3.9,
+      "font": "Outfit",
+      "text": "ICP 備案與備案域名交易：規定、時程與實際風險"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.36,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 5784,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c9d4e4",
+       "share": 0.55
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.25
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.08
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.06
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#04121a",
+      "hsl": {
+       "h": 202,
+       "s": 0.73,
+       "l": 0.06
+      },
+      "fg": "#00f2fe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 8,
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "聯絡我們",
+      "繁體中文 ▼"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5103
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 103,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6084,
+    "margins": {
+     "left": 292,
+     "right": 295
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 4,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 292,
+      "right": 903,
+      "textLeft": 292,
+      "textRight": 903,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "main#main",
+      "tag": "main",
+      "top": 126,
+      "height": 5658,
+      "words": 236,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+       "size": 56,
+       "tag": "h1"
+      },
+      "left": 292,
+      "right": 293,
+      "textLeft": 292,
+      "textRight": 293,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 5784,
+      "height": 300,
+      "words": 29,
+      "media": 0,
+      "middle": 25,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 292,
+      "right": 328,
+      "textLeft": 292,
+      "textRight": 328,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 5552,
+      "height": 292
+     }
+    ],
+    "h1s": [
+     {
+      "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+      "size": 56,
+      "top": 460,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 292,
+      "n": 23
+     },
+     {
+      "x": 318,
+      "n": 3
+     },
+     {
+      "x": 606,
+      "n": 1
+     },
+     {
+      "x": 894,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 28,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.18,
+    "voidBox": {
+     "x": 1140,
+     "y": 120,
+     "w": 300,
+     "h": 780
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.54,
+    0.54,
+    0.6,
+    0.42,
+    0.45,
+    0.73
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 0,
+    "transitions": 7,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5885,
+     "screens": 5.7,
+     "words": 183,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+     "words": 2,
+     "chars": 24,
+     "lines": 2,
+     "size": 45.2,
+     "vw": 5.9,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.12,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 464,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+     "words": 2,
+     "lines": 2,
+     "size": 45.2,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+      "words": 2,
+      "chars": 24,
+      "lines": 2,
+      "size": 45.2,
+      "vw": 5.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.12,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 464,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "備案到底在管什麼",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 888,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "備案域名交易的實際機制",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1766,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "實際上要等多久",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2354,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "不需要備案的合規做法，以及它的邊界",
+      "words": 1,
+      "chars": 17,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2985,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "三個層次的判斷",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3291,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "評估方案時該確認的三件事",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3846,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "小結",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4346,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸閱讀與相關服務",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4917,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "跨境上線的做法需要討論嗎？",
+      "words": 1,
+      "chars": 13,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 5208,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.08,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      20,
+      24,
+      28,
+      45
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.9,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.1
+     },
+     "measureChars": 76,
+     "max": {
+      "size": 45.2,
+      "vw": 5.9,
+      "font": "Outfit",
+      "text": "ICP 備案與備案域名交易：規定、時程與實際風險"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.37,
+     "centerShare": 0.1,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 5538,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c9d4e4",
+       "share": 0.56
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.25
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.07
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.06
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#04121a",
+      "hsl": {
+       "h": 202,
+       "s": 0.73,
+       "l": 0.06
+      },
+      "fg": "#00f2fe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 0,
+     "radius": 8,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5010
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5885,
+    "margins": {
+     "left": 32,
+     "right": 36
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 4,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 491,
+      "textLeft": 32,
+      "textRight": 491,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "main#main",
+      "tag": "main",
+      "top": 126,
+      "height": 5412,
+      "words": 236,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+       "size": 45,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 36,
+      "textLeft": 32,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 5538,
+      "height": 347,
+      "words": 29,
+      "media": 0,
+      "middle": 12,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 33,
+      "right": 33,
+      "textLeft": 33,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+      "size": 45,
+      "top": 464,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 23
+     },
+     {
+      "x": 50,
+      "n": 2
+     },
+     {
+      "x": 63,
+      "n": 1
+     },
+     {
+      "x": 287,
+      "n": 1
+     },
+     {
+      "x": 525,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 28,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.43,
+    0.57,
+    0.61,
+    0.64,
+    0.62,
+    0.42,
+    0.6,
+    0.68,
+    0.71,
+    0.83
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 0,
+    "transitions": 12,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 7920,
+     "screens": 9.4,
+     "words": 183,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+     "words": 2,
+     "chars": 24,
+     "lines": 3,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.12,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 552,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+     "words": 2,
+     "lines": 3,
+     "size": 32,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+      "words": 2,
+      "chars": 24,
+      "lines": 3,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.12,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 552,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "備案到底在管什麼",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 1084,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "備案域名交易的實際機制",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 2174,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "實際上要等多久",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 3007,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "不需要備案的合規做法，以及它的邊界",
+      "words": 1,
+      "chars": 17,
+      "lines": 2,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 3968,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "三個層次的判斷",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4439,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "評估方案時該確認的三件事",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5137,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "小結",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5740,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸閱讀與相關服務",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 6496,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "跨境上線的做法需要討論嗎？",
+      "words": 1,
+      "chars": 13,
+      "lines": 2,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 6968,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.8,
+      "top": 7505,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.08,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      18,
+      24,
+      32
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.2,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.1
+     },
+     "measureChars": 33,
+     "max": {
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "text": "ICP 備案與備案域名交易：規定、時程與實際風險"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.37,
+     "centerShare": 0.1,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#00f2fe",
+       "top": 6936,
+       "hsl": {
+        "h": 183,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 7441,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c9d4e4",
+       "share": 0.56
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.25
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.07
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.06
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#04121a",
+      "hsl": {
+       "h": 202,
+       "s": 0.73,
+       "l": 0.06
+      },
+      "fg": "#00f2fe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 0,
+     "radius": 8,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 7920,
+    "margins": {
+     "left": 32,
+     "right": 34
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 4,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 113,
+      "textLeft": 32,
+      "textRight": 113,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "main#main",
+      "tag": "main",
+      "top": 126,
+      "height": 7316,
+      "words": 228,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 33,
+      "textLeft": 32,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7441,
+      "height": 478,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+      "size": 32,
+      "top": 552,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 23
+     },
+     {
+      "x": 50,
+      "n": 4
+     },
+     {
+      "x": 63,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 28,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "1 box(es) drawn with a 1px outline.",
+   "fix": "Prefer a filled surface or no box.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 94 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 12 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "FAIL",
+   "id": "empty-screens",
+   "width": 1440,
+   "message": "2 of 7 desktop screens are almost empty ground (under 20% of the screen holds text, a picture or a colour field): screens 1, 5.",
+   "fix": "An empty screen is a rest only once per page. Elsewhere it means the section is underbuilt: set its content larger, give it the full information, put it on a colour field, or cut it."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 768,
+   "message": "No visible button in the first screen.",
+   "fix": "Give the one primary action a real button in the first screen (a filled or solid-bordered control, 44px or taller), not only a link in the navigation.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 390,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/ab-blog-icp-filing-explained-/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/ab-blog-icp-filing-explained-/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/ab-blog-icp-filing-explained-/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/ab-blog-icp-filing-explained-/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/ab-blog-icp-filing-explained-/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/ab-blog-icp-filing-explained-/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/ab-blog-icp-filing-explained-/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/ab-blog-icp-filing-explained-/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

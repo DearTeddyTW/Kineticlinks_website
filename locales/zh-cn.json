@@ -852,7 +852,10 @@
       "rack_alt": "数据中心的走道，两侧是黑色机柜，白色架高地板",
       "rack_cap": "代理程序模式下，密钥在这一侧产生，也留在这一侧。平台从来没有它。"
     },
-    "credits": {}
+    "credits": {},
+    "frag": {
+      "title": "一张证书实际长什么样"
+    }
   },
   "speedtest_page": {
     "platform_url": "https://speedtest.kineticlinks.net/",

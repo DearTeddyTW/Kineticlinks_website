@@ -167,8 +167,8 @@
     <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=646304b4">
-    <link rel="stylesheet" href="/css/ssl.css?v=9358f323">
+    <link rel="stylesheet" href="/css/style.css?v=f5269ac5">
+    <link rel="stylesheet" href="/css/ssl.css?v=e5d9515f">
     <link rel="stylesheet" href="/css/frag.css?v=75480844">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
@@ -308,7 +308,9 @@
     </section>
 
     <!-- the chain of trust, in the material it used to be made of -->
-    <div class="s-wrap">
+    <section class="s-chain" aria-labelledby="s-chain-h">
+        <div class="s-wrap">
+            <h2 id="s-chain-h">一张证书实际长什么样</h2>
     <figure class="a-frag g-enter" data-ui>
         <div class="f-panel">
             <div class="f-head">证书链（示例）</div>
@@ -320,7 +322,8 @@
         </div>
         <figcaption>证书链要完整才会被信任。缺一层中继，桌面浏览器往往会自己补上，手机和命令行工具不会——这是「我这边看起来正常」的常见来源。以上为示例值。</figcaption>
     </figure>
-    </div>
+        </div>
+    </section>
 
     <!-- proof: the integrations as large tiles -->
     <section class="s-int" aria-labelledby="s-int-h">

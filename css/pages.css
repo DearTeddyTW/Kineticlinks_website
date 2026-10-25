@@ -216,3 +216,13 @@
 /* The "延伸閱讀" cards carry a small label above each title. That is an
    eyebrow; the card's own position already says what the link is. */
 .p-page .related-kicker { display: none; }
+
+/* FAQ 的答案跨滿整個面板：786px 在 17px 下是一行 46 個漢字、92 個拉丁
+   字元，兩種語言都太長。 */
+.p-page .faq-item p { max-width: 68ch; }
+
+/* 首屏那段說明文字原本 17px。它的工作是用白話講清楚這是什麼，
+   skill 的建議是 18px 以上，差這一個像素它就不算數。 */
+.p-page .page-hero-content > p:not(.page-hero-subtitle) {
+    font-size: clamp(1.125rem, 1.07rem + 0.2vw, 1.1875rem);
+}

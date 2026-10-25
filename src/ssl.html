@@ -201,8 +201,11 @@
     </section>
 
     <!-- the chain of trust, in the material it used to be made of -->
-    <div class="s-wrap">
-{{ page_frag }}    </div>
+    <section class="s-chain" aria-labelledby="s-chain-h">
+        <div class="s-wrap">
+            <h2 id="s-chain-h">{{ page.frag.title }}</h2>
+{{ page_frag }}        </div>
+    </section>
 
     <!-- proof: the integrations as large tiles -->
     <section class="s-int" aria-labelledby="s-int-h">

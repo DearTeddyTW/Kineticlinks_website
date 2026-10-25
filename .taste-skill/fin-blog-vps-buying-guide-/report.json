@@ -1,0 +1,1920 @@
+{
+ "url": "http://localhost:8131/blog/vps-buying-guide/",
+ "at": "2026-10-25T18:38:13.658Z",
+ "allow": [
+  "few-pictures",
+  "no-footage",
+  "headline-lines",
+  "empty-screens"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.24,
+    0.32,
+    0.37,
+    0.28,
+    0.2,
+    0.35,
+    0.59
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 0,
+    "transitions": 12,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6021,
+     "screens": 6.7,
+     "words": 220,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+     "words": 2,
+     "chars": 27,
+     "lines": 2,
+     "size": 56,
+     "vw": 3.9,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.12,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.59,
+     "top": 523,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+     "words": 2,
+     "lines": 2,
+     "size": 56,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+      "words": 2,
+      "chars": 27,
+      "lines": 2,
+      "size": 56,
+      "vw": 3.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.12,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 523,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "先搞清楚：您真的需要 VPS 嗎？",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 1006,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "規格怎麼看：三個實際會卡住的地方",
+      "words": 1,
+      "chars": 16,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 1816,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "預算怎麼抓",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 2345,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "容易被忽略的兩件事",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 2945,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "下單前的三個評估維度",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 3310,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "下單前該確認的三件事",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 3901,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "小結",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 4373,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸閱讀與相關服務",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 4963,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "還在猶豫該選哪個規格？",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.52,
+      "top": 5343,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.07,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      22,
+      24,
+      34,
+      56
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.1
+     },
+     "measureChars": 101,
+     "max": {
+      "size": 56,
+      "vw": 3.9,
+      "font": "Outfit",
+      "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開"
+     },
+     "monoShare": 0.02,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.45,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 5744,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c9d4e4",
+       "share": 0.59
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.08
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.07
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#04121a",
+      "hsl": {
+       "h": 202,
+       "s": 0.73,
+       "l": 0.06
+      },
+      "fg": "#00f2fe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 8,
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "聯絡我們",
+      "繁體中文 ▼"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5063
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 104,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6021,
+    "margins": {
+     "left": 233,
+     "right": 294
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 4,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 292,
+      "right": 940,
+      "textLeft": 292,
+      "textRight": 940,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "main#main",
+      "tag": "main",
+      "top": 126,
+      "height": 5618,
+      "words": 289,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+       "size": 56,
+       "tag": "h1"
+      },
+      "left": 292,
+      "right": 294,
+      "textLeft": 292,
+      "textRight": 294,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 5744,
+      "height": 277,
+      "words": 29,
+      "media": 0,
+      "middle": 32,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 174,
+      "textLeft": 152,
+      "textRight": 174,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 5512,
+      "height": 292
+     }
+    ],
+    "h1s": [
+     {
+      "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+      "size": 56,
+      "top": 523,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 292,
+      "n": 25
+     },
+     {
+      "x": 318,
+      "n": 3
+     },
+     {
+      "x": 606,
+      "n": 1
+     },
+     {
+      "x": 894,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 30,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.14,
+    "voidBox": {
+     "x": 660,
+     "y": 120,
+     "w": 780,
+     "h": 240
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.53,
+    0.63,
+    0.54,
+    0.34,
+    0.5,
+    0.73
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 0,
+    "transitions": 12,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5769,
+     "screens": 5.6,
+     "words": 212,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+     "words": 2,
+     "chars": 27,
+     "lines": 2,
+     "size": 45.2,
+     "vw": 5.9,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.12,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 506,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+     "words": 2,
+     "lines": 2,
+     "size": 45.2,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+      "words": 2,
+      "chars": 27,
+      "lines": 2,
+      "size": 45.2,
+      "vw": 5.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.12,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 506,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "先搞清楚：您真的需要 VPS 嗎？",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 930,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "規格怎麼看：三個實際會卡住的地方",
+      "words": 1,
+      "chars": 16,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1712,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "預算怎麼抓",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2297,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "容易被忽略的兩件事",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2897,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "下單前的三個評估維度",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3234,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "下單前該確認的三件事",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3788,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "小結",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4260,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸閱讀與相關服務",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4801,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "還在猶豫該選哪個規格？",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 5092,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.07,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      20,
+      24,
+      28,
+      45
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.9,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.1
+     },
+     "measureChars": 83,
+     "max": {
+      "size": 45.2,
+      "vw": 5.9,
+      "font": "Outfit",
+      "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開"
+     },
+     "monoShare": 0.02,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.45,
+     "centerShare": 0.1,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 5422,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c9d4e4",
+       "share": 0.59
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.07
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.07
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#04121a",
+      "hsl": {
+       "h": 202,
+       "s": 0.73,
+       "l": 0.06
+      },
+      "fg": "#00f2fe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 0,
+     "radius": 8,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4894
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5769,
+    "margins": {
+     "left": 32,
+     "right": 36
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 4,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 528,
+      "textLeft": 32,
+      "textRight": 528,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "main#main",
+      "tag": "main",
+      "top": 126,
+      "height": 5296,
+      "words": 289,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+       "size": 45,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 35,
+      "textLeft": 32,
+      "textRight": 35,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 5422,
+      "height": 347,
+      "words": 29,
+      "media": 0,
+      "middle": 12,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 33,
+      "right": 33,
+      "textLeft": 33,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+      "size": 45,
+      "top": 506,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 25
+     },
+     {
+      "x": 50,
+      "n": 2
+     },
+     {
+      "x": 63,
+      "n": 1
+     },
+     {
+      "x": 287,
+      "n": 1
+     },
+     {
+      "x": 525,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 30,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.55,
+    0.57,
+    0.63,
+    0.54,
+    0.6,
+    0.53,
+    0.5,
+    0.71,
+    0.71,
+    0.83
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 0,
+    "transitions": 12,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 7916,
+     "screens": 9.4,
+     "words": 212,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+     "words": 2,
+     "chars": 27,
+     "lines": 3,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.12,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 615,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+     "words": 2,
+     "lines": 3,
+     "size": 32,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+      "words": 2,
+      "chars": 27,
+      "lines": 3,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.12,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 615,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "先搞清楚：您真的需要 VPS 嗎？",
+      "words": 3,
+      "chars": 17,
+      "lines": 2,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 1119,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "規格怎麼看：三個實際會卡住的地方",
+      "words": 1,
+      "chars": 16,
+      "lines": 2,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 2256,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "預算怎麼抓",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 3088,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "容易被忽略的兩件事",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 3991,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "下單前的三個評估維度",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4490,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "下單前該確認的三件事",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5199,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "小結",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5775,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸閱讀與相關服務",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 6498,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "還在猶豫該選哪個規格？",
+      "words": 1,
+      "chars": 11,
+      "lines": 2,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 6991,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.8,
+      "top": 7502,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.07,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      18,
+      24,
+      32
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.2,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.1
+     },
+     "measureChars": 40,
+     "max": {
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開"
+     },
+     "monoShare": 0.02,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.45,
+     "centerShare": 0.1,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 158,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#00f2fe",
+       "top": 6959,
+       "hsl": {
+        "h": 183,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 7438,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c9d4e4",
+       "share": 0.59
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.07
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.07
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#04121a",
+      "hsl": {
+       "h": 202,
+       "s": 0.73,
+       "l": 0.06
+      },
+      "fg": "#00f2fe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 0,
+     "radius": 8,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 7916,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 4,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 150,
+      "textLeft": 32,
+      "textRight": 150,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "main#main",
+      "tag": "main",
+      "top": 126,
+      "height": 7312,
+      "words": 289,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7438,
+      "height": 478,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+      "size": 32,
+      "top": 615,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 25
+     },
+     {
+      "x": 50,
+      "n": 4
+     },
+     {
+      "x": 63,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 30,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "1 box(es) drawn with a 1px outline.",
+   "fix": "Prefer a filled surface or no box.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-count",
+   "width": 1440,
+   "message": "3 typefaces in use (Inter, Outfit, ui-monospace).",
+   "fix": "Two at most.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 101 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 233px on the left, 294px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 12 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 768,
+   "message": "No visible button in the first screen.",
+   "fix": "Give the one primary action a real button in the first screen (a filled or solid-bordered control, 44px or taller), not only a link in the navigation.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 390,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fin-blog-vps-buying-guide-/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fin-blog-vps-buying-guide-/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fin-blog-vps-buying-guide-/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fin-blog-vps-buying-guide-/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fin-blog-vps-buying-guide-/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fin-blog-vps-buying-guide-/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fin-blog-vps-buying-guide-/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/fin-blog-vps-buying-guide-/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

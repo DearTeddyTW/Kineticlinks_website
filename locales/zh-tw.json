@@ -852,7 +852,10 @@
       "rack_alt": "資料中心的走道，兩側是黑色機櫃，白色架高地板",
       "rack_cap": "代理程式模式下，金鑰在這一側產生，也留在這一側。平台從來沒有它。"
     },
-    "credits": {}
+    "credits": {},
+    "frag": {
+      "title": "一張憑證實際長什麼樣"
+    }
   },
   "speedtest_page": {
     "platform_url": "https://speedtest.kineticlinks.net/",
