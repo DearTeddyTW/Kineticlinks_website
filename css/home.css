@@ -323,3 +323,8 @@
 
 .b-page .credits { font-size: var(--b-small); color: var(--b-muted); line-height: 1.6; margin: 0 0 12px; }
 .b-page .credits a { color: var(--b-muted); }
+
+/* The navigation jumps to these two fields, and the bar is fixed, so the
+   heading has to clear it. */
+.b-page #services,
+.b-page #platforms { scroll-margin-top: 88px; }

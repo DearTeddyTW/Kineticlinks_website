@@ -506,7 +506,7 @@ def build_board(translations, lang_path):
             '            </a>' % (lang_path, key, e(s.get('title', key.upper())), e(s.get('desc', ''))))
 
     parts = [
-        '\n    <section class="b-board" aria-labelledby="b-h1">',
+        '\n    <section class="b-board" id="home" aria-labelledby="b-h1">',
         '        <div class="b-grid">',
         '            <div class="b-tile b-name b-w6">',
         '                <h1 class="b-wordmark" id="b-h1">Kinetic<span>links</span></h1>',
@@ -520,7 +520,7 @@ def build_board(translations, lang_path):
         '            </figure>',
         '            <a class="b-tile b-act b-w4" href="#contact">%s</a>' % e(b['action']),
         '        </div>',
-        '        <div class="b-field b-field-run">',
+        '        <div class="b-field b-field-run" id="platforms">',
         '            <div class="b-grid">',
         '                <div class="b-tile b-label b-w12">',
         '                    <h2>%s</h2>' % e(b['run_label']),
@@ -537,7 +537,7 @@ def build_board(translations, lang_path):
         '                </figure>',
         '            </div>',
         '        </div>',
-        '        <div class="b-field b-field-resell">',
+        '        <div class="b-field b-field-resell" id="services">',
         '            <div class="b-grid">',
         '                <div class="b-tile b-label b-w12">',
         '                    <h2>%s</h2>' % e(b['resell_label']),
