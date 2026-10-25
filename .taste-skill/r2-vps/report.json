@@ -1,0 +1,2488 @@
+{
+ "url": "http://localhost:8131/vps/",
+ "at": "2026-10-25T12:00:37.862Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.45,
+    0.64,
+    1,
+    0.61,
+    0.87,
+    0.4,
+    0.82,
+    0.83,
+    0.78
+   ],
+   "motion": {
+    "elements": 35,
+    "css": 4,
+    "transitions": 31,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7279,
+     "screens": 8.1,
+     "words": 222,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "a-system-administrator-s-workstation-within-a.jp",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "kneller-hall-telephone-exchange-2-geograph-org.j",
+      "1940s-n935-telephone-exchange.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "VPS 虛擬專屬主機",
+     "words": 2,
+     "chars": 10,
+     "lines": 2,
+     "size": 64,
+     "vw": 4.4,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.28,
+     "top": 347,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "VPS 虛擬專屬主機",
+     "words": 2,
+     "lines": 2,
+     "size": 64,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "VPS 虛擬專屬主機",
+      "words": 2,
+      "chars": 10,
+      "lines": 2,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 347,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "什麼是 VPS 虛擬專屬主機？",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1086,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "適用場景",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 3088,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "為什麼選擇 Kineticlinks VPS",
+      "words": 3,
+      "chars": 22,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 3869,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "適合的客戶類型",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 4650,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸閱讀與相關服務",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5334,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "常見問題",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5831,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "準備好升級您的主機架構了嗎？",
+      "words": 1,
+      "chars": 14,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.74,
+      "top": 6574,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      17,
+      22,
+      24,
+      40,
+      64
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "text": "VPS 虛擬專屬主機"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.28,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1166,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 3773,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.58
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.27
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.13
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      },
+      {
+       "color": "#04121a",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#121b2b",
+      "hsl": {
+       "h": 218,
+       "s": 0.41,
+       "l": 0.12
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 4,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "聯絡我們",
+      "繁體中文 ▼",
+      "取得主機方案報價",
+      "查看其他服務"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 22,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3243
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4024
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4805
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5490
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.34
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 103,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7279,
+    "margins": {
+     "left": 152,
+     "right": 185
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 4,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 152,
+      "right": 1052,
+      "textLeft": 152,
+      "textRight": 1052,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 864,
+      "words": 24,
+      "media": 1,
+      "middle": 57,
+      "heading": {
+       "text": "VPS 虛擬專屬主機",
+       "size": 64,
+       "tag": "h1"
+      },
+      "left": 152,
+      "right": 152,
+      "textLeft": 152,
+      "textRight": 884,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 990,
+      "height": 660,
+      "words": 55,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "什麼是 VPS 虛擬專屬主機？",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 524,
+      "textLeft": 152,
+      "textRight": 524,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 1649,
+      "height": 451,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 693,
+      "textLeft": 152,
+      "textRight": 693,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2100,
+      "height": 451,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 880,
+      "textLeft": 152,
+      "textRight": 880,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2551,
+      "height": 451,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 846,
+      "textLeft": 152,
+      "textRight": 846,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3002,
+      "height": 771,
+      "words": 20,
+      "media": 0,
+      "middle": 106,
+      "heading": {
+       "text": "適用場景",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 190,
+      "textLeft": 152,
+      "textRight": 190,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3773,
+      "height": 781,
+      "words": 22,
+      "media": 0,
+      "middle": 103,
+      "heading": {
+       "text": "為什麼選擇 Kineticlinks VPS",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 185,
+      "textLeft": 152,
+      "textRight": 185,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4554,
+      "height": 781,
+      "words": 12,
+      "media": 0,
+      "middle": 108,
+      "heading": {
+       "text": "適合的客戶類型",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 213,
+      "textLeft": 152,
+      "textRight": 213,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 5334,
+      "height": 401,
+      "words": 14,
+      "media": 0,
+      "middle": 81,
+      "heading": {
+       "text": "延伸閱讀與相關服務",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 190,
+      "textLeft": 152,
+      "textRight": 190,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 5735,
+      "height": 774,
+      "words": 39,
+      "media": 0,
+      "middle": 20,
+      "heading": {
+       "text": "常見問題",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 331,
+      "textLeft": 152,
+      "textRight": 331,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 6510,
+      "height": 402,
+      "words": 5,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "準備好升級您的主機架構了嗎？",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 448,
+      "right": 448,
+      "textLeft": 448,
+      "textRight": 448,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 6912,
+      "height": 367,
+      "words": 89,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 22,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 162,
+      "textLeft": 152,
+      "textRight": 162,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "VPS 虛擬專屬主機",
+      "size": 64,
+      "top": 347,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 152,
+      "n": 8
+     },
+     {
+      "x": 180,
+      "n": 7
+     },
+     {
+      "x": 768,
+      "n": 6
+     },
+     {
+      "x": 192,
+      "n": 3
+     },
+     {
+      "x": 327,
+      "n": 3
+     },
+     {
+      "x": 567,
+      "n": 1
+     },
+     {
+      "x": 953,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 29,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.09,
+    "voidBox": {
+     "x": 420,
+     "y": 120,
+     "w": 1020,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.62,
+    0.72,
+    1,
+    0.73,
+    0.79,
+    0.64,
+    0.91,
+    0.91
+   ],
+   "motion": {
+    "elements": 35,
+    "css": 4,
+    "transitions": 31,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 7549,
+     "screens": 7.4,
+     "words": 214,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "a-system-administrator-s-workstation-within-a.jp",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "kneller-hall-telephone-exchange-2-geograph-org.j",
+      "1940s-n935-telephone-exchange.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "VPS 虛擬專屬主機",
+     "words": 2,
+     "chars": 10,
+     "lines": 1,
+     "size": 51.5,
+     "vw": 6.7,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.79,
+     "top": 230,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "VPS 虛擬專屬主機",
+     "words": 2,
+     "lines": 1,
+     "size": 51.5,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "VPS 虛擬專屬主機",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 230,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "什麼是 VPS 虛擬專屬主機？",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 1430,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "適用場景",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 3444,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "為什麼選擇 Kineticlinks VPS",
+      "words": 3,
+      "chars": 22,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 4175,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "適合的客戶類型",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 4906,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸閱讀與相關服務",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 5546,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "常見問題",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 6139,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "準備好升級您的主機架構了嗎？",
+      "words": 1,
+      "chars": 14,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 6802,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      17,
+      20,
+      24,
+      34,
+      52
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.9,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 78,
+     "max": {
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "text": "VPS 虛擬專屬主機"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.28,
+     "centerShare": 0.1,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1502,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 4111,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.58
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.27
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.13
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      },
+      {
+       "color": "#04121a",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "取得主機方案報價",
+      "查看其他服務"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 17,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3592
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4323
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5054
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5693
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.4
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 7549,
+    "margins": {
+     "left": 32,
+     "right": 38
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 4,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 500,
+      "textLeft": 32,
+      "textRight": 500,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 1240,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "VPS 虛擬專屬主機",
+       "size": 51,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 104,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1366,
+      "height": 614,
+      "words": 55,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "什麼是 VPS 虛擬專屬主機？",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 57,
+      "textLeft": 32,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 1980,
+      "height": 472,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 145,
+      "textLeft": 32,
+      "textRight": 145,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2452,
+      "height": 472,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 330,
+      "textLeft": 32,
+      "textRight": 330,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2924,
+      "height": 472,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 297,
+      "textLeft": 32,
+      "textRight": 297,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3396,
+      "height": 715,
+      "words": 20,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "適用場景",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4111,
+      "height": 731,
+      "words": 22,
+      "media": 0,
+      "middle": 7,
+      "heading": {
+       "text": "為什麼選擇 Kineticlinks VPS",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4842,
+      "height": 704,
+      "words": 12,
+      "media": 0,
+      "middle": 87,
+      "heading": {
+       "text": "適合的客戶類型",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 5546,
+      "height": 529,
+      "words": 14,
+      "media": 0,
+      "middle": 71,
+      "heading": {
+       "text": "延伸閱讀與相關服務",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 74,
+      "textLeft": 32,
+      "textRight": 74,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 6075,
+      "height": 663,
+      "words": 39,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "常見問題",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 61,
+      "textLeft": 32,
+      "textRight": 61,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 6738,
+      "height": 363,
+      "words": 5,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "準備好升級您的主機架構了嗎？",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 134,
+      "right": 134,
+      "textLeft": 134,
+      "textRight": 134,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7101,
+      "height": 448,
+      "words": 89,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 20,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 33,
+      "textLeft": 32,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "VPS 虛擬專屬主機",
+      "size": 51,
+      "top": 230,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 56,
+      "n": 14
+     },
+     {
+      "x": 32,
+      "n": 8
+     },
+     {
+      "x": 424,
+      "n": 7
+     }
+    ],
+    "leftBlocks": 29,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.43,
+    0.67,
+    0.83,
+    1,
+    0.66,
+    0.73,
+    1,
+    0.67,
+    0.61,
+    0.91,
+    0.87,
+    0.93
+   ],
+   "motion": {
+    "elements": 35,
+    "css": 4,
+    "transitions": 31,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 9628,
+     "screens": 11.4,
+     "words": 214,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "a-system-administrator-s-workstation-within-a.jp",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "kneller-hall-telephone-exchange-2-geograph-org.j",
+      "1940s-n935-telephone-exchange.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "VPS 虛擬專屬主機",
+     "words": 2,
+     "chars": 10,
+     "lines": 1,
+     "size": 36,
+     "vw": 9.2,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 230,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "VPS 虛擬專屬主機",
+     "words": 2,
+     "lines": 1,
+     "size": 36,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "VPS 虛擬專屬主機",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 230,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "什麼是 VPS 虛擬專屬主機？",
+      "words": 3,
+      "chars": 15,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 1455,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "適用場景",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 3637,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "為什麼選擇 Kineticlinks VPS",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4827,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "適合的客戶類型",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 6078,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸閱讀與相關服務",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 7153,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "常見問題",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 7895,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "準備好升級您的主機架構了嗎？",
+      "words": 1,
+      "chars": 14,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 8571,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      24,
+      28,
+      36
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.2,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 34,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "text": "VPS 虛擬專屬主機"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.28,
+     "centerShare": 0.1,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1555,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 4763,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.58
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.27
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.13
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      },
+      {
+       "color": "#04121a",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 2,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "取得主機方案報價",
+      "查看其他服務"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 18,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3802
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5027
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6218
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 7292
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.11
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 9628,
+    "margins": {
+     "left": 32,
+     "right": 34
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 4,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 122,
+      "textLeft": 32,
+      "textRight": 122,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 1265,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "VPS 虛擬專屬主機",
+       "size": 36,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1391,
+      "height": 912,
+      "words": 55,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "什麼是 VPS 虛擬專屬主機？",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 56,
+      "textLeft": 32,
+      "textRight": 56,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2303,
+      "height": 429,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2731,
+      "height": 429,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3160,
+      "height": 429,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3589,
+      "height": 1175,
+      "words": 20,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "適用場景",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 46,
+      "textLeft": 32,
+      "textRight": 46,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4763,
+      "height": 1251,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "為什麼選擇 Kineticlinks VPS",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 6014,
+      "height": 1139,
+      "words": 12,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "適合的客戶類型",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 57,
+      "textLeft": 32,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 7153,
+      "height": 678,
+      "words": 14,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "延伸閱讀與相關服務",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 50,
+      "textLeft": 32,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 7831,
+      "height": 677,
+      "words": 38,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "常見問題",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 57,
+      "textLeft": 32,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 8507,
+      "height": 414,
+      "words": 5,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "準備好升級您的主機架構了嗎？",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 65,
+      "right": 65,
+      "textLeft": 65,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 8921,
+      "height": 707,
+      "words": 89,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 18,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 39,
+      "textLeft": 32,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "VPS 虛擬專屬主機",
+      "size": 36,
+      "top": 230,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 56,
+      "n": 21
+     },
+     {
+      "x": 32,
+      "n": 8
+     }
+    ],
+    "leftBlocks": 29,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "4 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 152px on the left, 185px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 1440,
+   "message": "The h1 is a bare name (\"VPS 虛擬專屬主機\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-vps/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-vps/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-vps/desktop-page-02.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-vps/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-vps/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-vps/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-vps/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-vps/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-vps/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-vps/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

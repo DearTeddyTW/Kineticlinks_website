@@ -1,0 +1,2489 @@
+{
+ "url": "http://localhost:8131/en/",
+ "at": "2026-10-25T12:40:18.027Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.54,
+    0.66,
+    0.87,
+    0.83,
+    0.74,
+    0.93,
+    0.76,
+    0.8
+   ],
+   "motion": {
+    "elements": 32,
+    "css": 7,
+    "transitions": 25,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6546,
+     "screens": 7.3,
+     "words": 791,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 3,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "principal-ocean-cables-in-1917.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "1640-map-of-formosa-taiwan-by-dutch.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Kineticlinks",
+     "words": 1,
+     "chars": 12,
+     "lines": 1,
+     "size": 60,
+     "vw": 4.2,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": -0.035,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.44,
+     "top": 120,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Kineticlinks",
+     "words": 1,
+     "lines": 1,
+     "size": 60,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 60,
+      "vw": 4.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 120,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Written and run by us",
+      "words": 5,
+      "chars": 21,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 596,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Resold from upstream, planned and integrated by us",
+      "words": 8,
+      "chars": 50,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1500,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Technology-Driven Professional IT Team",
+      "words": 4,
+      "chars": 38,
+      "lines": 2,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 2688,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "24/7",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 3000,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "17",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 3000,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 3173,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 3173,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Latest Articles",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 3491,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions About Kineticlinks",
+      "words": 5,
+      "chars": 45,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 4719,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to Upgrade Your Infrastructure?",
+      "words": 5,
+      "chars": 37,
+      "lines": 2,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.33,
+      "top": 5602,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 4,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.07,
+       "mono": false
+      },
+      {
+       "family": "monospace",
+       "share": 0.03,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      24,
+      32,
+      36,
+      40,
+      60
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.2
+     },
+     "measureChars": 71,
+     "max": {
+      "size": 60,
+      "vw": 4.2,
+      "font": "Outfit",
+      "text": "Kinetic"
+     },
+     "monoShare": 0.03,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.04,
+     "smallText": 3
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1800,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 2592,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.51
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.23
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.22
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.03
+      },
+      {
+       "color": "#04121a",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#121b2b",
+      "hsl": {
+       "h": 218,
+       "s": 0.41,
+       "l": 0.12
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Contact",
+      "English ▼"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 34,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1592
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 2976
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3647
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.14
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 103,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6546,
+    "margins": {
+     "left": 32,
+     "right": 33
+    },
+    "sections": [
+     {
+      "sel": "div.b-grid",
+      "tag": "div",
+      "top": 96,
+      "height": 408,
+      "words": 49,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 60,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 119,
+      "textLeft": 56,
+      "textRight": 119,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div#platforms.b-field.b-field-run",
+      "tag": "div",
+      "top": 584,
+      "height": 824,
+      "words": 104,
+      "media": 1,
+      "middle": 45,
+      "heading": {
+       "text": "Written and run by us",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 56,
+      "right": 32,
+      "textLeft": 56,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div#services.b-field.b-field-resell",
+      "tag": "div",
+      "top": 1488,
+      "height": 616,
+      "words": 107,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Resold from upstream, planned and integrated by us",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 56,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.b-grid.b-close",
+      "tag": "div",
+      "top": 2184,
+      "height": 408,
+      "words": 26,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 32,
+      "textLeft": 56,
+      "textRight": 406,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about.section",
+      "tag": "section",
+      "top": 2592,
+      "height": 803,
+      "words": 111,
+      "media": 0,
+      "middle": 149,
+      "heading": {
+       "text": "Technology-Driven",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 120,
+      "right": 205,
+      "textLeft": 120,
+      "textRight": 205,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.latest-section",
+      "tag": "section",
+      "top": 3395,
+      "height": 1229,
+      "words": 171,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Latest",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 120,
+      "right": 179,
+      "textLeft": 120,
+      "textRight": 179,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 4623,
+      "height": 818,
+      "words": 265,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions About Kineticlinks",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 120,
+      "right": 161,
+      "textLeft": 120,
+      "textRight": 161,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact.section",
+      "tag": "section",
+      "top": 5442,
+      "height": 748,
+      "words": 39,
+      "media": 0,
+      "middle": 84,
+      "heading": {
+       "text": "Ready to Upgrade Your",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 184,
+      "right": 184,
+      "textLeft": 184,
+      "textRight": 387,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 6189,
+      "height": 356,
+      "words": 112,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 33,
+      "textLeft": 32,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Kineticlinks",
+      "size": 60,
+      "top": 120,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 152,
+      "n": 11
+     },
+     {
+      "x": 56,
+      "n": 5
+     },
+     {
+      "x": 120,
+      "n": 5
+     },
+     {
+      "x": 184,
+      "n": 3
+     },
+     {
+      "x": 235,
+      "n": 2
+     },
+     {
+      "x": 748,
+      "n": 2
+     },
+     {
+      "x": 402,
+      "n": 1
+     },
+     {
+      "x": 1094,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 30,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.11,
+    "voidBox": {
+     "x": 960,
+     "y": 360,
+     "w": 480,
+     "h": 300
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.69,
+    0.69,
+    0.89,
+    1,
+    0.7,
+    0.87,
+    0.9,
+    0.92
+   ],
+   "motion": {
+    "elements": 32,
+    "css": 7,
+    "transitions": 25,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 7558,
+     "screens": 7.4,
+     "words": 783,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 3,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "principal-ocean-cables-in-1917.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "1640-map-of-formosa-taiwan-by-dutch.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Kineticlinks",
+     "words": 1,
+     "chars": 12,
+     "lines": 1,
+     "size": 46.8,
+     "vw": 6.1,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": -0.035,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.91,
+     "top": 99,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Kineticlinks",
+     "words": 1,
+     "lines": 1,
+     "size": 46.8,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 46.8,
+      "vw": 6.1,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.91,
+      "top": 99,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Written and run by us",
+      "words": 5,
+      "chars": 21,
+      "lines": 1,
+      "size": 29.9,
+      "vw": 3.9,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.91,
+      "top": 748,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Resold from upstream, planned and integrated by us",
+      "words": 8,
+      "chars": 50,
+      "lines": 1,
+      "size": 29.9,
+      "vw": 3.9,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.91,
+      "top": 1880,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Technology-Driven Professional IT Team",
+      "words": 4,
+      "chars": 38,
+      "lines": 2,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 3143,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "24/7",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 29.9,
+      "vw": 3.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 3429,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "17",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 29.9,
+      "vw": 3.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.4,
+      "top": 3429,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 29.9,
+      "vw": 3.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 3568,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 29.9,
+      "vw": 3.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.4,
+      "top": 3568,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Latest Articles",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 4251,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions About Kineticlinks",
+      "words": 5,
+      "chars": 45,
+      "lines": 2,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 5404,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to Upgrade Your Infrastructure?",
+      "words": 5,
+      "chars": 37,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.91,
+      "top": 6199,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 4,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.07,
+       "mono": false
+      },
+      {
+       "family": "monospace",
+       "share": 0.03,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      21,
+      24,
+      30,
+      32,
+      40,
+      47
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.9,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.2
+     },
+     "measureChars": 92,
+     "max": {
+      "size": 46.8,
+      "vw": 6.1,
+      "font": "Outfit",
+      "text": "Kinetic"
+     },
+     "monoShare": 0.03,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.08,
+     "smallText": 3
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 3079,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      },
+      {
+       "color": "#0d1420",
+       "top": 3723,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.51
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.23
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.22
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.03
+      },
+      {
+       "color": "#04121a",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#121b2b",
+      "hsl": {
+       "h": 218,
+       "s": 0.41,
+       "l": 0.12
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 0,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 29,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3405
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.14
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 7558,
+    "margins": {
+     "left": 17,
+     "right": 17
+    },
+    "sections": [
+     {
+      "sel": "div.b-grid",
+      "tag": "div",
+      "top": 81,
+      "height": 616,
+      "words": 49,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 47,
+       "tag": "h1"
+      },
+      "left": 17,
+      "right": 17,
+      "textLeft": 35,
+      "textRight": 90,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div#platforms.b-field.b-field-run",
+      "tag": "div",
+      "top": 745,
+      "height": 1084,
+      "words": 104,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Written and run by us",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 17,
+      "textLeft": 35,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div#services.b-field.b-field-resell",
+      "tag": "div",
+      "top": 1877,
+      "height": 850,
+      "words": 107,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Resold from upstream, planned and integrated by us",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 17,
+      "textLeft": 35,
+      "textRight": 35,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.b-grid.b-close",
+      "tag": "div",
+      "top": 2775,
+      "height": 304,
+      "words": 26,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 17,
+      "right": 17,
+      "textLeft": 35,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about.section",
+      "tag": "section",
+      "top": 3079,
+      "height": 1108,
+      "words": 111,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Technology-Driven",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 34,
+      "textLeft": 17,
+      "textRight": 34,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.latest-section",
+      "tag": "section",
+      "top": 4187,
+      "height": 1153,
+      "words": 171,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Latest",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 66,
+      "textLeft": 17,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 5340,
+      "height": 762,
+      "words": 208,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions About Kineticlinks",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 44,
+      "textLeft": 17,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact.section",
+      "tag": "section",
+      "top": 6103,
+      "height": 953,
+      "words": 39,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to Upgrade Your",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 49,
+      "right": 49,
+      "textLeft": 49,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7055,
+      "height": 502,
+      "words": 112,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 17,
+      "right": 26,
+      "textLeft": 17,
+      "textRight": 26,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Kineticlinks",
+      "size": 47,
+      "top": 99,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 35,
+      "n": 15
+     },
+     {
+      "x": 17,
+      "n": 5
+     },
+     {
+      "x": 49,
+      "n": 3
+     },
+     {
+      "x": 141,
+      "n": 1
+     },
+     {
+      "x": 175,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 25,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 11,
+   "filled": [
+    0.68,
+    0.55,
+    0.85,
+    0.89,
+    1,
+    0.74,
+    0.77,
+    1,
+    0.92,
+    0.92,
+    0.93
+   ],
+   "motion": {
+    "elements": 31,
+    "css": 7,
+    "transitions": 24,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 8540,
+     "screens": 10.1,
+     "words": 783,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 3,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "principal-ocean-cables-in-1917.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "1640-map-of-formosa-taiwan-by-dutch.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Kineticlinks",
+     "words": 1,
+     "chars": 12,
+     "lines": 1,
+     "size": 32.4,
+     "vw": 8.3,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": -0.035,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.83,
+     "top": 98,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Kineticlinks",
+     "words": 1,
+     "lines": 1,
+     "size": 32.4,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 32.4,
+      "vw": 8.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 98,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Written and run by us",
+      "words": 5,
+      "chars": 21,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 759,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Resold from upstream, planned and integrated by us",
+      "words": 8,
+      "chars": 50,
+      "lines": 2,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 1858,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Technology-Driven Professional IT Team",
+      "words": 4,
+      "chars": 38,
+      "lines": 3,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3142,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "24/7",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 3579,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "17",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.31,
+      "top": 3579,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 3762,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.31,
+      "top": 3762,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Latest Articles",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4515,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions About Kineticlinks",
+      "words": 5,
+      "chars": 45,
+      "lines": 3,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 5982,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to Upgrade Your Infrastructure?",
+      "words": 5,
+      "chars": 37,
+      "lines": 3,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 6941,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.8,
+      "top": 7926,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 13,
+     "maxLines": 3,
+     "over2Lines": 3,
+     "statements": 0,
+     "centered": 5,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.07,
+       "mono": false
+      },
+      {
+       "family": "monospace",
+       "share": 0.03,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      24,
+      32,
+      40
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9
+     },
+     "measureChars": 45,
+     "max": {
+      "size": 40,
+      "vw": 10.3,
+      "font": "Outfit",
+      "text": "Technology-DrivenProfessional IT Team"
+     },
+     "monoShare": 0.03,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.08,
+     "smallText": 3
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1524,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 3078,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.51
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.23
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.22
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.03
+      },
+      {
+       "color": "#04121a",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#121b2b",
+      "hsl": {
+       "h": 218,
+       "s": 0.41,
+       "l": 0.12
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 0,
+     "radius": 2,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 32,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 4,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3555
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.16
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 8540,
+    "margins": {
+     "left": 16,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "div.b-grid",
+      "tag": "div",
+      "top": 80,
+      "height": 616,
+      "words": 49,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 34,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div#platforms.b-field.b-field-run",
+      "tag": "div",
+      "top": 744,
+      "height": 1084,
+      "words": 90,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 16,
+      "textLeft": 34,
+      "textRight": 34,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div#services.b-field.b-field-resell",
+      "tag": "div",
+      "top": 1876,
+      "height": 850,
+      "words": 107,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Resold from upstream, planned and integrated by us",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 34,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.b-grid.b-close",
+      "tag": "div",
+      "top": 2774,
+      "height": 304,
+      "words": 26,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 16,
+      "textLeft": 34,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about.section",
+      "tag": "section",
+      "top": 3078,
+      "height": 1373,
+      "words": 111,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Technology-Driven",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.latest-section",
+      "tag": "section",
+      "top": 4451,
+      "height": 1468,
+      "words": 171,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Latest",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 41,
+      "textLeft": 16,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 5918,
+      "height": 927,
+      "words": 164,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions About Kineticlinks",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 19,
+      "textLeft": 16,
+      "textRight": 19,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact.section",
+      "tag": "section",
+      "top": 6845,
+      "height": 1017,
+      "words": 39,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to Upgrade Your",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 48,
+      "right": 28,
+      "textLeft": 48,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7862,
+      "height": 678,
+      "words": 112,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 16,
+      "right": 17,
+      "textLeft": 16,
+      "textRight": 17,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 4252,
+      "height": 260
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Kineticlinks",
+      "size": 32,
+      "top": 98,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 34,
+      "n": 14
+     },
+     {
+      "x": 16,
+      "n": 5
+     },
+     {
+      "x": 48,
+      "n": 3
+     },
+     {
+      "x": 131,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 24,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "3 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid."
+  },
+  {
+   "level": "WARN",
+   "id": "font-count",
+   "width": 1440,
+   "message": "3 typefaces in use (Inter, Outfit, monospace).",
+   "fix": "Two at most.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "11 different font sizes (13, 14, 15, 16, 17, 18, 24, 32, 36, 40, 60).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "small-text",
+   "width": 1440,
+   "message": "3 text block(s) under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 768,
+   "message": "No visible button in the first screen.",
+   "fix": "Give the one primary action a real button in the first screen (a filled or solid-bordered control, 44px or taller), not only a link in the navigation.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 768,
+   "message": "Longest paragraph runs about 92 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "3 headline(s) wrap past two lines at 390px: \"Technology-Driven Professional IT Team\" → 3 lines (4 words, 40px); \"Frequently Asked Questions About Kineticlinks\" → 3 lines (5 words, 40px); \"Ready to Upgrade Your Infrastructure?\" → 3 lines (5 words, 32px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-en/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-en/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-en/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-en/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-en/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-en/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-en/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-en/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-en/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

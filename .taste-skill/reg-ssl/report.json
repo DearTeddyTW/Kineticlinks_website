@@ -1,0 +1,2530 @@
+{
+ "url": "http://localhost:8131/ssl/",
+ "at": "2026-10-25T12:39:13.333Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.44,
+    0.37,
+    0.71,
+    1,
+    0.82,
+    0.48,
+    0.53,
+    0.47,
+    0.87,
+    1
+   ],
+   "motion": {
+    "elements": 32,
+    "css": 6,
+    "transitions": 26,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 8372,
+     "screens": 9.3,
+     "words": 282,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "traite-d-alliance-france-russie-prusse-1717.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "憑證自動化， 私鑰不必交出去",
+     "words": 2,
+     "chars": 14,
+     "lines": 2,
+     "size": 64,
+     "vw": 4.4,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.34,
+     "top": 355,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "憑證自動化， 私鑰不必交出去",
+     "words": 2,
+     "lines": 2,
+     "size": 64,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "憑證自動化， 私鑰不必交出去",
+      "words": 2,
+      "chars": 14,
+      "lines": 2,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 355,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "一次部署實際發生什麼",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 950,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "它接得到你已經在用的東西",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 3110,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "安全性與治理",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 4707,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "方案與價格",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5586,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "免費",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 5798,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "US$29",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.08,
+      "top": 5798,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "US$149",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.1,
+      "top": 5798,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "常見問題",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 6682,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "想先確認它能不能通過你們的稽核？",
+      "words": 1,
+      "chars": 16,
+      "lines": 2,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 7689,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 3,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      14,
+      15,
+      17,
+      18,
+      22,
+      24,
+      40,
+      64
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 22,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 17.3
+     },
+     "measureChars": 58,
+     "max": {
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "text": "憑證自動化，"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.11,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#070b14",
+       "top": 0,
+       "hsl": {
+        "h": 222,
+        "s": 0.48,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#0d1420",
+       "top": 0,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#00f2fe",
+       "top": 7559,
+       "hsl": {
+        "h": 183,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 8060,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.52
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.23
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.2
+      },
+      {
+       "color": "#04121a",
+       "share": 0.03
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 3,
+     "radius": 2,
+     "height": 57,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "聯絡我們",
+      "繁體中文 ▼",
+      "建立帳號"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 15,
+     "boxRadius": 6,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3291
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4872
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5722
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 105,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 8372,
+    "margins": {
+     "left": 152,
+     "right": 196
+    },
+    "sections": [
+     {
+      "sel": "header.s-hero",
+      "tag": "header",
+      "top": 0,
+      "height": 792,
+      "words": 23,
+      "media": 0,
+      "middle": 215,
+      "heading": {
+       "text": "憑證自動化，",
+       "size": 64,
+       "tag": "h1"
+      },
+      "left": 176,
+      "right": 159,
+      "textLeft": 176,
+      "textRight": 159,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-flow",
+      "tag": "section",
+      "top": 792,
+      "height": 1490,
+      "words": 47,
+      "media": 0,
+      "middle": 177,
+      "heading": {
+       "text": "一次部署實際發生什麼",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 469,
+      "textLeft": 176,
+      "textRight": 469,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-seal",
+      "tag": "figure",
+      "top": 2282,
+      "height": 669,
+      "words": 10,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 176,
+      "right": 839,
+      "textLeft": 176,
+      "textRight": 839,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-int",
+      "tag": "section",
+      "top": 2952,
+      "height": 983,
+      "words": 38,
+      "media": 0,
+      "middle": 116,
+      "heading": {
+       "text": "它接得到你已經在用的東西",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 225,
+      "textLeft": 176,
+      "textRight": 225,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-rack",
+      "tag": "figure",
+      "top": 3934,
+      "height": 615,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 176,
+      "right": 839,
+      "textLeft": 176,
+      "textRight": 839,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4549,
+      "height": 878,
+      "words": 27,
+      "media": 0,
+      "middle": 35,
+      "heading": {
+       "text": "安全性與治理",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 196,
+      "textLeft": 152,
+      "textRight": 196,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5427,
+      "height": 1096,
+      "words": 47,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "方案與價格",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 376,
+      "textLeft": 152,
+      "textRight": 376,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-faq",
+      "tag": "section",
+      "top": 6524,
+      "height": 1035,
+      "words": 103,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "常見問題",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 582,
+      "textLeft": 176,
+      "textRight": 582,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-cta",
+      "tag": "section",
+      "top": 7559,
+      "height": 502,
+      "words": 6,
+      "media": 0,
+      "middle": 119,
+      "heading": {
+       "text": "想先確認它能不能通過你們的稽核？",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 498,
+      "textLeft": 176,
+      "textRight": 498,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 8060,
+      "height": 312,
+      "words": 77,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 174,
+      "textLeft": 152,
+      "textRight": 174,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 2792,
+      "height": 312
+     },
+     {
+      "top": 4388,
+      "height": 316
+     },
+     {
+      "top": 5204,
+      "height": 376
+     },
+     {
+      "top": 6332,
+      "height": 344
+     }
+    ],
+    "h1s": [
+     {
+      "text": "憑證自動化， 私鑰不必交出去",
+      "size": 64,
+      "top": 355,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 176,
+      "n": 14
+     },
+     {
+      "x": 220,
+      "n": 5
+     },
+     {
+      "x": 768,
+      "n": 4
+     },
+     {
+      "x": 152,
+      "n": 2
+     },
+     {
+      "x": 287,
+      "n": 1
+     },
+     {
+      "x": 515,
+      "n": 1
+     },
+     {
+      "x": 845,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 28,
+    "bodySize": 22,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.24,
+    "voidBox": {
+     "x": 420,
+     "y": 600,
+     "w": 1020,
+     "h": 300
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.64,
+    0.48,
+    0.91,
+    1,
+    0.65,
+    0.61,
+    0.68,
+    0.98,
+    0.99
+   ],
+   "motion": {
+    "elements": 33,
+    "css": 6,
+    "transitions": 27,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 8242,
+     "screens": 8,
+     "words": 274,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "traite-d-alliance-france-russie-prusse-1717.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "憑證自動化， 私鑰不必交出去",
+     "words": 2,
+     "chars": 14,
+     "lines": 2,
+     "size": 41.6,
+     "vw": 5.4,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.64,
+     "top": 639,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "憑證自動化， 私鑰不必交出去",
+     "words": 2,
+     "lines": 2,
+     "size": 41.6,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "憑證自動化， 私鑰不必交出去",
+      "words": 2,
+      "chars": 14,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 5.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.64,
+      "top": 639,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "一次部署實際發生什麼",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1067,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "它接得到你已經在用的東西",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.68,
+      "top": 3047,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "安全性與治理",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 4743,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "方案與價格",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 5593,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "免費",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 5796,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "US$29",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.13,
+      "top": 5796,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "US$149",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.15,
+      "top": 5796,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "常見問題",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 6587,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "想先確認它能不能通過你們的稽核？",
+      "words": 1,
+      "chars": 16,
+      "lines": 2,
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.61,
+      "top": 7451,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 3,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      20,
+      24,
+      34,
+      42,
+      52
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 19.9,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 17.3
+     },
+     "measureChars": 58,
+     "max": {
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "text": "想先確認它能不能通過你們的稽核？"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.11,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#070b14",
+       "top": 583,
+       "hsl": {
+        "h": 222,
+        "s": 0.48,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#0d1420",
+       "top": 0,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#00f2fe",
+       "top": 7379,
+       "hsl": {
+        "h": 183,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 7841,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.52
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.23
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.2
+      },
+      {
+       "color": "#04121a",
+       "share": 0.03
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 2,
+     "height": 57,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "建立帳號"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 15,
+     "boxRadius": 6,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3321
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4900
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5722
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 8242,
+    "margins": {
+     "left": 31,
+     "right": 64
+    },
+    "sections": [
+     {
+      "sel": "header.s-hero",
+      "tag": "header",
+      "top": 0,
+      "height": 971,
+      "words": 23,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 31,
+      "right": 183,
+      "textLeft": 31,
+      "textRight": 183,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-flow",
+      "tag": "section",
+      "top": 971,
+      "height": 1349,
+      "words": 47,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "一次部署實際發生什麼",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 118,
+      "textLeft": 31,
+      "textRight": 118,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-seal",
+      "tag": "figure",
+      "top": 2320,
+      "height": 631,
+      "words": 10,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 31,
+      "right": 146,
+      "textLeft": 31,
+      "textRight": 146,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-int",
+      "tag": "section",
+      "top": 2951,
+      "height": 1119,
+      "words": 38,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "它接得到你已經在用的東西",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 112,
+      "textLeft": 31,
+      "textRight": 112,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-rack",
+      "tag": "figure",
+      "top": 4070,
+      "height": 577,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 31,
+      "right": 196,
+      "textLeft": 31,
+      "textRight": 196,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4647,
+      "height": 850,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "安全性與治理",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 64,
+      "textLeft": 32,
+      "textRight": 64,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5497,
+      "height": 994,
+      "words": 47,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "方案與價格",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 68,
+      "textLeft": 32,
+      "textRight": 68,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-faq",
+      "tag": "section",
+      "top": 6491,
+      "height": 888,
+      "words": 81,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "常見問題",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 115,
+      "textLeft": 31,
+      "textRight": 115,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-cta",
+      "tag": "section",
+      "top": 7379,
+      "height": 462,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "想先確認它能不能通過你們的稽核？",
+       "size": 51,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 247,
+      "textLeft": 31,
+      "textRight": 247,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7841,
+      "height": 401,
+      "words": 77,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 33,
+      "textLeft": 32,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "憑證自動化， 私鑰不必交出去",
+      "size": 42,
+      "top": 639,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 31,
+      "n": 11
+     },
+     {
+      "x": 75,
+      "n": 5
+     },
+     {
+      "x": 432,
+      "n": 4
+     },
+     {
+      "x": 64,
+      "n": 3
+     },
+     {
+      "x": 52,
+      "n": 2
+     },
+     {
+      "x": 141,
+      "n": 1
+     },
+     {
+      "x": 309,
+      "n": 1
+     },
+     {
+      "x": 555,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 28,
+    "bodySize": 20,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.71,
+    0.51,
+    0.82,
+    1,
+    1,
+    1,
+    0.55,
+    0.73,
+    0.62,
+    0.84,
+    0.68,
+    0.96
+   ],
+   "motion": {
+    "elements": 33,
+    "css": 6,
+    "transitions": 27,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 10574,
+     "screens": 12.5,
+     "words": 274,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [
+      "traite-d-alliance-france-russie-prusse-1717.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "憑證自動化， 私鑰不必交出去",
+     "words": 2,
+     "chars": 14,
+     "lines": 2,
+     "size": 30.4,
+     "vw": 7.8,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 587,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "憑證自動化， 私鑰不必交出去",
+     "words": 2,
+     "lines": 2,
+     "size": 30.4,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "憑證自動化， 私鑰不必交出去",
+      "words": 2,
+      "chars": 14,
+      "lines": 2,
+      "size": 30.4,
+      "vw": 7.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 587,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "一次部署實際發生什麼",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 986,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "它接得到你已經在用的東西",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2962,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "安全性與治理",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5587,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "方案與價格",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 6914,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "免費",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 7137,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "US$29",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 7401,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "US$149",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 7695,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "常見問題",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 8618,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "想先確認它能不能通過你們的稽核？",
+      "words": 1,
+      "chars": 16,
+      "lines": 2,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.85,
+      "top": 9588,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.8,
+      "top": 10024,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 3,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      24,
+      28,
+      30,
+      36
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 18.2,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 17.3
+     },
+     "measureChars": 31,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "text": "想先確認它能不能通過你們的稽核？"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.11,
+     "centerShare": 0.06,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#070b14",
+       "top": 555,
+       "hsl": {
+        "h": 222,
+        "s": 0.48,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#0d1420",
+       "top": 0,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#121b2b",
+       "top": 84,
+       "hsl": {
+        "h": 218,
+        "s": 0.41,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#00f2fe",
+       "top": 9516,
+       "hsl": {
+        "h": 183,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 9960,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.52
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.23
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.2
+      },
+      {
+       "color": "#04121a",
+       "share": 0.03
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "建立帳號"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 18,
+     "boxRadius": 6,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3527
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5766
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 7065
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 8697
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 10574,
+    "margins": {
+     "left": 20,
+     "right": 29
+    },
+    "sections": [
+     {
+      "sel": "header.s-hero",
+      "tag": "header",
+      "top": 0,
+      "height": 890,
+      "words": 23,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 24,
+      "textLeft": 20,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-flow",
+      "tag": "section",
+      "top": 890,
+      "height": 1398,
+      "words": 47,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "一次部署實際發生什麼",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 41,
+      "textLeft": 20,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-seal",
+      "tag": "figure",
+      "top": 2288,
+      "height": 578,
+      "words": 10,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 24,
+      "textLeft": 20,
+      "textRight": 24,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-int",
+      "tag": "section",
+      "top": 2866,
+      "height": 2099,
+      "words": 38,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "它接得到你已經在用的東西",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 31,
+      "textLeft": 20,
+      "textRight": 31,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "figure.s-band.s-band-rack",
+      "tag": "figure",
+      "top": 4964,
+      "height": 526,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 29,
+      "textLeft": 20,
+      "textRight": 29,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5491,
+      "height": 1327,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "安全性與治理",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 41,
+      "textLeft": 32,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 6818,
+      "height": 1704,
+      "words": 47,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "方案與價格",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 41,
+      "textLeft": 32,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-faq",
+      "tag": "section",
+      "top": 8522,
+      "height": 994,
+      "words": 82,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "常見問題",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 45,
+      "textLeft": 20,
+      "textRight": 45,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.s-cta",
+      "tag": "section",
+      "top": 9516,
+      "height": 445,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "想先確認它能不能通過你們的稽核？",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 29,
+      "textLeft": 20,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 9960,
+      "height": 614,
+      "words": 77,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 39,
+      "textLeft": 32,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "憑證自動化， 私鑰不必交出去",
+      "size": 30,
+      "top": 587,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 64,
+      "n": 15
+     },
+     {
+      "x": 20,
+      "n": 9
+     },
+     {
+      "x": 32,
+      "n": 2
+     },
+     {
+      "x": 52,
+      "n": 2
+     },
+     {
+      "x": 126,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 29,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "3 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 152px on the left, 196px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 768,
+   "message": "11 different font sizes (12, 13, 14, 15, 17, 18, 20, 24, 34, 42, 52).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-ssl/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-ssl/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-ssl/desktop-page-02.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-ssl/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-ssl/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-ssl/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-ssl/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-ssl/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-ssl/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/reg-ssl/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

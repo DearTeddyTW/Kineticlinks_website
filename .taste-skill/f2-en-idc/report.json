@@ -1,0 +1,2482 @@
+{
+ "url": "http://localhost:8131/en/idc/",
+ "at": "2026-10-25T12:50:21.809Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.47,
+    0.49,
+    1,
+    0.65,
+    0.87,
+    0.7,
+    0.52,
+    0.93,
+    0.83
+   ],
+   "motion": {
+    "elements": 35,
+    "css": 4,
+    "transitions": 31,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7760,
+     "screens": 8.6,
+     "words": 800,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "kneller-hall-telephone-exchange-2-geograph-org.j",
+      "kneller-hall-telephone-exchange-2-geograph-org.j",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "laying-the-submarine-cable-between-kurrachee-and"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Data Center Buildout",
+     "words": 3,
+     "chars": 20,
+     "lines": 2,
+     "size": 64,
+     "vw": 4.4,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.28,
+     "top": 303,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Data Center Buildout",
+     "words": 3,
+     "lines": 2,
+     "size": 64,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Data Center Buildout",
+      "words": 3,
+      "chars": 20,
+      "lines": 2,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 303,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What Is IDC Data Center Buildout?",
+      "words": 6,
+      "chars": 33,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1101,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Use Cases",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 3223,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why Choose Kineticlinks for IDC Buildout",
+      "words": 6,
+      "chars": 40,
+      "lines": 2,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 4085,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Who It's For",
+      "words": 3,
+      "chars": 12,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 4995,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Related Services & Reading",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5734,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 6258,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to Plan Your Dedicated Facility?",
+      "words": 6,
+      "chars": 38,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.74,
+      "top": 7001,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      17,
+      22,
+      24,
+      40,
+      64
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "text": "Data Center Buildout"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1181,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 3989,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.64
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.19
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.15
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      },
+      {
+       "color": "#04121a",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#121b2b",
+      "hsl": {
+       "h": 218,
+       "s": 0.41,
+       "l": 0.12
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 4,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Contact",
+      "English ▼",
+      "Book a Buildout Consultation",
+      "View Other Services"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 22,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3405
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4315
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5177
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5889
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.33
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 103,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7760,
+    "margins": {
+     "left": 152,
+     "right": 181
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 5,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 152,
+      "right": 1019,
+      "textLeft": 152,
+      "textRight": 1019,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 879,
+      "words": 51,
+      "media": 1,
+      "middle": 58,
+      "heading": {
+       "text": "Data Center Buildout",
+       "size": 64,
+       "tag": "h1"
+      },
+      "left": 152,
+      "right": 152,
+      "textLeft": 152,
+      "textRight": 885,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1005,
+      "height": 779,
+      "words": 174,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What Is IDC Data Center Buildout?",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 521,
+      "textLeft": 152,
+      "textRight": 521,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 1784,
+      "height": 451,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 181,
+      "textLeft": 152,
+      "textRight": 181,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2235,
+      "height": 451,
+      "words": 17,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 643,
+      "textLeft": 152,
+      "textRight": 643,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2685,
+      "height": 451,
+      "words": 16,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 586,
+      "textLeft": 152,
+      "textRight": 586,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3136,
+      "height": 853,
+      "words": 115,
+      "media": 0,
+      "middle": 59,
+      "heading": {
+       "text": "Use Cases",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 210,
+      "textLeft": 152,
+      "textRight": 210,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3989,
+      "height": 910,
+      "words": 120,
+      "media": 0,
+      "middle": 60,
+      "heading": {
+       "text": "Why Choose Kineticlinks for IDC Buildout",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 209,
+      "textLeft": 152,
+      "textRight": 209,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4899,
+      "height": 835,
+      "words": 90,
+      "media": 0,
+      "middle": 90,
+      "heading": {
+       "text": "Who It's For",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 213,
+      "textLeft": 152,
+      "textRight": 213,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 5734,
+      "height": 428,
+      "words": 60,
+      "media": 0,
+      "middle": 109,
+      "heading": {
+       "text": "Related Services & Reading",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 182,
+      "textLeft": 152,
+      "textRight": 182,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 6162,
+      "height": 774,
+      "words": 276,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 329,
+      "textLeft": 152,
+      "textRight": 329,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 6937,
+      "height": 430,
+      "words": 24,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to Plan Your Dedicated Facility?",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 402,
+      "right": 402,
+      "textLeft": 402,
+      "textRight": 402,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7366,
+      "height": 394,
+      "words": 118,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 22,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 177,
+      "textLeft": 152,
+      "textRight": 177,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Data Center Buildout",
+      "size": 64,
+      "top": 303,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 180,
+      "n": 14
+     },
+     {
+      "x": 152,
+      "n": 12
+     },
+     {
+      "x": 768,
+      "n": 12
+     },
+     {
+      "x": 327,
+      "n": 5
+     },
+     {
+      "x": 192,
+      "n": 3
+     },
+     {
+      "x": 567,
+      "n": 2
+     },
+     {
+      "x": 953,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 50,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.09,
+    "voidBox": {
+     "x": 420,
+     "y": 120,
+     "w": 1020,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.63,
+    0.84,
+    1,
+    0.75,
+    0.9,
+    0.64,
+    0.65,
+    0.91,
+    0.91
+   ],
+   "motion": {
+    "elements": 35,
+    "css": 4,
+    "transitions": 31,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 8411,
+     "screens": 8.2,
+     "words": 792,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "kneller-hall-telephone-exchange-2-geograph-org.j",
+      "kneller-hall-telephone-exchange-2-geograph-org.j",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "laying-the-submarine-cable-between-kurrachee-and"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Data Center Buildout",
+     "words": 3,
+     "chars": 20,
+     "lines": 1,
+     "size": 51.5,
+     "vw": 6.7,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.79,
+     "top": 230,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Data Center Buildout",
+     "words": 3,
+     "lines": 1,
+     "size": 51.5,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Data Center Buildout",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 230,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What Is IDC Data Center Buildout?",
+      "words": 6,
+      "chars": 33,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 1459,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Use Cases",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 3619,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why Choose Kineticlinks for IDC Buildout",
+      "words": 6,
+      "chars": 40,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 4560,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Who It's For",
+      "words": 3,
+      "chars": 12,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 5473,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Related Services & Reading",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 6248,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 6895,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to Plan Your Dedicated Facility?",
+      "words": 6,
+      "chars": 38,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 7579,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      17,
+      20,
+      24,
+      34,
+      52
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.9,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 78,
+     "max": {
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "text": "Data Center Buildout"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.07,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1531,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 4496,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.64
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.2
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.15
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      },
+      {
+       "color": "#04121a",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a Buildout Consultation",
+      "View Other Services"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 18,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3793
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4734
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5648
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6396
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.37
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 8411,
+    "margins": {
+     "left": 32,
+     "right": 53
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 5,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 467,
+      "textLeft": 32,
+      "textRight": 467,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 1269,
+      "words": 51,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Data Center Buildout",
+       "size": 51,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 126,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1395,
+      "height": 732,
+      "words": 174,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What Is IDC Data Center Buildout?",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 59,
+      "textLeft": 32,
+      "textRight": 59,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2127,
+      "height": 499,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 63,
+      "textLeft": 32,
+      "textRight": 63,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2626,
+      "height": 472,
+      "words": 17,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 94,
+      "textLeft": 32,
+      "textRight": 94,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3098,
+      "height": 472,
+      "words": 16,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 38,
+      "textLeft": 32,
+      "textRight": 38,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3571,
+      "height": 925,
+      "words": 115,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Use Cases",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4496,
+      "height": 914,
+      "words": 120,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Why Choose Kineticlinks for IDC Buildout",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 71,
+      "textLeft": 32,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5409,
+      "height": 839,
+      "words": 90,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Who It's For",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 69,
+      "textLeft": 32,
+      "textRight": 69,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 6248,
+      "height": 583,
+      "words": 60,
+      "media": 0,
+      "middle": 7,
+      "heading": {
+       "text": "Related Services & Reading",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 67,
+      "textLeft": 32,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 6831,
+      "height": 684,
+      "words": 237,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 57,
+      "textLeft": 32,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 7515,
+      "height": 390,
+      "words": 24,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to Plan Your Dedicated Facility?",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 85,
+      "right": 85,
+      "textLeft": 85,
+      "textRight": 85,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7905,
+      "height": 506,
+      "words": 118,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 20,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 53,
+      "textLeft": 32,
+      "textRight": 53,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Data Center Buildout",
+      "size": 51,
+      "top": 230,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 56,
+      "n": 24
+     },
+     {
+      "x": 424,
+      "n": 14
+     },
+     {
+      "x": 32,
+      "n": 12
+     }
+    ],
+    "leftBlocks": 50,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.4,
+    0.69,
+    0.84,
+    0.92,
+    0.87,
+    0.79,
+    0.81,
+    1,
+    0.69,
+    0.68,
+    0.7,
+    0.98
+   ],
+   "motion": {
+    "elements": 35,
+    "css": 4,
+    "transitions": 31,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 11277,
+     "screens": 13.4,
+     "words": 792,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "kneller-hall-telephone-exchange-2-geograph-org.j",
+      "kneller-hall-telephone-exchange-2-geograph-org.j",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "laying-the-submarine-cable-between-kurrachee-and"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Data Center Buildout",
+     "words": 3,
+     "chars": 20,
+     "lines": 1,
+     "size": 36,
+     "vw": 9.2,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 230,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Data Center Buildout",
+     "words": 3,
+     "lines": 1,
+     "size": 36,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Data Center Buildout",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 230,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What Is IDC Data Center Buildout?",
+      "words": 6,
+      "chars": 33,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 1482,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Use Cases",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4110,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why Choose Kineticlinks for IDC Buildout",
+      "words": 6,
+      "chars": 40,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5582,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Who It's For",
+      "words": 3,
+      "chars": 12,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 7105,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Related Services & Reading",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 8384,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 9229,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to Plan Your Dedicated Facility?",
+      "words": 6,
+      "chars": 38,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 10076,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      24,
+      28,
+      36
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.2,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 34,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "text": "Data Center Buildout"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.07,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1581,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 5518,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.64
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.2
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.15
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      },
+      {
+       "color": "#04121a",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 2,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a Buildout Consultation",
+      "View Other Services"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 22,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4327
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5807
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 7271
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 8549
+      },
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 9361
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 11277,
+    "margins": {
+     "left": 32,
+     "right": 36
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 5,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 89,
+      "textLeft": 32,
+      "textRight": 89,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 1292,
+      "words": 51,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Data Center Buildout",
+       "size": 36,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1418,
+      "height": 1281,
+      "words": 174,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What Is IDC Data Center Buildout?",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 59,
+      "textLeft": 32,
+      "textRight": 59,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2698,
+      "height": 480,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 50,
+      "textLeft": 32,
+      "textRight": 50,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3179,
+      "height": 429,
+      "words": 17,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 47,
+      "textLeft": 32,
+      "textRight": 47,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3607,
+      "height": 455,
+      "words": 16,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 55,
+      "textLeft": 32,
+      "textRight": 55,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4062,
+      "height": 1456,
+      "words": 115,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Use Cases",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5518,
+      "height": 1524,
+      "words": 120,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Why Choose Kineticlinks for IDC Buildout",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 7041,
+      "height": 1342,
+      "words": 90,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Who It's For",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 37,
+      "textLeft": 32,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 8384,
+      "height": 782,
+      "words": 60,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Related Services & Reading",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 40,
+      "textLeft": 32,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 9165,
+      "height": 846,
+      "words": 199,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 57,
+      "textLeft": 32,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 10012,
+      "height": 465,
+      "words": 24,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to Plan Your Dedicated Facility?",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 74,
+      "right": 74,
+      "textLeft": 74,
+      "textRight": 74,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 10477,
+      "height": 800,
+      "words": 118,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 18,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 36,
+      "textLeft": 32,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Data Center Buildout",
+      "size": 36,
+      "top": 230,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 56,
+      "n": 38
+     },
+     {
+      "x": 32,
+      "n": 12
+     }
+    ],
+    "leftBlocks": 50,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "4 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 152px on the left, 181px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    768
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-idc/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-idc/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-idc/desktop-page-02.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-idc/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-idc/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-idc/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-idc/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-idc/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-idc/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-idc/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

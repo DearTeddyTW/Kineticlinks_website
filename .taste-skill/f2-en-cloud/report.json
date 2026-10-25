@@ -1,0 +1,2487 @@
+{
+ "url": "http://localhost:8131/en/cloud/",
+ "at": "2026-10-25T12:50:54.097Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.47,
+    0.55,
+    0.87,
+    0.69,
+    0.82,
+    0.67,
+    0.54,
+    0.98,
+    0.78
+   ],
+   "motion": {
+    "elements": 35,
+    "css": 4,
+    "transitions": 31,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7932,
+     "screens": 8.8,
+     "words": 851,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "principal-ocean-cables-in-1917.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "1940s-n935-telephone-exchange.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Public Cloud Architecture",
+     "words": 3,
+     "chars": 25,
+     "lines": 2,
+     "size": 64,
+     "vw": 4.4,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.28,
+     "top": 303,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Public Cloud Architecture",
+     "words": 3,
+     "lines": 2,
+     "size": 64,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Public Cloud Architecture",
+      "words": 3,
+      "chars": 25,
+      "lines": 2,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 303,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What Is a Public Cloud Architecture Solution?",
+      "words": 7,
+      "chars": 45,
+      "lines": 2,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1159,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Use Cases",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 3418,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why Choose Kineticlinks Cloud Consulting",
+      "words": 5,
+      "chars": 40,
+      "lines": 2,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 4253,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Who It's For",
+      "words": 3,
+      "chars": 12,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5136,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Related Services & Reading",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5928,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 6452,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to Plan Your Cloud Architecture?",
+      "words": 6,
+      "chars": 38,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.74,
+      "top": 7195,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      17,
+      22,
+      24,
+      40,
+      64
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "text": "Public Cloud Architecture"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1287,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 4157,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.64
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.19
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.15
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      },
+      {
+       "color": "#04121a",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#121b2b",
+      "hsl": {
+       "h": 218,
+       "s": 0.41,
+       "l": 0.12
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 4,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Contact",
+      "English ▼",
+      "Book a Cloud Architecture Consultation",
+      "View Other Services"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 22,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3600
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4483
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5318
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6084
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.32
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 103,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7932,
+    "margins": {
+     "left": 152,
+     "right": 176
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 5,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 152,
+      "right": 989,
+      "textLeft": 152,
+      "textRight": 989,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 937,
+      "words": 76,
+      "media": 1,
+      "middle": 72,
+      "heading": {
+       "text": "Public Cloud Architecture",
+       "size": 64,
+       "tag": "h1"
+      },
+      "left": 152,
+      "right": 152,
+      "textLeft": 152,
+      "textRight": 899,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1063,
+      "height": 916,
+      "words": 204,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What Is a Public Cloud Architecture Solution?",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 526,
+      "textLeft": 152,
+      "textRight": 526,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 1979,
+      "height": 451,
+      "words": 21,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 329,
+      "textLeft": 152,
+      "textRight": 329,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2430,
+      "height": 451,
+      "words": 21,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 333,
+      "textLeft": 152,
+      "textRight": 333,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2880,
+      "height": 451,
+      "words": 14,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 631,
+      "textLeft": 152,
+      "textRight": 631,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3331,
+      "height": 825,
+      "words": 115,
+      "media": 0,
+      "middle": 93,
+      "heading": {
+       "text": "Use Cases",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 231,
+      "textLeft": 152,
+      "textRight": 231,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4157,
+      "height": 883,
+      "words": 128,
+      "media": 0,
+      "middle": 38,
+      "heading": {
+       "text": "Why Choose Kineticlinks Cloud Consulting",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 184,
+      "textLeft": 152,
+      "textRight": 184,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5040,
+      "height": 889,
+      "words": 112,
+      "media": 0,
+      "middle": 85,
+      "heading": {
+       "text": "Who It's For",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 187,
+      "textLeft": 152,
+      "textRight": 187,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 5928,
+      "height": 428,
+      "words": 63,
+      "media": 0,
+      "middle": 109,
+      "heading": {
+       "text": "Related Services & Reading",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 183,
+      "textLeft": 152,
+      "textRight": 183,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 6356,
+      "height": 774,
+      "words": 246,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 328,
+      "textLeft": 152,
+      "textRight": 328,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 7131,
+      "height": 430,
+      "words": 26,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to Plan Your Cloud Architecture?",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 396,
+      "right": 396,
+      "textLeft": 396,
+      "textRight": 396,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7560,
+      "height": 372,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 22,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 156,
+      "textLeft": 152,
+      "textRight": 156,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Public Cloud Architecture",
+      "size": 64,
+      "top": 303,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 180,
+      "n": 14
+     },
+     {
+      "x": 152,
+      "n": 12
+     },
+     {
+      "x": 768,
+      "n": 12
+     },
+     {
+      "x": 327,
+      "n": 5
+     },
+     {
+      "x": 192,
+      "n": 3
+     },
+     {
+      "x": 567,
+      "n": 2
+     },
+     {
+      "x": 953,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 50,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.09,
+    "voidBox": {
+     "x": 480,
+     "y": 120,
+     "w": 960,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.61,
+    0.78,
+    0.93,
+    0.83,
+    0.83,
+    0.69,
+    0.62,
+    0.91,
+    0.91
+   ],
+   "motion": {
+    "elements": 35,
+    "css": 4,
+    "transitions": 31,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 8670,
+     "screens": 8.5,
+     "words": 843,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "principal-ocean-cables-in-1917.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "1940s-n935-telephone-exchange.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Public Cloud Architecture",
+     "words": 3,
+     "chars": 25,
+     "lines": 1,
+     "size": 51.5,
+     "vw": 6.7,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.79,
+     "top": 230,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Public Cloud Architecture",
+     "words": 3,
+     "lines": 1,
+     "size": 51.5,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Public Cloud Architecture",
+      "words": 3,
+      "chars": 25,
+      "lines": 1,
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 230,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What Is a Public Cloud Architecture Solution?",
+      "words": 7,
+      "chars": 45,
+      "lines": 2,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 1516,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Use Cases",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 3773,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why Choose Kineticlinks Cloud Consulting",
+      "words": 5,
+      "chars": 40,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 4687,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Who It's For",
+      "words": 3,
+      "chars": 12,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 5628,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Related Services & Reading",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 6502,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 7176,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to Plan Your Cloud Architecture?",
+      "words": 6,
+      "chars": 38,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 7860,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      17,
+      20,
+      24,
+      34,
+      52
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.9,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 78,
+     "max": {
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "text": "Public Cloud Architecture"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.07,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1630,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 4623,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.64
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.19
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.15
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      },
+      {
+       "color": "#04121a",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a Cloud Architecture Consultation",
+      "View Other Services"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 18,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3948
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4862
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5803
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6650
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.32
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 8670,
+    "margins": {
+     "left": 32,
+     "right": 58
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 5,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 437,
+      "textLeft": 32,
+      "textRight": 437,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 1326,
+      "words": 76,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Public Cloud Architecture",
+       "size": 51,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 117,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1452,
+      "height": 803,
+      "words": 204,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What Is a Public Cloud Architecture Solution?",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 58,
+      "textLeft": 32,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2255,
+      "height": 499,
+      "words": 21,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 75,
+      "textLeft": 32,
+      "textRight": 75,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2754,
+      "height": 499,
+      "words": 21,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 59,
+      "textLeft": 32,
+      "textRight": 59,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3253,
+      "height": 472,
+      "words": 14,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 83,
+      "textLeft": 32,
+      "textRight": 83,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3725,
+      "height": 898,
+      "words": 115,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Use Cases",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 65,
+      "textLeft": 32,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4623,
+      "height": 941,
+      "words": 128,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Why Choose Kineticlinks Cloud Consulting",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 65,
+      "textLeft": 32,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5564,
+      "height": 938,
+      "words": 112,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Who It's For",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 65,
+      "textLeft": 32,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 6502,
+      "height": 610,
+      "words": 63,
+      "media": 0,
+      "middle": 7,
+      "heading": {
+       "text": "Related Services & Reading",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 67,
+      "textLeft": 32,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 7112,
+      "height": 684,
+      "words": 210,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 58,
+      "textLeft": 32,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 7796,
+      "height": 390,
+      "words": 26,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to Plan Your Cloud Architecture?",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 104,
+      "right": 104,
+      "textLeft": 104,
+      "textRight": 104,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 8185,
+      "height": 485,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 20,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 40,
+      "textLeft": 32,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Public Cloud Architecture",
+      "size": 51,
+      "top": 230,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 56,
+      "n": 24
+     },
+     {
+      "x": 424,
+      "n": 14
+     },
+     {
+      "x": 32,
+      "n": 12
+     }
+    ],
+    "leftBlocks": 50,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.51,
+    0.72,
+    0.84,
+    0.88,
+    1,
+    0.59,
+    0.64,
+    1,
+    0.78,
+    0.79,
+    0.68,
+    0.89
+   ],
+   "motion": {
+    "elements": 32,
+    "css": 4,
+    "transitions": 28,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 11717,
+     "screens": 13.9,
+     "words": 843,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "principal-ocean-cables-in-1917.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp",
+      "1940s-n935-telephone-exchange.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Public Cloud Architecture",
+     "words": 3,
+     "chars": 25,
+     "lines": 2,
+     "size": 36,
+     "vw": 9.2,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 230,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Public Cloud Architecture",
+     "words": 3,
+     "lines": 2,
+     "size": 36,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Public Cloud Architecture",
+      "words": 3,
+      "chars": 25,
+      "lines": 2,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 230,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What Is a Public Cloud Architecture Solution?",
+      "words": 7,
+      "chars": 45,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 1630,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Use Cases",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4343,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why Choose Kineticlinks Cloud Consulting",
+      "words": 5,
+      "chars": 40,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5837,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Who It's For",
+      "words": 3,
+      "chars": 12,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 7412,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Related Services & Reading",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 8812,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 9684,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to Plan Your Cloud Architecture?",
+      "words": 6,
+      "chars": 38,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 10557,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      24,
+      28,
+      36
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.2,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 34,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "text": "Public Cloud Architecture"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.07,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1730,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 5773,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.64
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.19
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.15
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.01
+      },
+      {
+       "color": "#04121a",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 2,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a Cloud Architecture Consultation",
+      "View Other Services"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 22,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4535
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6062
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 7604
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 8978
+      },
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 9816
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 11717,
+    "margins": {
+     "left": 32,
+     "right": 33
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 5,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 59,
+      "textLeft": 32,
+      "textRight": 59,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 1440,
+      "words": 76,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Public Cloud Architecture",
+       "size": 36,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1566,
+      "height": 1366,
+      "words": 204,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What Is a Public Cloud Architecture Solution?",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 57,
+      "textLeft": 32,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2931,
+      "height": 480,
+      "words": 21,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 40,
+      "textLeft": 32,
+      "textRight": 40,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3412,
+      "height": 455,
+      "words": 21,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3866,
+      "height": 429,
+      "words": 14,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 40,
+      "textLeft": 32,
+      "textRight": 40,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4295,
+      "height": 1478,
+      "words": 115,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Use Cases",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 50,
+      "textLeft": 32,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5773,
+      "height": 1576,
+      "words": 128,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Why Choose Kineticlinks Cloud Consulting",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 33,
+      "textLeft": 32,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 7348,
+      "height": 1464,
+      "words": 112,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Who It's For",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 37,
+      "textLeft": 32,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 8812,
+      "height": 808,
+      "words": 63,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Related Services & Reading",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 40,
+      "textLeft": 32,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 9620,
+      "height": 873,
+      "words": 100,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 62,
+      "textLeft": 32,
+      "textRight": 62,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 10493,
+      "height": 465,
+      "words": 26,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to Plan Your Cloud Architecture?",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 69,
+      "right": 69,
+      "textLeft": 69,
+      "textRight": 69,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 10959,
+      "height": 759,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 18,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 38,
+      "textLeft": 32,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 10272,
+      "height": 284
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Public Cloud Architecture",
+      "size": 36,
+      "top": 230,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 56,
+      "n": 35
+     },
+     {
+      "x": 32,
+      "n": 12
+     }
+    ],
+    "leftBlocks": 47,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "4 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 152px on the left, 176px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    768
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-cloud/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-cloud/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-cloud/desktop-page-02.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-cloud/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-cloud/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-cloud/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-cloud/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-cloud/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-cloud/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/f2-en-cloud/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

@@ -173,10 +173,31 @@
 }
 
 /* The first screen needs one dominant thing. The hero picture is it. */
-.p-page .page-hero .container { display: grid; grid-template-columns: 1fr; gap: clamp(32px, 4vw, 56px); }
-@media (min-width: 900px) {
-    .p-page .page-hero .container { grid-template-columns: 0.75fr 1.25fr; align-items: center; }
+.p-page .page-hero .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(32px, 4vw, 56px);
 }
+
+/* .btn 是 white-space: nowrap。行動版 hero 只有一欄，英文的
+   "Book a Cloud Architecture Consultation" 要 364px，比 350px 的欄還寬，
+   整欄就被撐出畫面，標題和內文一起被切掉右邊。單欄的時候讓它換行。 */
+@media (max-width: 899px) {
+    .p-page .hero-actions .btn { white-space: normal; }
+}
+@media (min-width: 900px) {
+    /* minmax(0, …) 而不是裸的 fr：fr 的自動下限是 min-content，英文那兩顆
+       按鈕（"Request a Hosting Quote"）會把文字欄從 405px 撐到 571px，圖片
+       跟著縮到不滿視窗三分之一，首屏就沒有主導元素了。中文按鈕短，所以
+       同一個版面只在英文版壞掉。 */
+    .p-page .page-hero .container {
+        grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+        align-items: center;
+    }
+}
+
+/* 欄寬固定之後，按鈕要能換行，不然會頂出欄位。 */
+.p-page .hero-actions { flex-wrap: wrap; }
 .p-hero-pic { margin: 0; border-radius: 6px; overflow: hidden; }
 .p-hero-pic img {
     display: block; width: 100%;

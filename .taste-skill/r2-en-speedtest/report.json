@@ -1,0 +1,2517 @@
+{
+ "url": "http://localhost:8131/en/speedtest/",
+ "at": "2026-10-25T12:05:30.845Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.49,
+    0.5,
+    0.93,
+    0.68,
+    0.83,
+    0.65,
+    0.46,
+    1,
+    0.82,
+    0.77
+   ],
+   "motion": {
+    "elements": 39,
+    "css": 4,
+    "transitions": 35,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 8240,
+     "screens": 9.2,
+     "words": 867,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "1940s-n935-telephone-exchange.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+     "words": 9,
+     "chars": 60,
+     "lines": 4,
+     "size": 64,
+     "vw": 4.4,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.31,
+     "top": 303,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+     "words": 9,
+     "lines": 4,
+     "size": 64,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+      "words": 9,
+      "chars": 60,
+      "lines": 4,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 303,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What Is a 3-Network Speed Test Platform?",
+      "words": 7,
+      "chars": 40,
+      "lines": 2,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1200,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Use Cases",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 3396,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why Choose the Kineticlinks Speed Test Platform",
+      "words": 7,
+      "chars": 47,
+      "lines": 2,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 4204,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Who It's For",
+      "words": 3,
+      "chars": 12,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5087,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Related Services & Reading",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5799,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 6323,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Want to Know How Your Service Really Performs on China's Three Networks?",
+      "words": 12,
+      "chars": 72,
+      "lines": 2,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.74,
+      "top": 7455,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 4,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      17,
+      22,
+      24,
+      40,
+      64
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "text": "Free Web Speed Test and China Three-Netw"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1328,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 4108,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.65
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.17
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.16
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.02
+      },
+      {
+       "color": "#04121a",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#121b2b",
+      "hsl": {
+       "h": 218,
+       "s": 0.41,
+       "l": 0.12
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 2,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Contact",
+      "English ▼"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 26,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3579
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4434
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5270
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5954
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.29
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 103,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 8240,
+    "margins": {
+     "left": 152,
+     "right": 174
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 12,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 152,
+      "right": 727,
+      "textLeft": 152,
+      "textRight": 727,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 978,
+      "words": 84,
+      "media": 1,
+      "middle": 57,
+      "heading": {
+       "text": "Free Web Speed Test and China Three-Network Latenc",
+       "size": 64,
+       "tag": "h1"
+      },
+      "left": 152,
+      "right": 152,
+      "textLeft": 152,
+      "textRight": 845,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1104,
+      "height": 827,
+      "words": 178,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What Is a 3-Network Speed Test Platform?",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 529,
+      "textLeft": 152,
+      "textRight": 529,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 1930,
+      "height": 478,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 205,
+      "textLeft": 152,
+      "textRight": 205,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2408,
+      "height": 451,
+      "words": 21,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 266,
+      "textLeft": 152,
+      "textRight": 266,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2859,
+      "height": 451,
+      "words": 16,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 681,
+      "textLeft": 152,
+      "textRight": 681,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3310,
+      "height": 798,
+      "words": 104,
+      "media": 0,
+      "middle": 35,
+      "heading": {
+       "text": "Use Cases",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 211,
+      "textLeft": 152,
+      "textRight": 211,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4108,
+      "height": 883,
+      "words": 110,
+      "media": 0,
+      "middle": 38,
+      "heading": {
+       "text": "Why Choose the Kineticlinks Speed Test Platform",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 196,
+      "textLeft": 152,
+      "textRight": 196,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4991,
+      "height": 808,
+      "words": 101,
+      "media": 0,
+      "middle": 62,
+      "heading": {
+       "text": "Who It's For",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 184,
+      "textLeft": 152,
+      "textRight": 184,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 5799,
+      "height": 428,
+      "words": 61,
+      "media": 0,
+      "middle": 115,
+      "heading": {
+       "text": "Related Services & Reading",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 182,
+      "textLeft": 152,
+      "textRight": 182,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 6227,
+      "height": 1163,
+      "words": 445,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 330,
+      "textLeft": 152,
+      "textRight": 330,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 7391,
+      "height": 478,
+      "words": 40,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Want to Know How Your Service Really Performs on C",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 231,
+      "right": 231,
+      "textLeft": 231,
+      "textRight": 231,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7868,
+      "height": 372,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 22,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 159,
+      "textLeft": 152,
+      "textRight": 159,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+      "size": 64,
+      "top": 303,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 180,
+      "n": 14
+     },
+     {
+      "x": 152,
+      "n": 12
+     },
+     {
+      "x": 768,
+      "n": 12
+     },
+     {
+      "x": 327,
+      "n": 9
+     },
+     {
+      "x": 192,
+      "n": 3
+     },
+     {
+      "x": 567,
+      "n": 2
+     },
+     {
+      "x": 953,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 54,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.1,
+    "voidBox": {
+     "x": 720,
+     "y": 120,
+     "w": 720,
+     "h": 180
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.61,
+    0.79,
+    0.93,
+    0.83,
+    0.83,
+    0.71,
+    0.63,
+    0.98,
+    0.91
+   ],
+   "motion": {
+    "elements": 39,
+    "css": 4,
+    "transitions": 35,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 8903,
+     "screens": 8.7,
+     "words": 859,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "1940s-n935-telephone-exchange.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+     "words": 9,
+     "chars": 60,
+     "lines": 3,
+     "size": 51.5,
+     "vw": 6.7,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.79,
+     "top": 230,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+     "words": 9,
+     "lines": 3,
+     "size": 51.5,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+      "words": 9,
+      "chars": 60,
+      "lines": 3,
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 230,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What Is a 3-Network Speed Test Platform?",
+      "words": 7,
+      "chars": 40,
+      "lines": 2,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 1601,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Use Cases",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 3799,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why Choose the Kineticlinks Speed Test Platform",
+      "words": 7,
+      "chars": 47,
+      "lines": 2,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 4658,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Who It's For",
+      "words": 3,
+      "chars": 12,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 5589,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Related Services & Reading",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 6385,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 7032,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Want to Know How Your Service Really Performs on China's Three Networks?",
+      "words": 12,
+      "chars": 72,
+      "lines": 2,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 8052,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      17,
+      20,
+      24,
+      34,
+      52
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.9,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 78,
+     "max": {
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "text": "Free Web Speed Test and China Three-Netw"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.07,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1714,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 4594,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.65
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.17
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.16
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.02
+      },
+      {
+       "color": "#04121a",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Run a Free Test",
+      "View Other Platforms"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 17,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3973
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4874
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5764
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6533
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.24
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 8903,
+    "margins": {
+     "left": 32,
+     "right": 45
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 12,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 175,
+      "textLeft": 32,
+      "textRight": 175,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 1411,
+      "words": 84,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Free Web Speed Test and China Three-Network Latenc",
+       "size": 51,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 110,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1537,
+      "height": 744,
+      "words": 178,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What Is a 3-Network Speed Test Platform?",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 57,
+      "textLeft": 32,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2280,
+      "height": 499,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 45,
+      "textLeft": 32,
+      "textRight": 45,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2779,
+      "height": 499,
+      "words": 21,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 78,
+      "textLeft": 32,
+      "textRight": 78,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3279,
+      "height": 472,
+      "words": 16,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 133,
+      "textLeft": 32,
+      "textRight": 133,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3751,
+      "height": 844,
+      "words": 104,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Use Cases",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 65,
+      "textLeft": 32,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4594,
+      "height": 931,
+      "words": 110,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Why Choose the Kineticlinks Speed Test Platform",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 67,
+      "textLeft": 32,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5525,
+      "height": 860,
+      "words": 101,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Who It's For",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 6385,
+      "height": 583,
+      "words": 61,
+      "media": 0,
+      "middle": 7,
+      "heading": {
+       "text": "Related Services & Reading",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 74,
+      "textLeft": 32,
+      "textRight": 74,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 6968,
+      "height": 1020,
+      "words": 398,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 57,
+      "textLeft": 32,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 7988,
+      "height": 431,
+      "words": 40,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Want to Know How Your Service Really Performs on C",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 87,
+      "right": 87,
+      "textLeft": 87,
+      "textRight": 87,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 8419,
+      "height": 485,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 20,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 45,
+      "textLeft": 32,
+      "textRight": 45,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+      "size": 51,
+      "top": 230,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 56,
+      "n": 28
+     },
+     {
+      "x": 424,
+      "n": 14
+     },
+     {
+      "x": 32,
+      "n": 12
+     }
+    ],
+    "leftBlocks": 54,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.47,
+    0.72,
+    0.82,
+    0.88,
+    1,
+    0.6,
+    0.83,
+    1,
+    0.77,
+    0.68,
+    0.68,
+    1
+   ],
+   "motion": {
+    "elements": 35,
+    "css": 4,
+    "transitions": 31,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 11843,
+     "screens": 14,
+     "words": 859,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "1940s-n935-telephone-exchange.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+     "words": 9,
+     "chars": 60,
+     "lines": 4,
+     "size": 36,
+     "vw": 9.2,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 273,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+     "words": 9,
+     "lines": 4,
+     "size": 36,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+      "words": 9,
+      "chars": 60,
+      "lines": 4,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 273,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What Is a 3-Network Speed Test Platform?",
+      "words": 7,
+      "chars": 40,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 1725,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Use Cases",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4351,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Why Choose the Kineticlinks Speed Test Platform",
+      "words": 7,
+      "chars": 47,
+      "lines": 3,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5763,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Who It's For",
+      "words": 3,
+      "chars": 12,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 7229,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Related Services & Reading",
+      "words": 4,
+      "chars": 26,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 8525,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Frequently Asked Questions",
+      "words": 3,
+      "chars": 26,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 9371,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Want to Know How Your Service Really Performs on China's Three Networks?",
+      "words": 12,
+      "chars": 72,
+      "lines": 4,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 10636,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 4,
+     "over2Lines": 3,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      24,
+      28,
+      36
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.2,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 34,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "text": "Free Web Speed Test and China Three-Netw"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.07,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1825,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 5699,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.65
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.17
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.16
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.02
+      },
+      {
+       "color": "#04121a",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 1,
+     "radius": 2,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Run a Free Test"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 25,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4543
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6023
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 7395
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 8691
+      },
+      {
+       "count": 8,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 9503
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 11843,
+    "margins": {
+     "left": 32,
+     "right": 35
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 169,
+      "words": 12,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 52,
+      "textLeft": 32,
+      "textRight": 52,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 169,
+      "height": 1492,
+      "words": 84,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Free Web Speed Test and China Three-Network Latenc",
+       "size": 36,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1661,
+      "height": 1252,
+      "words": 178,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What Is a 3-Network Speed Test Platform?",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 35,
+      "textLeft": 32,
+      "textRight": 35,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2914,
+      "height": 480,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 37,
+      "textLeft": 32,
+      "textRight": 37,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3394,
+      "height": 480,
+      "words": 21,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 47,
+      "textLeft": 32,
+      "textRight": 47,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3875,
+      "height": 429,
+      "words": 16,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 61,
+      "textLeft": 32,
+      "textRight": 61,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4303,
+      "height": 1396,
+      "words": 104,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Use Cases",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 48,
+      "textLeft": 32,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5699,
+      "height": 1466,
+      "words": 110,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Why Choose the Kineticlinks Speed Test Platform",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 7165,
+      "height": 1360,
+      "words": 101,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Who It's For",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 39,
+      "textLeft": 32,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 8525,
+      "height": 782,
+      "words": 61,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Related Services & Reading",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 40,
+      "textLeft": 32,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 9307,
+      "height": 1265,
+      "words": 192,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Frequently Asked Questions",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 58,
+      "textLeft": 32,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 10572,
+      "height": 533,
+      "words": 40,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Want to Know How Your Service Really Performs on C",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 77,
+      "right": 61,
+      "textLeft": 77,
+      "textRight": 61,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 11105,
+      "height": 738,
+      "words": 97,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 18,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 38,
+      "textLeft": 32,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 10200,
+      "height": 432
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Free Web Speed Test and China Three-Network Latency Analysis",
+      "size": 36,
+      "top": 273,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 56,
+      "n": 38
+     },
+     {
+      "x": 32,
+      "n": 12
+     }
+    ],
+    "leftBlocks": 50,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 1440,
+   "message": "1 headline(s) wrap past two lines at 1440px: \"Free Web Speed Test and China Three-Network Late\" → 4 lines (9 words, 64px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "4 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 64px (4.4vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 152px on the left, 174px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 768,
+   "message": "1 headline(s) wrap past two lines at 768px: \"Free Web Speed Test and China Three-Network Late\" → 3 lines (9 words, 51.5px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "3 headline(s) wrap past two lines at 390px: \"Free Web Speed Test and China Three-Network Late\" → 4 lines (9 words, 36px); \"Why Choose the Kineticlinks Speed Test Platform\" → 3 lines (7 words, 28.3px); \"Want to Know How Your Service Really Performs on\" → 4 lines (12 words, 28.3px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "blank-gap",
+   "width": 390,
+   "message": "A 432px stretch at 10200px holds nothing.",
+   "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-en-speedtest/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-en-speedtest/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-en-speedtest/desktop-page-02.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-en-speedtest/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-en-speedtest/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-en-speedtest/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-en-speedtest/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-en-speedtest/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-en-speedtest/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-en-speedtest/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

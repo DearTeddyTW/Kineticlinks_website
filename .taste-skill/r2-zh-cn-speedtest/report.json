@@ -1,0 +1,2492 @@
+{
+ "url": "http://localhost:8131/zh-cn/speedtest/",
+ "at": "2026-10-25T12:06:36.237Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.49,
+    0.64,
+    1,
+    0.61,
+    0.87,
+    0.4,
+    0.83,
+    0.85,
+    0.85
+   ],
+   "motion": {
+    "elements": 39,
+    "css": 4,
+    "transitions": 35,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7591,
+     "screens": 8.4,
+     "words": 192,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "1940s-n935-telephone-exchange.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "免费网页测速与中国三网延迟分析工具",
+     "words": 1,
+     "chars": 17,
+     "lines": 3,
+     "size": 64,
+     "vw": 4.4,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.28,
+     "top": 311,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "免费网页测速与中国三网延迟分析工具",
+     "words": 1,
+     "lines": 3,
+     "size": 64,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "免费网页测速与中国三网延迟分析工具",
+      "words": 1,
+      "chars": 17,
+      "lines": 3,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 311,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "什么是三网测速平台？",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1086,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "适用场景",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 3088,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "为什么选择 Kineticlinks 测速平台",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 3869,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "适合的使用者类型",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 4650,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸阅读与相关服务",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5280,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "常见问题",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 5777,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "想掌握您的服务在中国三网的真实连接表现吗？",
+      "words": 1,
+      "chars": 21,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.74,
+      "top": 6908,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      17,
+      22,
+      24,
+      40,
+      64
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 92,
+     "max": {
+      "size": 64,
+      "vw": 4.4,
+      "font": "Outfit",
+      "text": "免费网页测速与中国三网延迟分析工具"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.25,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1166,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 3773,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.6
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.15
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.02
+      },
+      {
+       "color": "#04121a",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#121b2b",
+      "hsl": {
+       "h": 218,
+       "s": 0.41,
+       "l": 0.12
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 4,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "联系我们",
+      "简体中文 ▼",
+      "立即免费测速",
+      "查看其他平台产品"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 26,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3243
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4024
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4805
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5435
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.34
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 103,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7591,
+    "margins": {
+     "left": 152,
+     "right": 165
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 3,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 152,
+      "right": 933,
+      "textLeft": 152,
+      "textRight": 933,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 864,
+      "words": 18,
+      "media": 1,
+      "middle": 58,
+      "heading": {
+       "text": "免费网页测速与中国三网延迟分析工具",
+       "size": 64,
+       "tag": "h1"
+      },
+      "left": 152,
+      "right": 152,
+      "textLeft": 152,
+      "textRight": 885,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 990,
+      "height": 660,
+      "words": 35,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "什么是三网测速平台？",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 519,
+      "textLeft": 152,
+      "textRight": 519,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 1649,
+      "height": 451,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 547,
+      "textLeft": 152,
+      "textRight": 547,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2100,
+      "height": 451,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 671,
+      "textLeft": 152,
+      "textRight": 671,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2551,
+      "height": 451,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 152,
+      "right": 931,
+      "textLeft": 152,
+      "textRight": 931,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3002,
+      "height": 771,
+      "words": 16,
+      "media": 0,
+      "middle": 108,
+      "heading": {
+       "text": "适用场景",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 196,
+      "textLeft": 152,
+      "textRight": 196,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3773,
+      "height": 781,
+      "words": 20,
+      "media": 0,
+      "middle": 67,
+      "heading": {
+       "text": "为什么选择 Kineticlinks 测速平台",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 193,
+      "textLeft": 152,
+      "textRight": 193,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4554,
+      "height": 726,
+      "words": 11,
+      "media": 0,
+      "middle": 125,
+      "heading": {
+       "text": "适合的使用者类型",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 196,
+      "textLeft": 152,
+      "textRight": 196,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 5280,
+      "height": 401,
+      "words": 14,
+      "media": 0,
+      "middle": 81,
+      "heading": {
+       "text": "延伸阅读与相关服务",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 181,
+      "textLeft": 152,
+      "textRight": 181,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 5681,
+      "height": 1163,
+      "words": 74,
+      "media": 0,
+      "middle": 20,
+      "heading": {
+       "text": "常见问题",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 328,
+      "textLeft": 152,
+      "textRight": 328,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 6844,
+      "height": 402,
+      "words": 5,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "想掌握您的服务在中国三网的真实连接表现吗？",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 313,
+      "right": 313,
+      "textLeft": 313,
+      "textRight": 313,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7247,
+      "height": 345,
+      "words": 83,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 22,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 159,
+      "textLeft": 152,
+      "textRight": 159,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "免费网页测速与中国三网延迟分析工具",
+      "size": 64,
+      "top": 311,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 152,
+      "n": 8
+     },
+     {
+      "x": 180,
+      "n": 7
+     },
+     {
+      "x": 768,
+      "n": 6
+     },
+     {
+      "x": 327,
+      "n": 5
+     },
+     {
+      "x": 192,
+      "n": 3
+     },
+     {
+      "x": 567,
+      "n": 1
+     },
+     {
+      "x": 953,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 31,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.08,
+    "voidBox": {
+     "x": 540,
+     "y": 120,
+     "w": 900,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.58,
+    0.77,
+    1,
+    0.79,
+    0.83,
+    0.57,
+    1,
+    0.91
+   ],
+   "motion": {
+    "elements": 39,
+    "css": 4,
+    "transitions": 35,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 8003,
+     "screens": 7.8,
+     "words": 184,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "1940s-n935-telephone-exchange.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "免费网页测速与中国三网延迟分析工具",
+     "words": 1,
+     "chars": 17,
+     "lines": 2,
+     "size": 51.5,
+     "vw": 6.7,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.79,
+     "top": 230,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "免费网页测速与中国三网延迟分析工具",
+     "words": 1,
+     "lines": 2,
+     "size": 51.5,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "免费网页测速与中国三网延迟分析工具",
+      "words": 1,
+      "chars": 17,
+      "lines": 2,
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 230,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "什么是三网测速平台？",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 1515,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "适用场景",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 3527,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "为什么选择 Kineticlinks 测速平台",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 4231,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "适合的使用者类型",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 4962,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸阅读与相关服务",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 5602,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "常见问题",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 6195,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "想掌握您的服务在中国三网的真实连接表现吗？",
+      "words": 1,
+      "chars": 21,
+      "lines": 2,
+      "size": 33.9,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 7215,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      17,
+      20,
+      24,
+      34,
+      52
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.9,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 78,
+     "max": {
+      "size": 51.5,
+      "vw": 6.7,
+      "font": "Outfit",
+      "text": "免费网页测速与中国三网延迟分析工具"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.25,
+     "centerShare": 0.09,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1588,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 4167,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.6
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.15
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.02
+      },
+      {
+       "color": "#04121a",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 2,
+     "height": 55,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "立即免费测速",
+      "查看其他平台产品"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 17,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3675
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4379
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5110
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5749
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.32
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 8003,
+    "margins": {
+     "left": 32,
+     "right": 33
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 3,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 381,
+      "textLeft": 32,
+      "textRight": 381,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 1326,
+      "words": 18,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "免费网页测速与中国三网延迟分析工具",
+       "size": 51,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 99,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1451,
+      "height": 584,
+      "words": 35,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "什么是三网测速平台？",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 58,
+      "textLeft": 32,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2036,
+      "height": 499,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 33,
+      "textLeft": 32,
+      "textRight": 33,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2535,
+      "height": 472,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 123,
+      "textLeft": 32,
+      "textRight": 123,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3007,
+      "height": 472,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 381,
+      "textLeft": 32,
+      "textRight": 381,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3479,
+      "height": 688,
+      "words": 16,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "适用场景",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4167,
+      "height": 731,
+      "words": 20,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "为什么选择 Kineticlinks 测速平台",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4898,
+      "height": 704,
+      "words": 11,
+      "media": 0,
+      "middle": 98,
+      "heading": {
+       "text": "适合的使用者类型",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 5602,
+      "height": 529,
+      "words": 14,
+      "media": 0,
+      "middle": 71,
+      "heading": {
+       "text": "延伸阅读与相关服务",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 74,
+      "textLeft": 32,
+      "textRight": 74,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 6131,
+      "height": 1020,
+      "words": 67,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "常见问题",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 57,
+      "textLeft": 32,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 7151,
+      "height": 404,
+      "words": 5,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "想掌握您的服务在中国三网的真实连接表现吗？",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 72,
+      "right": 72,
+      "textLeft": 72,
+      "textRight": 72,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7554,
+      "height": 448,
+      "words": 83,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 20,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 33,
+      "textLeft": 32,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "免费网页测速与中国三网延迟分析工具",
+      "size": 51,
+      "top": 230,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 56,
+      "n": 16
+     },
+     {
+      "x": 32,
+      "n": 8
+     },
+     {
+      "x": 424,
+      "n": 7
+     }
+    ],
+    "leftBlocks": 31,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.44,
+    0.73,
+    0.84,
+    1,
+    0.79,
+    0.86,
+    1,
+    0.72,
+    0.56,
+    0.92,
+    0.92,
+    0.92
+   ],
+   "motion": {
+    "elements": 39,
+    "css": 4,
+    "transitions": 35,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 10003,
+     "screens": 11.9,
+     "words": 184,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 4,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "1940s-n935-telephone-exchange.jpg",
+      "1940s-n935-telephone-exchange.jpg",
+      "principal-ocean-cables-in-1917.jpg",
+      "a-system-administrator-s-workstation-within-a.jp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "免费网页测速与中国三网延迟分析工具",
+     "words": 1,
+     "chars": 17,
+     "lines": 2,
+     "size": 36,
+     "vw": 9.2,
+     "font": "Outfit",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 252,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "免费网页测速与中国三网延迟分析工具",
+     "words": 1,
+     "lines": 2,
+     "size": 36,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "免费网页测速与中国三网延迟分析工具",
+      "words": 1,
+      "chars": 17,
+      "lines": 2,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 252,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "什么是三网测速平台？",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 1515,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "适用场景",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 3632,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "为什么选择 Kineticlinks 测速平台",
+      "words": 3,
+      "chars": 23,
+      "lines": 2,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4797,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "适合的使用者类型",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 6021,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸阅读与相关服务",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 7096,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "常见问题",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 7838,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "想掌握您的服务在中国三网的真实连接表现吗？",
+      "words": 1,
+      "chars": 21,
+      "lines": 3,
+      "size": 28.3,
+      "vw": 7.3,
+      "font": "Outfit",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 8954,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      24,
+      28,
+      36
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.2,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 34,
+     "max": {
+      "size": 36,
+      "vw": 9.2,
+      "font": "Outfit",
+      "text": "免费网页测速与中国三网延迟分析工具"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.25,
+     "centerShare": 0.09,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0d1420",
+       "top": 1581,
+       "hsl": {
+        "h": 218,
+        "s": 0.42,
+        "l": 0.09
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 4733,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.6
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.15
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.02
+      },
+      {
+       "color": "#04121a",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#04121a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 2,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "立即免费测速",
+      "查看其他平台产品"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 22,
+     "boxRadius": 6,
+     "squareMedia": 3,
+     "roundedMedia": 1,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3798
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4997
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6161
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 7236
+      },
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 8026
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 10003,
+    "margins": {
+     "left": 32,
+     "right": 34
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 148,
+      "words": 3,
+      "media": 0,
+      "middle": 32,
+      "heading": null,
+      "left": 32,
+      "right": 38,
+      "textLeft": 32,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 148,
+      "height": 1304,
+      "words": 18,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "免费网页测速与中国三网延迟分析工具",
+       "size": 36,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.prose-section",
+      "tag": "section",
+      "top": 1451,
+      "height": 821,
+      "words": 35,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "什么是三网测速平台？",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 58,
+      "textLeft": 32,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2272,
+      "height": 455,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 2727,
+      "height": 429,
+      "words": 2,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 45,
+      "textLeft": 32,
+      "textRight": 45,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.p-band.p-enter",
+      "tag": "figure",
+      "top": 3156,
+      "height": 429,
+      "words": 1,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 32,
+      "right": 50,
+      "textLeft": 32,
+      "textRight": 50,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 3584,
+      "height": 1149,
+      "words": 16,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "适用场景",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 4733,
+      "height": 1225,
+      "words": 20,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "为什么选择 Kineticlinks 测速平台",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 34,
+      "textLeft": 32,
+      "textRight": 34,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 5957,
+      "height": 1139,
+      "words": 11,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "适合的使用者类型",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 66,
+      "textLeft": 32,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-section",
+      "tag": "section",
+      "top": 7096,
+      "height": 678,
+      "words": 14,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "延伸阅读与相关服务",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 50,
+      "textLeft": 32,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 7774,
+      "height": 1116,
+      "words": 56,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "常见问题",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 57,
+      "textLeft": 32,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.cta-banner-section",
+      "tag": "section",
+      "top": 8890,
+      "height": 447,
+      "words": 5,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "想掌握您的服务在中国三网的真实连接表现吗？",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 65,
+      "right": 65,
+      "textLeft": 65,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 9338,
+      "height": 665,
+      "words": 83,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 18,
+       "tag": "h3"
+      },
+      "left": 32,
+      "right": 38,
+      "textLeft": 32,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "免费网页测速与中国三网延迟分析工具",
+      "size": 36,
+      "top": 252,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 56,
+      "n": 23
+     },
+     {
+      "x": 32,
+      "n": 8
+     }
+    ],
+    "leftBlocks": 31,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 1440,
+   "message": "1 headline(s) wrap past two lines at 1440px: \"免费网页测速与中国三网延迟分析工具\" → 3 lines (1 words, 64px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "4 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 92 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "1 headline(s) wrap past two lines at 390px: \"想掌握您的服务在中国三网的真实连接表现吗？\" → 3 lines (1 words, 28.3px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-zh-cn-speedtest/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-zh-cn-speedtest/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-zh-cn-speedtest/desktop-page-02.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-zh-cn-speedtest/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-zh-cn-speedtest/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-zh-cn-speedtest/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-zh-cn-speedtest/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-zh-cn-speedtest/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-zh-cn-speedtest/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/r2-zh-cn-speedtest/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

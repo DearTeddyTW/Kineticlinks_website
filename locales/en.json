@@ -122,7 +122,7 @@
     },
     "hero": {
       "badge": "Content Delivery Network",
-      "title": "CDN Content Delivery Network",
+      "title": "CDN Acceleration",
       "subtitle": "Global edge acceleration for a faster, more resilient web presence",
       "desc": "Cache static and dynamic content at the node nearest your visitors to cut latency and load time. The upstream network we resell carries terabit-scale DDoS scrubbing, so your service stays reachable through traffic spikes and attacks.",
       "cta_primary": "Request an Acceleration Quote",
@@ -394,7 +394,7 @@
     },
     "hero": {
       "badge": "IDC Data Center Buildout",
-      "title": "IDC Data Center Buildout",
+      "title": "Data Center Buildout",
       "subtitle": "From planning to deployment, building enterprise-grade secure data centers",
       "desc": "Hardware procurement, network architecture, dual BGP uplinks and physical deployment, alongside 24/7 on-site monitoring by the facility, to build a data centre matched to your scale and security needs.",
       "cta_primary": "Book a Buildout Consultation",
@@ -530,7 +530,7 @@
     },
     "hero": {
       "badge": "Public Cloud Architecture",
-      "title": "Public Cloud Architecture Solutions",
+      "title": "Public Cloud Architecture",
       "subtitle": "Deep integration with major public clouds for a secure, cost-effective architecture",
       "desc": "Kineticlinks integrates deeply with AWS, GCP, Azure, and other leading public clouds, offering end-to-end consulting from architecture design and hybrid cloud planning through seamless migration and ongoing cost optimization — helping enterprises complete cloud transformation securely while staying compliant.",
       "cta_primary": "Book a Cloud Architecture Consultation",
@@ -917,7 +917,7 @@
     },
     "hero": {
       "badge": "Global 3-Network Speed Test",
-      "title": "Free Web Speed Test and China Three-Network Latency Analysis",
+      "title": "Latency by Network",
       "subtitle": "Diagnose TTFB, DNS resolution and CDN cache bottlenecks, with Telecom, Unicom and Mobile measured separately",
       "desc": "The Kineticlinks speed test platform is purpose-built for Asia-Pacific and China's three major carriers (Telecom, Unicom, Mobile), offering free real-time node testing plus a commercial API for enterprises to integrate into their own monitoring systems and track real-world cross-border user experience.",
       "cta_primary": "Run a Free Test",
@@ -950,7 +950,7 @@
       }
     },
     "differentiators": {
-      "title": "Why Choose the Kineticlinks Speed Test Platform",
+      "title": "Why Choose Kineticlinks Speed Test",
       "desc": "Compared to generic speed test tools limited to one region or unable to separate carrier-specific results",
       "item1": {
         "title": "Carrier-Specific Results",
@@ -1011,7 +1011,7 @@
       "a9": "A single test reflects only that second. Cross-border problems are overwhelmingly time-of-day — evening congestion and routing changes make the same link behave completely differently at different hours. Judging real quality needs continuous checks spanning a full day-night cycle."
     },
     "cta": {
-      "title": "Want to Know How Your Service Really Performs on China's Three Networks?",
+      "title": "How fast are you on all three networks?",
       "desc": "Run a free test now, or contact our team to learn about the commercial API integration options.",
       "button": "Go to the Speed Test Platform"
     },
@@ -1062,7 +1062,7 @@
     },
     "hero": {
       "badge": "Live ICP filing lookup",
-      "title": "Real-time ICP filing checks and domain compliance lookup",
+      "title": "Live ICP Filing Checks",
       "subtitle": "Check in one step whether a domain holds a valid ICP filing, with the registrant name, filing number and approval status",
       "desc": "The Kineticlinks ICP check tool queries China's Ministry of Industry and Information Technology (MIIT) filing status in real time, so teams deploying mainland nodes, enabling CDN acceleration or taking over a domain can confirm filing validity before it causes an outage.",
       "cta_primary": "Check an ICP filing",
