@@ -325,6 +325,13 @@
 .b-page .credits a { color: var(--b-muted); }
 
 /* The navigation jumps to these two fields, and the bar is fixed, so the
-   heading has to clear it. */
+   heading has to clear it. Measured: 103px wide, 86px narrow. The script
+   reads the bar's real height; this value is for the jump the browser makes
+   on its own, before the script runs or when it does not run at all. */
 .b-page #services,
-.b-page #platforms { scroll-margin-top: 88px; }
+.b-page #platforms { scroll-margin-top: 112px; }
+
+@media (max-width: 900px) {
+    .b-page #services,
+    .b-page #platforms { scroll-margin-top: 94px; }
+}
