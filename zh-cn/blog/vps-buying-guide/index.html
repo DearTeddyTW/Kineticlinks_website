@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,27 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">响应标头（示例）</div>
+            <div class="f-row"><span class="f-k">Cache-Control</span><span class="f-v"><code>public, max-age=0, s-maxage=86400</code></span></div>
+            <div class="f-row"><span class="f-k">Age</span><span class="f-v"><code>41203</code></span></div>
+            <div class="f-row"><span class="f-k">ETag</span><span class="f-v"><code>&quot;9f2b…c41&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">Vary</span><span class="f-v"><code>Accept-Encoding</code></span></div>
+        </div>
+        <figcaption>no-cache 不是「不要缓存」，no-store 才是。s-maxage 只对共享缓存生效，浏览器不看它。以上为示例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">主机选型</div>
                 <h1>VPS 选购指南：规格怎么看、预算怎么抓、哪些坑要避开</h1>
                 <div class="article-meta">
+                    <span class="a-cat">主机选型</span>
+                    <span>·</span>
                     <time datetime="2026-08-18">2026 年 8 月 18 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>约 9 分钟</span>
                 </div>
                 <p class="article-lead">「我该买几核几 G？」是选购 VPS 时最常见、也最难直接回答的问题——因为它取决于您跑什么应用、流量长什么样子、以及愿意花多少时间自己运维。这篇不谈特定品牌，而是把规格、预算与合约条款三个方面拆开来看，让您有一套自己能重复使用的判断方式。</p>
@@ -199,22 +214,22 @@
                             <tbody>
                                 <tr class="">
                                     <td>共享主机</td>
-                                    <td class="num">与他人共用</td>
+                                    <td>与他人共用</td>
                                     <td>流量稳定的小型网站，不需系统权限</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>VPS 虚拟专属主机</td>
-                                    <td class="num">独立配额</td>
+                                    <td>独立配额</td>
                                     <td>需要完整系统权限与稳定性能</td>
                                 </tr>
                                 <tr class="">
                                     <td>独立服务器</td>
-                                    <td class="num">整台物理机</td>
+                                    <td>整台物理机</td>
                                     <td>高负载运算、数据库密集型应用</td>
                                 </tr>
                                 <tr class="">
                                     <td>机房托管 / IDC</td>
-                                    <td class="num">自有硬件</td>
+                                    <td>自有硬件</td>
                                     <td>法规遵循、大规模自主管理</td>
                                 </tr>
 
@@ -225,6 +240,7 @@
                 </figure>
 
                 <p>反过来说，如果您的运算需求已经大到需要整台物理机的资源，或是有法规要求数据必须存放在特定物理环境，那该考虑的是独立服务器或机房托管，而不是把 VPS 一直往上加规格。</p>
+
 
                 <!-- Why -->
                 <h2>规格怎么看：三个实际会卡住的地方</h2>
@@ -312,18 +328,15 @@
                 <h2>延伸阅读与相关服务</h2>
                 <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
                 <div class="related-grid">
-                    <a href="/zh-cn/vps/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服务</span>
+                    <a href="/zh-cn/vps/" class="related-card">
                         <h3>VPS 虚拟专属主机</h3>
                         <p>NVMe SSD 高性能运算资源，支持在线弹性升降配。</p>
                     </a>
-                    <a href="/zh-cn/idc/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服务</span>
+                    <a href="/zh-cn/idc/" class="related-card">
                         <h3>IDC 机房建置</h3>
                         <p>当规模增长到 VPS 已不敷使用时的下一步选项。</p>
                     </a>
-                    <a href="/zh-cn/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服务</span>
+                    <a href="/zh-cn/cdn/" class="related-card">
                         <h3>CDN 内容分发网络</h3>
                         <p>跨境访客的延迟问题，通常靠 CDN 比升级主机更有效。</p>
                     </a>
@@ -331,7 +344,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>还在犹豫该选哪个规格？</h2>
                 <p>告诉我们您的应用类型与流量规模，我们会协助评估合适的 VPS 配置与长期成本。</p>
                 <div class="hero-actions">
@@ -366,13 +379,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

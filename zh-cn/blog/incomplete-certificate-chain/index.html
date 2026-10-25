@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">证书链（示例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">签发</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中继</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>证书链要完整才会被信任。缺一层中继，桌面浏览器往往会自己补上，手机和命令行工具不会——这是「我这边看起来正常」的常见来源。以上为示例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">证书管理</div>
                 <h1>浏览器打得开不代表证书没问题：中间证书缺失的完整排查</h1>
                 <div class="article-meta">
+                    <span class="a-cat">证书管理</span>
+                    <span>·</span>
                     <time datetime="2026-09-11">2026 年 9 月 11 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>约 9 分钟</span>
                 </div>
                 <p class="article-lead">这个问题的症状很有辨识度：<strong>网站用浏览器打开完全正常，但手机 App 连不上、curl 报证书错误、监控系统一直告警</strong>。于是变成「我这边看都好好的」跟「就是连不上」的来回拉锯。两边都没错——桌面浏览器有一套自我修复机制，会把服务器漏掉的中间证书补回来，而绝大多数非浏览器的客户端没有。</p>
@@ -186,6 +202,7 @@
                 <p>关键在于各段的来源不同。<strong>根证书预先内置在操作系统或浏览器的信任库里</strong>，不需要传送；但<strong>中间证书不在里面，必须由你的服务器连同 leaf 一起发送</strong>。服务器只发 leaf 的话，验证方手上就缺了中间那一段，链接不起来。</p>
 
                 <!-- Timeline table -->
+                <p>那为什么有些设备还是能正常连接？因为部分客户端会自己想办法补。下表是差异所在。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +246,7 @@
                     <figcaption>服务器漏发中间证书时，各类客户端的反应。差异就是症状时好时坏的原因。</figcaption>
                 </figure>
 
-                <p>那为什么有些设备还是能正常连接？因为部分客户端会自己想办法补。下表是差异所在。</p>
+
 
                 <!-- Why -->
                 <h2>三种造成链不完整的情况</h2>
@@ -317,18 +334,15 @@
                 <h2>延伸阅读与相关服务</h2>
                 <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
                 <div class="related-grid">
-                    <a href="/zh-cn/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/certificate-expiry-monitoring/" class="related-card">
                         <h3>证书到期监控</h3>
                         <p>同样的原则：要检查用户实际拿到什么，不是文件里有什么。</p>
                     </a>
-                    <a href="/zh-cn/blog/acme-challenge-types/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/acme-challenge-types/" class="related-card">
                         <h3>ACME 验证方式怎么选</h3>
                         <p>自动化签发的第一个决策，做对了才谈得上自动部署。</p>
                     </a>
-                    <a href="/zh-cn/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台产品</span>
+                    <a href="/zh-cn/ssl/" class="related-card">
                         <h3>SSL 证书自动化平台</h3>
                         <p>签发后自动推送完整证书链至多个 CDN 节点。</p>
                     </a>
@@ -336,7 +350,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>让部署这一段不再靠手动粘贴</h2>
                 <p>Kineticlinks SSL 证书自动化平台在签发后将完整证书链直接推送至各节点，避免漏带中间证书。</p>
                 <div class="hero-actions">
@@ -371,13 +385,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

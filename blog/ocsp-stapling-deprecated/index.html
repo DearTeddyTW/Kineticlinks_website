@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">憑證鏈（範例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">簽發</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中繼</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>憑證鏈要完整才會被信任。缺一層中繼，桌機瀏覽器往往會自己補上，手機和命令列工具不會——這是「我這邊看起來正常」的常見來源。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">憑證管理</div>
                 <h1>還在設定 OCSP 裝訂？Let's Encrypt 已經關掉它了</h1>
                 <div class="article-meta">
+                    <span class="a-cat">憑證管理</span>
+                    <span>·</span>
                     <time datetime="2026-09-12">2026 年 9 月 12 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">如果你的 Nginx 設定裡有 <code>ssl_stapling on;</code>，而憑證是 Let's Encrypt 簽發的，<strong>那行設定從 2025 年 5 月起就沒有作用了</strong>——憑證裡已經不再包含 OCSP 網址，伺服器沒有東西可以查、也沒有東西可以裝訂。這不是設定錯誤，是整個機制被淘汰了。這篇說明發生了什麼、你該檢查什麼，以及撤銷檢查現在怎麼運作。</p>
@@ -186,6 +202,7 @@
                 <p>OCSP 曾經是主流解法：客戶端連線時向憑證機構的伺服器查詢「這張憑證還有效嗎」。但它有個結構性問題——<strong>憑證機構因此知道了哪個 IP 正在造訪哪個網站</strong>，等於在每次連線裡插入一個第三方觀察者。</p>
 
                 <!-- Timeline table -->
+                <p>下表整理四種機制與現況。第二列是多數教學仍在教、但已經停止運作的那一種。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -224,7 +241,7 @@
                     <figcaption>四種撤銷檢查機制與 2026 年的實際狀況。</figcaption>
                 </figure>
 
-                <p>下表整理四種機制與現況。第二列是多數教學仍在教、但已經停止運作的那一種。</p>
+
 
                 <!-- Why -->
                 <h2>Let's Encrypt 停止 OCSP 的三個時間點</h2>
@@ -312,18 +329,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/ssl-certificate-validity-200-days/" class="related-card">
                         <h3>SSL 憑證效期縮短至 200 天</h3>
                         <p>效期縮短正是撤銷機制得以簡化的背景之一。</p>
                     </a>
-                    <a href="/blog/incomplete-certificate-chain/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/incomplete-certificate-chain/" class="related-card">
                         <h3>憑證鏈不完整</h3>
                         <p>比撤銷問題常見得多的另一類憑證故障。</p>
                     </a>
-                    <a href="/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/ssl/" class="related-card">
                         <h3>SSL 憑證自動化平台</h3>
                         <p>簽發、驗證與多節點部署一次完成。</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>讓憑證管理跟著標準走</h2>
                 <p>Kineticlinks SSL 憑證自動化平台處理簽發、驗證與多節點部署，不需自行追蹤生態變動。</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

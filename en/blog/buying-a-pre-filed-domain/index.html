@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Record set (example)</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA decides which CA may issue for the domain; with none set, any of them may. Addresses come from the ranges RFCs reserve for documentation.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">China Networking</div>
                 <h1>Six Things to Check Yourself Before Buying a Pre-Filed Domain</h1>
                 <div class="article-meta">
+                    <span class="a-cat">China Networking</span>
+                    <span>·</span>
                     <time datetime="2026-10-05">October 5, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>10 min read</span>
                 </div>
                 <p class="article-lead">Quotes for pre-filed domains vary enormously, and the difference is rarely the domain. It is <strong>the state of the filing</strong>.</p>
@@ -238,6 +254,7 @@
                 </figure>
 
                 <p>The first two decide whether the deal is real at all; the other four decide how long it lasts. If the second — whose entity holds it — does not match what the seller told you, there is no point checking the other four. Settle that question first, and if it cannot be settled, do not pay.</p>
+
 
                 <!-- Why -->
                 <h2>Three situations a screenshot will not show</h2>
@@ -325,18 +342,15 @@
                 <h2>Further reading and related services</h2>
                 <p class="article-related-desc">Directly related to this page's topic</p>
                 <div class="related-grid">
-                    <a href="/en/blog/icp-filing-explained/" class="related-card glass-panel">
-                        <span class="related-kicker">Technical article</span>
+                    <a href="/en/blog/icp-filing-explained/" class="related-card">
                         <h3>ICP filings and the pre-filed domain market</h3>
                         <p>The rules, the timelines, and exactly where written rules and practice diverge.</p>
                     </a>
-                    <a href="/en/blog/icp-filing-cancelled/" class="related-card glass-panel">
-                        <span class="related-kicker">Technical article</span>
+                    <a href="/en/blog/icp-filing-cancelled/" class="related-card">
                         <h3>Why filings get cancelled</h3>
                         <p>How a shell filing forms, and why it gives no warning at all.</p>
                     </a>
-                    <a href="/en/icp-check/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform product</span>
+                    <a href="/en/icp-check/" class="related-card">
                         <h3>Live ICP filing lookup</h3>
                         <p>Enter a domain for its current MIIT filing status and registrant details.</p>
                     </a>
@@ -344,7 +358,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Check one now?</h2>
                 <p>Enter the domain you are considering and see its current filing number, registrant name, registrant type and approval date in seconds. Including domains you plan to buy from someone else — we would rather you checked first.</p>
                 <div class="hero-actions">
@@ -379,13 +393,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

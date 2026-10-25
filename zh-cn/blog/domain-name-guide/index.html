@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">记录集（示例）</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA 决定哪一家 CA 可以为这个域名签证书；没设的话，任何一家都可以。地址用的是 RFC 保留给文档的范围。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">域名管理</div>
                 <h1>域名不是买断：续费价、转移锁定与到期赎回的完整指南</h1>
                 <div class="article-meta">
+                    <span class="a-cat">域名管理</span>
+                    <span>·</span>
                     <time datetime="2026-08-24">2026 年 8 月 24 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>约 9 分钟</span>
                 </div>
                 <p class="article-lead">注册域名看起来是整个建站流程里最单纯的一步——挑个名字、付款、结束。但域名是「租」不是「买」，而且租约条款藏在你不会去读的地方。实务上最常见的三种踩雷，全都不在第一年：续费时价格翻好几倍、想换注册商却被锁住不能转、以及忘记续费后要花数百美元才能救回来。</p>
@@ -226,6 +242,7 @@
                 </figure>
 
                 <p>要强调的是：进入宽限期时，网站通常「已经停止解析」了。也就是说当你发现网站挂掉才开始处理，时钟早就在跑了。这也是为什么自动续费与到期监控必须事先设好，而不是等出事再说。</p>
+
 
                 <!-- Why -->
                 <h2>选 TLD 的三个考量</h2>
@@ -313,18 +330,15 @@
                 <h2>延伸阅读与相关服务</h2>
                 <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
                 <div class="related-grid">
-                    <a href="/zh-cn/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台产品</span>
+                    <a href="/zh-cn/ssl/" class="related-card">
                         <h3>SSL 证书自动化平台</h3>
                         <p>整合 DNS 自动验证，域名设置好之后可全自动签发与推送证书。</p>
                     </a>
-                    <a href="/zh-cn/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/ssl-certificate-validity-200-days/" class="related-card">
                         <h3>SSL 证书有效期缩短至 200 天</h3>
                         <p>证书续签频率翻倍，DNS 的 API 支持因此更重要。</p>
                     </a>
-                    <a href="/zh-cn/blog/domain-transfer-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/domain-transfer-guide/" class="related-card">
                         <h3>域名转移完整流程</h3>
                         <p>解锁、授权码、五天核准——转移不会让网站下线。</p>
                     </a>
@@ -332,7 +346,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>准备注册或转移域名？</h2>
                 <p>Namecheap 提供域名注册、DNS 管理与隐私保护服务，是自动化需求下常见的选择之一。实际的续费价、隐私保护与 API 访问条件请以官网最新公告为准——这正是本文建议您对每一家注册商都该做的事。</p>
                 <div class="hero-actions">
@@ -367,13 +381,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

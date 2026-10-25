@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Record set (example)</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA decides which CA may issue for the domain; with none set, any of them may. Addresses come from the ranges RFCs reserve for documentation.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Domain Management</div>
                 <h1>Your Transfer Lock Won't Stop a Hijack: What Domain Security Settings Actually Cover</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Domain Management</span>
+                    <span>·</span>
                     <time datetime="2026-09-06">September 6, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>9 min read</span>
                 </div>
                 <p class="article-lead">In almost every domain hijacking case, the victim had transfer lock enabled. The problem is where that lock sits: <strong>it's a setting inside your registrar account, and the account is what's being attacked</strong>. Once someone is in, turning the lock off is one click. This covers what four common protections actually cover, and why some widely-recommended measures don't defend against account-level compromise at all.</p>
@@ -186,6 +202,7 @@
                 <p>The difference is who can remove it. The first can be removed from inside your account; the second cannot. An attacker holding your registrar credentials can switch off clientTransferProhibited themselves, whereas lifting a registry lock requires registrar staff to request it from the registry and pass out-of-band verification — in practice often a phone call with a passphrase.</p>
 
                 <!-- Timeline table -->
+                <p>The table lays out four common measures. The third column is the point — what each one <strong>fails to stop</strong> is where the breach actually happens.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -224,7 +241,7 @@
                     <figcaption>What four domain protections cover. Only registry lock survives a compromised account.</figcaption>
                 </figure>
 
-                <p>The table lays out four common measures. The third column is the point — what each one <strong>fails to stop</strong> is where the breach actually happens.</p>
+
 
                 <!-- Why -->
                 <h2>Three Early Signs People Miss</h2>
@@ -312,18 +329,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/domain-name-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/domain-name-guide/" class="related-card">
                         <h3>You Don't Buy a Domain</h3>
                         <p>Renewal pricing, transfer locks and the redemption period.</p>
                     </a>
-                    <a href="/en/blog/domain-transfer-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/domain-transfer-guide/" class="related-card">
                         <h3>Domain Transfers Explained</h3>
                         <p>Auth codes, five-day auto-approval, and why transfers don't cause downtime.</p>
                     </a>
-                    <a href="/en/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform</span>
+                    <a href="/en/ssl/" class="related-card">
                         <h3>SSL Certificate Automation</h3>
                         <p>DNS control is also a prerequisite for automating certificates.</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>What Else Should You Compare in a Registrar?</h2>
                 <p>Beyond security options, renewal pricing, transfer policy and DNS management all shape long-term cost. Our registration guide works through each.</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

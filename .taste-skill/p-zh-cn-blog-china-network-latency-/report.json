@@ -1,0 +1,1899 @@
+{
+ "url": "http://localhost:8131/zh-cn/blog/china-network-latency/",
+ "at": "2026-10-25T15:41:16.450Z",
+ "allow": [
+  "few-pictures",
+  "no-footage",
+  "headline-lines"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.19,
+    0.39,
+    0.43,
+    0.26,
+    0.23,
+    0.36,
+    0.59
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 0,
+    "transitions": 12,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6041,
+     "screens": 6.7,
+     "words": 202,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "跨境连接为什么那么慢？三个结构性原因解析",
+     "words": 1,
+     "chars": 20,
+     "lines": 2,
+     "size": 56,
+     "vw": 3.9,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.12,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.59,
+     "top": 463,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "跨境连接为什么那么慢？三个结构性原因解析",
+     "words": 1,
+     "lines": 2,
+     "size": 56,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "跨境连接为什么那么慢？三个结构性原因解析",
+      "words": 1,
+      "chars": 20,
+      "lines": 2,
+      "size": 56,
+      "vw": 3.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 463,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "先把「慢」拆开来看",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 912,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "三个真正的结构性原因",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 1692,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "线路等级：163、CN2 GT 与 CN2 GIA 的差别",
+      "words": 6,
+      "chars": 29,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 2277,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "如何区分不同类型的问题",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 2877,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "三个可行的改善方向",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 3181,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "诊断时该做的三件事",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 3834,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "小结",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 4362,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸阅读与相关服务",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.59,
+      "top": 4983,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "想知道您的服务在三网实际跑多快？",
+      "words": 1,
+      "chars": 16,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.52,
+      "top": 5363,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.07,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      22,
+      24,
+      34,
+      56
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.1
+     },
+     "measureChars": 101,
+     "max": {
+      "size": 56,
+      "vw": 3.9,
+      "font": "Outfit",
+      "text": "跨境连接为什么那么慢？三个结构性原因解析"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.19,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 5764,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c9d4e4",
+       "share": 0.63
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.17
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.07
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.06
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#04121a",
+      "hsl": {
+       "h": 202,
+       "s": 0.73,
+       "l": 0.06
+      },
+      "fg": "#00f2fe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 8,
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "联系我们",
+      "简体中文 ▼"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5083
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 104,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6041,
+    "margins": {
+     "left": 233,
+     "right": 295
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 3,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 292,
+      "right": 916,
+      "textLeft": 292,
+      "textRight": 916,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "main#main",
+      "tag": "main",
+      "top": 126,
+      "height": 5638,
+      "words": 282,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "跨境连接为什么那么慢？三个结构性原因解析",
+       "size": 56,
+       "tag": "h1"
+      },
+      "left": 292,
+      "right": 292,
+      "textLeft": 292,
+      "textRight": 292,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 5764,
+      "height": 277,
+      "words": 29,
+      "media": 0,
+      "middle": 32,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 174,
+      "textLeft": 152,
+      "textRight": 174,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 5532,
+      "height": 292
+     }
+    ],
+    "h1s": [
+     {
+      "text": "跨境连接为什么那么慢？三个结构性原因解析",
+      "size": 56,
+      "top": 463,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 292,
+      "n": 25
+     },
+     {
+      "x": 318,
+      "n": 3
+     },
+     {
+      "x": 606,
+      "n": 1
+     },
+     {
+      "x": 894,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 30,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.18,
+    "voidBox": {
+     "x": 1140,
+     "y": 120,
+     "w": 300,
+     "h": 780
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.56,
+    0.46,
+    0.55,
+    0.42,
+    0.53,
+    0.73
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 0,
+    "transitions": 12,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5845,
+     "screens": 5.7,
+     "words": 194,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "跨境连接为什么那么慢？三个结构性原因解析",
+     "words": 1,
+     "chars": 20,
+     "lines": 2,
+     "size": 45.2,
+     "vw": 5.9,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.12,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 465,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "跨境连接为什么那么慢？三个结构性原因解析",
+     "words": 1,
+     "lines": 2,
+     "size": 45.2,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "跨境连接为什么那么慢？三个结构性原因解析",
+      "words": 1,
+      "chars": 20,
+      "lines": 2,
+      "size": 45.2,
+      "vw": 5.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 465,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "先把「慢」拆开来看",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 859,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "三个真正的结构性原因",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1610,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "线路等级：163、CN2 GT 与 CN2 GIA 的差别",
+      "words": 6,
+      "chars": 29,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2223,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "如何区分不同类型的问题",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2884,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "三个可行的改善方向",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3190,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "诊断时该做的三件事",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3836,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "小结",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4336,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸阅读与相关服务",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4877,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "想知道您的服务在三网实际跑多快？",
+      "words": 1,
+      "chars": 16,
+      "lines": 1,
+      "size": 28.4,
+      "vw": 3.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 5168,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.07,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      20,
+      24,
+      28,
+      45
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.9,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.1
+     },
+     "measureChars": 83,
+     "max": {
+      "size": 45.2,
+      "vw": 5.9,
+      "font": "Outfit",
+      "text": "跨境连接为什么那么慢？三个结构性原因解析"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.19,
+     "centerShare": 0.09,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 5498,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c9d4e4",
+       "share": 0.63
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.17
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.07
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.06
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#04121a",
+      "hsl": {
+       "h": 202,
+       "s": 0.73,
+       "l": 0.06
+      },
+      "fg": "#00f2fe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 0,
+     "radius": 8,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4970
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5845,
+    "margins": {
+     "left": 32,
+     "right": 35
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 3,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 504,
+      "textLeft": 32,
+      "textRight": 504,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "main#main",
+      "tag": "main",
+      "top": 126,
+      "height": 5372,
+      "words": 282,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "跨境连接为什么那么慢？三个结构性原因解析",
+       "size": 45,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 33,
+      "textLeft": 32,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 5498,
+      "height": 347,
+      "words": 29,
+      "media": 0,
+      "middle": 12,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 33,
+      "right": 33,
+      "textLeft": 33,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "跨境连接为什么那么慢？三个结构性原因解析",
+      "size": 45,
+      "top": 465,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 25
+     },
+     {
+      "x": 50,
+      "n": 2
+     },
+     {
+      "x": 63,
+      "n": 1
+     },
+     {
+      "x": 287,
+      "n": 1
+     },
+     {
+      "x": 525,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 30,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.43,
+    0.53,
+    0.57,
+    0.63,
+    0.7,
+    0.54,
+    0.53,
+    0.53,
+    0.79,
+    0.83
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 0,
+    "transitions": 12,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 8191,
+     "screens": 9.7,
+     "words": 194,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "跨境连接为什么那么慢？三个结构性原因解析",
+     "words": 1,
+     "chars": 20,
+     "lines": 3,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.12,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 552,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "跨境连接为什么那么慢？三个结构性原因解析",
+     "words": 1,
+     "lines": 3,
+     "size": 32,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "跨境连接为什么那么慢？三个结构性原因解析",
+      "words": 1,
+      "chars": 20,
+      "lines": 3,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 552,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "先把「慢」拆开来看",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 1056,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "三个真正的结构性原因",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 2132,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "线路等级：163、CN2 GT 与 CN2 GIA 的差别",
+      "words": 6,
+      "chars": 29,
+      "lines": 2,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 3046,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "如何区分不同类型的问题",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4067,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "三个可行的改善方向",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4449,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "诊断时该做的三件事",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5333,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "小结",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5994,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "延伸阅读与相关服务",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 6772,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "想知道您的服务在三网实际跑多快？",
+      "words": 1,
+      "chars": 16,
+      "lines": 2,
+      "size": 24.3,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 7265,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.8,
+      "top": 7776,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.07,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      18,
+      24,
+      32
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16.2,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.1
+     },
+     "measureChars": 40,
+     "max": {
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "text": "跨境连接为什么那么慢？三个结构性原因解析"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.19,
+     "centerShare": 0.09,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#00f2fe",
+       "top": 7233,
+       "hsl": {
+        "h": 183,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#04060b",
+       "top": 7712,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c9d4e4",
+       "share": 0.63
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.17
+      },
+      {
+       "color": "#a0aec0",
+       "share": 0.07
+      },
+      {
+       "color": "#8b9bb4",
+       "share": 0.06
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#04121a",
+      "hsl": {
+       "h": 202,
+       "s": 0.73,
+       "l": 0.06
+      },
+      "fg": "#00f2fe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 0,
+     "radius": 8,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 7,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 8191,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 3,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 126,
+      "textLeft": 32,
+      "textRight": 126,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "main#main",
+      "tag": "main",
+      "top": 126,
+      "height": 7587,
+      "words": 282,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "跨境连接为什么那么慢？三个结构性原因解析",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7712,
+      "height": 478,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "跨境连接为什么那么慢？三个结构性原因解析",
+      "size": 32,
+      "top": 552,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 25
+     },
+     {
+      "x": 50,
+      "n": 4
+     },
+     {
+      "x": 63,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 30,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "1 box(es) drawn with a 1px outline.",
+   "fix": "Prefer a filled surface or no box.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 101 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 233px on the left, 295px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 12 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 768,
+   "message": "No visible button in the first screen.",
+   "fix": "Give the one primary action a real button in the first screen (a filled or solid-bordered control, 44px or taller), not only a link in the navigation.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 390,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/p-zh-cn-blog-china-network-latency-/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/p-zh-cn-blog-china-network-latency-/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/p-zh-cn-blog-china-network-latency-/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/p-zh-cn-blog-china-network-latency-/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/p-zh-cn-blog-china-network-latency-/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/p-zh-cn-blog-china-network-latency-/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/p-zh-cn-blog-china-network-latency-/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/p-zh-cn-blog-china-network-latency-/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">台北 → 上海（示例）</div>
+            <div class="f-row"><span class="f-k">电信</span><span class="f-v"><code>68 ms · 0.0%</code></span></div>
+            <div class="f-row"><span class="f-k">联通</span><span class="f-v"><code>91 ms · 0.2%</code></span></div>
+            <div class="f-row"><span class="f-k">移动</span><span class="f-v"><code>77 ms · 0.0%</code></span></div>
+        </div>
+        <figcaption>三网要分开看。取平均会把其中一网的问题藏起来，而用户只会遇到自己那一网。以上为示例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">网络质量</div>
                 <h1>no-cache 不是「不要缓存」：HTTP 缓存标头的实际语意</h1>
                 <div class="article-meta">
+                    <span class="a-cat">网络质量</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>约 10 分钟</span>
                 </div>
                 <p class="article-lead"><code>Cache-Control: no-cache</code> 这个名字取得很糟。它<strong>不是</strong>「不要缓存」——它允许缓存存储这份响应，只是要求每次使用前先向源站确认还新不新。真正禁止存储的指令叫 <code>no-store</code>。这个命名造成的误解有实际后果：想保护敏感数据的人用了 no-cache，数据仍然被写到磁盘；想避免风险的人一律用 no-store，性能整个赔进去。</p>
@@ -186,6 +200,7 @@
                 <p>最关键的区分是<strong>存储</strong>与<strong>使用</strong>：缓存可以存储一份响应，但在使用它之前可能需要先验证。<code>no-cache</code> 管的是后者，<code>no-store</code> 管的是前者——名字容易混淆，行为完全不同。</p>
 
                 <!-- Timeline table -->
+                <p>下表列出六个最常用的指令。第一行就是那个被误解得最严重的。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -234,7 +249,7 @@
                     <figcaption>六个常用的 Cache-Control 指令与它们在 RFC 9111 中的实际语意。</figcaption>
                 </figure>
 
-                <p>下表列出六个最常用的指令。第一行就是那个被误解得最严重的。</p>
+
 
                 <!-- Why -->
                 <h2>这个误解造成的三种实际后果</h2>
@@ -322,18 +337,15 @@
                 <h2>延伸阅读与相关服务</h2>
                 <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
                 <div class="related-grid">
-                    <a href="/zh-cn/blog/geodns-resolver-location/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/geodns-resolver-location/" class="related-card">
                         <h3>GeoDNS 与流量调度</h3>
                         <p>节点怎么选，以及为什么它看的是解析器不是用户。</p>
                     </a>
-                    <a href="/zh-cn/blog/reading-speed-test-results/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/reading-speed-test-results/" class="related-card">
                         <h3>测速数字怎么读</h3>
                         <p>缓存命中之外，延迟与丢包才是跨境的主要瓶颈。</p>
                     </a>
-                    <a href="/zh-cn/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服务</span>
+                    <a href="/zh-cn/cdn/" class="related-card">
                         <h3>CDN 内容分发网络</h3>
                         <p>跨境节点加速，缓存策略直接决定回源比例。</p>
                     </a>
@@ -341,7 +353,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>让 CDN 真的挡下回源流量</h2>
                 <p>Kineticlinks CDN 提供跨境节点加速，可在不接入大陆节点的前提下部署，并协助检视缓存策略。</p>
                 <div class="hero-actions">
@@ -376,13 +388,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

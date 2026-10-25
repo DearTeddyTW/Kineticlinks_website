@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Lookup result (example)</div>
+            <div class="f-row"><span class="f-k">Domain</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">Status</span><span class="f-v"><code>No filing</code></span></div>
+            <div class="f-row"><span class="f-k">May resolve inside China</span><span class="f-v"><code>No</code></span></div>
+        </div>
+        <figcaption>A filing binds the operating entity and the resources it uses, not the domain itself. So “does this domain have a filing” is the wrong question to start from. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Network Architecture</div>
                 <h1>Why Are Connections to China So Slow? It Isn't Just the Firewall</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Network Architecture</span>
+                    <span>·</span>
                     <time datetime="2026-08-19">August 19, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>10 min read</span>
                 </div>
                 <p class="article-lead">"Our site won't load in China." "Customers there say it's slow." Almost every team doing cross-border business hits this, and the firewall is usually the first suspect. It exists and it does have effects — but attributing everything to it tends to make you miss the parts you can actually fix. In practice, most latency and packet loss comes down to three purely structural network problems.</p>
@@ -225,6 +239,7 @@
                 </figure>
 
                 <p>Worth stating up front: of these four, only the last is directly related to content filtering. The first three are purely questions of network capacity and routing — and they're what the rest of this article unpacks, because they're also the ones you have a realistic chance of improving.</p>
+
 
                 <!-- Why -->
                 <h2>The Three Real Structural Causes</h2>
@@ -312,18 +327,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/reading-speed-test-results/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/reading-speed-test-results/" class="related-card">
                         <h3>Reading Speed Test Results</h3>
                         <p>What latency, jitter and loss each mean, and which to read first.</p>
                     </a>
-                    <a href="/en/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/cdn/" class="related-card">
                         <h3>CDN Content Delivery Network</h3>
                         <p>Cache content nearer users to cut traffic crossing the international gateways.</p>
                     </a>
-                    <a href="/en/cloud/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/cloud/" class="related-card">
                         <h3>Public Cloud Architecture</h3>
                         <p>Cross-border architecture planning that bridges resources inside and outside.</p>
                     </a>
@@ -331,7 +343,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Want to Know How Fast Your Service Really Is in China?</h2>
                 <p>Use our speed test platform for per-carrier measured data across Telecom, Unicom, and Mobile, and see where the problem actually sits.</p>
                 <div class="hero-actions">
@@ -366,13 +378,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

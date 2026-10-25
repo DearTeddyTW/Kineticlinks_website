@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,27 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Response headers (example)</div>
+            <div class="f-row"><span class="f-k">Cache-Control</span><span class="f-v"><code>public, max-age=0, s-maxage=86400</code></span></div>
+            <div class="f-row"><span class="f-k">Age</span><span class="f-v"><code>41203</code></span></div>
+            <div class="f-row"><span class="f-k">ETag</span><span class="f-v"><code>&quot;9f2b…c41&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">Vary</span><span class="f-v"><code>Accept-Encoding</code></span></div>
+        </div>
+        <figcaption>no-cache does not mean “do not cache” — no-store does. s-maxage applies to shared caches only; a browser ignores it. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Data Center</div>
                 <h1>What Is an IDC? Colocation, Rack Rental, and Purpose-Built Facilities Compared</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Data Center</span>
+                    <span>·</span>
                     <time datetime="2026-08-18">August 18, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>9 min read</span>
                 </div>
                 <p class="article-lead">IDC (Internet Data Center) is often used loosely to mean any kind of facility service, but rack rental, colocation, and full buildout carry very different responsibility boundaries. Getting that wrong before signing is how disputes about "whose job was that?" begin. This article separates the definitions, the rating standard, and the situations each suits.</p>
@@ -225,6 +240,7 @@
                 </figure>
 
                 <p>Another common misconception treats IDC and public cloud as opposing choices. In practice most organizations mix them: latency-sensitive systems and anything with data residency requirements live in the facility, elastic front-end workloads live in the cloud, and a private circuit or VPN joins them. The real question isn't which to pick, but which systems belong where.</p>
+
 
                 <!-- Why -->
                 <h2>Why Organizations Still Want Their Own Facility</h2>
@@ -312,18 +328,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/idc/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/idc/" class="related-card">
                         <h3>IDC Data Center Buildout</h3>
                         <p>End-to-end network planning, procurement, and deployment.</p>
                     </a>
-                    <a href="/en/cloud/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/cloud/" class="related-card">
                         <h3>Public Cloud Architecture</h3>
                         <p>Most organizations mix both — how on-premises and cloud connect.</p>
                     </a>
-                    <a href="/en/vps/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/vps/" class="related-card">
                         <h3>VPS Hosting</h3>
                         <p>The interim option before your scale justifies a facility.</p>
                     </a>
@@ -331,7 +344,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Assessing a Facility Buildout or Migration?</h2>
                 <p>Share your equipment list and tolerable downtime, and our consultants will help plan a suitable facility architecture.</p>
                 <div class="hero-actions">
@@ -366,13 +379,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

@@ -1,0 +1,1945 @@
+{
+ "url": "http://localhost:8131/blog/",
+ "at": "2026-10-25T14:06:29.962Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.37,
+    0.57,
+    0.53,
+    0.53,
+    0.57,
+    0.57,
+    0.61,
+    0.52,
+    0.67
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 0,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7427,
+     "screens": 8.3,
+     "words": 490,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "技術文章",
+     "words": 1,
+     "chars": 4,
+     "lines": 1,
+     "size": 44,
+     "vw": 3.1,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.49,
+     "top": 267,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "技術文章",
+     "words": 1,
+     "lines": 1,
+     "size": 44,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "技術文章",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.49,
+      "top": 267,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.81,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.19,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      22,
+      24,
+      44
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 15.2,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.7
+     },
+     "measureChars": 103,
+     "max": {
+      "size": 44,
+      "vw": 3.1,
+      "font": "Outfit",
+      "text": "技術文章"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.19,
+     "centerShare": 0.01,
+     "smallText": 24
+    },
+    "eyebrows": [
+     {
+      "text": "技術文章",
+      "above": "技術文章",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 13.6,
+      "top": 207
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 7144,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.73
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.08
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 8,
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "聯絡我們",
+      "繁體中文 ▼"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "div.page-hero-content.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "footer 1440px",
+      "div.footer-bottom 1136px"
+     ],
+     "outlinedBoxes": 25,
+     "dashed": 0,
+     "blurred": 26,
+     "roundedBoxes": 25,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 24,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 623
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 103,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7427,
+    "margins": {
+     "left": 200,
+     "right": 330
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 2,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 152,
+      "right": 1185,
+      "textLeft": 152,
+      "textRight": 1185,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 401,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "技術文章",
+       "size": 44,
+       "tag": "h1"
+      },
+      "left": 201,
+      "right": 543,
+      "textLeft": 201,
+      "textRight": 543,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 527,
+      "height": 6617,
+      "words": 511,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "批量查詢 ICP 備案狀態：幾百個網域怎麼查才不會被擋",
+       "size": 22,
+       "tag": "h2"
+      },
+      "left": 328,
+      "right": 329,
+      "textLeft": 328,
+      "textRight": 329,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7144,
+      "height": 283,
+      "words": 29,
+      "media": 0,
+      "middle": 32,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 174,
+      "textLeft": 152,
+      "textRight": 174,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "技術文章",
+      "size": 44,
+      "top": 267,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 328,
+      "n": 48
+     },
+     {
+      "x": 201,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 49,
+    "bodySize": 15,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.25,
+    "voidBox": {
+     "x": 900,
+     "y": 120,
+     "w": 540,
+     "h": 600
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.69,
+    0.86,
+    0.86,
+    0.8,
+    0.86,
+    0.86,
+    0.83
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 0,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 7089,
+     "screens": 6.9,
+     "words": 482,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "技術文章",
+     "words": 1,
+     "chars": 4,
+     "lines": 1,
+     "size": 33.6,
+     "vw": 4.4,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.83,
+     "top": 251,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "技術文章",
+     "words": 1,
+     "lines": 1,
+     "size": 33.6,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "技術文章",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 4.4,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 251,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.81,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.19,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      17,
+      18,
+      22,
+      24,
+      34
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 15.2,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.7
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 33.6,
+      "vw": 4.4,
+      "font": "Outfit",
+      "text": "技術文章"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.19,
+     "centerShare": 0.05,
+     "smallText": 24
+    },
+    "eyebrows": [
+     {
+      "text": "技術文章",
+      "above": "技術文章",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 13.6,
+      "top": 191
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 6736,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.73
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.08
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "div.page-hero-content.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "footer 768px",
+      "div.footer-bottom 704px"
+     ],
+     "outlinedBoxes": 25,
+     "dashed": 0,
+     "blurred": 26,
+     "roundedBoxes": 25,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 7089,
+    "margins": {
+     "left": 57,
+     "right": 57
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 2,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 633,
+      "textLeft": 32,
+      "textRight": 633,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 357,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "技術文章",
+       "size": 34,
+       "tag": "h1"
+      },
+      "left": 65,
+      "right": 74,
+      "textLeft": 65,
+      "textRight": 74,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 482,
+      "height": 6254,
+      "words": 511,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "批量查詢 ICP 備案狀態：幾百個網域怎麼查才不會被擋",
+       "size": 22,
+       "tag": "h2"
+      },
+      "left": 57,
+      "right": 57,
+      "textLeft": 57,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 6736,
+      "height": 353,
+      "words": 29,
+      "media": 0,
+      "middle": 12,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 33,
+      "right": 33,
+      "textLeft": 33,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "技術文章",
+      "size": 34,
+      "top": 251,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 57,
+      "n": 49
+     }
+    ],
+    "leftBlocks": 49,
+    "bodySize": 15,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.58,
+    0.73,
+    0.73,
+    0.84,
+    0.73,
+    0.79,
+    0.79,
+    0.78,
+    0.73,
+    0.84,
+    0.79,
+    0.89
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 0,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 9910,
+     "screens": 11.7,
+     "words": 482,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "技術文章",
+     "words": 1,
+     "chars": 4,
+     "lines": 1,
+     "size": 33.6,
+     "vw": 8.6,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.67,
+     "top": 251,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "技術文章",
+     "words": 1,
+     "lines": 1,
+     "size": 33.6,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "技術文章",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 251,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "批量查詢 ICP 備案狀態：幾百個網域怎麼查才不會被擋",
+      "words": 3,
+      "chars": 27,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 664,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "備案域名購買前，先自己查這六件事",
+      "words": 1,
+      "chars": 16,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 996,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "查得到百度，不代表查得到你要查的那個網域",
+      "words": 1,
+      "chars": 20,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 1328,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "備案被註銷最常見的原因不是違規，是你換了主機",
+      "words": 1,
+      "chars": 22,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 1683,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "香港伺服器要備案嗎：免備案的邊界不在你買在哪",
+      "words": 1,
+      "chars": 22,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 2015,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "no-cache 不是「不要快取」：HTTP 快取標頭的實際語意",
+      "words": 3,
+      "chars": 32,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 2373,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "GeoDNS 為什麼會把使用者導到錯的節點：它看的是解析器，不是你",
+      "words": 2,
+      "chars": 33,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 2762,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "免費憑證與付費憑證差在哪：不是加密強度，也不是萬用字元",
+      "words": 1,
+      "chars": 27,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 3151,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "nginx -t 通過不代表憑證正確：三個讓設定與實際脫鉤的機制",
+      "words": 3,
+      "chars": 32,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 3513,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "還在設定 OCSP 裝訂？Let's Encrypt 已經關掉它了",
+      "words": 5,
+      "chars": 33,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 3874,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "瀏覽器打得開不代表憑證沒問題：中繼憑證缺失的完整排查",
+      "words": 1,
+      "chars": 26,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 4206,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "ICP 備案與備案域名交易：規定、時程與實際風險",
+      "words": 2,
+      "chars": 24,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 4568,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "改了 DNS 為什麼沒生效：記錄類型、TTL 與根網域的硬限制",
+      "words": 4,
+      "chars": 31,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 4899,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "你開的轉移鎖定擋不住劫持：網域安全設定的實際效力",
+      "words": 1,
+      "chars": 24,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 5285,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "單次測速證明不了什麼：跨境連線品質為什麼需要長期監控",
+      "words": 1,
+      "chars": 26,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 5647,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "測速數字怎麼讀：為什麼頻寬夠了，跨境連線還是很慢",
+      "words": 1,
+      "chars": 24,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 6033,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "憑證自動化真正的卡關點：三種 ACME 驗證方式該怎麼選",
+      "words": 3,
+      "chars": 28,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 6365,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "憑證到期監控：自動續簽成功，不代表使用者拿到的是新憑證",
+      "words": 1,
+      "chars": 27,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 6751,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "網域轉移不會讓網站下線：完整流程、授權碼與時程說明",
+      "words": 1,
+      "chars": 25,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 7137,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "網域不是買斷：續約價、轉移鎖定與到期贖回的完整指南",
+      "words": 1,
+      "chars": 25,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 7523,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "中國連線為什麼那麼慢？不只是「牆」的問題",
+      "words": 1,
+      "chars": 20,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 7936,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開",
+      "words": 2,
+      "chars": 27,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 8292,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "IDC 是什麼？主機代管、機櫃租賃與自建機房的差異一次說清楚",
+      "words": 2,
+      "chars": 30,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 8678,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "SSL 憑證效期縮短至 200 天：2029 年只剩 47 天，企業該如何因應？",
+      "words": 7,
+      "chars": 40,
+      "lines": 3,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 9064,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.8,
+      "top": 9491,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 27,
+     "maxLines": 3,
+     "over2Lines": 15,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.81,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.19,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      17,
+      18,
+      22,
+      24,
+      34
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 15.2,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8.7
+     },
+     "measureChars": 36,
+     "max": {
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Outfit",
+      "text": "技術文章"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.19,
+     "centerShare": 0.05,
+     "smallText": 24
+    },
+    "eyebrows": [
+     {
+      "text": "技術文章",
+      "above": "技術文章",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 13.6,
+      "top": 191
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 9426,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.73
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.19
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.08
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 0,
+     "inHero": 0,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "div.page-hero-content.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "footer 390px",
+      "div.footer-bottom 326px"
+     ],
+     "outlinedBoxes": 25,
+     "dashed": 0,
+     "blurred": 26,
+     "roundedBoxes": 25,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 24,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 600
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 9910,
+    "margins": {
+     "left": 43,
+     "right": 55
+    },
+    "sections": [
+     {
+      "sel": "div.breadcrumb-bar",
+      "tag": "div",
+      "top": 0,
+      "height": 126,
+      "words": 2,
+      "media": 0,
+      "middle": 21,
+      "heading": null,
+      "left": 32,
+      "right": 255,
+      "textLeft": 32,
+      "textRight": 255,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.page-hero",
+      "tag": "section",
+      "top": 126,
+      "height": 410,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "技術文章",
+       "size": 34,
+       "tag": "h1"
+      },
+      "left": 65,
+      "right": 65,
+      "textLeft": 65,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 536,
+      "height": 8890,
+      "words": 511,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "批量查詢 ICP 備案狀態：幾百個網域怎麼查才不會被擋",
+       "size": 22,
+       "tag": "h2"
+      },
+      "left": 57,
+      "right": 57,
+      "textLeft": 57,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 9426,
+      "height": 484,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "技術文章",
+      "size": 34,
+      "top": 251,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 57,
+      "n": 49
+     }
+    ],
+    "leftBlocks": 49,
+    "bodySize": 15,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"技術文章\" (pill) above \"技術文章\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "1 box-shadow(s) on elements at rest: div.page-hero-content.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "2 thin rule(s)/divider line(s): footer 1440px | div.footer-bottom 1136px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "25 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "width": 1440,
+   "message": "26 backdrop-blur surfaces.",
+   "fix": "One blurred sticky bar at most; glass cards are a tell.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 15.2px.",
+   "fix": "Body copy 16–20px.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 103 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "24 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 44px (3.1vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Switzer and Switzer, but the page renders Inter, Outfit.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "FAIL",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The page sits off-centre: its content comes to 200px from the left edge but only to 330px from the right, at 1440px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure)."
+  },
+  {
+   "level": "WARN",
+   "id": "name-only-title",
+   "width": 1440,
+   "message": "The h1 is a bare name (\"技術文章\") and nothing else on the first screen says what this is.",
+   "fix": "Keep the name if it leads, and give the line under it (18px or more) the plain words: what it is, for whom, where or when. In the study of 97 Sites of the Day, first screens that named nothing lost usability and content points.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 1 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 768,
+   "message": "No visible button in the first screen.",
+   "fix": "Give the one primary action a real button in the first screen (a filled or solid-bordered control, 44px or taller), not only a link in the navigation.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "15 headline(s) wrap past two lines at 390px: \"no-cache 不是「不要快取」：HTTP 快取標頭的實際語意\" → 3 lines (3 words, 22.4px); \"GeoDNS 為什麼會把使用者導到錯的節點：它看的是解析器，不是你\" → 3 lines (2 words, 22.4px); \"免費憑證與付費憑證差在哪：不是加密強度，也不是萬用字元\" → 3 lines (1 words, 22.4px); \"nginx -t 通過不代表憑證正確：三個讓設定與實際脫鉤的機制\" → 3 lines (3 words, 22.4px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 390,
+   "message": "The margins differ: 43px on the left, 55px on the right, at 390px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/b0-blog-/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/b0-blog-/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/b0-blog-/desktop-page-02.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/b0-blog-/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/b0-blog-/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/b0-blog-/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/b0-blog-/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/b0-blog-/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/b0-blog-/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/b0-blog-/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

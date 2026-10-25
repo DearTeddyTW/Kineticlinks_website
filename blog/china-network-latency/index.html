@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">查詢結果（範例）</div>
+            <div class="f-row"><span class="f-k">網域</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">狀態</span><span class="f-v"><code>沒有備案</code></span></div>
+            <div class="f-row"><span class="f-k">可解析至中國境內</span><span class="f-v"><code>否</code></span></div>
+        </div>
+        <figcaption>備案綁的是主體與它使用的資源，不是網域本身。所以「這個網域有沒有備案」這個問題，本身就問錯了方向。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">網路架構</div>
                 <h1>中國連線為什麼那麼慢？不只是「牆」的問題</h1>
                 <div class="article-meta">
+                    <span class="a-cat">網路架構</span>
+                    <span>·</span>
                     <time datetime="2026-08-19">2026 年 8 月 19 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 10 分鐘</span>
                 </div>
                 <p class="article-lead">「我們網站在中國打不開」「中國客戶說很慢」——這類回報幾乎每個做跨境生意的團隊都遇過，而第一個聯想通常是防火長城。牆確實存在且有影響，但把所有問題都歸因於它，往往會讓您錯過真正能改善的部分。實務上多數的延遲與丟包，來自三個純粹的網路結構問題。</p>
@@ -225,6 +239,7 @@
                 </figure>
 
                 <p>值得先說清楚的是：這四種當中，只有最後一種與內容審查直接相關。前三種都是純粹的網路容量與路由問題，也正是本文接下來要拆解的重點——它們也是實際上比較有機會改善的部分。</p>
+
 
                 <!-- Why -->
                 <h2>三個真正的結構性原因</h2>
@@ -312,18 +327,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/reading-speed-test-results/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/reading-speed-test-results/" class="related-card">
                         <h3>測速數字怎麼讀</h3>
                         <p>延遲、抖動、丟包各代表什麼，以及該先看哪一個。</p>
                     </a>
-                    <a href="/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/cdn/" class="related-card">
                         <h3>CDN 內容傳遞網路</h3>
                         <p>把內容快取到離使用者更近的節點，減少跨國際出口的流量。</p>
                     </a>
-                    <a href="/cloud/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/cloud/" class="related-card">
                         <h3>公有雲架構解決方案</h3>
                         <p>跨境架構規劃，協助銜接境內外資源。</p>
                     </a>
@@ -331,7 +343,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>想知道您的服務在中國三網實際跑多快？</h2>
                 <p>用我們的測速平台取得電信、聯通、移動的分網實測數據，先看清楚問題落在哪裡。</p>
                 <div class="hero-actions">
@@ -366,13 +378,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

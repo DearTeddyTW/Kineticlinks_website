@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Record set (example)</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA decides which CA may issue for the domain; with none set, any of them may. Addresses come from the ranges RFCs reserve for documentation.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Domain Management</div>
                 <h1>Why Your DNS Change Hasn't Taken Effect: Record Types, TTL and the Apex Limit</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Domain Management</span>
+                    <span>·</span>
                     <time datetime="2026-09-06">September 6, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>9 min read</span>
                 </div>
                 <p class="article-lead">"The DNS change hasn't taken yet — still propagating, right?" Half true, and it hides the actual cause. There is no mechanism in DNS called propagation. <strong>Changes take time because the old record is still cached, and how long it stays cached is set by your own TTL.</strong> Which means something counterintuitive: to make a change take effect quickly, you act *before* making it. This covers six record types, how TTL should actually be used, and the apex limitation you cannot design around.</p>
@@ -186,6 +202,7 @@
                 <p>Confusing the types is the most common source of error, and the symptoms are rarely obvious — writing an A record where a CNAME belonged works perfectly until the other end changes IP, which might be months later.</p>
 
                 <!-- Timeline table -->
+                <p>The table lists all six with the mistake each most often invites. The third column is the one to read.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -234,7 +251,7 @@
                     <figcaption>Six common DNS records and their typical failure modes. The CNAME constraint is protocol-level and cannot be worked around.</figcaption>
                 </figure>
 
-                <p>The table lists all six with the mistake each most often invites. The third column is the one to read.</p>
+
 
                 <!-- Why -->
                 <h2>Why the Apex Can't Use CNAME</h2>
@@ -322,18 +339,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/domain-name-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/domain-name-guide/" class="related-card">
                         <h3>You Don't Buy a Domain</h3>
                         <p>Renewal pricing, transfer locks and the redemption period.</p>
                     </a>
-                    <a href="/en/blog/acme-challenge-types/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/acme-challenge-types/" class="related-card">
                         <h3>Choosing an ACME Challenge</h3>
                         <p>Why a DNS API is the prerequisite for certificate automation.</p>
                     </a>
-                    <a href="/en/blog/domain-hijacking-protection/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/domain-hijacking-protection/" class="related-card">
                         <h3>Domain Hijacking Defence</h3>
                         <p>Altered NS records are among the clearest signs of a hijack.</p>
                     </a>
@@ -341,7 +355,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>How Should DNS Capability Factor Into Choosing a Registrar?</h2>
                 <p>API support, ALIAS functionality and DNS hosting quality all shape ongoing operational cost. Our registration guide works through what to look for.</p>
                 <div class="hero-actions">
@@ -376,13 +390,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

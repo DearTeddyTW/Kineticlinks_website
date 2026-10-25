@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">查詢結果（範例）</div>
+            <div class="f-row"><span class="f-k">網域</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">狀態</span><span class="f-v"><code>沒有備案</code></span></div>
+            <div class="f-row"><span class="f-k">可解析至中國境內</span><span class="f-v"><code>否</code></span></div>
+        </div>
+        <figcaption>備案綁的是主體與它使用的資源，不是網域本身。所以「這個網域有沒有備案」這個問題，本身就問錯了方向。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">中國網路</div>
                 <h1>備案被註銷最常見的原因不是違規，是你換了主機</h1>
                 <div class="article-meta">
+                    <span class="a-cat">中國網路</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">多數人以為備案被註銷是因為內容出問題。實際上最常見的原因平淡得多：<strong>換了主機</strong>。原接入商在你搬走後取消接入，而你沒有在新服務商辦理接入備案——那筆備案就成了「網站空殼」，會在專項核查時被註銷。整個過程中網站照常運作、沒有任何錯誤訊息，直到某天發現備案號查不到了。</p>
@@ -186,6 +200,7 @@
                 <p>問題在於這只完成了一半。備案還需要<strong>在新的接入商辦理接入</strong>，把關係重新接上。沒做這一步，那筆備案就處於「有主體、有網站資訊，但沒有任何接入商」的狀態，也就是所謂的網站空殼。</p>
 
                 <!-- Timeline table -->
+                <p>下表列出幾種註銷原因。第一列是最常見、也最容易在無感中發生的。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +244,7 @@
                     <figcaption>備案被註銷的常見原因。第一種完全沒有徵兆。</figcaption>
                 </figure>
 
-                <p>下表列出幾種註銷原因。第一列是最常見、也最容易在無感中發生的。</p>
+
 
                 <!-- Why -->
                 <h2>三種在無感中失去備案的情況</h2>
@@ -317,18 +332,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/icp-filing-explained/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/icp-filing-explained/" class="related-card">
                         <h3>ICP 備案完整說明</h3>
                         <p>誰需要備案、要等多久，以及備案域名交易的實際機制。</p>
                     </a>
-                    <a href="/blog/hong-kong-server-icp-filing/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/hong-kong-server-icp-filing/" class="related-card">
                         <h3>香港伺服器要備案嗎</h3>
                         <p>免備案的邊界，以及什麼操作會讓豁免失效。</p>
                     </a>
-                    <a href="/icp-check/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/icp-check/" class="related-card">
                         <h3>ICP 備案狀態即時查詢</h3>
                         <p>一鍵檢測工信部備案有效性與主體資訊，支援即時驗證。</p>
                     </a>
@@ -336,7 +348,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>想確認您目前的網域備案是否仍然有效？</h2>
                 <p>輸入網域名稱即可即時查詢中國工信部最新備案狀態、主體名稱與核准資訊，及早排查無預警被註銷的風險。</p>
                 <div class="hero-actions">
@@ -371,13 +383,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

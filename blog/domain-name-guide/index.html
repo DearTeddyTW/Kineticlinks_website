@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">記錄集（範例）</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA 決定哪一家 CA 可以為這個網域簽憑證；沒設的話，任何一家都可以。位址用的是 RFC 保留給文件的範圍。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">網域管理</div>
                 <h1>網域不是買斷：續約價、轉移鎖定與到期贖回的完整指南</h1>
                 <div class="article-meta">
+                    <span class="a-cat">網域管理</span>
+                    <span>·</span>
                     <time datetime="2026-08-24">2026 年 8 月 24 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">註冊網域看起來是整個架站流程裡最單純的一步——挑個名字、刷卡、結束。但網域是「租」不是「買」，而且租約條款藏在你不會去讀的地方。實務上最常見的三種踩雷，全都不在第一年：續約時價格翻好幾倍、想換註冊商卻被鎖住不能轉、以及忘記續約後要花數千元才能救回來。</p>
@@ -226,6 +242,7 @@
                 </figure>
 
                 <p>要強調的是：進入寬限期時，網站通常「已經停止解析」了。也就是說當你發現網站掛掉才開始處理，時鐘早就在跑了。這也是為什麼自動續約與到期監控必須事先設好，而不是等出事再說。</p>
+
 
                 <!-- Why -->
                 <h2>選 TLD 的三個考量</h2>
@@ -313,18 +330,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/ssl/" class="related-card">
                         <h3>SSL 憑證自動化平台</h3>
                         <p>整合 DNS 自動驗證，網域設定好之後可全自動簽發與推播憑證。</p>
                     </a>
-                    <a href="/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/ssl-certificate-validity-200-days/" class="related-card">
                         <h3>SSL 憑證效期縮短至 200 天</h3>
                         <p>憑證續簽頻率翻倍，DNS 的 API 支援因此更重要。</p>
                     </a>
-                    <a href="/blog/domain-transfer-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/domain-transfer-guide/" class="related-card">
                         <h3>網域轉移完整流程</h3>
                         <p>解鎖、授權碼、五天核准——轉移不會讓網站下線。</p>
                     </a>
@@ -332,7 +346,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>準備註冊或轉移網域？</h2>
                 <p>Namecheap 提供網域註冊、DNS 管理與隱私保護服務，是自動化需求下常見的選擇之一。實際的續約價、隱私保護與 API 存取條件請以官網最新公告為準——這正是本文建議您對每一家註冊商都該做的事。</p>
                 <div class="hero-actions">
@@ -367,13 +381,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

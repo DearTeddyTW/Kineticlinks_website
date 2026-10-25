@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">記錄集（範例）</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA 決定哪一家 CA 可以為這個網域簽憑證；沒設的話，任何一家都可以。位址用的是 RFC 保留給文件的範圍。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">網域管理</div>
                 <h1>網域轉移不會讓網站下線：完整流程、授權碼與時程說明</h1>
                 <div class="article-meta">
+                    <span class="a-cat">網域管理</span>
+                    <span>·</span>
                     <time datetime="2026-08-27">2026 年 8 月 27 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 8 分鐘</span>
                 </div>
                 <p class="article-lead">「想換註冊商，但怕轉移過程網站掛掉」是很常見的顧慮，也是很多人一直忍受爛服務或高續約價的原因。實際上，網域轉移<strong>不會</strong>動到你的 DNS 設定——只要你不主動更改名稱伺服器，網站與郵件在整個轉移期間都持續運作。真正需要注意的不是斷線，而是時程與鎖定規則。</p>
@@ -200,22 +216,22 @@
                             <tbody>
                                 <tr class="">
                                     <td>註冊商</td>
-                                    <td class="num">改變</td>
+                                    <td>改變</td>
                                     <td>帳單、管理後台與客服換到新註冊商</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>名稱伺服器 / DNS</td>
-                                    <td class="num">不變</td>
+                                    <td>不變</td>
                                     <td>只要你沒主動改，網站與郵件全程正常運作</td>
                                 </tr>
                                 <tr class="">
                                     <td>到期日</td>
-                                    <td class="num">延長一年</td>
+                                    <td>延長一年</td>
                                     <td>疊加在原到期日之上，不是從轉移日重新計算</td>
                                 </tr>
                                 <tr class="">
                                     <td>註冊人資料</td>
-                                    <td class="num">不變</td>
+                                    <td>不變</td>
                                     <td>所有權不因轉移而改變，WHOIS 註冊人維持原樣</td>
                                 </tr>
 
@@ -226,6 +242,7 @@
                 </figure>
 
                 <p>唯一會斷線的情況，是你<strong>在轉移的同時順手改了名稱伺服器</strong>。這兩件事分開做，中間隔幾天，就不會有任何中斷風險。</p>
+
 
                 <!-- Why -->
                 <h2>轉移前必須先完成的三件事</h2>
@@ -313,18 +330,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/domain-name-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/domain-name-guide/" class="related-card">
                         <h3>網域不是買斷：續約價與贖回費指南</h3>
                         <p>轉移前該先看的：續約價陷阱、生命週期與必做的保護設定。</p>
                     </a>
-                    <a href="/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/ssl/" class="related-card">
                         <h3>SSL 憑證自動化平台</h3>
                         <p>轉移後若要重新設定憑證自動化，DNS API 支援是關鍵。</p>
                     </a>
-                    <a href="/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/cdn/" class="related-card">
                         <h3>CDN 內容傳遞網路</h3>
                         <p>網域指向 CDN 節點後的加速與 DDoS 防護。</p>
                     </a>
@@ -332,7 +346,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>準備把網域轉到別家？</h2>
                 <p>Namecheap 是常見的轉入目標之一。轉移前請先確認其標準續約價與該 TLD 的轉移政策——這是本文建議您對任何註冊商都該做的事。</p>
                 <div class="hero-actions">
@@ -367,13 +381,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

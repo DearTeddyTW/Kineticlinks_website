@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,27 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">回應標頭（範例）</div>
+            <div class="f-row"><span class="f-k">Cache-Control</span><span class="f-v"><code>public, max-age=0, s-maxage=86400</code></span></div>
+            <div class="f-row"><span class="f-k">Age</span><span class="f-v"><code>41203</code></span></div>
+            <div class="f-row"><span class="f-k">ETag</span><span class="f-v"><code>&quot;9f2b…c41&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">Vary</span><span class="f-v"><code>Accept-Encoding</code></span></div>
+        </div>
+        <figcaption>no-cache 不是「不要快取」，no-store 才是。s-maxage 只對共用快取生效，瀏覽器不看它。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">主機選型</div>
                 <h1>VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開</h1>
                 <div class="article-meta">
+                    <span class="a-cat">主機選型</span>
+                    <span>·</span>
                     <time datetime="2026-08-18">2026 年 8 月 18 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">「我該買幾核幾 G？」是選購 VPS 時最常見、也最難直接回答的問題——因為它取決於您跑什麼應用、流量長什麼樣子、以及願意花多少時間自己維運。這篇不談特定品牌，而是把規格、預算與合約條款三個面向拆開來看，讓您有一套自己能重複使用的判斷方式。</p>
@@ -199,22 +214,22 @@
                             <tbody>
                                 <tr class="">
                                     <td>共享主機</td>
-                                    <td class="num">與他人共用</td>
+                                    <td>與他人共用</td>
                                     <td>流量穩定的小型網站，不需系統權限</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>VPS 虛擬專屬主機</td>
-                                    <td class="num">獨立配額</td>
+                                    <td>獨立配額</td>
                                     <td>需要完整系統權限與穩定效能</td>
                                 </tr>
                                 <tr class="">
                                     <td>獨立主機</td>
-                                    <td class="num">整台實體機</td>
+                                    <td>整台實體機</td>
                                     <td>高負載運算、資料庫密集型應用</td>
                                 </tr>
                                 <tr class="">
                                     <td>機房代管 / IDC</td>
-                                    <td class="num">自有硬體</td>
+                                    <td>自有硬體</td>
                                     <td>法規遵循、大規模自主管理</td>
                                 </tr>
 
@@ -225,6 +240,7 @@
                 </figure>
 
                 <p>反過來說，如果您的運算需求已經大到需要整台實體機的資源，或是有法規要求資料必須存放在特定實體環境，那該考慮的是獨立主機或機房代管，而不是把 VPS 一直往上加規格。</p>
+
 
                 <!-- Why -->
                 <h2>規格怎麼看：三個實際會卡住的地方</h2>
@@ -312,18 +328,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/vps/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/vps/" class="related-card">
                         <h3>VPS 虛擬專屬主機</h3>
                         <p>NVMe SSD 高效能運算資源，支援線上彈性升降級。</p>
                     </a>
-                    <a href="/idc/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/idc/" class="related-card">
                         <h3>IDC 機房建置</h3>
                         <p>當規模成長到 VPS 已不敷使用時的下一步選項。</p>
                     </a>
-                    <a href="/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/cdn/" class="related-card">
                         <h3>CDN 內容傳遞網路</h3>
                         <p>跨境訪客的延遲問題，通常靠 CDN 比升級主機更有效。</p>
                     </a>
@@ -331,7 +344,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>還在猶豫該選哪個規格？</h2>
                 <p>告訴我們您的應用類型與流量規模，我們會協助評估合適的 VPS 配置與長期成本。</p>
                 <div class="hero-actions">
@@ -366,13 +379,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

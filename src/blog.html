@@ -89,9 +89,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v={{ css_v }}">
+    <link rel="stylesheet" href="/css/blog.css?v={{ blog_css_v }}">
 {{ analytics }}</head>
 
-<body>
+<body class="g-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -133,22 +134,24 @@
     </div>
 
     <main id="main">
-    <!-- Page Hero -->
-    <section class="page-hero">
+    <!-- The title block. The badge above it said "技術文章" over a heading
+         that already said "技術文章", so it is gone. -->
+    <section class="g-head">
         <div class="container">
-            <div class="page-hero-content glass-panel">
-                <div class="badge">{{ blog.badge }}</div>
-                <h1>{{ blog.title }}</h1>
-                <p class="page-hero-subtitle">{{ blog.subtitle }}</p>
-                <p>{{ blog.desc }}</p>
-            </div>
+            <h1 class="g-enter">{{ blog.title }}</h1>
+            <p class="g-lead g-enter">{{ blog.subtitle }}</p>
+            <p>{{ blog.desc }}</p>
         </div>
     </section>
 
-    <!-- Article List -->
-    <section class="section">
+    <!-- What this site's own platforms return, on the first screen. -->
+    <div class="container">
+{{ blog_frag }}    </div>
+
+    <!-- The list: one row per article, the row itself the link. -->
+    <section class="g-list-wrap">
         <div class="container">
-            <div class="article-list">
+            <div class="g-list">
                 {{ article_list }}
             </div>
         </div>
@@ -178,6 +181,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                {{ credits }}
                 <p>{{ footer.rights }}</p>
             </div>
         </div>

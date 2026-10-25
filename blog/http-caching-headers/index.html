@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">台北 → 上海（範例）</div>
+            <div class="f-row"><span class="f-k">電信</span><span class="f-v"><code>68 ms · 0.0%</code></span></div>
+            <div class="f-row"><span class="f-k">聯通</span><span class="f-v"><code>91 ms · 0.2%</code></span></div>
+            <div class="f-row"><span class="f-k">移動</span><span class="f-v"><code>77 ms · 0.0%</code></span></div>
+        </div>
+        <figcaption>三網要分開看。取平均會把其中一網的問題藏起來，而使用者只會遇到自己那一網。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">網路品質</div>
                 <h1>no-cache 不是「不要快取」：HTTP 快取標頭的實際語意</h1>
                 <div class="article-meta">
+                    <span class="a-cat">網路品質</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 10 分鐘</span>
                 </div>
                 <p class="article-lead"><code>Cache-Control: no-cache</code> 這個名字取得很糟。它<strong>不是</strong>「不要快取」——它允許快取儲存這份回應，只是要求每次使用前先向源站確認還新不新。真正禁止儲存的指令叫 <code>no-store</code>。這個命名造成的誤解有實際後果：想保護敏感資料的人用了 no-cache，資料仍然被寫到磁碟；想避免風險的人一律用 no-store，效能整個賠進去。</p>
@@ -186,6 +200,7 @@
                 <p>最關鍵的區分是<strong>儲存</strong>與<strong>使用</strong>：快取可以儲存一份回應，但在使用它之前可能需要先驗證。<code>no-cache</code> 管的是後者，<code>no-store</code> 管的是前者——名字容易混淆，行為完全不同。</p>
 
                 <!-- Timeline table -->
+                <p>下表列出六個最常用的指令。第一列就是那個被誤解得最嚴重的。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -234,7 +249,7 @@
                     <figcaption>六個常用的 Cache-Control 指令與它們在 RFC 9111 中的實際語意。</figcaption>
                 </figure>
 
-                <p>下表列出六個最常用的指令。第一列就是那個被誤解得最嚴重的。</p>
+
 
                 <!-- Why -->
                 <h2>這個誤解造成的三種實際後果</h2>
@@ -322,18 +337,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/geodns-resolver-location/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/geodns-resolver-location/" class="related-card">
                         <h3>GeoDNS 與流量調度</h3>
                         <p>節點怎麼選，以及為什麼它看的是解析器不是使用者。</p>
                     </a>
-                    <a href="/blog/reading-speed-test-results/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/reading-speed-test-results/" class="related-card">
                         <h3>測速數字怎麼讀</h3>
                         <p>快取命中之外，延遲與丟包才是跨境的主要瓶頸。</p>
                     </a>
-                    <a href="/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/cdn/" class="related-card">
                         <h3>CDN 內容傳遞網路</h3>
                         <p>跨境節點加速，快取策略直接決定回源比例。</p>
                     </a>
@@ -341,7 +353,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>讓 CDN 真的擋下回源流量</h2>
                 <p>Kineticlinks CDN 提供跨境節點加速，可在不接入大陸節點的前提下部署，並協助檢視快取策略。</p>
                 <div class="hero-actions">
@@ -376,13 +388,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

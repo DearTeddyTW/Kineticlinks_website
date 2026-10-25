@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,27 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Response headers (example)</div>
+            <div class="f-row"><span class="f-k">Cache-Control</span><span class="f-v"><code>public, max-age=0, s-maxage=86400</code></span></div>
+            <div class="f-row"><span class="f-k">Age</span><span class="f-v"><code>41203</code></span></div>
+            <div class="f-row"><span class="f-k">ETag</span><span class="f-v"><code>&quot;9f2b…c41&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">Vary</span><span class="f-v"><code>Accept-Encoding</code></span></div>
+        </div>
+        <figcaption>no-cache does not mean “do not cache” — no-store does. s-maxage applies to shared caches only; a browser ignores it. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Hosting Selection</div>
                 <h1>How to Choose a VPS: Reading the Specs, Setting the Budget, and Avoiding the Traps</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Hosting Selection</span>
+                    <span>·</span>
                     <time datetime="2026-08-18">August 18, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>9 min read</span>
                 </div>
                 <p class="article-lead">"How many cores and how much RAM should I get?" is the most common question when choosing a VPS, and the hardest to answer directly — because it depends on what you run, what your traffic looks like, and how much of your own time you want to spend on operations. This guide avoids brand comparisons and instead separates the decision into three dimensions: specs, budget, and contract terms.</p>
@@ -225,6 +240,7 @@
                 </figure>
 
                 <p>Conversely, if your compute needs have grown to consume a whole physical machine, or regulation requires data to sit in a specific physical environment, the answer is a dedicated server or colocation — not endlessly scaling a VPS upward.</p>
+
 
                 <!-- Why -->
                 <h2>Reading the Specs: Three Things That Actually Bite</h2>
@@ -312,18 +328,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/vps/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/vps/" class="related-card">
                         <h3>VPS Hosting</h3>
                         <p>High-performance NVMe SSD compute with online resizing.</p>
                     </a>
-                    <a href="/en/idc/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/idc/" class="related-card">
                         <h3>IDC Data Center Buildout</h3>
                         <p>The next step when a VPS no longer covers your scale.</p>
                     </a>
-                    <a href="/en/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/cdn/" class="related-card">
                         <h3>CDN Content Delivery Network</h3>
                         <p>For cross-border latency, a CDN usually beats a bigger server.</p>
                     </a>
@@ -331,7 +344,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Still Deciding on a Configuration?</h2>
                 <p>Tell us your application type and traffic scale, and we'll help assess a suitable VPS configuration and its long-term cost.</p>
                 <div class="hero-actions">
@@ -366,13 +379,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

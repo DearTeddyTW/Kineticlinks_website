@@ -105,9 +105,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v={{ css_v }}">
+    <link rel="stylesheet" href="/css/blog.css?v={{ blog_css_v }}">
 {{ analytics }}</head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -154,13 +155,17 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+{{ article_frag }}
             <header class="article-header">
-                <div class="badge">{{ page.category }}</div>
                 <h1>{{ page.title }}</h1>
                 <div class="article-meta">
+                    <span class="a-cat">{{ page.category }}</span>
+                    <span>·</span>
                     <time datetime="{{ page.date }}">{{ page.date_display }}</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>{{ page.reading_time }}</span>
                 </div>
                 {{ article_lead }}
@@ -174,7 +179,7 @@
                 <p>{{ page.s1.p2 }}</p>
 
                 <!-- Timeline table -->
-                <figure class="data-table-wrap">
+{{ table_intro }}                <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
                             <thead>
@@ -212,7 +217,7 @@
                     <figcaption>{{ page.table.caption }}</figcaption>
                 </figure>
 
-                <p>{{ page.s1.p3 }}</p>
+{{ table_note }}
 
                 <!-- Why -->
                 <h2>{{ page.s2.title }}</h2>
@@ -300,18 +305,15 @@
                 <h2>{{ page.related.title }}</h2>
                 <p class="article-related-desc">{{ page.related.desc }}</p>
                 <div class="related-grid">
-                    <a href="{{ lang_path }}{{ page.related.l1_slug }}" class="related-card glass-panel">
-                        <span class="related-kicker">{{ page.related.l1_kicker }}</span>
+                    <a href="{{ lang_path }}{{ page.related.l1_slug }}" class="related-card">
                         <h3>{{ page.related.l1_title }}</h3>
                         <p>{{ page.related.l1_desc }}</p>
                     </a>
-                    <a href="{{ lang_path }}{{ page.related.l2_slug }}" class="related-card glass-panel">
-                        <span class="related-kicker">{{ page.related.l2_kicker }}</span>
+                    <a href="{{ lang_path }}{{ page.related.l2_slug }}" class="related-card">
                         <h3>{{ page.related.l2_title }}</h3>
                         <p>{{ page.related.l2_desc }}</p>
                     </a>
-                    <a href="{{ lang_path }}{{ page.related.l3_slug }}" class="related-card glass-panel">
-                        <span class="related-kicker">{{ page.related.l3_kicker }}</span>
+                    <a href="{{ lang_path }}{{ page.related.l3_slug }}" class="related-card">
                         <h3>{{ page.related.l3_title }}</h3>
                         <p>{{ page.related.l3_desc }}</p>
                     </a>
@@ -319,7 +321,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>{{ page.cta.title }}</h2>
                 <p>{{ page.cta.desc }}</p>
                 <div class="hero-actions">
@@ -354,6 +356,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                {{ credits }}
                 <p>{{ footer.rights }}</p>
             </div>
         </div>

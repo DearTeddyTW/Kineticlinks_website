@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">憑證鏈（範例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">簽發</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中繼</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>憑證鏈要完整才會被信任。缺一層中繼，桌機瀏覽器往往會自己補上，手機和命令列工具不會——這是「我這邊看起來正常」的常見來源。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">憑證管理</div>
                 <h1>nginx -t 通過不代表憑證正確：三個讓設定與實際脫鉤的機制</h1>
                 <div class="article-meta">
+                    <span class="a-cat">憑證管理</span>
+                    <span>·</span>
                     <time datetime="2026-09-12">2026 年 9 月 12 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead"><code>nginx -t</code> 顯示 <code>test is successful</code>，於是你認為憑證設定沒問題。但它驗證的範圍比多數人以為的窄——<strong>它檢查語法、也比對憑證與私鑰是否成對，但不會告訴你使用者實際會拿到哪一張憑證</strong>。這中間隔著三個 Nginx 特有的機制，每一個都能讓「設定檔是對的」和「使用者拿到對的憑證」脫鉤。</p>
@@ -186,6 +202,7 @@
                 <p>但它的範圍就到這裡。它不知道你的憑證涵蓋哪些網域、不檢查憑證鏈是否完整、更不會模擬一次真實連線來看使用者最後拿到什麼。<strong>它驗證的是「這份設定能不能載入」，不是「這份設定會產生什麼結果」。</strong></p>
 
                 <!-- Timeline table -->
+                <p>下表把四種「看起來沒問題」的狀況與實際落差列出來。第二列是最常見的一種。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -224,7 +241,7 @@
                     <figcaption>四種設定看似正確、但使用者端仍可能出錯的情況。</figcaption>
                 </figure>
 
-                <p>下表把四種「看起來沒問題」的狀況與實際落差列出來。第二列是最常見的一種。</p>
+
 
                 <!-- Why -->
                 <h2>三個讓設定與實際脫鉤的機制</h2>
@@ -312,18 +329,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/incomplete-certificate-chain/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/incomplete-certificate-chain/" class="related-card">
                         <h3>憑證鏈不完整</h3>
                         <p>為什麼瀏覽器正常但 App 連不上——另一個順序與檔案挑選的問題。</p>
                     </a>
-                    <a href="/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/certificate-expiry-monitoring/" class="related-card">
                         <h3>憑證到期監控</h3>
                         <p>「檔案更新了但服務沒 reload」正是監控該抓到的情境。</p>
                     </a>
-                    <a href="/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/ssl/" class="related-card">
                         <h3>SSL 憑證自動化平台</h3>
                         <p>簽發後自動推播至各節點，減少手動設定。</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>減少手動編輯設定檔的環節</h2>
                 <p>Kineticlinks SSL 憑證自動化平台在簽發後將完整憑證鏈推播至各節點，不需逐台手動更新。</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

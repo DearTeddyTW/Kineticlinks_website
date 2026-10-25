@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">記錄集（範例）</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA 決定哪一家 CA 可以為這個網域簽憑證；沒設的話，任何一家都可以。位址用的是 RFC 保留給文件的範圍。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">網域管理</div>
                 <h1>你開的轉移鎖定擋不住劫持：網域安全設定的實際效力</h1>
                 <div class="article-meta">
+                    <span class="a-cat">網域管理</span>
+                    <span>·</span>
                     <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">網域被劫持的案例裡，受害者幾乎都開了轉移鎖定。問題在於那個鎖的位置：<strong>它是註冊商帳號裡的一個設定，而帳號正是攻擊的目標</strong>——入侵成功之後，關掉鎖只是點一下的事。這篇說明常見的四種防護措施各自的實際效力，以及為什麼有些廣被推薦的做法其實擋不住帳號層級的入侵。</p>
@@ -186,6 +202,7 @@
                 <p>差別在於：前者的解除權在你的帳號裡，後者不在。攻擊者取得你的註冊商帳號後，可以自行關掉 clientTransferProhibited；但註冊局鎖定必須由註冊商人員向註冊局提出，並經過帶外驗證（實務上常是電話加通關密語）才能解除。</p>
 
                 <!-- Timeline table -->
+                <p>下表把四種常見措施攤開。重點在第三欄——每一種<strong>擋不住什麼</strong>，那才是實際被攻破的地方。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -224,7 +241,7 @@
                     <figcaption>四種網域防護措施的效力邊界。只有註冊局鎖定能撐過帳號被入侵的情況。</figcaption>
                 </figure>
 
-                <p>下表把四種常見措施攤開。重點在第三欄——每一種<strong>擋不住什麼</strong>，那才是實際被攻破的地方。</p>
+
 
                 <!-- Why -->
                 <h2>三個容易被忽略的早期徵兆</h2>
@@ -312,18 +329,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/domain-name-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/domain-name-guide/" class="related-card">
                         <h3>網域不是買斷</h3>
                         <p>續約價、轉移鎖定與到期贖回的完整指南。</p>
                     </a>
-                    <a href="/blog/domain-transfer-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/domain-transfer-guide/" class="related-card">
                         <h3>網域轉移完整流程</h3>
                         <p>授權碼、五天自動核准，以及為什麼轉移不會讓網站下線。</p>
                     </a>
-                    <a href="/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/ssl/" class="related-card">
                         <h3>SSL 憑證自動化平台</h3>
                         <p>DNS 管理權限也是憑證自動化的前提條件之一。</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>選註冊商還該看哪些條件？</h2>
                 <p>安全選項之外，續約價、轉移政策與 DNS 管理能力同樣影響長期成本。我們在網域註冊指南裡逐項說明。</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

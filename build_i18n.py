@@ -56,31 +56,45 @@ LANGS = [
 # Blog articles, newest first. Each becomes /blog/<slug>/ per language and is
 # listed on the blog index. content_key is looked up in the locale JSON.
 ARTICLES = [
-    {'slug': 'bulk-icp-filing-lookup', 'content_key': 'article_bulk_filing_lookup'},
-    {'slug': 'buying-a-pre-filed-domain', 'content_key': 'article_prefiled_domain_checks'},
-    {'slug': 'icp-lookup-api-accuracy', 'content_key': 'article_icp_lookup_accuracy'},
-    {'slug': 'icp-filing-cancelled', 'content_key': 'article_filing_cancelled'},
-    {'slug': 'hong-kong-server-icp-filing', 'content_key': 'article_hk_filing'},
-    {'slug': 'http-caching-headers', 'content_key': 'article_http_caching'},
-    {'slug': 'geodns-resolver-location', 'content_key': 'article_geodns'},
-    {'slug': 'free-vs-paid-ssl-certificates', 'content_key': 'article_free_vs_paid'},
-    {'slug': 'nginx-certificate-configuration', 'content_key': 'article_nginx_cert'},
-    {'slug': 'ocsp-stapling-deprecated', 'content_key': 'article_ocsp_stapling'},
-    {'slug': 'incomplete-certificate-chain', 'content_key': 'article_cert_chain'},
-    {'slug': 'icp-filing-explained', 'content_key': 'article_icp_filing'},
-    {'slug': 'dns-record-types', 'content_key': 'article_dns_records'},
-    {'slug': 'domain-hijacking-protection', 'content_key': 'article_domain_hijacking'},
-    {'slug': 'connection-quality-monitoring', 'content_key': 'article_quality_monitoring'},
-    {'slug': 'reading-speed-test-results', 'content_key': 'article_reading_speedtest'},
-    {'slug': 'acme-challenge-types', 'content_key': 'article_acme_challenges'},
-    {'slug': 'certificate-expiry-monitoring', 'content_key': 'article_cert_monitoring'},
-    {'slug': 'domain-transfer-guide', 'content_key': 'article_domain_transfer'},
-    {'slug': 'domain-name-guide', 'content_key': 'article_domain_guide'},
-    {'slug': 'china-network-latency', 'content_key': 'article_china_latency'},
-    {'slug': 'vps-buying-guide', 'content_key': 'article_vps_guide'},
-    {'slug': 'idc-explained', 'content_key': 'article_idc_explained'},
-    {'slug': 'ssl-certificate-validity-200-days', 'content_key': 'article_ssl_validity'},
+    {'slug': 'bulk-icp-filing-lookup', 'content_key': 'article_bulk_filing_lookup', 'pic': 'china'},
+    {'slug': 'buying-a-pre-filed-domain', 'content_key': 'article_prefiled_domain_checks', 'pic': 'domain'},
+    {'slug': 'icp-lookup-api-accuracy', 'content_key': 'article_icp_lookup_accuracy', 'pic': 'china'},
+    {'slug': 'icp-filing-cancelled', 'content_key': 'article_filing_cancelled', 'pic': 'china'},
+    {'slug': 'hong-kong-server-icp-filing', 'content_key': 'article_hk_filing', 'pic': 'china'},
+    {'slug': 'http-caching-headers', 'content_key': 'article_http_caching', 'pic': 'quality'},
+    {'slug': 'geodns-resolver-location', 'content_key': 'article_geodns', 'pic': 'domain'},
+    {'slug': 'free-vs-paid-ssl-certificates', 'content_key': 'article_free_vs_paid', 'pic': 'cert'},
+    {'slug': 'nginx-certificate-configuration', 'content_key': 'article_nginx_cert', 'pic': 'cert'},
+    {'slug': 'ocsp-stapling-deprecated', 'content_key': 'article_ocsp_stapling', 'pic': 'cert'},
+    {'slug': 'incomplete-certificate-chain', 'content_key': 'article_cert_chain', 'pic': 'cert'},
+    {'slug': 'icp-filing-explained', 'content_key': 'article_icp_filing', 'pic': 'china'},
+    {'slug': 'dns-record-types', 'content_key': 'article_dns_records', 'pic': 'domain'},
+    {'slug': 'domain-hijacking-protection', 'content_key': 'article_domain_hijacking', 'pic': 'domain'},
+    {'slug': 'connection-quality-monitoring', 'content_key': 'article_quality_monitoring', 'pic': 'quality'},
+    {'slug': 'reading-speed-test-results', 'content_key': 'article_reading_speedtest', 'pic': 'quality'},
+    {'slug': 'acme-challenge-types', 'content_key': 'article_acme_challenges', 'pic': 'cert'},
+    {'slug': 'certificate-expiry-monitoring', 'content_key': 'article_cert_monitoring', 'pic': 'cert'},
+    {'slug': 'domain-transfer-guide', 'content_key': 'article_domain_transfer', 'pic': 'domain'},
+    {'slug': 'domain-name-guide', 'content_key': 'article_domain_guide', 'pic': 'domain'},
+    {'slug': 'china-network-latency', 'content_key': 'article_china_latency', 'pic': 'china'},
+    {'slug': 'vps-buying-guide', 'content_key': 'article_vps_guide', 'pic': 'host'},
+    {'slug': 'idc-explained', 'content_key': 'article_idc_explained', 'pic': 'room'},
+    {'slug': 'ssl-certificate-validity-200-days', 'content_key': 'article_ssl_validity', 'pic': 'cert'},
 ]
+
+# Each article leads with a fragment of something this site actually
+# produces, matched to what the article is about: a certificate chain, an ICP
+# lookup response, a three-network reading, a record set, a header exchange.
+# Built in HTML so it stays sharp, translates, and carries no customer data —
+# every value here is an example, and says so.
+ARTICLE_FRAGS = {
+    'cert':    'chain',
+    'china':   'icp',
+    'quality': 'net3',
+    'domain':  'dns',
+    'host':    'http',
+    'room':    'http',
+}
 
 # slug: '' means the language's home page. content_key is looked up in the
 # locale JSON and flattened under the "page.*" namespace for service.html.
@@ -99,6 +113,7 @@ PAGES = [
         'template': 'src/article.html',
         'slug': f"blog/{article['slug']}",
         'content_key': article['content_key'],
+        'pic': article['pic'],
     }
     for article in ARTICLES
 ]
@@ -177,7 +192,12 @@ def table_col2_class(table):
               if re.fullmatch(r'r\d+c2', k) and isinstance(v, str)]
     if not values:
         return 'num'
-    return 'num' if max(display_width(v) for v in values) <= 14 else ''
+    if max(display_width(v) for v in values) > 14:
+        return ''
+    # Short is not the same as numeric: "完全相同" and "免費也有" fit in the
+    # width but are words, and setting words in monospace is the tell this
+    # whole restyle removes. The column has to actually carry figures.
+    return 'num' if all(re.search(r'\d', v) for v in values) else ''
 
 
 def html_escape(value):
@@ -257,23 +277,54 @@ def flatten_dict(d, parent_key='', sep='.'):
 
 
 def build_article_list(translations, lang_path, limit=None):
-    """Render the blog index cards from ARTICLES, in listed order."""
-    cards = []
+    """Render the blog index as rows, in listed order.
+
+    A row, not a card: the whole row is the link, so the "read more" line the
+    cards carried is gone, and the category is a word at the head of the meta
+    column instead of a pill above the title.
+    """
+    rows = []
     for article in (ARTICLES[:limit] if limit else ARTICLES):
         content = translations.get(article['content_key'], {})
         url = f"{lang_path}blog/{article['slug']}/"
-        cards.append(f"""<a href="{url}" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">{content.get('category', '')}</span>
-                        <time datetime="{content.get('date', '')}">{content.get('date_display', '')}</time>
-                        <span>·</span>
-                        <span>{content.get('reading_time', '')}</span>
+        rows.append(f"""<a href="{url}" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">{html_escape(content.get('category', ''))}</span>
+                        <time datetime="{html_escape(content.get('date', ''))}">{html_escape(content.get('date_display', ''))}</time>
+                        · {html_escape(content.get('reading_time', ''))}
                     </div>
                     <h2>{content.get('title', '')}</h2>
                     <p>{content.get('excerpt', '')}</p>
-                    <span class="card-link">{translations.get('blog', {}).get('read_more', '')} →</span>
                 </a>""")
-    return '\n                '.join(cards)
+    return '\n                '.join(rows)
+
+
+def build_subject_frag(pic_key, translations):
+    """The readout an article leads with: the thing itself, not a picture of
+    something that resembles it.
+
+    Every value is an example. The fragment says so in its own caption rather
+    than leaving a reader to wonder whose certificate or whose domain this is.
+    """
+    kind = ARTICLE_FRAGS.get(pic_key)
+    if not kind:
+        return ''
+    t = ((translations.get('blog', {}) or {}).get('frags', {}) or {}).get(kind, {})
+    if not t:
+        return ''
+    body = '\n'.join(
+        '            <div class="f-row"><span class="f-k">%s</span>'
+        '<span class="f-v"><code>%s</code></span></div>' % (html_escape(r[0]), html_escape(r[1]))
+        for r in (t.get('rows') or []))
+    return (
+        '    <figure class="a-frag g-enter" data-ui>\n'
+        '        <div class="f-panel">\n'
+        '            <div class="f-head">%s</div>\n'
+        '%s\n'
+        '        </div>\n'
+        '        <figcaption>%s</figcaption>\n'
+        '    </figure>\n'
+        % (html_escape(t.get('head', '')), body, html_escape(t.get('cap', ''))))
 
 
 def git_last_modified(path):
@@ -944,10 +995,22 @@ def build():
             flat['flow_edges'] = ''
             flat['faq_index'] = ''
             flat['ssl_css_v'] = asset_version('css/ssl.css')
+            flat['blog_css_v'] = asset_version('css/blog.css')
+            # 表格的引言排在表格前面，對表格的評論排在後面。兩者都可缺。
+            flat['table_intro'] = ''
+            flat['table_note'] = ''
+            flat['blog_frag'] = (build_subject_frag('quality', translations)
+                                 if page['template'] == 'src/blog.html' else '')
+            flat['article_frag'] = (build_subject_frag(page['pic'], translations)
+                                    if page.get('pic') else '')
 
             if page['content_key']:
                 page_content = translations.get(page['content_key'], {})
                 flat.update(flatten_dict(page_content, parent_key='page'))
+                for slot, key in (('table_intro', 'intro'), ('table_note', 'p3')):
+                    text = flat.get('page.s1.%s' % key)
+                    if text:
+                        flat[slot] = '                <p>%s</p>\n' % text
 
                 # 聯盟連結必須標 rel="sponsored"，否則 Google 視為未揭露的付費連結
                 cta_href = (page_content.get('cta') or {}).get('href', '')

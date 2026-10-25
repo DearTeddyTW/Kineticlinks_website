@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">查詢結果（範例）</div>
+            <div class="f-row"><span class="f-k">網域</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">狀態</span><span class="f-v"><code>沒有備案</code></span></div>
+            <div class="f-row"><span class="f-k">可解析至中國境內</span><span class="f-v"><code>否</code></span></div>
+        </div>
+        <figcaption>備案綁的是主體與它使用的資源，不是網域本身。所以「這個網域有沒有備案」這個問題，本身就問錯了方向。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">中國網路</div>
                 <h1>香港伺服器要備案嗎：免備案的邊界不在你買在哪</h1>
                 <div class="article-meta">
+                    <span class="a-cat">中國網路</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">「香港伺服器免備案」這句話是對的，但它經常被理解成一張通行證。實際上<strong>備案的觸發條件是伺服器與節點的位置，不是您跟誰買的</strong>——把主機放在香港確實不需要備案，可是一旦為了加速在路徑上接入大陸 CDN 節點，要求就回來了。這篇說明豁免的實際邊界、免備案不等於免所有規範，以及一個經常被混淆的問題：免備案跟快不快沒有關係。</p>
@@ -186,6 +200,7 @@
                 <p>這裡有個關鍵：<strong>判斷依據是伺服器的位置，不是網域的註冊地</strong>。網域在哪裡註冊、用的是 .com 還是 .cn，都不影響。同樣地，一個中國註冊商註冊的網域，只要伺服器在境外且不接大陸節點，一樣不需要備案。很多人把這兩件事搞混。</p>
 
                 <!-- Timeline table -->
+                <p>下表把各種部署組合列清楚。第四列是最常被忽略的觸發條件。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -199,28 +214,28 @@
                             <tbody>
                                 <tr class="">
                                     <td>伺服器在大陸境內</td>
-                                    <td class="num">需要</td>
+                                    <td>需要</td>
                                     <td>無論網域在哪註冊都一樣</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>伺服器在香港</td>
-                                    <td class="num">不需要</td>
+                                    <td>不需要</td>
                                     <td>一國兩制，備案規定不及於香港</td>
                                 </tr>
                                 <tr class="">
                                     <td>伺服器在新加坡、日本、美國等</td>
-                                    <td class="num">不需要</td>
+                                    <td>不需要</td>
                                     <td>同屬境外，判斷方式相同</td>
                                 </tr>
                                 <tr class="">
                                     <td>境外伺服器 ＋ 大陸 CDN 節點</td>
-                                    <td class="num">需要</td>
+                                    <td>需要</td>
                                     <td>接入大陸節點即觸發，最常被忽略</td>
                                 </tr>
 
                                 <tr>
                                     <td>境外伺服器 ＋ 純境外 CDN</td>
-                                    <td class="num">不需要</td>
+                                    <td>不需要</td>
                                     <td>這是合規的加速路徑</td>
                                 </tr>
                             </tbody>
@@ -229,7 +244,7 @@
                     <figcaption>各種部署方式與備案需求。判斷依據是節點位置，不是網域註冊地。</figcaption>
                 </figure>
 
-                <p>下表把各種部署組合列清楚。第四列是最常被忽略的觸發條件。</p>
+
 
                 <!-- Why -->
                 <h2>關於「免備案」的三個誤解</h2>
@@ -317,18 +332,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/icp-filing-explained/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/icp-filing-explained/" class="related-card">
                         <h3>ICP 備案完整說明</h3>
                         <p>誰需要備案、要等多久，以及備案域名交易的實際機制。</p>
                     </a>
-                    <a href="/blog/china-network-latency/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/china-network-latency/" class="related-card">
                         <h3>中國連線為什麼那麼慢</h3>
                         <p>走境外節點時會遇到的延遲成因與時段性劣化。</p>
                     </a>
-                    <a href="/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/cdn/" class="related-card">
                         <h3>CDN 內容傳遞網路</h3>
                         <p>境外節點加速，不接入大陸節點即不觸發備案。</p>
                     </a>
@@ -336,7 +348,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>不確定您的架構會不會觸發備案？</h2>
                 <p>路徑上有沒有大陸節點、線路怎麼選、要不要排備案時程，取決於您的實際部署。我們也提供備案域名，相關規定與風險請見 ICP 備案說明一文。</p>
                 <div class="hero-actions">
@@ -371,13 +383,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

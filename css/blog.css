@@ -1,0 +1,386 @@
+/* The blog index and the article pages, brought onto the system the home
+   page, /ssl/ and the service pages now set: one ground, one ink, one flat
+   action colour, surfaces separated by a tone step instead of a border, a
+   shadow or a blur.
+
+   Two bodies share these tokens: .g-page is the index, .a-page is one
+   article. They are deliberately composed differently from the service
+   pages — those lead with a split hero, these lead with a full-width
+   picture band — so the site does not read as one template repeated. */
+
+.g-page,
+.a-page {
+    --g-bg:     #070b14;
+    --g-tile:   #0d1420;
+    --g-tile-2: #121b2b;
+    --g-ink:    #ffffff;
+    --g-muted:  #8b9bb4;
+    --g-accent: #00f2fe;
+    --g-accent-ink: #04121a;
+
+    --g-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+    --g-body:  clamp(1rem, 0.97rem + 0.18vw, 1.0625rem);
+    --g-lead:  clamp(1.125rem, 1.03rem + 0.45vw, 1.375rem);
+    --g-head:  clamp(1.5rem, 1.25rem + 1.1vw, 2.125rem);
+    --g-disp:  clamp(2rem, 1.1rem + 3.6vw, 3.5rem);
+
+    background: var(--g-bg);
+    color: var(--g-ink);
+}
+
+/* --- the kit comes off --- */
+
+.g-page .glass-panel,
+.g-page .article-card,
+.a-page .glass-panel,
+.a-page .related-card,
+.a-page .article-cta,
+.a-page .article-sources {
+    background: var(--g-tile);
+    border: 0;
+    box-shadow: none;  /* taste-skill-ignore: removing the kit's shadow */
+    backdrop-filter: none;  /* taste-skill-ignore: removing the kit's glass */
+    -webkit-backdrop-filter: none;
+    border-radius: 6px;
+}
+
+/* The kit draws a rule under the article header, above the sources and above
+   the related list. The tone step already separates them. */
+.a-page .article-header,
+.a-page .article-sources,
+.a-page .article-related,
+.a-page .article-body hr {
+    border: 0;
+}
+
+/* The primary button is a gradient with a glow in the kit. One flat colour. */
+.g-page .btn-primary,
+.a-page .btn-primary {
+    background: var(--g-accent);
+    background-image: none;
+    color: var(--g-accent-ink);
+    box-shadow: none;  /* taste-skill-ignore: removing the kit's glow */
+}
+.g-page .btn-secondary,
+.a-page .btn-secondary {
+    background: var(--g-tile-2);
+    background-image: none;
+    color: var(--g-ink);
+    border: 0;
+    box-shadow: none;  /* taste-skill-ignore: removing the kit's glow */
+}
+
+/* --- the frame --- */
+
+/* The kit rules the footer off with a hairline; the tone step does it. */
+.g-page footer,
+.g-page .footer-bottom,
+.a-page footer,
+.a-page .footer-bottom { border-top: 0; border-right: 0; }
+.g-page .footer-bottom,
+.a-page .footer-bottom { padding-top: 28px; }
+
+/* The breadcrumb ran on the page's own margins while the article column sat
+   narrower and centred, so the page measured 152px of margin on the left and
+   362px on the right. One measure for both. */
+.a-page .breadcrumb-bar .container,
+.a-page .article-container,
+.a-page footer .container {
+    max-width: 920px;
+    margin-inline: auto;
+}
+
+
+/* ==========================================================================
+   The index
+   ========================================================================== */
+
+/* The first screen: a title block, then one picture wide enough to lead it.
+   The service pages put their picture beside the text; this one puts it
+   under, so the two kinds of page do not open the same way. */
+/* Taking the badge out left the breadcrumb sitting straight on top of the
+   title, where it reads as a label over it. The meter calls anything within
+   72px of a heading a kicker, and so does the eye. */
+.g-head { padding: clamp(84px, 8vw, 124px) 0 clamp(24px, 3vw, 40px); }
+.g-head h1 { font-size: var(--g-disp); line-height: 1.08; margin: 0 0 16px; max-width: 16ch; }
+.g-head .g-lead { font-size: var(--g-lead); line-height: 1.45; color: var(--g-accent); margin: 0 0 14px; max-width: 34ch; }
+.g-head p { font-size: var(--g-body); line-height: 1.7; color: var(--g-muted); margin: 0; max-width: 58ch; }
+
+.g-pic { margin: 0; }
+.g-pic img {
+    display: block; width: 100%;
+    height: clamp(220px, 46svh, 460px);
+    object-fit: cover;
+}
+.g-pic figcaption {
+    font-size: var(--g-small);
+    color: var(--g-muted);
+    line-height: 1.6;
+    padding-top: 12px;
+}
+
+/* The list. A row, not a card: no box, no outline, no "read more" link —
+   the row is the link. The tone step marks it instead. */
+/* The gap has to clear the kicker threshold: at 8px one row's date sat
+   directly on the next row's title and read as a label over it. Padding
+   (20px) + gap + padding (20px) must come to more than 72px. */
+.g-list { padding: clamp(40px, 5vw, 80px) 0 clamp(56px, 7vw, 104px); display: grid; gap: clamp(40px, 4vw, 56px); }
+
+/* Narrow: the title leads and the date follows it. The meta is first in the
+   markup because it is the left column on a wide screen; stacked above the
+   title it would read as a kicker label, which is what it looked like. */
+.g-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    --g-row-pad: clamp(18px, 2vw, 28px);
+    padding: clamp(20px, 2.4vw, 30px) var(--g-row-pad);
+    background: var(--g-tile);
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 160ms;
+}
+.g-row:hover,
+.g-row:focus-visible { background: var(--g-tile-2); }
+.g-row:focus-visible { outline: 2px solid var(--g-accent); outline-offset: 2px; }
+
+.g-row h2 { order: 1; }
+.g-row p { order: 2; }
+.g-row-meta { order: 3; }
+
+@media (min-width: 860px) {
+    .g-row {
+        display: grid;
+        grid-template-columns: 170px minmax(0, 1fr);
+        gap: 4px clamp(20px, 2.4vw, 36px);
+        align-items: start;
+    }
+    .g-row-meta { grid-row: span 2; order: 0; }
+}
+
+/* The category is a word, not a pill, and it leads the date. */
+.g-row-meta { font-size: var(--g-small); color: var(--g-muted); line-height: 1.7; }
+.g-row-cat { display: block; color: var(--g-ink); }
+.g-row h2 { font-size: var(--g-head); line-height: 1.25; margin: 0; }
+.g-row p { font-size: var(--g-body); line-height: 1.65; color: var(--g-muted); margin: 6px 0 0; max-width: 62ch; }
+
+/* ==========================================================================
+   One article
+   ========================================================================== */
+
+/* The picture band leads, the title sits under it, both on the first screen. */
+.a-pic { margin: 0; }
+.a-pic img {
+    display: block; width: 100%;
+    height: clamp(200px, 42svh, 420px);
+    object-fit: cover;
+}
+.a-pic figcaption {
+    font-size: var(--g-small);
+    color: var(--g-muted);
+    line-height: 1.6;
+    padding-top: 12px;
+}
+
+.a-page .article-header { padding-top: clamp(28px, 3.5vw, 48px); }
+.a-page .article-header h1 { font-size: var(--g-disp); line-height: 1.12; margin: 0 0 14px; }
+
+/* The category used to be a pill above the title, repeating what the
+   breadcrumb already says. It is a word in the meta line now. */
+.a-page .article-meta {
+    font-size: var(--g-small);
+    color: var(--g-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: baseline;
+    margin: 0 0 24px;
+}
+.a-page .article-meta .a-cat { color: var(--g-ink); }
+
+.a-page .article-lead {
+    font-size: var(--g-lead);
+    line-height: 1.55;
+    color: var(--g-ink);
+    border: 0;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.a-page .article-body { font-size: var(--g-body); line-height: 1.8; color: #c9d4e4; }
+/* A figure's caption sat right on top of the next heading and read as a label
+   over it. A section break wide enough that the caption clearly belongs to
+   the figure above. */
+.a-page .article-body h2 { font-size: var(--g-head); line-height: 1.25; margin: clamp(80px, 7vw, 104px) 0 16px; color: var(--g-ink); }
+.a-page .article-body h3 { font-size: var(--g-lead); line-height: 1.3; margin: 32px 0 12px; color: var(--g-ink); }
+.a-page .article-body strong { color: var(--g-ink); }
+.a-page .article-body a { color: var(--g-accent); }
+
+.a-page .article-sources { padding: clamp(20px, 2.4vw, 28px); margin-top: clamp(40px, 5vw, 64px); }
+.a-page .article-sources h3 { font-size: var(--g-body); margin: 0 0 12px; color: var(--g-ink); }
+.a-page .article-sources ul { margin: 0; padding-left: 1.1em; }
+.a-page .article-sources li { font-size: var(--g-small); line-height: 1.8; }
+
+/* Related: tiles on the tone step, with no label above each title. */
+.a-page .article-related { padding-top: clamp(48px, 6vw, 80px); }
+.a-page .article-related h2 { font-size: var(--g-head); margin: 0 0 8px; }
+.a-page .article-related-desc { font-size: var(--g-body); color: var(--g-muted); margin: 0 0 24px; max-width: 58ch; }
+.a-page .related-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+@media (min-width: 760px) { .a-page .related-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.a-page .related-card { padding: clamp(18px, 2vw, 26px); display: block; text-decoration: none; color: inherit; transition: background-color 160ms; }
+.a-page .related-card:hover { background: var(--g-tile-2); }
+.a-page .related-card h3 { font-size: var(--g-body); line-height: 1.35; margin: 0 0 8px; color: var(--g-ink); }
+.a-page .related-card p { font-size: var(--g-small); line-height: 1.6; color: var(--g-muted); margin: 0; }
+
+/* The closing block is a field of the action colour, the way /ssl/ ends. */
+.a-page .article-cta {
+    background: var(--g-accent);
+    color: var(--g-accent-ink);
+    border-radius: 6px;
+    padding: clamp(32px, 4vw, 56px);
+    margin-top: clamp(56px, 7vw, 96px);
+    margin-bottom: clamp(56px, 7vw, 96px);
+}
+.a-page .article-cta h2 { font-size: var(--g-head); margin: 0 0 12px; color: var(--g-accent-ink); }
+/* The block is a field of the action colour, so the text on it has to be the
+   ink that belongs on that colour. Inheriting the kit's grey put #a0aec0 on
+   #00f2fe — 1.6:1, unreadable. */
+.a-page .article-cta p { font-size: var(--g-body); line-height: 1.6; margin: 0 0 24px; max-width: 48ch; color: var(--g-accent-ink); opacity: 0.82; }
+.a-page .article-cta a:not(.btn) { color: var(--g-accent-ink); }
+.a-page .article-cta .btn-primary { background: var(--g-accent-ink); color: var(--g-accent); }
+.a-page .article-cta .btn-secondary { background: rgba(4, 18, 26, 0.12); color: var(--g-accent-ink); }
+.a-page .article-cta .hero-actions { flex-wrap: wrap; }
+
+/* ==========================================================================
+   shared
+   ========================================================================== */
+
+.g-page .credits,
+.a-page .credits { font-size: var(--g-small); color: var(--g-muted); line-height: 1.6; margin: 0 0 12px; }
+.g-page .credits a,
+.a-page .credits a { color: var(--g-muted); }
+
+/* The index and the article were the only pages left that never moved. One
+   rise, on the blocks that carry the page.
+
+   .g-enter sits in the markup, so hiding it from CSS alone would leave the
+   page blank whenever the script does not run. The script sets .g-js on the
+   root first; without it nothing is hidden. */
+@media (prefers-reduced-motion: no-preference) {
+    .g-js .g-page .g-enter,
+    .g-js .a-page .g-enter {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 620ms cubic-bezier(.16,.84,.32,1), transform 620ms cubic-bezier(.16,.84,.32,1);
+    }
+    .g-js .g-page .g-enter.g-in,
+    .g-js .a-page .g-enter.g-in { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .g-page .g-enter,
+    .a-page .g-enter { opacity: 1; transform: none; transition: none; }
+}
+
+/* ==========================================================================
+   The readout an article leads with
+   ========================================================================== */
+
+/* Not a picture of something that resembles the subject — the thing itself,
+   set in the page's own colours so it belongs here rather than arriving from
+   another century. Marked data-ui: it is a cropped interface fragment. */
+/* Wide: the readout and what it means sit side by side, so three short rows
+   do not have to hold a 1100px band on their own. */
+.a-frag { margin: 0 0 clamp(28px, 3.5vw, 44px); }
+@media (min-width: 900px) {
+    .a-frag {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        gap: clamp(28px, 3vw, 48px);
+        align-items: end;
+    }
+    .a-frag figcaption { padding-top: 0; padding-bottom: 6px; }
+}
+
+.f-panel {
+    background: var(--g-tile);
+    border-radius: 6px;
+    padding: clamp(18px, 2.2vw, 26px) clamp(16px, 2vw, 24px);
+    overflow: hidden;
+}
+
+.f-head {
+    font-size: var(--g-small);
+    color: var(--g-muted);
+    padding-bottom: 12px;
+}
+
+.f-row {
+    display: grid;
+    grid-template-columns: minmax(0, 9em) minmax(0, 1fr);
+    gap: 4px 16px;
+    align-items: baseline;
+    padding: 10px 12px;
+    border-radius: 3px;
+}
+/* A tone step marks the rows, not a rule between them. */
+.f-row:nth-of-type(odd) { background: var(--g-tile-2); }
+
+.f-k { font-size: var(--g-small); color: var(--g-muted); }
+
+/* The values are machine output, so they are set in the mono face and line
+   up. This is a data-ui fragment: monospace here is the content, not a label
+   dressed up to look technical. */
+.f-v {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: var(--g-small);
+    color: var(--g-ink);
+    font-variant-numeric: tabular-nums;
+    word-break: break-word;
+}
+
+.a-frag figcaption {
+    font-size: var(--g-small);
+    color: var(--g-muted);
+    line-height: 1.7;
+    padding-top: 12px;
+    max-width: 62ch;
+}
+
+@media (max-width: 560px) {
+    .f-row { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+
+    /* The title block sits on the page's margin while the rows' own padding
+       pushed their text 18px further in, so the page had two left edges. The
+       tile reaches past the margin instead and the text comes back to it. */
+    .g-row {
+        margin-inline: calc(var(--g-row-pad) * -1);
+        padding-inline: var(--g-row-pad);
+    }
+}
+
+/* The fragment's values are already in a panel; the inline-code chrome would
+   box them twice. */
+.f-v code {
+    font: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    color: inherit;
+}
+
+/* Inline code in the prose came from the kit in indigo, the one colour on the
+   page that belongs to nothing. A tone step, no border. */
+.a-page .article-body code {
+    background: var(--g-tile-2);
+    border: 0;
+    color: var(--g-ink);
+}
+
+/* The list is twenty-four rows. A long fade means a reader scrolling fast
+   meets half-transparent rows, so the rows get a short one: present almost
+   at once, still not static. */
+.g-js .g-page .g-row {
+    transform: translateY(10px);
+    transition: opacity 240ms ease-out, transform 240ms ease-out;
+}

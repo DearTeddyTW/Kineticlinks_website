@@ -238,6 +238,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -252,7 +253,7 @@
     </script>
 </head>
 
-<body>
+<body class="g-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -294,285 +295,248 @@
     </div>
 
     <main id="main">
-    <!-- Page Hero -->
-    <section class="page-hero">
+    <!-- The title block. The badge above it said "技術文章" over a heading
+         that already said "技術文章", so it is gone. -->
+    <section class="g-head">
         <div class="container">
-            <div class="page-hero-content glass-panel">
-                <div class="badge">技術文章</div>
-                <h1>技術文章</h1>
-                <p class="page-hero-subtitle">來自第一線的基礎架構實務筆記</p>
-                <p>我們整理 CDN、VPS、機房建置、雲端架構與憑證管理的實務經驗與產業動態，希望能為正在做技術選型的團隊提供參考。</p>
-            </div>
+            <h1 class="g-enter">技術文章</h1>
+            <p class="g-lead g-enter">來自第一線的基礎架構實務筆記</p>
+            <p>我們整理 CDN、VPS、機房建置、雲端架構與憑證管理的實務經驗與產業動態，希望能為正在做技術選型的團隊提供參考。</p>
         </div>
     </section>
 
-    <!-- Article List -->
-    <section class="section">
+    <!-- What this site's own platforms return, on the first screen. -->
+    <div class="container">
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">台北 → 上海（範例）</div>
+            <div class="f-row"><span class="f-k">電信</span><span class="f-v"><code>68 ms · 0.0%</code></span></div>
+            <div class="f-row"><span class="f-k">聯通</span><span class="f-v"><code>91 ms · 0.2%</code></span></div>
+            <div class="f-row"><span class="f-k">移動</span><span class="f-v"><code>77 ms · 0.0%</code></span></div>
+        </div>
+        <figcaption>三網要分開看。取平均會把其中一網的問題藏起來，而使用者只會遇到自己那一網。以上為範例值。</figcaption>
+    </figure>
+    </div>
+
+    <!-- The list: one row per article, the row itself the link. -->
+    <section class="g-list-wrap">
         <div class="container">
-            <div class="article-list">
-                <a href="/blog/bulk-icp-filing-lookup/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">中國網路</span>
+            <div class="g-list">
+                <a href="/blog/bulk-icp-filing-lookup/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">中國網路</span>
                         <time datetime="2026-10-05">2026 年 10 月 5 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>批量查詢 ICP 備案狀態：幾百個網域怎麼查才不會被擋</h2>
                     <p>備案狀態會無預警消失，所以要定期查。但網域一多，逐一手動查就不可行了——這篇講速率限制、快取策略，以及真正該偵測的其實是「變動」而不是「狀態」。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/buying-a-pre-filed-domain/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">中國網路</span>
+                <a href="/blog/buying-a-pre-filed-domain/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">中國網路</span>
                         <time datetime="2026-10-05">2026 年 10 月 5 日</time>
-                        <span>·</span>
-                        <span>約 10 分鐘</span>
+                        · 約 10 分鐘
                     </div>
                     <h2>備案域名購買前，先自己查這六件事</h2>
                     <p>備案域名的價差多半不在域名本身，在那筆備案的狀態。有些已經是空殼、有些主體早就失效——這些賣家的截圖看不出來，但大多可以在付款前自己查完。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/icp-lookup-api-accuracy/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">中國網路</span>
+                <a href="/blog/icp-lookup-api-accuracy/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">中國網路</span>
                         <time datetime="2026-09-29">2026 年 9 月 29 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>查得到百度，不代表查得到你要查的那個網域</h2>
                     <p>用 19 個狀態已知的網域實測 ICP 備案查詢 API。最危險的失敗不是查不到，而是回報成功、並在每個欄位裡填進「查詢失敗」四個字——連沒有備案的網域也一樣。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/icp-filing-cancelled/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">中國網路</span>
+                <a href="/blog/icp-filing-cancelled/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">中國網路</span>
                         <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>備案被註銷最常見的原因不是違規，是你換了主機</h2>
                     <p>換了主機、原接入商取消接入、而你沒在新服務商辦理接入——備案就成了空殼，會在核查時被註銷。而網站全程照常運作，完全沒有徵兆。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/hong-kong-server-icp-filing/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">中國網路</span>
+                <a href="/blog/hong-kong-server-icp-filing/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">中國網路</span>
                         <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>香港伺服器要備案嗎：免備案的邊界不在你買在哪</h2>
                     <p>香港屬境外，確實不適用大陸的備案規定。但「免備案」免的是手續而不是所有規範，而且那道豁免最常在為了加速而開啟大陸節點時失效。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/http-caching-headers/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">網路品質</span>
+                <a href="/blog/http-caching-headers/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">網路品質</span>
                         <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                        <span>·</span>
-                        <span>約 10 分鐘</span>
+                        · 約 10 分鐘
                     </div>
                     <h2>no-cache 不是「不要快取」：HTTP 快取標頭的實際語意</h2>
                     <p>用 no-cache 想擋住快取的人，其實允許了儲存——它要求的是每次使用前驗證。真正禁止儲存的是 no-store，而兩者的差別會直接影響敏感資料與 CDN 效能。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/geodns-resolver-location/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">網路品質</span>
+                <a href="/blog/geodns-resolver-location/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">網路品質</span>
                         <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                        <span>·</span>
-                        <span>約 10 分鐘</span>
+                        · 約 10 分鐘
                     </div>
                     <h2>GeoDNS 為什麼會把使用者導到錯的節點：它看的是解析器，不是你</h2>
                     <p>地理路由聽起來很直觀：誰在哪裡就導到哪個節點。但權威伺服器看到的是遞迴解析器的位置——使用者用了 8.8.8.8，你就不知道他在哪。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/free-vs-paid-ssl-certificates/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">憑證管理</span>
+                <a href="/blog/free-vs-paid-ssl-certificates/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">憑證管理</span>
                         <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                        <span>·</span>
-                        <span>約 10 分鐘</span>
+                        · 約 10 分鐘
                     </div>
                     <h2>免費憑證與付費憑證差在哪：不是加密強度，也不是萬用字元</h2>
                     <p>「付費憑證比較安全」和「付費憑證是智商稅」兩種說法都不對。真正的分界在驗證層級與營運限制——而萬用字元免費就有，這點很多人不知道。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/nginx-certificate-configuration/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">憑證管理</span>
+                <a href="/blog/nginx-certificate-configuration/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">憑證管理</span>
                         <time datetime="2026-09-12">2026 年 9 月 12 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>nginx -t 通過不代表憑證正確：三個讓設定與實際脫鉤的機制</h2>
                     <p>設定檔改好了、測試也通過了，使用者卻拿到舊憑證或別的網域的憑證。問題不在憑證本身，而在 Nginx 載入與挑選憑證的方式。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/ocsp-stapling-deprecated/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">憑證管理</span>
+                <a href="/blog/ocsp-stapling-deprecated/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">憑證管理</span>
                         <time datetime="2026-09-12">2026 年 9 月 12 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>還在設定 OCSP 裝訂？Let's Encrypt 已經關掉它了</h2>
                     <p>大量設定教學仍教人開啟 ssl_stapling，但 Let's Encrypt 在 2025 年 8 月就關閉了 OCSP 服務，憑證裡連網址都沒有了——那行設定現在什麼也沒做。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/incomplete-certificate-chain/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">憑證管理</span>
+                <a href="/blog/incomplete-certificate-chain/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">憑證管理</span>
                         <time datetime="2026-09-11">2026 年 9 月 11 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>瀏覽器打得開不代表憑證沒問題：中繼憑證缺失的完整排查</h2>
                     <p>「我這邊看都正常啊」——但 App 連不上、API 報憑證錯誤。兩邊都沒說謊：桌面瀏覽器會自己把缺失的中繼憑證補回來，而你的程式不會。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/icp-filing-explained/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">中國網路</span>
+                <a href="/blog/icp-filing-explained/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">中國網路</span>
                         <time datetime="2026-09-07">2026 年 9 月 7 日</time>
-                        <span>·</span>
-                        <span>約 10 分鐘</span>
+                        · 約 10 分鐘
                     </div>
                     <h2>ICP 備案與備案域名交易：規定、時程與實際風險</h2>
                     <p>備案要等，所以市面上有備案域名交易。這篇說明備案的實際規則、主體變更的規定、核查的運作方式，以及完全不需備案的部署條件——讓您自己判斷。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/dns-record-types/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">網域管理</span>
+                <a href="/blog/dns-record-types/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">網域管理</span>
                         <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>改了 DNS 為什麼沒生效：記錄類型、TTL 與根網域的硬限制</h2>
                     <p>「還在傳播中」是最常見的說法，但多數情況不是傳播慢，是 TTL 沒先調低——而 TTL 要在變更之前調整才有用。另外根網域不能用 CNAME，這是協定層面的限制。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/domain-hijacking-protection/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">網域管理</span>
+                <a href="/blog/domain-hijacking-protection/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">網域管理</span>
                         <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>你開的轉移鎖定擋不住劫持：網域安全設定的實際效力</h2>
                     <p>多數人開了「轉移鎖定」就覺得安全了，但那個鎖存在你的註冊商帳號裡——攻擊者拿到帳號就能自己關掉。這篇說明四種防護各自擋得住什麼、擋不住什麼。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/connection-quality-monitoring/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">網路品質</span>
+                <a href="/blog/connection-quality-monitoring/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">網路品質</span>
                         <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                        <span>·</span>
-                        <span>約 8 分鐘</span>
+                        · 約 8 分鐘
                     </div>
                     <h2>單次測速證明不了什麼：跨境連線品質為什麼需要長期監控</h2>
                     <p>跨境線路的問題絕大多數是時段性的。使用者抱怨時你去測，往往一切正常——不是他們搞錯了，是你測的時間點不對。這篇說明為什麼需要持續監控，以及該監控什麼。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/reading-speed-test-results/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">網路品質</span>
+                <a href="/blog/reading-speed-test-results/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">網路品質</span>
                         <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>測速數字怎麼讀：為什麼頻寬夠了，跨境連線還是很慢</h2>
                     <p>多數人看測速只看下載速度幾 Mbps，但那個數字對跨境服務最沒參考價值。真正決定體感的是延遲與丟包——而且它們的影響是相乘的，不是相加。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/acme-challenge-types/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">憑證管理</span>
+                <a href="/blog/acme-challenge-types/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">憑證管理</span>
                         <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>憑證自動化真正的卡關點：三種 ACME 驗證方式該怎麼選</h2>
                     <p>多數人以為裝了 Certbot 就等於自動化完成，實際上卡住的幾乎都是驗證方式選錯。HTTP-01 在有 CDN 的架構下會失敗，而萬用字元憑證根本不能用它——這篇說明三種驗證方式的實際限制。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/certificate-expiry-monitoring/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">憑證管理</span>
+                <a href="/blog/certificate-expiry-monitoring/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">憑證管理</span>
                         <time datetime="2026-08-28">2026 年 8 月 28 日</time>
-                        <span>·</span>
-                        <span>約 8 分鐘</span>
+                        · 約 8 分鐘
                     </div>
                     <h2>憑證到期監控：自動續簽成功，不代表使用者拿到的是新憑證</h2>
                     <p>多數團隊監控的是「續簽有沒有跑成功」，但真正造成事故的是「續簽成功了、憑證卻沒送到所有端點」。這兩件事差很多，而且只有一種監控方式能抓到後者。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/domain-transfer-guide/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">網域管理</span>
+                <a href="/blog/domain-transfer-guide/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">網域管理</span>
                         <time datetime="2026-08-27">2026 年 8 月 27 日</time>
-                        <span>·</span>
-                        <span>約 8 分鐘</span>
+                        · 約 8 分鐘
                     </div>
                     <h2>網域轉移不會讓網站下線：完整流程、授權碼與時程說明</h2>
                     <p>很多人不敢換註冊商，是擔心轉移過程網站會斷線。這個擔心是多餘的——轉移改變的是「誰管理這筆註冊」，不是「網站放在哪」。這篇說明實際流程、授權碼怎麼拿，以及哪些時機不該轉。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/domain-name-guide/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">網域管理</span>
+                <a href="/blog/domain-name-guide/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">網域管理</span>
                         <time datetime="2026-08-24">2026 年 8 月 24 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>網域不是買斷：續約價、轉移鎖定與到期贖回的完整指南</h2>
                     <p>多數人把註冊網域當成「買一個名字」，但它其實是租約。真正會出事的地方幾乎都不在第一年的價格，而在續約價、轉移鎖定規則，以及到期後動輒數千元的贖回費。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/china-network-latency/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">網路架構</span>
+                <a href="/blog/china-network-latency/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">網路架構</span>
                         <time datetime="2026-08-19">2026 年 8 月 19 日</time>
-                        <span>·</span>
-                        <span>約 10 分鐘</span>
+                        · 約 10 分鐘
                     </div>
                     <h2>中國連線為什麼那麼慢？不只是「牆」的問題</h2>
                     <p>提到連中國很慢，多數人第一個想到防火長城。但實務上造成延遲與丟包的，往往是三網互聯互通瓶頸、國際出口集中、以及回程路由品質這三個與審查無關的結構性因素。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/vps-buying-guide/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">主機選型</span>
+                <a href="/blog/vps-buying-guide/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">主機選型</span>
                         <time datetime="2026-08-18">2026 年 8 月 18 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>VPS 選購指南：規格怎麼看、預算怎麼抓、哪些坑要避開</h2>
                     <p>共享主機、VPS、獨立主機到底差在哪？CPU 與記憶體該配多少？為什麼續約時帳單會突然翻三倍？這篇把選購 VPS 時真正該問的問題整理成一份可執行的檢查流程。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/idc-explained/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">機房架構</span>
+                <a href="/blog/idc-explained/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">機房架構</span>
                         <time datetime="2026-08-18">2026 年 8 月 18 日</time>
-                        <span>·</span>
-                        <span>約 9 分鐘</span>
+                        · 約 9 分鐘
                     </div>
                     <h2>IDC 是什麼？主機代管、機櫃租賃與自建機房的差異一次說清楚</h2>
                     <p>IDC、主機代管、Colocation 常被混著用，但它們的責任範圍其實差很多。這篇說明 IDC 的定義、Uptime Tier 分級怎麼看，以及什麼情況下企業該考慮機房而不是公有雲。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
-                <a href="/blog/ssl-certificate-validity-200-days/" class="article-card">
-                    <div class="article-card-meta">
-                        <span class="article-card-tag">憑證管理</span>
+                <a href="/blog/ssl-certificate-validity-200-days/" class="g-row g-enter">
+                    <div class="g-row-meta">
+                        <span class="g-row-cat">憑證管理</span>
                         <time datetime="2026-08-15">2026 年 8 月 15 日</time>
-                        <span>·</span>
-                        <span>約 8 分鐘</span>
+                        · 約 8 分鐘
                     </div>
                     <h2>SSL 憑證效期縮短至 200 天：2029 年只剩 47 天，企業該如何因應？</h2>
                     <p>2026 年 3 月 15 日起，公開信任的 TLS 憑證最長效期已從 398 天縮短為 200 天，並將在 2027 與 2029 年再縮短兩次。這篇文章說明時程、背後原因，以及為什麼手動管理流程撐不過下一階段。</p>
-                    <span class="card-link">閱讀全文 →</span>
                 </a>
             </div>
         </div>
@@ -602,13 +566,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

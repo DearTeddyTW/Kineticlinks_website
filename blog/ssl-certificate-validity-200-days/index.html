@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">憑證鏈（範例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">簽發</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中繼</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>憑證鏈要完整才會被信任。缺一層中繼，桌機瀏覽器往往會自己補上，手機和命令列工具不會——這是「我這邊看起來正常」的常見來源。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">憑證管理</div>
                 <h1>SSL 憑證效期縮短至 200 天：2029 年只剩 47 天，企業該如何因應？</h1>
                 <div class="article-meta">
+                    <span class="a-cat">憑證管理</span>
+                    <span>·</span>
                     <time datetime="2026-08-15">2026 年 8 月 15 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 8 分鐘</span>
                 </div>
                 <p class="article-lead">2026 年 3 月 15 日起，公開信任的 TLS/SSL 憑證最長效期已從 398 天縮短為 200 天。這不是單一憑證機構的政策調整，而是 CA/Browser Forum 通過的產業共同規範，且後續還有兩個階段的縮短。對於仍以人工方式管理憑證的團隊來說，維運負擔將在未來三年內成倍增加。</p>
@@ -225,6 +241,7 @@
                 </figure>
 
                 <p>值得注意的是，除了憑證效期本身，網域控制驗證（DCV）的重複使用期限也同步縮短。這代表未來不只是憑證要更頻繁地重新簽發，連網域所有權的驗證動作也必須更頻繁地重做，到 2029 年將縮短至 10 天。</p>
+
 
                 <!-- Why -->
                 <h2>為什麼要縮短憑證效期？</h2>
@@ -312,18 +329,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/ssl/" class="related-card">
                         <h3>SSL 憑證自動化平台</h3>
                         <p>DNS 自動驗證與多品牌 CDN 推播，對應本文提到的三層自動化。</p>
                     </a>
-                    <a href="/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/certificate-expiry-monitoring/" class="related-card">
                         <h3>憑證到期監控</h3>
                         <p>自動續簽成功不等於沒事——三種仍會出錯的情境與監控作法。</p>
                     </a>
-                    <a href="/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/cdn/" class="related-card">
                         <h3>CDN 內容傳遞網路</h3>
                         <p>憑證簽發後自動推播至 CDN 節點，省去手動部署。</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>讓憑證管理不再依賴人工提醒</h2>
                 <p>Kineticlinks SSL 憑證自動化平台整合 DNS 自動驗證與多品牌 CDN 推播，從申請、驗證到部署一次完成。</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

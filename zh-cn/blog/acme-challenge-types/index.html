@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">证书链（示例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">签发</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中继</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>证书链要完整才会被信任。缺一层中继，桌面浏览器往往会自己补上，手机和命令行工具不会——这是「我这边看起来正常」的常见来源。以上为示例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">证书管理</div>
                 <h1>证书自动化真正的卡关点：三种 ACME 验证方式该怎么选</h1>
                 <div class="article-meta">
+                    <span class="a-cat">证书管理</span>
+                    <span>·</span>
                     <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>约 9 分钟</span>
                 </div>
                 <p class="article-lead">「装个 Certbot 就好了」是证书自动化最常见的误解。工具本身不难装，真正会卡住的是<strong>验证方式（challenge）选错</strong>——而且问题往往不是在安装当下暴露，是在你把服务放到 CDN 后面、或第一次要申请通配符证书时才爆出来。这三种验证方式各有硬性限制，选之前必须先知道。</p>
@@ -186,6 +202,7 @@
                 <p>多数教程会直接给一行 Certbot 命令，默认用 HTTP-01。在单机、直接对外的架构上这确实能跑。但只要架构复杂一点——前面加了 CDN、后面有多台服务器、或需要通配符证书——HTTP-01 就会开始出问题，而错误信息通常不会直接告诉你「你该换一种验证方式」。</p>
 
                 <!-- Timeline table -->
+                <p>下表把三种验证方式的原理与限制列清楚。第三栏才是选择的依据。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -224,7 +241,7 @@
                     <figcaption>三种 ACME 验证方式的运作原理与硬性限制。第四行是尚未进入生产的新方式。</figcaption>
                 </figure>
 
-                <p>下表把三种验证方式的原理与限制列清楚。第三栏才是选择的依据。</p>
+
 
                 <!-- Why -->
                 <h2>HTTP-01 会失败的三种情境</h2>
@@ -312,18 +329,15 @@
                 <h2>延伸阅读与相关服务</h2>
                 <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
                 <div class="related-grid">
-                    <a href="/zh-cn/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/certificate-expiry-monitoring/" class="related-card">
                         <h3>证书到期监控</h3>
                         <p>自动化跑起来之后，怎么确认它真的生效了。</p>
                     </a>
-                    <a href="/zh-cn/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/ssl-certificate-validity-200-days/" class="related-card">
                         <h3>SSL 证书有效期缩短至 200 天</h3>
                         <p>为什么手动处理证书已经不是可行的长期方案。</p>
                     </a>
-                    <a href="/zh-cn/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台产品</span>
+                    <a href="/zh-cn/ssl/" class="related-card">
                         <h3>SSL 证书自动化平台</h3>
                         <p>DNS 自动验证与多节点推送，不需自行分发 API 密钥。</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>不想自己管 DNS API 密钥与多节点部署？</h2>
                 <p>Kineticlinks SSL 证书自动化平台整合 DNS 验证与多品牌 CDN 推送，从验证到部署一次完成。</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

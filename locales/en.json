@@ -1217,6 +1217,118 @@
       "title": "Technical Blog | CDN, VPS & Cloud Architecture Notes - Kineticlinks",
       "description": "Practical notes on infrastructure: certificate automation, cross-border network quality, domain management and data center operations.",
       "keywords": "IT technical blog, CDN guide, VPS buying guide, cloud migration, SSL certificate management, infrastructure"
+    },
+    "frags": {
+      "chain": {
+        "head": "Certificate chain (example)",
+        "rows": [
+          [
+            "example.com",
+            "RSA 2048 · TLS 1.3"
+          ],
+          [
+            "Issued by",
+            "GoGetSSL DV CA"
+          ],
+          [
+            "Intermediate",
+            "USERTrust RSA CA"
+          ],
+          [
+            "Trust root",
+            "Sectigo (AAA)"
+          ],
+          [
+            "Expires",
+            "2027-02-14"
+          ]
+        ],
+        "cap": "A chain is trusted only when it is complete. Miss an intermediate and desktop browsers often fetch it for you while phones and command-line tools do not — which is where “it works on my machine” comes from. Example values."
+      },
+      "icp": {
+        "head": "Lookup result (example)",
+        "rows": [
+          [
+            "Domain",
+            "example.com"
+          ],
+          [
+            "Status",
+            "No filing"
+          ],
+          [
+            "May resolve inside China",
+            "No"
+          ]
+        ],
+        "cap": "A filing binds the operating entity and the resources it uses, not the domain itself. So “does this domain have a filing” is the wrong question to start from. Example values."
+      },
+      "net3": {
+        "head": "Taipei → Shanghai (example)",
+        "rows": [
+          [
+            "China Telecom",
+            "68 ms · 0.0%"
+          ],
+          [
+            "China Unicom",
+            "91 ms · 0.2%"
+          ],
+          [
+            "China Mobile",
+            "77 ms · 0.0%"
+          ]
+        ],
+        "cap": "Read the three networks separately. An average hides a problem on one of them, and a visitor only ever meets their own. Example values."
+      },
+      "dns": {
+        "head": "Record set (example)",
+        "rows": [
+          [
+            "A",
+            "203.0.113.10"
+          ],
+          [
+            "AAAA",
+            "2001:db8::10"
+          ],
+          [
+            "CNAME",
+            "www → example.com"
+          ],
+          [
+            "CAA",
+            "0 issue \"sectigo.com\""
+          ],
+          [
+            "TTL",
+            "300"
+          ]
+        ],
+        "cap": "CAA decides which CA may issue for the domain; with none set, any of them may. Addresses come from the ranges RFCs reserve for documentation."
+      },
+      "http": {
+        "head": "Response headers (example)",
+        "rows": [
+          [
+            "Cache-Control",
+            "public, max-age=0, s-maxage=86400"
+          ],
+          [
+            "Age",
+            "41203"
+          ],
+          [
+            "ETag",
+            "\"9f2b…c41\""
+          ],
+          [
+            "Vary",
+            "Accept-Encoding"
+          ]
+        ],
+        "cap": "no-cache does not mean “do not cache” — no-store does. s-maxage applies to shared caches only; a browser ignores it. Example values."
+      }
     }
   },
   "article_bulk_filing_lookup": {
@@ -1618,7 +1730,7 @@
       "title": "Filing Isn't a One-Off Registration",
       "p1": "A filing binds three things together: **the entity, the website, and the access provider**. The access provider is whoever supplies the server or network access, and it's obliged to verify the filings recorded under its name. When you move the site elsewhere, that provider cancels the access record — because the site genuinely isn't with them any more.",
       "p2": "The problem is that this completes only half the process. The filing also needs **access filed with the new provider** to reconnect the relationship. Skip that step and the filing sits with an entity and website on record but no access provider at all — a shell website.",
-      "p3": "The table lists the cancellation causes. The first is both the commonest and the easiest to miss entirely."
+      "intro": "The table lists the cancellation causes. The first is both the commonest and the easiest to miss entirely."
     },
     "table": {
       "caption": "Common reasons ICP filings get cancelled. The first gives no warning at all.",
@@ -1745,7 +1857,7 @@
       "title": "Why Hong Kong Is Exempt",
       "p1": "The reason is jurisdictional. Hong Kong is a Special Administrative Region under one country, two systems, and the ministry's website filing requirements don't extend there. So whether it's shared hosting, a cloud instance or bare metal, and whether the site is commercial or not, filing simply doesn't apply.",
       "p2": "One point matters here: **the test is server location, not where the domain is registered**. Which registrar holds the domain, and whether it's a .com or a .cn, makes no difference. Equally, a domain registered through a Chinese registrar needs no filing so long as the servers sit outside and no mainland node is involved. These two things are widely conflated.",
-      "p3": "The table sets out the combinations. The fourth row is the trigger people miss."
+      "intro": "The table sets out the combinations. The fourth row is the trigger people miss."
     },
     "table": {
       "caption": "Deployment options and filing requirements. The test is node location, not domain registration.",
@@ -1871,7 +1983,7 @@
       "title": "Six Directives and What They Actually Mean",
       "p1": "HTTP caching is specified in RFC 9111, where each directive has a precise definition. The trouble is that several are named against intuition, and most people copy them from someone else's configuration without reading the spec.",
       "p2": "The key distinction is between **storing** and **using**: a cache may hold a response but might need to validate it before serving. `no-cache` governs the second, `no-store` the first — easily confused by name, entirely different in behaviour.",
-      "p3": "The table covers the six most-used directives. The first is the most misunderstood of them."
+      "intro": "The table covers the six most-used directives. The first is the most misunderstood of them."
     },
     "table": {
       "caption": "Six common Cache-Control directives and what RFC 9111 actually says they mean.",
@@ -2001,7 +2113,7 @@
       "title": "DNS Can Do More Than Return an Address",
       "p1": "Basic DNS behaviour is \"give a name, get an address\". Managed DNS services — NS1, UltraDNS and similar — turn that answer into a programmable decision point: the same name can return different addresses depending on where the query came from, measured latency to each endpoint, and current health.",
       "p2": "That's genuinely useful for cross-border architecture: Asian users to Asian nodes, European to European, with nothing needed at the application layer. **But the whole mechanism rests on an assumption that frequently doesn't hold** — the third row below is where it breaks.",
-      "p3": "First, what each steering method actually decides on."
+      "intro": "First, what each steering method actually decides on."
     },
     "table": {
       "caption": "Common DNS steering methods and what each bases decisions on.",
@@ -2127,7 +2239,7 @@
       "title": "First, What Genuinely Doesn't Differ",
       "p1": "Of the four things most often compared, three are **identical** between free and paid. Clearing those away leaves what should actually drive the decision.",
       "p2": "The most entrenched misconception is encryption strength. A certificate doesn't determine how strongly a connection is encrypted — the cipher suite is negotiated between client and server during the TLS handshake. A free DV certificate and an EV certificate costing four figures produce exactly the same encrypted connection. The old \"128-bit versus 256-bit\" marketing has no technical reality behind it any more.",
-      "p3": "The table lays out four common comparison points. Only the last two actually differ."
+      "intro": "The table lays out four common comparison points. Only the last two actually differ."
     },
     "table": {
       "caption": "Which of the commonly compared properties actually differ.",
@@ -2253,7 +2365,7 @@
       "title": "What nginx -t Actually Validates",
       "p1": "`nginx -t` parses the configuration, loads the certificate and private key, and **compares their moduli to confirm they match** — so a certificate paired with the wrong key genuinely is caught, which is stricter than many expect.",
       "p2": "That's where its scope ends. It doesn't know which domains your certificate covers, doesn't check whether the chain is complete, and certainly doesn't simulate a real connection to see what a user ends up with. **It validates that the configuration can load, not what the configuration will produce.**",
-      "p3": "The table lists four situations that look fine alongside what they actually cover. The second row is the most common of them."
+      "intro": "The table lists four situations that look fine alongside what they actually cover. The second row is the most common of them."
     },
     "table": {
       "caption": "Four configurations that look correct while users can still hit errors.",
@@ -2375,7 +2487,7 @@
       "title": "How Revocation Checking Actually Works",
       "p1": "A certificate can be revoked before it expires — a leaked private key, a domain changing hands, or a mis-issuance are all reasons. Which raises a simple-sounding question: how does the validating party know the certificate in front of it has been revoked? That question has had several different answers over twenty years.",
       "p2": "OCSP was the dominant one: on connecting, the client asks the CA's server whether this certificate is still valid. It carries a structural problem, though — **the CA thereby learns which IP address is visiting which website**, inserting a third-party observer into every connection.",
-      "p3": "The table sets out four mechanisms and where each stands. The second row is the one most guides still teach and which no longer functions."
+      "intro": "The table sets out four mechanisms and where each stands. The second row is the one most guides still teach and which no longer functions."
     },
     "table": {
       "caption": "Four revocation mechanisms and their status in 2026.",
@@ -2498,7 +2610,7 @@
       "title": "What the Chain Is, and Who Sends What",
       "p1": "A website certificate doesn't stand alone. It relies on a trust chain leading upward: <strong>your certificate (leaf) → intermediate → root</strong>. The validating party must be able to follow that path to a root it already trusts before it will accept the certificate.",
       "p2": "The crucial part is where each piece comes from. <strong>Roots are preinstalled in the operating system or browser trust store</strong> and don't need sending. <strong>Intermediates are not, and your server must send them alongside the leaf.</strong> Send only the leaf and the validator is missing the middle, so the chain can't be assembled.",
-      "p3": "Why do some devices connect anyway? Because certain clients repair it themselves. The table shows where they differ."
+      "intro": "Why do some devices connect anyway? Because certain clients repair it themselves. The table shows where they differ."
     },
     "table": {
       "caption": "How different clients react when the server omits the intermediate. This difference is why the symptom appears intermittent.",
@@ -2624,7 +2736,7 @@
       "title": "What Filing Actually Governs",
       "p1": "ICP filing doesn't attach to a domain. It attaches to <strong>the entity operating a site and the network resources that site uses</strong>. The test is simple: does your service use servers or network nodes inside mainland China? If yes, filing is required; if no, it isn't.",
       "p2": "So \"does this domain have a filing\" is the wrong question. A filing records a relationship — which entity, using which resources, running which site — and the domain is one field within it. That's also why filings can't be traded like domains: they record a subject, not an asset.",
-      "p3": "The table covers common scenarios. The third row is the one most often overlooked."
+      "intro": "The table covers common scenarios. The third row is the one most often overlooked."
     },
     "table": {
       "caption": "Common deployment scenarios and filing requirements. The third row is the trigger people miss.",
@@ -2751,7 +2863,7 @@
       "title": "The Six Records You'll Actually Use",
       "p1": "There are dozens of DNS record types; day-to-day operations involve about six. Each answers a different question: which IP does this name point to, is this name an alias for another, where should mail for this domain go, and who is authoritative for answering queries about it.",
       "p2": "Confusing the types is the most common source of error, and the symptoms are rarely obvious — writing an A record where a CNAME belonged works perfectly until the other end changes IP, which might be months later.",
-      "p3": "The table lists all six with the mistake each most often invites. The third column is the one to read."
+      "intro": "The table lists all six with the mistake each most often invites. The third column is the one to read."
     },
     "table": {
       "caption": "Six common DNS records and their typical failure modes. The CNAME constraint is protocol-level and cannot be worked around.",
@@ -2881,7 +2993,7 @@
       "title": "There Are Two Locks, and Most People Only Have the Outer One",
       "p1": "Domain transfer locking exists at two levels with confusingly similar names and very different strength. The toggle in a normal registrar dashboard is <strong>clientTransferProhibited</strong>, set and removed by the registrar. The other is a <strong>registry lock</strong>, enforced by the registry that runs the top-level domain.",
       "p2": "The difference is who can remove it. The first can be removed from inside your account; the second cannot. An attacker holding your registrar credentials can switch off clientTransferProhibited themselves, whereas lifting a registry lock requires registrar staff to request it from the registry and pass out-of-band verification — in practice often a phone call with a passphrase.",
-      "p3": "The table lays out four common measures. The third column is the point — what each one <strong>fails to stop</strong> is where the breach actually happens."
+      "intro": "The table lays out four common measures. The third column is the point — what each one <strong>fails to stop</strong> is where the breach actually happens."
     },
     "table": {
       "caption": "What four domain protections cover. Only registry lock survives a compromised account.",
@@ -3003,7 +3115,7 @@
       "title": "The Second You Measured vs the Hour Users Lived Through",
       "p1": "The key difference from local networking: local faults tend to be persistent — broken stays broken — while cross-border problems are <strong>almost always time-of-day</strong>. International gateways congest at peak, routes shift at particular hours, carrier interconnects load up at night. All of these make one link behave completely differently depending on when you look.",
       "p2": "So when a user reports stuttering at 8pm and you test at 10am the next morning, \"everything looks fine\" is the expected result. It doesn't mean the problem isn't real; it means you weren't measuring while it was happening.",
-      "p3": "The table compares four common approaches. The third column is the point — what each one cannot see."
+      "intro": "The table compares four common approaches. The third column is the point — what each one cannot see."
     },
     "table": {
       "caption": "What four testing approaches cover. Only the last reflects what users actually encounter.",
@@ -3125,7 +3237,7 @@
       "title": "The Five Numbers on a Speed Test",
       "p1": "A complete test reports bandwidth, latency, jitter, packet loss and — for China connectivity — separate figures for each of the three carriers. Most people read only the first, which is often the number least connected to what users experience.",
       "p2": "Bandwidth measures how many cars the road can hold. Latency and packet loss measure whether the cars actually move. An eight-lane road that jams constantly can mean a longer commute than a clear four-lane one, and cross-border links are almost always the former.",
-      "p3": "The table lists all five with reference thresholds. Those in the third column come from established standards for real-time communications and serve as a starting point."
+      "intro": "The table lists all five with reference thresholds. Those in the third column come from established standards for real-time communications and serve as a starting point."
     },
     "table": {
       "caption": "Five speed test metrics and common reference thresholds. Packet loss deserves the most attention cross-border.",
@@ -3250,7 +3362,7 @@
       "title": "The Blocker Is the Challenge Type, Not the Tool",
       "p1": "The ACME protocol requires you to prove you control a domain before it issues a certificate. That proof is the challenge, and there are three main types, each asking you to place specified content somewhere different: a path on your website, a DNS TXT record, or the TLS handshake itself.",
       "p2": "Most tutorials hand you a single Certbot command, which defaults to HTTP-01. On a single machine facing the internet directly, that works. But add any architectural complexity — a CDN in front, several backends, or a need for wildcards — and HTTP-01 starts failing, usually without an error that says \"you should be using a different challenge type\".",
-      "p3": "The table below sets out how each works and what constrains it. The third column is what should drive the decision."
+      "intro": "The table below sets out how each works and what constrains it. The third column is what should drive the decision."
     },
     "table": {
       "caption": "How the three ACME challenge types work and their hard constraints. The fourth row is a newer type not yet in production.",
@@ -3372,7 +3484,7 @@
       "title": "\"Renewal Succeeded\" and \"Everything's Fine\" Are Different Claims",
       "p1": "A full certificate update has four stages: request from the CA, complete domain validation, deploy the new certificate to every TLS endpoint, and confirm users actually receive it. ACME tooling handles <strong>the first two</strong>; the third depends on your configuration; and almost nothing does the fourth for you automatically.",
       "p2": "That's where the gap opens. A renewal log reading `success` means the certificate was obtained, not that it's being served. Deployment and reload still sit in between, and a failure at either never shows up in the renewal log.",
-      "p3": "The table below lays out four common monitoring approaches. The important column is the third — what each one <strong>misses</strong> is exactly where incidents happen."
+      "intro": "The table below lays out four common monitoring approaches. The important column is the third — what each one <strong>misses</strong> is exactly where incidents happen."
     },
     "table": {
       "caption": "What four monitoring approaches cover. Only the last proves users are unaffected.",

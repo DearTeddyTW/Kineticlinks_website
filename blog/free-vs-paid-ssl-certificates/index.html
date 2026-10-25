@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">憑證鏈（範例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">簽發</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中繼</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>憑證鏈要完整才會被信任。缺一層中繼，桌機瀏覽器往往會自己補上，手機和命令列工具不會——這是「我這邊看起來正常」的常見來源。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">憑證管理</div>
                 <h1>免費憑證與付費憑證差在哪：不是加密強度，也不是萬用字元</h1>
                 <div class="article-meta">
+                    <span class="a-cat">憑證管理</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 10 分鐘</span>
                 </div>
                 <p class="article-lead">關於憑證要不要花錢，市面上有兩種極端說法：一種還在用「256 位元加密」當賣點，另一種主張 Let's Encrypt 免費、付費全是智商稅。<strong>兩種都錯</strong>，而且錯的方式恰好相反。真正的差別不在加密強度——那兩者完全相同——而在憑證機構驗證了什麼，以及你會撞上哪些營運限制。</p>
@@ -186,6 +202,7 @@
                 <p>其中最根深蒂固的誤解是加密強度。憑證本身不決定連線用多強的加密——那是 TLS 交握時由用戶端與伺服器協商密碼套件決定的。一張免費的 DV 憑證與一張要價數萬元的 EV 憑證，加密出來的連線一模一樣。早年「128 位元 / 256 位元」的行銷話術，現在已經沒有對應的技術現實。</p>
 
                 <!-- Timeline table -->
+                <p>下表把四個常見的比較項目攤開。只有最後兩列是真的有差。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -199,28 +216,28 @@
                             <tbody>
                                 <tr class="">
                                     <td>加密強度</td>
-                                    <td class="num">完全相同</td>
+                                    <td>完全相同</td>
                                     <td>由 TLS 交握協商，與憑證種類無關</td>
                                 </tr>
                                 <tr class="">
                                     <td>瀏覽器信任</td>
-                                    <td class="num">完全相同</td>
+                                    <td>完全相同</td>
                                     <td>兩者都上溯到公開信任根憑證</td>
                                 </tr>
                                 <tr class="">
                                     <td>萬用字元憑證</td>
-                                    <td class="num">免費也有</td>
+                                    <td>免費也有</td>
                                     <td>Let's Encrypt 透過 DNS-01 提供，不另外收費</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>驗證層級</td>
-                                    <td class="num">有差別</td>
+                                    <td>有差別</td>
                                     <td>Let's Encrypt 只簽發 DV，OV 與 EV 必須付費</td>
                                 </tr>
 
                                 <tr>
                                     <td>效期與續簽頻率</td>
-                                    <td class="num">有差別</td>
+                                    <td>有差別</td>
                                     <td>Let's Encrypt 90 天且將縮短，商用 DV 目前 200 天</td>
                                 </tr>
                             </tbody>
@@ -229,7 +246,7 @@
                     <figcaption>常見的比較項目中，哪些真的有差別。</figcaption>
                 </figure>
 
-                <p>下表把四個常見的比較項目攤開。只有最後兩列是真的有差。</p>
+
 
                 <!-- Why -->
                 <h2>三個真正的差異</h2>
@@ -317,18 +334,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/ssl-certificate-validity-200-days/" class="related-card">
                         <h3>SSL 憑證效期縮短至 200 天</h3>
                         <p>為什麼效期長短正在失去作為判準的意義。</p>
                     </a>
-                    <a href="/blog/acme-challenge-types/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/acme-challenge-types/" class="related-card">
                         <h3>ACME 驗證方式怎麼選</h3>
                         <p>要自己跑免費憑證，第一個要做對的決定。</p>
                     </a>
-                    <a href="/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/ssl/" class="related-card">
                         <h3>SSL 憑證自動化平台</h3>
                         <p>處理部署那一段：DNS 驗證與多節點推播。</p>
                     </a>
@@ -336,7 +350,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>如果卡住的是部署而不是憑證</h2>
                 <p>Kineticlinks SSL 平台整合 DNS 驗證與多品牌 CDN 推播，單網域 US$30 起，含平台全部功能。</p>
                 <div class="hero-actions">
@@ -371,13 +385,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Lookup result (example)</div>
+            <div class="f-row"><span class="f-k">Domain</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">Status</span><span class="f-v"><code>No filing</code></span></div>
+            <div class="f-row"><span class="f-k">May resolve inside China</span><span class="f-v"><code>No</code></span></div>
+        </div>
+        <figcaption>A filing binds the operating entity and the resources it uses, not the domain itself. So “does this domain have a filing” is the wrong question to start from. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">China Networking</div>
                 <h1>ICP Filings Are Usually Cancelled Because You Changed Hosts, Not Because You Broke a Rule</h1>
                 <div class="article-meta">
+                    <span class="a-cat">China Networking</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">September 13, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>9 min read</span>
                 </div>
                 <p class="article-lead">Most people assume a cancelled filing means something went wrong with the content. The commonest cause is far more mundane: <strong>you changed hosting providers</strong>. The original access provider cancels its access record once you've left, and unless you file access with the new one, the filing becomes a "shell website" and gets cancelled at the next verification round. Throughout all of this the site runs normally with no error of any kind, until one day the filing number no longer resolves.</p>
@@ -186,6 +200,7 @@
                 <p>The problem is that this completes only half the process. The filing also needs <strong>access filed with the new provider</strong> to reconnect the relationship. Skip that step and the filing sits with an entity and website on record but no access provider at all — a shell website.</p>
 
                 <!-- Timeline table -->
+                <p>The table lists the cancellation causes. The first is both the commonest and the easiest to miss entirely.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +244,7 @@
                     <figcaption>Common reasons ICP filings get cancelled. The first gives no warning at all.</figcaption>
                 </figure>
 
-                <p>The table lists the cancellation causes. The first is both the commonest and the easiest to miss entirely.</p>
+
 
                 <!-- Why -->
                 <h2>Three Ways Filings Lapse Unnoticed</h2>
@@ -317,18 +332,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/icp-filing-explained/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/icp-filing-explained/" class="related-card">
                         <h3>ICP Filing Explained</h3>
                         <p>Who needs it, how long it takes, and how pre-filed domain deals work.</p>
                     </a>
-                    <a href="/en/blog/hong-kong-server-icp-filing/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/hong-kong-server-icp-filing/" class="related-card">
                         <h3>Do Hong Kong Servers Need Filing</h3>
                         <p>Where the exemption ends, and what makes it lapse.</p>
                     </a>
-                    <a href="/en/icp-check/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform product</span>
+                    <a href="/en/icp-check/" class="related-card">
                         <h3>Live ICP filing lookup</h3>
                         <p>Check MIIT filing validity and registrant details in one step.</p>
                     </a>
@@ -336,7 +348,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Want to confirm your domain's filing is still valid?</h2>
                 <p>Enter a domain to check its current MIIT filing status, registrant and approval details, and catch a silent cancellation before it takes the site down.</p>
                 <div class="hero-actions">
@@ -371,13 +383,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

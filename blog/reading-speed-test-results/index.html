@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">台北 → 上海（範例）</div>
+            <div class="f-row"><span class="f-k">電信</span><span class="f-v"><code>68 ms · 0.0%</code></span></div>
+            <div class="f-row"><span class="f-k">聯通</span><span class="f-v"><code>91 ms · 0.2%</code></span></div>
+            <div class="f-row"><span class="f-k">移動</span><span class="f-v"><code>77 ms · 0.0%</code></span></div>
+        </div>
+        <figcaption>三網要分開看。取平均會把其中一網的問題藏起來，而使用者只會遇到自己那一網。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">網路品質</div>
                 <h1>測速數字怎麼讀：為什麼頻寬夠了，跨境連線還是很慢</h1>
                 <div class="article-meta">
+                    <span class="a-cat">網路品質</span>
+                    <span>·</span>
                     <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">「我們買的是 1Gbps，為什麼使用者還是說慢？」這個問題背後幾乎都是同一個誤解：把頻寬當成連線品質的代名詞。實際上在跨境情境下，<strong>頻寬通常不是瓶頸</strong>——延遲與丟包才是，而這兩者對實際傳輸速度的傷害是相乘的。這篇說明測速報告上每個數字實際代表什麼，以及該看哪一個。</p>
@@ -186,6 +200,7 @@
                 <p>原因在於頻寬衡量的是「這條路最多能容納多少車」，而延遲與丟包衡量的是「車實際上跑得順不順」。一條八線道但頻繁塞車的路，通勤時間可能比四線道順暢的路還久。跨境線路幾乎都是後者的情況。</p>
 
                 <!-- Timeline table -->
+                <p>下表把五個指標與判讀基準列出來。第三欄的門檻值來自即時通訊與影音應用的通用標準，可以當作起點。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +244,7 @@
                     <figcaption>測速報告的五個指標與常見判讀基準。丟包是跨境情境下最需要關注的一項。</figcaption>
                 </figure>
 
-                <p>下表把五個指標與判讀基準列出來。第三欄的門檻值來自即時通訊與影音應用的通用標準，可以當作起點。</p>
+
 
                 <!-- Why -->
                 <h2>為什麼丟包比頻寬重要得多</h2>
@@ -317,18 +332,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/china-network-latency/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/china-network-latency/" class="related-card">
                         <h3>中國連線為什麼那麼慢</h3>
                         <p>造成高延遲與丟包的實際原因，不只是防火牆。</p>
                     </a>
-                    <a href="/speedtest/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/speedtest/" class="related-card">
                         <h3>全球三網測速平台</h3>
                         <p>電信、聯通、移動分別呈現，即時檢測連線品質。</p>
                     </a>
-                    <a href="/blog/connection-quality-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/connection-quality-monitoring/" class="related-card">
                         <h3>跨境連線品質監控</h3>
                         <p>單次測速證明不了什麼——時段性問題只有持續檢測抓得到。</p>
                     </a>
@@ -336,7 +348,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>想知道三網各自連得如何？</h2>
                 <p>Kineticlinks 全球三網測速平台可即時檢測電信、聯通、移動對指定節點的連線品質，免費版即可使用。</p>
                 <div class="hero-actions">
@@ -371,13 +383,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

@@ -459,3 +459,32 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
         });
     });
 })();
+
+/* The blog index and the articles. .g-enter is in the markup, so the CSS that
+   hides it is gated on .g-js: it is only set here, after every check has
+   passed, and the observer then reveals ahead of the reader. Nothing is
+   hidden on a page where this never runs. */
+(function () {
+    if (!document.querySelector('.g-page, .a-page')) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.querySelectorAll(
+        '.a-page .article-body h2, .a-page .article-sources, '
+        + '.a-page .article-related, .a-page .article-cta'
+    ).forEach((el) => el.classList.add('g-enter'));
+    const parts = document.querySelectorAll('.g-page .g-enter, .a-page .g-enter');
+    if (!parts.length || !('IntersectionObserver' in window)) return;
+    document.documentElement.classList.add('g-js');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('g-in');
+            io.unobserve(entry.target);
+        });
+        /* The index runs to twenty-four rows. A reveal that waits for the
+           row to reach the screen leaves a blank band behind a fast scroll,
+           so this one runs two screens ahead: by the time a row is read it
+           has been there a while. The rise is for the few near the top; the
+           rest simply are. */
+    }, { rootMargin: '0px 0px 200% 0px' });
+    parts.forEach((el) => io.observe(el));
+})();

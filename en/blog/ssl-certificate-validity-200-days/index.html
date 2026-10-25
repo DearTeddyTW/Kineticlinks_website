@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Certificate chain (example)</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">Issued by</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">Intermediate</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">Trust root</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">Expires</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>A chain is trusted only when it is complete. Miss an intermediate and desktop browsers often fetch it for you while phones and command-line tools do not — which is where “it works on my machine” comes from. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Certificate Management</div>
                 <h1>SSL Certificate Lifetimes Are Now 200 Days — and 47 by 2029. What Should Your Team Do?</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Certificate Management</span>
+                    <span>·</span>
                     <time datetime="2026-08-15">August 15, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>8 min read</span>
                 </div>
                 <p class="article-lead">As of March 15, 2026, the maximum lifetime for a publicly trusted TLS/SSL certificate has dropped from 398 days to 200. This isn't one certificate authority adjusting its policy — it's an industry-wide requirement ratified by the CA/Browser Forum, with two more reductions already scheduled. For teams still managing certificates by hand, the operational burden is set to multiply over the next three years.</p>
@@ -225,6 +241,7 @@
                 </figure>
 
                 <p>Worth noting: alongside certificate lifetimes, the reuse period for domain control validation (DCV) is shrinking too. That means it isn't only certificates that need reissuing more often — domain ownership itself must be revalidated more frequently, dropping to 10 days by 2029.</p>
+
 
                 <!-- Why -->
                 <h2>Why Shorten Certificate Lifetimes?</h2>
@@ -312,18 +329,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform</span>
+                    <a href="/en/ssl/" class="related-card">
                         <h3>SSL Certificate Automation</h3>
                         <p>DNS validation and multi-CDN push — the three automation layers in practice.</p>
                     </a>
-                    <a href="/en/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/certificate-expiry-monitoring/" class="related-card">
                         <h3>Certificate Expiry Monitoring</h3>
                         <p>A successful renewal isn't proof — three ways it still breaks, and what to check.</p>
                     </a>
-                    <a href="/en/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/cdn/" class="related-card">
                         <h3>CDN Content Delivery Network</h3>
                         <p>Issued certificates push straight to CDN nodes, with no manual deploy.</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Stop Relying on Calendar Reminders</h2>
                 <p>The Kineticlinks SSL automation platform combines automatic DNS validation with multi-brand CDN deployment — issuance, validation, and rollout in one pass.</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

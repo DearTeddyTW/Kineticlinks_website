@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">查询结果（示例）</div>
+            <div class="f-row"><span class="f-k">域名</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">状态</span><span class="f-v"><code>没有备案</code></span></div>
+            <div class="f-row"><span class="f-k">可解析至中国境内</span><span class="f-v"><code>否</code></span></div>
+        </div>
+        <figcaption>备案绑定的是主体与它使用的资源，不是域名本身。所以「这个域名有没有备案」这个问题，本身就问错了方向。以上为示例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">中国网络</div>
                 <h1>批量查询 ICP 备案状态：几百个域名怎么查才不会被挡</h1>
                 <div class="article-meta">
+                    <span class="a-cat">中国网络</span>
+                    <span>·</span>
                     <time datetime="2026-10-05">2026 年 10 月 5 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>约 9 分钟</span>
                 </div>
                 <p class="article-lead">备案被注销不会通知任何人。网站照常运作，直到某天接入商把它挡掉——这是<a href="/zh-cn/blog/icp-filing-cancelled/">备案被注销</a>那篇的核心，而唯一的防线是定期自查。</p>
@@ -233,6 +247,7 @@
                 </figure>
 
                 <p>第二行是多数人一开始会选、然后撞墙的那一种。自己写爬虫打官方查询页看起来最省钱，但验证码、版面改版与封锁都要自己处理，而且对方每改一次版您就要修一次——这份维护成本通常在三个月后才会被认真计算。</p>
+
 
                 <!-- Why -->
                 <h2>三个实作上的重点</h2>
@@ -320,18 +335,15 @@
                 <h2>延伸阅读与相关服务</h2>
                 <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
                 <div class="related-grid">
-                    <a href="/zh-cn/blog/icp-lookup-api-accuracy/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/icp-lookup-api-accuracy/" class="related-card">
                         <h3>备案查询工具实测</h3>
                         <p>19 个状态已知的域名实测，以及一种会安静写错数据的失败方式。</p>
                     </a>
-                    <a href="/zh-cn/blog/icp-filing-cancelled/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/icp-filing-cancelled/" class="related-card">
                         <h3>备案为什么会被注销</h3>
                         <p>为什么需要定期自查：最常见的注销原因完全没有征兆。</p>
                     </a>
-                    <a href="/zh-cn/icp-check/" class="related-card glass-panel">
-                        <span class="related-kicker">平台产品</span>
+                    <a href="/zh-cn/icp-check/" class="related-card">
                         <h3>ICP 备案状态即时查询</h3>
                         <p>输入域名即可查询工信部最新备案状态与主体信息。</p>
                     </a>
@@ -339,7 +351,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>先用网页工具确认数据对不对</h2>
                 <p>在决定要不要接 API 之前，先拿几个您已经知道答案的域名试一次，确认返回的备案号与主体名称正确。API 接取请来信说明用量与使用场景。</p>
                 <div class="hero-actions">
@@ -374,13 +386,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

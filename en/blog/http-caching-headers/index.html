@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Taipei → Shanghai (example)</div>
+            <div class="f-row"><span class="f-k">China Telecom</span><span class="f-v"><code>68 ms · 0.0%</code></span></div>
+            <div class="f-row"><span class="f-k">China Unicom</span><span class="f-v"><code>91 ms · 0.2%</code></span></div>
+            <div class="f-row"><span class="f-k">China Mobile</span><span class="f-v"><code>77 ms · 0.0%</code></span></div>
+        </div>
+        <figcaption>Read the three networks separately. An average hides a problem on one of them, and a visitor only ever meets their own. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Network Quality</div>
                 <h1>no-cache Does Not Mean Do Not Cache: What HTTP Caching Headers Actually Say</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Network Quality</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">September 13, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>10 min read</span>
                 </div>
                 <p class="article-lead"><code>Cache-Control: no-cache</code> is badly named. It does <strong>not</strong> mean "don't cache" — it permits a cache to store the response and requires it to check with the origin before each reuse. The directive that forbids storage is <code>no-store</code>. The confusion has practical consequences: people protecting sensitive data reach for no-cache and it still lands on disk, while people avoiding risk apply no-store everywhere and give up performance entirely.</p>
@@ -186,6 +200,7 @@
                 <p>The key distinction is between <strong>storing</strong> and <strong>using</strong>: a cache may hold a response but might need to validate it before serving. <code>no-cache</code> governs the second, <code>no-store</code> the first — easily confused by name, entirely different in behaviour.</p>
 
                 <!-- Timeline table -->
+                <p>The table covers the six most-used directives. The first is the most misunderstood of them.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -234,7 +249,7 @@
                     <figcaption>Six common Cache-Control directives and what RFC 9111 actually says they mean.</figcaption>
                 </figure>
 
-                <p>The table covers the six most-used directives. The first is the most misunderstood of them.</p>
+
 
                 <!-- Why -->
                 <h2>Three Real Consequences of the Confusion</h2>
@@ -322,18 +337,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/geodns-resolver-location/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/geodns-resolver-location/" class="related-card">
                         <h3>GeoDNS and Traffic Steering</h3>
                         <p>How nodes get chosen, and why it sees the resolver rather than the user.</p>
                     </a>
-                    <a href="/en/blog/reading-speed-test-results/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/reading-speed-test-results/" class="related-card">
                         <h3>Reading Speed Test Results</h3>
                         <p>Beyond cache hits, loss and latency are the cross-border bottleneck.</p>
                     </a>
-                    <a href="/en/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/cdn/" class="related-card">
                         <h3>CDN Content Delivery Network</h3>
                         <p>Cross-border acceleration, where cache policy decides the origin ratio.</p>
                     </a>
@@ -341,7 +353,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Make the CDN Actually Absorb Origin Traffic</h2>
                 <p>Kineticlinks CDN provides cross-border node acceleration, deployable without mainland China nodes, with help reviewing cache strategy.</p>
                 <div class="hero-actions">
@@ -376,13 +388,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

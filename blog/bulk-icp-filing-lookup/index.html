@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">查詢結果（範例）</div>
+            <div class="f-row"><span class="f-k">網域</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">狀態</span><span class="f-v"><code>沒有備案</code></span></div>
+            <div class="f-row"><span class="f-k">可解析至中國境內</span><span class="f-v"><code>否</code></span></div>
+        </div>
+        <figcaption>備案綁的是主體與它使用的資源，不是網域本身。所以「這個網域有沒有備案」這個問題，本身就問錯了方向。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">中國網路</div>
                 <h1>批量查詢 ICP 備案狀態：幾百個網域怎麼查才不會被擋</h1>
                 <div class="article-meta">
+                    <span class="a-cat">中國網路</span>
+                    <span>·</span>
                     <time datetime="2026-10-05">2026 年 10 月 5 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">備案被註銷不會通知任何人。網站照常運作，直到某天接入商把它擋掉——這是<a href="/blog/icp-filing-cancelled/">備案被註銷</a>那篇的核心，而唯一的防線是定期自查。</p>
@@ -233,6 +247,7 @@
                 </figure>
 
                 <p>第二列是多數人一開始會選、然後撞牆的那一種。自己寫爬蟲打官方查詢頁看起來最省錢，但驗證碼、版面改版與封鎖都要自己處理，而且對方每改一次版您就要修一次——這份維護成本通常在三個月後才會被認真計算。</p>
+
 
                 <!-- Why -->
                 <h2>三個實作上的重點</h2>
@@ -320,18 +335,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/icp-lookup-api-accuracy/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/icp-lookup-api-accuracy/" class="related-card">
                         <h3>備案查詢工具實測</h3>
                         <p>19 個狀態已知的網域實測，以及一種會安靜寫錯資料的失敗方式。</p>
                     </a>
-                    <a href="/blog/icp-filing-cancelled/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/icp-filing-cancelled/" class="related-card">
                         <h3>備案為什麼會被註銷</h3>
                         <p>為什麼需要定期自查：最常見的註銷原因完全沒有徵兆。</p>
                     </a>
-                    <a href="/icp-check/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/icp-check/" class="related-card">
                         <h3>ICP 備案狀態即時查詢</h3>
                         <p>輸入網域即可查詢工信部最新備案狀態與主體資訊。</p>
                     </a>
@@ -339,7 +351,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>先用網頁工具確認資料對不對</h2>
                 <p>在決定要不要接 API 之前，先拿幾個您已經知道答案的網域試一次，確認回傳的備案號與主體名稱正確。API 接取請來信說明用量與使用情境。</p>
                 <div class="hero-actions">
@@ -374,13 +386,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

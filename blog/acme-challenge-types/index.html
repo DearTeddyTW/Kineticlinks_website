@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">憑證鏈（範例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">簽發</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中繼</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>憑證鏈要完整才會被信任。缺一層中繼，桌機瀏覽器往往會自己補上，手機和命令列工具不會——這是「我這邊看起來正常」的常見來源。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">憑證管理</div>
                 <h1>憑證自動化真正的卡關點：三種 ACME 驗證方式該怎麼選</h1>
                 <div class="article-meta">
+                    <span class="a-cat">憑證管理</span>
+                    <span>·</span>
                     <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">「裝個 Certbot 就好了」是憑證自動化最常見的誤解。工具本身不難裝，真正會卡住的是<strong>驗證方式（challenge）選錯</strong>——而且問題往往不是在安裝當下暴露，是在你把服務放到 CDN 後面、或第一次要申請萬用字元憑證時才爆出來。這三種驗證方式各有硬性限制，選之前必須先知道。</p>
@@ -186,6 +202,7 @@
                 <p>多數教學會直接給一行 Certbot 指令，預設用 HTTP-01。在單機、直接對外的架構上這確實能跑。但只要架構複雜一點——前面加了 CDN、後面有多台伺服器、或需要萬用字元憑證——HTTP-01 就會開始出問題，而錯誤訊息通常不會直接告訴你「你該換一種驗證方式」。</p>
 
                 <!-- Timeline table -->
+                <p>下表把三種驗證方式的原理與限制列清楚。第三欄才是選擇的依據。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -224,7 +241,7 @@
                     <figcaption>三種 ACME 驗證方式的運作原理與硬性限制。第四列是尚未進入生產的新方式。</figcaption>
                 </figure>
 
-                <p>下表把三種驗證方式的原理與限制列清楚。第三欄才是選擇的依據。</p>
+
 
                 <!-- Why -->
                 <h2>HTTP-01 會失敗的三種情境</h2>
@@ -312,18 +329,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/certificate-expiry-monitoring/" class="related-card">
                         <h3>憑證到期監控</h3>
                         <p>自動化跑起來之後，怎麼確認它真的生效了。</p>
                     </a>
-                    <a href="/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/ssl-certificate-validity-200-days/" class="related-card">
                         <h3>SSL 憑證效期縮短至 200 天</h3>
                         <p>為什麼手動處理憑證已經不是可行的長期方案。</p>
                     </a>
-                    <a href="/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/ssl/" class="related-card">
                         <h3>SSL 憑證自動化平台</h3>
                         <p>DNS 自動驗證與多節點推播，不需自行散布 API 金鑰。</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>不想自己管 DNS API 金鑰與多節點部署？</h2>
                 <p>Kineticlinks SSL 憑證自動化平台整合 DNS 驗證與多品牌 CDN 推播，從驗證到部署一次完成。</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

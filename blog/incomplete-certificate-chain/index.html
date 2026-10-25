@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">憑證鏈（範例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">簽發</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中繼</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>憑證鏈要完整才會被信任。缺一層中繼，桌機瀏覽器往往會自己補上，手機和命令列工具不會——這是「我這邊看起來正常」的常見來源。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">憑證管理</div>
                 <h1>瀏覽器打得開不代表憑證沒問題：中繼憑證缺失的完整排查</h1>
                 <div class="article-meta">
+                    <span class="a-cat">憑證管理</span>
+                    <span>·</span>
                     <time datetime="2026-09-11">2026 年 9 月 11 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">這個問題的症狀很有辨識度：<strong>網站用瀏覽器開完全正常，但手機 App 連不上、curl 報憑證錯誤、監控系統一直告警</strong>。於是變成「我這邊看都好好的」跟「就是連不上」的來回拉鋸。兩邊都沒錯——桌面瀏覽器有一套自我修復機制，會把伺服器漏掉的中繼憑證補回來，而絕大多數非瀏覽器的客戶端沒有。</p>
@@ -186,6 +202,7 @@
                 <p>關鍵在於各段的來源不同。<strong>根憑證預先內建在作業系統或瀏覽器的信任庫裡</strong>，不需要傳送；但<strong>中繼憑證不在裡面，必須由你的伺服器連同 leaf 一起送出</strong>。伺服器只送 leaf 的話，驗證方手上就缺了中間那一段，鏈接不起來。</p>
 
                 <!-- Timeline table -->
+                <p>那為什麼有些裝置還是能正常連線？因為部分客戶端會自己想辦法補。下表是差異所在。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +246,7 @@
                     <figcaption>伺服器漏送中繼憑證時，各類客戶端的反應。差異就是症狀時好時壞的原因。</figcaption>
                 </figure>
 
-                <p>那為什麼有些裝置還是能正常連線？因為部分客戶端會自己想辦法補。下表是差異所在。</p>
+
 
                 <!-- Why -->
                 <h2>三種造成鏈不完整的情況</h2>
@@ -317,18 +334,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/certificate-expiry-monitoring/" class="related-card">
                         <h3>憑證到期監控</h3>
                         <p>同樣的原則：要檢查使用者實際拿到什麼，不是檔案裡有什麼。</p>
                     </a>
-                    <a href="/blog/acme-challenge-types/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/acme-challenge-types/" class="related-card">
                         <h3>ACME 驗證方式怎麼選</h3>
                         <p>自動化簽發的第一個決策，做對了才談得上自動部署。</p>
                     </a>
-                    <a href="/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/ssl/" class="related-card">
                         <h3>SSL 憑證自動化平台</h3>
                         <p>簽發後自動推播完整憑證鏈至多個 CDN 節點。</p>
                     </a>
@@ -336,7 +350,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>讓部署這一段不再靠手動貼上</h2>
                 <p>Kineticlinks SSL 憑證自動化平台在簽發後將完整憑證鏈直接推播至各節點，避免漏帶中繼憑證。</p>
                 <div class="hero-actions">
@@ -371,13 +385,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

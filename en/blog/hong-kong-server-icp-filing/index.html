@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Lookup result (example)</div>
+            <div class="f-row"><span class="f-k">Domain</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">Status</span><span class="f-v"><code>No filing</code></span></div>
+            <div class="f-row"><span class="f-k">May resolve inside China</span><span class="f-v"><code>No</code></span></div>
+        </div>
+        <figcaption>A filing binds the operating entity and the resources it uses, not the domain itself. So “does this domain have a filing” is the wrong question to start from. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">China Networking</div>
                 <h1>Do Hong Kong Servers Need ICP Filing? The Exemption Isn't About Where You Bought It</h1>
                 <div class="article-meta">
+                    <span class="a-cat">China Networking</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">September 13, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>9 min read</span>
                 </div>
                 <p class="article-lead">"Hong Kong servers need no ICP filing" is true, and frequently read as a blanket pass. In practice <strong>the trigger is where your servers and nodes sit, not who you bought them from</strong> — hosting in Hong Kong genuinely requires no filing, but enabling a mainland CDN node for speed brings the requirement straight back. Here's where the exemption actually ends, why it doesn't exempt you from everything, and a separate confusion worth clearing up: no filing has nothing to do with being fast.</p>
@@ -186,6 +200,7 @@
                 <p>One point matters here: <strong>the test is server location, not where the domain is registered</strong>. Which registrar holds the domain, and whether it's a .com or a .cn, makes no difference. Equally, a domain registered through a Chinese registrar needs no filing so long as the servers sit outside and no mainland node is involved. These two things are widely conflated.</p>
 
                 <!-- Timeline table -->
+                <p>The table sets out the combinations. The fourth row is the trigger people miss.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -199,28 +214,28 @@
                             <tbody>
                                 <tr class="">
                                     <td>Servers inside mainland China</td>
-                                    <td class="num">Yes</td>
+                                    <td>Yes</td>
                                     <td>Regardless of where the domain is registered</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>Servers in Hong Kong</td>
-                                    <td class="num">No</td>
+                                    <td>No</td>
                                     <td>One country, two systems; filing rules don't reach there</td>
                                 </tr>
                                 <tr class="">
                                     <td>Servers in Singapore, Japan, the US etc.</td>
-                                    <td class="num">No</td>
+                                    <td>No</td>
                                     <td>Also overseas; same test applies</td>
                                 </tr>
                                 <tr class="">
                                     <td>Overseas servers plus mainland CDN nodes</td>
-                                    <td class="num">Yes</td>
+                                    <td>Yes</td>
                                     <td>Any mainland node triggers it; most often missed</td>
                                 </tr>
 
                                 <tr>
                                     <td>Overseas servers plus overseas-only CDN</td>
-                                    <td class="num">No</td>
+                                    <td>No</td>
                                     <td>The compliant acceleration route</td>
                                 </tr>
                             </tbody>
@@ -229,7 +244,7 @@
                     <figcaption>Deployment options and filing requirements. The test is node location, not domain registration.</figcaption>
                 </figure>
 
-                <p>The table sets out the combinations. The fourth row is the trigger people miss.</p>
+
 
                 <!-- Why -->
                 <h2>Three Misreadings of "No Filing Required"</h2>
@@ -317,18 +332,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/icp-filing-explained/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/icp-filing-explained/" class="related-card">
                         <h3>ICP Filing Explained</h3>
                         <p>Who needs it, how long it takes, and how pre-filed domain deals work.</p>
                     </a>
-                    <a href="/en/blog/china-network-latency/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/china-network-latency/" class="related-card">
                         <h3>Why China Connections Are Slow</h3>
                         <p>The latency causes overseas nodes face, and time-of-day degradation.</p>
                     </a>
-                    <a href="/en/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/cdn/" class="related-card">
                         <h3>CDN Content Delivery Network</h3>
                         <p>Overseas acceleration; no mainland nodes means no filing trigger.</p>
                     </a>
@@ -336,7 +348,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Unsure Whether Your Setup Triggers Filing?</h2>
                 <p>Whether a mainland node sits in your path, which route to choose, whether to schedule filing — it depends on your deployment. We also offer pre-filed domains; see the ICP filing article for the rules and risks involved.</p>
                 <div class="hero-actions">
@@ -371,13 +383,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

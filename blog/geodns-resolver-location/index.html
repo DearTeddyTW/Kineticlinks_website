@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">記錄集（範例）</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA 決定哪一家 CA 可以為這個網域簽憑證；沒設的話，任何一家都可以。位址用的是 RFC 保留給文件的範圍。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">網路品質</div>
                 <h1>GeoDNS 為什麼會把使用者導到錯的節點：它看的是解析器，不是你</h1>
                 <div class="article-meta">
+                    <span class="a-cat">網路品質</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">2026 年 9 月 13 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 10 分鐘</span>
                 </div>
                 <p class="article-lead">GeoDNS 的設定畫面會讓你以為系統知道使用者在哪裡。實際上<strong>權威伺服器從來沒有見過使用者</strong>——它只看得到代替使用者發問的遞迴解析器。兩者位置一致時運作良好，不一致時就會把台灣的使用者導到美國節點，而且從日誌上完全看不出哪裡錯了。這篇說明各種流量調度方式各自依據什麼、什麼情況會判斷錯，以及 ECS 為什麼不是萬靈丹。</p>
@@ -186,6 +202,7 @@
                 <p>這在跨境架構裡很有用：亞洲的使用者導到亞洲節點、歐洲的導到歐洲，不需要在應用層做任何事。<strong>但這套機制建立在一個前提上，而那個前提經常不成立</strong>——下表第三列就是問題所在。</p>
 
                 <!-- Timeline table -->
+                <p>先看各種調度方式分別依據什麼。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +246,7 @@
                     <figcaption>常見的 DNS 流量調度方式與各自的判斷依據。</figcaption>
                 </figure>
 
-                <p>先看各種調度方式分別依據什麼。</p>
+
 
                 <!-- Why -->
                 <h2>三種會判斷錯的情況</h2>
@@ -317,18 +334,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/dns-record-types/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/dns-record-types/" class="related-card">
                         <h3>DNS 記錄類型與 TTL</h3>
                         <p>TTL 的行為直接決定故障轉移要多久才生效。</p>
                     </a>
-                    <a href="/blog/china-network-latency/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/china-network-latency/" class="related-card">
                         <h3>中國連線為什麼那麼慢</h3>
                         <p>三網解析器架構差異造成的表現不一致。</p>
                     </a>
-                    <a href="/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/cdn/" class="related-card">
                         <h3>CDN 內容傳遞網路</h3>
                         <p>在網路層做節點選擇，不依賴解析器位置。</p>
                     </a>
@@ -336,7 +350,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>需要的是可靠的就近接入嗎？</h2>
                 <p>Kineticlinks CDN 在網路層決定節點，不受解析器位置影響，並可在不接入大陸節點的前提下部署。</p>
                 <div class="hero-actions">
@@ -371,13 +385,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

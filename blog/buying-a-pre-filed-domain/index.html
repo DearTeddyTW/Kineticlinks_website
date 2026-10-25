@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">記錄集（範例）</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA 決定哪一家 CA 可以為這個網域簽憑證；沒設的話，任何一家都可以。位址用的是 RFC 保留給文件的範圍。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">中國網路</div>
                 <h1>備案域名購買前，先自己查這六件事</h1>
                 <div class="article-meta">
+                    <span class="a-cat">中國網路</span>
+                    <span>·</span>
                     <time datetime="2026-10-05">2026 年 10 月 5 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 10 分鐘</span>
                 </div>
                 <p class="article-lead">備案域名的報價差距很大，而價差通常不在域名本身，在<strong>那筆備案的狀態</strong>。</p>
@@ -238,6 +254,7 @@
                 </figure>
 
                 <p>前兩項決定這筆交易是否成立，後四項決定它能撐多久。如果第二項——主體是誰——跟賣家說的對不上，後面四項就不必查了；先把那個問題問清楚，問不清楚就不要付款。</p>
+
 
                 <!-- Why -->
                 <h2>三種截圖看不出來的狀況</h2>
@@ -325,18 +342,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/icp-filing-explained/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/icp-filing-explained/" class="related-card">
                         <h3>ICP 備案與備案域名交易</h3>
                         <p>規定、時程，以及規定與實務之間的落差究竟在哪裡。</p>
                     </a>
-                    <a href="/blog/icp-filing-cancelled/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/icp-filing-cancelled/" class="related-card">
                         <h3>備案為什麼會被註銷</h3>
                         <p>空殼備案是怎麼形成的，以及為什麼完全沒有徵兆。</p>
                     </a>
-                    <a href="/icp-check/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/icp-check/" class="related-card">
                         <h3>ICP 備案狀態即時查詢</h3>
                         <p>輸入網域即可查詢工信部最新備案狀態與主體資訊。</p>
                     </a>
@@ -344,7 +358,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>先查一個看看？</h2>
                 <p>輸入您正在評估的網域，幾秒內就能看到目前的備案號、主辦單位名稱、主體性質與審核日期。包含您打算跟其他賣家買的那些——我們希望您查完再決定。</p>
                 <div class="hero-actions">
@@ -379,13 +393,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Lookup result (example)</div>
+            <div class="f-row"><span class="f-k">Domain</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">Status</span><span class="f-v"><code>No filing</code></span></div>
+            <div class="f-row"><span class="f-k">May resolve inside China</span><span class="f-v"><code>No</code></span></div>
+        </div>
+        <figcaption>A filing binds the operating entity and the resources it uses, not the domain itself. So “does this domain have a filing” is the wrong question to start from. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">China Networking</div>
                 <h1>Checking ICP Filings in Bulk Without Getting Blocked</h1>
                 <div class="article-meta">
+                    <span class="a-cat">China Networking</span>
+                    <span>·</span>
                     <time datetime="2026-10-05">October 5, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>9 min read</span>
                 </div>
                 <p class="article-lead">A cancelled filing notifies nobody. The site keeps serving until, one day, the hosting provider blocks it — that is the subject of <a href="/en/blog/icp-filing-cancelled/">why filings get cancelled</a>, and the only defence is checking on a schedule.</p>
@@ -233,6 +247,7 @@
                 </figure>
 
                 <p>The second row is the one most people reach for first. Scraping the official lookup page looks like the cheapest option, but captchas, layout changes and blocking all become yours to handle, and every change on their side is a repair on yours — a cost that usually only gets counted honestly about three months in.</p>
+
 
                 <!-- Why -->
                 <h2>Three things that decide whether the batch finishes</h2>
@@ -320,18 +335,15 @@
                 <h2>Further reading and related services</h2>
                 <p class="article-related-desc">Directly related to this page's topic</p>
                 <div class="related-grid">
-                    <a href="/en/blog/icp-lookup-api-accuracy/" class="related-card glass-panel">
-                        <span class="related-kicker">Technical article</span>
+                    <a href="/en/blog/icp-lookup-api-accuracy/" class="related-card">
                         <h3>Testing ICP lookup tools</h3>
                         <p>Nineteen domains of known status, and a failure mode that quietly writes wrong data.</p>
                     </a>
-                    <a href="/en/blog/icp-filing-cancelled/" class="related-card glass-panel">
-                        <span class="related-kicker">Technical article</span>
+                    <a href="/en/blog/icp-filing-cancelled/" class="related-card">
                         <h3>Why filings get cancelled</h3>
                         <p>Why periodic checks matter: the usual cause gives no warning at all.</p>
                     </a>
-                    <a href="/en/icp-check/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform product</span>
+                    <a href="/en/icp-check/" class="related-card">
                         <h3>Live ICP filing lookup</h3>
                         <p>Enter a domain for its current MIIT filing status and registrant details.</p>
                     </a>
@@ -339,7 +351,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Check the data before committing to an API</h2>
                 <p>Before deciding on an API, run a few domains whose status you already know and confirm the filing number and registrant come back correct. API access is by enquiry — tell us your volume and use case.</p>
                 <div class="hero-actions">
@@ -374,13 +386,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

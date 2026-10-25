@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">查詢結果（範例）</div>
+            <div class="f-row"><span class="f-k">網域</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">狀態</span><span class="f-v"><code>沒有備案</code></span></div>
+            <div class="f-row"><span class="f-k">可解析至中國境內</span><span class="f-v"><code>否</code></span></div>
+        </div>
+        <figcaption>備案綁的是主體與它使用的資源，不是網域本身。所以「這個網域有沒有備案」這個問題，本身就問錯了方向。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">中國網路</div>
                 <h1>查得到百度，不代表查得到你要查的那個網域</h1>
                 <div class="article-meta">
+                    <span class="a-cat">中國網路</span>
+                    <span>·</span>
                     <time datetime="2026-09-29">2026 年 9 月 29 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">要測一個 ICP 備案查詢工具準不準，最直覺的做法是丟 <code>baidu.com</code> 進去。查得到，看起來就沒問題。</p>
@@ -227,6 +241,7 @@
                 </figure>
 
                 <p>值得先看的是最後一列。大多數人測查詢工具時只會丟有備案的網域進去，但真正暴露問題的往往是反向對照——正確答案是「沒有」的那一種。</p>
+
 
                 <!-- Why -->
                 <h2>三個發現</h2>
@@ -314,18 +329,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/icp-filing-explained/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/icp-filing-explained/" class="related-card">
                         <h3>ICP 備案完整說明</h3>
                         <p>誰需要備案、要等多久，以及備案網域交易的實際機制。</p>
                     </a>
-                    <a href="/blog/icp-filing-cancelled/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/icp-filing-cancelled/" class="related-card">
                         <h3>備案為什麼會被註銷</h3>
                         <p>最常見的原因不是違規，是換了主機——而且完全沒有徵兆。</p>
                     </a>
-                    <a href="/icp-check/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/icp-check/" class="related-card">
                         <h3>ICP 備案狀態即時查詢</h3>
                         <p>一鍵檢測工信部備案有效性與主體資訊，支援即時驗證。</p>
                     </a>
@@ -333,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>想用自己的網域驗證這組測試？</h2>
                 <p>ICP 備案查詢工具已開放直接使用，輸入網域即可查詢工信部最新備案狀態、備案號與主體名稱。若您需要以 API 方式批次接取，歡迎來信說明用量與使用情境。</p>
                 <div class="hero-actions">
@@ -368,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Record set (example)</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA decides which CA may issue for the domain; with none set, any of them may. Addresses come from the ranges RFCs reserve for documentation.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Network Quality</div>
                 <h1>Why GeoDNS Sends Users to the Wrong Node: It Sees the Resolver, Not You</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Network Quality</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">September 13, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>10 min read</span>
                 </div>
                 <p class="article-lead">A GeoDNS configuration screen makes it look as though the system knows where users are. In reality <strong>the authoritative server never sees the user</strong> — only the recursive resolver asking on their behalf. When the two are co-located it works well; when they aren't, users in Taiwan get routed to a US node and nothing in your logs looks wrong. Here's what each steering method actually uses, when it misjudges, and why ECS isn't a complete fix.</p>
@@ -186,6 +202,7 @@
                 <p>That's genuinely useful for cross-border architecture: Asian users to Asian nodes, European to European, with nothing needed at the application layer. <strong>But the whole mechanism rests on an assumption that frequently doesn't hold</strong> — the third row below is where it breaks.</p>
 
                 <!-- Timeline table -->
+                <p>First, what each steering method actually decides on.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +246,7 @@
                     <figcaption>Common DNS steering methods and what each bases decisions on.</figcaption>
                 </figure>
 
-                <p>First, what each steering method actually decides on.</p>
+
 
                 <!-- Why -->
                 <h2>Three Situations That Misjudge</h2>
@@ -317,18 +334,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/dns-record-types/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/dns-record-types/" class="related-card">
                         <h3>DNS Records and TTL</h3>
                         <p>TTL behaviour decides how long failover actually takes.</p>
                     </a>
-                    <a href="/en/blog/china-network-latency/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/china-network-latency/" class="related-card">
                         <h3>Why China Connections Are Slow</h3>
                         <p>Resolver architecture differences between the three carriers.</p>
                     </a>
-                    <a href="/en/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/cdn/" class="related-card">
                         <h3>CDN Content Delivery Network</h3>
                         <p>Node selection at the network layer, independent of resolver location.</p>
                     </a>
@@ -336,7 +350,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Need Reliable Proximity Rather Than a Guess?</h2>
                 <p>Kineticlinks CDN selects nodes at the network layer, unaffected by resolver location, and deploys without mainland China nodes.</p>
                 <div class="hero-actions">
@@ -371,13 +385,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Record set (example)</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA decides which CA may issue for the domain; with none set, any of them may. Addresses come from the ranges RFCs reserve for documentation.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Domain Management</div>
                 <h1>Transferring a Domain Won't Take Your Site Down: Process, Auth Codes, and Timing</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Domain Management</span>
+                    <span>·</span>
                     <time datetime="2026-08-27">August 27, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>8 min read</span>
                 </div>
                 <p class="article-lead">"I want to switch registrars but I'm worried the site will go down mid-transfer" is a common concern, and the reason many people tolerate poor service or steep renewal pricing. In practice a domain transfer does <strong>not</strong> touch your DNS — as long as you don't change nameservers yourself, your site and mail keep running throughout. What actually needs attention isn't downtime; it's timing and lock rules.</p>
@@ -226,6 +242,7 @@
                 </figure>
 
                 <p>The one situation that does cause downtime is <strong>changing nameservers at the same time as transferring</strong>. Do those two things separately, a few days apart, and there is no interruption risk at all.</p>
+
 
                 <!-- Why -->
                 <h2>Three Things to Sort Out First</h2>
@@ -313,18 +330,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/domain-name-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/domain-name-guide/" class="related-card">
                         <h3>You Don't Buy a Domain, You Rent It</h3>
                         <p>Read before transferring: renewal traps, the expiry lifecycle, and protective settings.</p>
                     </a>
-                    <a href="/en/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform</span>
+                    <a href="/en/ssl/" class="related-card">
                         <h3>SSL Certificate Automation</h3>
                         <p>If you're re-establishing certificate automation after a move, DNS API support is the deciding factor.</p>
                     </a>
-                    <a href="/en/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/cdn/" class="related-card">
                         <h3>CDN Content Delivery Network</h3>
                         <p>Acceleration and DDoS protection once the domain points at edge nodes.</p>
                     </a>
@@ -332,7 +346,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Moving a Domain Elsewhere?</h2>
                 <p>Namecheap is a common destination for transfers. Check their standard renewal price and the TLD's transfer policy first — which is what this article recommends doing with any registrar.</p>
                 <div class="hero-actions">
@@ -367,13 +381,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

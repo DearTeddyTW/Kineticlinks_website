@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">台北 → 上海（範例）</div>
+            <div class="f-row"><span class="f-k">電信</span><span class="f-v"><code>68 ms · 0.0%</code></span></div>
+            <div class="f-row"><span class="f-k">聯通</span><span class="f-v"><code>91 ms · 0.2%</code></span></div>
+            <div class="f-row"><span class="f-k">移動</span><span class="f-v"><code>77 ms · 0.0%</code></span></div>
+        </div>
+        <figcaption>三網要分開看。取平均會把其中一網的問題藏起來，而使用者只會遇到自己那一網。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">網路品質</div>
                 <h1>單次測速證明不了什麼：跨境連線品質為什麼需要長期監控</h1>
                 <div class="article-meta">
+                    <span class="a-cat">網路品質</span>
+                    <span>·</span>
                     <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 8 分鐘</span>
                 </div>
                 <p class="article-lead">「使用者說晚上連不上，可是我測都正常。」這是跨境服務最常見的爭議，而雙方通常都沒說錯——<strong>跨境線路的品質會隨時段大幅變動</strong>，白天測到的數字證明不了晚上的狀況。單次測速只能回答「這一秒如何」，但你真正需要回答的是「使用者實際遇到的是什麼」。這兩個問題之間的差距，只能用持續監控來填補。</p>
@@ -186,6 +200,7 @@
                 <p>所以當使用者在晚上八點回報卡頓，你在隔天上午十點去測，測到「一切正常」是完全可以預期的結果。這不代表問題不存在，只代表你沒有在問題發生的時候測量。</p>
 
                 <!-- Timeline table -->
+                <p>下表比較四種常見的檢測方式，重點在第三欄——它們各自<strong>看不到什麼</strong>。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -224,7 +239,7 @@
                     <figcaption>四種檢測方式的涵蓋範圍。只有最後一種能反映使用者實際遭遇的狀況。</figcaption>
                 </figure>
 
-                <p>下表比較四種常見的檢測方式，重點在第三欄——它們各自<strong>看不到什麼</strong>。</p>
+
 
                 <!-- Why -->
                 <h2>三種只有長期監控才抓得到的問題</h2>
@@ -312,18 +327,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/reading-speed-test-results/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/reading-speed-test-results/" class="related-card">
                         <h3>測速數字怎麼讀</h3>
                         <p>延遲、抖動、丟包各代表什麼，以及該先看哪一個。</p>
                     </a>
-                    <a href="/blog/china-network-latency/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/china-network-latency/" class="related-card">
                         <h3>中國連線為什麼那麼慢</h3>
                         <p>時段性劣化的成因，不只是防火牆。</p>
                     </a>
-                    <a href="/speedtest/" class="related-card glass-panel">
-                        <span class="related-kicker">平台產品</span>
+                    <a href="/speedtest/" class="related-card">
                         <h3>全球三網測速平台</h3>
                         <p>免費版即時檢測，商業版 API 支援排程與串接。</p>
                     </a>
@@ -331,7 +343,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>需要排程檢測與長期趨勢？</h2>
                 <p>Kineticlinks 測速平台免費版可即時檢測三網連線；商業版 API 支援排程呼叫與資料串接至既有監控系統。</p>
                 <div class="hero-actions">
@@ -366,13 +378,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

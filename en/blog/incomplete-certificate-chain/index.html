@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Certificate chain (example)</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">Issued by</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">Intermediate</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">Trust root</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">Expires</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>A chain is trusted only when it is complete. Miss an intermediate and desktop browsers often fetch it for you while phones and command-line tools do not — which is where “it works on my machine” comes from. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Certificate Management</div>
                 <h1>It Opens in Your Browser, So the Certificate Is Fine? Diagnosing Missing Intermediates</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Certificate Management</span>
+                    <span>·</span>
                     <time datetime="2026-09-11">September 11, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>9 min read</span>
                 </div>
                 <p class="article-lead">The symptom is distinctive: <strong>the site loads perfectly in a browser, but the mobile app can't connect, curl reports a certificate error, and monitoring keeps alerting</strong>. Which becomes a standoff between "it works fine for me" and "it just won't connect". Both are right. Desktop browsers have a self-repair mechanism that fills in the intermediate certificate your server omitted; almost no non-browser client does.</p>
@@ -186,6 +202,7 @@
                 <p>The crucial part is where each piece comes from. <strong>Roots are preinstalled in the operating system or browser trust store</strong> and don't need sending. <strong>Intermediates are not, and your server must send them alongside the leaf.</strong> Send only the leaf and the validator is missing the middle, so the chain can't be assembled.</p>
 
                 <!-- Timeline table -->
+                <p>Why do some devices connect anyway? Because certain clients repair it themselves. The table shows where they differ.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +246,7 @@
                     <figcaption>How different clients react when the server omits the intermediate. This difference is why the symptom appears intermittent.</figcaption>
                 </figure>
 
-                <p>Why do some devices connect anyway? Because certain clients repair it themselves. The table shows where they differ.</p>
+
 
                 <!-- Why -->
                 <h2>Three Ways the Chain Ends Up Incomplete</h2>
@@ -317,18 +334,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/certificate-expiry-monitoring/" class="related-card">
                         <h3>Certificate Expiry Monitoring</h3>
                         <p>The same principle: check what users receive, not what's in the file.</p>
                     </a>
-                    <a href="/en/blog/acme-challenge-types/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/acme-challenge-types/" class="related-card">
                         <h3>Choosing an ACME Challenge</h3>
                         <p>The first decision in automating issuance, before deployment matters.</p>
                     </a>
-                    <a href="/en/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform</span>
+                    <a href="/en/ssl/" class="related-card">
                         <h3>SSL Certificate Automation</h3>
                         <p>Complete chains pushed automatically to multiple CDN nodes.</p>
                     </a>
@@ -336,7 +350,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Take Manual Pasting Out of Deployment</h2>
                 <p>The Kineticlinks SSL automation platform pushes the complete chain to every node on issuance, so intermediates never get dropped.</p>
                 <div class="hero-actions">
@@ -371,13 +385,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

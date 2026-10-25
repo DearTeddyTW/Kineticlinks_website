@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,27 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">响应标头（示例）</div>
+            <div class="f-row"><span class="f-k">Cache-Control</span><span class="f-v"><code>public, max-age=0, s-maxage=86400</code></span></div>
+            <div class="f-row"><span class="f-k">Age</span><span class="f-v"><code>41203</code></span></div>
+            <div class="f-row"><span class="f-k">ETag</span><span class="f-v"><code>&quot;9f2b…c41&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">Vary</span><span class="f-v"><code>Accept-Encoding</code></span></div>
+        </div>
+        <figcaption>no-cache 不是「不要缓存」，no-store 才是。s-maxage 只对共享缓存生效，浏览器不看它。以上为示例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">机房架构</div>
                 <h1>IDC 是什么？主机托管、机柜租赁与自建机房的差异一次说清楚</h1>
                 <div class="article-meta">
+                    <span class="a-cat">机房架构</span>
+                    <span>·</span>
                     <time datetime="2026-08-18">2026 年 8 月 18 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>约 9 分钟</span>
                 </div>
                 <p class="article-lead">IDC（Internet Data Center，互联网数据中心）这个词经常被拿来泛指各种机房服务，但「主机托管」「机柜租赁」「整包建置」三者的责任边界其实差很多，签约前没搞清楚，后续运维责任归属就容易出问题。这篇把定义、分级标准与适用场景拆开说明。</p>
@@ -225,6 +240,7 @@
                 </figure>
 
                 <p>另一个常见误解是把 IDC 与公有云当成对立选项。实际上多数企业是混用的：对延迟敏感或有数据落地要求的系统放机房，需要弹性伸缩的前端放公有云，中间用专线或 VPN 串接。真正的问题不是「该选哪一个」，而是「哪些系统该放哪里」。</p>
+
 
                 <!-- Why -->
                 <h2>为什么企业会需要自己的机房</h2>
@@ -312,18 +328,15 @@
                 <h2>延伸阅读与相关服务</h2>
                 <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
                 <div class="related-grid">
-                    <a href="/zh-cn/idc/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服务</span>
+                    <a href="/zh-cn/idc/" class="related-card">
                         <h3>IDC 机房建置</h3>
                         <p>从网络架构规划、硬件采购到机房部署的一站式服务。</p>
                     </a>
-                    <a href="/zh-cn/cloud/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服务</span>
+                    <a href="/zh-cn/cloud/" class="related-card">
                         <h3>公有云架构解决方案</h3>
                         <p>多数企业是混合使用，这页说明本地与云端如何衔接。</p>
                     </a>
-                    <a href="/zh-cn/vps/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服务</span>
+                    <a href="/zh-cn/vps/" class="related-card">
                         <h3>VPS 虚拟专属主机</h3>
                         <p>规模尚未到需要机房时的过渡选项。</p>
                     </a>
@@ -331,7 +344,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>正在评估机房建置或迁移？</h2>
                 <p>提供设备清单与可容忍停机时间，我们的架构顾问会协助规划合适的机房架构。</p>
                 <div class="hero-actions">
@@ -366,13 +379,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

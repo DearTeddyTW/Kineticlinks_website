@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Certificate chain (example)</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">Issued by</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">Intermediate</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">Trust root</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">Expires</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>A chain is trusted only when it is complete. Miss an intermediate and desktop browsers often fetch it for you while phones and command-line tools do not — which is where “it works on my machine” comes from. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Certificate Management</div>
                 <h1>Certificate Monitoring: A Successful Renewal Doesn't Mean Users Got the New Certificate</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Certificate Management</span>
+                    <span>·</span>
                     <time datetime="2026-08-28">August 28, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>8 min read</span>
                 </div>
                 <p class="article-lead">Once ACME automation is in place, most people stop thinking about certificates. Certificate incidents don't disappear though — they change shape: the renewal log says success, the CA portal shows issued, and users still get a browser warning. The reason is that <strong>a successful renewal and a certificate actually being served are two independent things</strong>, and most monitoring only watches the first.</p>
@@ -186,6 +202,7 @@
                 <p>That's where the gap opens. A renewal log reading <code>success</code> means the certificate was obtained, not that it's being served. Deployment and reload still sit in between, and a failure at either never shows up in the renewal log.</p>
 
                 <!-- Timeline table -->
+                <p>The table below lays out four common monitoring approaches. The important column is the third — what each one <strong>misses</strong> is exactly where incidents happen.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -224,7 +241,7 @@
                     <figcaption>What four monitoring approaches cover. Only the last proves users are unaffected.</figcaption>
                 </figure>
 
-                <p>The table below lays out four common monitoring approaches. The important column is the third — what each one <strong>misses</strong> is exactly where incidents happen.</p>
+
 
                 <!-- Why -->
                 <h2>Three Ways Renewal Succeeds and Things Still Break</h2>
@@ -312,18 +329,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/ssl-certificate-validity-200-days/" class="related-card">
                         <h3>SSL Lifetimes Cut to 200 Days</h3>
                         <p>Why renewals reach eight a year by 2029 — the reason monitoring now matters.</p>
                     </a>
-                    <a href="/en/blog/incomplete-certificate-chain/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/incomplete-certificate-chain/" class="related-card">
                         <h3>Incomplete Certificate Chains</h3>
                         <p>Opening in a browser proves nothing — diagnosing missing intermediates.</p>
                     </a>
-                    <a href="/en/blog/acme-challenge-types/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/acme-challenge-types/" class="related-card">
                         <h3>Choosing an ACME Challenge</h3>
                         <p>The first decision before automating: HTTP-01, DNS-01, or TLS-ALPN-01.</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Issue and Deploy in One Flow</h2>
                 <p>The Kineticlinks SSL automation platform pushes certificates to CDN nodes on issuance, removing the "renewed but not deployed" gap.</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

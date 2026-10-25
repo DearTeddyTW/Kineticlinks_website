@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Lookup result (example)</div>
+            <div class="f-row"><span class="f-k">Domain</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">Status</span><span class="f-v"><code>No filing</code></span></div>
+            <div class="f-row"><span class="f-k">May resolve inside China</span><span class="f-v"><code>No</code></span></div>
+        </div>
+        <figcaption>A filing binds the operating entity and the resources it uses, not the domain itself. So “does this domain have a filing” is the wrong question to start from. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">China Networking</div>
                 <h1>ICP Filing and Pre-Filed Domains: Rules, Timelines and Real Risk</h1>
                 <div class="article-meta">
+                    <span class="a-cat">China Networking</span>
+                    <span>·</span>
                     <time datetime="2026-09-07">September 7, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>10 min read</span>
                 </div>
                 <p class="article-lead">"The site needs to launch in China, but filing takes weeks" is the first obstacle most cross-border projects hit. Hence a market in "pre-filed domains". The arithmetic doesn't work, though: <strong>regulations require that a change of filing subject means cancelling the existing filing and submitting a new application</strong>. Done properly, a purchased filing evaporates on transfer. Here are the actual rules, including when no filing is needed at all.</p>
@@ -186,6 +200,7 @@
                 <p>So "does this domain have a filing" is the wrong question. A filing records a relationship — which entity, using which resources, running which site — and the domain is one field within it. That's also why filings can't be traded like domains: they record a subject, not an asset.</p>
 
                 <!-- Timeline table -->
+                <p>The table covers common scenarios. The third row is the one most often overlooked.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +244,7 @@
                     <figcaption>Common deployment scenarios and filing requirements. The third row is the trigger people miss.</figcaption>
                 </figure>
 
-                <p>The table covers common scenarios. The third row is the one most often overlooked.</p>
+
 
                 <!-- Why -->
                 <h2>How Pre-Filed Domain Transactions Actually Work</h2>
@@ -317,18 +332,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/china-network-latency/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/china-network-latency/" class="related-card">
                         <h3>Why China Connections Are Slow</h3>
                         <p>The latency causes and time-of-day degradation overseas nodes face.</p>
                     </a>
-                    <a href="/en/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">Service</span>
+                    <a href="/en/cdn/" class="related-card">
                         <h3>CDN Content Delivery Network</h3>
                         <p>Overseas node acceleration, deployable without mainland nodes.</p>
                     </a>
-                    <a href="/en/blog/reading-speed-test-results/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/reading-speed-test-results/" class="related-card">
                         <h3>Reading Speed Test Results</h3>
                         <p>Judge cross-border options on loss and latency, not bandwidth.</p>
                     </a>
@@ -336,7 +348,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Want to Talk Through a China Launch?</h2>
                 <p>We offer cross-border deployment planning, CDN acceleration, and pre-filed domains. The rules and risks around the latter are set out above — bring us your situation and we'll discuss it.</p>
                 <div class="hero-actions">
@@ -371,13 +383,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

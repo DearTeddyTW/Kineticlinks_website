@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">证书链（示例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">签发</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中继</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>证书链要完整才会被信任。缺一层中继，桌面浏览器往往会自己补上，手机和命令行工具不会——这是「我这边看起来正常」的常见来源。以上为示例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">证书管理</div>
                 <h1>证书到期监控：自动续签成功，不代表用户拿到的是新证书</h1>
                 <div class="article-meta">
+                    <span class="a-cat">证书管理</span>
+                    <span>·</span>
                     <time datetime="2026-08-28">2026 年 8 月 28 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>约 8 分钟</span>
                 </div>
                 <p class="article-lead">引入 ACME 自动续签之后，很多人就把证书这件事从脑中删掉了。但证书事故并没有因此消失——它只是换了一种形式：续签日志显示成功、证书机构后台显示已签发，而用户的浏览器仍然弹出安全性警告。原因是<strong>续签成功与证书真正被供应，是两件独立的事</strong>，而多数监控只看了前者。</p>
@@ -186,6 +202,7 @@
                 <p>问题就出在这里：续签日志显示 <code>success</code>，指的是「证书拿到了」，不是「证书在服务」。中间还隔着部署与重新加载，任何一步失败都不会反映在续签日志上。</p>
 
                 <!-- Timeline table -->
+                <p>下表把常见的四种监控方式摊开来看，重点在第三栏——每一种方式<strong>抓不到什么</strong>，那才是事故发生的地方。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -224,7 +241,7 @@
                     <figcaption>四种监控方式的覆盖范围。只有最后一种能证明用户端没问题。</figcaption>
                 </figure>
 
-                <p>下表把常见的四种监控方式摊开来看，重点在第三栏——每一种方式<strong>抓不到什么</strong>，那才是事故发生的地方。</p>
+
 
                 <!-- Why -->
                 <h2>三种续签成功却仍然出事的情境</h2>
@@ -312,18 +329,15 @@
                 <h2>延伸阅读与相关服务</h2>
                 <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
                 <div class="related-grid">
-                    <a href="/zh-cn/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/ssl-certificate-validity-200-days/" class="related-card">
                         <h3>SSL 证书有效期缩短至 200 天</h3>
                         <p>为什么更新频率会在 2029 年变成一年八次——监控变重要的根本原因。</p>
                     </a>
-                    <a href="/zh-cn/blog/incomplete-certificate-chain/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/incomplete-certificate-chain/" class="related-card">
                         <h3>证书链不完整</h3>
                         <p>浏览器打得开不代表没问题——中间证书缺失的排查。</p>
                     </a>
-                    <a href="/zh-cn/blog/acme-challenge-types/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/acme-challenge-types/" class="related-card">
                         <h3>ACME 验证方式怎么选</h3>
                         <p>自动化开始前的第一个决策：HTTP-01、DNS-01 还是 TLS-ALPN-01。</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>让签发与部署在同一个流程里完成</h2>
                 <p>Kineticlinks SSL 证书自动化平台在签发后自动推送至各 CDN 节点，减少「续签成功却没部署」的断点。</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

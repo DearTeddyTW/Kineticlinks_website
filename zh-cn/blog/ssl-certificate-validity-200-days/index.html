@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">证书链（示例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">签发</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中继</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>证书链要完整才会被信任。缺一层中继，桌面浏览器往往会自己补上，手机和命令行工具不会——这是「我这边看起来正常」的常见来源。以上为示例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">证书管理</div>
                 <h1>SSL 证书有效期缩短至 200 天：2029 年只剩 47 天，企业该如何应对？</h1>
                 <div class="article-meta">
+                    <span class="a-cat">证书管理</span>
+                    <span>·</span>
                     <time datetime="2026-08-15">2026 年 8 月 15 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>约 8 分钟</span>
                 </div>
                 <p class="article-lead">2026 年 3 月 15 日起，公开信任的 TLS/SSL 证书最长有效期已从 398 天缩短为 200 天。这不是单一证书机构的政策调整，而是 CA/Browser Forum 通过的行业共同规范，且后续还有两个阶段的缩短。对于仍以人工方式管理证书的团队来说，运维负担将在未来三年内成倍增加。</p>
@@ -225,6 +241,7 @@
                 </figure>
 
                 <p>值得注意的是，除了证书有效期本身，域名控制验证（DCV）的重复使用期限也同步缩短。这代表未来不只是证书要更频繁地重新签发，连域名所有权的验证动作也必须更频繁地重做，到 2029 年将缩短至 10 天。</p>
+
 
                 <!-- Why -->
                 <h2>为什么要缩短证书有效期？</h2>
@@ -312,18 +329,15 @@
                 <h2>延伸阅读与相关服务</h2>
                 <p class="article-related-desc">这些内容与本页主题直接相关，可一并参考</p>
                 <div class="related-grid">
-                    <a href="/zh-cn/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">平台产品</span>
+                    <a href="/zh-cn/ssl/" class="related-card">
                         <h3>SSL 证书自动化平台</h3>
                         <p>DNS 自动验证与多品牌 CDN 推送，对应本文提到的三层自动化。</p>
                     </a>
-                    <a href="/zh-cn/blog/certificate-expiry-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">技术文章</span>
+                    <a href="/zh-cn/blog/certificate-expiry-monitoring/" class="related-card">
                         <h3>证书到期监控</h3>
                         <p>自动续签成功不等于没事——三种仍会出错的情境与监控做法。</p>
                     </a>
-                    <a href="/zh-cn/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服务</span>
+                    <a href="/zh-cn/cdn/" class="related-card">
                         <h3>CDN 内容分发网络</h3>
                         <p>证书签发后自动推送至 CDN 节点，省去手动部署。</p>
                     </a>
@@ -331,7 +345,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>让证书管理不再依赖人工提醒</h2>
                 <p>Kineticlinks SSL 证书自动化平台整合 DNS 自动验证与多品牌 CDN 推送，从申请、验证到部署一次完成。</p>
                 <div class="hero-actions">
@@ -366,13 +380,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

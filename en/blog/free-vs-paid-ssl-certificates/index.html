@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Certificate chain (example)</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">Issued by</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">Intermediate</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">Trust root</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">Expires</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>A chain is trusted only when it is complete. Miss an intermediate and desktop browsers often fetch it for you while phones and command-line tools do not — which is where “it works on my machine” comes from. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Certificate Management</div>
                 <h1>Free vs Paid Certificates: It Isn't Encryption Strength, and It Isn't Wildcards</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Certificate Management</span>
+                    <span>·</span>
                     <time datetime="2026-09-13">September 13, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>10 min read</span>
                 </div>
                 <p class="article-lead">Two extremes circulate on whether certificates are worth paying for: one still sells "256-bit encryption" as a feature, the other insists Let's Encrypt is free so paying is a scam. <strong>Both are wrong</strong>, in opposite directions. The real difference isn't encryption strength — that's identical — but what the CA verified, and which operational limits you'll run into.</p>
@@ -186,6 +202,7 @@
                 <p>The most entrenched misconception is encryption strength. A certificate doesn't determine how strongly a connection is encrypted — the cipher suite is negotiated between client and server during the TLS handshake. A free DV certificate and an EV certificate costing four figures produce exactly the same encrypted connection. The old "128-bit versus 256-bit" marketing has no technical reality behind it any more.</p>
 
                 <!-- Timeline table -->
+                <p>The table lays out four common comparison points. Only the last two actually differ.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -199,28 +216,28 @@
                             <tbody>
                                 <tr class="">
                                     <td>Encryption strength</td>
-                                    <td class="num">Identical</td>
+                                    <td>Identical</td>
                                     <td>Negotiated in the TLS handshake, unrelated to certificate type</td>
                                 </tr>
                                 <tr class="">
                                     <td>Browser trust</td>
-                                    <td class="num">Identical</td>
+                                    <td>Identical</td>
                                     <td>Both chain to publicly trusted roots</td>
                                 </tr>
                                 <tr class="">
                                     <td>Wildcard certificates</td>
-                                    <td class="num">Free too</td>
+                                    <td>Free too</td>
                                     <td>Let's Encrypt issues them via DNS-01 at no charge</td>
                                 </tr>
                                 <tr class="is-current">
                                     <td>Validation level</td>
-                                    <td class="num">Differs</td>
+                                    <td>Differs</td>
                                     <td>Let's Encrypt issues DV only; OV and EV require payment</td>
                                 </tr>
 
                                 <tr>
                                     <td>Lifetime and renewal frequency</td>
-                                    <td class="num">Differs</td>
+                                    <td>Differs</td>
                                     <td>Let's Encrypt 90 days and shrinking; commercial DV currently 200</td>
                                 </tr>
                             </tbody>
@@ -229,7 +246,7 @@
                     <figcaption>Which of the commonly compared properties actually differ.</figcaption>
                 </figure>
 
-                <p>The table lays out four common comparison points. Only the last two actually differ.</p>
+
 
                 <!-- Why -->
                 <h2>The Three Differences That Are Real</h2>
@@ -317,18 +334,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/ssl-certificate-validity-200-days/" class="related-card">
                         <h3>SSL Lifetimes Cut to 200 Days</h3>
                         <p>Why lifetime is losing its usefulness as a criterion.</p>
                     </a>
-                    <a href="/en/blog/acme-challenge-types/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/acme-challenge-types/" class="related-card">
                         <h3>Choosing an ACME Challenge</h3>
                         <p>The first decision to get right when running free certificates yourself.</p>
                     </a>
-                    <a href="/en/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform</span>
+                    <a href="/en/ssl/" class="related-card">
                         <h3>SSL Certificate Automation</h3>
                         <p>Handles the deployment half: DNS validation and multi-node push.</p>
                     </a>
@@ -336,7 +350,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>If Deployment Is the Problem, Not the Certificate</h2>
                 <p>The Kineticlinks SSL platform combines DNS validation with multi-brand CDN push. From US$30 per domain, every platform feature included.</p>
                 <div class="hero-actions">
@@ -371,13 +385,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

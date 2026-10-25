@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">記錄集（範例）</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA 決定哪一家 CA 可以為這個網域簽憑證；沒設的話，任何一家都可以。位址用的是 RFC 保留給文件的範圍。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">網域管理</div>
                 <h1>改了 DNS 為什麼沒生效：記錄類型、TTL 與根網域的硬限制</h1>
                 <div class="article-meta">
+                    <span class="a-cat">網域管理</span>
+                    <span>·</span>
                     <time datetime="2026-09-06">2026 年 9 月 6 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 9 分鐘</span>
                 </div>
                 <p class="article-lead">「DNS 改了但還沒生效，應該還在傳播吧？」這句話有一半是對的，但它掩蓋了真正的原因。DNS 沒有一個叫做「傳播」的機制——<strong>變更之所以要等，是因為舊記錄還在各地的快取裡，而快取多久由你自己設定的 TTL 決定</strong>。這代表一件反直覺的事：想讓變更快點生效，動作要在變更<strong>之前</strong>做。這篇說明六種常用記錄的用途、TTL 的正確用法，以及根網域那個繞不過去的限制。</p>
@@ -186,6 +202,7 @@
                 <p>搞混類型是最常見的錯誤來源，而且症狀往往不直觀——例如把應該用 CNAME 的地方寫成 A 記錄，設定當下完全正常，直到對方換 IP 才突然壞掉，而那可能是幾個月後的事。</p>
 
                 <!-- Timeline table -->
+                <p>下表列出六種記錄與各自最常見的踩雷點。第三欄值得特別看。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -234,7 +251,7 @@
                     <figcaption>六種常用 DNS 記錄的用途與常見錯誤。CNAME 那列的限制是協定層面的，無法繞過。</figcaption>
                 </figure>
 
-                <p>下表列出六種記錄與各自最常見的踩雷點。第三欄值得特別看。</p>
+
 
                 <!-- Why -->
                 <h2>為什麼根網域不能用 CNAME</h2>
@@ -322,18 +339,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/domain-name-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/domain-name-guide/" class="related-card">
                         <h3>網域不是買斷</h3>
                         <p>續約價、轉移鎖定與到期贖回的完整指南。</p>
                     </a>
-                    <a href="/blog/acme-challenge-types/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/acme-challenge-types/" class="related-card">
                         <h3>ACME 驗證方式怎麼選</h3>
                         <p>為什麼 DNS API 是憑證自動化的前提條件。</p>
                     </a>
-                    <a href="/blog/domain-hijacking-protection/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/domain-hijacking-protection/" class="related-card">
                         <h3>網域劫持防護</h3>
                         <p>NS 記錄被改動是劫持最明確的徵兆之一。</p>
                     </a>
@@ -341,7 +355,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>DNS 管理能力該怎麼納入註冊商比較？</h2>
                 <p>API 支援、ALIAS 功能與 DNS 託管品質都會影響後續維運成本。我們在網域註冊指南裡逐項說明該看什麼。</p>
                 <div class="hero-actions">
@@ -376,13 +390,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,28 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Record set (example)</div>
+            <div class="f-row"><span class="f-k">A</span><span class="f-v"><code>203.0.113.10</code></span></div>
+            <div class="f-row"><span class="f-k">AAAA</span><span class="f-v"><code>2001:db8::10</code></span></div>
+            <div class="f-row"><span class="f-k">CNAME</span><span class="f-v"><code>www → example.com</code></span></div>
+            <div class="f-row"><span class="f-k">CAA</span><span class="f-v"><code>0 issue &quot;sectigo.com&quot;</code></span></div>
+            <div class="f-row"><span class="f-k">TTL</span><span class="f-v"><code>300</code></span></div>
+        </div>
+        <figcaption>CAA decides which CA may issue for the domain; with none set, any of them may. Addresses come from the ranges RFCs reserve for documentation.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Domain Management</div>
                 <h1>You Don't Buy a Domain, You Rent It: Renewals, Transfer Locks, and Redemption Fees</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Domain Management</span>
+                    <span>·</span>
                     <time datetime="2026-08-24">August 24, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>9 min read</span>
                 </div>
                 <p class="article-lead">Registering a domain looks like the simplest step in standing up a site — pick a name, pay, done. But a domain is rented, not bought, and the lease terms sit where you'll never read them. The three common ways people get burned all happen later: the renewal price multiplies, you find you can't move registrars, or you miss a renewal and it costs real money to get back.</p>
@@ -226,6 +242,7 @@
                 </figure>
 
                 <p>Worth stressing: by the time a domain reaches the grace period, DNS resolution has usually already stopped. So if you discover the problem because the site broke, the clock has been running for a while. That's exactly why auto-renew and expiry monitoring have to be set up in advance rather than sorted out during an incident.</p>
+
 
                 <!-- Why -->
                 <h2>Three Things That Matter When Picking a TLD</h2>
@@ -313,18 +330,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/ssl/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform</span>
+                    <a href="/en/ssl/" class="related-card">
                         <h3>SSL Certificate Automation</h3>
                         <p>DNS-based validation, so certificates issue and deploy automatically once the domain is set up.</p>
                     </a>
-                    <a href="/en/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/ssl-certificate-validity-200-days/" class="related-card">
                         <h3>SSL Lifetimes Cut to 200 Days</h3>
                         <p>Renewal frequency doubles, which makes DNS API support matter more.</p>
                     </a>
-                    <a href="/en/blog/domain-transfer-guide/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/domain-transfer-guide/" class="related-card">
                         <h3>Domain Transfer Guide</h3>
                         <p>Unlock, auth code, five-day approval — a transfer won't take your site down.</p>
                     </a>
@@ -332,7 +346,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Registering or Transferring a Domain?</h2>
                 <p>Namecheap offers domain registration, DNS management, and privacy protection, and is a common pick where automation matters. Check their current renewal pricing, privacy terms, and API access conditions directly — which is exactly what this article recommends doing with every registrar.</p>
                 <div class="hero-actions">
@@ -367,13 +381,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

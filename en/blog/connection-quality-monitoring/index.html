@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Taipei → Shanghai (example)</div>
+            <div class="f-row"><span class="f-k">China Telecom</span><span class="f-v"><code>68 ms · 0.0%</code></span></div>
+            <div class="f-row"><span class="f-k">China Unicom</span><span class="f-v"><code>91 ms · 0.2%</code></span></div>
+            <div class="f-row"><span class="f-k">China Mobile</span><span class="f-v"><code>77 ms · 0.0%</code></span></div>
+        </div>
+        <figcaption>Read the three networks separately. An average hides a problem on one of them, and a visitor only ever meets their own. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Network Quality</div>
                 <h1>One Test Proves Nothing: Why Cross-Border Quality Needs Continuous Monitoring</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Network Quality</span>
+                    <span>·</span>
                     <time datetime="2026-09-06">September 6, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>8 min read</span>
                 </div>
                 <p class="article-lead">"Users say it's unusable in the evening, but every test I run looks fine." This is the most common dispute in cross-border services, and usually neither side is wrong — <strong>cross-border quality varies substantially by hour</strong>, and a daytime measurement says nothing about the evening. A single test answers "how is this second", when the question you need answered is "what are users actually getting". Only continuous monitoring closes that gap.</p>
@@ -186,6 +200,7 @@
                 <p>So when a user reports stuttering at 8pm and you test at 10am the next morning, "everything looks fine" is the expected result. It doesn't mean the problem isn't real; it means you weren't measuring while it was happening.</p>
 
                 <!-- Timeline table -->
+                <p>The table compares four common approaches. The third column is the point — what each one cannot see.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -224,7 +239,7 @@
                     <figcaption>What four testing approaches cover. Only the last reflects what users actually encounter.</figcaption>
                 </figure>
 
-                <p>The table compares four common approaches. The third column is the point — what each one cannot see.</p>
+
 
                 <!-- Why -->
                 <h2>Three Problems Only Continuous Monitoring Catches</h2>
@@ -312,18 +327,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/reading-speed-test-results/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/reading-speed-test-results/" class="related-card">
                         <h3>Reading Speed Test Results</h3>
                         <p>What latency, jitter and loss each mean, and which to read first.</p>
                     </a>
-                    <a href="/en/blog/china-network-latency/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/china-network-latency/" class="related-card">
                         <h3>Why China Connections Are Slow</h3>
                         <p>What causes time-of-day degradation — not just the firewall.</p>
                     </a>
-                    <a href="/en/speedtest/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform</span>
+                    <a href="/en/speedtest/" class="related-card">
                         <h3>Global 3-Network Speed Test</h3>
                         <p>Free real-time checks; commercial API for scheduling and integration.</p>
                     </a>
@@ -331,7 +343,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Need Scheduled Checks and Long-Run Trends?</h2>
                 <p>The free tier covers real-time three-network checks; the commercial API supports scheduled calls and integration into existing monitoring.</p>
                 <div class="hero-actions">
@@ -366,13 +378,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

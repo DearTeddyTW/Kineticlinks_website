@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Taipei → Shanghai (example)</div>
+            <div class="f-row"><span class="f-k">China Telecom</span><span class="f-v"><code>68 ms · 0.0%</code></span></div>
+            <div class="f-row"><span class="f-k">China Unicom</span><span class="f-v"><code>91 ms · 0.2%</code></span></div>
+            <div class="f-row"><span class="f-k">China Mobile</span><span class="f-v"><code>77 ms · 0.0%</code></span></div>
+        </div>
+        <figcaption>Read the three networks separately. An average hides a problem on one of them, and a visitor only ever meets their own. Example values.</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">Network Quality</div>
                 <h1>Reading Speed Test Results: Why Enough Bandwidth Still Feels Slow Cross-Border</h1>
                 <div class="article-meta">
+                    <span class="a-cat">Network Quality</span>
+                    <span>·</span>
                     <time datetime="2026-09-06">September 6, 2026</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>9 min read</span>
                 </div>
                 <p class="article-lead">"We're paying for 1Gbps — why do users still say it's slow?" That question almost always rests on one assumption: that bandwidth is a synonym for connection quality. In cross-border scenarios <strong>bandwidth usually isn't the bottleneck</strong> — latency and packet loss are, and their damage to real throughput compounds. This explains what each number on a speed test actually means, and which one to read first.</p>
@@ -186,6 +200,7 @@
                 <p>Bandwidth measures how many cars the road can hold. Latency and packet loss measure whether the cars actually move. An eight-lane road that jams constantly can mean a longer commute than a clear four-lane one, and cross-border links are almost always the former.</p>
 
                 <!-- Timeline table -->
+                <p>The table lists all five with reference thresholds. Those in the third column come from established standards for real-time communications and serve as a starting point.</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +244,7 @@
                     <figcaption>Five speed test metrics and common reference thresholds. Packet loss deserves the most attention cross-border.</figcaption>
                 </figure>
 
-                <p>The table lists all five with reference thresholds. Those in the third column come from established standards for real-time communications and serve as a starting point.</p>
+
 
                 <!-- Why -->
                 <h2>Why Packet Loss Matters Far More Than Bandwidth</h2>
@@ -317,18 +332,15 @@
                 <h2>Related Services & Reading</h2>
                 <p class="article-related-desc">These pages connect directly to the topic above</p>
                 <div class="related-grid">
-                    <a href="/en/blog/china-network-latency/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/china-network-latency/" class="related-card">
                         <h3>Why China Connections Are Slow</h3>
                         <p>The real causes of high latency and loss — not just the firewall.</p>
                     </a>
-                    <a href="/en/speedtest/" class="related-card glass-panel">
-                        <span class="related-kicker">Platform</span>
+                    <a href="/en/speedtest/" class="related-card">
                         <h3>Global 3-Network Speed Test</h3>
                         <p>Telecom, Unicom and Mobile shown separately, measured in real time.</p>
                     </a>
-                    <a href="/en/blog/connection-quality-monitoring/" class="related-card glass-panel">
-                        <span class="related-kicker">Article</span>
+                    <a href="/en/blog/connection-quality-monitoring/" class="related-card">
                         <h3>Monitoring Cross-Border Quality</h3>
                         <p>One test proves nothing — only continuous checks catch time-of-day problems.</p>
                     </a>
@@ -336,7 +348,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>Want to See How Each Carrier Connects?</h2>
                 <p>The Kineticlinks global three-network speed test measures Telecom, Unicom and Mobile connectivity to a given node in real time — free tier included.</p>
                 <div class="hero-actions">
@@ -371,13 +383,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>

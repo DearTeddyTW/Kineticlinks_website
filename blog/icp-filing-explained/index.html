@@ -105,6 +105,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
+    <link rel="stylesheet" href="/css/blog.css?v=a725bd49">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -119,7 +120,7 @@
     </script>
 </head>
 
-<body>
+<body class="a-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,13 +167,26 @@
     <article class="article">
         <div class="container article-container">
 
-            <!-- Article Header -->
+            <!-- The readout this article is about, before the title. The
+                 category used to be a pill here, repeating the breadcrumb;
+                 it is a word in the meta line now. -->
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">查詢結果（範例）</div>
+            <div class="f-row"><span class="f-k">網域</span><span class="f-v"><code>example.com</code></span></div>
+            <div class="f-row"><span class="f-k">狀態</span><span class="f-v"><code>沒有備案</code></span></div>
+            <div class="f-row"><span class="f-k">可解析至中國境內</span><span class="f-v"><code>否</code></span></div>
+        </div>
+        <figcaption>備案綁的是主體與它使用的資源，不是網域本身。所以「這個網域有沒有備案」這個問題，本身就問錯了方向。以上為範例值。</figcaption>
+    </figure>
+
             <header class="article-header">
-                <div class="badge">中國網路</div>
                 <h1>ICP 備案與備案域名交易：規定、時程與實際風險</h1>
                 <div class="article-meta">
+                    <span class="a-cat">中國網路</span>
+                    <span>·</span>
                     <time datetime="2026-09-07">2026 年 9 月 7 日</time>
-                    <span class="dot">·</span>
+                    <span>·</span>
                     <span>約 10 分鐘</span>
                 </div>
                 <p class="article-lead">「網站要在中國上線，但備案要等好幾週」是跨境業務最常遇到的第一道關卡。於是市面上出現了「現成備案域名」的買賣。但這條路的數學其實不成立：<strong>依規定，備案主體不同就必須先註銷、再重新申請</strong>——照規矩操作，買來的備案當場歸零。這篇把備案的實際規則講清楚，包括哪些情況根本不需要備案。</p>
@@ -186,6 +200,7 @@
                 <p>所以「這個網域有沒有備案」這個問題本身就問錯了方向。備案綁定的是「哪個主體、用哪些資源、跑哪個網站」這組關係，網域只是其中一個欄位。這也是為什麼備案不能像網域一樣被買賣——它記錄的是主體，不是資產。</p>
 
                 <!-- Timeline table -->
+                <p>下表列出常見情境。第三列是最多人忽略、也最容易誤觸的一種。</p>
                 <figure class="data-table-wrap">
                     <div class="data-table-scroll">
                         <table class="data-table">
@@ -229,7 +244,7 @@
                     <figcaption>常見部署情境與備案需求。第三列是最容易被忽略的觸發條件。</figcaption>
                 </figure>
 
-                <p>下表列出常見情境。第三列是最多人忽略、也最容易誤觸的一種。</p>
+
 
                 <!-- Why -->
                 <h2>備案域名交易的實際機制</h2>
@@ -317,18 +332,15 @@
                 <h2>延伸閱讀與相關服務</h2>
                 <p class="article-related-desc">這些內容與本頁主題直接相關，可一併參考</p>
                 <div class="related-grid">
-                    <a href="/blog/china-network-latency/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/china-network-latency/" class="related-card">
                         <h3>中國連線為什麼那麼慢</h3>
                         <p>走境外節點時會遇到的延遲成因與時段性劣化。</p>
                     </a>
-                    <a href="/cdn/" class="related-card glass-panel">
-                        <span class="related-kicker">核心服務</span>
+                    <a href="/cdn/" class="related-card">
                         <h3>CDN 內容傳遞網路</h3>
                         <p>境外節點加速，可在不接入大陸節點的前提下部署。</p>
                     </a>
-                    <a href="/blog/reading-speed-test-results/" class="related-card glass-panel">
-                        <span class="related-kicker">技術文章</span>
+                    <a href="/blog/reading-speed-test-results/" class="related-card">
                         <h3>測速數字怎麼讀</h3>
                         <p>評估跨境方案時，該看丟包與延遲而不是頻寬。</p>
                     </a>
@@ -336,7 +348,7 @@
             </aside>
 
             <!-- Article CTA -->
-            <aside class="article-cta glass-panel">
+            <aside class="article-cta">
                 <h2>跨境上線的做法需要討論嗎？</h2>
                 <p>我們提供跨境部署規劃、CDN 加速，以及備案域名。備案域名的相關規定與風險如前文所述，歡迎帶著您的實際情況與我們討論。</p>
                 <div class="hero-actions">
@@ -371,13 +383,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=55ef68bb" defer></script>
+    <script src="/js/main.js?v=75cb9d50" defer></script>
 </body>
 
 </html>
