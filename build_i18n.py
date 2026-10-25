@@ -606,6 +606,83 @@ def build_page_pics(page_content):
     return '\n'.join(out)
 
 
+# 全形冒號本身就含後方留白，再補一個半形空白會多出一格。
+CREDIT_LABELS = {
+    'zh-TW': '圖片來源：',
+    'zh-CN': '图片来源：',
+    'en': 'Pictures: ',
+}
+
+_CREDITS_INDEX = None
+
+
+def _credits_index():
+    """assets/credits.json, keyed by the file each entry describes.
+
+    assets.mjs writes this file when a picture is downloaded; it is the only
+    record of who made each one and under what licence, so the credit line is
+    generated from it rather than typed out per page and per language.
+    """
+    global _CREDITS_INDEX
+    if _CREDITS_INDEX is None:
+        try:
+            with open('assets/credits.json', encoding='utf-8') as f:
+                entries = json.load(f)
+        except FileNotFoundError:
+            entries = []
+        _CREDITS_INDEX = {e['file']: e for e in entries}
+    return _CREDITS_INDEX
+
+
+def build_credits(page_html, lang_code):
+    """The footer's picture credits, for the pictures this page actually shows.
+
+    CC BY and CC BY-SA oblige us to name the author, the licence and where the
+    picture came from; a page that drops one is using the picture without its
+    licence. So the list is read off the finished page instead of being kept by
+    hand: add or remove a picture and the credit follows it.
+
+    Public-domain and CC0 pictures are listed too. They do not have to be, but
+    a reader cannot tell the licences apart by looking, and a half-filled list
+    reads as if the others were ours.
+    """
+    index = _credits_index()
+    seen = []
+    for name in re.findall(r'/assets/([A-Za-z0-9._-]+\.(?:jpg|jpeg|png|webp|avif|gif|svg))',
+                           page_html):
+        key = 'assets/' + name
+        if key not in seen:
+            seen.append(key)
+
+    # 沒登記出處的圖就讓建置停住。CC BY／BY-SA 漏標就是沒照授權用，
+    # 事後沒人會發現，所以要在這裡擋，不能只是略過。
+    missing = [k for k in seen if k not in index]
+    if missing:
+        raise ValueError('assets/credits.json 沒有 %s 的出處' % missing[0])
+
+    if not seen:
+        return ''
+
+    parts = []
+    for key in seen:
+        e = index[key]
+        title = html_escape(e['title'])
+        if e.get('page'):
+            title = '<a href="%s">&ldquo;%s&rdquo;</a>' % (html_escape(e['page']), title)
+        else:
+            title = '&ldquo;%s&rdquo;' % title
+        lic = html_escape(e['license'])
+        if e.get('licenseUrl'):
+            lic = '<a href="%s">%s</a>' % (html_escape(e['licenseUrl']), lic)
+        bit = '%s by %s, %s' % (title, html_escape(e['creator']), lic)
+        if e.get('via'):
+            bit += ', via %s' % html_escape(e['via'])
+        parts.append(bit)
+
+    label = CREDIT_LABELS.get(lang_code, CREDIT_LABELS['en'])
+    return '<p class="credits">%s%s.</p>' % (label, '; '.join(parts))
+
+
 def build_picker_modes(page_content):
     """The hero's live control: three modes, each carrying its own readout.
 
@@ -928,6 +1005,11 @@ def build():
             check_meta_lengths(flat, out_label := f"{lang['lang_code']} /{slug_path}")
 
             out_html = render(templates[page['template']], flat)
+
+            # 要等整頁組好才知道這頁實際放了哪幾張圖，所以出處在這裡補，
+            # 不走一般的翻譯鍵。
+            out_html = out_html.replace(
+                '{{ credits }}', build_credits(out_html, lang['lang_code']))
 
             # 未被取代的佔位符代表該語言少了對應內容。頁面仍會產生、仍回
             # 200，只是滿版的 {{ }}——所以必須在這裡擋下，而不是靠事後檢查。
