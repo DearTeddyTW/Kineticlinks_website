@@ -97,6 +97,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v={{ css_v }}">
     <link rel="stylesheet" href="/css/ssl.css?v={{ ssl_css_v }}">
+    <link rel="stylesheet" href="/css/frag.css?v={{ frag_css_v }}">
 {{ analytics }}</head>
 
 <body class="s-page">
@@ -200,12 +201,8 @@
     </section>
 
     <!-- the chain of trust, in the material it used to be made of -->
-    <figure class="s-band s-band-seal">
-        <img src="/assets/traite-d-alliance-france-russie-prusse-1717.jpg"
-             width="1920" height="1440" loading="lazy" decoding="async"
-             alt="{{ page.pics.seal_alt }}">
-        <figcaption>{{ page.pics.seal_cap }}</figcaption>
-    </figure>
+    <div class="s-wrap">
+{{ page_frag }}    </div>
 
     <!-- proof: the integrations as large tiles -->
     <section class="s-int" aria-labelledby="s-int-h">
@@ -217,13 +214,6 @@
 {{ integration_tiles }}
         </div>
     </section>
-
-    <figure class="s-band s-band-rack">
-        <img src="/assets/a-system-administrator-s-workstation-within-a.jpg"
-             width="1365" height="2048" loading="lazy" decoding="async"
-             alt="{{ page.pics.rack_alt }}">
-        <figcaption>{{ page.pics.rack_cap }}</figcaption>
-    </figure>
 
 {{ security_section }}
 {{ pricing_section }}

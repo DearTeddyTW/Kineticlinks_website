@@ -169,6 +169,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
     <link rel="stylesheet" href="/css/ssl.css?v=9358f323">
+    <link rel="stylesheet" href="/css/frag.css?v=75480844">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -307,12 +308,19 @@
     </section>
 
     <!-- the chain of trust, in the material it used to be made of -->
-    <figure class="s-band s-band-seal">
-        <img src="/assets/traite-d-alliance-france-russie-prusse-1717.jpg"
-             width="1920" height="1440" loading="lazy" decoding="async"
-             alt="1717 年法俄普同盟条约的局部，三枚红蜡印串在一条绳上，每枚旁边有一个签名">
-        <figcaption>三个印、三个签名，每一个担保下一个。证书链是同一件事，只是换了材料：你的证书由 GoGetSSL 的 DV CA 签，它由 USERTrust 签，再上去是 Sectigo 的公开信任根。</figcaption>
+    <div class="s-wrap">
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">证书链（示例）</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">签发</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">中继</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">信任根</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">到期</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>证书链要完整才会被信任。缺一层中继，桌面浏览器往往会自己补上，手机和命令行工具不会——这是「我这边看起来正常」的常见来源。以上为示例值。</figcaption>
     </figure>
+    </div>
 
     <!-- proof: the integrations as large tiles -->
     <section class="s-int" aria-labelledby="s-int-h">
@@ -350,13 +358,6 @@
             </div>
         </div>
     </section>
-
-    <figure class="s-band s-band-rack">
-        <img src="/assets/a-system-administrator-s-workstation-within-a.jpg"
-             width="1365" height="2048" loading="lazy" decoding="async"
-             alt="数据中心的走道，两侧是黑色机柜，白色架高地板">
-        <figcaption>代理程序模式下，密钥在这一侧产生，也留在这一侧。平台从来没有它。</figcaption>
-    </figure>
 
 
     <!-- Security -->
@@ -495,7 +496,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="credits">图片来源：<a href="https://commons.wikimedia.org/wiki/File:Trait%C3%A9_d%27alliance_France_Russie_Prusse_1717.jpg">&ldquo;Traité d'alliance France Russie Prusse 1717&rdquo;</a> by Archives du ministère des Affaires étrangères, Paris, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons; <a href="https://wordpress.org/photos/photo/61563ef3d9/">&ldquo;A system administrator’s workstation within a data processing centre with rack cabinets and servers inside.&rdquo;</a> by Javier Salinas, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>, via WordPress Photo Directory.</p>
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>

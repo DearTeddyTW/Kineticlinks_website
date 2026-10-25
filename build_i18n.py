@@ -104,9 +104,11 @@ PAGES = [
     {'template': 'src/service.html', 'slug': 'vps', 'content_key': 'vps_page'},
     {'template': 'src/service.html', 'slug': 'idc', 'content_key': 'idc_page'},
     {'template': 'src/service.html', 'slug': 'cloud', 'content_key': 'cloud_page'},
-    {'template': 'src/ssl.html', 'slug': 'ssl', 'content_key': 'ssl_page'},
-    {'template': 'src/platform.html', 'slug': 'speedtest', 'content_key': 'speedtest_page'},
-    {'template': 'src/platform.html', 'slug': 'icp-check', 'content_key': 'icp_check_page'},
+    # 自營的三個平台放自己真的會回傳的東西；代理的四項服務沒有自家介面，
+    # 所以不放，免得看起來像我們做的產品。
+    {'template': 'src/ssl.html', 'slug': 'ssl', 'content_key': 'ssl_page', 'pic': 'cert'},
+    {'template': 'src/platform.html', 'slug': 'speedtest', 'content_key': 'speedtest_page', 'pic': 'quality'},
+    {'template': 'src/platform.html', 'slug': 'icp-check', 'content_key': 'icp_check_page', 'pic': 'china'},
     {'template': 'src/blog.html', 'slug': 'blog', 'content_key': None},
 ] + [
     {
@@ -564,6 +566,9 @@ def build_board(translations, lang_path):
         '                <p class="b-name-line">%s</p>' % e(b['name_line']),
         '            </div>',
         '            <p class="b-tile b-statement b-w6">%s</p>' % e(b['statement']),
+        # 板子只留這一張：1917 年的航線圖畫的就是跨境連線實際走的路。
+        # 另外三張（1940 交換機、1640 地圖、機房照）是比喻或填充，而且
+        # 四張分屬三種年代與色調，湊在一起就是不像同一頁的東西。
         '            <figure class="b-tile b-pic b-w8">',
         '                <img src="/assets/principal-ocean-cables-in-1917.jpg" width="1024" height="401"',
         '                     alt="%s" decoding="async">' % e(b['map_alt']),
@@ -580,12 +585,6 @@ def build_board(translations, lang_path):
         '                ' + ssl_t,
         '                ' + spd_t,
         '                ' + icp_t,
-        '                <figure class="b-tile b-pic b-w8 b-pic-sw">',
-        '                    <img src="/assets/1940s-n935-telephone-exchange.jpg"',
-        '                         width="1920" height="1801" loading="lazy" decoding="async"',
-        '                         alt="%s">' % e(b['sw_alt']),
-        '                    <figcaption>%s</figcaption>' % e(b['sw_cap']),
-        '                </figure>',
         '            </div>',
         '        </div>',
         '        <div class="b-field b-field-resell" id="services">',
@@ -595,20 +594,7 @@ def build_board(translations, lang_path):
         '                    <p>%s</p>' % e(b['resell_note']),
         '                </div>',
         '                ' + '\n                '.join(resold),
-        '                <figure class="b-tile b-pic b-w12 b-pic-rack">',
-        '                    <img src="/assets/a-system-administrator-s-workstation-within-a.jpg"',
-        '                         width="1365" height="2048" loading="lazy" decoding="async"',
-        '                         alt="%s">' % e(b['rack_alt']),
-        '                </figure>',
         '            </div>',
-        '        </div>',
-        '        <div class="b-grid b-close">',
-        '            <figure class="b-tile b-pic b-w12 b-pic-fm">',
-        '                <img src="/assets/1640-map-of-formosa-taiwan-by-dutch.jpg"',
-        '                     width="1920" height="1326" loading="lazy" decoding="async"',
-        '                     alt="%s">' % e(b['fm_alt']),
-        '                <figcaption>%s</figcaption>' % e(b['fm_cap']),
-        '            </figure>',
         '        </div>',
         '    </section>\n',
     ]
@@ -996,6 +982,10 @@ def build():
             flat['faq_index'] = ''
             flat['ssl_css_v'] = asset_version('css/ssl.css')
             flat['blog_css_v'] = asset_version('css/blog.css')
+            flat['frag_css_v'] = asset_version('css/frag.css')
+            flat['page_frag'] = (build_subject_frag(page['pic'], translations)
+                                 if page.get('pic') and page['template'] != 'src/article.html'
+                                 else '')
             # 表格的引言排在表格前面，對表格的評論排在後面。兩者都可缺。
             flat['table_intro'] = ''
             flat['table_note'] = ''

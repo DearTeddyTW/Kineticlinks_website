@@ -229,25 +229,15 @@
       "l3_desc": "多雲與混合雲架構規劃，協助銜接地端與公有雲資源。"
     },
     "pics": {
-      "p1_img": "laying-the-submarine-cable-between-kurrachee-and.jpg",
-      "p1_w": "1478",
-      "p1_h": "984",
-      "p1_alt": "1860 年的版畫：兩艘電纜船在馬斯喀特灣外，小艇把海底電纜的一端拖上岸",
-      "p1_cap": "內容要送到使用者面前，得先有人把線鋪過去。1860 年，電纜船在馬斯喀特灣把線拖上岸。",
-      "p2_img": "principal-ocean-cables-in-1917.jpg",
-      "p2_w": "1024",
-      "p2_h": "401",
-      "p2_alt": "1917 年的全球海底電纜圖，黑色陸塊之間以細線標出各洲之間的電纜路徑",
-      "p2_cap": "1917 年的海底電纜圖。節點的位置決定延遲，這件事從那時候就沒變過。",
       "hero_img": "laying-the-submarine-cable-between-kurrachee-and.jpg",
+      "hero_alt": "1860 年的版畫：兩艘電纜船在馬斯喀特灣外，小艇把海底電纜的一端拖上岸",
       "hero_w": "1478",
       "hero_h": "984",
-      "hero_alt": "1860 年的版畫：兩艘電纜船在馬斯喀特灣外，小艇把海底電纜的一端拖上岸",
-      "p3_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p3_w": "1365",
-      "p3_h": "2048",
-      "p3_alt": "資料中心的走道，兩側是黑色機櫃，白色架高地板",
-      "p3_cap": "節點不是地圖上的點，是某個機房裡的一排機器。"
+      "p1_img": "principal-ocean-cables-in-1917.jpg",
+      "p1_alt": "1917 年的全球海底電纜圖，黑色陸塊之間以細線標出各洲之間的電纜路徑",
+      "p1_cap": "1917 年的海底電纜圖。節點的位置決定延遲，這件事從那時候就沒變過。",
+      "p1_w": "1024",
+      "p1_h": "401"
     }
   },
   "vps_page": {
@@ -365,25 +355,10 @@
       "l3_desc": "全球邊緣節點加速與 T 級 DDoS 防護，可與此服務搭配部署。"
     },
     "pics": {
-      "p1_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p1_w": "1365",
-      "p1_h": "2048",
-      "p1_alt": "資料中心的走道，兩側是黑色機櫃，白色架高地板",
-      "p1_cap": "主機最後還是跑在某個人的機櫃裡。虛擬化改變的是誰來管它，不是它消失了。",
-      "p2_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
-      "p2_w": "1920",
-      "p2_h": "1440",
-      "p2_alt": "一棟電話交換局，磚牆與白色混凝土框架，屋頂上架著天線",
-      "p2_cap": "一棟電話交換局。網路一直都需要一個放設備的地方。",
       "hero_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "hero_w": "1365",
-      "hero_h": "2048",
       "hero_alt": "資料中心的走道，兩側是黑色機櫃，白色架高地板",
-      "p3_img": "1940s-n935-telephone-exchange.jpg",
-      "p3_w": "1920",
-      "p3_h": "1801",
-      "p3_alt": "1940 年代的木製電話交換機，面板上一排貼著標籤的開關",
-      "p3_cap": "規格表底下是這種東西：一排開關，決定哪條線通到哪裡。"
+      "hero_w": "1365",
+      "hero_h": "2048"
     }
   },
   "idc_page": {
@@ -501,25 +476,11 @@
       "l3_desc": "全球邊緣節點加速與 T 級 DDoS 防護，可與此服務搭配部署。"
     },
     "pics": {
-      "p1_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
-      "p1_w": "1920",
-      "p1_h": "1440",
-      "p1_alt": "一棟電話交換局，磚牆與白色混凝土框架，屋頂上架著天線",
-      "p1_cap": "電話交換局：為了容納設備而蓋的建築。機房要解的是同一組問題——電力、散熱、進出管制。",
-      "p2_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p2_w": "1365",
-      "p2_h": "2048",
-      "p2_alt": "資料中心的走道，兩側是黑色機櫃，白色架高地板",
-      "p2_cap": "落成之後的樣子。白色架高地板下面走的是電力與冷風。",
-      "hero_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
-      "hero_w": "1920",
-      "hero_h": "1440",
-      "hero_alt": "一棟電話交換局，磚牆與白色混凝土框架，屋頂上架著天線",
-      "p3_img": "laying-the-submarine-cable-between-kurrachee-and.jpg",
-      "p3_w": "1478",
-      "p3_h": "984",
-      "p3_alt": "1860 年的版畫：兩艘電纜船在馬斯喀特灣外，小艇把海底電纜的一端拖上岸",
-      "p3_cap": "機房要連得出去才有意義。1860 年的做法是把線拖上岸。"
+      "hero_img": "a-system-administrator-s-workstation-within-a.jpg",
+      "hero_alt": "資料中心的走道，兩側是黑色機櫃，白色架高地板",
+      "hero_cap": "落成之後的樣子。白色架高地板下面走的是電力與冷風。",
+      "hero_w": "1365",
+      "hero_h": "2048"
     }
   },
   "cloud_page": {
@@ -637,25 +598,10 @@
       "l3_desc": "憑證簽發後可自動推播至 CDN 節點，省去手動上傳與追蹤到期日。"
     },
     "pics": {
-      "p1_img": "principal-ocean-cables-in-1917.jpg",
-      "p1_w": "1024",
-      "p1_h": "401",
-      "p1_alt": "1917 年的全球海底電纜圖，黑色陸塊之間以細線標出各洲之間的電纜路徑",
-      "p1_cap": "1917 年的海底電纜圖。「雲」仍然得走這些線，所以架構要先決定資料落在哪一端。",
-      "p2_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p2_w": "1365",
-      "p2_h": "2048",
-      "p2_alt": "資料中心的走道，兩側是黑色機櫃，白色架高地板",
-      "p2_cap": "公有雲背後仍然是機櫃。差別在於它是誰的、以及出事時誰接電話。",
       "hero_img": "principal-ocean-cables-in-1917.jpg",
-      "hero_w": "1024",
-      "hero_h": "401",
       "hero_alt": "1917 年的全球海底電纜圖，黑色陸塊之間以細線標出各洲之間的電纜路徑",
-      "p3_img": "1940s-n935-telephone-exchange.jpg",
-      "p3_w": "1920",
-      "p3_h": "1801",
-      "p3_alt": "1940 年代的木製電話交換機，面板上一排貼著標籤的開關",
-      "p3_cap": "雲端架構最後都會回到這個問題：哪條路徑、由誰決定。"
+      "hero_w": "1024",
+      "hero_h": "401"
     }
   },
   "ssl_page": {
@@ -1032,25 +978,11 @@
       "l3_desc": "多雲與混合雲架構規劃，協助銜接地端與公有雲資源。"
     },
     "pics": {
-      "p1_img": "1940s-n935-telephone-exchange.jpg",
-      "p1_w": "1920",
-      "p1_h": "1801",
-      "p1_alt": "1940 年代的木製電話交換機，面板上一排貼著標籤的開關",
-      "p1_cap": "1940 年代的電話交換機。接線生得先知道哪條線通、哪條線塞住——測速要回答的是同一個問題。",
-      "p2_img": "principal-ocean-cables-in-1917.jpg",
-      "p2_w": "1024",
-      "p2_h": "401",
-      "p2_alt": "1917 年的全球海底電纜圖，黑色陸塊之間以細線標出各洲之間的電纜路徑",
-      "p2_cap": "1917 年的海底電纜圖。跨境延遲從來不是抽象的數字，它是這些線的長度與繞法。",
-      "hero_img": "1940s-n935-telephone-exchange.jpg",
-      "hero_w": "1920",
-      "hero_h": "1801",
-      "hero_alt": "1940 年代的木製電話交換機，面板上一排貼著標籤的開關",
-      "p3_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p3_w": "1365",
-      "p3_h": "2048",
-      "p3_alt": "資料中心的走道，兩側是黑色機櫃，白色架高地板",
-      "p3_cap": "延遲的另一端是實體的機器，不是一個百分比。"
+      "p1_img": "principal-ocean-cables-in-1917.jpg",
+      "p1_alt": "1917 年的全球海底電纜圖，黑色陸塊之間以細線標出各洲之間的電纜路徑",
+      "p1_cap": "1917 年的海底電纜圖。跨境延遲從來不是抽象的數字，它是這些線的長度與繞法。",
+      "p1_w": "1024",
+      "p1_h": "401"
     }
   },
   "icp_check_page": {
@@ -1183,27 +1115,6 @@
       "cta_text": "需要一個已經完成備案的網域？我們有現成的庫存，可以直接接手使用。",
       "cta_link": "聯絡我們取得已備案網域",
       "cta_href": "https://t.me/kineticlinks"
-    },
-    "pics": {
-      "p1_img": "1640-map-of-formosa-taiwan-by-dutch.jpg",
-      "p1_w": "1920",
-      "p1_h": "1326",
-      "p1_alt": "1640 年荷蘭人繪製的福爾摩沙與澎湖海圖，羅盤線自兩個方位玫瑰放射而出",
-      "p1_cap": "1640 年荷蘭人畫的福爾摩沙與澎湖。跨境這件事，從來都要先搞清楚邊界在哪裡。",
-      "p2_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p2_w": "1365",
-      "p2_h": "2048",
-      "p2_alt": "資料中心的走道，兩側是黑色機櫃，白色架高地板",
-      "p2_cap": "備案決定的是你的網域能不能解析到這一側的機櫃。",
-      "hero_img": "1640-map-of-formosa-taiwan-by-dutch.jpg",
-      "hero_w": "1920",
-      "hero_h": "1326",
-      "hero_alt": "1640 年荷蘭人繪製的福爾摩沙與澎湖海圖，羅盤線自兩個方位玫瑰放射而出",
-      "p3_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
-      "p3_w": "1920",
-      "p3_h": "1440",
-      "p3_alt": "一棟電話交換局，磚牆與白色混凝土框架，屋頂上架著天線",
-      "p3_cap": "備案談的是哪一側的機房可以服務你的網域。"
     }
   },
   "blog": {

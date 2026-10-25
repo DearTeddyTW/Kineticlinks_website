@@ -1,0 +1,71 @@
+/* The readout a page leads with: a cropped fragment of something this site
+   actually produces, not a picture of something that resembles it.
+
+   Every page family (.p-page, .s-page, .b-page, .g-page, .a-page) already
+   defines the same three tones under its own prefix, so this component reads
+   them through one set of names with those values as the fallback. Marked
+   data-ui in the markup: it is an interface fragment, which is why the
+   monospace here is the content and not a label dressed up to look technical.
+*/
+
+.f-panel {
+    background: var(--frag-tile, #0d1420);
+    border-radius: 6px;
+    padding: clamp(18px, 2.2vw, 26px) clamp(16px, 2vw, 24px);
+    overflow: hidden;
+}
+
+.f-head {
+    font-size: var(--frag-small, 0.8125rem);
+    color: var(--frag-muted, #8b9bb4);
+    padding-bottom: 12px;
+}
+
+.f-row {
+    display: grid;
+    grid-template-columns: minmax(0, 9em) minmax(0, 1fr);
+    gap: 4px 16px;
+    align-items: baseline;
+    padding: 10px 12px;
+    border-radius: 3px;
+}
+/* A tone step marks the rows, not a rule between them. */
+.f-row:nth-of-type(odd) { background: var(--frag-step, #121b2b); }
+
+.f-k { font-size: var(--frag-small, 0.8125rem); color: var(--frag-muted, #8b9bb4); }
+
+.f-v {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: var(--frag-small, 0.8125rem);
+    color: var(--frag-ink, #ffffff);
+    font-variant-numeric: tabular-nums;
+    word-break: break-word;
+}
+
+/* The values are already in a panel; the inline-code chrome would box them
+   twice. */
+.f-v code { font: inherit; background: none; border: 0; padding: 0; color: inherit; }
+
+@media (max-width: 560px) {
+    .f-row { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
+
+/* The figure that carries one. Wide: the readout and what it means sit side
+   by side, so three short rows do not have to hold a 1100px band alone. */
+.a-frag { margin: 0 0 clamp(28px, 3.5vw, 44px); }
+.a-frag figcaption {
+    font-size: var(--frag-small, 0.8125rem);
+    color: var(--frag-muted, #8b9bb4);
+    line-height: 1.7;
+    padding-top: 12px;
+    max-width: 62ch;
+}
+@media (min-width: 900px) {
+    .a-frag {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        gap: clamp(28px, 3vw, 48px);
+        align-items: end;
+    }
+    .a-frag figcaption { padding-top: 0; padding-bottom: 6px; }
+}

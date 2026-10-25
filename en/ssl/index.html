@@ -169,6 +169,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=646304b4">
     <link rel="stylesheet" href="/css/ssl.css?v=9358f323">
+    <link rel="stylesheet" href="/css/frag.css?v=75480844">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -307,12 +308,19 @@
     </section>
 
     <!-- the chain of trust, in the material it used to be made of -->
-    <figure class="s-band s-band-seal">
-        <img src="/assets/traite-d-alliance-france-russie-prusse-1717.jpg"
-             width="1920" height="1440" loading="lazy" decoding="async"
-             alt="Detail of the 1717 Franco-Russian-Prussian treaty: three red wax seals on a cord, each beside a signature">
-        <figcaption>Three seals, three signatures, each one vouching for the next. A certificate chain is the same arrangement in a different material: yours is signed by the GoGetSSL DV CA, which is signed by USERTrust, which goes up to a publicly trusted Sectigo root.</figcaption>
+    <div class="s-wrap">
+    <figure class="a-frag g-enter" data-ui>
+        <div class="f-panel">
+            <div class="f-head">Certificate chain (example)</div>
+            <div class="f-row"><span class="f-k">example.com</span><span class="f-v"><code>RSA 2048 · TLS 1.3</code></span></div>
+            <div class="f-row"><span class="f-k">Issued by</span><span class="f-v"><code>GoGetSSL DV CA</code></span></div>
+            <div class="f-row"><span class="f-k">Intermediate</span><span class="f-v"><code>USERTrust RSA CA</code></span></div>
+            <div class="f-row"><span class="f-k">Trust root</span><span class="f-v"><code>Sectigo (AAA)</code></span></div>
+            <div class="f-row"><span class="f-k">Expires</span><span class="f-v"><code>2027-02-14</code></span></div>
+        </div>
+        <figcaption>A chain is trusted only when it is complete. Miss an intermediate and desktop browsers often fetch it for you while phones and command-line tools do not — which is where “it works on my machine” comes from. Example values.</figcaption>
     </figure>
+    </div>
 
     <!-- proof: the integrations as large tiles -->
     <section class="s-int" aria-labelledby="s-int-h">
@@ -350,13 +358,6 @@
             </div>
         </div>
     </section>
-
-    <figure class="s-band s-band-rack">
-        <img src="/assets/a-system-administrator-s-workstation-within-a.jpg"
-             width="1365" height="2048" loading="lazy" decoding="async"
-             alt="A data centre aisle lined with black racks on a white raised floor">
-        <figcaption>In agent mode the key is generated on this side of the wall, and stays there. The platform never has it.</figcaption>
-    </figure>
 
 
     <!-- Security -->
@@ -495,7 +496,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="credits">Pictures: <a href="https://commons.wikimedia.org/wiki/File:Trait%C3%A9_d%27alliance_France_Russie_Prusse_1717.jpg">&ldquo;Traité d'alliance France Russie Prusse 1717&rdquo;</a> by Archives du ministère des Affaires étrangères, Paris, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons; <a href="https://wordpress.org/photos/photo/61563ef3d9/">&ldquo;A system administrator’s workstation within a data processing centre with rack cabinets and servers inside.&rdquo;</a> by Javier Salinas, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>, via WordPress Photo Directory.</p>
+                
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>

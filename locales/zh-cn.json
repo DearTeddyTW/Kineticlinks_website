@@ -229,25 +229,15 @@
       "l3_desc": "多云与混合云架构规划，协助衔接本地与公有云资源。"
     },
     "pics": {
-      "p1_img": "laying-the-submarine-cable-between-kurrachee-and.jpg",
-      "p1_w": "1478",
-      "p1_h": "984",
-      "p1_alt": "1860 年的版画：两艘电缆船在马斯喀特湾外，小艇把海底电缆的一端拖上岸",
-      "p1_cap": "内容要送到用户面前，得先有人把线铺过去。1860 年，电缆船在马斯喀特湾把线拖上岸。",
-      "p2_img": "principal-ocean-cables-in-1917.jpg",
-      "p2_w": "1024",
-      "p2_h": "401",
-      "p2_alt": "1917 年的全球海底电缆图，黑色陆块之间以细线标出各洲之间的电缆路径",
-      "p2_cap": "1917 年的海底电缆图。节点的位置决定延迟，这件事从那时候就没变过。",
       "hero_img": "laying-the-submarine-cable-between-kurrachee-and.jpg",
+      "hero_alt": "1860 年的版画：两艘电缆船在马斯喀特湾外，小艇把海底电缆的一端拖上岸",
       "hero_w": "1478",
       "hero_h": "984",
-      "hero_alt": "1860 年的版画：两艘电缆船在马斯喀特湾外，小艇把海底电缆的一端拖上岸",
-      "p3_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p3_w": "1365",
-      "p3_h": "2048",
-      "p3_alt": "数据中心的走道，两侧是黑色机柜，白色架高地板",
-      "p3_cap": "节点不是地图上的点，是某个机房里的一排机器。"
+      "p1_img": "principal-ocean-cables-in-1917.jpg",
+      "p1_alt": "1917 年的全球海底电缆图，黑色陆块之间以细线标出各洲之间的电缆路径",
+      "p1_cap": "1917 年的海底电缆图。节点的位置决定延迟，这件事从那时候就没变过。",
+      "p1_w": "1024",
+      "p1_h": "401"
     }
   },
   "vps_page": {
@@ -365,25 +355,10 @@
       "l3_desc": "全球边缘节点加速与 T 级 DDoS 防护，可与此服务搭配部署。"
     },
     "pics": {
-      "p1_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p1_w": "1365",
-      "p1_h": "2048",
-      "p1_alt": "数据中心的走道，两侧是黑色机柜，白色架高地板",
-      "p1_cap": "主机最后还是跑在某个人的机柜里。虚拟化改变的是谁来管它，不是它消失了。",
-      "p2_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
-      "p2_w": "1920",
-      "p2_h": "1440",
-      "p2_alt": "一栋电话交换局，砖墙与白色混凝土框架，屋顶上架着天线",
-      "p2_cap": "一栋电话交换局。网络一直都需要一个放设备的地方。",
       "hero_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "hero_w": "1365",
-      "hero_h": "2048",
       "hero_alt": "数据中心的走道，两侧是黑色机柜，白色架高地板",
-      "p3_img": "1940s-n935-telephone-exchange.jpg",
-      "p3_w": "1920",
-      "p3_h": "1801",
-      "p3_alt": "1940 年代的木制电话交换机，面板上一排贴着标签的开关",
-      "p3_cap": "规格表底下是这种东西：一排开关，决定哪条线通到哪里。"
+      "hero_w": "1365",
+      "hero_h": "2048"
     }
   },
   "idc_page": {
@@ -501,25 +476,11 @@
       "l3_desc": "全球边缘节点加速与 T 级 DDoS 防护，可与此服务搭配部署。"
     },
     "pics": {
-      "p1_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
-      "p1_w": "1920",
-      "p1_h": "1440",
-      "p1_alt": "一栋电话交换局，砖墙与白色混凝土框架，屋顶上架着天线",
-      "p1_cap": "电话交换局：为了容纳设备而盖的建筑。机房要解的是同一组问题——电力、散热、进出管制。",
-      "p2_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p2_w": "1365",
-      "p2_h": "2048",
-      "p2_alt": "数据中心的走道，两侧是黑色机柜，白色架高地板",
-      "p2_cap": "落成之后的样子。白色架高地板下面走的是电力与冷风。",
-      "hero_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
-      "hero_w": "1920",
-      "hero_h": "1440",
-      "hero_alt": "一栋电话交换局，砖墙与白色混凝土框架，屋顶上架着天线",
-      "p3_img": "laying-the-submarine-cable-between-kurrachee-and.jpg",
-      "p3_w": "1478",
-      "p3_h": "984",
-      "p3_alt": "1860 年的版画：两艘电缆船在马斯喀特湾外，小艇把海底电缆的一端拖上岸",
-      "p3_cap": "机房要连得出去才有意义。1860 年的做法是把线拖上岸。"
+      "hero_img": "a-system-administrator-s-workstation-within-a.jpg",
+      "hero_alt": "数据中心的走道，两侧是黑色机柜，白色架高地板",
+      "hero_cap": "落成之后的样子。白色架高地板下面走的是电力与冷风。",
+      "hero_w": "1365",
+      "hero_h": "2048"
     }
   },
   "cloud_page": {
@@ -637,25 +598,10 @@
       "l3_desc": "证书签发后可自动推送至 CDN 节点，省去手动上传与追踪到期日。"
     },
     "pics": {
-      "p1_img": "principal-ocean-cables-in-1917.jpg",
-      "p1_w": "1024",
-      "p1_h": "401",
-      "p1_alt": "1917 年的全球海底电缆图，黑色陆块之间以细线标出各洲之间的电缆路径",
-      "p1_cap": "1917 年的海底电缆图。「云」仍然得走这些线，所以架构要先决定数据落在哪一端。",
-      "p2_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p2_w": "1365",
-      "p2_h": "2048",
-      "p2_alt": "数据中心的走道，两侧是黑色机柜，白色架高地板",
-      "p2_cap": "公有云背后仍然是机柜。差别在于它是谁的、以及出事时谁接电话。",
       "hero_img": "principal-ocean-cables-in-1917.jpg",
-      "hero_w": "1024",
-      "hero_h": "401",
       "hero_alt": "1917 年的全球海底电缆图，黑色陆块之间以细线标出各洲之间的电缆路径",
-      "p3_img": "1940s-n935-telephone-exchange.jpg",
-      "p3_w": "1920",
-      "p3_h": "1801",
-      "p3_alt": "1940 年代的木制电话交换机，面板上一排贴着标签的开关",
-      "p3_cap": "云端架构最后都会回到这个问题：哪条路径、由谁决定。"
+      "hero_w": "1024",
+      "hero_h": "401"
     }
   },
   "ssl_page": {
@@ -1032,25 +978,11 @@
       "l3_desc": "多云与混合云架构规划，协助衔接本地与公有云资源。"
     },
     "pics": {
-      "p1_img": "1940s-n935-telephone-exchange.jpg",
-      "p1_w": "1920",
-      "p1_h": "1801",
-      "p1_alt": "1940 年代的木制电话交换机，面板上一排贴着标签的开关",
-      "p1_cap": "1940 年代的电话交换机。接线生得先知道哪条线通、哪条线塞住——测速要回答的是同一个问题。",
-      "p2_img": "principal-ocean-cables-in-1917.jpg",
-      "p2_w": "1024",
-      "p2_h": "401",
-      "p2_alt": "1917 年的全球海底电缆图，黑色陆块之间以细线标出各洲之间的电缆路径",
-      "p2_cap": "1917 年的海底电缆图。跨境延迟从来不是抽象的数字，它是这些线的长度与绕法。",
-      "hero_img": "1940s-n935-telephone-exchange.jpg",
-      "hero_w": "1920",
-      "hero_h": "1801",
-      "hero_alt": "1940 年代的木制电话交换机，面板上一排贴着标签的开关",
-      "p3_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p3_w": "1365",
-      "p3_h": "2048",
-      "p3_alt": "数据中心的走道，两侧是黑色机柜，白色架高地板",
-      "p3_cap": "延迟的另一端是实体的机器，不是一个百分比。"
+      "p1_img": "principal-ocean-cables-in-1917.jpg",
+      "p1_alt": "1917 年的全球海底电缆图，黑色陆块之间以细线标出各洲之间的电缆路径",
+      "p1_cap": "1917 年的海底电缆图。跨境延迟从来不是抽象的数字，它是这些线的长度与绕法。",
+      "p1_w": "1024",
+      "p1_h": "401"
     }
   },
   "icp_check_page": {
@@ -1183,27 +1115,6 @@
       "cta_text": "需要一个已经完成备案的域名？我们有现成的库存，可以直接接手使用。",
       "cta_link": "联系我们获取已备案域名",
       "cta_href": "https://t.me/kineticlinks"
-    },
-    "pics": {
-      "p1_img": "1640-map-of-formosa-taiwan-by-dutch.jpg",
-      "p1_w": "1920",
-      "p1_h": "1326",
-      "p1_alt": "1640 年荷兰人绘制的福尔摩沙与澎湖海图，罗盘线自两个方位玫瑰放射而出",
-      "p1_cap": "1640 年荷兰人画的福尔摩沙与澎湖。跨境这件事，从来都要先搞清楚边界在哪里。",
-      "p2_img": "a-system-administrator-s-workstation-within-a.jpg",
-      "p2_w": "1365",
-      "p2_h": "2048",
-      "p2_alt": "数据中心的走道，两侧是黑色机柜，白色架高地板",
-      "p2_cap": "备案决定的是你的域名能不能解析到这一侧的机柜。",
-      "hero_img": "1640-map-of-formosa-taiwan-by-dutch.jpg",
-      "hero_w": "1920",
-      "hero_h": "1326",
-      "hero_alt": "1640 年荷兰人绘制的福尔摩沙与澎湖海图，罗盘线自两个方位玫瑰放射而出",
-      "p3_img": "kneller-hall-telephone-exchange-2-geograph-org.jpg",
-      "p3_w": "1920",
-      "p3_h": "1440",
-      "p3_alt": "一栋电话交换局，砖墙与白色混凝土框架，屋顶上架着天线",
-      "p3_cap": "备案谈的是哪一侧的机房可以服务你的域名。"
     }
   },
   "blog": {
