@@ -39,7 +39,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "证书自动化，但私钥放哪里由你决定",
+      "serviceType": "证书自动化，私钥不必交出去",
       "name": "SSL 证书自动化平台｜私钥可留在你的内网 - Kineticlinks",
       "description": "三种私钥模式由你决定密钥放哪里，集成 10 家 DNS 自动验证与 7 家 CDN 自动部署，部署后再由节点巡检确认装对了没有。含两步骤验证、角色权限与审计纪录。",
       "provider": {
@@ -57,7 +57,7 @@
     {
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "证书自动化，但私钥放哪里由你决定",
+          "name": "证书自动化，私钥不必交出去",
           "url": "https://app.kineticlinks.net/register",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Any",
@@ -92,7 +92,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "证书自动化，但私钥放哪里由你决定",
+          "name": "证书自动化，私钥不必交出去",
           "item": "https://www.kineticlinks.net/zh-cn/ssl/"
         }
       ]
@@ -168,6 +168,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=b60d11d0">
+    <link rel="stylesheet" href="/css/ssl.css?v=9358f323">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -182,7 +183,7 @@
     </script>
 </head>
 
-<body>
+<body class="s-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -214,146 +215,149 @@
         </div>
     </nav>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb-bar">
-        <div class="container breadcrumb">
-            <a href="/zh-cn/">首页</a>
-            <span>/</span>
-            <a href="/zh-cn/#platforms">平台产品</a>
-            <span>/</span>
-            <span class="current">证书自动化，但私钥放哪里由你决定</span>
+
+    <!-- Hero: the control that shows where the key lives -->
+    <header class="s-hero">
+        <div class="s-hero-said">
+            <h1 class="s-hero-title"><span>证书自动化，</span><span>私钥不必交出去</span></h1>
+            <p class="s-hero-sentence">多数证书平台要你把私钥交给它们保管。这里有三种模式，其中一种的密钥在你自己的机房产生，永远不上传。</p>
+            <a href="https://app.kineticlinks.net/register" target="_blank" rel="noopener" class="s-action">创建帐号</a>
+            <p class="s-hero-note">首张证书不符合需求可全额退费</p>
         </div>
-    </div>
 
-    <main id="main">
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-hero-content glass-panel">
-                <div class="badge">SSL 证书自动化平台</div>
-                <h1>证书自动化，但私钥放哪里由你决定</h1>
-                <p class="page-hero-subtitle">从申请、验证、部署到事后巡检，整条流程自动化；而最敏感的那把密钥，可以完全不经过我们</p>
-                <p>多数证书平台要你把私钥交出去。Kineticlinks 提供三种模式：平台托管、自备 CSR、以及由你机房里的 Agent 产生密钥并留在原地。搭配 10 家 DNS 自动验证、7 家 CDN 自动部署，以及部署后的节点巡检，整个流程不需要人工上传任何文件。</p>
-                <div class="hero-actions">
-                    <a href="https://app.kineticlinks.net/register" target="_blank" rel="noopener" class="btn btn-primary">创建账号</a>
-                    <a href="/zh-cn/#platforms" class="btn btn-secondary">查看其他平台产品</a>
+        <div class="s-hero-stage">
+            <div class="s-key" data-ui data-key-picker>
+                <p class="s-key-label" id="s-key-label">选一种模式，看密钥实际在哪</p>
+
+                <div class="s-key-modes" role="radiogroup" aria-labelledby="s-key-label">
+                    <label class="s-key-mode">
+                        <input type="radio" name="keymode" value="m1" checked
+                               data-where="平台产生，以加密字段存放" data-path="平台 → 你的服务器，经 TLS"
+                               data-reach="缺省不能下载。需管理员对该帐号打开，之后每次下载写入审计纪录" data-verdict="平台持有">
+                        <span>平台代管</span>
+                    </label>
+                    <label class="s-key-mode">
+                        <input type="radio" name="keymode" value="m2"
+                               data-where="你自己产生，只把 CSR 交给平台" data-path="不传输，密钥从未离开你"
+                               data-reach="完全不经过平台" data-verdict="平台看不到">
+                        <span>自备 CSR</span>
+                    </label>
+                    <label class="s-key-mode">
+                        <input type="radio" name="keymode" value="m3"
+                               data-where="你机房里的代理程序产生，留在原地" data-path="只在你的内网，经 SSH 送到你列出的设备"
+                               data-reach="永远不会上传" data-verdict="平台看不到">
+                        <span>代理程序</span>
+                    </label>
                 </div>
 
+                <dl class="s-key-out" aria-live="polite">
+                    <div class="s-key-row">
+                        <dt>密钥在哪里产生</dt>
+                        <dd data-key-where>平台产生，以加密字段存放</dd>
+                    </div>
+                    <div class="s-key-row">
+                        <dt>密钥经过哪里</dt>
+                        <dd data-key-path>平台 → 你的服务器，经 TLS</dd>
+                    </div>
+                    <div class="s-key-row">
+                        <dt>平台能不能读取</dt>
+                        <dd data-key-reach>缺省不能下载。需管理员对该帐号打开，之后每次下载写入审计纪录</dd>
+                    </div>
+                </dl>
+
+                <p class="s-key-verdict" data-key-verdict>平台持有</p>
+                <p class="s-key-plan">代理程序模式需要 Enterprise 方案</p>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Overview -->
-    <section class="section prose-section">
-        <div class="container">
-            <div class="section-header" style="text-align:left; margin-bottom: 2rem;">
-                <h2>为什么证书自动化会卡在私钥这一关</h2>
-            </div>
-            <div class="prose glass-panel">
-                <p>证书管理的痛点表面上是流程琐碎：手动创建 DNS 验证纪录、下载证书、逐一上传到服务器与各家 CDN，效期越缩越短，漏掉一次网站就跳出不安全警告。自动化平台能解决这些。</p>
-                <p>但真正让企业卡住的通常是另一件事：<strong>自动化意味着某个系统握有你的私钥</strong>。资安审计会问「密钥存在哪里」「谁能下载」「下载有没有纪录」，而多数平台的答案是「存在我们这里」。这一题答不好，采购流程就停在那里。</p>
-                <p>Kineticlinks 把这一题交回给你：三种私钥模式，包含让密钥在你自己机房产生、永远不上传的 代理程序模式。平台托管的私钥缺省不能下载，要由管理员针对该账号明确打开，打开后每一次下载都写进审计纪录。我们也把完整的安全性说明公开在平台上，包含还没做到的部分。</p>
-            </div>
-        </div>
-    </section>
+    <!-- how-it-works: call and response -->
+    <section class="s-flow" aria-labelledby="s-flow-h">
+        <div class="s-wrap">
+            <h2 id="s-flow-h">一次部署实际发生什么</h2>
 
-
-    <!-- Key custody -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>三种私钥模式，由你决定密钥放在哪里</h2>
-                <p>资安审计会问「私钥存在哪」「谁能下载」「下载有没有纪录」。这三种模式对应三种答案。</p>
+            <div class="s-xchg">
+                <p class="s-xchg-lead">先，给它一个域名。</p>
+                <div class="s-call"><span class="s-call-label">你输入</span>example.com</div>
+                <div class="s-resp" data-ui><p>侦测到 DNS 服务商：Cloudflare。已创建 _acme-challenge TXT 纪录，等待生效。</p></div>
             </div>
-            <figure class="data-table-wrap">
-                <div class="data-table-scroll">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>模式</th>
-                                <th>私钥在哪里产生与存放</th>
-                                <th>平台能不能取得</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                <tr>
-                                    <td>平台托管</td>
-                                    <td>平台产生，以加密字段存放</td>
-                                    <td>缺省不能下载。要管理员针对该账号明确打开，打开后每次下载都写进审计纪录</td>
-                                </tr>
-                                <tr>
-                                    <td>自备 CSR</td>
-                                    <td>你自己产生，只把 CSR 交给平台</td>
-                                    <td>完全不经过平台</td>
-                                </tr>
-                                <tr class="is-current">
-                                    <td>代理程序模式</td>
-                                    <td>你机房里的代理程序产生，留在原地</td>
-                                    <td>永远不会上传。密钥只在你的内网经 SSH 送到你列出的设备</td>
-                                </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <figcaption>第三种需要 Enterprise 方案。完整的安全性说明（含还没做到的部分）公开在平台的安全性页面。</figcaption>
-            </figure>
-        </div>
-    </section>
 
-    <!-- Use Cases -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>谁在用，以及用在什么情况</h2>
-                <p>共通点是证书的数量或所在位置已经超过手动管理的范围</p>
+            <div class="s-xchg">
+                <p class="s-xchg-lead">接着，它自己完成验证与签发。</p>
+                <div class="s-call"><span class="s-call-label">你不用做任何事</span>等待中</div>
+                <div class="s-resp" data-ui><p>证书已签发（GoGetSSL DV CA）。信任链：leaf → USERTrust → Sectigo。效期 2026-10-25 至 2027-05-13。</p></div>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>网站托管与代理商</h3>
-                    <p>同时管理多个客户域名的申请与续签，并把同一张证书部署到不同客户指定的 CDN。以角色区分谁能动哪些证书。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>有审计要求的企业 IT</h3>
-                    <p>需要向审计或客户说明密钥存放位置、权限如何分离、以及谁在什么时候做了什么。这些都有公开的书面答案可以直接引用。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>SaaS 与平台服务商</h3>
-                    <p>机房里不对外的设备，由你自己的代理程序经 SSH 安装证书，Linux 与 IIS 都支持，私钥不离开内网。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>有内网与地端设备的团队</h3>
-                    <p>机房里不对外的服务器同样需要有效证书。由你自己的代理程序经 SSH 安装，私钥不离开内网。</p>
+
+            <div class="s-xchg">
+                <p class="s-xchg-lead">最后，它推送并回头确认装对了。</p>
+                <div class="s-call"><span class="s-call-label">你勾选的部署目标</span>阿里云、腾讯云 CDN、Apeiro8</div>
+                <div class="s-resp s-resp-wide" data-ui>
+                    <p class="s-resp-title">节点巡检</p>
+                    <ul class="s-edges">
+                        <li><span class="s-edge-cc">TW</span><span class="s-edge-n">台北</span><span class="s-edge-ok">OK</span></li>
+                        <li><span class="s-edge-cc">JP</span><span class="s-edge-n">東京</span><span class="s-edge-ok">OK</span></li>
+                        <li><span class="s-edge-cc">DE</span><span class="s-edge-n">法蘭克福</span><span class="s-edge-ok">OK</span></li>
+                        <li><span class="s-edge-cc">US</span><span class="s-edge-n">弗吉尼亞</span><span class="s-edge-ok">OK</span></li>
+                        <li><span class="s-edge-cc">SG</span><span class="s-edge-n">新加坡</span><span class="s-edge-ok">OK</span></li>
+                    </ul>
+                    <p class="s-resp-note">推送成功不等于装对了。平台从多个边缘节点实际连接确认。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
-                <h2>与一般证书平台的差别</h2>
-                <p>除了上面的密钥掌控权，这四项是日常维运会感觉到的</p>
+    <!-- the chain of trust, in the material it used to be made of -->
+    <figure class="s-band s-band-seal">
+        <img src="/assets/traite-d-alliance-france-russie-prusse-1717.jpg"
+             width="1920" height="1440" loading="lazy" decoding="async"
+             alt="1717 年法俄普同盟条约的局部，三枚红蜡印串在一条绳上，每枚旁边有一个签名">
+        <figcaption>三个印、三个签名，每一个担保下一个。证书链是同一件事，只是换了材料：你的证书由 GoGetSSL 的 DV CA 签，它由 USERTrust 签，再上去是 Sectigo 的公开信任根。</figcaption>
+    </figure>
+
+    <!-- proof: the integrations as large tiles -->
+    <section class="s-int" aria-labelledby="s-int-h">
+        <div class="s-wrap">
+            <div class="s-int-head">
+                <h2 id="s-int-h">它接得到你已经在用的东西</h2>
+                <p>DNS 自动完成域名验证，CDN 自动接收部署，都不需要你手动散布 API 密钥。</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>DNS 与 CDN 集成覆盖广</h3>
-                    <p>10 家 DNS 服务商自动完成域名验证，7 家 CDN 自动部署，不需要手动散布 API 密钥。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>部署后的节点巡检</h3>
-                    <p>推送成功不等于装对了。平台会从多个边缘节点实际连接，确认证书链与生效状态。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>效期追踪与自动重签</h3>
-                    <p>系统主动追踪到期时间，效期内重签不另外收费——证书效期一路缩短之后，这件事只会更频繁。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>团队治理与审计</h3>
-                    <p>两步骤验证、五种角色逐项权限、API 密钥范围限制、订单核准流程与可导出的审计纪录。</p>
-                </div>
+            <div class="s-int-set">
+                <h3 class="s-int-label">DNS 自动验证 <span class="s-int-count">10</span></h3>
+                <ul class="s-tiles">
+                    <li class="s-tile">GoDaddy</li>
+                    <li class="s-tile">NS1</li>
+                    <li class="s-tile">Namecheap</li>
+                    <li class="s-tile">Cloudflare</li>
+                    <li class="s-tile">AWS Route 53</li>
+                    <li class="s-tile">腾讯云 DNSPod</li>
+                    <li class="s-tile">Google Cloud DNS</li>
+                    <li class="s-tile">UltraDNS</li>
+                    <li class="s-tile">Constellix</li>
+                    <li class="s-tile">Akamai Edge DNS</li>
+                </ul>
+            </div>
+            <div class="s-int-set">
+                <h3 class="s-int-label">CDN 自动部署 <span class="s-int-count">7</span></h3>
+                <ul class="s-tiles">
+                    <li class="s-tile">Apeiro8 CDN</li>
+                    <li class="s-tile">腾云 CDNRay</li>
+                    <li class="s-tile">CDNetworks</li>
+                    <li class="s-tile">阿里云</li>
+                    <li class="s-tile">腾讯云 CDN／EdgeOne</li>
+                    <li class="s-tile">EdgeNext</li>
+                    <li class="s-tile">CDN5</li>
+                </ul>
             </div>
         </div>
     </section>
+
+    <figure class="s-band s-band-rack">
+        <img src="/assets/a-system-administrator-s-workstation-within-a.jpg"
+             width="1365" height="2048" loading="lazy" decoding="async"
+             alt="数据中心的走道，两侧是黑色机柜，白色架高地板">
+        <figcaption>代理程序模式下，密钥在这一侧产生，也留在这一侧。平台从来没有它。</figcaption>
+    </figure>
+
 
     <!-- Security -->
     <section class="section">
@@ -423,81 +427,51 @@
     </section>
 
 
-
-    <!-- Related Pages (contextual internal links) -->
-    <section class="section related-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>延伸阅读与相关服务</h2>
-                <p>这些内容与本页主题直接相关，可一并参考</p>
-            </div>
-            <div class="related-grid">
-                <a href="/zh-cn/blog/ssl-certificate-validity-200-days/" class="related-card glass-panel">
-                    <span class="related-kicker">技术文章</span>
-                    <h3>SSL 证书效期缩短至 200 天</h3>
-                    <p>2029 年将只剩 47 天，这篇说明时程与手动管理撑不住的原因。</p>
-                </a>
-                <a href="/zh-cn/blog/incomplete-certificate-chain/" class="related-card glass-panel">
-                    <span class="related-kicker">技术文章</span>
-                    <h3>证书链不完整</h3>
-                    <p>为什么有些设备连得上、有些连不上，以及推送之后该验证什么。</p>
-                </a>
-                <a href="/zh-cn/cdn/" class="related-card glass-panel">
-                    <span class="related-kicker">内核服务</span>
-                    <h3>CDN 内容传递网络</h3>
-                    <p>全球边缘节点加速与 T 级 DDoS 防护，可与此服务搭配部署。</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section faq-section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
-                <h2>常见问题</h2>
-            </div>
-            <div class="faq-list">
-                <details class="faq-item glass-panel">
+    <!-- faq: question index, one answer -->
+    <section class="s-faq" aria-labelledby="s-faq-h">
+        <div class="s-wrap">
+            <h2 id="s-faq-h">常见问题</h2>
+            <div class="s-faq-grid" data-faq>
+                <details class="s-q" open>
                     <summary>我的私钥会被平台看到吗？</summary>
-                    <p>取决于你选哪一种模式。「平台托管」由平台产生并加密存放，缺省不能下载，要管理员针对该账号明确打开，之后每次下载都会写进审计纪录；「自备 CSR」的私钥完全不经过平台；「Agent 模式」的密钥由你机房里的 Agent 产生、留在你自己的机器上，永远不会上传。</p>
+                    <div class="s-a"><p>取决于你选哪一种模式。「平台托管」由平台产生并加密存放，缺省不能下载，要管理员针对该账号明确打开，之后每次下载都会写进审计纪录；「自备 CSR」的私钥完全不经过平台；「Agent 模式」的密钥由你机房里的 Agent 产生、留在你自己的机器上，永远不会上传。</p></div>
                 </details>
-                <details class="faq-item glass-panel">
+                <details class="s-q">
                     <summary>支持哪些 DNS 服务商的自动验证？</summary>
-                    <p>目前集成 10 家：GoDaddy、NS1、Namecheap、Cloudflare、AWS Route 53、腾讯云 DNSPod、Google Cloud DNS、UltraDNS、Constellix、Akamai Edge DNS。清单持续扩充，若你使用的服务商尚未支持，可改用手动验证，或与我们联系评估集成。</p>
+                    <div class="s-a"><p>目前集成 10 家：GoDaddy、NS1、Namecheap、Cloudflare、AWS Route 53、腾讯云 DNSPod、Google Cloud DNS、UltraDNS、Constellix、Akamai Edge DNS。清单持续扩充，若你使用的服务商尚未支持，可改用手动验证，或与我们联系评估集成。</p></div>
                 </details>
-                <details class="faq-item glass-panel">
+                <details class="s-q">
                     <summary>证书可以自动推送到哪些 CDN？</summary>
-                    <p>目前支持 7 家：Apeiro8 CDN、腾云 CDNRay、CDNetworks、阿里云、腾讯云 CDN／EdgeOne、EdgeNext、CDN5。推送完成后，平台会从节点巡检实际连接确认证书链与生效状态，而不是只回报 API 调用成功。</p>
+                    <div class="s-a"><p>目前支持 7 家：Apeiro8 CDN、腾云 CDNRay、CDNetworks、阿里云、腾讯云 CDN／EdgeOne、EdgeNext、CDN5。推送完成后，平台会从节点巡检实际连接确认证书链与生效状态，而不是只回报 API 调用成功。</p></div>
                 </details>
-                <details class="faq-item glass-panel">
+                <details class="s-q">
                     <summary>内网里不对外的服务器也能自动部署吗？</summary>
-                    <p>可以，使用内网代理程序（Agent）：一台 Linux 机器运行 Agent 作为 hub，经 SSH 把证书安装到你列出的设备。Linux 主机（nginx、haproxy、Apache）与 Windows Server 2022 的 IIS 都已实测可用；更旧的 Windows 版本尚未验证，建议先在可测试的机器上确认。私钥在 hub 上产生，只在你的内网传递，平台看不到。Agent 的安装包附有签章，可用 ssh-keygen -Y verify 验证来源。此功能需要 Enterprise 方案。</p>
+                    <div class="s-a"><p>可以，使用内网代理程序（Agent）：一台 Linux 机器运行 Agent 作为 hub，经 SSH 把证书安装到你列出的设备。Linux 主机（nginx、haproxy、Apache）与 Windows Server 2022 的 IIS 都已实测可用；更旧的 Windows 版本尚未验证，建议先在可测试的机器上确认。私钥在 hub 上产生，只在你的内网传递，平台看不到。Agent 的安装包附有签章，可用 ssh-keygen -Y verify 验证来源。此功能需要 Enterprise 方案。</p></div>
                 </details>
-                <details class="faq-item glass-panel">
+                <details class="s-q">
                     <summary>这张证书是谁签发的？主流浏览器都会信任吗？</summary>
-                    <p>证书由 GoGetSSL 的 DV CA 签发，信任链往上经 USERTrust 连到 Sectigo 的公开信任根证书——该根证书已内置于所有主流浏览器与操作系统的信任库，不需用户额外安装任何东西。</p>
+                    <div class="s-a"><p>证书由 GoGetSSL 的 DV CA 签发，信任链往上经 USERTrust 连到 Sectigo 的公开信任根证书——该根证书已内置于所有主流浏览器与操作系统的信任库，不需用户额外安装任何东西。</p></div>
                 </details>
-                <details class="faq-item glass-panel">
+                <details class="s-q">
                     <summary>收费方式是什么？有月费吗？</summary>
-                    <p>证书依张计价，单一域名 US$30 起／年、通配符 US$90 起／年，效期内重签不加价，从账户余额扣款。自动化功能则依订阅方案：Basic 免费但不含自动化；Pro US$29／月提供 CDN 自动部署、DNS 自动验证与节点巡检，团队上限 5 人；Enterprise US$149／月再加上内网代理程序与不限成员。新账号注册即享 14 天 Pro 试用，到期自动转为 Basic，不会自动扣款。</p>
+                    <div class="s-a"><p>证书依张计价，单一域名 US$30 起／年、通配符 US$90 起／年，效期内重签不加价，从账户余额扣款。自动化功能则依订阅方案：Basic 免费但不含自动化；Pro US$29／月提供 CDN 自动部署、DNS 自动验证与节点巡检，团队上限 5 人；Enterprise US$149／月再加上内网代理程序与不限成员。新账号注册即享 14 天 Pro 试用，到期自动转为 Basic，不会自动扣款。</p></div>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- CTA Banner -->
-    <section class="section cta-banner-section">
-        <div class="container">
-            <div class="cta-banner glass-panel">
+    <!-- cta -->
+    <section class="s-cta">
+        <div class="s-wrap s-cta-grid">
+            <div class="s-cta-said">
                 <h2>想先确认它能不能通过你们的审计？</h2>
                 <p>平台的安全性说明是公开的，包含我们还没做到的部分。创建账号即可申请第一张证书，首张不符合需求可全额退费；有资安问卷要填也欢迎直接找我们。</p>
-                <a href="https://app.kineticlinks.net/register" target="_blank" rel="noopener" class="btn btn-primary">创建账号</a>
+            </div>
+            <div class="s-cta-act">
+                <a href="https://app.kineticlinks.net/register" target="_blank" rel="noopener" class="s-action s-action-lg">创建账号</a>
             </div>
         </div>
     </section>
-
-    </main>
 
     <!-- Footer -->
     <footer>
@@ -521,13 +495,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                    <p class="credits">Pictures: <a href="https://wordpress.org/photos/photo/61563ef3d9/">&ldquo;A system administrator&rsquo;s workstation within a data processing centre&rdquo;</a> by Javier Salinas, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>, via WordPress Photo Directory; <a href="https://commons.wikimedia.org/wiki/File:Trait%C3%A9_d%27alliance_France_Russie_Prusse_1717.jpg">&ldquo;Trait&eacute; d&rsquo;alliance France Russie Prusse 1717&rdquo;</a> by Archives du minist&egrave;re des Affaires &eacute;trang&egrave;res, Paris, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons.</p>
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=90c1e0dc" defer></script>
+    <script src="/js/main.js?v=8cac2601" defer></script>
 </body>
 
 </html>

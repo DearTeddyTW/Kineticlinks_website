@@ -304,3 +304,66 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
     if ('requestIdleCallback' in window) requestIdleCallback(probe, { timeout: 3000 });
     else setTimeout(probe, 1200);
 })();
+
+/* ------------------------------------------------------------------
+   The key-mode control on /ssl/
+   ------------------------------------------------------------------
+   The page's argument is that you choose where the private key lives,
+   so the choice is a real control rather than a sentence about one.
+   Every mode's readout is already in the markup as data attributes:
+   with no script the first mode stays selected and its radio still
+   works, so the control degrades to a plain radio group.
+   ------------------------------------------------------------------ */
+(function () {
+    const root = document.querySelector('[data-key-picker]');
+    if (!root) return;
+
+    const out = {
+        where: root.querySelector('[data-key-where]'),
+        path: root.querySelector('[data-key-path]'),
+        reach: root.querySelector('[data-key-reach]'),
+        verdict: root.querySelector('[data-key-verdict]'),
+    };
+    if (!out.where) return;
+
+    const show = (input) => {
+        out.where.textContent = input.dataset.where || '';
+        out.path.textContent = input.dataset.path || '';
+        out.reach.textContent = input.dataset.reach || '';
+        out.verdict.textContent = input.dataset.verdict || '';
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', 'key_mode', { mode: input.value });
+        }
+    };
+
+    const modes = [...root.querySelectorAll('input[name="keymode"]')];
+    modes.forEach((m) => m.addEventListener('change', () => show(m)));
+    show(modes.find((m) => m.checked) || modes[0]);
+})();
+
+/* Entrances: each part of a section arrives on its own, staggered, once.
+   Content is visible by default, so nothing is lost if this never runs. */
+(function () {
+    if (!document.querySelector('.s-page')) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const parts = document.querySelectorAll(
+        '.s-flow h2, .s-xchg, .s-int-head, .s-int-set, .s-faq h2, .s-q, ' +
+        '.s-cta-said, .s-cta-act, .s-page .section-header, .s-page .service-card, ' +
+        '.s-page .price-card, .s-page .price-includes');
+    if (!parts.length || !('IntersectionObserver' in window)) return;
+
+    parts.forEach((el) => el.classList.add('s-enter'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const siblings = [...entry.target.parentElement.children]
+                .filter((c) => c.classList.contains('s-enter'));
+            const i = Math.max(0, siblings.indexOf(entry.target));
+            entry.target.style.transitionDelay = Math.min(i, 5) * 70 + 'ms';
+            entry.target.classList.add('s-in');
+            io.unobserve(entry.target);
+        });
+    }, { rootMargin: '0px 0px -12% 0px' });
+    parts.forEach((el) => io.observe(el));
+})();

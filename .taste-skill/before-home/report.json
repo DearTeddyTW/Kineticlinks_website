@@ -1,0 +1,2679 @@
+{
+ "url": "https://www.kineticlinks.net/",
+ "at": "2026-10-25T02:48:59.897Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.22,
+    0.63,
+    0.48,
+    0.87,
+    0.51,
+    0.78,
+    0.77,
+    0.8
+   ],
+   "motion": {
+    "elements": 5,
+    "css": 4,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6657,
+     "screens": 7.4,
+     "words": 282,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "引領未來的 數位基礎建設",
+     "words": 2,
+     "chars": 12,
+     "lines": 2,
+     "size": 56,
+     "vw": 3.9,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.38,
+     "top": 364,
+     "gradientText": true,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "引領未來的 數位基礎建設",
+     "words": 2,
+     "lines": 2,
+     "size": 56,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "引領未來的 數位基礎建設",
+      "words": 2,
+      "chars": 12,
+      "lines": 2,
+      "size": 56,
+      "vw": 3.9,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 364,
+      "gradientText": true,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "我們的核心服務",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 996,
+      "gradientText": true,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "旗下平台產品",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 2165,
+      "gradientText": true,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "以技術為本的 專業 IT 團隊",
+      "words": 4,
+      "chars": 15,
+      "lines": 2,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 2932,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "24/7",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 3219,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "17",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 3219,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 3358,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "三網",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 3358,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "最新技術文章",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 3662,
+      "gradientText": true,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "關於 Kineticlinks 的常見問題",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 4888,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "準備好升級您的 基礎架構了嗎？",
+      "words": 2,
+      "chars": 15,
+      "lines": 2,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.27,
+      "top": 5781,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 8,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.83,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      },
+      {
+       "family": "monospace",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      22,
+      24,
+      32,
+      40,
+      56
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9
+     },
+     "measureChars": 67,
+     "max": {
+      "size": 56,
+      "vw": 3.9,
+      "font": "Outfit",
+      "text": "引領未來的"
+     },
+     "monoShare": 0.07,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.36,
+     "centerShare": 0.11,
+     "smallText": 3
+    },
+    "eyebrows": [
+     {
+      "text": "Next-Gen IT Infrastructure",
+      "above": "引領未來的 數位基礎建設",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 13.6,
+      "top": 304
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 2836,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.71
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.24
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.05
+      },
+      {
+       "color": "#070b14",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#070b14"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 4,
+     "radius": 8,
+     "height": 56,
+     "withShadow": 2,
+     "withGradient": 2,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "聯絡我們",
+      "繁體中文 ▼",
+      "探索服務",
+      "專人諮詢"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 21,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "div.hero-text.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px",
+      "a.btn.btn-primary → rgba(0, 242, 254, 0.3) 0px 4px 15px 0px",
+      "a.service-card.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px",
+      "a.service-card.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 8,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "div.contact-info 515px",
+      "footer 1440px",
+      "div.footer-bottom 1136px"
+     ],
+     "outlinedBoxes": 26,
+     "dashed": 1,
+     "blurred": 23,
+     "roundedBoxes": 27,
+     "boxRadius": 16,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1152
+      },
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 2321
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3194
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3818
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 104,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6657,
+    "margins": {
+     "left": 152,
+     "right": 189
+    },
+    "sections": [
+     {
+      "sel": "section#home.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 900,
+      "words": 18,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "引領未來的",
+       "size": 56,
+       "tag": "h1"
+      },
+      "left": 201,
+      "right": 699,
+      "textLeft": 201,
+      "textRight": 699,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.services.section",
+      "tag": "section",
+      "top": 900,
+      "height": 1169,
+      "words": 52,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "我們的",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 185,
+      "right": 189,
+      "textLeft": 185,
+      "textRight": 189,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#platforms.services.section",
+      "tag": "section",
+      "top": 2069,
+      "height": 767,
+      "words": 46,
+      "media": 0,
+      "middle": 71,
+      "heading": {
+       "text": "旗下",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 185,
+      "right": 187,
+      "textLeft": 185,
+      "textRight": 187,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about.section",
+      "tag": "section",
+      "top": 2836,
+      "height": 730,
+      "words": 56,
+      "media": 0,
+      "middle": 135,
+      "heading": {
+       "text": "以技術為本的",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 152,
+      "right": 221,
+      "textLeft": 152,
+      "textRight": 221,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.latest-section",
+      "tag": "section",
+      "top": 3566,
+      "height": 1226,
+      "words": 65,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "最新",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 303,
+      "right": 316,
+      "textLeft": 303,
+      "textRight": 316,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 4792,
+      "height": 828,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "關於 Kineticlinks 的常見問題",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 328,
+      "right": 328,
+      "textLeft": 328,
+      "textRight": 328,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact.section",
+      "tag": "section",
+      "top": 5620,
+      "height": 754,
+      "words": 11,
+      "media": 0,
+      "middle": 131,
+      "heading": {
+       "text": "準備好升級您的",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 217,
+      "right": 217,
+      "textLeft": 217,
+      "textRight": 430,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 6374,
+      "height": 283,
+      "words": 28,
+      "media": 0,
+      "middle": 32,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 152,
+      "right": 161,
+      "textLeft": 152,
+      "textRight": 161,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "引領未來的 數位基礎建設",
+      "size": 56,
+      "top": 364,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 303,
+      "n": 6
+     },
+     {
+      "x": 328,
+      "n": 5
+     },
+     {
+      "x": 152,
+      "n": 3
+     },
+     {
+      "x": 185,
+      "n": 3
+     },
+     {
+      "x": 201,
+      "n": 3
+     },
+     {
+      "x": 217,
+      "n": 2
+     },
+     {
+      "x": 769,
+      "n": 2
+     },
+     {
+      "x": 574,
+      "n": 1
+     },
+     {
+      "x": 964,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 26,
+    "bodySize": 15,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.38,
+    0.74,
+    0.52,
+    0.89,
+    0.8,
+    0.81,
+    0.8,
+    0.89
+   ],
+   "motion": {
+    "elements": 5,
+    "css": 4,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 7509,
+     "screens": 7.3,
+     "words": 274,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "引領未來的 數位基礎建設",
+     "words": 2,
+     "chars": 12,
+     "lines": 2,
+     "size": 32,
+     "vw": 4.2,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.86,
+     "top": 455,
+     "gradientText": true,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "引領未來的 數位基礎建設",
+     "words": 2,
+     "lines": 2,
+     "size": 32,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "引領未來的 數位基礎建設",
+      "words": 2,
+      "chars": 12,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 455,
+      "gradientText": true,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "我們的核心服務",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1088,
+      "gradientText": true,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "旗下平台產品",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2242,
+      "gradientText": true,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "以技術為本的 專業 IT 團隊",
+      "words": 4,
+      "chars": 15,
+      "lines": 2,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3371,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "24/7",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 3633,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "17",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.38,
+      "top": 3633,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 3771,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "三網",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.38,
+      "top": 3771,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "最新技術文章",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4453,
+      "gradientText": true,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "關於 Kineticlinks 的常見問題",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 5567,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "準備好升級您的 基礎架構了嗎？",
+      "words": 2,
+      "chars": 15,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 6324,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 8,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.83,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      },
+      {
+       "family": "monospace",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      22,
+      24,
+      32,
+      40
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9
+     },
+     "measureChars": 88,
+     "max": {
+      "size": 40,
+      "vw": 5.2,
+      "font": "Outfit",
+      "text": "我們的"
+     },
+     "monoShare": 0.07,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.37,
+     "centerShare": 0.16,
+     "smallText": 3
+    },
+    "eyebrows": [
+     {
+      "text": "Next-Gen IT Infrastructure",
+      "above": "引領未來的 數位基礎建設",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 13.6,
+      "top": 395
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 3307,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.71
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.24
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.04
+      },
+      {
+       "color": "#070b14",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#070b14"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 8,
+     "height": 56,
+     "withShadow": 2,
+     "withGradient": 2,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "探索服務",
+      "專人諮詢"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 21,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "div.hero-text.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px",
+      "a.btn.btn-primary → rgba(0, 242, 254, 0.3) 0px 4px 15px 0px",
+      "a.service-card.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px",
+      "a.service-card.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px"
+     ],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "button.btn.btn-primary → linear-gradient(135deg, rgb(0, 242, 254) 0%, rgb(79, 172, 254) 100%)"
+     ],
+     "gradientText": 8,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "div.contact-info 702px",
+      "footer 768px",
+      "div.footer-bottom 704px"
+     ],
+     "outlinedBoxes": 21,
+     "dashed": 1,
+     "blurred": 23,
+     "roundedBoxes": 22,
+     "boxRadius": 16,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1244
+      },
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 2398
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3608
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 7509,
+    "margins": {
+     "left": 33,
+     "right": 57
+    },
+    "sections": [
+     {
+      "sel": "section#home.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 1024,
+      "words": 18,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "引領未來的",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 53,
+      "right": 85,
+      "textLeft": 53,
+      "textRight": 85,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.services.section",
+      "tag": "section",
+      "top": 1024,
+      "height": 1154,
+      "words": 52,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "我們的",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 65,
+      "right": 66,
+      "textLeft": 65,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#platforms.services.section",
+      "tag": "section",
+      "top": 2178,
+      "height": 1129,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "旗下",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 65,
+      "right": 77,
+      "textLeft": 65,
+      "textRight": 77,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about.section",
+      "tag": "section",
+      "top": 3307,
+      "height": 1082,
+      "words": 56,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "以技術為本的",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 43,
+      "textLeft": 32,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.latest-section",
+      "tag": "section",
+      "top": 4389,
+      "height": 1114,
+      "words": 65,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "最新",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 57,
+      "right": 57,
+      "textLeft": 57,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 5503,
+      "height": 724,
+      "words": 41,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "關於 Kineticlinks 的常見問題",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 57,
+      "right": 59,
+      "textLeft": 57,
+      "textRight": 59,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact.section",
+      "tag": "section",
+      "top": 6227,
+      "height": 929,
+      "words": 11,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "準備好升級您的",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 65,
+      "right": 65,
+      "textLeft": 65,
+      "textRight": 223,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 7157,
+      "height": 353,
+      "words": 28,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 33,
+      "right": 33,
+      "textLeft": 33,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "引領未來的 數位基礎建設",
+      "size": 32,
+      "top": 455,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 53,
+      "n": 14
+     },
+     {
+      "x": 65,
+      "n": 6
+     },
+     {
+      "x": 32,
+      "n": 3
+     },
+     {
+      "x": 433,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 26,
+    "bodySize": 15,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.47,
+    0.78,
+    0.84,
+    0.67,
+    0.84,
+    0.83,
+    0.84,
+    0.84,
+    0.79,
+    0.89,
+    0.87,
+    0.88
+   ],
+   "motion": {
+    "elements": 5,
+    "css": 4,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 9360,
+     "screens": 11.1,
+     "words": 274,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "引領未來的 數位基礎建設",
+     "words": 2,
+     "chars": 12,
+     "lines": 2,
+     "size": 28,
+     "vw": 7.2,
+     "font": "Outfit",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.73,
+     "top": 341,
+     "gradientText": true,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "引領未來的 數位基礎建設",
+     "words": 2,
+     "lines": 2,
+     "size": 28,
+     "font": "Outfit"
+    },
+    "headings": [
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 24,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "引領未來的 數位基礎建設",
+      "words": 2,
+      "chars": 12,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.73,
+      "top": 341,
+      "gradientText": true,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "我們的核心服務",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 908,
+      "gradientText": true,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "旗下平台產品",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 2991,
+      "gradientText": true,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "以技術為本的 專業 IT 團隊",
+      "words": 4,
+      "chars": 15,
+      "lines": 2,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4599,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "24/7",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 4938,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "17",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.26,
+      "top": 4938,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 5099,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "三網",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.26,
+      "top": 5099,
+      "gradientText": true,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "最新技術文章",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5825,
+      "gradientText": true,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "批量查詢 ICP 備案狀態：幾百個網域怎麼查才不會被擋",
+      "words": 3,
+      "chars": 27,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 6046,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "備案域名購買前，先自己查這六件事",
+      "words": 1,
+      "chars": 16,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 6377,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "查得到百度，不代表查得到你要查的那個網域",
+      "words": 1,
+      "chars": 20,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 6709,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "關於 Kineticlinks 的常見問題",
+      "words": 3,
+      "chars": 21,
+      "lines": 2,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 7200,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "準備好升級您的 基礎架構了嗎？",
+      "words": 2,
+      "chars": 15,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Outfit",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.66,
+      "top": 8054,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kineticlinks",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Outfit",
+      "weight": 900,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.8,
+      "top": 8977,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 16,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 9,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.83,
+       "mono": false
+      },
+      {
+       "family": "Outfit",
+       "share": 0.1,
+       "mono": false
+      },
+      {
+       "family": "monospace",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      22,
+      24,
+      28,
+      32,
+      40
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9
+     },
+     "measureChars": 41,
+     "max": {
+      "size": 40,
+      "vw": 10.3,
+      "font": "Outfit",
+      "text": "我們的"
+     },
+     "monoShare": 0.07,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.37,
+     "centerShare": 0.16,
+     "smallText": 3
+    },
+    "eyebrows": [
+     {
+      "text": "Next-Gen IT Infrastructure",
+      "above": "引領未來的 數位基礎建設",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": true,
+      "size": 13.6,
+      "top": 281
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#070b14",
+     "bodyBgHsl": {
+      "h": 222,
+      "s": 0.48,
+      "l": 0.05
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#04060b",
+       "top": 4535,
+       "hsl": {
+        "h": 223,
+        "s": 0.47,
+        "l": 0.03
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0aec0",
+       "share": 0.71
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.24
+      },
+      {
+       "color": "#00f2fe",
+       "share": 0.04
+      },
+      {
+       "color": "#070b14",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#00f2fe",
+      "hsl": {
+       "h": 183,
+       "s": 1,
+       "l": 0.5
+      },
+      "fg": "#070b14"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 2,
+     "radius": 8,
+     "height": 56,
+     "withShadow": 2,
+     "withGradient": 2,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "探索服務",
+      "專人諮詢"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 21,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "div.hero-text.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px",
+      "a.btn.btn-primary → rgba(0, 242, 254, 0.3) 0px 4px 15px 0px",
+      "a.service-card.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px",
+      "a.service-card.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px"
+     ],
+     "gradients": 2,
+     "scrims": 0,
+     "gradientSamples": [
+      "a.btn.btn-primary → linear-gradient(135deg, rgb(0, 242, 254) 0%, rgb(79, 172, 254) 100%)",
+      "button.btn.btn-primary → linear-gradient(135deg, rgb(0, 242, 254) 0%, rgb(79, 172, 254) 100%)"
+     ],
+     "gradientText": 8,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "div.contact-info 324px",
+      "footer 390px",
+      "div.footer-bottom 326px"
+     ],
+     "outlinedBoxes": 22,
+     "dashed": 1,
+     "blurred": 23,
+     "roundedBoxes": 23,
+     "boxRadius": 16,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1092
+      },
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 3175
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4913
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5982
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "bg-image",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 86,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "outfit"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 9360,
+    "margins": {
+     "left": 32,
+     "right": 37
+    },
+    "sections": [
+     {
+      "sel": "section#home.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 844,
+      "words": 18,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "引領未來的",
+       "size": 28,
+       "tag": "h1"
+      },
+      "left": 53,
+      "right": 60,
+      "textLeft": 53,
+      "textRight": 60,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.services.section",
+      "tag": "section",
+      "top": 844,
+      "height": 2083,
+      "words": 52,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "我們的",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#platforms.services.section",
+      "tag": "section",
+      "top": 2927,
+      "height": 1608,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "旗下",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 37,
+      "right": 37,
+      "textLeft": 37,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about.section",
+      "tag": "section",
+      "top": 4535,
+      "height": 1226,
+      "words": 56,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "以技術為本的",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.latest-section",
+      "tag": "section",
+      "top": 5761,
+      "height": 1375,
+      "words": 65,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "最新",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 57,
+      "right": 57,
+      "textLeft": 57,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.faq-section",
+      "tag": "section",
+      "top": 7136,
+      "height": 821,
+      "words": 41,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "關於 Kineticlinks 的常見問題",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 37,
+      "right": 37,
+      "textLeft": 37,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact.section",
+      "tag": "section",
+      "top": 7957,
+      "height": 955,
+      "words": 11,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "準備好升級您的",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 65,
+      "right": 65,
+      "textLeft": 65,
+      "textRight": 69,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 8912,
+      "height": 448,
+      "words": 28,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Kinetic",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 5564,
+      "height": 260
+     }
+    ],
+    "h1s": [
+     {
+      "text": "引領未來的 數位基礎建設",
+      "size": 28,
+      "top": 341,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 53,
+      "n": 14
+     },
+     {
+      "x": 65,
+      "n": 9
+     },
+     {
+      "x": 32,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 26,
+    "bodySize": 15,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"Next-Gen IT Infrastructure\" (pill) above \"引領未來的 數位基礎建設\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient-text",
+   "width": 1440,
+   "message": "8 gradient-filled text element(s).",
+   "fix": "Solid colour text.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "21 box-shadow(s) on elements at rest: div.hero-text.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px | a.btn.btn-primary → rgba(0, 242, 254, 0.3) 0px 4px 15px 0px | a.service-card.glass-panel → rgba(0, 0, 0, 0.37) 0px 8px 32px 0px",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "button-fx",
+   "width": 1440,
+   "message": "Buttons with gradient fill and shadow/glow.",
+   "fix": "Flat fill, one colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "3 thin rule(s)/divider line(s): div.contact-info 515px | footer 1440px | div.footer-bottom 1136px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "26 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "dashed",
+   "width": 1440,
+   "message": "1 dashed/dotted border(s).",
+   "fix": "Remove unless it is a real drop zone.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "width": 1440,
+   "message": "23 backdrop-blur surfaces.",
+   "fix": "One blurred sticky bar at most; glass cards are a tell.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "icon-cards",
+   "width": 1440,
+   "message": "2 row(s) of identical cards each topped with a small icon (4, 3 cards).",
+   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-count",
+   "width": 1440,
+   "message": "3 typefaces in use (Inter, Outfit, monospace).",
+   "fix": "Two at most.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "12 different font sizes (13, 14, 15, 16, 17, 18, 20, 22, 24, 32, 40, 56).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 1 picture(s) on the page (1 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "small-text",
+   "width": 1440,
+   "message": "3 text block(s) under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 152px on the left, 189px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 9 different lines (303px, 328px, 152px, 185px, 201px, 217px, 769px); the three most used hold only 54% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them."
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 5 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 768,
+   "message": "1 gradient fill(s): button.btn.btn-primary → linear-gradient(135deg, rgb(0, 242, 254) 0%, rgb(79, 172, 254) 100%)",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/before-home/desktop-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/before-home/desktop-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/before-home/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/before-home/tablet-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/before-home/tablet-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/before-home/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/before-home/mobile-fold.jpg",
+   "pages": [
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/before-home/mobile-page-01.jpg",
+    "/Users/dearteddy/Python/Kineticlinks_website/.taste-skill/before-home/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

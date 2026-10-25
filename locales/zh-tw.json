@@ -583,11 +583,16 @@
     },
     "hero": {
       "badge": "SSL 憑證自動化平台",
-      "title": "憑證自動化，但私鑰放哪裡由你決定",
+      "title": "憑證自動化，私鑰不必交出去",
       "subtitle": "從申請、驗證、部署到事後巡檢，整條流程自動化；而最敏感的那把金鑰，可以完全不經過我們",
       "desc": "多數憑證平台要你把私鑰交出去。Kineticlinks 提供三種模式：平台代管、自備 CSR、以及由你機房裡的 Agent 產生金鑰並留在原地。搭配 10 家 DNS 自動驗證、7 家 CDN 自動部署，以及部署後的節點巡檢，整個流程不需要人工上傳任何檔案。",
       "cta_primary": "建立帳號",
-      "cta_secondary": "查看其他平台產品"
+      "cta_secondary": "查看其他平台產品",
+      "sentence": "多數憑證平台要你把私鑰交給它們保管。這裡有三種模式，其中一種的金鑰在你自己的機房產生，永遠不上傳。",
+      "action": "建立帳號",
+      "note": "首張憑證不符合需求可全額退費",
+      "title_l1": "憑證自動化，",
+      "title_l2": "私鑰不必交出去"
     },
     "overview": {
       "title": "為什麼憑證自動化會卡在私鑰這一關",
@@ -739,7 +744,85 @@
       "l3_kicker": "核心服務",
       "l3_title": "CDN 內容傳遞網路",
       "l3_desc": "全球邊緣節點加速與 T 級 DDoS 防護，可與此服務搭配部署。"
-    }
+    },
+    "picker": {
+      "label": "選一種模式，看金鑰實際在哪",
+      "f_where": "金鑰在哪裡產生",
+      "f_path": "金鑰經過哪裡",
+      "f_reach": "平台能不能讀取",
+      "m1": {
+        "name": "平台代管",
+        "where": "平台產生，以加密欄位存放",
+        "path": "平台 → 你的伺服器，經 TLS",
+        "reach": "預設不能下載。需管理員對該帳號開啟，之後每次下載寫入稽核紀錄",
+        "verdict": "平台持有"
+      },
+      "m2": {
+        "name": "自備 CSR",
+        "where": "你自己產生，只把 CSR 交給平台",
+        "path": "不傳輸，金鑰從未離開你",
+        "reach": "完全不經過平台",
+        "verdict": "平台看不到"
+      },
+      "m3": {
+        "name": "代理程式",
+        "where": "你機房裡的代理程式產生，留在原地",
+        "path": "只在你的內網，經 SSH 送到你列出的設備",
+        "reach": "永遠不會上傳",
+        "verdict": "平台看不到"
+      },
+      "plan_note": "代理程式模式需要 Enterprise 方案"
+    },
+    "flow": {
+      "title": "一次部署實際發生什麼",
+      "s1_lead": "先，給它一個網域。",
+      "s1_call": "example.com",
+      "s1_call_label": "你輸入",
+      "s1_resp": "偵測到 DNS 服務商：Cloudflare。已建立 _acme-challenge TXT 紀錄，等待生效。",
+      "s2_lead": "接著，它自己完成驗證與簽發。",
+      "s2_call": "等待中",
+      "s2_call_label": "你不用做任何事",
+      "s2_resp": "憑證已簽發（GoGetSSL DV CA）。信任鏈：leaf → USERTrust → Sectigo。效期 2026-10-25 至 2027-05-13。",
+      "s3_lead": "最後，它推送並回頭確認裝對了。",
+      "s3_call": "阿里雲、騰訊雲 CDN、Apeiro8",
+      "s3_call_label": "你勾選的部署目標",
+      "s3_resp_title": "節點巡檢",
+      "s3_resp_note": "推送成功不等於裝對了。平台從多個邊緣節點實際連線確認。"
+    },
+    "integrations": {
+      "title": "它接得到你已經在用的東西",
+      "desc": "DNS 自動完成網域驗證，CDN 自動接收部署，都不需要你手動散布 API 金鑰。",
+      "dns_label": "DNS 自動驗證",
+      "cdn_label": "CDN 自動部署",
+      "dns": [
+        "GoDaddy",
+        "NS1",
+        "Namecheap",
+        "Cloudflare",
+        "AWS Route 53",
+        "騰訊雲 DNSPod",
+        "Google Cloud DNS",
+        "UltraDNS",
+        "Constellix",
+        "Akamai Edge DNS"
+      ],
+      "cdn": [
+        "Apeiro8 CDN",
+        "騰雲 CDNRay",
+        "CDNetworks",
+        "阿里雲",
+        "騰訊雲 CDN／EdgeOne",
+        "EdgeNext",
+        "CDN5"
+      ]
+    },
+    "pics": {
+      "seal_alt": "1717 年法俄普同盟條約的局部，三枚紅蠟印串在一條繩上，每枚旁邊有一個簽名",
+      "seal_cap": "三個印、三個簽名，每一個擔保下一個。憑證鏈是同一件事，只是換了材料：你的憑證由 GoGetSSL 的 DV CA 簽，它由 USERTrust 簽，再上去是 Sectigo 的公開信任根。",
+      "rack_alt": "資料中心的走道，兩側是黑色機櫃，白色架高地板",
+      "rack_cap": "代理程式模式下，金鑰在這一側產生，也留在這一側。平台從來沒有它。"
+    },
+    "credits": {}
   },
   "speedtest_page": {
     "platform_url": "https://speedtest.kineticlinks.net/",

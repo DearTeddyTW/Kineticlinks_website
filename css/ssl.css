@@ -1,0 +1,452 @@
+/* /ssl/ — direction "The product performs", seed 903474646.
+   The dealt palette was "Soot and lime"; its proportions are kept (a soot
+   bracket, lighter middle sections, one single action colour) and its colours
+   are taken from the subject instead, because the mark and twenty-three other
+   pages are already this cyan. The dealt face was Switzer; this site self-hosts
+   its fonts and Inter is the same kind of grotesk, so the type *system* is
+   adopted — one weight, few sizes, hierarchy carried by ink rather than size. */
+
+.s-page {
+    --s-bg:      #070b14;   /* soot: the bracket at both ends   */
+    --s-mid:     #0d1420;   /* one step up, for the middle      */
+    --s-panel:   #121b2b;   /* fragments sit on this            */
+    --s-ink:     #ffffff;
+    --s-muted:   #8b9bb4;
+    --s-accent:  #00f2fe;   /* the one action colour            */
+    --s-accent-ink: #04121a;
+    --s-line:    rgba(255, 255, 255, 0.10);  /* inside data-ui only */
+
+    --s-gut: clamp(20px, 4vw, 56px);
+    --s-max: 1200px;
+    --s-gap: clamp(96px, 11vw, 200px);
+
+    /* five steps, no sixth */
+    --s-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+    --s-body:  clamp(1rem, 0.97rem + 0.18vw, 1.0625rem);
+    --s-lead:  clamp(1.125rem, 1.03rem + 0.45vw, 1.375rem);
+    --s-head:  clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+    --s-disp:  clamp(2.25rem, 1.2rem + 4.2vw, 4rem);
+
+    background: var(--s-bg);
+    color: var(--s-ink);
+}
+
+.s-page main { background: transparent; }
+/* 只把舊版型沿用的區塊轉為透明；本頁自己的區塊各有底色 */
+.s-page main > section:not([class*="s-"]) { background: transparent; }
+
+.s-wrap {
+    max-width: var(--s-max);
+    margin-inline: auto;
+    padding-inline: var(--s-gut);
+}
+
+.s-page h1, .s-page h2, .s-page h3 {
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* ---------- hero: two tones meeting at a clean edge ---------- */
+
+.s-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 88svh;
+    align-items: stretch;
+}
+
+.s-hero-said {
+    background: var(--s-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--s-gut);
+    padding-bottom: clamp(40px, 6vw, 72px);
+    padding-left: max(var(--s-gut), calc((100vw - var(--s-max)) / 2 + var(--s-gut)));
+}
+
+.s-hero-title {
+    font-size: var(--s-disp);
+    max-width: 16ch;
+    margin-bottom: 0.6em;
+}
+
+.s-hero-sentence {
+    font-size: var(--s-lead);
+    line-height: 1.45;
+    color: var(--s-muted);
+    max-width: 44ch;
+    margin: 0 0 2rem;
+}
+
+.s-hero-note {
+    font-size: var(--s-small);
+    color: var(--s-muted);
+    margin: 1rem 0 0;
+}
+
+.s-hero-stage {
+    background: var(--s-mid);
+    display: grid;
+    place-items: center;
+    padding: var(--s-gut);
+}
+
+/* one flat action colour, one shape, no gradient and no glow */
+.s-action {
+    display: inline-block;
+    background: var(--s-accent);
+    color: var(--s-accent-ink);
+    font-size: var(--s-body);
+    font-weight: 500;
+    padding: 0.9em 1.6em;
+    border-radius: 2px;
+    text-decoration: none;
+    align-self: flex-start;
+    transition: transform 160ms cubic-bezier(.2,.7,.3,1), background-color 160ms;
+}
+.s-action:hover { background: #5ef7ff; transform: translateY(-2px); }
+.s-action:active { transform: translateY(0); }
+.s-action-lg { font-size: var(--s-lead); padding: 1em 1.9em; }
+
+/* ---------- the live control ---------- */
+
+.s-key {
+    width: min(460px, 100%);
+    background: var(--s-panel);
+    border: 1px solid var(--s-line);  /* taste-skill-ignore: inside data-ui */
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.s-key-label {
+    font-size: var(--s-small);
+    color: var(--s-muted);
+    margin: 0 0 14px;
+}
+
+.s-key-modes { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+
+.s-key-mode { flex: 1 1 auto; }
+.s-key-mode input { position: absolute; opacity: 0; width: 0; height: 0; }
+.s-key-mode span {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    padding: 9px 10px;
+    border: 1px solid var(--s-line);  /* taste-skill-ignore: inside data-ui */
+    border-radius: 6px;
+    color: var(--s-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 140ms, border-color 140ms, background-color 140ms;
+}
+.s-key-mode input:checked + span {
+    color: var(--s-accent-ink);
+    background: var(--s-accent);
+    border-color: var(--s-accent);
+}
+.s-key-mode input:focus-visible + span {
+    outline: 2px solid var(--s-accent);
+    outline-offset: 2px;
+}
+
+.s-key-out { margin: 0; }
+.s-key-row { padding: 12px 0; border-top: 1px solid var(--s-line); }  /* taste-skill-ignore: inside data-ui */
+.s-key-row dt { font-size: 12px; color: var(--s-muted); margin-bottom: 4px; }
+.s-key-row dd { font-size: 14px; line-height: 1.5; margin: 0; }
+
+.s-key-verdict {
+    margin: 16px 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--s-accent);
+}
+.s-key-plan { margin: 10px 0 0; font-size: 12px; color: var(--s-muted); }
+
+/* ---------- how it works: call and response ---------- */
+
+.s-flow { padding-block: var(--s-gap); background: var(--s-bg); }
+.s-flow h2 { font-size: var(--s-head); margin-bottom: 56px; }
+
+.s-xchg { max-width: 640px; margin-bottom: 88px; }
+.s-xchg:last-child { margin-bottom: 0; }
+.s-xchg-lead { font-size: var(--s-lead); font-weight: 500; margin: 0 0 16px; }
+
+.s-call {
+    background: var(--s-panel);
+    border-radius: 8px;
+    padding: 18px 20px;
+    font-size: var(--s-body);
+}
+.s-call-label {
+    display: block;
+    font-size: 12px;
+    color: var(--s-muted);
+    margin-bottom: 6px;
+}
+
+.s-resp {
+    margin-top: 14px;
+    margin-left: 56px;
+    background: var(--s-mid);
+    border: 1px solid var(--s-line);  /* taste-skill-ignore: inside data-ui */
+    border-radius: 8px;
+    padding: 18px 20px;
+}
+.s-resp p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--s-ink); }
+.s-resp-wide { width: min(760px, calc(100vw - 2 * var(--s-gut))); }
+.s-resp-title { font-weight: 500; margin-bottom: 12px !important; }
+.s-resp-note { color: var(--s-muted) !important; margin-top: 12px !important; }
+
+.s-edges { list-style: none; margin: 0; padding: 0; }
+.s-edges li {
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 7px 0;
+    border-top: 1px solid var(--s-line);  /* taste-skill-ignore: inside data-ui */
+    font-size: 14px;
+}
+.s-edge-cc { color: var(--s-muted); font-size: 12px; }
+.s-edge-ok { color: var(--s-accent); font-size: 12px; }
+
+/* ---------- proof: the integrations as tiles ---------- */
+
+.s-int { padding-block: var(--s-gap); background: var(--s-mid); }
+.s-int-head { margin-bottom: 48px; max-width: 52ch; }
+.s-int-head h2 { font-size: var(--s-head); margin-bottom: 16px; }
+.s-int-head p { font-size: var(--s-body); line-height: 1.6; color: var(--s-muted); margin: 0; }
+
+.s-int-set + .s-int-set { margin-top: 40px; }
+.s-int-label {
+    font-size: var(--s-body);
+    color: var(--s-muted);
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+.s-int-count { color: var(--s-accent); margin-left: 0.4em; }
+
+.s-tiles {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(210px, 100%), 1fr));
+    gap: 8px;
+}
+.s-tile {
+    background: var(--s-panel);
+    border-radius: 4px;
+    padding: 22px 20px;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.375rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    min-height: 92px;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* ---------- faq: the index ---------- */
+
+.s-faq { padding-block: var(--s-gap); background: var(--s-bg); }
+.s-faq h2 { font-size: var(--s-head); margin-bottom: 48px; }
+
+.s-faq-grid { display: grid; gap: 8px; }
+
+.s-q { background: var(--s-mid); border-radius: 6px; }
+.s-q[open] { background: var(--s-panel); }
+.s-q summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: var(--s-body);
+    padding: 20px 22px;
+    color: var(--s-muted);
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    transition: color 140ms;
+}
+.s-q summary::-webkit-details-marker { display: none; }
+.s-q summary::before {
+    content: "";
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--s-muted);
+    flex: none;
+    transition: background-color 140ms;
+}
+.s-q[open] summary { color: var(--s-ink); }
+.s-q[open] summary::before { background: var(--s-accent); }
+.s-q summary:focus-visible { outline: 2px solid var(--s-accent); outline-offset: 3px; }
+
+.s-a { padding: 0 22px 24px 44px; }
+.s-a p {
+    margin: 0;
+    font-size: var(--s-lead);
+    line-height: 1.45;
+    max-width: 46ch;
+}
+
+/* ---------- cta ---------- */
+
+.s-cta { background: var(--s-accent); color: var(--s-accent-ink); padding-block: clamp(72px, 9vw, 140px); }
+.s-cta-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: end; }
+.s-cta h2 { font-size: var(--s-disp); margin-bottom: 20px; max-width: 14ch; }
+.s-cta p { font-size: var(--s-body); line-height: 1.6; margin: 0; max-width: 46ch; opacity: 0.78; }
+.s-cta .s-action { background: var(--s-accent-ink); color: var(--s-accent); justify-self: end; }
+.s-cta .s-action:hover { background: #0a1f2b; }
+
+/* ---------- the dealt sections keep their own look on this page ---------- */
+
+.s-page .section { padding-block: var(--s-gap); }
+.s-page .section-header h2 { font-size: var(--s-head); }
+.s-page .service-card,
+.s-page .price-card,
+.s-page .price-includes {
+    background: var(--s-panel);
+    border: 0;
+    box-shadow: none;  /* taste-skill-ignore: removing the kit's shadow */
+    backdrop-filter: none;  /* taste-skill-ignore: removing the kit's glass */
+    border-radius: 6px;
+}
+.s-page .btn-primary {
+    background: var(--s-accent);
+    color: var(--s-accent-ink);
+    box-shadow: none;  /* taste-skill-ignore: removing the kit's glow */
+    border-radius: 2px;
+}
+
+/* ---------- phone: its own composition ---------- */
+
+@media (max-width: 860px) {
+    .s-hero { grid-template-columns: 1fr; min-height: 0; }
+    .s-hero-stage { order: -1; padding-block: clamp(28px, 7vw, 44px); min-height: 56svh; align-content: center; }
+    .s-hero-said { padding-left: var(--s-gut); padding-block: clamp(32px, 8vw, 56px); }
+    .s-hero-title { font-size: clamp(1.9rem, 6.4vw, 2.6rem); max-width: 18ch; }
+    .s-resp { margin-left: 0; }
+    .s-resp-wide { width: auto; }
+    .s-cta-grid { grid-template-columns: 1fr; gap: 32px; align-items: start; }
+    .s-cta .s-action { justify-self: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .s-action, .s-key-mode span, .s-q summary { transition: none; }
+}
+
+/* The entrance. Authored here rather than in the markup so the page is
+   readable with no script: main.js adds .s-enter, and anything it never
+   reaches simply stays visible. */
+.s-page .s-enter {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 620ms cubic-bezier(.2,.7,.3,1), transform 620ms cubic-bezier(.2,.7,.3,1);
+}
+.s-page .s-enter.s-in { opacity: 1; transform: none; }
+
+/* The signature move: each line of the headline rises from behind its baseline. */
+.s-hero-title { overflow: hidden; }
+.s-hero-title > span { display: block; }
+@media (prefers-reduced-motion: no-preference) {
+    .s-hero-title > span { animation: s-rise 900ms cubic-bezier(.16,.84,.32,1) both; }
+    .s-hero-title > span:nth-child(2) { animation-delay: 110ms; }
+    .s-hero-sentence, .s-hero .s-action, .s-hero-note {
+        animation: s-fade 700ms cubic-bezier(.2,.7,.3,1) both 420ms;
+    }
+    .s-hero-stage { animation: s-fade 800ms cubic-bezier(.2,.7,.3,1) both 220ms; }
+}
+@keyframes s-rise { from { transform: translateY(105%); } to { transform: translateY(0); } }
+@keyframes s-fade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+    .s-page .s-enter { opacity: 1; transform: none; transition: none; }
+}
+
+
+/* The shared pricing note and footer arrive with rules on them; this page
+   separates with space and a change of ground instead. */
+.s-page .price-note { border-top: 0; padding-top: 0; margin-top: 20px; }
+.s-page footer,
+.s-page .footer-bottom { border-top: 0; }
+.s-page .footer-bottom { padding-top: 28px; }
+
+/* ---------- the two found pictures ---------- */
+
+.s-band {
+    margin: 0;
+    background: var(--s-mid);
+}
+.s-band img {
+    display: block;
+    width: 100%;
+    height: clamp(260px, 42svh, 460px);
+    object-fit: cover;
+}
+.s-band figcaption {
+    max-width: var(--s-max);
+    margin-inline: auto;
+    padding: 24px var(--s-gut) 0;
+    font-size: var(--s-body);
+    line-height: 1.6;
+    color: var(--s-muted);
+    max-width: min(var(--s-max), 62ch);
+}
+.s-band-seal { padding-bottom: var(--s-gap); }
+.s-band-seal img { object-position: 70% 40%; }
+.s-band-rack { background: var(--s-bg); padding-bottom: 0; }
+.s-band-rack img { object-position: 50% 62%; }
+.s-band-rack figcaption { padding-bottom: var(--s-gap); }
+
+.s-page .credits {
+    font-size: var(--s-small);
+    color: var(--s-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+.s-page .credits a { color: var(--s-muted); }
+
+/* ---------- third look: three things the screenshots showed ---------- */
+
+/* 1. The navigation is fixed, and on a phone the hero's fragment comes first,
+      so the bar was sitting over the control's own label. */
+.s-hero-stage { padding-top: calc(var(--s-gut) + 64px); }
+@media (min-width: 861px) {
+    .s-hero-stage { padding-top: var(--s-gut); }
+}
+
+/* 2. Captions were centred under their pictures while every other block on the
+      page starts on the same left edge. Follow the page. */
+.s-band figcaption {
+    margin-inline: 0;
+    max-width: min(62ch, 100%);
+    padding-left: max(var(--s-gut), calc((100vw - var(--s-max)) / 2 + var(--s-gut)));
+    padding-right: var(--s-gut);
+}
+
+/* 3. The sections carried over from the old template centre their headings;
+      the ones built here are left-aligned, and the mix read as ragged. */
+.s-page .section-header {
+    text-align: left;
+    max-width: 58ch;
+    margin-inline: 0;
+}
+.s-page .price-includes,
+.s-page .pricing-grid { margin-inline: 0; }
+
+/* The carried-over components bring their own sizes (20px card headings, 40px
+   prices, 17.6px paragraphs). Map them onto this page's five steps rather than
+   letting the page run to eleven. The 12-15px inside data-ui fragments stays:
+   that is interface text at its true size, which is the point of a fragment. */
+.s-page .service-card h3,
+.s-page .price-card h3 { font-size: var(--s-lead); }
+.s-page .service-card p,
+.s-page .price-card p,
+.s-page .price-includes li,
+.s-page .price-note { font-size: var(--s-body); }
+.s-page .price-amount { font-size: var(--s-head); }
+.s-page .price-unit { font-size: var(--s-body); }
+.s-page .btn { font-size: var(--s-body); }
+.s-page .price-includes h3 { font-size: var(--s-lead); }

@@ -90,7 +90,7 @@ PAGES = [
     {'template': 'src/service.html', 'slug': 'vps', 'content_key': 'vps_page'},
     {'template': 'src/service.html', 'slug': 'idc', 'content_key': 'idc_page'},
     {'template': 'src/service.html', 'slug': 'cloud', 'content_key': 'cloud_page'},
-    {'template': 'src/platform.html', 'slug': 'ssl', 'content_key': 'ssl_page'},
+    {'template': 'src/ssl.html', 'slug': 'ssl', 'content_key': 'ssl_page'},
     {'template': 'src/platform.html', 'slug': 'speedtest', 'content_key': 'speedtest_page'},
     {'template': 'src/platform.html', 'slug': 'icp-check', 'content_key': 'icp_check_page'},
     {'template': 'src/blog.html', 'slug': 'blog', 'content_key': None},
@@ -454,6 +454,94 @@ def build_customers_section(page_content):
 """
 
 
+def build_picker_modes(page_content):
+    """The hero's live control: three modes, each carrying its own readout.
+
+    The data sits in data- attributes so the page works with no script: the
+    fallback stylesheet shows the first mode's readout, and main.js only swaps
+    which one is shown. Each mode is a real radio, so it is reachable by
+    keyboard and announced as a group.
+    """
+    p = page_content.get('picker')
+    if not p:
+        return ''
+    out = []
+    for n in (1, 2, 3):
+        m = p.get(f'm{n}')
+        if not m:
+            break
+        e = lambda k: html_escape(m.get(k, ''))
+        checked = ' checked' if n == 1 else ''
+        out.append(
+            f'                    <label class="s-key-mode">\n'
+            f'                        <input type="radio" name="keymode" value="m{n}"{checked}\n'
+            f'                               data-where="{e("where")}" data-path="{e("path")}"\n'
+            f'                               data-reach="{e("reach")}" data-verdict="{e("verdict")}">\n'
+            f'                        <span>{m.get("name", "")}</span>\n'
+            f'                    </label>')
+    return '\n'.join(out)
+
+
+def build_integration_tiles(page_content):
+    """The provider names as large type on filled tiles.
+
+    No logo files exist for seventeen providers, and the blueprint is explicit
+    that a tile then carries the name set large rather than a drawn mark.
+    """
+    it = page_content.get('integrations')
+    if not it:
+        return ''
+    blocks = []
+    for key, label_key in (('dns', 'dns_label'), ('cdn', 'cdn_label')):
+        names = it.get(key) or []
+        if not names:
+            continue
+        tiles = '\n'.join(
+            f'                    <li class="s-tile">{html_escape(n)}</li>' for n in names)
+        blocks.append(
+            f'            <div class="s-int-set">\n'
+            f'                <h3 class="s-int-label">{it.get(label_key, "")} '
+            f'<span class="s-int-count">{len(names)}</span></h3>\n'
+            f'                <ul class="s-tiles">\n{tiles}\n                </ul>\n'
+            f'            </div>')
+    return '\n'.join(blocks)
+
+
+def build_flow_edges(page_content):
+    """The edge-check readout: the nodes the platform actually verifies from."""
+    if not page_content.get('flow'):
+        return ''
+    nodes = [('\u53f0\u5317', 'TW'), ('\u6771\u4eac', 'JP'), ('\u6cd5\u862d\u514b\u798f', 'DE'),
+             ('\u5f17\u5409\u5c3c\u4e9e', 'US'), ('\u65b0\u52a0\u5761', 'SG')]
+    rows = '\n'.join(
+        f'                        <li><span class="s-edge-cc">{cc}</span>'
+        f'<span class="s-edge-n">{name}</span><span class="s-edge-ok">OK</span></li>'
+        for name, cc in nodes)
+    return f'                    <ul class="s-edges">\n{rows}\n                    </ul>'
+
+
+def build_faq_index(page_content):
+    """Questions on the left, the selected answer on the right.
+
+    Every answer ships in the markup inside its own <details>, so with no
+    script the page is a plain, readable list of questions and answers; the
+    script turns it into the index the blueprint describes.
+    """
+    faq = page_content.get('faq')
+    if not faq:
+        return ''
+    items = []
+    n = 1
+    while f'q{n}' in faq:
+        items.append(
+            f'                <details class="s-q"{" open" if n == 1 else ""}>\n'
+            f'                    <summary>{faq[f"q{n}"]}</summary>\n'
+            f'                    <div class="s-a"><p>{faq[f"a{n}"]}</p></div>\n'
+            f'                </details>')
+        n += 1
+    return '\n'.join(items)
+
+
 def build_security_section(page_content):
     """Render the security block only for pages that define one.
 
@@ -616,6 +704,11 @@ def build():
             flat['security_section'] = ''
             flat['keymodes_section'] = ''
             flat['customers_section'] = ''
+            flat['picker_modes'] = ''
+            flat['integration_tiles'] = ''
+            flat['flow_edges'] = ''
+            flat['faq_index'] = ''
+            flat['ssl_css_v'] = asset_version('css/ssl.css')
 
             if page['content_key']:
                 page_content = translations.get(page['content_key'], {})
@@ -655,6 +748,10 @@ def build():
                 flat['security_section'] = build_security_section(page_content)
                 flat['keymodes_section'] = build_keymodes_section(page_content)
                 flat['customers_section'] = build_customers_section(page_content)
+                flat['picker_modes'] = build_picker_modes(page_content)
+                flat['integration_tiles'] = build_integration_tiles(page_content)
+                flat['flow_edges'] = build_flow_edges(page_content)
+                flat['faq_index'] = build_faq_index(page_content)
                 flat['faq_items'] = build_faq_items(page_content)
                 flat['faq_jsonld'] = build_faq_jsonld(page_content)
                 flat['webapp_jsonld'] = build_webapp_jsonld(

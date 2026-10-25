@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="{{ lang_code }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>{{ page.seo.title }}</title>
+    <meta name="title" content="{{ page.seo.title }}">
+    <meta name="description" content="{{ page.seo.description }}">
+    <meta name="keywords" content="{{ page.seo.keywords }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kineticlinks.net{{ lang_path }}{{ service_slug_path }}">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://www.kineticlinks.net/{{ service_slug_path }}" />
+    <link rel="alternate" hreflang="en" href="https://www.kineticlinks.net/en/{{ service_slug_path }}" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.kineticlinks.net/zh-cn/{{ service_slug_path }}" />
+    <link rel="alternate" hreflang="x-default" href="https://www.kineticlinks.net/{{ service_slug_path }}" />
+
+    <!-- Open Graph / Facebook / Line -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kineticlinks.net{{ lang_path }}{{ service_slug_path }}">
+    <meta property="og:title" content="{{ page.seo.title }}">
+    <meta property="og:description" content="{{ page.seo.description }}">
+    <meta property="og:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kineticlinks.net{{ lang_path }}{{ service_slug_path }}">
+    <meta property="twitter:title" content="{{ page.seo.title }}">
+    <meta property="twitter:description" content="{{ page.seo.description }}">
+    <meta property="twitter:image" content="https://www.kineticlinks.net/assets/images/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD): Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "{{ page.hero.title }}",
+      "name": "{{ page.seo.title }}",
+      "description": "{{ page.seo.description }}",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kineticlinks",
+        "url": "https://www.kineticlinks.net/"
+      },
+      "areaServed": ["TW", "CN", "HK", "Asia"],
+      "url": "https://www.kineticlinks.net{{ lang_path }}{{ service_slug_path }}"
+    }
+    </script>
+
+{{ webapp_jsonld }}    <!-- Structured Data (JSON-LD): Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "{{ nav.home }}",
+          "item": "https://www.kineticlinks.net{{ lang_path }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ nav.platforms }}",
+          "item": "https://www.kineticlinks.net{{ lang_path }}#platforms"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ page.hero.title }}",
+          "item": "https://www.kineticlinks.net{{ lang_path }}{{ service_slug_path }}"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD): FAQPage -->
+    <script type="application/ld+json">
+{{ faq_jsonld }}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Self-hosted fonts (no external font CDN) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css?v={{ css_v }}">
+    <link rel="stylesheet" href="/css/ssl.css?v={{ ssl_css_v }}">
+{{ analytics }}</head>
+
+<body class="s-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ lang_path }}" class="logo">Kinetic<span>links</span></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="{{ lang_path }}#home">{{ nav.home }}</a>
+                <a href="{{ lang_path }}#services">{{ nav.services }}</a>
+                <a href="{{ lang_path }}#platforms">{{ nav.platforms }}</a>
+                <a href="{{ lang_path }}blog/">{{ nav.blog }}</a>
+                <a href="{{ lang_path }}#about">{{ nav.about }}</a>
+                <a href="{{ lang_path }}#contact" class="btn btn-outline">{{ nav.contact }}</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn">{{ current_lang_name }} ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="/{{ service_slug_path }}">繁體中文</a>
+                        <a href="/en/{{ service_slug_path }}">English</a>
+                        <a href="/zh-cn/{{ service_slug_path }}">简体中文</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" type="button" aria-label="{{ nav.menu }}"
+                aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+
+    <!-- Hero: the control that shows where the key lives -->
+    <header class="s-hero">
+        <div class="s-hero-said">
+            <h1 class="s-hero-title"><span>{{ page.hero.title_l1 }}</span><span>{{ page.hero.title_l2 }}</span></h1>
+            <p class="s-hero-sentence">{{ page.hero.sentence }}</p>
+            <a href="{{ page.platform_url }}" target="_blank" rel="noopener" class="s-action">{{ page.hero.action }}</a>
+            <p class="s-hero-note">{{ page.hero.note }}</p>
+        </div>
+
+        <div class="s-hero-stage">
+            <div class="s-key" data-ui data-key-picker>
+                <p class="s-key-label" id="s-key-label">{{ page.picker.label }}</p>
+
+                <div class="s-key-modes" role="radiogroup" aria-labelledby="s-key-label">
+{{ picker_modes }}
+                </div>
+
+                <dl class="s-key-out" aria-live="polite">
+                    <div class="s-key-row">
+                        <dt>{{ page.picker.f_where }}</dt>
+                        <dd data-key-where>{{ page.picker.m1.where }}</dd>
+                    </div>
+                    <div class="s-key-row">
+                        <dt>{{ page.picker.f_path }}</dt>
+                        <dd data-key-path>{{ page.picker.m1.path }}</dd>
+                    </div>
+                    <div class="s-key-row">
+                        <dt>{{ page.picker.f_reach }}</dt>
+                        <dd data-key-reach>{{ page.picker.m1.reach }}</dd>
+                    </div>
+                </dl>
+
+                <p class="s-key-verdict" data-key-verdict>{{ page.picker.m1.verdict }}</p>
+                <p class="s-key-plan">{{ page.picker.plan_note }}</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- how-it-works: call and response -->
+    <section class="s-flow" aria-labelledby="s-flow-h">
+        <div class="s-wrap">
+            <h2 id="s-flow-h">{{ page.flow.title }}</h2>
+
+            <div class="s-xchg">
+                <p class="s-xchg-lead">{{ page.flow.s1_lead }}</p>
+                <div class="s-call"><span class="s-call-label">{{ page.flow.s1_call_label }}</span>{{ page.flow.s1_call }}</div>
+                <div class="s-resp" data-ui><p>{{ page.flow.s1_resp }}</p></div>
+            </div>
+
+            <div class="s-xchg">
+                <p class="s-xchg-lead">{{ page.flow.s2_lead }}</p>
+                <div class="s-call"><span class="s-call-label">{{ page.flow.s2_call_label }}</span>{{ page.flow.s2_call }}</div>
+                <div class="s-resp" data-ui><p>{{ page.flow.s2_resp }}</p></div>
+            </div>
+
+            <div class="s-xchg">
+                <p class="s-xchg-lead">{{ page.flow.s3_lead }}</p>
+                <div class="s-call"><span class="s-call-label">{{ page.flow.s3_call_label }}</span>{{ page.flow.s3_call }}</div>
+                <div class="s-resp s-resp-wide" data-ui>
+                    <p class="s-resp-title">{{ page.flow.s3_resp_title }}</p>
+{{ flow_edges }}
+                    <p class="s-resp-note">{{ page.flow.s3_resp_note }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- the chain of trust, in the material it used to be made of -->
+    <figure class="s-band s-band-seal">
+        <img src="/assets/traite-d-alliance-france-russie-prusse-1717.jpg"
+             width="1920" height="1440" loading="lazy" decoding="async"
+             alt="{{ page.pics.seal_alt }}">
+        <figcaption>{{ page.pics.seal_cap }}</figcaption>
+    </figure>
+
+    <!-- proof: the integrations as large tiles -->
+    <section class="s-int" aria-labelledby="s-int-h">
+        <div class="s-wrap">
+            <div class="s-int-head">
+                <h2 id="s-int-h">{{ page.integrations.title }}</h2>
+                <p>{{ page.integrations.desc }}</p>
+            </div>
+{{ integration_tiles }}
+        </div>
+    </section>
+
+    <figure class="s-band s-band-rack">
+        <img src="/assets/a-system-administrator-s-workstation-within-a.jpg"
+             width="1365" height="2048" loading="lazy" decoding="async"
+             alt="{{ page.pics.rack_alt }}">
+        <figcaption>{{ page.pics.rack_cap }}</figcaption>
+    </figure>
+
+{{ security_section }}
+{{ pricing_section }}
+
+    <!-- faq: question index, one answer -->
+    <section class="s-faq" aria-labelledby="s-faq-h">
+        <div class="s-wrap">
+            <h2 id="s-faq-h">{{ page.faq.title }}</h2>
+            <div class="s-faq-grid" data-faq>
+{{ faq_index }}
+            </div>
+        </div>
+    </section>
+
+    <!-- cta -->
+    <section class="s-cta">
+        <div class="s-wrap s-cta-grid">
+            <div class="s-cta-said">
+                <h2>{{ page.cta.title }}</h2>
+                <p>{{ page.cta.desc }}</p>
+            </div>
+            <div class="s-cta-act">
+                <a href="{{ page.platform_url }}" target="_blank" rel="noopener" class="s-action s-action-lg">{{ page.cta.button }}</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kinetic<span>links</span></h3>
+                    <p>{{ footer.brand_desc }}</p>
+                </div>
+                <div class="footer-links">
+                    <a href="{{ lang_path }}cdn/">{{ services.cdn.title }}</a>
+                    <a href="{{ lang_path }}vps/">{{ services.vps.title }}</a>
+                    <a href="{{ lang_path }}idc/">{{ services.idc.title }}</a>
+                    <a href="{{ lang_path }}cloud/">{{ services.cloud.title }}</a>
+                    <a href="{{ lang_path }}ssl/">{{ platforms.ssl.title }}</a>
+                    <a href="{{ lang_path }}speedtest/">{{ platforms.speedtest.title }}</a>
+                    <a href="{{ lang_path }}icp-check/">{{ platforms.icp_check.title }}</a>
+                    <a href="{{ lang_path }}blog/">{{ nav.blog }}</a>
+                    <a href="{{ lang_path }}#contact">{{ nav.contact }}</a>
+                    <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                    <p class="credits">Pictures: <a href="https://wordpress.org/photos/photo/61563ef3d9/">&ldquo;A system administrator&rsquo;s workstation within a data processing centre&rdquo;</a> by Javier Salinas, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>, via WordPress Photo Directory; <a href="https://commons.wikimedia.org/wiki/File:Trait%C3%A9_d%27alliance_France_Russie_Prusse_1717.jpg">&ldquo;Trait&eacute; d&rsquo;alliance France Russie Prusse 1717&rdquo;</a> by Archives du minist&egrave;re des Affaires &eacute;trang&egrave;res, Paris, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons.</p>
+                <p>{{ footer.rights }}</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v={{ js_v }}" defer></script>
+</body>
+
+</html>
