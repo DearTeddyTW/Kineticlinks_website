@@ -97,6 +97,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=b60d11d0">
+    <link rel="stylesheet" href="/css/home.css?v=14393026">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -111,7 +112,7 @@
     </script>
 </head>
 
-<body>
+<body class="b-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -144,171 +145,108 @@
     </nav>
 
     <main id="main">
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <div class="hero-text glass-panel">
-                <div class="badge">Next-Gen IT Infrastructure</div>
-                <h1>引领未来的<br><span class="text-gradient">数字基础建设</span></h1>
-                <p>我们提供 CDN 内容传递、VPS 虚拟主机、IDC 建置与混合云解决方案，并自营 SSL 证书自动化、中国三网测速与 ICP 备案查询平台。</p>
-                <div class="hero-actions">
-                    <a href="#services" class="btn btn-primary">探索服务</a>
-                    <a href="#contact" class="btn btn-secondary">专人咨询</a>
+
+    <section class="b-board" aria-labelledby="b-h1">
+        <div class="b-grid">
+            <div class="b-tile b-name b-w6">
+                <h1 class="b-wordmark" id="b-h1">Kinetic<span>links</span></h1>
+                <p class="b-name-line">跨境网络基础架构</p>
+            </div>
+            <p class="b-tile b-statement b-w6">有些东西是我们自己写、自己营运的。有些是我们代理上游、负责规划与集成的。这一页把两边分开讲。</p>
+            <figure class="b-tile b-pic b-w8">
+                <img src="/assets/principal-ocean-cables-in-1917.jpg" width="1024" height="401"
+                     alt="1917 年的全球海底电缆图，黑色陆块之间以细线标出各洲之间的电缆路径" decoding="async">
+                <figcaption>1917 年的海底电缆图。跨境连接一直都是实体的东西。</figcaption>
+            </figure>
+            <a class="b-tile b-act b-w4" href="#contact">联系我们</a>
+        </div>
+        <div class="b-field b-field-run">
+            <div class="b-grid">
+                <div class="b-tile b-label b-w12">
+                    <h2>我们自己写、自己营运</h2>
+                    <p>下面三格是这些平台实际回传的样子。</p>
                 </div>
+                <a class="b-tile b-run b-w8" href="/zh-cn/ssl/">
+                <p class="b-kicker">SSL 证书自动化</p>
+                <p class="b-line">私钥放哪里由你决定</p>
+                <div class="b-ui" data-ui>
+                    <p class="b-ui-label">节点巡检</p>
+                    <ul class="b-ui-list">
+                    <li><span>TW</span><span>台北</span><span class="b-ok">OK</span></li>
+                    <li><span>JP</span><span>東京</span><span class="b-ok">OK</span></li>
+                    <li><span>DE</span><span>法蘭克福</span><span class="b-ok">OK</span></li>
+                    </ul>
+                </div>
+            </a>
+                <a class="b-tile b-run b-w4" href="/zh-cn/speedtest/">
+                <p class="b-kicker">三网测速平台</p>
+                <p class="b-line">中国电信、联通、移动实测</p>
+                <div class="b-ui" data-ui>
+                    <p class="b-ui-label">台北 → 上海</p>
+                    <ul class="b-ui-list">
+                    <li><span>電信</span><span>68 ms</span><span class="b-ok">0.0%</span></li>
+                    <li><span>聯通</span><span>91 ms</span><span class="b-ok">0.2%</span></li>
+                    <li><span>移動</span><span>77 ms</span><span class="b-ok">0.0%</span></li>
+                    </ul>
+                </div>
+            </a>
+                <a class="b-tile b-run b-w4" href="/zh-cn/icp-check/">
+                <p class="b-kicker">ICP 备案查询</p>
+                <p class="b-line">查得到你真正要查的那个域名</p>
+                <div class="b-ui" data-ui>
+                    <p class="b-ui-label">查询结果</p>
+                    <p class="b-ui-dom">example.com</p>
+                    <p class="b-ui-verdict">没有备案</p>
+                    <p class="b-ui-note">不能解析至中国境内节点</p>
+                </div>
+            </a>
+                <figure class="b-tile b-pic b-w8 b-pic-sw">
+                    <img src="/assets/1940s-n935-telephone-exchange.jpg"
+                         width="1920" height="1801" loading="lazy" decoding="async"
+                         alt="1940 年代的木制电话交换机，面板上一排贴着标签的开关：夜间分机、保留、响铃、接线生电话">
+                    <figcaption>1940 年代的电话交换机。一排贴着标签的开关，每一个决定线路接到哪里——这件事没有变，只是现在跑在软件里。</figcaption>
+                </figure>
             </div>
+        </div>
+        <div class="b-field b-field-resell">
+            <div class="b-grid">
+                <div class="b-tile b-label b-w12">
+                    <h2>我们代理上游，负责规划与集成</h2>
+                    <p>能力来自上游；规划、集成与中文窗口是我们。</p>
+                </div>
+                <a class="b-tile b-resell b-w3" href="/zh-cn/cdn/">
+                <p class="b-kicker">CDN 内容分发网络</p>
+                <p class="b-line b-line-sm">全球边缘节点布局，提供极致的静动态内容加速与强大的 DDoS 防护能力，确保您的服务无远弗届。</p>
+            </a>
+                <a class="b-tile b-resell b-w3" href="/zh-cn/vps/">
+                <p class="b-kicker">VPS 虚拟专属主机</p>
+                <p class="b-line b-line-sm">基于 NVMe SSD 与顶级 CPU 的高性能运算资源，支持弹性扩充，提供最高性价比的主机服务。</p>
+            </a>
+                <a class="b-tile b-resell b-w3" href="/zh-cn/idc/">
+                <p class="b-kicker">IDC 机房建置</p>
+                <p class="b-line b-line-sm">从硬件采购、网络架构规划到机房部署，提供一站式定制化解决方案，打造企业级安全数据中心。</p>
+            </a>
+                <a class="b-tile b-resell b-w3" href="/zh-cn/cloud/">
+                <p class="b-kicker">公有云架构解决方案</p>
+                <p class="b-line b-line-sm">深度整合 AWS、GCP、Azure 等主流公有云服务，提供云端搬迁、混合云架构设计与成本优化顾问。</p>
+            </a>
+                <figure class="b-tile b-pic b-w12 b-pic-rack">
+                    <img src="/assets/a-system-administrator-s-workstation-within-a.jpg"
+                         width="1365" height="2048" loading="lazy" decoding="async"
+                         alt="数据中心的走道，两侧是黑色机柜，白色架高地板">
+                </figure>
+            </div>
+        </div>
+        <div class="b-grid b-close">
+            <figure class="b-tile b-pic b-w12 b-pic-fm">
+                <img src="/assets/1640-map-of-formosa-taiwan-by-dutch.jpg"
+                     width="1920" height="1326" loading="lazy" decoding="async"
+                     alt="1640 年荷兰人绘制的福尔摩沙（台湾）与澎湖海图，手工上色，罗盘线自两个方位玫瑰放射而出">
+                <figcaption>1640 年，荷兰人画的福尔摩沙与澎湖。那些放射线是航线——有人得先渡过去，才画得出来。我们在这座岛上。</figcaption>
+            </figure>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
-        <div class="container">
-            <div class="section-header">
-                <h2>我们的<span class="text-gradient">核心服务</span></h2>
-                <p>全方位的 IT 架构解决方案，满足各阶段企业的发展需求</p>
-            </div>
-            <div class="services-grid">
-                <!-- CDN Card -->
-                <a href="/zh-cn/cdn/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M2 12h20" />
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                        </svg>
-                    </div>
-                    <h3>CDN 内容分发网络</h3>
-                    <p>全球边缘节点布局，提供极致的静动态内容加速与强大的 DDoS 防护能力，确保您的服务无远弗届。</p>
-                    <ul class="feature-list">
-                        <li>上游节点网络涵盖全球</li>
-                        <li>智能路由加速</li>
-                        <li>上游 T 级清洗能力</li>
-                    </ul>
-                    <span class="card-link">了解更多 →</span>
-                </a>
-                <!-- VPS Card -->
-                <a href="/zh-cn/vps/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="18" height="18" x="3" y="3" rx="2" />
-                            <path d="M12 8v8" />
-                            <path d="M8 12h8" />
-                        </svg>
-                    </div>
-                    <h3>VPS 虚拟专属主机</h3>
-                    <p>基于 NVMe SSD 与顶级 CPU 的高性能运算资源，支持弹性扩充，提供最高性价比的主机服务。</p>
-                    <ul class="feature-list">
-                        <li>极致 I/O 性能</li>
-                        <li>专属独立资源</li>
-                        <li>自动备份快照</li>
-                    </ul>
-                    <span class="card-link">了解更多 →</span>
-                </a>
-                <!-- IDC Card -->
-                <a href="/zh-cn/idc/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
-                            <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
-                            <line x1="6" x2="6.01" y1="6" y2="6" />
-                            <line x1="6" x2="6.01" y1="18" y2="18" />
-                        </svg>
-                    </div>
-                    <h3>IDC 机房建置</h3>
-                    <p>从硬件采购、网络架构规划到机房部署，提供一站式定制化解决方案，打造企业级安全数据中心。</p>
-                    <ul class="feature-list">
-                        <li>定制化架构设计</li>
-                        <li>BGP 双线路部署</li>
-                        <li>机房 24/7 驻点监控</li>
-                    </ul>
-                    <span class="card-link">了解更多 →</span>
-                </a>
-                <!-- Cloud Card -->
-                <a href="/zh-cn/cloud/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-                        </svg>
-                    </div>
-                    <h3>公有云架构解决方案</h3>
-                    <p>深度整合 AWS、GCP、Azure 等主流公有云服务，提供云端搬迁、混合云架构设计与成本优化顾问。</p>
-                    <ul class="feature-list">
-                        <li>多云混合架构</li>
-                        <li>无缝云端搬迁</li>
-                        <li>信息安全与合规性</li>
-                    </ul>
-                    <span class="card-link">了解更多 →</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Platforms Section -->
-    <section id="platforms" class="services section">
-        <div class="container">
-            <div class="section-header">
-                <h2>旗下<span class="text-gradient">平台产品</span></h2>
-                <p>专为开发者与企业打造的自动化工具与检测平台</p>
-            </div>
-            <div class="services-grid">
-                <!-- SSL Platform Card -->
-                <a href="/zh-cn/ssl/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                        </svg>
-                    </div>
-                    <h3>SSL 证书自动化平台</h3>
-                    <p>一站式 SSL 证书购买与管理平台。支持 DNS 自动验证，签发后可自动推送到多个主流 CDN 节点。</p>
-                    <ul class="feature-list">
-                        <li>整合 GoDaddy 等主流 DNS</li>
-                        <li>自动推送至多品牌 CDN</li>
-                        <li>全自动化验证与签发流程</li>
-                    </ul>
-                    <span class="card-link">了解更多 →</span>
-                </a>
-                <!-- Speedtest Platform Card -->
-                <a href="/zh-cn/speedtest/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                        </svg>
-                    </div>
-                    <h3>全球三网测速平台</h3>
-                    <p>专为亚太区及中国三网（电信、联通、移动）打造的连线质量检测工具。提供免费测速与进阶 API 服务。</p>
-                    <ul class="feature-list">
-                        <li>中国三网连线质量测试</li>
-                        <li>提供免费且即时的节点检测</li>
-                        <li>支持商业版 API 轻松串接</li>
-                    </ul>
-                    <span class="card-link">了解更多 →</span>
-                </a>
-                <!-- ICP Check Platform Card -->
-                <a href="/zh-cn/icp-check/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="m9 12 2 2 4-4"/>
-                        </svg>
-                    </div>
-                    <h3>ICP 备案状态即时查询</h3>
-                    <p>即时查询域名在中国工信部（MIIT）的 ICP 备案状态、主体名称与审核信息。</p>
-                    <ul class="feature-list">
-                        <li>即时工信部 ICP 备案状态查询</li>
-                        <li>验证主体性质、备案号与域名</li>
-                        <li>批量检测与 API 接取欢迎来信洽询</li>
-                    </ul>
-                    <span class="card-link">了解更多 →</span>
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Stats / About Section -->
     <section id="about" class="about section">
@@ -519,13 +457,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                    <p class="credits">Pictures: <a href="https://www.flickr.com/photos/24431382@N03/6858366278">&ldquo;Principal Ocean Cables in 1917&rdquo;</a> by Eric Fischer, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Flickr; <a href="https://commons.wikimedia.org/w/index.php?curid=66686359">&ldquo;1940s N935 telephone exchange&rdquo;</a> by Rodhullandemu, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:1640_Map_of_Formosa-Taiwan_by_Dutch_%E8%8D%B7%E8%98%AD%E4%BA%BA%E6%89%80%E7%B9%AA%E7%A6%8F%E7%88%BE%E6%91%A9%E6%B2%99-%E8%87%BA%E7%81%A3.jpg">&ldquo;1640 Map of Formosa-Taiwan&rdquo;</a> by Johannes Vingboons, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons.</p>
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=8cac2601" defer></script>
+    <script src="/js/main.js?v=56848c1b" defer></script>
 </body>
 
 </html>

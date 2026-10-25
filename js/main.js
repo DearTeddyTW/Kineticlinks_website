@@ -367,3 +367,26 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
     }, { rootMargin: '0px 0px -12% 0px' });
     parts.forEach((el) => io.observe(el));
 })();
+
+/* The board's tiles arrive in their own time. Visible by default. */
+(function () {
+    if (!document.querySelector('.b-page')) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const tiles = document.querySelectorAll(
+        '.b-field .b-tile, .b-page .stat-item, .b-page .article-card, ' +
+        '.b-page .faq-item, .b-page .section-header, .b-page .contact-card');
+    if (!tiles.length || !('IntersectionObserver' in window)) return;
+    tiles.forEach((t) => t.classList.add('b-enter'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const sibs = [...entry.target.parentElement.children]
+                .filter((c) => c.classList.contains('b-enter'));
+            entry.target.style.transitionDelay =
+                Math.min(Math.max(0, sibs.indexOf(entry.target)), 5) * 60 + 'ms';
+            entry.target.classList.add('b-in');
+            io.unobserve(entry.target);
+        });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    tiles.forEach((t) => io.observe(t));
+})();

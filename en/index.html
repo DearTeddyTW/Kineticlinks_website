@@ -97,6 +97,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=b60d11d0">
+    <link rel="stylesheet" href="/css/home.css?v=14393026">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -111,7 +112,7 @@
     </script>
 </head>
 
-<body>
+<body class="b-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -144,171 +145,108 @@
     </nav>
 
     <main id="main">
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <div class="hero-text glass-panel">
-                <div class="badge">Next-Gen IT Infrastructure</div>
-                <h1>Leading the Future of<br><span class="text-gradient">Digital Infrastructure</span></h1>
-                <p>CDN delivery, VPS hosting, IDC build-outs and hybrid cloud, alongside three platforms we run ourselves: SSL certificate automation, China three-network speed testing, and ICP filing lookup.</p>
-                <div class="hero-actions">
-                    <a href="#services" class="btn btn-primary">Explore Services</a>
-                    <a href="#contact" class="btn btn-secondary">Consult an Expert</a>
+
+    <section class="b-board" aria-labelledby="b-h1">
+        <div class="b-grid">
+            <div class="b-tile b-name b-w6">
+                <h1 class="b-wordmark" id="b-h1">Kinetic<span>links</span></h1>
+                <p class="b-name-line">Cross-border network infrastructure</p>
+            </div>
+            <p class="b-tile b-statement b-w6">Some of this we write and run ourselves. Some we resell from upstream and take responsibility for planning and integrating. This page keeps the two apart.</p>
+            <figure class="b-tile b-pic b-w8">
+                <img src="/assets/principal-ocean-cables-in-1917.jpg" width="1024" height="401"
+                     alt="A 1917 map of the world's submarine cables, with cable routes drawn as fine lines between black landmasses" decoding="async">
+                <figcaption>Ocean cables in 1917. Crossing a border has always been a physical thing.</figcaption>
+            </figure>
+            <a class="b-tile b-act b-w4" href="#contact">Talk to us</a>
+        </div>
+        <div class="b-field b-field-run">
+            <div class="b-grid">
+                <div class="b-tile b-label b-w12">
+                    <h2>Written and run by us</h2>
+                    <p>The three below show what these platforms actually return.</p>
                 </div>
+                <a class="b-tile b-run b-w8" href="/en/ssl/">
+                <p class="b-kicker">SSL certificate automation</p>
+                <p class="b-line">You decide where the private key lives</p>
+                <div class="b-ui" data-ui>
+                    <p class="b-ui-label">Edge checks</p>
+                    <ul class="b-ui-list">
+                    <li><span>TW</span><span>Taipei</span><span class="b-ok">OK</span></li>
+                    <li><span>JP</span><span>Tokyo</span><span class="b-ok">OK</span></li>
+                    <li><span>DE</span><span>Frankfurt</span><span class="b-ok">OK</span></li>
+                    </ul>
+                </div>
+            </a>
+                <a class="b-tile b-run b-w4" href="/en/speedtest/">
+                <p class="b-kicker">Three-network speed test</p>
+                <p class="b-line">China Telecom, Unicom and Mobile, measured</p>
+                <div class="b-ui" data-ui>
+                    <p class="b-ui-label">Taipei to Shanghai</p>
+                    <ul class="b-ui-list">
+                    <li><span>Telecom</span><span>68 ms</span><span class="b-ok">0.0%</span></li>
+                    <li><span>Unicom</span><span>91 ms</span><span class="b-ok">0.2%</span></li>
+                    <li><span>Mobile</span><span>77 ms</span><span class="b-ok">0.0%</span></li>
+                    </ul>
+                </div>
+            </a>
+                <a class="b-tile b-run b-w4" href="/en/icp-check/">
+                <p class="b-kicker">ICP filing lookup</p>
+                <p class="b-line">It finds the domain you actually asked about</p>
+                <div class="b-ui" data-ui>
+                    <p class="b-ui-label">Result</p>
+                    <p class="b-ui-dom">example.com</p>
+                    <p class="b-ui-verdict">No filing</p>
+                    <p class="b-ui-note">Cannot resolve to mainland Chinese nodes</p>
+                </div>
+            </a>
+                <figure class="b-tile b-pic b-w8 b-pic-sw">
+                    <img src="/assets/1940s-n935-telephone-exchange.jpg"
+                         width="1920" height="1801" loading="lazy" decoding="async"
+                         alt="A 1940s wooden telephone exchange, its panel a row of labelled switches: night extension, hold, ring, operator's telephone">
+                    <figcaption>A 1940s telephone exchange. A row of labelled switches, each deciding where a line goes. That has not changed; it just runs in software now.</figcaption>
+                </figure>
             </div>
+        </div>
+        <div class="b-field b-field-resell">
+            <div class="b-grid">
+                <div class="b-tile b-label b-w12">
+                    <h2>Resold from upstream, planned and integrated by us</h2>
+                    <p>The capability is upstream; the planning, integration and contact are ours.</p>
+                </div>
+                <a class="b-tile b-resell b-w3" href="/en/cdn/">
+                <p class="b-kicker">Content Delivery Network (CDN)</p>
+                <p class="b-line b-line-sm">Global edge node deployment delivering extreme static and dynamic content acceleration with powerful DDoS protection.</p>
+            </a>
+                <a class="b-tile b-resell b-w3" href="/en/vps/">
+                <p class="b-kicker">Virtual Private Server (VPS)</p>
+                <p class="b-line b-line-sm">High-performance computing resources based on NVMe SSD and top-tier CPUs, supporting elastic scaling for maximum ROI.</p>
+            </a>
+                <a class="b-tile b-resell b-w3" href="/en/idc/">
+                <p class="b-kicker">IDC Construction</p>
+                <p class="b-line b-line-sm">From hardware procurement and network architecture planning to data center deployment, offering one-stop custom solutions.</p>
+            </a>
+                <a class="b-tile b-resell b-w3" href="/en/cloud/">
+                <p class="b-kicker">Public Cloud Solutions</p>
+                <p class="b-line b-line-sm">Deep integration with major public clouds like AWS, GCP, and Azure, providing cloud migration, hybrid design, and cost optimization.</p>
+            </a>
+                <figure class="b-tile b-pic b-w12 b-pic-rack">
+                    <img src="/assets/a-system-administrator-s-workstation-within-a.jpg"
+                         width="1365" height="2048" loading="lazy" decoding="async"
+                         alt="A data centre aisle lined with black racks on a white raised floor">
+                </figure>
+            </div>
+        </div>
+        <div class="b-grid b-close">
+            <figure class="b-tile b-pic b-w12 b-pic-fm">
+                <img src="/assets/1640-map-of-formosa-taiwan-by-dutch.jpg"
+                     width="1920" height="1326" loading="lazy" decoding="async"
+                     alt="A 1640 Dutch chart of Formosa (Taiwan) and the Pescadores, hand-coloured, with rhumb lines radiating from two compass roses">
+                <figcaption>Formosa and the Pescadores, drawn by the Dutch in 1640. Those radiating lines are sailing routes: someone had to cross first. We are on this island.</figcaption>
+            </figure>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our<span class="text-gradient">Core Services</span></h2>
-                <p>Comprehensive IT architecture solutions meeting the developmental needs of enterprises at all stages.</p>
-            </div>
-            <div class="services-grid">
-                <!-- CDN Card -->
-                <a href="/en/cdn/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M2 12h20" />
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                        </svg>
-                    </div>
-                    <h3>Content Delivery Network (CDN)</h3>
-                    <p>Global edge node deployment delivering extreme static and dynamic content acceleration with powerful DDoS protection.</p>
-                    <ul class="feature-list">
-                        <li>Upstream global node network</li>
-                        <li>Smart Routing Acceleration</li>
-                        <li>Upstream terabit scrubbing</li>
-                    </ul>
-                    <span class="card-link">Learn More →</span>
-                </a>
-                <!-- VPS Card -->
-                <a href="/en/vps/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="18" height="18" x="3" y="3" rx="2" />
-                            <path d="M12 8v8" />
-                            <path d="M8 12h8" />
-                        </svg>
-                    </div>
-                    <h3>Virtual Private Server (VPS)</h3>
-                    <p>High-performance computing resources based on NVMe SSD and top-tier CPUs, supporting elastic scaling for maximum ROI.</p>
-                    <ul class="feature-list">
-                        <li>Extreme I/O Performance</li>
-                        <li>Dedicated Resources</li>
-                        <li>Automated Backups & Snapshots</li>
-                    </ul>
-                    <span class="card-link">Learn More →</span>
-                </a>
-                <!-- IDC Card -->
-                <a href="/en/idc/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
-                            <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
-                            <line x1="6" x2="6.01" y1="6" y2="6" />
-                            <line x1="6" x2="6.01" y1="18" y2="18" />
-                        </svg>
-                    </div>
-                    <h3>IDC Construction</h3>
-                    <p>From hardware procurement and network architecture planning to data center deployment, offering one-stop custom solutions.</p>
-                    <ul class="feature-list">
-                        <li>Custom Architecture Design</li>
-                        <li>BGP Dual-line Deployment</li>
-                        <li>24/7 on-site facility monitoring</li>
-                    </ul>
-                    <span class="card-link">Learn More →</span>
-                </a>
-                <!-- Cloud Card -->
-                <a href="/en/cloud/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-                        </svg>
-                    </div>
-                    <h3>Public Cloud Solutions</h3>
-                    <p>Deep integration with major public clouds like AWS, GCP, and Azure, providing cloud migration, hybrid design, and cost optimization.</p>
-                    <ul class="feature-list">
-                        <li>Multi-cloud Hybrid Architecture</li>
-                        <li>Seamless Cloud Migration</li>
-                        <li>Security and Compliance</li>
-                    </ul>
-                    <span class="card-link">Learn More →</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Platforms Section -->
-    <section id="platforms" class="services section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our<span class="text-gradient">Platform Products</span></h2>
-                <p>Automated tools and testing platforms designed specifically for developers and enterprises.</p>
-            </div>
-            <div class="services-grid">
-                <!-- SSL Platform Card -->
-                <a href="/en/ssl/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                        </svg>
-                    </div>
-                    <h3>Automated SSL Platform</h3>
-                    <p>A one-stop platform for purchasing and managing SSL certificates. Supports automatic DNS validation and CDN deployment.</p>
-                    <ul class="feature-list">
-                        <li>Integration with GoDaddy & major DNS</li>
-                        <li>Auto-push to multi-brand CDNs</li>
-                        <li>Fully automated validation & issuance</li>
-                    </ul>
-                    <span class="card-link">Learn More →</span>
-                </a>
-                <!-- Speedtest Platform Card -->
-                <a href="/en/speedtest/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                        </svg>
-                    </div>
-                    <h3>Global 3-Network Speed Test</h3>
-                    <p>Connection quality testing tool designed for the Asia-Pacific region and China's 3 major networks. Offers free testing and API services.</p>
-                    <ul class="feature-list">
-                        <li>China 3-Network Connection Test</li>
-                        <li>Free & Real-time Node Testing</li>
-                        <li>Commercial API Integration</li>
-                    </ul>
-                    <span class="card-link">Learn More →</span>
-                </a>
-                <!-- ICP Check Platform Card -->
-                <a href="/en/icp-check/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="m9 12 2 2 4-4"/>
-                        </svg>
-                    </div>
-                    <h3>Live ICP filing lookup</h3>
-                    <p>Check a domain's ICP filing status, registrant and approval details with China's MIIT in real time.</p>
-                    <ul class="feature-list">
-                        <li>Live MIIT ICP filing status lookup</li>
-                        <li>Verify registrant type, filing number and domain</li>
-                        <li>Batch checks and API access available on request</li>
-                    </ul>
-                    <span class="card-link">Learn More →</span>
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Stats / About Section -->
     <section id="about" class="about section">
@@ -519,13 +457,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                    <p class="credits">Pictures: <a href="https://www.flickr.com/photos/24431382@N03/6858366278">&ldquo;Principal Ocean Cables in 1917&rdquo;</a> by Eric Fischer, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Flickr; <a href="https://commons.wikimedia.org/w/index.php?curid=66686359">&ldquo;1940s N935 telephone exchange&rdquo;</a> by Rodhullandemu, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:1640_Map_of_Formosa-Taiwan_by_Dutch_%E8%8D%B7%E8%98%AD%E4%BA%BA%E6%89%80%E7%B9%AA%E7%A6%8F%E7%88%BE%E6%91%A9%E6%B2%99-%E8%87%BA%E7%81%A3.jpg">&ldquo;1640 Map of Formosa-Taiwan&rdquo;</a> by Johannes Vingboons, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons.</p>
                 <p>&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=8cac2601" defer></script>
+    <script src="/js/main.js?v=56848c1b" defer></script>
 </body>
 
 </html>

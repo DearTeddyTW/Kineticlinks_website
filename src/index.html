@@ -97,9 +97,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v={{ css_v }}">
+    <link rel="stylesheet" href="/css/home.css?v={{ home_css_v }}">
 {{ analytics }}</head>
 
-<body>
+<body class="b-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -132,171 +133,7 @@
     </nav>
 
     <main id="main">
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <div class="hero-text glass-panel">
-                <div class="badge">{{ hero.badge }}</div>
-                <h1>{{ hero.title1 }}<br><span class="text-gradient">{{ hero.title2 }}</span></h1>
-                <p>{{ hero.desc }}</p>
-                <div class="hero-actions">
-                    <a href="#services" class="btn btn-primary">{{ hero.btn_primary }}</a>
-                    <a href="#contact" class="btn btn-secondary">{{ hero.btn_secondary }}</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-        <div class="container">
-            <div class="section-header">
-                <h2>{{ services.title1 }}<span class="text-gradient">{{ services.title2 }}</span></h2>
-                <p>{{ services.desc }}</p>
-            </div>
-            <div class="services-grid">
-                <!-- CDN Card -->
-                <a href="{{ lang_path }}cdn/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M2 12h20" />
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                        </svg>
-                    </div>
-                    <h3>{{ services.cdn.title }}</h3>
-                    <p>{{ services.cdn.desc }}</p>
-                    <ul class="feature-list">
-                        <li>{{ services.cdn.f1 }}</li>
-                        <li>{{ services.cdn.f2 }}</li>
-                        <li>{{ services.cdn.f3 }}</li>
-                    </ul>
-                    <span class="card-link">{{ services.learn_more }} →</span>
-                </a>
-                <!-- VPS Card -->
-                <a href="{{ lang_path }}vps/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="18" height="18" x="3" y="3" rx="2" />
-                            <path d="M12 8v8" />
-                            <path d="M8 12h8" />
-                        </svg>
-                    </div>
-                    <h3>{{ services.vps.title }}</h3>
-                    <p>{{ services.vps.desc }}</p>
-                    <ul class="feature-list">
-                        <li>{{ services.vps.f1 }}</li>
-                        <li>{{ services.vps.f2 }}</li>
-                        <li>{{ services.vps.f3 }}</li>
-                    </ul>
-                    <span class="card-link">{{ services.learn_more }} →</span>
-                </a>
-                <!-- IDC Card -->
-                <a href="{{ lang_path }}idc/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
-                            <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
-                            <line x1="6" x2="6.01" y1="6" y2="6" />
-                            <line x1="6" x2="6.01" y1="18" y2="18" />
-                        </svg>
-                    </div>
-                    <h3>{{ services.idc.title }}</h3>
-                    <p>{{ services.idc.desc }}</p>
-                    <ul class="feature-list">
-                        <li>{{ services.idc.f1 }}</li>
-                        <li>{{ services.idc.f2 }}</li>
-                        <li>{{ services.idc.f3 }}</li>
-                    </ul>
-                    <span class="card-link">{{ services.learn_more }} →</span>
-                </a>
-                <!-- Cloud Card -->
-                <a href="{{ lang_path }}cloud/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-                        </svg>
-                    </div>
-                    <h3>{{ services.cloud.title }}</h3>
-                    <p>{{ services.cloud.desc }}</p>
-                    <ul class="feature-list">
-                        <li>{{ services.cloud.f1 }}</li>
-                        <li>{{ services.cloud.f2 }}</li>
-                        <li>{{ services.cloud.f3 }}</li>
-                    </ul>
-                    <span class="card-link">{{ services.learn_more }} →</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Platforms Section -->
-    <section id="platforms" class="services section">
-        <div class="container">
-            <div class="section-header">
-                <h2>{{ platforms.title1 }}<span class="text-gradient">{{ platforms.title2 }}</span></h2>
-                <p>{{ platforms.desc }}</p>
-            </div>
-            <div class="services-grid">
-                <!-- SSL Platform Card -->
-                <a href="{{ lang_path }}ssl/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                        </svg>
-                    </div>
-                    <h3>{{ platforms.ssl.title }}</h3>
-                    <p>{{ platforms.ssl.desc }}</p>
-                    <ul class="feature-list">
-                        <li>{{ platforms.ssl.f1 }}</li>
-                        <li>{{ platforms.ssl.f2 }}</li>
-                        <li>{{ platforms.ssl.f3 }}</li>
-                    </ul>
-                    <span class="card-link">{{ services.learn_more }} →</span>
-                </a>
-                <!-- Speedtest Platform Card -->
-                <a href="{{ lang_path }}speedtest/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                        </svg>
-                    </div>
-                    <h3>{{ platforms.speedtest.title }}</h3>
-                    <p>{{ platforms.speedtest.desc }}</p>
-                    <ul class="feature-list">
-                        <li>{{ platforms.speedtest.f1 }}</li>
-                        <li>{{ platforms.speedtest.f2 }}</li>
-                        <li>{{ platforms.speedtest.f3 }}</li>
-                    </ul>
-                    <span class="card-link">{{ services.learn_more }} →</span>
-                </a>
-                <!-- ICP Check Platform Card -->
-                <a href="{{ lang_path }}icp-check/" class="service-card glass-panel interactive" style="display: block;">
-                    <div class="icon-wrapper">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="m9 12 2 2 4-4"/>
-                        </svg>
-                    </div>
-                    <h3>{{ platforms.icp_check.title }}</h3>
-                    <p>{{ platforms.icp_check.desc }}</p>
-                    <ul class="feature-list">
-                        <li>{{ platforms.icp_check.f1 }}</li>
-                        <li>{{ platforms.icp_check.f2 }}</li>
-                        <li>{{ platforms.icp_check.f3 }}</li>
-                    </ul>
-                    <span class="card-link">{{ services.learn_more }} →</span>
-                </a>
-            </div>
-        </div>
-    </section>
+{{ board }}
 
     <!-- Stats / About Section -->
     <section id="about" class="about section">
@@ -475,6 +312,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
+                    <p class="credits">Pictures: <a href="https://www.flickr.com/photos/24431382@N03/6858366278">&ldquo;Principal Ocean Cables in 1917&rdquo;</a> by Eric Fischer, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Flickr; <a href="https://commons.wikimedia.org/w/index.php?curid=66686359">&ldquo;1940s N935 telephone exchange&rdquo;</a> by Rodhullandemu, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:1640_Map_of_Formosa-Taiwan_by_Dutch_%E8%8D%B7%E8%98%AD%E4%BA%BA%E6%89%80%E7%B9%AA%E7%A6%8F%E7%88%BE%E6%91%A9%E6%B2%99-%E8%87%BA%E7%81%A3.jpg">&ldquo;1640 Map of Formosa-Taiwan&rdquo;</a> by Johannes Vingboons, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons.</p>
                 <p>{{ footer.rights }}</p>
             </div>
         </div>

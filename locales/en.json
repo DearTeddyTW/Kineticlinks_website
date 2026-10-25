@@ -4100,5 +4100,69 @@
     "title2": "Articles",
     "desc": "Infrastructure notes from the front line",
     "view_all": "View all articles"
+  },
+  "board": {
+    "name_line": "Cross-border network infrastructure",
+    "statement": "Some of this we write and run ourselves. Some we resell from upstream and take responsibility for planning and integrating. This page keeps the two apart.",
+    "action": "Talk to us",
+    "map_alt": "A 1917 map of the world's submarine cables, with cable routes drawn as fine lines between black landmasses",
+    "map_cap": "Ocean cables in 1917. Crossing a border has always been a physical thing.",
+    "rack_alt": "A data centre aisle lined with black racks on a white raised floor",
+    "run_label": "Written and run by us",
+    "run_note": "The three below show what these platforms actually return.",
+    "resell_label": "Resold from upstream, planned and integrated by us",
+    "resell_note": "The capability is upstream; the planning, integration and contact are ours.",
+    "ssl_name": "SSL certificate automation",
+    "ssl_line": "You decide where the private key lives",
+    "ssl_ui_label": "Edge checks",
+    "ssl_ui_rows": [
+      [
+        "TW",
+        "Taipei",
+        "OK"
+      ],
+      [
+        "JP",
+        "Tokyo",
+        "OK"
+      ],
+      [
+        "DE",
+        "Frankfurt",
+        "OK"
+      ]
+    ],
+    "spd_name": "Three-network speed test",
+    "spd_line": "China Telecom, Unicom and Mobile, measured",
+    "spd_ui_label": "Taipei to Shanghai",
+    "spd_ui_rows": [
+      [
+        "Telecom",
+        "68 ms",
+        "0.0%"
+      ],
+      [
+        "Unicom",
+        "91 ms",
+        "0.2%"
+      ],
+      [
+        "Mobile",
+        "77 ms",
+        "0.0%"
+      ]
+    ],
+    "icp_name": "ICP filing lookup",
+    "icp_line": "It finds the domain you actually asked about",
+    "icp_ui_label": "Result",
+    "icp_ui_domain": "example.com",
+    "icp_ui_verdict": "No filing",
+    "icp_ui_note": "Cannot resolve to mainland Chinese nodes",
+    "contact_title": "Something specific to work through?",
+    "contact_desc": "We are small, so the person you reach is the person who handles it.",
+    "sw_alt": "A 1940s wooden telephone exchange, its panel a row of labelled switches: night extension, hold, ring, operator's telephone",
+    "sw_cap": "A 1940s telephone exchange. A row of labelled switches, each deciding where a line goes. That has not changed; it just runs in software now.",
+    "fm_alt": "A 1640 Dutch chart of Formosa (Taiwan) and the Pescadores, hand-coloured, with rhumb lines radiating from two compass roses",
+    "fm_cap": "Formosa and the Pescadores, drawn by the Dutch in 1640. Those radiating lines are sailing routes: someone had to cross first. We are on this island."
   }
 }

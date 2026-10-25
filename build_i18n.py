@@ -454,6 +454,116 @@ def build_customers_section(page_content):
 """
 
 
+def build_board(translations, lang_path):
+    """The home page as one board of tiles.
+
+    The page's argument is the line between what this company runs and what it
+    resells, so the board is built in two fields and the difference is shown
+    rather than stated: the three platforms it operates each carry a working
+    fragment of themselves, and the four services it resells carry their name
+    and what they are. A reader sees which is which before reading a word.
+    """
+    b = translations.get('board')
+    if not b:
+        return ''
+    svc = translations.get('services', {})
+    e = html_escape
+
+    def ui_rows(rows):
+        return '\n'.join(
+            '                    <li><span>%s</span><span>%s</span>'
+            '<span class="b-ok">%s</span></li>' % (e(a), e(c), e(d))
+            for a, c, d in rows)
+
+    def run_tile(key, name, line, ui_label, body, width='b-w4'):
+        return (
+            '<a class="b-tile b-run %s" href="%s%s/">\n'
+            '                <p class="b-kicker">%s</p>\n'
+            '                <p class="b-line">%s</p>\n'
+            '                <div class="b-ui" data-ui>\n'
+            '                    <p class="b-ui-label">%s</p>\n%s\n'
+            '                </div>\n'
+            '            </a>' % (width, lang_path, key, e(name), e(line), e(ui_label), body))
+
+    listed = lambda rows: ('                    <ul class="b-ui-list">\n%s\n'
+                           '                    </ul>' % ui_rows(rows))
+
+    ssl_t = run_tile('ssl', b['ssl_name'], b['ssl_line'], b['ssl_ui_label'], listed(b['ssl_ui_rows']), 'b-w8')
+    spd_t = run_tile('speedtest', b['spd_name'], b['spd_line'], b['spd_ui_label'], listed(b['spd_ui_rows']))
+    icp_body = ('                    <p class="b-ui-dom">%s</p>\n'
+                '                    <p class="b-ui-verdict">%s</p>\n'
+                '                    <p class="b-ui-note">%s</p>'
+                % (e(b['icp_ui_domain']), e(b['icp_ui_verdict']), e(b['icp_ui_note'])))
+    icp_t = run_tile('icp-check', b['icp_name'], b['icp_line'], b['icp_ui_label'], icp_body)
+
+    resold = []
+    for key in ('cdn', 'vps', 'idc', 'cloud'):
+        s = svc.get(key, {})
+        resold.append(
+            '<a class="b-tile b-resell b-w3" href="%s%s/">\n'
+            '                <p class="b-kicker">%s</p>\n'
+            '                <p class="b-line b-line-sm">%s</p>\n'
+            '            </a>' % (lang_path, key, e(s.get('title', key.upper())), e(s.get('desc', ''))))
+
+    parts = [
+        '\n    <section class="b-board" aria-labelledby="b-h1">',
+        '        <div class="b-grid">',
+        '            <div class="b-tile b-name b-w6">',
+        '                <h1 class="b-wordmark" id="b-h1">Kinetic<span>links</span></h1>',
+        '                <p class="b-name-line">%s</p>' % e(b['name_line']),
+        '            </div>',
+        '            <p class="b-tile b-statement b-w6">%s</p>' % e(b['statement']),
+        '            <figure class="b-tile b-pic b-w8">',
+        '                <img src="/assets/principal-ocean-cables-in-1917.jpg" width="1024" height="401"',
+        '                     alt="%s" decoding="async">' % e(b['map_alt']),
+        '                <figcaption>%s</figcaption>' % e(b['map_cap']),
+        '            </figure>',
+        '            <a class="b-tile b-act b-w4" href="#contact">%s</a>' % e(b['action']),
+        '        </div>',
+        '        <div class="b-field b-field-run">',
+        '            <div class="b-grid">',
+        '                <div class="b-tile b-label b-w12">',
+        '                    <h2>%s</h2>' % e(b['run_label']),
+        '                    <p>%s</p>' % e(b['run_note']),
+        '                </div>',
+        '                ' + ssl_t,
+        '                ' + spd_t,
+        '                ' + icp_t,
+        '                <figure class="b-tile b-pic b-w8 b-pic-sw">',
+        '                    <img src="/assets/1940s-n935-telephone-exchange.jpg"',
+        '                         width="1920" height="1801" loading="lazy" decoding="async"',
+        '                         alt="%s">' % e(b['sw_alt']),
+        '                    <figcaption>%s</figcaption>' % e(b['sw_cap']),
+        '                </figure>',
+        '            </div>',
+        '        </div>',
+        '        <div class="b-field b-field-resell">',
+        '            <div class="b-grid">',
+        '                <div class="b-tile b-label b-w12">',
+        '                    <h2>%s</h2>' % e(b['resell_label']),
+        '                    <p>%s</p>' % e(b['resell_note']),
+        '                </div>',
+        '                ' + '\n                '.join(resold),
+        '                <figure class="b-tile b-pic b-w12 b-pic-rack">',
+        '                    <img src="/assets/a-system-administrator-s-workstation-within-a.jpg"',
+        '                         width="1365" height="2048" loading="lazy" decoding="async"',
+        '                         alt="%s">' % e(b['rack_alt']),
+        '                </figure>',
+        '            </div>',
+        '        </div>',
+        '        <div class="b-grid b-close">',
+        '            <figure class="b-tile b-pic b-w12 b-pic-fm">',
+        '                <img src="/assets/1640-map-of-formosa-taiwan-by-dutch.jpg"',
+        '                     width="1920" height="1326" loading="lazy" decoding="async"',
+        '                     alt="%s">' % e(b['fm_alt']),
+        '                <figcaption>%s</figcaption>' % e(b['fm_cap']),
+        '            </figure>',
+        '        </div>',
+        '    </section>\n',
+    ]
+    return '\n'.join(parts)
+
+
 def build_picker_modes(page_content):
     """The hero's live control: three modes, each carrying its own readout.
 
@@ -701,6 +811,9 @@ def build():
             flat['inline_tool'] = ''
             flat['table_col2_class'] = ' class="num"'
             flat['article_lead'] = ''
+            flat['board'] = (build_board(translations, lang['lang_path'])
+                             if page['template'] == 'src/index.html' else '')
+            flat['home_css_v'] = asset_version('css/home.css')
             flat['security_section'] = ''
             flat['keymodes_section'] = ''
             flat['customers_section'] = ''

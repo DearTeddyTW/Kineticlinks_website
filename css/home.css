@@ -1,0 +1,325 @@
+/* Home — direction "The well-kept board" (dense-tiles), palette and type kept
+   from the brand. The page's argument is the line between what this company
+   runs and what it resells, so the board is two fields: the platforms it
+   operates each carry a working fragment of themselves, the services it
+   resells carry their name. The difference is shown, not asserted. */
+
+.b-page {
+    --b-bg:     #070b14;
+    --b-tile:   #0d1420;
+    --b-tile-2: #121b2b;
+    --b-ink:    #ffffff;
+    --b-muted:  #8b9bb4;
+    --b-accent: #00f2fe;
+    --b-accent-ink: #04121a;
+
+    --b-gap: 8px;
+    --b-pad: clamp(18px, 1.7vw, 24px);
+    --b-unit: clamp(70px, 7.2vw, 96px);
+
+    --b-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+    --b-body:  clamp(1rem, 0.97rem + 0.18vw, 1.0625rem);
+    --b-lead:  clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
+    --b-head:  clamp(1.5rem, 1.15rem + 1.5vw, 2.25rem);
+    --b-disp:  clamp(2rem, 1.1rem + 3.8vw, 3.75rem);
+
+    background: var(--b-bg);
+    color: var(--b-ink);
+}
+
+.b-board { padding: 10px 10px 0; }
+.b-field { margin-top: var(--b-gap); }
+
+.b-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--b-gap);
+    grid-auto-rows: var(--b-unit);
+}
+
+/* four tile widths, no others */
+.b-w3  { grid-column: span 3; }
+.b-w4  { grid-column: span 4; }
+.b-w6  { grid-column: span 6; }
+.b-w8  { grid-column: span 8; }
+.b-w12 { grid-column: span 12; }
+
+.b-tile {
+    background: var(--b-tile);
+    border-radius: 6px;
+    padding: var(--b-pad);
+    margin: 0;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- first screen --- */
+
+.b-name { grid-row: span 2; justify-content: flex-end; }
+.b-wordmark {
+    font-size: var(--b-disp);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    margin: 0 0 0.35em;
+}
+.b-wordmark span { color: var(--b-accent); }
+.b-name-line { font-size: var(--b-body); color: var(--b-muted); margin: 0; }
+
+.b-statement {
+    grid-row: span 2;
+    background: var(--b-tile-2);
+    font-size: var(--b-lead);
+    line-height: 1.5;
+    justify-content: flex-end;
+}
+
+.b-pic { grid-row: span 2; padding: 0; position: relative; }
+.b-pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.b-pic figcaption {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: var(--b-pad);
+    font-size: var(--b-small);
+    color: var(--b-ink);
+    background: rgba(7, 11, 20, 0.72);
+}
+.b-pic-rack { grid-row: span 3; }
+.b-pic-rack img { object-position: 50% 62%; }
+
+.b-act {
+    grid-row: span 2;
+    background: var(--b-accent);
+    color: var(--b-accent-ink);
+    font-size: var(--b-lead);
+    font-weight: 500;
+    justify-content: flex-end;
+    transition: background-color 160ms;
+}
+.b-act:hover { background: #5ef7ff; }
+
+/* --- the two fields --- */
+
+.b-label { grid-row: span 1; justify-content: center; background: transparent; padding-inline: var(--b-pad); }
+.b-label h2 { font-size: var(--b-head); font-weight: 500; letter-spacing: -0.03em; margin: 0; }
+.b-label p { font-size: var(--b-small); color: var(--b-muted); margin: 6px 0 0; }
+
+/* what we run: each tile carries the thing working */
+.b-run { grid-row: span 3; background: var(--b-tile-2); }
+.b-run:hover { background: #162033; }
+
+/* what we resell: name and what it is, no fragment — that is the difference */
+.b-resell { grid-row: span 2; }
+.b-resell:hover { background: var(--b-tile-2); }
+
+.b-kicker { font-size: var(--b-body); font-weight: 500; margin: 0 0 6px; }
+.b-line { font-size: var(--b-small); color: var(--b-muted); margin: 0 0 14px; line-height: 1.5; }
+.b-line-sm { margin-bottom: 0; }
+
+.b-ui {
+    margin-top: 0;
+    background: var(--b-bg);
+    border: 1px solid rgba(255, 255, 255, 0.10);  /* taste-skill-ignore: inside data-ui */
+    border-radius: 6px;
+    padding: 12px 14px;
+}
+.b-ui-label { font-size: 11px; color: var(--b-muted); margin: 0 0 8px; }
+.b-ui-list { list-style: none; margin: 0; padding: 0; }
+.b-ui-list li {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 10px;
+    font-size: 13px;
+    padding: 4px 0;
+}
+.b-ui-list li span:nth-child(2) { color: var(--b-muted); }
+.b-ok { color: var(--b-accent); }
+.b-ui-dom { font-size: 13px; margin: 0 0 4px; }
+.b-ui-verdict { font-size: 15px; font-weight: 500; color: var(--b-accent); margin: 0 0 4px; }
+.b-ui-note { font-size: 11px; color: var(--b-muted); margin: 0; }
+
+.sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* --- the sections kept below the board --- */
+
+.b-page .section-header { text-align: left; max-width: 58ch; margin-inline: 0; }
+.b-page .stat-item,
+.b-page .article-card,
+.b-page .faq-item {
+    background: var(--b-tile);
+    border: 0;
+    box-shadow: none;  /* taste-skill-ignore: removing the kit's shadow */
+    backdrop-filter: none;  /* taste-skill-ignore: removing the kit's glass */
+    border-radius: 6px;
+}
+.b-page .text-gradient {
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: currentColor;
+    color: var(--b-accent);
+}
+.b-page .btn-primary {
+    background: var(--b-accent);
+    color: var(--b-accent-ink);
+    box-shadow: none;  /* taste-skill-ignore: removing the kit's glow */
+    border-radius: 2px;
+}
+.b-page .code-snippet { border: 0; background: var(--b-tile); }
+
+@media (max-width: 900px) {
+    .b-w3, .b-w4, .b-w6, .b-w8 { grid-column: span 12; }
+    .b-name, .b-statement, .b-act { grid-row: span 2; }
+    .b-pic { grid-row: span 2; }
+    .b-run { grid-row: span 4; }
+    .b-resell { grid-row: span 2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .b-act, .b-run, .b-resell { transition: none; }
+}
+
+/* ---------- second look: what the screenshots and the meter showed ---------- */
+
+/* The board had its own 10px frame while the sections below kept the
+   container's. One page, one pair of margins: the house rule outranks the
+   direction's tighter frame. */
+.b-board { padding: var(--b-frame) var(--b-frame) 0; }
+.b-page { --b-frame: clamp(16px, 2.2vw, 32px); }
+.b-page .container { padding-inline: var(--b-frame); max-width: none; }
+.b-page .section > .container > * { max-width: 1200px; margin-inline: auto; }
+
+/* The caption sat directly above the next field's heading and read as a label
+   over it. Give it its own line inside the picture and keep the fields apart. */
+.b-field { margin-top: calc(var(--b-gap) + clamp(40px, 5vw, 96px)); }
+
+/* The rest of the kit the kept sections bring with them. */
+.b-page .about-image,
+.b-page .contact-card,
+.b-page .contact-form,
+.b-page .info-item {
+    background: var(--b-tile);
+    border: 0;
+    box-shadow: none;  /* taste-skill-ignore: removing the kit's shadow */
+    backdrop-filter: none;  /* taste-skill-ignore: removing the kit's glass */
+    border-radius: 6px;
+}
+.b-page .contact-info,
+.b-page footer,
+.b-page .footer-bottom { border-top: 0; }
+.b-page .footer-bottom { padding-top: 28px; }
+.b-page [style*="dashed"], .b-page .dashed { border-style: solid; }
+
+/* Decorative dashed circles behind the about block: ornament with no job.
+   Removing it rather than restyling it. */
+.b-page .tech-circle { display: none; }
+
+/* The category chip on an article card is a pill badge. Flat text at the
+   small step instead, in the accent. */
+.b-page .article-card-tag {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--b-accent);
+    font-size: var(--b-small);
+}
+
+/* One button shape on the page: a filled rectangle. The secondary is a tone
+   step, not an outline. */
+.b-page .btn-secondary,
+.b-page .btn-outline {
+    background: var(--b-tile-2);
+    border: 0;
+    color: var(--b-ink);
+    border-radius: 2px;
+}
+.b-page .btn-secondary:hover,
+.b-page .btn-outline:hover { background: #162033; }
+
+/* Map the kept sections onto the board's five steps. */
+.b-page .stat-item h3 { font-size: var(--b-head); }
+.b-page .stat-item p,
+.b-page .article-card p,
+.b-page .faq-item p { font-size: var(--b-body); }
+.b-page .article-card h2 { font-size: var(--b-lead); }
+.b-page .btn { font-size: var(--b-body); }
+
+.b-pic-sw { grid-row: span 3; }
+.b-pic-sw img { object-position: 50% 45%; }
+
+/* Entrances, so the board arrives rather than appearing. Content is visible
+   by default; main.js only adds the class. */
+.b-page .b-enter {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 560ms cubic-bezier(.2,.7,.3,1), transform 560ms cubic-bezier(.2,.7,.3,1);
+}
+.b-page .b-enter.b-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+    .b-name, .b-statement, .b-board .b-pic, .b-act {
+        animation: b-rise 760ms cubic-bezier(.16,.84,.32,1) both;
+    }
+    .b-statement { animation-delay: 80ms; }
+    .b-board > .b-grid > .b-pic { animation-delay: 160ms; }
+    .b-act { animation-delay: 240ms; }
+}
+@keyframes b-rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+    .b-page .b-enter { opacity: 1; transform: none; transition: none; }
+}
+
+/* The run field's tiles vary: the flagship takes a wide tile and its fragment
+   is readable at real size, the other two are narrow. Four widths, as dealt. */
+.b-run { grid-row: span 4; }
+.b-run .b-ui { flex: 1; display: flex; flex-direction: column; }
+.b-run .b-ui-list { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.b-pic-sw { grid-row: span 4; }
+
+/* The contact block's rule. */
+.b-page .contact-info,
+.b-page .contact-info > * { border-top: 0; border-bottom: 0; }
+
+/* A border-right dividing the contact columns. Space does that job. */
+.b-page .contact-info { border-right: 0; padding-right: 0; }
+
+/* Interface text inside a fragment sits at its true size, but 11px is below
+   the floor for anything meant to be read. */
+.b-page .b-ui-label,
+.b-page .b-ui-note { font-size: 13px; }
+
+/* ---------- third look ---------- */
+
+/* The navigation is fixed and the board starts at the top of the page, so the
+   bar was lying over the first row of tiles. */
+.b-board { padding-top: calc(var(--b-frame) + 64px); }
+
+/* The sheet is explicit that text inside a tile is top-left aligned. The name,
+   statement and action tiles were bottom-anchored. */
+.b-name, .b-statement, .b-act { justify-content: flex-start; }
+
+/* The fragment's rows were spread to fill the tile, leaving a gap under the
+   label. Let them sit together under it. */
+.b-run .b-ui-list { flex: 0 1 auto; justify-content: flex-start; }
+.b-run .b-ui { flex: 0 0 auto; }
+
+.b-close { margin-top: calc(var(--b-gap) + clamp(40px, 5vw, 96px)); }
+.b-pic-fm { grid-row: span 4; }
+.b-pic-fm img { object-position: 50% 42%; }
+
+/* The fragment follows its own line rather than being pushed to the floor of
+   the tile, which left a hole under the heading. The tile ends where its
+   content ends. */
+.b-run { grid-row: span 3; }
+.b-run .b-ui { margin-top: 4px; }
+
+.b-page .credits { font-size: var(--b-small); color: var(--b-muted); line-height: 1.6; margin: 0 0 12px; }
+.b-page .credits a { color: var(--b-muted); }
