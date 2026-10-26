@@ -566,11 +566,11 @@ def build_board(translations, lang_path):
         '                <p class="b-name-line">%s</p>' % e(b['name_line']),
         '            </div>',
         '            <p class="b-tile b-statement b-w6">%s</p>' % e(b['statement']),
-        # 板子只留這一張：1917 年的航線圖畫的就是跨境連線實際走的路。
-        # 另外三張（1940 交換機、1640 地圖、機房照）是比喻或填充，而且
-        # 四張分屬三種年代與色調，湊在一起就是不像同一頁的東西。
+        # 板子只留這一張：海底電纜登陸站，跨境流量實際上岸的地方。
+        # 原本是 1917 年的航線圖，換成現代照片——古董圖在這個站上讀起來
+        # 像比喻，而比喻需要一行字解釋才成立。
         '            <figure class="b-tile b-pic b-w8">',
-        '                <img src="/assets/principal-ocean-cables-in-1917.jpg" width="1024" height="401"',
+        '                <img src="/assets/kddi-chikura-cable-landing-station.jpg" width="1920" height="1440"',
         '                     alt="%s" decoding="async">' % e(b['map_alt']),
         '                <figcaption>%s</figcaption>' % e(b['map_cap']),
         '            </figure>',

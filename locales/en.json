@@ -229,15 +229,15 @@
       "l3_desc": "Multi-cloud and hybrid planning that bridges on-premises and public cloud resources."
     },
     "pics": {
-      "hero_img": "laying-the-submarine-cable-between-kurrachee-and.jpg",
-      "hero_alt": "An 1860 engraving: two cable ships off Muscat Cove, with boats hauling the end of a submarine cable ashore",
-      "hero_w": "1478",
-      "hero_h": "984",
-      "p1_img": "principal-ocean-cables-in-1917.jpg",
-      "p1_alt": "A 1917 map of the world's submarine cables, routes drawn as fine lines between black landmasses",
-      "p1_cap": "Ocean cables in 1917. Where the nodes sit decides the latency; that has not changed since.",
-      "p1_w": "1024",
-      "p1_h": "401"
+      "hero_img": "kddi-chikura-cable-landing-station.jpg",
+      "hero_alt": "A white cable landing station under a blue sky, a nameplate on its wall and a microwave relay tower beside it",
+      "hero_w": 1920,
+      "hero_h": 1440,
+      "p1_img": "kddi-chikura-cable-landing-station.jpg",
+      "p1_alt": "A white cable landing station under a blue sky, a nameplate on its wall and a microwave relay tower beside it",
+      "p1_cap": "KDDI’s Chikura cable landing station. Submarine cables come ashore in buildings like this before they reach the land network — somebody has to lay the path before anything can travel it.",
+      "p1_w": 1920,
+      "p1_h": 1440
     }
   },
   "vps_page": {
@@ -598,10 +598,11 @@
       "l3_desc": "Issued certificates push automatically to CDN nodes, removing manual upload and renewal tracking."
     },
     "pics": {
-      "hero_img": "principal-ocean-cables-in-1917.jpg",
-      "hero_alt": "A 1917 map of the world's submarine cables, routes drawn as fine lines between black landmasses",
-      "hero_w": "1024",
-      "hero_h": "401"
+      "hero_img": "a-system-administrator-s-workstation-within-a.jpg",
+      "hero_alt": "An aisle in a data centre, black rack cabinets on both sides and a white raised floor",
+      "hero_cap": "There are still racks behind a public cloud. What changes is whose they are, and who picks up the phone when something breaks.",
+      "hero_w": 1365,
+      "hero_h": 2048
     }
   },
   "ssl_page": {
@@ -981,11 +982,11 @@
       "l3_desc": "Multi-cloud and hybrid planning that bridges on-premises and public cloud resources."
     },
     "pics": {
-      "p1_img": "principal-ocean-cables-in-1917.jpg",
-      "p1_alt": "A 1917 map of the world's submarine cables, routes drawn as fine lines between black landmasses",
-      "p1_cap": "Ocean cables in 1917. Cross-border latency was never an abstract number: it is the length of these lines and the way they bend.",
-      "p1_w": "1024",
-      "p1_h": "401"
+      "p1_img": "kddi-chikura-cable-landing-station.jpg",
+      "p1_alt": "A white cable landing station under a blue sky, a nameplate on its wall and a microwave relay tower beside it",
+      "p1_cap": "KDDI’s Chikura cable landing station. The floor under your latency is the time light takes to run that path; a cross-border speed test measures it.",
+      "p1_w": 1920,
+      "p1_h": 1440
     }
   },
   "icp_check_page": {
@@ -4257,8 +4258,8 @@
     "name_line": "Cross-border network infrastructure",
     "statement": "Some of this we write and run ourselves. Some we resell from upstream and take responsibility for planning and integrating. This page keeps the two apart.",
     "action": "Talk to us",
-    "map_alt": "A 1917 map of the world's submarine cables, with cable routes drawn as fine lines between black landmasses",
-    "map_cap": "Ocean cables in 1917. Crossing a border has always been a physical thing.",
+    "map_alt": "A white cable landing station under a blue sky, a nameplate on its wall and a microwave relay tower beside it",
+    "map_cap": "KDDI’s Chikura cable landing station. Cross-border traffic comes ashore in places like this; the connection was always a physical thing.",
     "rack_alt": "A data centre aisle lined with black racks on a white raised floor",
     "run_label": "Written and run by us",
     "run_note": "The three below show what these platforms actually return.",
