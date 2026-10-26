@@ -126,7 +126,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=f5269ac5">
-    <link rel="stylesheet" href="/css/pages.css?v=fbb25784">
+    <link rel="stylesheet" href="/css/pages.css?v=4c1815cf">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -219,55 +219,59 @@
     </section>
 
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a two-column list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Use Cases</h2>
                 <p>Whether it's your first move to the cloud or optimizing an existing environment, expert consulting reduces risk</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>Migrating from On-Premises</h3>
-                    <p>Organizations planning to move systems from an existing self-managed facility to the public cloud, requiring full assessment and migration planning.</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>Migrating from On-Premises</dt>
+                    <dd>Organizations planning to move systems from an existing self-managed facility to the public cloud, requiring full assessment and migration planning.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Hybrid Cloud Architecture Design</h3>
-                    <p>Some systems must stay on-premises for regulatory or performance reasons and need to integrate with public cloud resources.</p>
+                <div class="p-def">
+                    <dt>Hybrid Cloud Architecture Design</dt>
+                    <dd>Some systems must stay on-premises for regulatory or performance reasons and need to integrate with public cloud resources.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Multi-Cloud Redundancy & DR</h3>
-                    <p>Designing cross-provider redundancy for critical systems to reduce the operational risk of a single vendor's outage.</p>
+                <div class="p-def">
+                    <dt>Multi-Cloud Redundancy & DR</dt>
+                    <dd>Designing cross-provider redundancy for critical systems to reduce the operational risk of a single vendor's outage.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Runaway Cloud Cost Optimization</h3>
-                    <p>Cloud bills keep climbing without systematic review, requiring an expert team to audit resource efficiency.</p>
+                <div class="p-def">
+                    <dt>Runaway Cloud Cost Optimization</dt>
+                    <dd>Cloud bills keep climbing without systematic review, requiring an expert team to audit resource efficiency.</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose Kineticlinks Cloud Consulting</h2>
+    <!-- Differentiators: the heading holds one column, the reasons the
+         other. This is the section with the most to say, so it gets the
+         widest measure on the page. -->
+    <section class="section p-why-section">
+        <div class="container p-why">
+            <div class="p-why-head">
+                <h2>Why Kineticlinks for Cloud</h2>
                 <p>Compared to providers that only operate a single cloud platform without real architecture planning capability</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>Real Multi-Cloud Integration Experience</h3>
                     <p>Hands-on architecture and integration experience across AWS, GCP, and Azure lets us recommend the right platform mix for your needs, not just push a single vendor's stack.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Hybrid Cloud Paired With IDC Services</h3>
                     <p>We also offer IDC facility buildout, so we can design a hybrid architecture that genuinely integrates your own facility with public cloud.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Phased Migration to Reduce Risk</h3>
                     <p>Migration order is planned around system dependencies to avoid the long downtime and data risk of a one-shot cutover.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Ongoing Cost Optimization</h3>
                     <p>We keep reviewing resource usage after migration instead of stopping once the one-time project wraps up.</p>
                 </div>
@@ -275,31 +279,33 @@
         </div>
     </section>
 
-    <!-- Customer Types -->
+    <!-- Customer Types: four names and a line each, read across. No box
+         around them — they are an index of who this is for, not four
+         separate things to compare. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Who It's For</h2>
                 <p>The following types of organizations most often need public cloud architecture consulting</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>Traditional Enterprises Planning Cloud Transformation</h3>
                     <p>Organizations still running on self-managed facilities that want to evaluate the feasibility and benefits of moving to the cloud.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Organizations Already on Multi-Cloud or Hybrid Cloud</h3>
                     <p>Teams already using more than one cloud service that need unified architecture planning and cost management.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Fast-Growing Startups</h3>
                     <p>Companies scaling quickly that need an elastically scalable, cost-controlled cloud architecture.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Compliance- and Sovereignty-Sensitive Industries</h3>
                     <p>Organizations, such as those in finance or healthcare, that must plan data residency and access controls around regulatory requirements.</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -403,7 +409,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=75cb9d50" defer></script>
+    <script src="/js/main.js?v=d13ff082" defer></script>
 </body>
 
 </html>

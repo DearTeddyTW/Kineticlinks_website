@@ -126,7 +126,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=f5269ac5">
-    <link rel="stylesheet" href="/css/pages.css?v=fbb25784">
+    <link rel="stylesheet" href="/css/pages.css?v=4c1815cf">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -219,55 +219,59 @@
     </section>
 
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a two-column list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>適用場景</h2>
                 <p>當企業對機房環境有客製化或法規遵循需求時，IDC 建置服務能提供完整解決方案</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>金融與電信業合規需求</h3>
-                    <p>需符合特定資料存放地點與資安稽核規範的產業，可透過客製化機房滿足合規要求。</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>金融與電信業合規需求</dt>
+                    <dd>需符合特定資料存放地點與資安稽核規範的產業，可透過客製化機房滿足合規要求。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>企業自有機房擴建</h3>
-                    <p>既有機房容量不足或設備老舊，需要重新規劃網路架構與硬體汰換。</p>
+                <div class="p-def">
+                    <dt>企業自有機房擴建</dt>
+                    <dd>既有機房容量不足或設備老舊，需要重新規劃網路架構與硬體汰換。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>大型系統遷移專案</h3>
-                    <p>企業將核心系統從既有機房或公有雲遷移至專屬機房環境。</p>
+                <div class="p-def">
+                    <dt>大型系統遷移專案</dt>
+                    <dd>企業將核心系統從既有機房或公有雲遷移至專屬機房環境。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>高可用性關鍵系統</h3>
-                    <p>對停機容忍度極低的核心業務系統，需要雙線路與冗餘設計降低單點故障風險。</p>
+                <div class="p-def">
+                    <dt>高可用性關鍵系統</dt>
+                    <dd>對停機容忍度極低的核心業務系統，需要雙線路與冗餘設計降低單點故障風險。</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column, the reasons the
+         other. This is the section with the most to say, so it gets the
+         widest measure on the page. -->
+    <section class="section p-why-section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>為什麼選擇 Kineticlinks IDC 建置</h2>
                 <p>相較於僅提供標準機櫃租賃、缺乏客製化規劃能力的機房代管商</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>一站式規劃與執行</h3>
                     <p>從網路架構設計、硬體採購到機房部署皆由同一團隊統籌，減少多方廠商協調成本。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>BGP 雙線路架構設計</h3>
                     <p>依業務規模規劃多線路網路架構，降低單一線路故障造成的服務中斷風險。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>機房 24/7 駐點人員</h3>
                     <p>非僅依賴遠端監控系統，機房有實體駐點人員即時應變電力、溫濕度與網路異常。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>彈性擴充規劃</h3>
                     <p>建置初期即納入未來擴充需求評估，避免短期內因規模成長而需重新規劃。</p>
                 </div>
@@ -275,31 +279,33 @@
         </div>
     </section>
 
-    <!-- Customer Types -->
+    <!-- Customer Types: four names and a line each, read across. No box
+         around them — they are an index of who this is for, not four
+         separate things to compare. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>適合的客戶類型</h2>
                 <p>以下類型的企業經常需要客製化 IDC 機房建置服務</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>金融與支付服務業</h3>
                     <p>對資料安全與法規遵循有嚴格要求的產業。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>電信與網路服務商</h3>
                     <p>需要高頻寬與多線路網路架構支援核心業務。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>大型企業 IT 部門</h3>
                     <p>計畫將核心系統由公有雲或委外機房遷回自主管理的資料中心。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>政府與公部門標案</h3>
                     <p>對機房實體安全與稽核紀錄有明確規範要求的專案。</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -403,7 +409,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=75cb9d50" defer></script>
+    <script src="/js/main.js?v=d13ff082" defer></script>
 </body>
 
 </html>

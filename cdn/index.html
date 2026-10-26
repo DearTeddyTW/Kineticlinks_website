@@ -126,7 +126,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=f5269ac5">
-    <link rel="stylesheet" href="/css/pages.css?v=fbb25784">
+    <link rel="stylesheet" href="/css/pages.css?v=4c1815cf">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -224,55 +224,59 @@
         <figcaption>1917 年的海底電纜圖。節點的位置決定延遲，這件事從那時候就沒變過。</figcaption>
     </figure>
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a two-column list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>適用場景</h2>
                 <p>無論是內容型網站或高互動應用，CDN 都能帶來明顯的效能提升</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>電商與購物網站</h3>
-                    <p>縮短商品頁與結帳流程的載入時間，降低跳出率，提升轉換率與使用者體驗。</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>電商與購物網站</dt>
+                    <dd>縮短商品頁與結帳流程的載入時間，降低跳出率，提升轉換率與使用者體驗。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>影音與串流媒體</h3>
-                    <p>支援大檔案與影音串流的邊緣快取，減少緩衝與卡頓，提供流暢的觀看體驗。</p>
+                <div class="p-def">
+                    <dt>影音與串流媒體</dt>
+                    <dd>支援大檔案與影音串流的邊緣快取，減少緩衝與卡頓，提供流暢的觀看體驗。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>遊戲與即時應用</h3>
-                    <p>透過就近節點降低連線延遲，改善多人連線遊戲與即時互動服務的反應速度。</p>
+                <div class="p-def">
+                    <dt>遊戲與即時應用</dt>
+                    <dd>透過就近節點降低連線延遲，改善多人連線遊戲與即時互動服務的反應速度。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>企業官網與 API 服務</h3>
-                    <p>為全球分公司與客戶提供一致的存取速度，同時抵禦惡意流量與 DDoS 攻擊。</p>
+                <div class="p-def">
+                    <dt>企業官網與 API 服務</dt>
+                    <dd>為全球分公司與客戶提供一致的存取速度，同時抵禦惡意流量與 DDoS 攻擊。</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column, the reasons the
+         other. This is the section with the most to say, so it gets the
+         widest measure on the page. -->
+    <section class="section p-why-section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>為什麼選擇 Kineticlinks CDN</h2>
                 <p>相較於自行架設快取伺服器或採用單一區域的加速方案</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>亞太在地化節點佈局</h3>
                     <p>特別強化台灣、香港與中國周邊的節點密度，降低跨境存取延遲，是自建機房難以達到的規模。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>彈性計費與客製化方案</h3>
                     <p>依實際流量與需求彈性調整方案，不需要一次性投入大量硬體與頻寬採購成本。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>整合 SSL 自動化平台</h3>
                     <p>簽發的 SSL 憑證可直接推播至 CDN 節點，免去手動上傳憑證與管理到期時間的繁瑣流程。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>中文窗口，緊急狀況找得到人</h3>
                     <p>節點與清洗由上游 NOC 全天監控；我們負責中文溝通、設定與異常協調，不是只丟一個工單系統給你。</p>
                 </div>
@@ -280,31 +284,33 @@
         </div>
     </section>
 
-    <!-- Customer Types -->
+    <!-- Customer Types: four names and a line each, read across. No box
+         around them — they are an index of who this is for, not four
+         separate things to compare. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>適合的客戶類型</h2>
                 <p>以下產業已將 CDN 加速服務納入其基礎架構的一部分</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>跨境電商</h3>
                     <p>面向台灣、中國與東南亞消費者的購物平台，需要穩定且快速的跨境存取品質。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>媒體與內容平台</h3>
                     <p>新聞網站、部落格與內容社群，需要處理大量圖片與影音流量。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>SaaS 與軟體服務商</h3>
                     <p>需要為分散於各地的企業客戶提供一致且低延遲的服務品質。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>遊戲開發商與發行商</h3>
                     <p>對延遲極為敏感的線上遊戲與電競平台。</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -408,7 +414,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=75cb9d50" defer></script>
+    <script src="/js/main.js?v=d13ff082" defer></script>
 </body>
 
 </html>

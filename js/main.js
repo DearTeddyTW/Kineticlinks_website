@@ -357,9 +357,9 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
     if (!parts.length || !('IntersectionObserver' in window)) return;
 
     parts.forEach((el) => el.classList.add('s-enter'));
-    /* 底部邊界是正的：元素還在視窗下方 15% 的時候就開始現身，讀者捲到
-       的時候已經在那裡了。原本是 -12%，元素要再往上近一百 px 才觸發，
-       加上每項錯開 70ms，捲到 FAQ 那一段看到的是一排空卡片。 */
+    /* 四個揭露的底部邊界一律是 +200%：元素還在視窗下方兩個螢幕就開始
+       現身，讀者捲到的時候它早就在那裡。原本是負值（元素要進畫面才觸
+       發），快速捲動會看到一排空白，長清單尤其明顯。 */
     const io = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (!entry.isIntersecting) return;
@@ -370,7 +370,7 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
             entry.target.classList.add('s-in');
             io.unobserve(entry.target);
         });
-    }, { rootMargin: '0px 0px 15% 0px' });
+    }, { rootMargin: '0px 0px 200% 0px' });
     parts.forEach((el) => io.observe(el));
 })();
 
@@ -393,7 +393,7 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
             entry.target.classList.add('b-in');
             io.unobserve(entry.target);
         });
-    }, { rootMargin: '0px 0px 15% 0px' });
+    }, { rootMargin: '0px 0px 200% 0px' });
     tiles.forEach((t) => io.observe(t));
 })();
 
@@ -404,7 +404,8 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
     const parts = document.querySelectorAll(
         '.p-page .section-header, .p-page .service-card, .p-page .price-card, ' +
         '.p-page .price-includes, .p-page .faq-item, .p-page .prose, ' +
-        '.p-page .related-card, .p-page .p-band');
+        '.p-page .related-card, .p-page .p-band, '
+        + '.p-page .p-def, .p-page .p-why-item, .p-page .p-who li');
     if (!parts.length || !('IntersectionObserver' in window)) return;
     parts.forEach((el) => el.classList.add('p-enter'));
     const io = new IntersectionObserver((entries) => {
@@ -417,7 +418,7 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
             entry.target.classList.add('p-in');
             io.unobserve(entry.target);
         });
-    }, { rootMargin: '0px 0px 15% 0px' });
+    }, { rootMargin: '0px 0px 200% 0px' });
     parts.forEach((el) => io.observe(el));
 })();
 
@@ -480,11 +481,6 @@ document.querySelectorAll('.lang-switcher').forEach(sw => {
             entry.target.classList.add('g-in');
             io.unobserve(entry.target);
         });
-        /* The index runs to twenty-four rows. A reveal that waits for the
-           row to reach the screen leaves a blank band behind a fast scroll,
-           so this one runs two screens ahead: by the time a row is read it
-           has been there a while. The rise is for the few near the top; the
-           rest simply are. */
     }, { rootMargin: '0px 0px 200% 0px' });
     parts.forEach((el) => io.observe(el));
 })();

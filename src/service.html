@@ -203,55 +203,59 @@
     </section>
 
 {{ page_pics }}
-    <!-- Use Cases -->
+    <!-- Use Cases: a two-column list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>{{ page.use_cases.title }}</h2>
                 <p>{{ page.use_cases.desc }}</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>{{ page.use_cases.item1.title }}</h3>
-                    <p>{{ page.use_cases.item1.desc }}</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>{{ page.use_cases.item1.title }}</dt>
+                    <dd>{{ page.use_cases.item1.desc }}</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>{{ page.use_cases.item2.title }}</h3>
-                    <p>{{ page.use_cases.item2.desc }}</p>
+                <div class="p-def">
+                    <dt>{{ page.use_cases.item2.title }}</dt>
+                    <dd>{{ page.use_cases.item2.desc }}</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>{{ page.use_cases.item3.title }}</h3>
-                    <p>{{ page.use_cases.item3.desc }}</p>
+                <div class="p-def">
+                    <dt>{{ page.use_cases.item3.title }}</dt>
+                    <dd>{{ page.use_cases.item3.desc }}</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>{{ page.use_cases.item4.title }}</h3>
-                    <p>{{ page.use_cases.item4.desc }}</p>
+                <div class="p-def">
+                    <dt>{{ page.use_cases.item4.title }}</dt>
+                    <dd>{{ page.use_cases.item4.desc }}</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column, the reasons the
+         other. This is the section with the most to say, so it gets the
+         widest measure on the page. -->
+    <section class="section p-why-section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>{{ page.differentiators.title }}</h2>
                 <p>{{ page.differentiators.desc }}</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>{{ page.differentiators.item1.title }}</h3>
                     <p>{{ page.differentiators.item1.desc }}</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>{{ page.differentiators.item2.title }}</h3>
                     <p>{{ page.differentiators.item2.desc }}</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>{{ page.differentiators.item3.title }}</h3>
                     <p>{{ page.differentiators.item3.desc }}</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>{{ page.differentiators.item4.title }}</h3>
                     <p>{{ page.differentiators.item4.desc }}</p>
                 </div>
@@ -259,31 +263,33 @@
         </div>
     </section>
 
-    <!-- Customer Types -->
+    <!-- Customer Types: four names and a line each, read across. No box
+         around them — they are an index of who this is for, not four
+         separate things to compare. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>{{ page.customers.title }}</h2>
                 <p>{{ page.customers.desc }}</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>{{ page.customers.item1.title }}</h3>
                     <p>{{ page.customers.item1.desc }}</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>{{ page.customers.item2.title }}</h3>
                     <p>{{ page.customers.item2.desc }}</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>{{ page.customers.item3.title }}</h3>
                     <p>{{ page.customers.item3.desc }}</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>{{ page.customers.item4.title }}</h3>
                     <p>{{ page.customers.item4.desc }}</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 

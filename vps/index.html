@@ -126,7 +126,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=f5269ac5">
-    <link rel="stylesheet" href="/css/pages.css?v=fbb25784">
+    <link rel="stylesheet" href="/css/pages.css?v=4c1815cf">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -219,55 +219,59 @@
     </section>
 
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a two-column list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>適用場景</h2>
                 <p>從個人專案到企業級應用，VPS 都能提供合適的運算彈性</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>網站與應用程式託管</h3>
-                    <p>適合部署 WordPress、電商系統或自主開發的 Web 應用，享有獨立資源與穩定效能。</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>網站與應用程式託管</dt>
+                    <dd>適合部署 WordPress、電商系統或自主開發的 Web 應用，享有獨立資源與穩定效能。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>遊戲伺服器架設</h3>
-                    <p>低延遲網路搭配獨立運算資源，適合架設多人連線遊戲伺服器。</p>
+                <div class="p-def">
+                    <dt>遊戲伺服器架設</dt>
+                    <dd>低延遲網路搭配獨立運算資源，適合架設多人連線遊戲伺服器。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>開發測試環境</h3>
-                    <p>快速建立與銷毀的隔離環境，便於團隊進行開發、測試與 CI/CD 流程。</p>
+                <div class="p-def">
+                    <dt>開發測試環境</dt>
+                    <dd>快速建立與銷毀的隔離環境，便於團隊進行開發、測試與 CI/CD 流程。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>資料庫與後端服務</h3>
-                    <p>NVMe SSD 的高 IOPS 特別適合資料庫密集型的讀寫工作負載。</p>
+                <div class="p-def">
+                    <dt>資料庫與後端服務</dt>
+                    <dd>NVMe SSD 的高 IOPS 特別適合資料庫密集型的讀寫工作負載。</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column, the reasons the
+         other. This is the section with the most to say, so it gets the
+         widest measure on the page. -->
+    <section class="section p-why-section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>為什麼選擇 Kineticlinks VPS</h2>
                 <p>相較於一般共享主機或未採用高速儲存介面的方案</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>全系列 NVMe SSD 儲存</h3>
                     <p>不同於仍採用傳統 SATA SSD 的方案，全面提升硬碟 I/O 效能與資料庫回應速度。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>專屬資源、不超賣</h3>
                     <p>每個實例的 CPU 與記憶體資源獨立配置，避免共享主機常見的資源競爭問題。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>彈性升降級無需停機遷移</h3>
                     <p>依業務成長線上調整規格，避免傳統主機升級需要重新部署的困擾。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>在地技術支援</h3>
                     <p>熟悉台灣與亞太網路環境的工程團隊，提供中文即時技術支援。</p>
                 </div>
@@ -275,31 +279,33 @@
         </div>
     </section>
 
-    <!-- Customer Types -->
+    <!-- Customer Types: four names and a line each, read across. No box
+         around them — they are an index of who this is for, not four
+         separate things to compare. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>適合的客戶類型</h2>
                 <p>以下類型的使用者特別適合採用 VPS 服務</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>新創與中小企業</h3>
                     <p>需要具備彈性擴充能力的主機環境，同時控制初期基礎架構成本。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>獨立開發者</h3>
                     <p>需要完整系統權限自行部署與管理應用程式的技術人員。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>遊戲工作室</h3>
                     <p>架設私人或小型多人連線伺服器，對延遲與穩定性有一定要求。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>數位代理商</h3>
                     <p>需要為多個客戶專案分別建立獨立主機環境的網頁與行銷代理商。</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -403,7 +409,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=75cb9d50" defer></script>
+    <script src="/js/main.js?v=d13ff082" defer></script>
 </body>
 
 </html>

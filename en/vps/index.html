@@ -126,7 +126,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=f5269ac5">
-    <link rel="stylesheet" href="/css/pages.css?v=fbb25784">
+    <link rel="stylesheet" href="/css/pages.css?v=4c1815cf">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -219,55 +219,59 @@
     </section>
 
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a two-column list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Use Cases</h2>
                 <p>From personal projects to enterprise workloads, VPS delivers the right amount of compute flexibility</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>Website & App Hosting</h3>
-                    <p>Deploy WordPress, e-commerce platforms, or custom-built web apps with dedicated resources and stable performance.</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>Website & App Hosting</dt>
+                    <dd>Deploy WordPress, e-commerce platforms, or custom-built web apps with dedicated resources and stable performance.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Game Server Hosting</h3>
-                    <p>Low-latency networking with dedicated compute, well suited for multiplayer game servers.</p>
+                <div class="p-def">
+                    <dt>Game Server Hosting</dt>
+                    <dd>Low-latency networking with dedicated compute, well suited for multiplayer game servers.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Dev & Test Environments</h3>
-                    <p>Spin up and tear down isolated environments quickly for development, testing, and CI/CD workflows.</p>
+                <div class="p-def">
+                    <dt>Dev & Test Environments</dt>
+                    <dd>Spin up and tear down isolated environments quickly for development, testing, and CI/CD workflows.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Databases & Backend Services</h3>
-                    <p>High IOPS from NVMe SSD is a strong fit for database-heavy read/write workloads.</p>
+                <div class="p-def">
+                    <dt>Databases & Backend Services</dt>
+                    <dd>High IOPS from NVMe SSD is a strong fit for database-heavy read/write workloads.</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column, the reasons the
+         other. This is the section with the most to say, so it gets the
+         widest measure on the page. -->
+    <section class="section p-why-section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>Why Choose Kineticlinks VPS</h2>
                 <p>Compared to shared hosting or plans that skip high-speed storage</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>All-NVMe SSD Storage Lineup</h3>
                     <p>Unlike plans still running on traditional SATA SSD, every tier gets a meaningful boost to disk I/O and database response time.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Dedicated Resources, No Overselling</h3>
                     <p>CPU and memory are allocated independently per instance, avoiding the resource contention common on shared hosting.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Live Scaling, No Migration Downtime</h3>
                     <p>Adjust specs online as your business grows, without the redeployment hassle of traditional host upgrades.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Local Technical Support</h3>
                     <p>An engineering team familiar with Taiwan and Asia-Pacific network conditions, with real-time support in Chinese.</p>
                 </div>
@@ -275,31 +279,33 @@
         </div>
     </section>
 
-    <!-- Customer Types -->
+    <!-- Customer Types: four names and a line each, read across. No box
+         around them — they are an index of who this is for, not four
+         separate things to compare. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Who It's For</h2>
                 <p>The following types of users get the most out of VPS hosting</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>Startups & SMBs</h3>
                     <p>Teams that need an elastically scalable hosting environment while keeping early-stage infrastructure costs in check.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Independent Developers</h3>
                     <p>Technical users who need full system access to deploy and manage their own applications.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Game Studios</h3>
                     <p>Hosting private or small-scale multiplayer servers with real latency and stability requirements.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Digital Agencies</h3>
                     <p>Web and marketing agencies that need separate, dedicated hosting environments per client project.</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -403,7 +409,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=75cb9d50" defer></script>
+    <script src="/js/main.js?v=d13ff082" defer></script>
 </body>
 
 </html>

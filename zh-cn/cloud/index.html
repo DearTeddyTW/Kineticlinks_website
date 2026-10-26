@@ -126,7 +126,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=f5269ac5">
-    <link rel="stylesheet" href="/css/pages.css?v=fbb25784">
+    <link rel="stylesheet" href="/css/pages.css?v=4c1815cf">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -219,55 +219,59 @@
     </section>
 
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a two-column list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>适用场景</h2>
                 <p>无论是初次上云还是既有云端环境的优化，都能通过专业顾问降低风险</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>传统机房上云</h3>
-                    <p>企业计划将既有自建机房系统迁移至公有云，需要完整的评估与迁移规划。</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>传统机房上云</dt>
+                    <dd>企业计划将既有自建机房系统迁移至公有云，需要完整的评估与迁移规划。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>混合云架构设计</h3>
-                    <p>部分系统因法规或性能考量须留在自有机房，需与公有云资源整合对接。</p>
+                <div class="p-def">
+                    <dt>混合云架构设计</dt>
+                    <dd>部分系统因法规或性能考量须留在自有机房，需与公有云资源整合对接。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>多云容灾与灾难恢复</h3>
-                    <p>为关键系统规划跨云服务商的容灾架构，降低单一供应商中断的运营风险。</p>
+                <div class="p-def">
+                    <dt>多云容灾与灾难恢复</dt>
+                    <dd>为关键系统规划跨云服务商的容灾架构，降低单一供应商中断的运营风险。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>云成本异常优化</h3>
-                    <p>既有云账单持续攀升但缺乏系统性检视，需要专业团队盘点资源使用效率。</p>
+                <div class="p-def">
+                    <dt>云成本异常优化</dt>
+                    <dd>既有云账单持续攀升但缺乏系统性检视，需要专业团队盘点资源使用效率。</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column, the reasons the
+         other. This is the section with the most to say, so it gets the
+         widest measure on the page. -->
+    <section class="section p-why-section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>为什么选择 Kineticlinks 云端顾问</h2>
                 <p>相较于仅提供单一云平台代操作、缺乏架构规划能力的服务商</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>多云整合实战经验</h3>
                     <p>同时具备 AWS、GCP、Azure 的架构规划与整合经验，依需求推荐最合适的平台组合，而非仅推销单一云厂商方案。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>混合云对接 IDC 服务</h3>
                     <p>同时提供 IDC 机房建置服务，能为企业规划真正整合自有机房与公有云的混合架构。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>分阶段迁移降低风险</h3>
                     <p>依系统依赖关系规划迁移顺序，避免一次性迁移造成的长时间停机与数据风险。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>持续性成本优化建议</h3>
                     <p>迁移完成后仍定期检视资源使用状况，非一次性项目结束即停止服务。</p>
                 </div>
@@ -275,31 +279,33 @@
         </div>
     </section>
 
-    <!-- Customer Types -->
+    <!-- Customer Types: four names and a line each, read across. No box
+         around them — they are an index of who this is for, not four
+         separate things to compare. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>适合的客户类型</h2>
                 <p>以下类型的企业经常需要公有云架构顾问服务</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>计划云端转型的传统企业</h3>
                     <p>既有系统仍运行于自建机房，希望评估上云可行性与效益。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>多云或混合云环境的企业</h3>
                     <p>已使用一种以上云服务，需要统一的架构规划与成本管理。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>高速增长阶段的创业公司</h3>
                     <p>业务快速扩张，需要具备弹性伸缩能力且成本可控的云端架构。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>重视合规与数据主权的行业</h3>
                     <p>需依法规要求规划数据存放地点与访问权限的企业，如金融或医疗相关行业。</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -403,7 +409,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=75cb9d50" defer></script>
+    <script src="/js/main.js?v=d13ff082" defer></script>
 </body>
 
 </html>

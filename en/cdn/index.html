@@ -126,7 +126,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=f5269ac5">
-    <link rel="stylesheet" href="/css/pages.css?v=fbb25784">
+    <link rel="stylesheet" href="/css/pages.css?v=4c1815cf">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -224,55 +224,59 @@
         <figcaption>Ocean cables in 1917. Where the nodes sit decides the latency; that has not changed since.</figcaption>
     </figure>
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a two-column list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Use Cases</h2>
                 <p>From content-heavy sites to highly interactive applications, a CDN delivers measurable performance gains</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>E-commerce & Retail</h3>
-                    <p>Cut product page and checkout load times to lower bounce rates and improve conversion.</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>E-commerce & Retail</dt>
+                    <dd>Cut product page and checkout load times to lower bounce rates and improve conversion.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Video & Streaming Media</h3>
-                    <p>Edge caching for large files and video streams reduces buffering for a smoother viewing experience.</p>
+                <div class="p-def">
+                    <dt>Video & Streaming Media</dt>
+                    <dd>Edge caching for large files and video streams reduces buffering for a smoother viewing experience.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Gaming & Real-time Apps</h3>
-                    <p>Nearby edge nodes reduce connection latency, improving responsiveness for multiplayer and real-time services.</p>
+                <div class="p-def">
+                    <dt>Gaming & Real-time Apps</dt>
+                    <dd>Nearby edge nodes reduce connection latency, improving responsiveness for multiplayer and real-time services.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Corporate Sites & APIs</h3>
-                    <p>Deliver consistent access speed to global offices and customers while filtering malicious traffic and DDoS attacks.</p>
+                <div class="p-def">
+                    <dt>Corporate Sites & APIs</dt>
+                    <dd>Deliver consistent access speed to global offices and customers while filtering malicious traffic and DDoS attacks.</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column, the reasons the
+         other. This is the section with the most to say, so it gets the
+         widest measure on the page. -->
+    <section class="section p-why-section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>Why Choose Kineticlinks CDN</h2>
                 <p>Compared to self-hosted caching servers or single-region acceleration plans</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>Asia-Pacific-Focused Edge Coverage</h3>
                     <p>Denser node coverage around Taiwan, Hong Kong, and mainland China reduces cross-border latency at a scale that's difficult to replicate in-house.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Flexible, Usage-Based Plans</h3>
                     <p>Scale your plan to actual traffic without a large upfront investment in hardware and bandwidth.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Integrated SSL Automation</h3>
                     <p>Certificates issued through our SSL platform push directly to CDN nodes, removing manual upload and renewal tracking.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>A person to reach, not a queue</h3>
                     <p>Nodes and scrubbing are monitored around the clock by the upstream NOC; we handle configuration, Chinese-language contact and coordination when something goes wrong.</p>
                 </div>
@@ -280,31 +284,33 @@
         </div>
     </section>
 
-    <!-- Customer Types -->
+    <!-- Customer Types: four names and a line each, read across. No box
+         around them — they are an index of who this is for, not four
+         separate things to compare. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Who It's For</h2>
                 <p>Industries that already rely on CDN acceleration as part of their infrastructure</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>Cross-Border E-commerce</h3>
                     <p>Storefronts serving Taiwan, mainland China, and Southeast Asia that need stable, fast cross-border access.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Media & Content Platforms</h3>
                     <p>News sites, blogs, and content communities handling heavy image and video traffic.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>SaaS & Software Providers</h3>
                     <p>Teams that need consistent, low-latency service for customers spread across regions.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Game Developers & Publishers</h3>
                     <p>Online games and esports platforms where latency is business-critical.</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -408,7 +414,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=75cb9d50" defer></script>
+    <script src="/js/main.js?v=d13ff082" defer></script>
 </body>
 
 </html>

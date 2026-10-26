@@ -126,7 +126,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css?v=f5269ac5">
-    <link rel="stylesheet" href="/css/pages.css?v=fbb25784">
+    <link rel="stylesheet" href="/css/pages.css?v=4c1815cf">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E2X03M831"></script>
     <script>
@@ -219,55 +219,59 @@
     </section>
 
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a two-column list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Use Cases</h2>
                 <p>When your organization needs a customized facility or has regulatory requirements, IDC buildout delivers a complete solution</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>Financial & Telecom Compliance</h3>
-                    <p>Industries that must meet specific data residency and security audit requirements can satisfy compliance through a custom-built facility.</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>Financial & Telecom Compliance</dt>
+                    <dd>Industries that must meet specific data residency and security audit requirements can satisfy compliance through a custom-built facility.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Expanding Existing Facilities</h3>
-                    <p>When current facility capacity or equipment is aging, network architecture and hardware need to be replanned and refreshed.</p>
+                <div class="p-def">
+                    <dt>Expanding Existing Facilities</dt>
+                    <dd>When current facility capacity or equipment is aging, network architecture and hardware need to be replanned and refreshed.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Large-Scale System Migrations</h3>
-                    <p>Moving core systems from an existing facility or public cloud into a dedicated data center.</p>
+                <div class="p-def">
+                    <dt>Large-Scale System Migrations</dt>
+                    <dd>Moving core systems from an existing facility or public cloud into a dedicated data center.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>High-Availability Critical Systems</h3>
-                    <p>Core business systems with very low downtime tolerance that need dual-line networking and redundancy to reduce single points of failure.</p>
+                <div class="p-def">
+                    <dt>High-Availability Critical Systems</dt>
+                    <dd>Core business systems with very low downtime tolerance that need dual-line networking and redundancy to reduce single points of failure.</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose Kineticlinks for IDC Buildout</h2>
+    <!-- Differentiators: the heading holds one column, the reasons the
+         other. This is the section with the most to say, so it gets the
+         widest measure on the page. -->
+    <section class="section p-why-section">
+        <div class="container p-why">
+            <div class="p-why-head">
+                <h2>Why Kineticlinks for IDC</h2>
                 <p>Compared to colocation providers that only offer standard rack rental without custom planning capability</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>End-to-End Planning and Execution</h3>
                     <p>One team coordinates network design, hardware procurement, and facility deployment, cutting the coordination overhead of multiple vendors.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>BGP Dual-Line Architecture Design</h3>
                     <p>Multi-line network architecture sized to your business, reducing the service disruption risk of a single line failing.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>On-site facility staff, around the clock</h3>
                     <p>Not remote monitoring alone: the facility keeps staff on site to respond to power, climate and network faults as they happen.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Built-In Expansion Planning</h3>
                     <p>Future growth is factored into the buildout from day one, avoiding the need to re-plan shortly after launch.</p>
                 </div>
@@ -275,31 +279,33 @@
         </div>
     </section>
 
-    <!-- Customer Types -->
+    <!-- Customer Types: four names and a line each, read across. No box
+         around them — they are an index of who this is for, not four
+         separate things to compare. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Who It's For</h2>
                 <p>The following types of organizations most often need custom IDC buildout</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>Financial & Payment Services</h3>
                     <p>Industries with strict data security and regulatory compliance requirements.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Telecom & Network Operators</h3>
                     <p>Businesses that need high-bandwidth, multi-line network architecture to support core operations.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Enterprise IT Departments</h3>
                     <p>Organizations planning to bring core systems back from public cloud or outsourced facilities into a self-managed data center.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Government & Public Sector Projects</h3>
                     <p>Projects with explicit requirements for physical facility security and audit records.</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -403,7 +409,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/main.js?v=75cb9d50" defer></script>
+    <script src="/js/main.js?v=d13ff082" defer></script>
 </body>
 
 </html>

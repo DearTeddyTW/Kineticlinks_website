@@ -226,3 +226,61 @@
 .p-page .page-hero-content > p:not(.page-hero-subtitle) {
     font-size: clamp(1.125rem, 1.07rem + 0.2vw, 1.1875rem);
 }
+
+/* ==========================================================================
+   Three sections that were three identical card grids
+   ========================================================================== */
+
+/* The meter called it "4 rows of identical boxed cards" and it was right:
+   scrolling a service page went grid, grid, grid. Each section now takes the
+   shape of what it holds. */
+
+/* 適用場景 — a situation and what it gets. A two-column list reads as that;
+   a card grid reads as four products. */
+.p-page .p-defs { margin: 0; display: grid; gap: 4px; }
+.p-page .p-def {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+    padding: clamp(20px, 2.4vw, 28px) clamp(18px, 2vw, 26px);
+    border-radius: 6px;
+}
+.p-page .p-def:nth-child(odd) { background: var(--p-tile); }
+.p-page .p-def dt { font-size: var(--p-lead); line-height: 1.3; color: var(--p-ink); }
+.p-page .p-def dd { margin: 0; font-size: var(--p-body); line-height: 1.7; color: var(--p-muted); max-width: 62ch; }
+@media (min-width: 860px) {
+    .p-page .p-def { grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); gap: 0 clamp(28px, 3vw, 56px); align-items: baseline; }
+}
+
+/* 為什麼選擇 — the section with the most to say, so the heading takes one
+   column and the reasons take the other. */
+.p-page .p-why { display: grid; gap: clamp(28px, 3vw, 56px); }
+@media (min-width: 900px) {
+    .p-page .p-why { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); align-items: start; }
+    .p-page .p-why-head { position: sticky; top: 112px; }
+}
+.p-page .p-why-head h2 { font-size: var(--p-head); line-height: 1.2; margin: 0 0 14px; }
+.p-page .p-why-head p { font-size: var(--p-body); line-height: 1.7; color: var(--p-muted); margin: 0; max-width: 42ch; }
+.p-page .p-why-list { display: grid; gap: 4px; }
+.p-page .p-why-item {
+    padding: clamp(20px, 2.4vw, 28px) clamp(18px, 2vw, 26px);
+    border-radius: 6px;
+}
+.p-page .p-why-item:nth-child(even) { background: var(--p-tile); }
+.p-page .p-why-item h3 { font-size: var(--p-lead); line-height: 1.3; margin: 0 0 8px; color: var(--p-ink); }
+.p-page .p-why-item p { font-size: var(--p-body); line-height: 1.7; color: var(--p-muted); margin: 0; max-width: 56ch; }
+
+/* 適合的客戶類型 — four names read across, no boxes. */
+/* Four across needs real width: at 768px each column was 170px, which is a
+   few characters per line in Chinese. Two there, four from 980px.
+   The bottom padding keeps the last line clear of the next heading — within
+   72px of one it reads as a label over it. */
+.p-page .p-who {
+    list-style: none; margin: 0;
+    padding: 0 0 clamp(16px, 2vw, 32px);
+    display: grid; gap: clamp(28px, 3vw, 44px);
+}
+@media (min-width: 560px) { .p-page .p-who { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 980px) { .p-page .p-who { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.p-page .p-who h3 { font-size: var(--p-lead); line-height: 1.25; margin: 0 0 10px; color: var(--p-ink); }
+.p-page .p-who p { font-size: var(--p-small); line-height: 1.7; color: var(--p-muted); margin: 0; }
