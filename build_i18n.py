@@ -541,7 +541,9 @@ def build_board(translations, lang_path):
     listed = lambda rows: ('                    <ul class="b-ui-list">\n%s\n'
                            '                    </ul>' % ui_rows(rows))
 
-    ssl_t = run_tile('ssl', b['ssl_name'], b['ssl_line'], b['ssl_ui_label'], listed(b['ssl_ui_rows']), 'b-w8')
+    # 三格同寬，排成一列。SSL 原本是 b-w8，8+4 把第一列排滿，第三格
+    # 就被推到下一列，右邊空著一大塊。
+    ssl_t = run_tile('ssl', b['ssl_name'], b['ssl_line'], b['ssl_ui_label'], listed(b['ssl_ui_rows']))
     spd_t = run_tile('speedtest', b['spd_name'], b['spd_line'], b['spd_ui_label'], listed(b['spd_ui_rows']))
     icp_body = ('                    <p class="b-ui-dom">%s</p>\n'
                 '                    <p class="b-ui-verdict">%s</p>\n'
