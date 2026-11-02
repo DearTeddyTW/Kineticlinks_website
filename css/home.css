@@ -335,3 +335,18 @@
     .b-page #services,
     .b-page #platforms { scroll-margin-top: 94px; }
 }
+
+/* The registered entity, in the contact block. Fine print: it is there to be
+   found and to back the Organization data, not to be read first. */
+.b-page .company-line {
+    font-style: normal;
+    font-size: var(--b-small);
+    line-height: 1.8;
+    color: var(--b-muted);
+    margin-top: 28px;
+}
+.b-page .company-label {
+    display: block;
+    color: var(--b-ink);
+    margin-bottom: 4px;
+}

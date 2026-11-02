@@ -44,6 +44,22 @@
       "url": "https://www.kineticlinks.net{{ lang_path }}",
       "logo": "https://www.kineticlinks.net/assets/images/Kineticlinks.png",
       "description": "{{ seo.description }}",
+      "legalName": "一隻小貓貓數位科技有限公司",
+      "taxID": "61933373",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "南京東路四段180號5樓之4",
+        "addressLocality": "松山區",
+        "addressRegion": "臺北市",
+        "postalCode": "105",
+        "addressCountry": "TW"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "sales@kineticlinks.net",
+        "availableLanguage": ["zh-Hant", "en", "zh-Hans"]
+      },
       "sameAs": [
         "https://t.me/Kineticlinks"
       ]
@@ -254,6 +270,16 @@
                             <a href="https://t.me/Kineticlinks" target="_blank" rel="noopener">{{ contact.telegram }}</a>
                         </div>
                     </div>
+                    <!-- The registered entity behind the site. One place, on the
+                         page crawlers read most, with the same values as the
+                         Organization JSON-LD above — structured data is supposed
+                         to describe what the page actually shows. -->
+                    <address class="company-line">
+                        <span class="company-label">{{ company.label }}</span>
+                        {{ company.legal_name }}<br>
+                        {{ company.tax_id }}<br>
+                        {{ company.address }}
+                    </address>
                 </div>
                 <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="fdd610df-9f38-4956-950c-a92d51f485e2">

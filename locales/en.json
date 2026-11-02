@@ -4232,7 +4232,7 @@
   },
   "footer": {
     "brand_desc": "Building the digital infrastructure of tomorrow.",
-    "rights": "&copy; 2026 一隻小貓貓數位科技有限公司 (Kineticlinks). All rights reserved."
+    "rights": "&copy; 2026 Kineticlinks. All rights reserved."
   },
   "home_faq": {
     "title": "Frequently Asked Questions",
@@ -4317,5 +4317,11 @@
     "sw_cap": "A 1940s telephone exchange. A row of labelled switches, each deciding where a line goes. That has not changed; it just runs in software now.",
     "fm_alt": "A 1640 Dutch chart of Formosa (Taiwan) and the Pescadores, hand-coloured, with rhumb lines radiating from two compass roses",
     "fm_cap": "Formosa and the Pescadores, drawn by the Dutch in 1640. Those radiating lines are sailing routes: someone had to cross first. We are on this island."
+  },
+  "company": {
+    "label": "Company",
+    "legal_name": "一隻小貓貓數位科技有限公司",
+    "tax_id": "Tax ID 61933373",
+    "address": "5F.-4, No. 180, Sec. 4, Nanjing E. Rd., Songshan Dist., Taipei City 105, Taiwan"
   }
 }

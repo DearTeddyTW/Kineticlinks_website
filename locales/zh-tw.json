@@ -4232,7 +4232,7 @@
   },
   "footer": {
     "brand_desc": "Building the digital infrastructure of tomorrow.",
-    "rights": "&copy; 2026 一隻小貓貓數位科技有限公司. All rights reserved."
+    "rights": "&copy; 2026 Kineticlinks. All rights reserved."
   },
   "home_faq": {
     "title": "關於 Kineticlinks 的常見問題",
@@ -4317,5 +4317,11 @@
     "sw_cap": "1940 年代的電話交換機。一排貼著標籤的開關，每一個決定線路接到哪裡——這件事沒有變，只是現在跑在軟體裡。",
     "fm_alt": "1640 年荷蘭人繪製的福爾摩沙（臺灣）與澎湖海圖，手工上色，羅盤線自兩個方位玫瑰放射而出",
     "fm_cap": "1640 年，荷蘭人畫的福爾摩沙與澎湖。那些放射線是航線——有人得先渡過去，才畫得出來。我們在這座島上。"
+  },
+  "company": {
+    "label": "公司資訊",
+    "legal_name": "一隻小貓貓數位科技有限公司",
+    "tax_id": "統一編號 61933373",
+    "address": "臺北市松山區南京東路四段 180 號 5 樓之 4"
   }
 }
