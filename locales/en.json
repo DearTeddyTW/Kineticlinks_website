@@ -363,13 +363,13 @@
   },
   "idc_page": {
     "seo": {
-      "title": "IDC Data Center Buildout | Custom Facility Planning",
-      "description": "End-to-end IDC build-out, from hardware procurement and network design to physical deployment, with 24/7 on-site facility monitoring.",
+      "title": "Data Centre Buildout and Colocation | Rack Space - Kineticlinks",
+      "description": "Buildout covers procurement, architecture and deployment. Colocation puts your servers in a rack. The facility is upstream’s; the planning is ours.",
       "keywords": "IDC data center, data center buildout, colocation services, BGP dual-line network, enterprise data center, data center Taiwan"
     },
     "hero": {
       "badge": "IDC Data Center Buildout",
-      "title": "Data Center Buildout",
+      "title": "Buildout and Colocation",
       "subtitle": "From planning to deployment, building enterprise-grade secure data centers",
       "desc": "Hardware procurement, network architecture, dual BGP uplinks and physical deployment, alongside 24/7 on-site monitoring by the facility, to build a data centre matched to your scale and security needs.",
       "cta_primary": "Book a Buildout Consultation",
@@ -379,7 +379,8 @@
       "title": "What Is IDC Data Center Buildout?",
       "p1": "IDC (Internet Data Center) buildout means planning and constructing a dedicated facility environment — with complete power, cooling, fire suppression, networking, and physical security infrastructure — for a company's own or outsourced server equipment. Compared to simply renting standard cabinet space in an existing facility or public cloud, a custom IDC buildout can be planned around a company's specific regulatory, data sovereignty, and performance requirements.",
       "p2": "Kineticlinks buildout projects start with upfront network architecture planning and BGP dual-line bandwidth design, helping clients evaluate the best facility location and power specification, then coordinating hardware procurement and rack cabling to ensure the overall architecture is highly available and ready for future expansion.",
-      "p3": "Once built, monitoring and operational support continue, covering power, temperature, humidity and connectivity. The facility staffs that rota around the clock; we handle planning, integration and Chinese-language contact."
+      "p3": "Once built, monitoring and operational support continue, covering power, temperature, humidity and connectivity. The facility staffs that rota around the clock; we handle planning, integration and Chinese-language contact.",
+      "p4": "The other need is colocation: you already own the servers and what you want is somewhere to put them. The rack, the power and the facility come from upstream; we handle sizing, the contract, the move, the cabling and the contact afterwards. Half a rack, a full rack or a few U depends on how much equipment you have and what the next year or two looks like."
     },
     "use_cases": {
       "title": "Use Cases",
@@ -443,16 +444,16 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "q1": "How is IDC buildout different from renting public cloud servers?",
-      "a1": "Public cloud offers standardized, quickly deployed compute suited to elastic workloads. IDC buildout, by contrast, plans a physical facility tailored to your organization, giving you far more precise control over data residency, hardware specification, and regulatory detail — a better fit for organizations with specific compliance or performance requirements.",
-      "q2": "How long does it typically take to build an IDC facility?",
-      "a2": "Timelines vary with scale and complexity. From network architecture planning and equipment procurement through on-site construction, a typical project runs from several weeks to a few months, and we provide a concrete schedule during the initial assessment phase.",
-      "q3": "Who handles operations after the facility is built?",
-      "a3": "The facility provides 24/7 on-site monitoring and operational support covering power, climate and connectivity. We handle planning, equipment integration, and the Chinese-language contact and coordination afterwards.",
-      "q4": "Can I engage you for just part of the buildout, like network architecture planning only?",
-      "a4": "Yes. Our services are modular — depending on your existing in-house capability and needs, you can have Kineticlinks handle network architecture, hardware procurement, or the full buildout process, in whole or in part.",
-      "q5": "What size of organization is IDC buildout suited for?",
-      "a5": "We plan everything from mid-sized facility expansions to large enterprise core data centers. We'll propose a plan based on your actual business scale, budget, and regulatory needs — this isn't limited to organizations of a particular size."
+      "q1": "Colocation or a buildout — which one do I need?",
+      "a1": "Colocation rents you somewhere to put servers you already own: the facility is someone else’s and the machines are yours. A buildout plans and delivers a facility of your own, with power, cooling, fire suppression and network designed around your requirements. With a small fleet and no particular compliance requirement, colocation is usually enough; a buildout starts to make sense when data has to sit in a specific place, when a security audit says so, or when an existing room needs replacing. If you are not sure, send the equipment list and what the next year or two looks like, and we will work out which one costs less for you.",
+      "q2": "How is IDC buildout different from renting public cloud servers?",
+      "a2": "Public cloud offers standardized, quickly deployed compute suited to elastic workloads. IDC buildout, by contrast, plans a physical facility tailored to your organization, giving you far more precise control over data residency, hardware specification, and regulatory detail — a better fit for organizations with specific compliance or performance requirements.",
+      "q3": "How long does it typically take to build an IDC facility?",
+      "a3": "Timelines vary with scale and complexity. From network architecture planning and equipment procurement through on-site construction, a typical project runs from several weeks to a few months, and we provide a concrete schedule during the initial assessment phase.",
+      "q4": "Who handles operations after the facility is built?",
+      "a4": "The facility provides 24/7 on-site monitoring and operational support covering power, climate and connectivity. We handle planning, equipment integration, and the Chinese-language contact and coordination afterwards.",
+      "q5": "Can I engage you for just part of the buildout, like network architecture planning only?",
+      "a5": "Yes. Our services are modular — depending on your existing in-house capability and needs, you can have Kineticlinks handle network architecture, hardware procurement, or the full buildout process, in whole or in part."
     },
     "cta": {
       "title": "Ready to Plan Your Dedicated Facility?",
