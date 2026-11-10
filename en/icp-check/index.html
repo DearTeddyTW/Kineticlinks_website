@@ -284,55 +284,61 @@
 
 
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a definition list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. A scene and what it is, so: a term and
+         its definition. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>When to use it</h2>
                 <p>Confirm filing compliance at the points where it actually matters</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>Before bringing CDN or hosting nodes online</h3>
-                    <p>Confirm the domain holds a valid filing before enabling mainland CDN nodes or mainland hosting.</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>Before bringing CDN or hosting nodes online</dt>
+                    <dd>Confirm the domain holds a valid filing before enabling mainland CDN nodes or mainland hosting.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Routine checks against silent cancellation</h3>
-                    <p>Periodic compliance reviews cancel filings whose details no longer match. Regular checks keep the service continuous.</p>
+                <div class="p-def">
+                    <dt>Routine checks against silent cancellation</dt>
+                    <dd>Periodic compliance reviews cancel filings whose details no longer match. Regular checks keep the service continuous.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Domain transactions and asset review</h3>
-                    <p>Verify filing history and current registrant before acquiring or taking over a domain.</p>
+                <div class="p-def">
+                    <dt>Domain transactions and asset review</dt>
+                    <dd>Verify filing history and current registrant before acquiring or taking over a domain.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Cross-border architecture decisions</h3>
-                    <p>Establish whether the business is properly filed, and therefore whether to use mainland nodes or an overseas-only CDN.</p>
+                <div class="p-def">
+                    <dt>Cross-border architecture decisions</dt>
+                    <dd>Establish whether the business is properly filed, and therefore whether to use mainland nodes or an overseas-only CDN.</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column and stays with the
+         reader while the reasons scroll past in the other. The dark band
+         this section used to carry is gone -- the rows tint themselves, and
+         both at once muddied each other. -->
+    <section class="section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>Why use the Kineticlinks ICP lookup</h2>
                 <p>Compared with the official system or third-party databases running on stale data</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>Live queries, not a cached snapshot</h3>
                     <p>Queries a live data source, so a stale cache cannot report a filing status that is no longer true.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>A plain interface with nothing in the way</h3>
                     <p>No captcha loops and no ad interstitials — enter a domain and get the filing details back in seconds.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Full registrant and filing detail</h3>
                     <p>Shows the registrant name and type, filing number, homepage URL and approval date.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Integrated with the wider Kineticlinks network</h3>
                     <p>Pairs with our speed test platform and CDN services to diagnose cross-border networking and compliance together.</p>
                 </div>
@@ -350,24 +356,24 @@
                 <h2>Who uses it</h2>
                 <p>Teams and individuals who check filing status regularly</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>Cross-border commerce and companies expanding abroad</h3>
                     <p>Operations teams managing mainland and overseas domain assets who need compliant launches.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>DevOps and systems engineers</h3>
                     <p>Engineers responsible for launches, CDN configuration and day-to-day domain availability.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Domain investors and brokers</h3>
                     <p>Anyone who needs a fast read on a domain's background and filing status before acquiring or transferring it.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Legal and compliance teams</h3>
                     <p>Teams reviewing digital asset compliance and consistency with MIIT filing records.</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 

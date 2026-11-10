@@ -298,55 +298,61 @@
         <figcaption>KDDI 的千仓海底线中继所。延迟的下限是光跑完这段路的时间，跨境测速量的就是它。</figcaption>
     </figure>
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a definition list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. A scene and what it is, so: a term and
+         its definition. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>适用场景</h2>
                 <p>无论是评估新机房选址或监控既有服务质量，都能派上用场</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>跨境服务质量评估</h3>
-                    <p>面向中国用户的网站或应用，需要验证三大电信商的实际连接表现。</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>跨境服务质量评估</dt>
+                    <dd>面向中国用户的网站或应用，需要验证三大电信商的实际连接表现。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>机房与 CDN 节点选址</h3>
-                    <p>评估新增机房或 CDN 节点前，实测候选地点对各电信商的连接质量。</p>
+                <div class="p-def">
+                    <dt>机房与 CDN 节点选址</dt>
+                    <dd>评估新增机房或 CDN 节点前，实测候选地点对各电信商的连接质量。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>系统监控与告警整合</h3>
-                    <p>通过 API 将测速数据纳入既有监控系统，设置异常告警阈值。</p>
+                <div class="p-def">
+                    <dt>系统监控与告警整合</dt>
+                    <dd>通过 API 将测速数据纳入既有监控系统，设置异常告警阈值。</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>营销与业务素材</h3>
-                    <p>以实测数据佐证服务的连接质量，作为业务销售或营销沟通的依据。</p>
+                <div class="p-def">
+                    <dt>营销与业务素材</dt>
+                    <dd>以实测数据佐证服务的连接质量，作为业务销售或营销沟通的依据。</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column and stays with the
+         reader while the reasons scroll past in the other. The dark band
+         this section used to carry is gone -- the rows tint themselves, and
+         both at once muddied each other. -->
+    <section class="section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>为什么选择 Kineticlinks 测速平台</h2>
                 <p>相较于仅提供单一地区或无法区分三网结果的一般测速工具</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>三网独立测速结果</h3>
                     <p>分别呈现电信、联通、移动的连接数据，而非单一笼统的平均值。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>免费与商业版并行</h3>
                     <p>个别用户可直接免费测速，企业则可通过付费 API 进行系统化整合。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>亚太区广泛节点覆盖</h3>
                     <p>测速范围不仅限中国三网，同时涵盖亚太区其他主要市场的连接质量。</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>与 CDN 服务相互验证</h3>
                     <p>同属 Kineticlinks 产品线，可直接用于验证自家 CDN 加速服务的实际成效。</p>
                 </div>
@@ -364,24 +370,24 @@
                 <h2>适合的使用者类型</h2>
                 <p>以下类型的团队经常使用三网测速平台</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>跨境电商与内容平台</h3>
                     <p>服务中国或亚太用户，需要持续监控连接质量的网站运营者。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>网络工程与运维团队</h3>
                     <p>负责评估机房选址或诊断跨境连接异常的技术人员。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>CDN 与主机服务商</h3>
                     <p>需要以实测数据验证自身服务质量、作为业务佐证的同业。</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>游戏与实时应用开发商</h3>
                     <p>对延迟高度敏感，需要事先评估目标市场连接质量的开发团队。</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 

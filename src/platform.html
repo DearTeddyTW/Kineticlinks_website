@@ -176,55 +176,61 @@
 
 {{ keymodes_section }}
 {{ page_pics }}
-    <!-- Use Cases -->
+    <!-- Use Cases: a definition list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. A scene and what it is, so: a term and
+         its definition. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>{{ page.use_cases.title }}</h2>
                 <p>{{ page.use_cases.desc }}</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>{{ page.use_cases.item1.title }}</h3>
-                    <p>{{ page.use_cases.item1.desc }}</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>{{ page.use_cases.item1.title }}</dt>
+                    <dd>{{ page.use_cases.item1.desc }}</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>{{ page.use_cases.item2.title }}</h3>
-                    <p>{{ page.use_cases.item2.desc }}</p>
+                <div class="p-def">
+                    <dt>{{ page.use_cases.item2.title }}</dt>
+                    <dd>{{ page.use_cases.item2.desc }}</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>{{ page.use_cases.item3.title }}</h3>
-                    <p>{{ page.use_cases.item3.desc }}</p>
+                <div class="p-def">
+                    <dt>{{ page.use_cases.item3.title }}</dt>
+                    <dd>{{ page.use_cases.item3.desc }}</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>{{ page.use_cases.item4.title }}</h3>
-                    <p>{{ page.use_cases.item4.desc }}</p>
+                <div class="p-def">
+                    <dt>{{ page.use_cases.item4.title }}</dt>
+                    <dd>{{ page.use_cases.item4.desc }}</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column and stays with the
+         reader while the reasons scroll past in the other. The dark band
+         this section used to carry is gone -- the rows tint themselves, and
+         both at once muddied each other. -->
+    <section class="section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>{{ page.differentiators.title }}</h2>
                 <p>{{ page.differentiators.desc }}</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>{{ page.differentiators.item1.title }}</h3>
                     <p>{{ page.differentiators.item1.desc }}</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>{{ page.differentiators.item2.title }}</h3>
                     <p>{{ page.differentiators.item2.desc }}</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>{{ page.differentiators.item3.title }}</h3>
                     <p>{{ page.differentiators.item3.desc }}</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>{{ page.differentiators.item4.title }}</h3>
                     <p>{{ page.differentiators.item4.desc }}</p>
                 </div>

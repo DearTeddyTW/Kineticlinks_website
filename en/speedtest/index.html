@@ -298,55 +298,61 @@
         <figcaption>KDDI’s Chikura cable landing station. The floor under your latency is the time light takes to run that path; a cross-border speed test measures it.</figcaption>
     </figure>
 
-    <!-- Use Cases -->
+    <!-- Use Cases: a definition list. Three card grids in a row was the
+         template showing; each of these three sections now takes the shape
+         of what it actually holds. A scene and what it is, so: a term and
+         its definition. -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Use Cases</h2>
                 <p>Useful whether you're evaluating a new facility location or monitoring an existing service</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
-                    <h3>Cross-Border Service Quality Assessment</h3>
-                    <p>Sites or apps serving users in China that need to verify real-world performance across all three carriers.</p>
+            <dl class="p-defs">
+                <div class="p-def">
+                    <dt>Cross-Border Service Quality Assessment</dt>
+                    <dd>Sites or apps serving users in China that need to verify real-world performance across all three carriers.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Facility & CDN Node Site Selection</h3>
-                    <p>Test candidate locations against each carrier's network before committing to a new facility or CDN node.</p>
+                <div class="p-def">
+                    <dt>Facility & CDN Node Site Selection</dt>
+                    <dd>Test candidate locations against each carrier's network before committing to a new facility or CDN node.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Monitoring & Alerting Integration</h3>
-                    <p>Feed test data into an existing monitoring system via API and set thresholds for anomaly alerts.</p>
+                <div class="p-def">
+                    <dt>Monitoring & Alerting Integration</dt>
+                    <dd>Feed test data into an existing monitoring system via API and set thresholds for anomaly alerts.</dd>
                 </div>
-                <div class="service-card glass-panel interactive">
-                    <h3>Sales & Marketing Material</h3>
-                    <p>Use real test data to back up connection-quality claims in sales conversations or marketing.</p>
+                <div class="p-def">
+                    <dt>Sales & Marketing Material</dt>
+                    <dd>Use real test data to back up connection-quality claims in sales conversations or marketing.</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
-    <!-- Differentiators -->
-    <section class="section" style="background-color: var(--bg-darker);">
-        <div class="container">
-            <div class="section-header">
+    <!-- Differentiators: the heading holds one column and stays with the
+         reader while the reasons scroll past in the other. The dark band
+         this section used to carry is gone -- the rows tint themselves, and
+         both at once muddied each other. -->
+    <section class="section">
+        <div class="container p-why">
+            <div class="p-why-head">
                 <h2>Why Choose Kineticlinks Speed Test</h2>
                 <p>Compared to generic speed test tools limited to one region or unable to separate carrier-specific results</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <div class="p-why-list">
+                <div class="p-why-item">
                     <h3>Carrier-Specific Results</h3>
                     <p>Reports Telecom, Unicom, and Mobile results separately instead of one blended average.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Free and Commercial Tiers</h3>
                     <p>Individuals can test for free, while businesses can integrate systematically through the paid API.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Broad Asia-Pacific Coverage</h3>
                     <p>Testing isn't limited to China's three carriers — it also covers connection quality across other major Asia-Pacific markets.</p>
                 </div>
-                <div class="service-card glass-panel interactive">
+                <div class="p-why-item">
                     <h3>Cross-Validated With Our CDN</h3>
                     <p>Part of the same Kineticlinks product line, so it can directly validate the real-world performance of our own CDN service.</p>
                 </div>
@@ -364,24 +370,24 @@
                 <h2>Who It's For</h2>
                 <p>The following types of teams commonly rely on the 3-network speed test platform</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-panel interactive">
+            <ul class="p-who">
+                <li>
                     <h3>Cross-Border E-commerce & Content Platforms</h3>
                     <p>Site operators serving users in China or Asia-Pacific who need ongoing connection quality monitoring.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Network Engineering & Ops Teams</h3>
                     <p>Technical staff evaluating facility site selection or diagnosing cross-border connection issues.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>CDN & Hosting Providers</h3>
                     <p>Peers who need real test data to validate and back up their own service quality claims.</p>
-                </div>
-                <div class="service-card glass-panel interactive">
+                </li>
+                <li>
                     <h3>Game & Real-Time App Developers</h3>
                     <p>Teams highly sensitive to latency that need to assess target-market connection quality in advance.</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 

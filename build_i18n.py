@@ -476,6 +476,11 @@ def build_customers_section(page_content):
 
     /ssl/ folds its audience into the use-cases section, so this stays out
     of its markup instead of repeating the same four readers twice.
+
+    Four names with a line each, read across and unboxed: this is an index
+    of who the page is for, not four things to weigh against one another.
+    It is also the third section in a row on /speedtest/ and /icp-check/,
+    and a third card grid is where a page stops being read.
     """
     c = page_content.get('customers')
     if not c:
@@ -485,10 +490,10 @@ def build_customers_section(page_content):
     while f'item{n}' in c:
         it = c[f'item{n}']
         cards.append(
-            f'<div class="service-card glass-panel interactive">\n'
+            f'<li>\n'
             f'                    <h3>{it["title"]}</h3>\n'
             f'                    <p>{it["desc"]}</p>\n'
-            f'                </div>')
+            f'                </li>')
         n += 1
     joined = ('\n                ').join(cards)
     return f"""
@@ -499,9 +504,9 @@ def build_customers_section(page_content):
                 <h2>{c['title']}</h2>
                 <p>{c['desc']}</p>
             </div>
-            <div class="services-grid">
+            <ul class="p-who">
                 {joined}
-            </div>
+            </ul>
         </div>
     </section>
 """
